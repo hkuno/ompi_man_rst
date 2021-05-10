@@ -1,0 +1,6 @@
+.. _shmem_float_g:
+=============
+shmem_float_g
+=============
+ 
+.. include:: ../man3/shmem_char_g.3.rst
