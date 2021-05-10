@@ -11,5 +11,5 @@ The commit for the source ompi man pages used to build the rst files was:
        Signed-off-by: Jeff Squyres <jsquyres@cisco.com>
 
 Use sphinx-build to convert these rst files to man pages and html pages:
- sphinx-build -b html -c rst rst/ html/ 
- sphinx-build -b man  -c rst rst/ man/ 
+   *  sphinx-build -b html -c rst rst/ html/ 
+   *  sphinx-build -b man  -c rst rst/ man/ 
