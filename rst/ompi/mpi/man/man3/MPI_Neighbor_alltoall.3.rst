@@ -2,6 +2,7 @@
 
 MPI_Neighbor_alltoall
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Neighbor_alltoall` , :ref:`MPI_Ineighbor_alltoall`  - All processes send
 data to neighboring processes in a virtual topology communicator
 

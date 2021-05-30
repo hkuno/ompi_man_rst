@@ -2,6 +2,7 @@
 
 shmem_wait
 ~~~~~~~~~~
+
 *shmem_int_wait*\ (3), *shmem_int_wait*\ (3)_until,
 *shmem_int4_wait*\ (3), *shmem_int4_wait*\ (3)_until,
 *shmem_int8_wait*\ (3), *shmem_int8_wait*\ (3)_until,

@@ -2,6 +2,7 @@
 
 MPI_Win_shared_query
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_shared_query`  - Query a shared memory window
 
 SYNTAX

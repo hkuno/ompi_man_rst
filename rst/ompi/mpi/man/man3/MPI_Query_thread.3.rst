@@ -2,6 +2,7 @@
 
 MPI_Query_thread
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Query_thread`  - Returns the current level of thread support
 
 SYNTAX

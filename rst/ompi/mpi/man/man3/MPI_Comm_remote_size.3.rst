@@ -2,6 +2,7 @@
 
 MPI_Comm_remote_size
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_remote_size`  - Determines the size of the remote group
 associated with an intercommunicator.
 

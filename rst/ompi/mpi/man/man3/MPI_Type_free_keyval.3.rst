@@ -2,6 +2,7 @@
 
 MPI_Type_free_keyval
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_free_keyval`  - Frees a previously created type key value.
 
 SYNTAX

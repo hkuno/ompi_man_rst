@@ -2,6 +2,7 @@
 
 MPI_Win_create_keyval
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_create_keyval`  - Creates a keyval for a window.
 
 SYNTAX

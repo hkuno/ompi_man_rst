@@ -2,6 +2,7 @@
 
 MPI_Type_commit
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_commit`  - Commits a data type.
 
 SYNTAX

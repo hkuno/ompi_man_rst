@@ -2,6 +2,7 @@
 
 shmem_collect32
 ~~~~~~~~~~~~~~~
+
 *shmem_collect4*\ (3), *shmem_collect8*\ (3), *shmem_collect32*\ (3),
 *shmem_collect64*\ (3), *shmem_fcollect*\ (3), *shmem_fcollect4*\ (3),
 *shmem_fcollect8*\ (3), *shmem_fcollect32*\ (3), *shmem_fcollect64*\ (3)
@@ -204,4 +205,4 @@ Fortran:
    & LOGPE_STRIDE, PE_SIZE, PSYNC)
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

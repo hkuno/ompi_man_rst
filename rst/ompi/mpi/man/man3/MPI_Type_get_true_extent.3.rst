@@ -2,6 +2,7 @@
 
 MPI_Type_get_true_extent
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_get_true_extent` , :ref:`MPI_Type_get_true_extent_x`  - Returns
 the true lower bound and extent of a data type's corresponding typemap,
 ignoring :ref:`MPI_UB`  and :ref:`MPI_LB`  markers.

@@ -2,6 +2,7 @@
 
 MPI_File_read_all_end
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_read_all_end`  - Reads a file starting at the locations
 specified by individual file pointers; ending part of a split collective
 routine (blocking).

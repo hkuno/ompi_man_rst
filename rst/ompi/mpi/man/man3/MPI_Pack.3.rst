@@ -2,6 +2,7 @@
 
 MPI_Pack
 ~~~~~~~~
+
 :ref:`MPI_Pack`  - Packs data of a given datatype into contiguous memory.
 
 SYNTAX

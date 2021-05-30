@@ -2,6 +2,7 @@
 
 MPI_Type_get_envelope
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_get_envelope`  - Returns information about input arguments
 associated with a data type.
 

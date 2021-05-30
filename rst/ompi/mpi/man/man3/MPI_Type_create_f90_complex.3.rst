@@ -2,6 +2,7 @@
 
 MPI_Type_create_f90_complex
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ::
 
    MPI_Type_create_f90_complex - Returns a bounded MPI complex datatype
@@ -132,4 +133,4 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Pack_external`    :ref:`MPI_Sizeof`    :ref:`MPI_Type_match_size`    :ref:`MPI_Unpack_external` 
+.. seealso::    :ref:`MPI_Pack_external`    :ref:`MPI_Sizeof`    :ref:`MPI_Type_match_size`    :ref:`MPI_Unpack_external`    SELECTED_REAL_KIND

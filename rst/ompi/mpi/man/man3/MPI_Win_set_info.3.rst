@@ -2,6 +2,7 @@
 
 MPI_Win_set_info
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_set_info`  - Set window info hints
 
 SYNTAX

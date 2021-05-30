@@ -2,6 +2,7 @@
 
 MPI_T_pvar_start
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_pvar_start` , :ref:`MPI_T_pvar_stop`  - Start/stop a performance
 variable
 

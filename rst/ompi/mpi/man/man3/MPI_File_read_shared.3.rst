@@ -2,6 +2,7 @@
 
 MPI_File_read_shared
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_read_shared`  - Reads a file using the shared file pointer
 (blocking, noncollective).
 

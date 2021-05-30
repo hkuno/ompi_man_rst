@@ -2,6 +2,7 @@
 
 shmem_char_g
 ~~~~~~~~~~~~
+
 *shmem_char_g*\ (3), *shmem_float_g*\ (3), *shmem_int_g*\ (3),
 *shmem_long_g*\ (3), *shmem_short_g*\ (3), *shmem_longlong_g*\ (3),
 *shmem_longdouble_g*\ (3) - These routines provide a low latency

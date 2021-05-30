@@ -2,6 +2,7 @@
 
 MPI_Scatter
 ~~~~~~~~~~~
+
 :ref:`MPI_Scatter` , :ref:`MPI_Iscatter`  - Sends data from one task to all tasks in
 a group.
 

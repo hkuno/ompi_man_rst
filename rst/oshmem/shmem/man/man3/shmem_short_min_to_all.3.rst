@@ -2,6 +2,7 @@
 
 shmem_short_min_to_all
 ~~~~~~~~~~~~~~~~~~~~~~
+
 *shmem_double_min_to_all*\ (3), *shmem_float_min_to_all*\ (3),
 *shmem_int_min_to_all*\ (3), *shmem_int4_min_to_all*\ (3),
 *shmem_int8_min_to_all*\ (3), *shmem_long_min_to_all*\ (3),
@@ -237,4 +238,4 @@ Note that two sets of pWrk and pSync arrays are used alternately because
 no synchronization is done between calls.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

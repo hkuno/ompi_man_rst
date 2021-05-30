@@ -2,6 +2,7 @@
 
 MPI_Scatterv
 ~~~~~~~~~~~~
+
 :ref:`MPI_Scatterv` , :ref:`MPI_Iscatterv`  - Scatters a buffer in parts to all
 tasks in a group.
 

@@ -2,6 +2,7 @@
 
 MPI_Type_free
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Type_free`  - Frees a data type.
 
 SYNTAX

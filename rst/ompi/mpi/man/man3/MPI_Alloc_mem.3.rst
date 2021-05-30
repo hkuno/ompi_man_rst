@@ -2,6 +2,7 @@
 
 MPI_Alloc_mem
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Alloc_mem`  - Allocates a specified memory segment.
 
 SYNTAX

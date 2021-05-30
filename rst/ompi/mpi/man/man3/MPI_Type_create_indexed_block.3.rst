@@ -2,6 +2,7 @@
 
 MPI_Type_create_indexed_block
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_create_indexed_block` , :ref:`MPI_Type_create_hindexed_block`  -
 Creates an indexed data type with the same block length for all blocks.
 

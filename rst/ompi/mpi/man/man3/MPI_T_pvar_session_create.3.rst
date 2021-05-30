@@ -2,6 +2,7 @@
 
 MPI_T_pvar_session_create
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_pvar_session_create` , :ref:`MPI_T_pvar_session_free`  - Create/free
 performance variable session
 

@@ -2,6 +2,7 @@
 
 MPI_Pcontrol
 ~~~~~~~~~~~~
+
 :ref:`MPI_Pcontrol`  - Controls profiling.
 
 SYNTAX

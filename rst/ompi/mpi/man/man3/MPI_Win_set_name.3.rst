@@ -2,6 +2,7 @@
 
 MPI_Win_set_name
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_set_name`  - Sets the name of a window.
 
 SYNTAX

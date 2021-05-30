@@ -2,6 +2,7 @@
 
 MPI_Comm_get_attr
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_get_attr`  - Retrieves attribute value by key.
 
 SYNTAX

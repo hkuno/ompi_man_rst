@@ -2,6 +2,7 @@
 
 MPI_File_iwrite_shared
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_iwrite_shared`  - Writes a file using the shared file pointer
 (nonblocking, noncollective).
 

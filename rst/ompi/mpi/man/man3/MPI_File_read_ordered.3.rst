@@ -2,6 +2,7 @@
 
 MPI_File_read_ordered
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_read_ordered`  - Reads a file at a location specified by a
 shared file pointer (blocking, collective).
 

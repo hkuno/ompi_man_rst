@@ -2,6 +2,7 @@
 
 MPI_Neighbor_allgather
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Neighbor_allgather` , :ref:`MPI_Ineighbor_allgather`  - Gathers and
 distributes data from and to all neighbors
 

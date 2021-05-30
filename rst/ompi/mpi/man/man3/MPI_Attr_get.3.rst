@@ -2,6 +2,7 @@
 
 MPI_Attr_get
 ~~~~~~~~~~~~
+
 :ref:`MPI_Attr_get`  - Retrieves attribute value by key -- use of this
 routine is deprecated.
 

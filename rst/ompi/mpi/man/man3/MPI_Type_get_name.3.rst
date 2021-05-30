@@ -2,6 +2,7 @@
 
 MPI_Type_get_name
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_get_name`  - Gets the name of a data type.
 
 SYNTAX

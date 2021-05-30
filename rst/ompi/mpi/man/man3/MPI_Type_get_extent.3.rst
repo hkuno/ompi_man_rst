@@ -2,6 +2,7 @@
 
 MPI_Type_get_extent
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_get_extent` , :ref:`MPI_Type_get_extent_x`  - Returns the lower
 bound and extent of a data type.
 

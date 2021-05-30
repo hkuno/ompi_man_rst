@@ -2,6 +2,7 @@
 
 MPI_Wait
 ~~~~~~~~
+
 :ref:`MPI_Wait`  - Waits for an MPI send or receive to complete.
 
 SYNTAX

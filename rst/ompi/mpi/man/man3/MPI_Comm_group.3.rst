@@ -2,6 +2,7 @@
 
 MPI_Comm_group
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_group`  - Returns the group associated with a communicator.
 
 SYNTAX

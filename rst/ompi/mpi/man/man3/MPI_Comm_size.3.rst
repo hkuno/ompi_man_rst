@@ -2,6 +2,7 @@
 
 MPI_Comm_size
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_size`  - Returns the size of the group associated with a
 communicator.
 

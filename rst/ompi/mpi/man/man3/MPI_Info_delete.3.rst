@@ -2,6 +2,7 @@
 
 MPI_Info_delete
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_Info_delete`  - Deletes a key/value pair from *info*.
 
 SYNTAX

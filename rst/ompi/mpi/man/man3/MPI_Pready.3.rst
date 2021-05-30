@@ -2,6 +2,7 @@
 
 MPI_Pready
 ~~~~~~~~~~
+
 :ref:`MPI_Pready`  - Indicates that a given send-side partition is ready to
 be transferred.
 

@@ -2,6 +2,7 @@
 
 MPI_Type_hindexed
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_hindexed`  - Creates an indexed datatype with offsets in
 bytes -- use of this routine is deprecated.
 

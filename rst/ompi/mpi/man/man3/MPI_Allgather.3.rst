@@ -2,6 +2,7 @@
 
 MPI_Allgather
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Allgather` , :ref:`MPI_Iallgather`  - Gathers data from all processes and
 distributes it to all processes
 

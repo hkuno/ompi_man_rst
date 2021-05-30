@@ -2,6 +2,7 @@
 
 MPI_File_read
 ~~~~~~~~~~~~~
+
 :ref:`MPI_File_read`  - Reads a file starting at the location specified by
 the individual file pointer (blocking, noncollective).
 

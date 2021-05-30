@@ -2,6 +2,7 @@
 
 MPI_Comm_free
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_free`  - Mark a communicator object for deallocation.
 
 SYNTAX

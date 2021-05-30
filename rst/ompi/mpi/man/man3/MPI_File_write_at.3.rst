@@ -2,6 +2,7 @@
 
 MPI_File_write_at
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_write_at`  - Writes a file at an explicitly specified offset
 (blocking, noncollective).
 

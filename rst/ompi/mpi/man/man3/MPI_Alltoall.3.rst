@@ -2,6 +2,7 @@
 
 MPI_Alltoall
 ~~~~~~~~~~~~
+
 :ref:`MPI_Alltoall` , :ref:`MPI_Ialltoall`  - All processes send data to all
 processes
 

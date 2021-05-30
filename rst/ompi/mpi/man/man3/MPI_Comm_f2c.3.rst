@@ -2,6 +2,7 @@
 
 MPI_Comm_f2c
 ~~~~~~~~~~~~
+
 :ref:`MPI_Comm_f2c` , :ref:`MPI_Comm_c2f` , :ref:`MPI_File_f2c` , :ref:`MPI_File_c2f` , :ref:`MPI_Info_f2c` ,
 :ref:`MPI_Info_c2f` , :ref:`MPI_Message_f2c` , :ref:`MPI_Message_c2f` , :ref:`MPI_Op_f2c` , :ref:`MPI_Op_c2f` ,
 :ref:`MPI_Request_f2c` , :ref:`MPI_Request_c2f` , :ref:`MPI_Type_f2c` , :ref:`MPI_Type_c2f` ,

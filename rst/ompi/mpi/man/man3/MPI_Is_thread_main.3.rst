@@ -2,6 +2,7 @@
 
 MPI_Is_thread_main
 ~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Is_thread_main`  - Determines if thread called :ref:`MPI_Init` 
 
 SYNTAX

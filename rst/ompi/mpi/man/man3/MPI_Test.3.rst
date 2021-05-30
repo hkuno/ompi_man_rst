@@ -2,6 +2,7 @@
 
 MPI_Test
 ~~~~~~~~
+
 :ref:`MPI_Test`  - Tests for the completion of a specific send or receive.
 
 SYNTAX

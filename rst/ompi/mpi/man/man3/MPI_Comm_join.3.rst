@@ -2,6 +2,7 @@
 
 MPI_Comm_join
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_join`  - Establishes communication between MPI jobs
 
 SYNTAX
@@ -98,4 +99,4 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Comm_create`    :ref:`MPI_Comm_group` 
+.. seealso::    socket(3SOCKET)   :ref:`MPI_Comm_create`    :ref:`MPI_Comm_group` 

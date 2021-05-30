@@ -2,6 +2,7 @@
 
 MPI_Info_get
 ~~~~~~~~~~~~
+
 :ref:`MPI_Info_get`  - Retrieves the value associated with a key in an info
 object.
 

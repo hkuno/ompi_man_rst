@@ -2,6 +2,7 @@
 
 shmem_short_and_to_all
 ~~~~~~~~~~~~~~~~~~~~~~
+
 *shmem_int_and_to_all*\ (3), *shmem_int4_and_to_all*\ (3),
 *shmem_int8_and_to_all*\ (3), *shmem_long_and_to_all*\ (3),
 *shmem_longlong_and_to_all*\ (3), *shmem_short_and_to_all*\ (3) -
@@ -210,4 +211,4 @@ Note that two sets of pWrk and pSync arrays are used alternately because
 no synchronization is done between calls.
 
 
-.. seealso:: 
+.. seealso:: *f90*\ (1), *intro_shmem*\ (3)

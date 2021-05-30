@@ -2,6 +2,7 @@
 
 MPI_Neighbor_alltoallv
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Neighbor_alltoallv` , :ref:`MPI_Ineighbor_alltoallv`  - All processes send
 different amounts of data to, and receive different amounts of data
 from, all neighbors

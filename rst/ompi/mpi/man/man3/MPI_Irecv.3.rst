@@ -2,6 +2,7 @@
 
 MPI_Irecv
 ~~~~~~~~~
+
 :ref:`MPI_Irecv`  - Starts a standard-mode, nonblocking receive.
 
 SYNTAX

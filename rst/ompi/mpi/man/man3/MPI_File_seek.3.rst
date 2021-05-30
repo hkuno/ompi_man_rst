@@ -2,6 +2,7 @@
 
 MPI_File_seek
 ~~~~~~~~~~~~~
+
 :ref:`MPI_File_seek`  - Updates individual file pointers (noncollective).
 
 SYNTAX

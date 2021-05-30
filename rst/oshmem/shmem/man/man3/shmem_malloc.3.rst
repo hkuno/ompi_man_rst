@@ -2,6 +2,7 @@
 
 shmem_malloc
 ~~~~~~~~~~~~
+
 *shmem_malloc*\ (3), *shmem_free*\ (3), *shmem_align*\ (3),
 *shmem_realloc*\ (3) *shmalloc*\ (3), *shfree*\ (3), *shmemalign*\ (3),
 *shrealloc*\ (3) - Symmetric heap memory management functions.

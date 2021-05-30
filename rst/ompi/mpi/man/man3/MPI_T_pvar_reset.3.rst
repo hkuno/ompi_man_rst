@@ -2,6 +2,7 @@
 
 MPI_T_pvar_reset
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_pvar_reset`  - Reset the value of a performance variable
 
 SYNTAX

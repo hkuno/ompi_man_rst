@@ -2,6 +2,7 @@
 
 MPI_Type_delete_attr
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_delete_attr`  - Deletes a datatype-caching attribute value
 associated with a key.
 

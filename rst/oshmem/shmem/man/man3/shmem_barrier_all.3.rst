@@ -2,6 +2,7 @@
 
 shmem_barrier_all
 ~~~~~~~~~~~~~~~~~
+
 shmem_barrier_all - Suspends the execution of the calling PE until all
 other PEs issue a call to this particular shmem_barrier_all() statement.
 

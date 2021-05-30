@@ -2,6 +2,7 @@
 
 MPI_File_get_info
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_info`  - Returns a new info object containing values for
 current hints associated with a file.
 

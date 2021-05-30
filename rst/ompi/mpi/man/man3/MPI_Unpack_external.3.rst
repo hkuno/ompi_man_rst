@@ -2,6 +2,7 @@
 
 MPI_Unpack_external
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Unpack_external`  - Reads data from a portable format
 
 SYNTAX
@@ -166,4 +167,4 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Pack_external`    :ref:`MPI_Pack_external_size`    :ref:`MPI_Recv` 
+.. seealso::    :ref:`MPI_Pack_external`    :ref:`MPI_Pack_external_size`    :ref:`MPI_Recv`    sscanf(3C)

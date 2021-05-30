@@ -2,6 +2,7 @@
 
 MPI_Ssend_init
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Ssend_init`  - Builds a handle for a synchronous send.
 
 SYNTAX

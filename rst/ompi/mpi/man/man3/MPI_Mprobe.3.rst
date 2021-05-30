@@ -2,6 +2,7 @@
 
 MPI_Mprobe
 ~~~~~~~~~~
+
 :ref:`MPI_Mprobe`  - Blocking matched probe for a message.
 
 SYNTAX

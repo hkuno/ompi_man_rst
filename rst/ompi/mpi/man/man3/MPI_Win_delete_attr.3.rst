@@ -2,6 +2,7 @@
 
 MPI_Win_delete_attr
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_delete_attr`  - Deletes an attribute from a window.
 
 SYNTAX

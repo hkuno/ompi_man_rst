@@ -2,6 +2,7 @@
 
 MPI_Pready_range
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Pready_range`  - Indicates that a given range os send-side
 partitions are ready to be transferred.
 

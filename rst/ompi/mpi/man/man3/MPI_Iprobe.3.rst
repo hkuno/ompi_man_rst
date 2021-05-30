@@ -2,6 +2,7 @@
 
 MPI_Iprobe
 ~~~~~~~~~~
+
 :ref:`MPI_Iprobe`  - Nonblocking test for a message.
 
 SYNTAX

@@ -2,6 +2,7 @@
 
 MPI_File_get_byte_offset
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_byte_offset`  - Converts a view-relative offset into an
 absolute byte position.
 

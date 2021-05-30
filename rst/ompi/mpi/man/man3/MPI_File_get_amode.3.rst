@@ -2,6 +2,7 @@
 
 MPI_File_get_amode
 ~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_amode`  - Returns access mode associated with an open
 file.
 

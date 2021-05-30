@@ -2,6 +2,7 @@
 
 MPI_File_close
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_File_close`  - Closes a file (collective).
 
 SYNTAX

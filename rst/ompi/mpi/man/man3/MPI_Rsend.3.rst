@@ -2,6 +2,7 @@
 
 MPI_Rsend
 ~~~~~~~~~
+
 :ref:`MPI_Rsend`  - Ready send.
 
 SYNTAX

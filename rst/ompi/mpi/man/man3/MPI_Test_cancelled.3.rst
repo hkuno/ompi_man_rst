@@ -2,6 +2,7 @@
 
 MPI_Test_cancelled
 ~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Test_cancelled`  - Tests whether a request was canceled.
 
 SYNTAX

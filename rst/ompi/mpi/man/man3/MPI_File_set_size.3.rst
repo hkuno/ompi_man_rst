@@ -2,6 +2,7 @@
 
 MPI_File_set_size
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_set_size`  - Resizes a file (collective).
 
 SYNTAX

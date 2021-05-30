@@ -2,6 +2,7 @@
 
 MPI_Errhandler_get
 ~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Errhandler_get`  - Gets the error handler for a communicator --
 use of this routine is deprecated.
 

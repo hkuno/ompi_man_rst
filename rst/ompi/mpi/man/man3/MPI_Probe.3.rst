@@ -2,6 +2,7 @@
 
 MPI_Probe
 ~~~~~~~~~
+
 :ref:`MPI_Probe`  - Blocking test for a message.
 
 SYNTAX

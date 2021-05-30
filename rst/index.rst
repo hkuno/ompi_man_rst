@@ -285,10 +285,10 @@ vendors, application developers and computer science researchers.
    ompi/mpi/man/man3/MPI_Pack_external_size.3
    ompi/mpi/man/man3/MPI_Pack_size.3
    ompi/mpi/man/man3/MPI_Parrived.3
+   ompi/mpi/man/man3/MPI_Pready_range.3
    ompi/mpi/man/man3/MPI_Pcontrol.3
    ompi/mpi/man/man3/MPI_Pready.3
    ompi/mpi/man/man3/MPI_Pready_list.3
-   ompi/mpi/man/man3/MPI_Pready_range.3
    ompi/mpi/man/man3/MPI_Precv_init.3
    ompi/mpi/man/man3/MPI_Probe.3
    ompi/mpi/man/man3/MPI_Psend_init.3

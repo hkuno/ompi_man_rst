@@ -2,6 +2,7 @@
 
 MPI_Group_range_incl
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Group_range_incl`  - Creates a new group from ranges of ranks in
 an existing group.
 

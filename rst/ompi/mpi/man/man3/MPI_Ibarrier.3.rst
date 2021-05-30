@@ -1,5 +1,4 @@
 .. _MPI_Ibarrier:
-
 ============
 MPI_Ibarrier
 ============

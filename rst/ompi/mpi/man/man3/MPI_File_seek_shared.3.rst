@@ -2,6 +2,7 @@
 
 MPI_File_seek_shared
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_seek_shared`  - Updates the global shared file pointer
 (collective).
 

@@ -2,6 +2,7 @@
 
 MPI_Type_contiguous
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_contiguous`  - Creates a contiguous datatype.
 
 SYNTAX

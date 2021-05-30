@@ -2,6 +2,7 @@
 
 MPI_Win_free_keyval
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_free_keyval`  - Frees a window keyval.
 
 SYNTAX

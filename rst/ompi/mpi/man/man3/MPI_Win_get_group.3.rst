@@ -2,6 +2,7 @@
 
 MPI_Win_get_group
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_get_group`  - Returns a duplicate of the group of the
 communicator used to create the window.
 

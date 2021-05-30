@@ -2,6 +2,7 @@
 
 MPI_Win_set_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_set_errhandler`  - Attaches a new error handler to a window.
 
 SYNTAX

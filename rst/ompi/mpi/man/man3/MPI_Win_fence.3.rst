@@ -2,6 +2,7 @@
 
 MPI_Win_fence
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Win_fence`  - Synchronizes RMA calls on a window.
 
 SYNTAX

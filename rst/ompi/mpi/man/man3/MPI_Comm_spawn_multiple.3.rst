@@ -2,6 +2,7 @@
 
 MPI_Comm_spawn_multiple
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_spawn_multiple`  - Spawns multiple binaries, or the same
 binary with multiple sets of arguments.
 

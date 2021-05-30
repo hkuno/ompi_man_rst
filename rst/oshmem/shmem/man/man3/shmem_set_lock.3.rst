@@ -2,6 +2,7 @@
 
 shmem_set_lock
 ~~~~~~~~~~~~~~
+
 *shmem_set_lock*\ (3), *shmem_clear_lock*\ (3), *shmem_test_lock*\ (3) -
 Releases, locks, and tests a mutual exclusion memory lock.
 
@@ -75,4 +76,4 @@ if the lock had been set and the call returned without waiting to set
 the lock.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

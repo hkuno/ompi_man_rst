@@ -2,6 +2,7 @@
 
 MPI_Info_create
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_Info_create`  - Creates a new info object.
 
 SYNTAX

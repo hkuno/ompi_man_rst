@@ -2,6 +2,7 @@
 
 MPI_T_cvar_read
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_cvar_read`  - Read the value of a control variable
 
 SYNTAX

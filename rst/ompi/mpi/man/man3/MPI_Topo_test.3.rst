@@ -2,6 +2,7 @@
 
 MPI_Topo_test
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Topo_test`  - Determines the type of topology (if any) associated
 with a communicator.
 

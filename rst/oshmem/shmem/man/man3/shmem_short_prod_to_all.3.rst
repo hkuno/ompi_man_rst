@@ -2,6 +2,7 @@
 
 shmem_short_prod_to_all
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 *shmem_comp4_prod_to_all*\ (3), *shmem_comp8_prod_to_all*\ (3),
 *shmem_complexd_prod_to_all*\ (3), *shmem_complexf_prod_to_all*\ (3),
 *shmem_double_prod_to_all*\ (3), *shmem_float_prod_to_all*\ (3),
@@ -262,4 +263,4 @@ Note that two sets of pWrk and pSync arrays are used alternately because
 no synchronization is done between calls.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

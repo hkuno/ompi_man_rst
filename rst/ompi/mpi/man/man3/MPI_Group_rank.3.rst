@@ -2,6 +2,7 @@
 
 MPI_Group_rank
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Group_rank`  - Returns the rank of the calling process in the
 given group.
 

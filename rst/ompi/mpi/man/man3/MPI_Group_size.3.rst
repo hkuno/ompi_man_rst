@@ -2,6 +2,7 @@
 
 MPI_Group_size
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Group_size`  - Returns the size of a group.
 
 SYNTAX

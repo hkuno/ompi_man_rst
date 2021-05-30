@@ -2,6 +2,7 @@
 
 MPI_Recv
 ~~~~~~~~
+
 :ref:`MPI_Recv`  - Performs a standard-mode blocking receive.
 
 SYNTAX

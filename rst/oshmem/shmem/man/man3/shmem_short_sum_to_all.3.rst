@@ -2,6 +2,7 @@
 
 shmem_short_sum_to_all
 ~~~~~~~~~~~~~~~~~~~~~~
+
 *shmem_comp4_sum_to_all*\ (3), *shmem_comp8_sum_to_all*\ (3),
 *shmem_complexd_sum_to_all*\ (3), *shmem_complexf_sum_to_all*\ (3),
 *shmem_double_sum_to_all*\ (3), *shmem_float_sum_to_all*\ (3),
@@ -283,4 +284,4 @@ the combination of the following calls:
    synchronization is done between calls.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

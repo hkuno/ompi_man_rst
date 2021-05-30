@@ -2,6 +2,7 @@
 
 MPI_Win_sync
 ~~~~~~~~~~~~
+
 :ref:`MPI_Win_sync` , - Synchronize the private and public copies of the
 window
 

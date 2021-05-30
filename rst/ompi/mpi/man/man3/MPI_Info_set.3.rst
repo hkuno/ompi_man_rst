@@ -2,6 +2,7 @@
 
 MPI_Info_set
 ~~~~~~~~~~~~
+
 :ref:`MPI_Info_set`  - Adds a key/value pair to *info*.
 
 SYNTAX

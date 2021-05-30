@@ -2,6 +2,7 @@
 
 MPI_Start
 ~~~~~~~~~
+
 :ref:`MPI_Start`  - Initiates a communication using a persistent request
 handle.
 

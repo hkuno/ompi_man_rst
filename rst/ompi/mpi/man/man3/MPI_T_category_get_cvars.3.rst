@@ -2,6 +2,7 @@
 
 MPI_T_category_get_cvars
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_category_get_cvars`  - Query which control variables are in a
 category
 

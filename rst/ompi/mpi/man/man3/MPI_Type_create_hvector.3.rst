@@ -2,6 +2,7 @@
 
 MPI_Type_create_hvector
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_create_hvector`  - Creates a vector (strided) data type with
 offset in bytes.
 

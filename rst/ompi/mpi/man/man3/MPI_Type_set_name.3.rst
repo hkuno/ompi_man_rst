@@ -2,6 +2,7 @@
 
 MPI_Type_set_name
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_set_name`  - Sets the name of a data type.
 
 SYNTAX

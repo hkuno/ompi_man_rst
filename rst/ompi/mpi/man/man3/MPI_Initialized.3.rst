@@ -2,6 +2,7 @@
 
 MPI_Initialized
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_Initialized`  - Checks whether MPI has been initialized
 
 SYNTAX

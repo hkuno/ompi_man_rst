@@ -2,6 +2,7 @@
 
 MPI_Recv_init
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Recv_init`  - Builds a handle for a receive.
 
 SYNTAX

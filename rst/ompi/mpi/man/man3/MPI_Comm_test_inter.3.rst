@@ -2,6 +2,7 @@
 
 MPI_Comm_test_inter
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_test_inter`  - Tests to see if a comm is an
 intercommunicator.
 

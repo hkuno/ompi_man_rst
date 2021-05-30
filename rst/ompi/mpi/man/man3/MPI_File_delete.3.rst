@@ -2,6 +2,7 @@
 
 MPI_File_delete
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_delete`  - Deletes a file.
 
 SYNTAX

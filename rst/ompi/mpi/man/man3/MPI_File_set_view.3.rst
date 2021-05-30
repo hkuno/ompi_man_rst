@@ -2,6 +2,7 @@
 
 MPI_File_set_view
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_set_view`  - Changes process's view of data in file
 (collective).
 

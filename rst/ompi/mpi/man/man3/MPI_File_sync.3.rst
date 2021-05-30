@@ -2,6 +2,7 @@
 
 MPI_File_sync
 ~~~~~~~~~~~~~
+
 :ref:`MPI_File_sync`  - Makes semantics consistent for data-access
 operations (collective).
 

@@ -2,6 +2,7 @@
 
 MPI_Waitsome
 ~~~~~~~~~~~~
+
 :ref:`MPI_Waitsome`  - Waits for some given communications to complete.
 
 SYNTAX

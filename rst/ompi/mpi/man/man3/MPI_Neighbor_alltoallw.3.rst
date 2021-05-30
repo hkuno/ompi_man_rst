@@ -2,6 +2,7 @@
 
 MPI_Neighbor_alltoallw
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Neighbor_alltoallw` , :ref:`MPI_Ineighbor_alltoallw`  - All processes send
 data of different types to, and receive data of different types from,
 all processes

@@ -2,6 +2,7 @@
 
 MPI_File_read_ordered_begin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_read_ordered_begin`  - Reads a file at a location specified
 by a shared file pointer; beginning part of a split collective routine
 (nonblocking).

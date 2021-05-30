@@ -2,6 +2,7 @@
 
 shmem_fence
 ~~~~~~~~~~~
+
 shmem_fence - Provides a separate ordering on the sequence of puts
 issued by this PE to each destination PE.
 
@@ -48,4 +49,4 @@ The shmem_quiet function should be called if ordering of puts is desired
 when multiple remote PEs are involved.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

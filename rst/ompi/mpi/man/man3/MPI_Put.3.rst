@@ -2,6 +2,7 @@
 
 MPI_Put
 ~~~~~~~
+
 :ref:`MPI_Put` , :ref:`MPI_Rput`  - Copies data from the origin memory to the
 target.
 

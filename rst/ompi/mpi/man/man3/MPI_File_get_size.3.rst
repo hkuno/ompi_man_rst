@@ -2,6 +2,7 @@
 
 MPI_File_get_size
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_size`  - Returns the current size of the file.
 
 SYNTAX
@@ -90,4 +91,4 @@ called. For MPI I/O function errors, the default error handler is set to
 does not guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_File_preallocate` 
+.. seealso:: || :ref:`MPI_File_preallocate` 

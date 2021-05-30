@@ -2,6 +2,7 @@
 
 shmem_swap
 ~~~~~~~~~~
+
 *shmem_double_swap*\ (3), *shmem_float_swap*\ (3),
 *shmem_int_swap*\ (3), *shmem_long_swap*\ (3), *shmem_swap*\ (3),
 *shmem_int4_swap*\ (3), *shmem_int8_swap*\ (3), *shmem_real4_swap*\ (3),
@@ -101,4 +102,4 @@ The contents that had been at the target address on the remote PE prior
 to the swap is returned.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

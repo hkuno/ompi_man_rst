@@ -2,6 +2,7 @@
 
 MPI_Win_free
 ~~~~~~~~~~~~
+
 :ref:`MPI_Win_free`  - Frees the window object and returns a null handle.
 
 SYNTAX

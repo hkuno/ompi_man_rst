@@ -2,6 +2,7 @@
 
 MPI_Info_dup
 ~~~~~~~~~~~~
+
 :ref:`MPI_Info_dup`  - Duplicates an info object.
 
 SYNTAX

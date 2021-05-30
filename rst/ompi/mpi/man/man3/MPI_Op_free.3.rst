@@ -2,6 +2,7 @@
 
 MPI_Op_free
 ~~~~~~~~~~~
+
 :ref:`MPI_Op_free`  - Frees a user-defined combination function handle.
 
 SYNTAX

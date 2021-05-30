@@ -2,6 +2,7 @@
 
 MPI_Unpublish_name
 ~~~~~~~~~~~~~~~~~~
+
 ::
 
    MPI_Unpublish_name - Unpublishes a service name

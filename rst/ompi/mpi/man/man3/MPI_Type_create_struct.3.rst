@@ -2,6 +2,7 @@
 
 MPI_Type_create_struct
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_create_struct`  - Creates a structured data type.
 
 SYNTAX

@@ -2,6 +2,7 @@
 
 MPI_Ssend
 ~~~~~~~~~
+
 :ref:`MPI_Ssend`  - Standard synchronous send.
 
 SYNTAX

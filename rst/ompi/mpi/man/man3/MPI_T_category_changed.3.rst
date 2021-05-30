@@ -2,6 +2,7 @@
 
 MPI_T_category_changed
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_category_changed`  - Get a timestamp for the categories
 
 SYNTAX

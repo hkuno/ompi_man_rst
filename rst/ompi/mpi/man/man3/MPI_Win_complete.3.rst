@@ -2,6 +2,7 @@
 
 MPI_Win_complete
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_complete`  - Completes an RMA access epoch on *win* started by
 a call to :ref:`MPI_Win_start` 
 

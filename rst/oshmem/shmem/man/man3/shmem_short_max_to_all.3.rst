@@ -2,6 +2,7 @@
 
 shmem_short_max_to_all
 ~~~~~~~~~~~~~~~~~~~~~~
+
 *shmem_double_max_to_all*\ (3), *shmem_float_max_to_all*\ (3),
 *shmem_int_max_to_all*\ (3), *shmem_int4_max_to_all*\ (3),
 *shmem_int8_max_to_all*\ (3), *shmem_long_max_to_all*\ (3),
@@ -244,4 +245,4 @@ Note that two sets of pWrk and pSync arrays are used alternately because
 no synchronization is done between calls.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

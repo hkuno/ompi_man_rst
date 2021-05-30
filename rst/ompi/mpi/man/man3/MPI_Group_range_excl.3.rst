@@ -2,6 +2,7 @@
 
 MPI_Group_range_excl
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Group_range_excl`  - Produces a group by excluding ranges of
 processes from an existing group.
 

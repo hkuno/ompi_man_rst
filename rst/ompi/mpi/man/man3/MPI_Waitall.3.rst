@@ -2,6 +2,7 @@
 
 MPI_Waitall
 ~~~~~~~~~~~
+
 :ref:`MPI_Waitall`  - Waits for all given communications to complete.
 
 SYNTAX

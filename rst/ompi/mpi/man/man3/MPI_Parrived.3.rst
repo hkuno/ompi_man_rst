@@ -2,6 +2,7 @@
 
 MPI_Parrived
 ~~~~~~~~~~~~
+
 :ref:`MPI_Parrived`  - Tests for completion of a specified receive-side
 partition.
 

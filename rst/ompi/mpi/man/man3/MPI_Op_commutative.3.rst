@@ -2,6 +2,7 @@
 
 MPI_Op_commutative
 ~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Op_commutative`  - Query of commutativity of reduction operation.
 
 SYNTAX

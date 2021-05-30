@@ -2,6 +2,7 @@
 
 MPI_Comm_split
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_split`  - Creates new communicators based on colors and keys.
 
 SYNTAX

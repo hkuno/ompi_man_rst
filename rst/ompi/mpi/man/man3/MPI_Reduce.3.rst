@@ -2,6 +2,7 @@
 
 MPI_Reduce
 ~~~~~~~~~~
+
 :ref:`MPI_Reduce` , :ref:`MPI_Ireduce`  - Reduces values on all processes within a
 group.
 

@@ -2,6 +2,7 @@
 
 MPI_Dist_graph_create
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Dist_graph_create`  - Makes a new communicator to which topology
 information has been attached.
 

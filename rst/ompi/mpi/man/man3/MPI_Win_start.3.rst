@@ -2,6 +2,7 @@
 
 MPI_Win_start
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Win_start`  - Starts an RMA access epoch for *win*
 
 SYNTAX

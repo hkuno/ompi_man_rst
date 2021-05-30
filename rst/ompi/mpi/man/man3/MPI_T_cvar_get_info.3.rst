@@ -2,6 +2,7 @@
 
 MPI_T_cvar_get_info
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_cvar_get_info`  - Query information from a control variable
 
 SYNTAX

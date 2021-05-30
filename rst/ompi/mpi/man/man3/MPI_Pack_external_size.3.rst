@@ -2,6 +2,7 @@
 
 MPI_Pack_external_size
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Pack_external_size`  - Calculates upper bound on space needed to
 write to a portable format
 

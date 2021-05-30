@@ -2,6 +2,7 @@
 
 MPI_Testsome
 ~~~~~~~~~~~~
+
 :ref:`MPI_Testsome`  - Tests for completion of one or more previously
 initiated communications in a list.
 

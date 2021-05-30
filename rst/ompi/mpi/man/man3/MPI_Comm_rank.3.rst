@@ -2,6 +2,7 @@
 
 MPI_Comm_rank
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_rank`  - Determines the rank of the calling process in the
 communicator.
 

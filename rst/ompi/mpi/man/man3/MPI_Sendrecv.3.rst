@@ -2,6 +2,7 @@
 
 MPI_Sendrecv
 ~~~~~~~~~~~~
+
 :ref:`MPI_Sendrecv`  - Sends and receives a message.
 
 SYNTAX

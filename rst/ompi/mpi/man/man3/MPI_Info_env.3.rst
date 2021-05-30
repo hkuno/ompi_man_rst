@@ -2,6 +2,7 @@
 
 MPI_Info_env
 ~~~~~~~~~~~~
+
 :ref:`MPI_INFO_ENV`  - Static :ref:`MPI_Info`  object containing info about the
 application
 

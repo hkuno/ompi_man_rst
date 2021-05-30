@@ -2,6 +2,7 @@
 
 MPI_Wtime
 ~~~~~~~~~
+
 :ref:`MPI_Wtime`  - Returns an elapsed time on the calling processor.
 
 SYNTAX

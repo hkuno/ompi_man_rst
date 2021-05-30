@@ -2,6 +2,7 @@
 
 MPI_Info_get_nthkey
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Info_get_nthkey`  - Returns the *n*\ th defined key in *info*.
 
 SYNTAX

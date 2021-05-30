@@ -2,6 +2,7 @@
 
 MPI_File_set_atomicity
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_set_atomicity`  - Sets consistency semantics for data-access
 operations (collective).
 

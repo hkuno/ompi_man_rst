@@ -2,6 +2,7 @@
 
 MPI_Comm_get_name
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_get_name`  - Returns the name that was most recently
 associated with a communicator.
 

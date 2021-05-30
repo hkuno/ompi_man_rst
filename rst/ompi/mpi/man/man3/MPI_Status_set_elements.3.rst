@@ -2,6 +2,7 @@
 
 MPI_Status_set_elements
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Status_set_elements` , :ref:`MPI_Status_set_elements_x`  - Modifies
 opaque part of *status* to allow :ref:`MPI_Get_elements`  to return *count*.
 

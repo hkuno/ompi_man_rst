@@ -2,6 +2,7 @@
 
 MPI_Rsend_init
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Rsend_init`  - Builds a handle for a ready send.
 
 SYNTAX

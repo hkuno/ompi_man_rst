@@ -2,6 +2,7 @@
 
 MPI_Reduce_local
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Reduce_local`  - Perform a local reduction
 
 SYNTAX

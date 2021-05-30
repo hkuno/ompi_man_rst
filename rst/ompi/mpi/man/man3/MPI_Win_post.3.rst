@@ -2,6 +2,7 @@
 
 MPI_Win_post
 ~~~~~~~~~~~~
+
 :ref:`MPI_Win_post`  - Starts an RMA exposure epoch for the local window
 associated with *win*
 

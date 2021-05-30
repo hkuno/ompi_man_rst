@@ -2,6 +2,7 @@
 
 MPI_Comm_get_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_get_errhandler`  - Retrieves error handler associated with a
 communicator.
 

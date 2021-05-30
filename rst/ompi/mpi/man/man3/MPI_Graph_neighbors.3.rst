@@ -2,6 +2,7 @@
 
 MPI_Graph_neighbors
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Graph_neighbors`  - Returns the neighbors of a node associated
 with a graph topology.
 

@@ -2,6 +2,7 @@
 
 MPI_File_get_position
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_position`  - Returns the current position of the
 individual file pointer.
 

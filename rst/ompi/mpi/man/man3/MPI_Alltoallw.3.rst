@@ -2,6 +2,7 @@
 
 MPI_Alltoallw
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Alltoallw` , :ref:`MPI_Ialltoallw`  - All processes send data of different
 types to, and receive data of different types from, all processes
 

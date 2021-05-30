@@ -2,6 +2,7 @@
 
 MPI_T_cvar_get_num
 ~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_cvar_get_num`  - Query the number of control variables
 
 SYNTAX

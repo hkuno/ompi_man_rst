@@ -2,6 +2,7 @@
 
 MPI_Win_flush
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Win_flush` , :ref:`MPI_Win_flush_all`  - Complete all outstanding RMA
 operations at both the origin and the target
 

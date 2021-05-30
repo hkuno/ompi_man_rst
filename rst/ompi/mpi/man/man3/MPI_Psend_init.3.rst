@@ -2,6 +2,7 @@
 
 MPI_Psend_init
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Psend_init`  - Initializes a partitioned send.
 
 SYNTAX

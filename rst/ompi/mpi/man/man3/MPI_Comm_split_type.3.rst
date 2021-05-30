@@ -2,6 +2,7 @@
 
 MPI_Comm_split_type
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_split_type`  - Creates new communicators based on colors and
 keys.
 

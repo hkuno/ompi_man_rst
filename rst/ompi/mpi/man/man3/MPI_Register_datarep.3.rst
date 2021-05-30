@@ -2,6 +2,7 @@
 
 MPI_Register_datarep
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Register_datarep`  - Defines data representation.
 
 SYNTAX

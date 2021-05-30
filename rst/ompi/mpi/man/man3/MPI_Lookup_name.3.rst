@@ -2,6 +2,7 @@
 
 MPI_Lookup_name
 ~~~~~~~~~~~~~~~
+
 ::
 
    MPI_Lookup_name - Finds port associated with a service name

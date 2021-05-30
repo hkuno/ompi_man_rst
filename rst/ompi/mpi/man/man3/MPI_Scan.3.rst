@@ -2,6 +2,7 @@
 
 MPI_Scan
 ~~~~~~~~
+
 :ref:`MPI_Scan` , :ref:`MPI_Iscan`  - Computes an inclusive scan (partial reduction)
 
 SYNTAX

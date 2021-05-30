@@ -2,6 +2,7 @@
 
 shmem_char_get
 ~~~~~~~~~~~~~~
+
 *shmem_character_get*\ (3), *shmem_complex_get*\ (3),
 *shmem_double_get*\ (3), *shmem_float_get*\ (3), *shmem_get4*\ (3),
 *shmem_get8*\ (3), *shmem_get32*\ (3), *shmem_get64*\ (3),

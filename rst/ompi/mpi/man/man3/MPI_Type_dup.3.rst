@@ -2,6 +2,7 @@
 
 MPI_Type_dup
 ~~~~~~~~~~~~
+
 :ref:`MPI_Type_dup`  - Duplicates a data type with associated key values.
 
 SYNTAX

@@ -2,6 +2,7 @@
 
 MPI_Add_error_class
 ~~~~~~~~~~~~~~~~~~~
+
 ::
 
    MPI_Add_error_class - Creates a new error class and returns its value

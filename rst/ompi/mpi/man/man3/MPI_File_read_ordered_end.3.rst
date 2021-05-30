@@ -2,6 +2,7 @@
 
 MPI_File_read_ordered_end
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_read_ordered_end`  - Reads a file at a location specified by
 a shared file pointer; ending part of a split collective routine
 (blocking).

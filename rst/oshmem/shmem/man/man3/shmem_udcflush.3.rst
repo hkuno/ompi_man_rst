@@ -2,6 +2,7 @@
 
 shmem_udcflush
 ~~~~~~~~~~~~~~
+
 *shmem_clear_cache_inv*\ (3), *shmem_set_cache_inv*\ (3),
 *shmem_set_cache_line_inv*\ (3), *shmem_udcflush*\ (3),
 *shmem_udcflush_line*\ (3) - Controls data cache utilities

@@ -2,6 +2,7 @@
 
 MPI_Type_extent
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_extent`  - Returns the extent of a data type, the difference
 between the upper and lower bounds of the data type -- use of this
 routine is deprecated.

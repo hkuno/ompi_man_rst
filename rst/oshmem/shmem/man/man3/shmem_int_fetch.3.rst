@@ -2,6 +2,7 @@
 
 shmem_int_fetch
 ~~~~~~~~~~~~~~~
+
 *shmem_int4_fetch*\ (3), *shmem_int8_fetch*\ (3),
 *shmem_int_fetch*\ (3), *shmem_long_fetch*\ (3),
 *shmem_longlong_fetch*\ (3) *shmem_double_fetch*\ (3)
@@ -73,4 +74,4 @@ The contents at the *target* address on the remote PE. The data type of
 the return value is the same as the the type of the remote data object.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

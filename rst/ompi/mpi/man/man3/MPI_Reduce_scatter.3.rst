@@ -2,6 +2,7 @@
 
 MPI_Reduce_scatter
 ~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Reduce_scatter` , :ref:`MPI_Ireduce_scatter`  - Combines values and
 scatters the results.
 

@@ -2,6 +2,7 @@
 
 MPI_Aint_add
 ~~~~~~~~~~~~
+
 :ref:`MPI_Aint_add` , :ref:`MPI_Aint_diff`  - Portable functions for arithmetic
 on :ref:`MPI_Aint`  values.
 

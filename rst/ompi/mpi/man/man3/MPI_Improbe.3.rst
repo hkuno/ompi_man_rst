@@ -2,6 +2,7 @@
 
 MPI_Improbe
 ~~~~~~~~~~~
+
 :ref:`MPI_Improbe`  - Non-blocking matched probe for a message.
 
 SYNTAX

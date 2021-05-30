@@ -2,6 +2,7 @@
 
 MPI_File_write_at_all
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_write_at_all`  - Writes a file at explicitly specified
 offsets (blocking, collective).
 

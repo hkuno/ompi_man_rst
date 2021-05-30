@@ -2,6 +2,7 @@
 
 MPI_Request_free
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Request_free`  - Frees a communication request object.
 
 SYNTAX

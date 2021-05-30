@@ -2,6 +2,7 @@
 
 MPI_Exscan
 ~~~~~~~~~~
+
 :ref:`MPI_Exscan` , :ref:`MPI_Iexscan`  - Computes an exclusive scan (partial
 reduction)
 

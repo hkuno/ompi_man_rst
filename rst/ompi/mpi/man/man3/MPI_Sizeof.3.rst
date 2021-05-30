@@ -2,6 +2,7 @@
 
 MPI_Sizeof
 ~~~~~~~~~~
+
 :ref:`MPI_Sizeof`  - Returns the size, in bytes, of the given type
 
 SYNTAX

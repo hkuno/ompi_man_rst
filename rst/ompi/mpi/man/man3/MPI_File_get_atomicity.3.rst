@@ -2,6 +2,7 @@
 
 MPI_File_get_atomicity
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_atomicity`  - Returns current consistency semantics for
 data-access operations.
 

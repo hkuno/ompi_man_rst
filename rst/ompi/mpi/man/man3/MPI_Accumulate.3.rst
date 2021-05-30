@@ -2,6 +2,7 @@
 
 MPI_Accumulate
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Accumulate` , :ref:`MPI_Raccumulate`  - Combines the contents of the
 origin buffer with that of a target buffer.
 

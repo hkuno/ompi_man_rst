@@ -2,6 +2,7 @@
 
 MPI_T_category_get_info
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_category_get_info`  - Query information from a category
 
 SYNTAX

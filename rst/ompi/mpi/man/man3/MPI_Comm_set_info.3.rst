@@ -2,6 +2,7 @@
 
 MPI_Comm_set_info
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_set_info`  - Set communicator info hints
 
 SYNTAX

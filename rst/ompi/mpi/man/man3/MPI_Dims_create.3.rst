@@ -2,6 +2,7 @@
 
 MPI_Dims_create
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_Dims_create`  - Creates a division of processors in a Cartesian
 grid.
 

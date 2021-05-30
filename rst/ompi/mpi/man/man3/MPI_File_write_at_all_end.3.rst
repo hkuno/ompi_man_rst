@@ -2,6 +2,7 @@
 
 MPI_File_write_at_all_end
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_write_at_all_end`  - Writes a file at explicitly specified
 offsets; ending part of a split collective routine (blocking).
 

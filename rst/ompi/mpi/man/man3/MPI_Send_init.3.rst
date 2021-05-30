@@ -2,6 +2,7 @@
 
 MPI_Send_init
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Send_init`  - Builds a handle for a standard send.
 
 SYNTAX

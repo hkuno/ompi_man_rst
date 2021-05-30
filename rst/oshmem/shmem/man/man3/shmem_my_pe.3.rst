@@ -2,6 +2,7 @@
 
 shmem_my_pe
 ~~~~~~~~~~~
+
 shmem_my_pe, my_pe, \_my_pe - Returns the virtual PE number of the
 calling PE.
 

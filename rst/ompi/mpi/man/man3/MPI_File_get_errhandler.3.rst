@@ -2,6 +2,7 @@
 
 MPI_File_get_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_errhandler`  - Gets the error handler for a file.
 
 SYNTAX

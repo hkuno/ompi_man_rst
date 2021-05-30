@@ -2,6 +2,7 @@
 
 MPI_Type_match_size
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_match_size`  - Returns an MPI datatype of a given type and
 size
 

@@ -2,6 +2,7 @@
 
 MPI_Mrecv
 ~~~~~~~~~
+
 :ref:`MPI_Mrecv`  - Blocking receive for a matched message
 
 SYNTAX

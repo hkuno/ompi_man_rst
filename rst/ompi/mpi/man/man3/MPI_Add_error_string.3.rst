@@ -2,6 +2,7 @@
 
 MPI_Add_error_string
 ~~~~~~~~~~~~~~~~~~~~
+
 ::
 
    MPI_Add_error_string - Associates a string with an error code or class

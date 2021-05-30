@@ -2,6 +2,7 @@
 
 shmem_barrier
 ~~~~~~~~~~~~~
+
 shmem_barrier - Performs a barrier operation on a subset of processing
 elements (PEs).
 

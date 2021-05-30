@@ -2,6 +2,7 @@
 
 MPI_T_pvar_read
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_pvar_read`  - Read the value of a performance variable
 
 SYNTAX

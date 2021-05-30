@@ -2,6 +2,7 @@
 
 MPI_File_get_group
 ~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_group`  - Returns a duplicate of the process group of a
 file.
 

@@ -2,6 +2,7 @@
 
 MPI_Pready_list
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_Pready_list`  - Indicates that a list given send-side partitions
 are ready to be transferred.
 

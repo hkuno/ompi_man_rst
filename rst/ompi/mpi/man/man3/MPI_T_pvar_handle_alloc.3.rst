@@ -2,6 +2,7 @@
 
 MPI_T_pvar_handle_alloc
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_pvar_handle_alloc` , :ref:`MPI_T_pvar_handle_free`  - Allocate/free
 MPI performance variable handles
 

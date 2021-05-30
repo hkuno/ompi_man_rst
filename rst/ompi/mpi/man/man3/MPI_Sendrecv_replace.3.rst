@@ -2,6 +2,7 @@
 
 MPI_Sendrecv_replace
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Sendrecv_replace`  - Sends and receives a message using a single
 buffer.
 

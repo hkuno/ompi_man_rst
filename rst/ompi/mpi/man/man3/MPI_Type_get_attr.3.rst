@@ -2,6 +2,7 @@
 
 MPI_Type_get_attr
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_get_attr`  - Returns the attribute associated with a data
 type.
 

@@ -2,6 +2,7 @@
 
 MPI_Testany
 ~~~~~~~~~~~
+
 :ref:`MPI_Testany`  - Tests for completion of any one previously initiated
 communication in a list.
 

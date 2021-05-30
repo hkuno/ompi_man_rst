@@ -2,6 +2,7 @@
 
 MPI_T_cvar_write
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_cvar_write`  - Write the value of a bound control variable
 
 SYNTAX

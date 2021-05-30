@@ -2,6 +2,7 @@
 
 shmem_getmem_nbi
 ~~~~~~~~~~~~~~~~
+
 *shmem_getmem_nbi*\ (3), *shmem_char_get_nbi*\ (3),
 *shmem_short_get_nbi*\ (3), *shmem_int_get_nbi*\ (3),
 *shmem_long_get_nbi*\ (3), *shmem_longlong_get_nbi*\ (3),

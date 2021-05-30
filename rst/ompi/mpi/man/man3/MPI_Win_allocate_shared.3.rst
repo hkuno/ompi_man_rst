@@ -2,6 +2,7 @@
 
 MPI_Win_allocate_shared
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_allocate_shared`  - One-sided MPI call that allocates shared
 memory and returns a window object for RMA operations.
 

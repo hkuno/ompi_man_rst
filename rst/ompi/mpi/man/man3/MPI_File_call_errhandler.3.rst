@@ -2,6 +2,7 @@
 
 MPI_File_call_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_call_errhandler`  - Passes the supplied error code to the
 error handler assigned to a file
 

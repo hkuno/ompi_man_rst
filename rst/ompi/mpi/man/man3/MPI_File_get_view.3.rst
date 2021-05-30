@@ -2,6 +2,7 @@
 
 MPI_File_get_view
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_view`  - Returns the process's view of data in the file.
 
 SYNTAX

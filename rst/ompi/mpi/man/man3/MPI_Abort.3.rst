@@ -2,6 +2,7 @@
 
 MPI_Abort
 ~~~~~~~~~
+
 :ref:`MPI_Abort`  - Terminates MPI execution environment.
 
 SYNTAX

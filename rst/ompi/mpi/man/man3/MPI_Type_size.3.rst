@@ -2,6 +2,7 @@
 
 MPI_Type_size
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Type_size` , :ref:`MPI_Type_size_x`  - Returns the number of bytes
 occupied by entries in a data type.
 

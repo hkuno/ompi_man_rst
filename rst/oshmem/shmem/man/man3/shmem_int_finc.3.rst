@@ -2,6 +2,7 @@
 
 shmem_int_finc
 ~~~~~~~~~~~~~~
+
 *shmem_int4_finc*\ (3), *shmem_int8_finc*\ (3), *shmem_int_finc*\ (3),
 *shmem_long_finc*\ (3), *shmem_longlong_finc*\ (3) - Performs an atomic
 fetch-and-increment operation on a remote data object
@@ -70,4 +71,4 @@ The contents that had been at the target address on the remote PE prior
 to the increment.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

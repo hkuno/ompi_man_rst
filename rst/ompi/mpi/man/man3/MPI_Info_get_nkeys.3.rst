@@ -2,6 +2,7 @@
 
 MPI_Info_get_nkeys
 ~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Info_get_nkeys`  - Gets the number of keys currently defined in an
 info object.
 

@@ -2,6 +2,7 @@
 
 MPI_T_finalize
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_T_finalize`  - Finalize the MPI tool information interface
 
 SYNTAX

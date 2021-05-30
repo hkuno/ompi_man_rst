@@ -2,6 +2,7 @@
 
 shmalloc
 ~~~~~~~~
+
 *shmalloc*\ (3), *shfree*\ (3), *shmemalign*\ (3), *shrealloc*\ (3) -
 Symmetric heap memory management functions.
 
@@ -90,4 +91,4 @@ space (which may have moved); otherwise, it returns a null pointer (with
 malloc_error set).
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3), *my_pe*\ (3I), *start_pes*\ (3)

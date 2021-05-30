@@ -2,6 +2,7 @@
 
 shmem_putmem_nbi
 ~~~~~~~~~~~~~~~~
+
 *shmem_putmem_nbi*\ (3), *shmem_char_put_nbi*\ (3),
 *shmem_short_put_nbi*\ (3), *shmem_int_put_nbi*\ (3),
 *shmem_long_put_nbi*\ (3), *shmem_longlong_put_nbi*\ (3),

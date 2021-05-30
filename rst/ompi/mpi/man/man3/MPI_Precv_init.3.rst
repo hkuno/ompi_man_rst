@@ -2,6 +2,7 @@
 
 MPI_Precv_init
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Precv_init`  - Initializes a partitioned receive.
 
 SYNTAX

@@ -2,6 +2,7 @@
 
 MPI_Open_port
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Open_port`  - Establishes a network address for a server to accept
 connections from clients.
 

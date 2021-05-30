@@ -2,6 +2,7 @@
 
 MPI_Wtick
 ~~~~~~~~~
+
 :ref:`MPI_Wtick`  - Returns the resolution of :ref:`MPI_Wtime` .
 
 SYNTAX

@@ -2,6 +2,7 @@
 
 MPI_File_set_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_set_errhandler`  - Sets the error handler for a file.
 
 SYNTAX

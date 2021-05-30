@@ -2,6 +2,7 @@
 
 MPI_T_category_get_pvars
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_category_get_pvars`  - Query which performance variables are in
 a category
 

@@ -2,6 +2,7 @@
 
 MPI_Op_create
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Op_create`  - Creates a user-defined combination function handle.
 
 SYNTAX

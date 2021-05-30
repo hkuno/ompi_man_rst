@@ -2,6 +2,7 @@
 
 MPI_Publish_name
 ~~~~~~~~~~~~~~~~
+
 ::
 
    MPI_Publish_name - Publishes a service name associated with a port

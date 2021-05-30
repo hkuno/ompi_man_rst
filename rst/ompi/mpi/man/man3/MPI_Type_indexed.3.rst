@@ -2,6 +2,7 @@
 
 MPI_Type_indexed
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_indexed` , :ref:`MPI_Type_create_hindexed`  - Creates an indexed
 datatype.
 

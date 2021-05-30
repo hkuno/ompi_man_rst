@@ -2,6 +2,7 @@
 
 MPI_Comm_remote_group
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_remote_group`  - Accesses the remote group associated with an
 intercommunicator.
 

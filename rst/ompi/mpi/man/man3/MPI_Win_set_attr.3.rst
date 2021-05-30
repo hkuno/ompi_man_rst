@@ -2,6 +2,7 @@
 
 MPI_Win_set_attr
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_set_attr`  - Sets the value of a window attribute.
 
 SYNTAX

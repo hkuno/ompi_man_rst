@@ -2,6 +2,7 @@
 
 MPI_T_category_get_num
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_category_get_num`  - Query the number of categories
 
 SYNTAX

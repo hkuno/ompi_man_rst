@@ -2,6 +2,7 @@
 
 MPI_File_iread_shared
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_iread_shared`  - Reads a file using the shared file pointer
 (nonblocking, noncollective).
 

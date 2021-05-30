@@ -2,6 +2,7 @@
 
 MPI_Win_get_name
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_get_name`  - Obtains the name of a window.
 
 SYNTAX

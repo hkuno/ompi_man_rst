@@ -2,6 +2,7 @@
 
 MPI_Allreduce
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Allreduce` , :ref:`MPI_Iallreduce`  - Combines values from all processes
 and distributes the result back to all processes.
 

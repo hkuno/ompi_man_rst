@@ -2,6 +2,7 @@
 
 MPI_File_get_position_shared
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_get_position_shared`  - Returns the current position of the
 shared file pointer.
 

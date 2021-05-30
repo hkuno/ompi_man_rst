@@ -2,6 +2,7 @@
 
 shmem_short_or_to_all
 ~~~~~~~~~~~~~~~~~~~~~
+
 *shmem_int_or_to_all*\ (3), *shmem_int4_or_to_all*\ (3),
 *shmem_int8_or_to_all*\ (3), *shmem_long_or_to_all*\ (3),
 *shmem_longlong_or_to_all*\ (3), *shmem_short_or_to_all*\ (3) - Performs
@@ -209,4 +210,4 @@ Note that two sets of pWrk and pSync arrays are used alternately because
 no synchronization is done between calls.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

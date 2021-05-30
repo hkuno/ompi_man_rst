@@ -2,6 +2,7 @@
 
 MPI_File_preallocate
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_preallocate`  - Preallocates a specified amount of storage
 space at the beginning of a file (collective).
 

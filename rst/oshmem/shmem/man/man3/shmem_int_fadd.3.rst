@@ -2,6 +2,7 @@
 
 shmem_int_fadd
 ~~~~~~~~~~~~~~
+
 *shmem_int4_fadd*\ (3), *shmem_int8_fadd*\ (3), *shmem_int_fadd*\ (3),
 *shmem_long_fadd*\ (3), *shmem_longlong_fadd*\ (3) - Performs an atomic
 fetch-and-add operation on a remote data object
@@ -76,4 +77,4 @@ The contents that had been at the target address on the remote PE prior
 to the atomic addition operation.
 
 
-.. seealso:: 
+.. seealso:: *intro_shmem*\ (3)

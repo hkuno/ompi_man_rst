@@ -2,6 +2,7 @@
 
 MPI_Ibsend
 ~~~~~~~~~~
+
 :ref:`MPI_Ibsend`  - Starts a nonblocking buffered send.
 
 SYNTAX

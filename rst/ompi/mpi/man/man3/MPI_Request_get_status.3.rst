@@ -2,6 +2,7 @@
 
 MPI_Request_get_status
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Request_get_status`  - Access information associated with a
 request without freeing the request.
 

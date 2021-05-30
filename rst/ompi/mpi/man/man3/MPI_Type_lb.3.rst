@@ -2,6 +2,7 @@
 
 MPI_Type_lb
 ~~~~~~~~~~~
+
 :ref:`MPI_Type_lb`  - Returns the lower bound of a data type -- use of this
 routine is deprecated.
 

@@ -2,6 +2,7 @@
 
 MPI_Comm_idup
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_idup`  - Start the nonblocking duplication of an existing
 communicator with all its cached information.
 

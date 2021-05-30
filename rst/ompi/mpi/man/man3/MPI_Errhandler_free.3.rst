@@ -2,6 +2,7 @@
 
 MPI_Errhandler_free
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Errhandler_free`  - Frees an MPI-style error handler.
 
 SYNTAX

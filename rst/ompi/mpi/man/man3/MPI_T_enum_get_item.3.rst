@@ -2,6 +2,7 @@
 
 MPI_T_enum_get_item
 ~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_enum_get_item`  - Query information about an enumerator
 
 SYNTAX

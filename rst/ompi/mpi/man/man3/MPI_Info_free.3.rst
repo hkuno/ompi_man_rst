@@ -2,6 +2,7 @@
 
 MPI_Info_free
 ~~~~~~~~~~~~~
+
 :ref:`MPI_Info_free`  - Frees an info object.
 
 SYNTAX

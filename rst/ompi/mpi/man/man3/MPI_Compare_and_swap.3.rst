@@ -2,6 +2,7 @@
 
 MPI_Compare_and_swap
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Compare_and_swap`  - Perform RMA compare-and-swap
 
 SYNTAX

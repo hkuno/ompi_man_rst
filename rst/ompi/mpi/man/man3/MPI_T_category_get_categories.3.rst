@@ -2,6 +2,7 @@
 
 MPI_T_category_get_categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_category_get_categories`  - Query which categories are in a
 category
 

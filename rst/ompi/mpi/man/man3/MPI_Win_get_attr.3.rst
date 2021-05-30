@@ -2,6 +2,7 @@
 
 MPI_Win_get_attr
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_get_attr`  - Obtains the value of a window attribute.
 
 SYNTAX

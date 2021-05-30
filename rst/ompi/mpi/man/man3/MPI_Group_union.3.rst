@@ -2,6 +2,7 @@
 
 MPI_Group_union
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_Group_union`  - Produces a group by combining two groups.
 
 SYNTAX

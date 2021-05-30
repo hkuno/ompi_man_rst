@@ -2,6 +2,7 @@
 
 MPI_File_set_info
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_set_info`  - Sets new values for hints (collective).
 
 SYNTAX

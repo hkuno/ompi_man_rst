@@ -2,6 +2,7 @@
 
 MPI_Win_create_dynamic
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_create_dynamic`  - One-sided MPI call that returns a window
 object for RMA operations.
 

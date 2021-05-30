@@ -2,6 +2,7 @@
 
 MPI_File_read_at_all
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_File_read_at_all`  - Reads a file at explicitly specified offsets
 (blocking, collective).
 

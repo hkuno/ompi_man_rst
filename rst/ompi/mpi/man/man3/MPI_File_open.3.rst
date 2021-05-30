@@ -2,6 +2,7 @@
 
 MPI_File_open
 ~~~~~~~~~~~~~
+
 :ref:`MPI_File_open`  - Opens a file (collective).
 
 SYNTAX

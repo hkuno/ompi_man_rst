@@ -2,6 +2,7 @@
 
 MPI_Imrecv
 ~~~~~~~~~~
+
 :ref:`MPI_Imrecv`  - Non-blocking receive for a matched message
 
 SYNTAX

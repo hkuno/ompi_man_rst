@@ -2,6 +2,7 @@
 
 MPI_Type_set_attr
 ~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_set_attr`  - Sets a key value/attribute pair to a data type.
 
 SYNTAX

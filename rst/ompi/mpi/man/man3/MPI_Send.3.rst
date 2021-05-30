@@ -2,6 +2,7 @@
 
 MPI_Send
 ~~~~~~~~
+
 :ref:`MPI_Send`  - Performs a standard-mode blocking send.
 
 SYNTAX

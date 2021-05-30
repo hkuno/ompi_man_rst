@@ -2,6 +2,7 @@
 
 MPI_Win_attach
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_attach` , :ref:`MPI_Win_detach`  - One-sided MPI call that attaches /
 detaches a memory region to / from a window object for RMA operations.
 

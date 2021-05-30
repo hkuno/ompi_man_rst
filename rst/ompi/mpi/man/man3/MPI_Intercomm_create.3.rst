@@ -2,6 +2,7 @@
 
 MPI_Intercomm_create
 ~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Intercomm_create`  - Creates an intercommunicator from two
 intracommunicators.
 

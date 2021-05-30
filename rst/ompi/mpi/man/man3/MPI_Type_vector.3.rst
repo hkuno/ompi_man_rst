@@ -2,6 +2,7 @@
 
 MPI_Type_vector
 ~~~~~~~~~~~~~~~
+
 :ref:`MPI_Type_vector`  - Creates a vector (strided) datatype.
 
 SYNTAX

@@ -2,6 +2,7 @@
 
 MPI_Win_get_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Win_get_errhandler`  - Retrieves the error handler currently
 associated with a window.
 

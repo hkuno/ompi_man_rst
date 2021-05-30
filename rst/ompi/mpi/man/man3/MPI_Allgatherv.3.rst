@@ -2,6 +2,7 @@
 
 MPI_Allgatherv
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Allgatherv` , :ref:`MPI_Iallgatherv`  - Gathers data from all processes
 and delivers it to all. Each process may contribute a different amount
 of data.

@@ -2,6 +2,7 @@
 
 MPI_Errhandler_create
 ~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Errhandler_create`  - Creates an MPI-style error handler -- use of
 this routine is deprecated.
 
@@ -90,4 +91,4 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Comm_create_errhandler` | :ref:`MPI_Comm_get_errhandler` | :ref:`MPI_Comm_set_errhandler` 
+.. seealso:: || :ref:`MPI_Comm_create_errhandler` | :ref:`MPI_Comm_get_errhandler` | :ref:`MPI_Comm_set_errhandler` 

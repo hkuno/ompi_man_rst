@@ -2,6 +2,7 @@
 
 MPI_Comm_spawn
 ~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_spawn`  - Spawns a number of identical binaries.
 
 SYNTAX

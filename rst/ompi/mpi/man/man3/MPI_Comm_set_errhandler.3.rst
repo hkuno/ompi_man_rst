@@ -2,6 +2,7 @@
 
 MPI_Comm_set_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Comm_set_errhandler`  - Attaches a new error handler to a
 communicator.
 

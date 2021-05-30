@@ -2,6 +2,7 @@
 
 MPI_T_pvar_write
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_T_pvar_write`  - Write the value of a control variable
 
 SYNTAX

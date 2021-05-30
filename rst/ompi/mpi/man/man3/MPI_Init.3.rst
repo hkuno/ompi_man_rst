@@ -2,6 +2,7 @@
 
 MPI_Init
 ~~~~~~~~
+
 :ref:`MPI_Init`  - Initializes the MPI execution environment
 
 SYNTAX

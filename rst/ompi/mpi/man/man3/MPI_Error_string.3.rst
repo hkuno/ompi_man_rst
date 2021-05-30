@@ -2,6 +2,7 @@
 
 MPI_Error_string
 ~~~~~~~~~~~~~~~~
+
 :ref:`MPI_Error_string`  - Returns a string for a given error code.
 
 SYNTAX

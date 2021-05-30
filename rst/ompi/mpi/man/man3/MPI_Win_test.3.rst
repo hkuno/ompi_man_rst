@@ -2,6 +2,7 @@
 
 MPI_Win_test
 ~~~~~~~~~~~~
+
 :ref:`MPI_Win_test`  - Attempts to complete an RMA exposure epoch; a
 nonblocking version of :ref:`MPI_Win_wait` 
 
