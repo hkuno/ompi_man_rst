@@ -83,4 +83,4 @@ errors. The error handler may be changed with
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso:: :ref:`MPI_Comm_connect` :ref:`MPI_Open_port` 
+.. seealso:: :ref:`MPI_Comm_connect`:ref:`MPI_Open_port`

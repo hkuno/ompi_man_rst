@@ -3,7 +3,7 @@
 MPI_T_category_changed
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_category_changed`  - Get a timestamp for the categories
+:ref:`MPI_T_category_changed` - Get a timestamp for the categories
 
 SYNTAX
 ======
@@ -33,7 +33,7 @@ added or changed.
 ERRORS
 ======
 
-:ref:`MPI_T_category_changed()`  will fail if:
+:ref:`MPI_T_category_changed()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized

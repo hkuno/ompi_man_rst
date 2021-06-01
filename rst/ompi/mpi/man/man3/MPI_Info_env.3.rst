@@ -3,14 +3,14 @@
 MPI_Info_env
 ~~~~~~~~~~~~
 
-:ref:`MPI_INFO_ENV`  - Static :ref:`MPI_Info`  object containing info about the
+:ref:`MPI_INFO_ENV` - Static :ref:`MPI_Info` object containing info about the
 application
 
 DESCRIPTION
 ===========
 
-The MPI-3 standard established a static :ref:`MPI_Info`  object named
-:ref:`MPI_INFO_ENV`  that can be used to access information about how the
+The MPI-3 standard established a static :ref:`MPI_Info` object named
+:ref:`MPI_INFO_ENV` that can be used to access information about how the
 application was executed from the run-time.
 
 SUPPORTED FIELDS
@@ -19,14 +19,14 @@ SUPPORTED FIELDS
 command
    If available, the value will be set to argv[0]. Note that the value
    may not always be available - e.g., it is valid for a program to call
-   :ref:`MPI_Init`  with NULL parameters, in which case argv[0] will not be set
+   :ref:`MPI_Init` with NULL parameters, in which case argv[0] will not be set
    if run as a singleton. This value will never be set in a Fortran
    program as the argv are not available.
 
 argv
    The argv given for the application. If no arguments are passed to the
    application, then this value will not be set. It will also not be set
-   in the case of a singleton that calls :ref:`MPI_Init`  with NULL parameters,
+   in the case of a singleton that calls :ref:`MPI_Init` with NULL parameters,
    or a Fortran program.
 
 maxprocs
@@ -82,7 +82,7 @@ ompi_positioned_file_dir
 ERRORS
 ======
 
-| When calling :ref:`MPI_INFO_GET(3)` , the *flag* parameter will be set to zero
+| When calling :ref:`MPI_INFO_GET(3)`, the *flag* parameter will be set to zero
   (false) if a value for the field has not been set.
 
 

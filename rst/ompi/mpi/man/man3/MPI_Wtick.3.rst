@@ -3,7 +3,7 @@
 MPI_Wtick
 ~~~~~~~~~
 
-:ref:`MPI_Wtick`  - Returns the resolution of :ref:`MPI_Wtime` .
+:ref:`MPI_Wtick` - Returns the resolution of :ref:`MPI_Wtime`.
 
 SYNTAX
 ======
@@ -39,22 +39,22 @@ Fortran 2008 Syntax
 RETURN VALUE
 ============
 
-Time in seconds of resolution of :ref:`MPI_Wtime` .
+Time in seconds of resolution of :ref:`MPI_Wtime`.
 
 DESCRIPTION
 ===========
 
-:ref:`MPI_Wtick`  returns the resolution of :ref:`MPI_Wtime`  in seconds. That is, it
+:ref:`MPI_Wtick` returns the resolution of :ref:`MPI_Wtime` in seconds. That is, it
 returns, as a double-precision value, the number of seconds between
 successive clock ticks. For example, if the clock is implemented by the
 hardware as a counter that is incremented every millisecond, the value
-returned by :ref:`MPI_Wtick`  should be 10^-3.
+returned by :ref:`MPI_Wtick` should be 10^-3.
 
 NOTE
 ====
 
 This function does not return an error value. Consequently, the result
-of calling it before :ref:`MPI_Init`  or after :ref:`MPI_Finalize`  is undefined.
+of calling it before :ref:`MPI_Init` or after :ref:`MPI_Finalize` is undefined.
 
 
 .. seealso:: :ref:`MPI_Wtime` 

@@ -74,4 +74,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Alloc_mem` 
+.. seealso:: :ref:`MPI_Alloc_mem`

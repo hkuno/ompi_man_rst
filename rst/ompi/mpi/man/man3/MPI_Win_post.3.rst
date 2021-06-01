@@ -3,7 +3,7 @@
 MPI_Win_post
 ~~~~~~~~~~~~
 
-:ref:`MPI_Win_post`  - Starts an RMA exposure epoch for the local window
+:ref:`MPI_Win_post` - Starts an RMA exposure epoch for the local window
 associated with *win*
 
 SYNTAX
@@ -62,22 +62,22 @@ DESCRIPTION
 Starts an RMA exposure epoch for the local window associated with *win*.
 Only the processes belonging to *group* should access the window with
 RMA calls on *win* during this epoch. Each process in *group* must issue
-a matching call to :ref:`MPI_Win_start` . :ref:`MPI_Win_post`  does not block.
+a matching call to :ref:`MPI_Win_start`. :ref:`MPI_Win_post` does not block.
 
 The *assert* argument is used to provide assertions on the context of
 the call that may be used for various optimizations. A value of *assert*
 - 0 is always valid. The following assertion values are supported:
 
-:ref:`MPI_MODE_NOCHECK` 
-   The matching calls to :ref:`MPI_Win_start`  have not yet occurred on any
+:ref:`MPI_MODE_NOCHECK`
+   The matching calls to :ref:`MPI_Win_start` have not yet occurred on any
    origin processes when this call is made. This assertion must be
-   present for all matching :ref:`MPI_Win_start`  calls if used.
+   present for all matching :ref:`MPI_Win_start` calls if used.
 
-:ref:`MPI_MODE_NOSTORE` 
+:ref:`MPI_MODE_NOSTORE`
    Informs that the local window was not updated by local stores or get
    calls in the preceding epoch.
 
-:ref:`MPI_MODE_NOPUT` 
+:ref:`MPI_MODE_NOPUT`
    Informs that the local window will not be updated by put or
    accummulate calls until the ensuing wait synchronization.
 
@@ -90,7 +90,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Win_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Win_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

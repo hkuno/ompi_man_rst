@@ -3,7 +3,7 @@
 MPI_Isend
 ~~~~~~~~~
 
-:ref:`MPI_Isend`  - Starts a standard-mode, nonblocking send.
+:ref:`MPI_Isend` - Starts a standard-mode, nonblocking send.
 
 SYNTAX
 ======
@@ -70,7 +70,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Isend`  starts a standard-mode, nonblocking send. Nonblocking calls
+:ref:`MPI_Isend` starts a standard-mode, nonblocking send. Nonblocking calls
 allocate a communication request object and associate it with the
 request handle (the argument request). The request can be used later to
 query the status of the communication or wait for its completion.
@@ -81,7 +81,7 @@ send buffer after a nonblocking send operation is called, until the send
 completes.
 
 A send request can be determined being completed by calling the
-:ref:`MPI_Wait` , :ref:`MPI_Waitany` , :ref:`MPI_Test` , or :ref:`MPI_Testany`  with request returned by
+:ref:`MPI_Wait`, :ref:`MPI_Waitany`, :ref:`MPI_Test`, or :ref:`MPI_Testany` with request returned by
 this function.
 
 ERRORS
@@ -93,7 +93,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -3,7 +3,7 @@
 MPI_File_set_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_File_set_errhandler`  - Sets the error handler for a file.
+:ref:`MPI_File_set_errhandler` - Sets the error handler for a file.
 
 SYNTAX
 ======
@@ -61,7 +61,7 @@ DESCRIPTION
 
 Attaches a new error handler to a file. The error handler must be either
 a predefined error handler or an error handler created by a call to
-:ref:`MPI_File_create_errhandler` .
+:ref:`MPI_File_create_errhandler`.
 
 ERRORS
 ======
@@ -71,7 +71,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

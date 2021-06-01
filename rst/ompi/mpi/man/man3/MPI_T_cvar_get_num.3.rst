@@ -3,7 +3,7 @@
 MPI_T_cvar_get_num
 ~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_cvar_get_num`  - Query the number of control variables
+:ref:`MPI_T_cvar_get_num` - Query the number of control variables
 
 SYNTAX
 ======
@@ -25,14 +25,14 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_cvar_get_num`  can be used to query the current number of control
+:ref:`MPI_T_cvar_get_num` can be used to query the current number of control
 variables. The number of control variables may increase throughout the
 execution of the process but will never decrease.
 
 ERRORS
 ======
 
-:ref:`MPI_T_cvar_get_num()`  will fail if:
+:ref:`MPI_T_cvar_get_num()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized

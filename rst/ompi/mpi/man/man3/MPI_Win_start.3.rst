@@ -3,7 +3,7 @@
 MPI_Win_start
 ~~~~~~~~~~~~~
 
-:ref:`MPI_Win_start`  - Starts an RMA access epoch for *win*
+:ref:`MPI_Win_start` - Starts an RMA access epoch for *win*
 
 SYNTAX
 ======
@@ -58,11 +58,11 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Win_start`  is a one-sided MPI communication synchronization call that
+:ref:`MPI_Win_start` is a one-sided MPI communication synchronization call that
 starts an RMA access epoch for *win*. RMA calls issued on *win* during
 this epoch must access only windows at processes in *group*. Each
-process in *group* must issue a matching call to :ref:`MPI_Win_post` .
-:ref:`MPI_Win_start`  is allowed to block until the corresponding :ref:`MPI_Win_post` 
+process in *group* must issue a matching call to :ref:`MPI_Win_post`.
+:ref:`MPI_Win_start` is allowed to block until the corresponding :ref:`MPI_Win_post`
 calls have been executed, but is not required to.
 
 The *assert* argument is used to provide assertions on the context of
@@ -70,7 +70,7 @@ the call that may be used for various optimizations. (See Section 6.4.4
 of the MPI-2 Standard.) A value of *assert* = 0 is always valid. The
 following assertion value is supported:
 
-:ref:`MPI_MODE_NOCHECK` 
+:ref:`MPI_MODE_NOCHECK`
    When this value is passed in to this call, the library assumes that
    the post call on the target has been called and it is not necessary
    for the library to check to see if such a call has been made.
@@ -84,7 +84,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Win_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Win_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -3,7 +3,7 @@
 MPI_Address
 ~~~~~~~~~~~
 
-:ref:`MPI_Address`  - Gets the address of a location in memory -- use of
+:ref:`MPI_Address` - Gets the address of a location in memory -- use of
 this routine is deprecated.
 
 SYNTAX
@@ -45,12 +45,12 @@ DESCRIPTION
 ===========
 
 Note that use of this routine is *deprecated* as of MPI-2. Please use
-:ref:`MPI_Get_address`  instead.
+:ref:`MPI_Get_address` instead.
 
 The address of a location in memory can be found by invoking this
 function. Returns the (byte) address of location.
 
-Example: Using :ref:`MPI_Address`  for an array.
+Example: Using :ref:`MPI_Address` for an array.
 
 ::
 
@@ -72,13 +72,13 @@ useful when writing portable code. In the current release, the address
 returned by this routine will be the same as that produced by the C &
 operator.
 
-C users may be tempted to avoid using :ref:`MPI_Address`  and rely on the
+C users may be tempted to avoid using :ref:`MPI_Address` and rely on the
 availability of the address operator &. Note, however, that &
 cast-expression is a pointer, not an address. ANSI C does not require
 that the value of a pointer (or the pointer cast to int) be the absolute
 address of the object pointed at although this is commonly the case.
 Furthermore, referencing may not have a unique definition on machines
-with a segmented address space. The use of :ref:`MPI_Address`  to "reference" C
+with a segmented address space. The use of :ref:`MPI_Address` to "reference" C
 variables guarantees portability to such machines as well.
 
 ERRORS
@@ -90,7 +90,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

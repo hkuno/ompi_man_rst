@@ -3,7 +3,7 @@
 MPI_File_read_shared
 ~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_File_read_shared`  - Reads a file using the shared file pointer
+:ref:`MPI_File_read_shared` - Reads a file using the shared file pointer
 (blocking, noncollective).
 
 SYNTAX
@@ -72,7 +72,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_File_read_shared`  is a blocking routine that uses the shared file
+:ref:`MPI_File_read_shared` is a blocking routine that uses the shared file
 pointer to read files. The order of serialization is not deterministic
 for this noncollective routine.
 
@@ -84,7 +84,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

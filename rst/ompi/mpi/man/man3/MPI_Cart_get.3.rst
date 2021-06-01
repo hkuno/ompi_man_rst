@@ -85,4 +85,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Cartdim_get` :ref:`MPI_Cart_create` 
+.. seealso:: :ref:`MPI_Cartdim_get`:ref:`MPI_Cart_create`

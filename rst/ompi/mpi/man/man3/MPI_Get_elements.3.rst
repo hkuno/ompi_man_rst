@@ -143,4 +143,4 @@ where ``MPI_COUNT_KIND`` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 
-.. seealso:: :ref:`MPI_Get_count` 
+.. seealso:: :ref:`MPI_Get_count`

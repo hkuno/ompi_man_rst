@@ -3,7 +3,7 @@
 MPI_Type_get_envelope
 ~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Type_get_envelope`  - Returns information about input arguments
+:ref:`MPI_Type_get_envelope` - Returns information about input arguments
 associated with a data type.
 
 SYNTAX
@@ -67,11 +67,11 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-For the given data type, :ref:`MPI_Type_get_envelope`  returns information on
+For the given data type, :ref:`MPI_Type_get_envelope` returns information on
 the number and type of input arguments used in the call that created the
 data type. The number-of-arguments values returned can be used to
 provide sufficiently large arrays in the decoding routine
-:ref:`MPI_Type_get_contents` . This call and the meaning of the returned values
+:ref:`MPI_Type_get_contents`. This call and the meaning of the returned values
 is described below. The combiner reflects the MPI data type constructor
 call that was used in creating *datatype*.
 
@@ -110,11 +110,11 @@ associated calls:
    MPI_COMBINER_F90_INTEGER        MPI_Type_create_f90_integer
    MPI_COMBINER_RESIZED            MPI_Type_create_resized
 
-If *combiner* is :ref:`MPI_COMBINER_NAMED` , then *datatype* is a named
+If *combiner* is :ref:`MPI_COMBINER_NAMED`, then *datatype* is a named
 predefined data type.
 
 The actual arguments used in the creation call for a data type can be
-obtained from the call :ref:`MPI_Type_get_contents` .
+obtained from the call :ref:`MPI_Type_get_contents`.
 
 ERRORS
 ======
@@ -125,7 +125,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

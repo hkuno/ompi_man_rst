@@ -3,7 +3,7 @@
 MPI_File_seek
 ~~~~~~~~~~~~~
 
-:ref:`MPI_File_seek`  - Updates individual file pointers (noncollective).
+:ref:`MPI_File_seek` - Updates individual file pointers (noncollective).
 
 SYNTAX
 ======
@@ -61,18 +61,18 @@ OUTPUT PARAMETER
 DESCRIPTION
 ===========
 
-:ref:`MPI_File_seek`  updates the individual file pointer according to *whence,*
+:ref:`MPI_File_seek` updates the individual file pointer according to *whence,*
 which could have the following possible values:
 
  o
-   :ref:`MPI_SEEK_SET`  - The pointer is set to *offset.*
+   :ref:`MPI_SEEK_SET` - The pointer is set to *offset.*
 
  o
-   :ref:`MPI_SEEK_CUR`  - The pointer is set to the current pointer position
+   :ref:`MPI_SEEK_CUR` - The pointer is set to the current pointer position
    plus *offset.*
 
  o
-   :ref:`MPI_SEEK_END`  - The pointer is set to the end of the file plus
+   :ref:`MPI_SEEK_END` - The pointer is set to the end of the file plus
    *offset.*
 
 The *offset* can be negative, which allows seeking backwards. It is
@@ -92,7 +92,7 @@ syntax
 
         INTEGER*MPI_OFFSET_KIND OFFSET
 
-where :ref:`MPI_OFFSET_KIND`  is a constant defined in mpif.h and gives the
+where :ref:`MPI_OFFSET_KIND` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
@@ -103,7 +103,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

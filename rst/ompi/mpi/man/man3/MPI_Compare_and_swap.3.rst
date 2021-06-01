@@ -3,7 +3,7 @@
 MPI_Compare_and_swap
 ~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Compare_and_swap`  - Perform RMA compare-and-swap
+:ref:`MPI_Compare_and_swap` - Perform RMA compare-and-swap
 
 SYNTAX
 ======
@@ -99,7 +99,7 @@ non-portable syntax
 
         INTEGER*MPI_ADDRESS_KIND TARGET_DISP
 
-where :ref:`MPI_ADDRESS_KIND`  is a constant defined in mpif.h and gives the
+where :ref:`MPI_ADDRESS_KIND` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 NOTES
@@ -108,7 +108,7 @@ NOTES
 It is the user's responsibility to guarantee that, when using the
 accumulate functions, the target displacement argument is such that
 accesses to the window are properly aligned according to the data type
-arguments in the call to the :ref:`MPI_Compare_and_swap`  function.
+arguments in the call to the :ref:`MPI_Compare_and_swap` function.
 
 ERRORS
 ======
@@ -119,7 +119,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned. Note
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_RETURN` may be used to cause error values to be returned. Note
 that MPI does not guarantee that an MPI program can continue past an
 error.

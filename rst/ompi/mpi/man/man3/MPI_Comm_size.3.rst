@@ -3,7 +3,7 @@
 MPI_Comm_size
 ~~~~~~~~~~~~~
 
-:ref:`MPI_Comm_size`  - Returns the size of the group associated with a
+:ref:`MPI_Comm_size` - Returns the size of the group associated with a
 communicator.
 
 SYNTAX
@@ -57,24 +57,24 @@ DESCRIPTION
 ===========
 
 This function indicates the number of processes involved in a
-communicator. For :ref:`MPI_COMM_WORLD` , it indicates the total number of
+communicator. For :ref:`MPI_COMM_WORLD`, it indicates the total number of
 processes available. This function is equivalent to accessing the
-communicator's group with :ref:`MPI_Comm_group` , computing the size using
-:ref:`MPI_Group_size` , and then freeing the temporary group via :ref:`MPI_Group_free` .
+communicator's group with :ref:`MPI_Comm_group`, computing the size using
+:ref:`MPI_Group_size`, and then freeing the temporary group via :ref:`MPI_Group_free`.
 If the communicator is an inter-communicator (enables communication
 between two groups), this function returns the size of the local group.
-To return the size of the remote group, use the :ref:`MPI_Comm_remote_size` 
+To return the size of the remote group, use the :ref:`MPI_Comm_remote_size`
 function.
 
-This call is often used with :ref:`MPI_Comm_rank`  to determine the amount of
-concurrency available for a specific library or program. :ref:`MPI_Comm_rank` 
+This call is often used with :ref:`MPI_Comm_rank` to determine the amount of
+concurrency available for a specific library or program. :ref:`MPI_Comm_rank`
 indicates the rank of the process that calls it in the range from 0 . .
-. size-1, where size is the return value of :ref:`MPI_Comm_size` .
+. size-1, where size is the return value of :ref:`MPI_Comm_size`.
 
 NOTE
 ====
 
-:ref:`MPI_COMM_NULL`  is not considered a valid argument to this function.
+:ref:`MPI_COMM_NULL` is not considered a valid argument to this function.
 
 ERRORS
 ======
@@ -85,7 +85,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

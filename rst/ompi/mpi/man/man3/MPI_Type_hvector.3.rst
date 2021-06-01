@@ -3,7 +3,7 @@
 MPI_Type_hvector
 ~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Type_hvector`  - Creates a vector (strided) datatype with offset
+:ref:`MPI_Type_hvector` - Creates a vector (strided) datatype with offset
 in bytes -- use of this routine is deprecated.
 
 SYNTAX
@@ -53,9 +53,9 @@ DESCRIPTION
 ===========
 
 Note that use of this routine is *deprecated* as of MPI-2. Use
-:ref:`MPI_Type_create_hvector`  instead.
+:ref:`MPI_Type_create_hvector` instead.
 
-The function :ref:`MPI_Type_hvector`  is identical to :ref:`MPI_Type_vector` , except
+The function :ref:`MPI_Type_hvector` is identical to :ref:`MPI_Type_vector`, except
 that stride is given in bytes, rather than in elements. The use for both
 types of vector constructors is illustrated in the examples in Section
 3.12.7 of the MPI-1 Standard.
@@ -92,7 +92,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

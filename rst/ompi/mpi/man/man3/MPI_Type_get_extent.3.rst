@@ -3,7 +3,7 @@
 MPI_Type_get_extent
 ~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Type_get_extent` , :ref:`MPI_Type_get_extent_x`  - Returns the lower
+:ref:`MPI_Type_get_extent`, :ref:`MPI_Type_get_extent_x` - Returns the lower
 bound and extent of a data type.
 
 SYNTAX
@@ -69,17 +69,17 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Type_get_extent`  returns the lower bound and the extent of
+:ref:`MPI_Type_get_extent` returns the lower bound and the extent of
 *datatype*. For either function, if either the *lb* or *extent*
 parameter cannot express the value to be returned (e.g., if the
 parameter is too small to hold the output value), it is set to
-:ref:`MPI_UNDEFINED` .
+:ref:`MPI_UNDEFINED`.
 
 NOTE
 ====
 
-Use of :ref:`MPI_Type_get_extent`  is strongly recommended over the old MPI-1
-functions :ref:`MPI_Type_extent`  and :ref:`MPI_Type_lb` .
+Use of :ref:`MPI_Type_get_extent` is strongly recommended over the old MPI-1
+functions :ref:`MPI_Type_extent` and :ref:`MPI_Type_lb`.
 
 FORTRAN 77 NOTES
 ================
@@ -88,7 +88,7 @@ The MPI standard prescribes portable Fortran syntax for the *LB* and
 *EXTENT* arguments only for Fortran 90. FORTRAN 77 users may use the
 non-portable syntax
 
-:ref:`MPI_Type_get_extent` :
+:ref:`MPI_Type_get_extent`:
 
 ::
 
@@ -96,7 +96,7 @@ non-portable syntax
    or
         INTEGER*MPI_ADDRESS_KIND EXTENT
 
-:ref:`MPI_Type_get_extent_x` :
+:ref:`MPI_Type_get_extent_x`:
 
 ::
 
@@ -104,7 +104,7 @@ non-portable syntax
    or
         INTEGER*MPI_COUNT_KIND EXTENT
 
-where :ref:`MPI_ADDRESS_KIND`  and :ref:`MPI_COUNT_KIND`  are constants defined in
+where :ref:`MPI_ADDRESS_KIND` and :ref:`MPI_COUNT_KIND` are constants defined in
 mpif.h and give the length of the declared integer in bytes.
 
 ERRORS
@@ -116,6 +116,6 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.

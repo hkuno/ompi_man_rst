@@ -3,7 +3,7 @@
 MPI_Win_allocate_shared
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Win_allocate_shared`  - One-sided MPI call that allocates shared
+:ref:`MPI_Win_allocate_shared` - One-sided MPI call that allocates shared
 memory and returns a window object for RMA operations.
 
 SYNTAX
@@ -71,22 +71,22 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Win_allocate_shared`  is a collective call executed by all
+:ref:`MPI_Win_allocate_shared` is a collective call executed by all
 processes in the group of *comm*. On each process, it allocates memory
 of at least *size* bytes that is shared among all processes in *comm*,
 and returns a pointer to the locally allocated segment in *baseptr* that
 can be used for load/store accesses on the calling process. The locally
 allocated memory can be the target of load/store accesses by remote
 processes; the base pointers for other processes can be queried using
-the function :ref:`MPI_Win_shared_query` . The call also returns a window
+the function :ref:`MPI_Win_shared_query`. The call also returns a window
 object that can be used by all processes in *comm* to perform RMA
 operations. The *size* argument may be different at each process and
 *size* = 0 is valid. It is the user's responsibility to ensure that the
 communicator *comm* represents a group of processes that can create a
 shared memory segment that can be accessed by all processes in the
-group. The discussions of rationales for :ref:`MPI_Alloc_mem`  and
-:ref:`MPI_Free_mem`  in MPI-3.1 � 8.2 also apply to
-:ref:`MPI_Win_allocate_shared` ; in particular, see the rationale in MPI-3.1
+group. The discussions of rationales for :ref:`MPI_Alloc_mem` and
+:ref:`MPI_Free_mem` in MPI-3.1 � 8.2 also apply to
+:ref:`MPI_Win_allocate_shared`; in particular, see the rationale in MPI-3.1
 � 8.2 for an explanation of the type used for *baseptr*. The allocated
 memory is contiguous across process ranks unless the info key
 *alloc_shared_noncontig* is specified. Contiguous across process ranks
@@ -105,12 +105,12 @@ alloc_shared_noncontig
    access latency).
 
 blocking_fence
-   If set to *true*, the osc/sm component will use :ref:`MPI_Barrier`  for
-   :ref:`MPI_Win_fence` . If set to *false* a condition variable and counter
+   If set to *true*, the osc/sm component will use :ref:`MPI_Barrier` for
+   :ref:`MPI_Win_fence`. If set to *false* a condition variable and counter
    will be used instead. The default value is *false*. This info key is
    Open MPI specific.
 
-For additional supported info keys see :ref:`MPI_Win_create` .
+For additional supported info keys see :ref:`MPI_Win_create`.
 
 NOTES
 =====
@@ -121,8 +121,8 @@ type *type*. The later choice will allow one to use array indices in RMA
 calls, and have those scaled correctly to byte displacements, even in a
 heterogeneous environment.
 
-Calling :ref:`MPI_Win_free`  will deallocate the memory allocated by
-:ref:`MPI_Win_allocate_shared` . It is thus erroneous to manually free
+Calling :ref:`MPI_Win_free` will deallocate the memory allocated by
+:ref:`MPI_Win_allocate_shared`. It is thus erroneous to manually free
 *baseptr*.
 
 C NOTES
@@ -141,7 +141,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

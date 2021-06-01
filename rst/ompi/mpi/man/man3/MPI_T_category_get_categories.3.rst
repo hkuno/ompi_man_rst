@@ -3,7 +3,7 @@
 MPI_T_category_get_categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_category_get_categories`  - Query which categories are in a
+:ref:`MPI_T_category_get_categories` - Query which categories are in a
 category
 
 SYNTAX
@@ -33,16 +33,16 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_category_get_categories`  can be used to query which other
+:ref:`MPI_T_category_get_categories` can be used to query which other
 categories are in a category.
 
 ERRORS
 ======
 
-:ref:`MPI_T_category_get_categories()`  will fail if:
+:ref:`MPI_T_category_get_categories()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]` 
+[:ref:`MPI_T_ERR_INVALID_INDEX]`
    The category index is invalid

@@ -3,7 +3,7 @@
 MPI_Win_set_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Win_set_errhandler`  - Attaches a new error handler to a window.
+:ref:`MPI_Win_set_errhandler` - Attaches a new error handler to a window.
 
 SYNTAX
 ======
@@ -58,9 +58,9 @@ OUTPUT PARAMETER
 DESCRIPTION
 ===========
 
-:ref:`MPI_Win_set_errhandler`  attaches a new error handler to a window. The
+:ref:`MPI_Win_set_errhandler` attaches a new error handler to a window. The
 error handler must be either a predefined error handler or an error
-handler created by a call to :ref:`MPI_Win_create_errhandler` .
+handler created by a call to :ref:`MPI_Win_create_errhandler`.
 
 ERRORS
 ======
@@ -71,6 +71,6 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.

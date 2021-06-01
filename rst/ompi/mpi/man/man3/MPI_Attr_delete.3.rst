@@ -3,7 +3,7 @@
 MPI_Attr_delete
 ~~~~~~~~~~~~~~~
 
-:ref:`MPI_Attr_delete`  - Deletes attribute value associated with a key --
+:ref:`MPI_Attr_delete` - Deletes attribute value associated with a key --
 use of this routine is deprecated.
 
 SYNTAX
@@ -44,18 +44,18 @@ DESCRIPTION
 ===========
 
 Note that use of this routine is *deprecated* as of MPI-2, and was
-*deleted* in MPI-3. Please use :ref:`MPI_Comm_delete_attr` . This function does
+*deleted* in MPI-3. Please use :ref:`MPI_Comm_delete_attr`. This function does
 not have a mpi_f08 binding.
 
 Delete attribute from cache by key. This function invokes the attribute
 delete function delete_fn specified when the keyval was created. The
 call will fail if the delete_fn function returns an error code other
-than :ref:`MPI_SUCCESS` .
+than :ref:`MPI_SUCCESS`.
 
-Whenever a communicator is replicated using the function :ref:`MPI_Comm_dup` ,
+Whenever a communicator is replicated using the function :ref:`MPI_Comm_dup`,
 all callback copy functions for attributes that are currently set are
 invoked (in arbitrary order). Whenever a communicator is deleted using
-the function :ref:`MPI_Comm_free` , all callback delete functions for attributes
+the function :ref:`MPI_Comm_free`, all callback delete functions for attributes
 that are currently set are invoked.
 
 NOTES
@@ -76,7 +76,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -3,7 +3,7 @@
 MPI_File_write_all_begin
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_File_write_all_begin`  - Writes a file starting at the locations
+:ref:`MPI_File_write_all_begin` - Writes a file starting at the locations
 specified by individual file pointers; beginning part of a split
 collective routine (nonblocking).
 
@@ -69,7 +69,7 @@ OUTPUT PARAMETER
 DESCRIPTION
 ===========
 
-:ref:`MPI_File_write_all_begin`  is the beginning part of a split collective,
+:ref:`MPI_File_write_all_begin` is the beginning part of a split collective,
 nonblocking routine that attempts to write into the file associated with
 *fh* (at the current individual file pointer position maintained by the
 system) a total number of *count* data items having *datatype* type from
@@ -92,7 +92,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

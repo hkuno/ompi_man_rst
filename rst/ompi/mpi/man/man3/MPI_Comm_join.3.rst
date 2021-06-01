@@ -3,7 +3,7 @@
 MPI_Comm_join
 ~~~~~~~~~~~~~
 
-:ref:`MPI_Comm_join`  - Establishes communication between MPI jobs
+:ref:`MPI_Comm_join` - Establishes communication between MPI jobs
 
 SYNTAX
 ======
@@ -55,15 +55,15 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Comm_join`  creates an intercommunicator from the union of two MPI
+:ref:`MPI_Comm_join` creates an intercommunicator from the union of two MPI
 processes that are connected by a socket. *fd* is a file descriptor
 representing a socket of type SOCK_STREAM (a two-way reliable
 byte-stream connection). Nonblocking I/O and asynchronous notification
 via SIGIO must not be enabled for the socket. The socket must be in a
-connected state, and must be quiescent when :ref:`MPI_Comm_join`  is called.
+connected state, and must be quiescent when :ref:`MPI_Comm_join` is called.
 
-:ref:`MPI_Comm_join`  must be called by the process at each end of the socket.
-It does not return until both processes have called :ref:`MPI_Comm_join` .
+:ref:`MPI_Comm_join` must be called by the process at each end of the socket.
+It does not return until both processes have called :ref:`MPI_Comm_join`.
 
 NOTES
 =====
@@ -76,7 +76,7 @@ quiescent.
 
 In a multithreaded process, the application must ensure that other
 threads do not access the socket while one is in the midst of calling
-:ref:`MPI_Comm_join` .
+:ref:`MPI_Comm_join`.
 
 The returned communicator will contain the two processes connected by
 the socket, and may be used to establish MPI communication with
@@ -92,7 +92,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

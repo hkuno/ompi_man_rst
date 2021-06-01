@@ -3,7 +3,7 @@
 MPI_Win_fence
 ~~~~~~~~~~~~~
 
-:ref:`MPI_Win_fence`  - Synchronizes RMA calls on a window.
+:ref:`MPI_Win_fence` - Synchronizes RMA calls on a window.
 
 SYNTAX
 ======
@@ -55,13 +55,13 @@ OUTPUT PARAMETER
 DESCRIPTION
 ===========
 
-:ref:`MPI_Win_fence`  synchronizes RMA calls on *win*. The call is collective on
+:ref:`MPI_Win_fence` synchronizes RMA calls on *win*. The call is collective on
 the group of *win*. All RMA operations on *win* originating at a given
 process and started before the fence call will complete at that process
 before the fence call returns. They will be completed at their target
 before the fence call returns at the target. RMA operations on *win*
 started by a process after the fence call returns will access their
-target window only after :ref:`MPI_Win_fence`  has been called by the target
+target window only after :ref:`MPI_Win_fence` has been called by the target
 process.
 
 The call completes an RMA access epoch if it was preceded by another
@@ -80,20 +80,20 @@ The *assert* argument is used to provide assertions on the context of
 the call that may be used for various optimizations. A value of *assert*
 - 0 is always valid. The following assertion value is supported:
 
-:ref:`MPI_MODE_NOPRECEDE` 
+:ref:`MPI_MODE_NOPRECEDE`
    No local RMA calls have been issued before this fence. This assertion
    must be provided by all or no members of the group of the window. It
    may enable faster fence call by avoiding unnecessary synchronization.
 
-:ref:`MPI_MODE_NOSTORE` 
+:ref:`MPI_MODE_NOSTORE`
    Informs that the local window was not updated by local stores or get
    calls in the preceding epoch.
 
-:ref:`MPI_MODE_NOPUT` 
+:ref:`MPI_MODE_NOPUT`
    Informs that the local window will not be updated by any put or
    accummulate calls in the ensuing epoch (until next fence call).
 
-:ref:`MPI_MODE_NOSUCCEED` 
+:ref:`MPI_MODE_NOSUCCEED`
    No local RMA calls will be issued after this fence. This assertion
    must be provided by all or no members of the group of the window. It
    may enable faster fence call by avoiding unnecessary synchronization.
@@ -101,7 +101,7 @@ the call that may be used for various optimizations. A value of *assert*
 NOTE
 ====
 
-Calls to :ref:`MPI_Win_fence`  should both precede and follow calls to put, get
+Calls to :ref:`MPI_Win_fence` should both precede and follow calls to put, get
 or accumulate that are synchronized with fence calls.
 
 ERRORS
@@ -113,7 +113,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -3,7 +3,7 @@
 MPI_File_write_at_all_end
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_File_write_at_all_end`  - Writes a file at explicitly specified
+:ref:`MPI_File_write_at_all_end` - Writes a file at explicitly specified
 offsets; ending part of a split collective routine (blocking).
 
 SYNTAX
@@ -65,7 +65,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_File_write_at_all_end`  is the ending part of a split collective
+:ref:`MPI_File_write_at_all_end` is the ending part of a split collective
 routine that stores the number of elements actually written into the
 file associated with *fh* in *status.* The data is written into those
 parts of the file specified by the current view. All other fields of
@@ -87,7 +87,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

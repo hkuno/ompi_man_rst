@@ -3,8 +3,8 @@
 MPI_Win_test
 ~~~~~~~~~~~~
 
-:ref:`MPI_Win_test`  - Attempts to complete an RMA exposure epoch; a
-nonblocking version of :ref:`MPI_Win_wait` 
+:ref:`MPI_Win_test` - Attempts to complete an RMA exposure epoch; a
+nonblocking version of :ref:`MPI_Win_wait`
 
 SYNTAX
 ======
@@ -56,14 +56,14 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Win_test`  is a one-sided MPI communication synchronization call, a
-nonblocking version of :ref:`MPI_Win_wait` . It returns *flag = true* if
-:ref:`MPI_Win_wait`  would return, *flag = false* otherwise. The effect of
-return of :ref:`MPI_Win_test`  with *flag = true* is the same as the effect of a
-return of :ref:`MPI_Win_wait` . If *flag = false* is returned, then the call has
+:ref:`MPI_Win_test` is a one-sided MPI communication synchronization call, a
+nonblocking version of :ref:`MPI_Win_wait`. It returns *flag = true* if
+:ref:`MPI_Win_wait` would return, *flag = false* otherwise. The effect of
+return of :ref:`MPI_Win_test` with *flag = true* is the same as the effect of a
+return of :ref:`MPI_Win_wait`. If *flag = false* is returned, then the call has
 no visible effect.
 
-Invoke :ref:`MPI_Win_test`  only where :ref:`MPI_Win_wait`  can be invoked. Once the
+Invoke :ref:`MPI_Win_test` only where :ref:`MPI_Win_wait` can be invoked. Once the
 call has returned *flag = true*, it must not be invoked anew, until the
 window is posted anew.
 
@@ -76,7 +76,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Win_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Win_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

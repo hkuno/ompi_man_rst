@@ -88,4 +88,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Graph_create` :ref:`MPI_Graphdims_get` 
+.. seealso:: :ref:`MPI_Graph_create`:ref:`MPI_Graphdims_get`

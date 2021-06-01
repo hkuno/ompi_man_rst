@@ -96,4 +96,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Cart_create` :ref:`MPI_Comm_split` 
+.. seealso:: :ref:`MPI_Cart_create`:ref:`MPI_Comm_split`

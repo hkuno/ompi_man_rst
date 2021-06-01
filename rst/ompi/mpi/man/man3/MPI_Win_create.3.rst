@@ -3,7 +3,7 @@
 MPI_Win_create
 ~~~~~~~~~~~~~~
 
-:ref:`MPI_Win_create`  - One-sided MPI call that returns a window object for
+:ref:`MPI_Win_create` - One-sided MPI call that returns a window object for
 RMA operations.
 
 SYNTAX
@@ -71,7 +71,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Win_create`  is a one-sided MPI communication collective call executed
+:ref:`MPI_Win_create` is a one-sided MPI communication collective call executed
 by all processes in the group of *comm*. It returns a window object that
 can be used by these processes to perform RMA operations. Each process
 specifies a window of existing memory that it exposes to RMA accesses by
@@ -79,9 +79,9 @@ the processes in the group of *comm*. The window consists of *size*
 bytes, starting at address *base*. A process may elect to expose no
 memory by specifying *size* = 0.
 
-If the *base* value used by :ref:`MPI_Win_create`  was allocated by
-:ref:`MPI_Alloc_mem` , the size of the window can be no larger than the value
-set by the :ref:`MPI_ALLOC_MEM`  function.
+If the *base* value used by :ref:`MPI_Win_create` was allocated by
+:ref:`MPI_Alloc_mem`, the size of the window can be no larger than the value
+set by the :ref:`MPI_ALLOC_MEM` function.
 
 The displacement unit argument is provided to facilitate address
 arithmetic in RMA operations: the target displacement argument of an RMA
@@ -92,8 +92,8 @@ The following info keys are supported:
 
 no_locks
    If set to *true*, then the implementation may assume that the local
-   window is never locked (by a call to :ref:`MPI_Win_lock`  or
-   :ref:`MPI_Win_lock_all)` . Setting this value if only active synchronization
+   window is never locked (by a call to :ref:`MPI_Win_lock` or
+   :ref:`MPI_Win_lock_all)`. Setting this value if only active synchronization
    may allow the implementation to enable certain optimizations.
 
 accumulate_ordering
@@ -111,7 +111,7 @@ accumulate_ops
    concurrent accumulate calls to the same target address will use the
    same operation. If set to *same_op_no_op*, then the implementation
    will assume that all concurrent accumulate calls to the same target
-   address will use the same operation or :ref:`MPI_NO_OP` . The default is
+   address will use the same operation or :ref:`MPI_NO_OP`. The default is
    *same_op_no_op*.
 
 same_size
@@ -133,7 +133,7 @@ type *type*. The later choice will allow one to use array indices in RMA
 calls, and have those scaled correctly to byte displacements, even in a
 heterogeneous environment.
 
-Use memory allocated by :ref:`MPI_Alloc_mem`  to guarantee properly aligned
+Use memory allocated by :ref:`MPI_Alloc_mem` to guarantee properly aligned
 window boundaries (such as word, double-word, cache line, page frame,
 and so on).
 
@@ -148,7 +148,7 @@ syntax
 
         INTEGER*MPI_ADDRESS_KIND SIZE
 
-where :ref:`MPI_ADDRESS_KIND`  is a constant defined in mpif.h and gives the
+where :ref:`MPI_ADDRESS_KIND` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
@@ -160,7 +160,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -3,7 +3,7 @@
 MPI_Error_string
 ~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Error_string`  - Returns a string for a given error code.
+:ref:`MPI_Error_string` - Returns a string for a given error code.
 
 SYNTAX
 ======
@@ -61,7 +61,7 @@ DESCRIPTION
 
 Returns the error string associated with an error code or class. The
 argument string must represent storage that is at least
-:ref:`MPI_MAX_ERROR_STRING`  characters long.
+:ref:`MPI_MAX_ERROR_STRING` characters long.
 
 The number of characters actually written is returned in the output
 argument, resultlen.
@@ -75,7 +75,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

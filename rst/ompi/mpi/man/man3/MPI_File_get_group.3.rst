@@ -3,7 +3,7 @@
 MPI_File_get_group
 ~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_File_get_group`  - Returns a duplicate of the process group of a
+:ref:`MPI_File_get_group` - Returns a duplicate of the process group of a
 file.
 
 SYNTAX
@@ -57,10 +57,10 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_File_get_group`  returns a duplicate of the group of the communicator
+:ref:`MPI_File_get_group` returns a duplicate of the group of the communicator
 used to open the file associated with *fh.* The group is returned in
 *group.* The user is responsible for freeing *group,* using
-:ref:`MPI_Group_free` .
+:ref:`MPI_Group_free`.
 
 ERRORS
 ======
@@ -70,7 +70,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

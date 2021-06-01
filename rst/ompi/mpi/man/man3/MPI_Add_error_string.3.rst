@@ -59,11 +59,11 @@ DESCRIPTION
 ===========
 
 This routine associates an error string with an error code or class.
-Calling :ref:`MPI_Add_error_string`  for an error code or class that already has
+Calling :ref:`MPI_Add_error_string` for an error code or class that already has
 an associated error string will replace the old string with the new one.
-It is erroneous to call :ref:`MPI_Add_error_string`  for an error value not
-generated via :ref:`MPI_Add_error_class`  or :ref:`MPI_Add_error_code`  (e.g., an error
-code or class with a value not greater than :ref:`MPI_LAST_ERRCODE)` .
+It is erroneous to call :ref:`MPI_Add_error_string` for an error value not
+generated via :ref:`MPI_Add_error_class` or :ref:`MPI_Add_error_code` (e.g., an error
+code or class with a value not greater than :ref:`MPI_LAST_ERRCODE)`.
 
 ERRORS
 ======
@@ -74,7 +74,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

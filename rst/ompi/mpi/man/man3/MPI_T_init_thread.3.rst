@@ -72,4 +72,4 @@ ERRORS
    initialized
 
 
-.. seealso:: :ref:`MPI_T` :ref:`MPI_Init_thread` :ref:`MPI_T_finalize` 
+.. seealso:: :ref:`MPI_T`:ref:`MPI_Init_thread`:ref:`MPI_T_finalize`

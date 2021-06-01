@@ -3,7 +3,7 @@
 MPI_Win_allocate
 ~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Win_allocate`  - One-sided MPI call that allocates memory and
+:ref:`MPI_Win_allocate` - One-sided MPI call that allocates memory and
 returns a window object for RMA operations.
 
 SYNTAX
@@ -71,18 +71,18 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Win_allocate`  is a collective call executed by all processes in
+:ref:`MPI_Win_allocate` is a collective call executed by all processes in
 the group of *comm*. On each process, it allocates memory of at least
 *size* bytes, returns a pointer to it, and returns a window object that
 can be used by all processes in *comm* to perform RMA operations. The
 returned memory consists of *size* bytes local to each process, starting
 at address *baseptr* and is associated with the window as if the user
-called :ref:`MPI_Win_create`  on existing memory. The *size* argument may be
+called :ref:`MPI_Win_create` on existing memory. The *size* argument may be
 different at each process and *size* = 0 is valid; however, a library
 might allocate and expose more memory in order to create a fast,
 globally symmetric allocation. The discussion of and rationales for
-:ref:`MPI_Alloc_mem`  and :ref:`MPI_Free_mem`  in MPI-3.1 � 8.2 also apply to
-:ref:`MPI_Win_allocate` ; in particular, see the rationale in MPI-3.1 � 8.2
+:ref:`MPI_Alloc_mem` and :ref:`MPI_Free_mem` in MPI-3.1 � 8.2 also apply to
+:ref:`MPI_Win_allocate`; in particular, see the rationale in MPI-3.1 � 8.2
 for an explanation of the type used for *baseptr*.
 
 The displacement unit argument is provided to facilitate address
@@ -90,7 +90,7 @@ arithmetic in RMA operations: the target displacement argument of an RMA
 operation is scaled by the factor *disp_unit* specified by the target
 process, at window creation.
 
-For supported info keys see :ref:`MPI_Win_create` \ *.*
+For supported info keys see :ref:`MPI_Win_create`\ *.*
 
 NOTES
 =====
@@ -101,8 +101,8 @@ type *type. The later choice will allow one to use* array indices in RMA
 calls, and have those scaled correctly to byte displacements, even in a
 heterogeneous environment.
 
-Calling :ref:`MPI_Win_free` \ *will deallocate the memory allocated
-by*\ :ref:`MPI_Win_allocate` \ *. It is thus erroneous to manually free
+Calling :ref:`MPI_Win_free`\ *will deallocate the memory allocated
+by*\ :ref:`MPI_Win_allocate`\ *. It is thus erroneous to manually free
 baseptr.*
 
 C NOTES
@@ -121,7 +121,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

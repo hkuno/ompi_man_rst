@@ -3,7 +3,7 @@
 MPI_Type_extent
 ~~~~~~~~~~~~~~~
 
-:ref:`MPI_Type_extent`  - Returns the extent of a data type, the difference
+:ref:`MPI_Type_extent` - Returns the extent of a data type, the difference
 between the upper and lower bounds of the data type -- use of this
 routine is deprecated.
 
@@ -45,9 +45,9 @@ DESCRIPTION
 ===========
 
 Note that use of this routine is *deprecated* as of MPI-2. Please use
-:ref:`MPI_Type_get_extent`  instead.
+:ref:`MPI_Type_get_extent` instead.
 
-:ref:`MPI_Type_extent`  returns the extent of a data type, the difference
+:ref:`MPI_Type_extent` returns the extent of a data type, the difference
 between the upper and lower bounds of the data type.
 
 In general, if
@@ -91,7 +91,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

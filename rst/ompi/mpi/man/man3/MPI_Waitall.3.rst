@@ -3,7 +3,7 @@
 MPI_Waitall
 ~~~~~~~~~~~
 
-:ref:`MPI_Waitall`  - Waits for all given communications to complete.
+:ref:`MPI_Waitall` - Waits for all given communications to complete.
 
 SYNTAX
 ======
@@ -67,53 +67,53 @@ arrays have the same number of valid entries. The ith entry in
 array_of_statuses is set to the return status of the ith operation.
 Requests that were created by nonblocking communication operations are
 deallocated, and the corresponding handles in the array are set to
-:ref:`MPI_REQUEST_NULL` . The list may contain null or inactive handles. The
+:ref:`MPI_REQUEST_NULL`. The list may contain null or inactive handles. The
 call sets to empty the status of each such entry.
 
-The error-free execution of :ref:`MPI_Waitall(count` , array_of_requests,
+The error-free execution of :ref:`MPI_Waitall(count`, array_of_requests,
 array_of_statuses) has the same effect as the execution of
-:ref:`MPI_Wait(` &array_of_request[i], &array_of_statuses[i]), for
-i=0,...,count-1, in some arbitrary order. :ref:`MPI_Waitall`  with an array of
-length 1 is equivalent to :ref:`MPI_Wait` .
+:ref:`MPI_Wait(`&array_of_request[i], &array_of_statuses[i]), for
+i=0,...,count-1, in some arbitrary order. :ref:`MPI_Waitall` with an array of
+length 1 is equivalent to :ref:`MPI_Wait`.
 
 When one or more of the communications completed by a call to
-:ref:`MPI_Waitall`  fail, it is desirable to return specific information on each
-communication. The function :ref:`MPI_Waitall`  will return in such case the
-error code :ref:`MPI_ERR_IN_STATUS`  and will set the error field of each status
-to a specific error code. This code will be :ref:`MPI_SUCCESS`  if the specific
+:ref:`MPI_Waitall` fail, it is desirable to return specific information on each
+communication. The function :ref:`MPI_Waitall` will return in such case the
+error code :ref:`MPI_ERR_IN_STATUS` and will set the error field of each status
+to a specific error code. This code will be :ref:`MPI_SUCCESS` if the specific
 communication completed; it will be another specific error code if it
-failed; or it can be :ref:`MPI_ERR_PENDING`  if it has neither failed nor
-completed. The function :ref:`MPI_Waitall`  will return :ref:`MPI_SUCCESS`  if no
+failed; or it can be :ref:`MPI_ERR_PENDING` if it has neither failed nor
+completed. The function :ref:`MPI_Waitall` will return :ref:`MPI_SUCCESS` if no
 request had an error, or will return another error code if it failed for
 other reasons (such as invalid arguments). In such cases, it will not
 update the error fields of the statuses.
 
 If your application does not need to examine the *array_of_statuses*
 field, you can save resources by using the predefined constant
-:ref:`MPI_STATUSES_IGNORE`  can be used as a special value for the
+:ref:`MPI_STATUSES_IGNORE` can be used as a special value for the
 *array_of_statuses* argument.
 
 ERRORS
 ======
 
-For each invocation of :ref:`MPI_Waitall` , if one or more requests generate an
+For each invocation of :ref:`MPI_Waitall`, if one or more requests generate an
 MPI error, only the *first* MPI request that caused an error will be
 passed to its corresponding error handler. No other error handlers will
 be invoked (even if multiple requests generated errors). However, *all*
 requests that generate an error will have a relevant error code set in
-the corresponding status.:ref:`MPI_ERROR`  field (unless :ref:`MPI_STATUSES_IGNORE`  was
+the corresponding status.:ref:`MPI_ERROR` field (unless :ref:`MPI_STATUSES_IGNORE` was
 used).
 
 The default error handler aborts the MPI job, except for I/O function
-errors. The error handler may be changed with :ref:`MPI_Comm_set_errhandler` ,
-:ref:`MPI_File_set_errhandler` , or :ref:`MPI_Win_set_errhandler`  (depending on the
+errors. The error handler may be changed with :ref:`MPI_Comm_set_errhandler`,
+:ref:`MPI_File_set_errhandler`, or :ref:`MPI_Win_set_errhandler` (depending on the
 type of MPI handle that generated the MPI request); the predefined error
-handler :ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be
+handler :ref:`MPI_ERRORS_RETURN` may be used to cause error values to be
 returned. Note that MPI does not guarantee that an MPI program can
 continue past an error.
 
-If the invoked error handler allows :ref:`MPI_Waitall`  to return to the caller,
-the value :ref:`MPI_ERR_IN_STATUS`  will be returned in the C and Fortran
+If the invoked error handler allows :ref:`MPI_Waitall` to return to the caller,
+the value :ref:`MPI_ERR_IN_STATUS` will be returned in the C and Fortran
 bindings.
 
 

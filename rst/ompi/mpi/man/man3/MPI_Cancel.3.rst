@@ -121,4 +121,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Probe` :ref:`MPI_Iprobe` :ref:`MPI_Test_cancelled` :ref:`MPI_Cart_coords` 
+.. seealso:: :ref:`MPI_Probe`:ref:`MPI_Iprobe`:ref:`MPI_Test_cancelled`:ref:`MPI_Cart_coords`

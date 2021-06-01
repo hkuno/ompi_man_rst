@@ -3,7 +3,7 @@
 MPI_Type_get_name
 ~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Type_get_name`  - Gets the name of a data type.
+:ref:`MPI_Type_get_name` - Gets the name of a data type.
 
 SYNTAX
 ======
@@ -60,7 +60,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Type_get_name`  returns the printable identifier associated with an
+:ref:`MPI_Type_get_name` returns the printable identifier associated with an
 MPI data type.
 
 ERRORS
@@ -72,7 +72,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

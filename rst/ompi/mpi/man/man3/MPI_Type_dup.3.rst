@@ -3,7 +3,7 @@
 MPI_Type_dup
 ~~~~~~~~~~~~
 
-:ref:`MPI_Type_dup`  - Duplicates a data type with associated key values.
+:ref:`MPI_Type_dup` - Duplicates a data type with associated key values.
 
 SYNTAX
 ======
@@ -55,7 +55,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Type_dup`  is a type constructor that duplicates the existing type
+:ref:`MPI_Type_dup` is a type constructor that duplicates the existing type
 with associated key values. For each key value, the respective copy
 callback function determines the attribute value associated with this
 key in the new communicator. One particular action that a copy callback
@@ -84,7 +84,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

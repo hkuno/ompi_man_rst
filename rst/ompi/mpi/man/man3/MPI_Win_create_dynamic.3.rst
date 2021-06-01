@@ -3,7 +3,7 @@
 MPI_Win_create_dynamic
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Win_create_dynamic`  - One-sided MPI call that returns a window
+:ref:`MPI_Win_create_dynamic` - One-sided MPI call that returns a window
 object for RMA operations.
 
 SYNTAX
@@ -59,12 +59,12 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Win_create_dynamic`  is a one-sided MPI communication collective call
+:ref:`MPI_Win_create_dynamic` is a one-sided MPI communication collective call
 executed by all processes in the group of *comm*. It returns a window
 object without memory attached that can be used by these processes to
 perform RMA operations.
 
-A window created with :ref:`MPI_Win_create_dynamic`  requires the
+A window created with :ref:`MPI_Win_create_dynamic` requires the
 *target_disp* argument for all RMA communication functions to be the
 actual address at the target.
 
@@ -72,8 +72,8 @@ The following info keys are supported:
 
 no_locks
    If set to *true*, then the implementation may assume that the local
-   window is never locked (by a call to :ref:`MPI_Win_lock`  or
-   :ref:`MPI_Win_lock_all)` . Setting this value if only active synchronization
+   window is never locked (by a call to :ref:`MPI_Win_lock` or
+   :ref:`MPI_Win_lock_all)`. Setting this value if only active synchronization
    may allow the implementation to enable certain optimizations.
 
 accumulate_ordering
@@ -91,7 +91,7 @@ accumulate_ops
    concurrent accumulate calls to the same target address will use the
    same operation. If set to *same_op_no_op*, then the implementation
    will assume that all concurrent accumulate calls to the same target
-   address will use the same operation or :ref:`MPI_NO_OP` . The default is
+   address will use the same operation or :ref:`MPI_NO_OP`. The default is
    *same_op_no_op*.
 
 NOTES
@@ -99,7 +99,7 @@ NOTES
 
 Since dynamically attaching memory to a window is a local operation, one
 has to communicate the actual address at the target using
-:ref:`MPI_Get_address`  and some communication.
+:ref:`MPI_Get_address` and some communication.
 
 Dynamic memory does not have any *disp_unit* associated and requires
 correct offset calculations with proper type handling.
@@ -113,7 +113,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -3,7 +3,7 @@
 MPI_Status_set_cancelled
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Status_set_cancelled`  - Sets *status* to indicate a request has
+:ref:`MPI_Status_set_cancelled` - Sets *status* to indicate a request has
 been canceled.
 
 SYNTAX
@@ -61,7 +61,7 @@ DESCRIPTION
 ===========
 
 If *flag* is set to true, then a subsequent call to
-:ref:`MPI_Test_cancelled(status` , flag*) will also return *flag* = true;
+:ref:`MPI_Test_cancelled(status`, flag*) will also return *flag* = true;
 otherwise it will return false.
 
 NOTES
@@ -70,11 +70,11 @@ NOTES
 Users are advised not to reuse the status fields for values other than
 those for which they were intended. Doing so may lead to unexpected
 results when using the status object. For example, calling
-:ref:`MPI_Get_elements`  may cause an error if the value is out of range, or it
+:ref:`MPI_Get_elements` may cause an error if the value is out of range, or it
 may be impossible to detect such an error. The *extra_state* argument
 provided with a generalized request can be used to return information
 that does not logically belong in *status*. Furthermore, modifying the
-values in a status set internally by MPI, such as :ref:`MPI_Recv` , may lead to
+values in a status set internally by MPI, such as :ref:`MPI_Recv`, may lead to
 unpredictable results and is strongly discouraged.
 
 ERRORS
@@ -86,6 +86,6 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.

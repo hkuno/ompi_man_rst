@@ -3,7 +3,7 @@
 MPI_Attr_put
 ~~~~~~~~~~~~
 
-:ref:`MPI_Attr_put`  - Stores attribute value associated with a key -- use
+:ref:`MPI_Attr_put` - Stores attribute value associated with a key -- use
 of this routine is deprecated.
 
 SYNTAX
@@ -46,23 +46,23 @@ DESCRIPTION
 ===========
 
 Note that use of this routine is *deprecated as of MPI-2, and* was
-*deleted in MPI-3. Please use :ref:`MPI_Comm_set_attr` . This* function does not
+*deleted in MPI-3. Please use :ref:`MPI_Comm_set_attr`. This* function does not
 have a mpi_f08 binding.
 
-:ref:`MPI_Attr_put`  stores the stipulated attribute value attribute_val for
-subsequent retrieval by :ref:`MPI_Attr_get` . If the value is already present,
-then the outcome is as if :ref:`MPI_Attr_delete`  was first called to delete the
+:ref:`MPI_Attr_put` stores the stipulated attribute value attribute_val for
+subsequent retrieval by :ref:`MPI_Attr_get`. If the value is already present,
+then the outcome is as if :ref:`MPI_Attr_delete` was first called to delete the
 previous value (and the callback function delete_fn was executed), and a
 new value was next stored. The call is erroneous if there is no key with
-value keyval; in particular :ref:`MPI_KEYVAL_INVALID`  is an erroneous key
+value keyval; in particular :ref:`MPI_KEYVAL_INVALID` is an erroneous key
 value. The call will fail if the delete_fn function returned an error
-code other than :ref:`MPI_SUCCESS` .
+code other than :ref:`MPI_SUCCESS`.
 
 NOTES
 =====
 
-Values of the permanent attributes :ref:`MPI_TAG_UB` , :ref:`MPI_HOST` , :ref:`MPI_IO` , and
-:ref:`MPI_WTIME_IS_GLOBAL`  may not be changed.
+Values of the permanent attributes :ref:`MPI_TAG_UB`, :ref:`MPI_HOST`, :ref:`MPI_IO`, and
+:ref:`MPI_WTIME_IS_GLOBAL` may not be changed.
 
 The type of the attribute value depends on whether C or Fortran is being
 used. In C, an attribute value is a pointer (void \*); in Fortran, it is
@@ -82,7 +82,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

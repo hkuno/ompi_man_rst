@@ -3,7 +3,7 @@
 MPI_File_read_at_all_begin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_File_read_at_all_begin`  - Reads a file at explicitly specified
+:ref:`MPI_File_read_at_all_begin` - Reads a file at explicitly specified
 offsets; beginning part of a split collective routine (nonblocking).
 
 SYNTAX
@@ -71,7 +71,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_File_read_at_all_begin`  is the beginning part of a split collective
+:ref:`MPI_File_read_at_all_begin` is the beginning part of a split collective
 routine that attempts to read from the file associated with *fh* (at the
 *offset* position) a total number of *count* data items having
 *datatype* type into the user's buffer *buf.* The *offset* is in etype
@@ -90,7 +90,7 @@ syntax
 
         INTEGER*MPI_OFFSET_KIND OFFSET
 
-where :ref:`MPI_OFFSET_KIND`  is a constant defined in mpif.h and gives the
+where :ref:`MPI_OFFSET_KIND` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 NOTES
@@ -109,7 +109,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

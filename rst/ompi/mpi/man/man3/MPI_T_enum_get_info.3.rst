@@ -3,7 +3,7 @@
 MPI_T_enum_get_info
 ~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_enum_get_info`  - Query information about an enumerator
+:ref:`MPI_T_enum_get_info` - Query information about an enumerator
 
 SYNTAX
 ======
@@ -37,7 +37,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_enum_get_info`  can be used to query information about an
+:ref:`MPI_T_enum_get_info` can be used to query information about an
 enumerator. The function returns the number of discrete values
 represented by this enumerator in the *num* parameter.
 
@@ -57,10 +57,10 @@ returned.
 ERRORS
 ======
 
-:ref:`MPI_T_enum_get_info()`  will fail if:
+:ref:`MPI_T_enum_get_info()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]` 
+[:ref:`MPI_T_ERR_INVALID_INDEX]`
    The enumeration is invalid or has been deleted

@@ -98,4 +98,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Comm_dup` :ref:`MPI_Comm_idup` :ref:`MPI_Comm_set_info` 
+.. seealso:: :ref:`MPI_Comm_dup`:ref:`MPI_Comm_idup`:ref:`MPI_Comm_set_info`

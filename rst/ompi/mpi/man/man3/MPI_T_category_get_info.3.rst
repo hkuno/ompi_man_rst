@@ -3,7 +3,7 @@
 MPI_T_category_get_info
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_category_get_info`  - Query information from a category
+:ref:`MPI_T_category_get_info` - Query information from a category
 
 SYNTAX
 ======
@@ -47,7 +47,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_category_get_info`  can be used to query information from a
+:ref:`MPI_T_category_get_info` can be used to query information from a
 category. The function returns the number of control variables,
 performance variables, and sub-categories in the queried category in the
 arguments *num_cvars*, *num_pvars*, and *num_categories*, respectively.
@@ -67,10 +67,10 @@ ignored and the string is not returned.
 ERRORS
 ======
 
-:ref:`MPI_T_category_get_info()`  will fail if:
+:ref:`MPI_T_category_get_info()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]` 
+[:ref:`MPI_T_ERR_INVALID_INDEX]`
    The category index is invalid

@@ -3,7 +3,7 @@
 MPI_Comm_get_parent
 ~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Comm_get_parent`  - Returns the parent intercommunicator of
+:ref:`MPI_Comm_get_parent` - Returns the parent intercommunicator of
 current spawned process.
 
 SYNTAX
@@ -50,26 +50,26 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-If a process was started with :ref:`MPI_Comm_spawn`  or :ref:`MPI_Comm_spawn_multiple` ,
-:ref:`MPI_Comm_get_parent`  returns the "parent" intercommunicator of the
+If a process was started with :ref:`MPI_Comm_spawn` or :ref:`MPI_Comm_spawn_multiple`,
+:ref:`MPI_Comm_get_parent` returns the "parent" intercommunicator of the
 current process. This parent intercommunicator is created implicitly
-inside of :ref:`MPI_Init`  and is the same intercommunicator returned by the
+inside of :ref:`MPI_Init` and is the same intercommunicator returned by the
 spawn call made in the parents.
 
-If the process was not spawned, :ref:`MPI_Comm_get_parent`  returns
-:ref:`MPI_COMM_NULL` .
+If the process was not spawned, :ref:`MPI_Comm_get_parent` returns
+:ref:`MPI_COMM_NULL`.
 
 After the parent communicator is freed or disconnected,
-:ref:`MPI_Comm_get_parent`  returns :ref:`MPI_COMM_NULL` .
+:ref:`MPI_Comm_get_parent` returns :ref:`MPI_COMM_NULL`.
 
 NOTES
 =====
 
-:ref:`MPI_Comm_get_parent`  returns a handle to a single intercommunicator.
-Calling :ref:`MPI_Comm_get_parent`  a second time returns a handle to the same
-intercommunicator. Freeing the handle with :ref:`MPI_Comm_disconnect`  or
-:ref:`MPI_Comm_free`  will cause other references to the intercommunicator to
-become invalid (dangling). Note that calling :ref:`MPI_Comm_free`  on the parent
+:ref:`MPI_Comm_get_parent` returns a handle to a single intercommunicator.
+Calling :ref:`MPI_Comm_get_parent` a second time returns a handle to the same
+intercommunicator. Freeing the handle with :ref:`MPI_Comm_disconnect` or
+:ref:`MPI_Comm_free` will cause other references to the intercommunicator to
+become invalid (dangling). Note that calling :ref:`MPI_Comm_free` on the parent
 communicator is not useful.
 
 ERRORS
@@ -81,7 +81,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

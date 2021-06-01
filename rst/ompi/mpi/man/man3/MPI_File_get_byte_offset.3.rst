@@ -3,7 +3,7 @@
 MPI_File_get_byte_offset
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_File_get_byte_offset`  - Converts a view-relative offset into an
+:ref:`MPI_File_get_byte_offset` - Converts a view-relative offset into an
 absolute byte position.
 
 SYNTAX
@@ -62,7 +62,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_File_get_byte_offset`  converts an offset specified for the current
+:ref:`MPI_File_get_byte_offset` converts an offset specified for the current
 view to its corresponding displacement value, or absolute byte position,
 from the beginning of the file. The absolute byte position of *offset*
 relative to the current view of *fh* is returned in *disp*.
@@ -80,7 +80,7 @@ non-portable syntax
    or
         INTEGER*MPI_OFFSET_KIND DISP
 
-where :ref:`MPI_OFFSET_KIND`  is a constant defined in mpif.h and gives the
+where :ref:`MPI_OFFSET_KIND` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
@@ -91,7 +91,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

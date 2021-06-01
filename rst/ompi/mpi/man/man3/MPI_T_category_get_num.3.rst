@@ -3,7 +3,7 @@
 MPI_T_category_get_num
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_category_get_num`  - Query the number of categories
+:ref:`MPI_T_category_get_num` - Query the number of categories
 
 SYNTAX
 ======
@@ -25,13 +25,13 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_category_get_num`  can be used to query the current number of
+:ref:`MPI_T_category_get_num` can be used to query the current number of
 categories.
 
 ERRORS
 ======
 
-:ref:`MPI_T_category_get_num()`  will fail if:
+:ref:`MPI_T_category_get_num()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized

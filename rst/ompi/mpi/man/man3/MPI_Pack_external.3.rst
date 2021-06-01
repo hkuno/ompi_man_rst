@@ -3,7 +3,7 @@
 MPI_Pack_external
 ~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Pack_external`  - Writes data to a portable format
+:ref:`MPI_Pack_external` - Writes data to a portable format
 
 SYNTAX
 ======
@@ -82,13 +82,13 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Pack_external`  packs data into the external32 format, a universal
+:ref:`MPI_Pack_external` packs data into the external32 format, a universal
 data representation defined by the MPI Forum. This format is useful for
 exchanging data between MPI implementations, or when writing data to a
 file.
 
 The input buffer is specified by *inbuf*, *incount* and *datatype*, and
-may be any communication buffer allowed in :ref:`MPI_Send` . The output buffer
+may be any communication buffer allowed in :ref:`MPI_Send`. The output buffer
 *outbuf* must be a contiguous storage area containing *outsize* bytes.
 
 The input value of *position* is the first position in *outbuf* to be
@@ -96,9 +96,9 @@ used for packing (measured in bytes, not elements, relative to the start
 of the buffer). When the function returns, *position* is incremented by
 the size of the packed message, so that it points to the first location
 in *outbuf* following the packed message. This way it may be used as
-input to a subsequent call to :ref:`MPI_Pack_external` .
+input to a subsequent call to :ref:`MPI_Pack_external`.
 
-**Example:** An example using :ref:`MPI_Pack_external` :
+**Example:** An example using :ref:`MPI_Pack_external`:
 
 ::
 
@@ -144,7 +144,7 @@ helpful to think of internal Fortran files or sscanf in C for a similar
 function.)
 
 Several messages can be successively packed into one packing unit. This
-is effected by several successive related calls to :ref:`MPI_Pack_external` ,
+is effected by several successive related calls to :ref:`MPI_Pack_external`,
 where the first call provides *position*\ =0, and each successive call
 inputs the value of *position* that was output by the previous call,
 along with the same values for *outbuf* and *outcount*. This packing
@@ -152,15 +152,15 @@ unit now contains the equivalent information that would have been stored
 in a message by one send call with a send buffer that is the
 "concatenation" of the individual send buffers.
 
-A packing unit can be sent using type :ref:`MPI_BYTE` . Any point-to-point or
+A packing unit can be sent using type :ref:`MPI_BYTE`. Any point-to-point or
 collective communication function can be used to move the sequence of
 bytes that forms the packing unit from one process to another. This
 packing unit can now be received using any receive operation, with any
 datatype. (The type-matching rules are relaxed for messages sent with
-type :ref:`MPI_BYTE` .)
+type :ref:`MPI_BYTE`.)
 
 A packing unit can be unpacked into several successive messages. This is
-effected by several successive related calls to :ref:`MPI_Unpack_external` ,
+effected by several successive related calls to :ref:`MPI_Unpack_external`,
 where the first call provides *position*\ =0, and each successive call
 inputs the value of position that was output by the previous call, and
 the same values for *inbuf* and *insize*.
@@ -182,7 +182,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

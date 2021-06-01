@@ -3,8 +3,8 @@
 MPI_Win_complete
 ~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Win_complete`  - Completes an RMA access epoch on *win* started by
-a call to :ref:`MPI_Win_start` 
+:ref:`MPI_Win_complete` - Completes an RMA access epoch on *win* started by
+a call to :ref:`MPI_Win_start`
 
 SYNTAX
 ======
@@ -52,9 +52,9 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Win_complete`  is a one-sided MPI communication synchronization call,
+:ref:`MPI_Win_complete` is a one-sided MPI communication synchronization call,
 completing an RMA access epoch on *win* started by a call to
-:ref:`MPI_Win_start` . :ref:`MPI_Win_complete`  enforces the completion of preceding RMA
+:ref:`MPI_Win_start`. :ref:`MPI_Win_complete` enforces the completion of preceding RMA
 calls at the origin and not at the target. A put or accumulate call may
 not have completed at the target when it has completed at the origin.
 
@@ -67,7 +67,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Win_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Win_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

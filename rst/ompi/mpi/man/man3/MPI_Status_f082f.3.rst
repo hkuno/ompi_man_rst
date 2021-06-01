@@ -97,4 +97,4 @@ The Fortran subroutines for these MPI routines are only available in the
 ``TYPE(:ref:`MPI_Status)` ; they are (intentionally) not available in``\ mpif.h`.
 
 
-.. seealso:: :ref:`MPI_Status_c2f` :ref:`MPI_Status_f2c` :ref:`MPI_Status_f082c` :ref:`MPI_Status_c2f08` 
+.. seealso:: :ref:`MPI_Status_c2f`:ref:`MPI_Status_f2c`:ref:`MPI_Status_f082c`:ref:`MPI_Status_c2f08`

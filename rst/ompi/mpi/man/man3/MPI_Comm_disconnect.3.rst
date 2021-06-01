@@ -89,4 +89,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Comm_connect` :ref:`MPI_Comm_accept` 
+.. seealso:: :ref:`MPI_Comm_connect`:ref:`MPI_Comm_accept`

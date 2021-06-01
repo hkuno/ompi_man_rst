@@ -3,7 +3,7 @@
 MPI_Recv_init
 ~~~~~~~~~~~~~
 
-:ref:`MPI_Recv_init`  - Builds a handle for a receive.
+:ref:`MPI_Recv_init` - Builds a handle for a receive.
 
 SYNTAX
 ======
@@ -76,13 +76,13 @@ DESCRIPTION
 
 Creates a persistent communication request for a receive operation. The
 argument *buf* is marked as OUT because the user gives permission to
-write on the receive buffer by passing the argument to :ref:`MPI_Recv_init` .
+write on the receive buffer by passing the argument to :ref:`MPI_Recv_init`.
 
 A persistent communication request is inactive after it is created -- no
 active communication is attached to the request.
 
 A communication (send or receive) that uses a persistent request is
-initiated by the function :ref:`MPI_Start`  or :ref:`MPI_Startall` .
+initiated by the function :ref:`MPI_Start` or :ref:`MPI_Startall`.
 
 ERRORS
 ======
@@ -93,7 +93,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

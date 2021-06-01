@@ -3,7 +3,7 @@
 MPI_Type_ub
 ~~~~~~~~~~~
 
-:ref:`MPI_Type_ub`  - Returns the upper bound of a datatype -- use of this
+:ref:`MPI_Type_ub` - Returns the upper bound of a datatype -- use of this
 routine is deprecated.
 
 SYNTAX
@@ -44,15 +44,15 @@ DESCRIPTION
 ===========
 
 Note that use of this routine is *deprecated* as of MPI-2. Please use
-:ref:`MPI_Type_get_extent`  instead.
+:ref:`MPI_Type_get_extent` instead.
 
-:ref:`MPI_Type_ub`  returns the upper bound of a data type. This will differ
-from zero if the type was constructed using :ref:`MPI_UB` . The upper bound will
+:ref:`MPI_Type_ub` returns the upper bound of a data type. This will differ
+from zero if the type was constructed using :ref:`MPI_UB`. The upper bound will
 take into account any alignment considerations.
 
-The "pseudo-datatypes," :ref:`MPI_LB`  and :ref:`MPI_UB` , can be used, respectively, to
+The "pseudo-datatypes," :ref:`MPI_LB` and :ref:`MPI_UB`, can be used, respectively, to
 mark the upper bound (or the lower bound) of a datatype. These
-pseudo-datatypes occupy no space (extent (:ref:`MPI_LB)`  = extent (:ref:`MPI_UB)`  =0.
+pseudo-datatypes occupy no space (extent (:ref:`MPI_LB)` = extent (:ref:`MPI_UB)` =0.
 They do not affect the size or count of a datatype, and do not affect
 the context of a message created with this datatype. However, they do
 affect the definition of the extent of a datatype and, therefore, affect
@@ -103,7 +103,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

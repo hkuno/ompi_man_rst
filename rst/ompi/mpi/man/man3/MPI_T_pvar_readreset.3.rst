@@ -3,7 +3,7 @@
 MPI_T_pvar_readreset
 ~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_pvar_readreset`  - Atomically read and reset the value of a
+:ref:`MPI_T_pvar_readreset` - Atomically read and reset the value of a
 performance variable
 
 SYNTAX
@@ -30,7 +30,7 @@ INPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_pvar_readreset`  atomically queries and resets the value of a
+:ref:`MPI_T_pvar_readreset` atomically queries and resets the value of a
 performance variable bound to the handle specified by *handle* in the
 session specified by *session*. The result is stored in the buffer
 pointed to by *buf*. This function can only be used with performance
@@ -41,21 +41,21 @@ of the performance variable.
 ERRORS
 ======
 
-:ref:`MPI_T_pvar_readreset()`  will fail if:
+:ref:`MPI_T_pvar_readreset()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_HANDLE]` 
+[:ref:`MPI_T_ERR_INVALID_HANDLE]`
    The handle is invalid or not associated with the session
 
-[:ref:`MPI_T_ERR_INVALID_SESSION]` 
+[:ref:`MPI_T_ERR_INVALID_SESSION]`
    Session argument is not a valid session
 
-[:ref:`MPI_T_ERR_PVAR_NO_ATOMIC]` 
+[:ref:`MPI_T_ERR_PVAR_NO_ATOMIC]`
    Variable cannot be read and written atomically
 
-[:ref:`MPI_T_ERR_PVAR_NO_WRITE]` 
+[:ref:`MPI_T_ERR_PVAR_NO_WRITE]`
    Variable cannot be reset
 
 

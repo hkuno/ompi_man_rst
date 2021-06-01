@@ -3,7 +3,7 @@
 MPI_Dist_graph_create
 ~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Dist_graph_create`  - Makes a new communicator to which topology
+:ref:`MPI_Dist_graph_create` - Makes a new communicator to which topology
 information has been attached.
 
 SYNTAX
@@ -80,7 +80,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Dist_graph_create`  creates a new communicator *comm_dist_graph* with
+:ref:`MPI_Dist_graph_create` creates a new communicator *comm_dist_graph* with
 distrubuted graph topology and returns a handle to the new communicator.
 The number of processes in *comm_dist_graph* is identical to the number
 of processes in *comm_old*. Concretely, each process calls the
@@ -105,7 +105,7 @@ destination edges. This allows a fully distributed specification of the
 communication graph. Isolated processes (i.e., processes with no
 outgoing or incoming edges, that is, processes that do not occur as
 source or destination node in the graph specication) are allowed. The
-call to :ref:`MPI_Dist_graph_create`  is collective.
+call to :ref:`MPI_Dist_graph_create` is collective.
 
 If reorder = false, all processes will have the same rank in
 comm_dist_graph as in comm_old. If reorder = true then the MPI library
@@ -125,14 +125,14 @@ weights. Multiplicity of edges can likewise indicate more intense
 communication between pairs of processes. However, the exact meaning of
 edge weights is not specied by the MPI standard and is left to the
 implementation. An application can supply the special value
-:ref:`MPI_UNWEIGHTED`  for the weight array to indicate that all edges have the
-same (effectively no) weight. It is erroneous to supply :ref:`MPI_UNWEIGHTED` 
+:ref:`MPI_UNWEIGHTED` for the weight array to indicate that all edges have the
+same (effectively no) weight. It is erroneous to supply :ref:`MPI_UNWEIGHTED`
 for some but not all processes of comm_old. If the graph is weighted but
-*n* = 0, then :ref:`MPI_WEIGHTS_EMPTY`  or any arbitrary array may be passed to
-weights. Note that :ref:`MPI_UNWEIGHTED`  and :ref:`MPI_WEIGHTS_EMPTY`  are not special
+*n* = 0, then :ref:`MPI_WEIGHTS_EMPTY` or any arbitrary array may be passed to
+weights. Note that :ref:`MPI_UNWEIGHTED` and :ref:`MPI_WEIGHTS_EMPTY` are not special
 weight values; rather they are special values for the total array
-argument. In Fortran, :ref:`MPI_UNWEIGHTED`  and :ref:`MPI_WEIGHTS_EMPTY`  are objects
-like :ref:`MPI_BOTTOM`  (not usable for initialization or assignment). See MPI-3
+argument. In Fortran, :ref:`MPI_UNWEIGHTED` and :ref:`MPI_WEIGHTS_EMPTY` are objects
+like :ref:`MPI_BOTTOM` (not usable for initialization or assignment). See MPI-3
 § 2.5.4.
 
 ERRORS
@@ -144,7 +144,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

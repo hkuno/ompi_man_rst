@@ -3,7 +3,7 @@
 MPI_T_cvar_read
 ~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_cvar_read`  - Read the value of a control variable
+:ref:`MPI_T_cvar_read` - Read the value of a control variable
 
 SYNTAX
 ======
@@ -27,7 +27,7 @@ INPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_cvar_read`  reads the value of the control variable identified by
+:ref:`MPI_T_cvar_read` reads the value of the control variable identified by
 the handle specified in *handle* and stores the value in the buffer
 pointed to by *buf*. The caller must ensure that the buffer pointed to
 by *buf* is large enough to hold the entire value of the control
@@ -36,12 +36,12 @@ variable.
 ERRORS
 ======
 
-:ref:`MPI_T_cvar_read()`  will fail if:
+:ref:`MPI_T_cvar_read()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_HANDLE]` 
+[:ref:`MPI_T_ERR_INVALID_HANDLE]`
    The handle is invalid
 
 

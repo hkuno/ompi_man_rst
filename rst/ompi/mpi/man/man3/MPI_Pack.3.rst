@@ -3,7 +3,7 @@
 MPI_Pack
 ~~~~~~~~
 
-:ref:`MPI_Pack`  - Packs data of a given datatype into contiguous memory.
+:ref:`MPI_Pack` - Packs data of a given datatype into contiguous memory.
 
 SYNTAX
 ======
@@ -77,11 +77,11 @@ DESCRIPTION
 
 Packs the message in the send buffer specified by *inbuf*, *incount*,
 *datatype* into the buffer space specified by *outbuf* and *outsize*.
-The input buffer can be any communication buffer allowed in :ref:`MPI_Send` .
+The input buffer can be any communication buffer allowed in :ref:`MPI_Send`.
 The output buffer is a contiguous storage area containing *outsize*
 bytes, starting at the address *outbuf* (length is counted in bytes, not
 elements, as if it were a communication buffer for a message of type
-:ref:`MPI_Packed)` .
+:ref:`MPI_Packed)`.
 
 The input value of *position* is the first location in the output buffer
 to be used for packing. *position* is incremented by the size of the
@@ -90,7 +90,7 @@ in the output buffer following the locations occupied by the packed
 message. The *comm* argument is the communicator that will be
 subsequently used for sending the packed message.
 
-**Example:** An example using :ref:`MPI_Pack` :
+**Example:** An example using :ref:`MPI_Pack`:
 
 ::
 
@@ -123,7 +123,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -3,7 +3,7 @@
 MPI_File_read_all
 ~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_File_read_all`  - Reads a file starting at the locations specified
+:ref:`MPI_File_read_all` - Reads a file starting at the locations specified
 by individual file pointers (blocking, collective).
 
 SYNTAX
@@ -69,15 +69,15 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_File_read_all`  is a collective routine that attempts to read from the
+:ref:`MPI_File_read_all` is a collective routine that attempts to read from the
 file associated with *fh* (at the current individual file pointer
 position maintained by the system) a total number of *count* data items
 having *datatype* type into the user's buffer *buf.* The data is taken
 out of those parts of the file specified by the current view.
-:ref:`MPI_File_read_all`  stores the number of data-type elements actually read
+:ref:`MPI_File_read_all` stores the number of data-type elements actually read
 in *status.* All other fields of *status* are undefined.
 
-It is erroneous to call this function if :ref:`MPI_MODE_SEQUENTIAL`  mode was
+It is erroneous to call this function if :ref:`MPI_MODE_SEQUENTIAL` mode was
 specified when the file was opened.
 
 ERRORS
@@ -88,7 +88,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

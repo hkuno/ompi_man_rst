@@ -3,7 +3,7 @@
 MPI_Request_free
 ~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Request_free`  - Frees a communication request object.
+:ref:`MPI_Request_free` - Frees a communication request object.
 
 SYNTAX
 ======
@@ -50,23 +50,23 @@ DESCRIPTION
 This operation allows a request object to be deallocated without waiting
 for the associated communication to complete.
 
-:ref:`MPI_Request_free`  marks the request object for deallocation and sets
-request to :ref:`MPI_REQUEST_NULL` . Any ongoing communication that is
+:ref:`MPI_Request_free` marks the request object for deallocation and sets
+request to :ref:`MPI_REQUEST_NULL`. Any ongoing communication that is
 associated with the request will be allowed to complete. The request
 will be deallocated only after its completion.
 
 NOTES
 =====
 
-Once a request is freed by a call to :ref:`MPI_Request_free` , it is not
+Once a request is freed by a call to :ref:`MPI_Request_free`, it is not
 possible to check for the successful completion of the associated
-communication with calls to :ref:`MPI_Wait`  or :ref:`MPI_Test` . Also, if an error
+communication with calls to :ref:`MPI_Wait` or :ref:`MPI_Test`. Also, if an error
 occurs subsequently during the communication, an error code cannot be
 returned to the user -- such an error must be treated as fatal.
 Questions arise as to how one knows when the operations have completed
-when using :ref:`MPI_Request_free` . Depending on the program logic, there may
+when using :ref:`MPI_Request_free`. Depending on the program logic, there may
 be other ways in which the program knows that certain operations have
-completed and this makes usage of :ref:`MPI_Request_free`  practical. For
+completed and this makes usage of :ref:`MPI_Request_free` practical. For
 example, an active send request could be freed when the logic of the
 program is such that the receiver sends a reply to the message sent --
 the arrival of the reply informs the sender that the send has completed
@@ -100,13 +100,13 @@ receive has completed and the receive buffer can be reused.
        END IF
 
 This routine is normally used to free persistent requests created with
-either :ref:`MPI_Recv_init`  or :ref:`MPI_Send_init`  and friends. However, it can
-be used to free a request created with :ref:`MPI_Irecv`  or :ref:`MPI_Isend`  and
+either :ref:`MPI_Recv_init` or :ref:`MPI_Send_init` and friends. However, it can
+be used to free a request created with :ref:`MPI_Irecv` or :ref:`MPI_Isend` and
 friends; in that case the use can not use the test/wait routines on the
 request.
 
 It **is** permitted to free an active request. However, once freed, you
-can not use the request in a wait or test routine (e.g., :ref:`MPI_Wait`  ).
+can not use the request in a wait or test routine (e.g., :ref:`MPI_Wait` ).
 
 ERRORS
 ======
@@ -117,7 +117,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

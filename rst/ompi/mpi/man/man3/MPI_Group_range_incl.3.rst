@@ -3,7 +3,7 @@
 MPI_Group_range_incl
 ~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Group_range_incl`  - Creates a new group from ranges of ranks in
+:ref:`MPI_Group_range_incl` - Creates a new group from ranges of ranks in
 an existing group.
 
 SYNTAX
@@ -88,8 +88,8 @@ zero.
 The functionality of this routine is specified to be equivalent to
 expanding the array of ranges to an array of the included ranks and
 passing the resulting array of ranks and other arguments to
-:ref:`MPI_Group_incl` . A call to :ref:`MPI_Group_incl`  is equivalent to a call to
-:ref:`MPI_Group_range_incl`  with each rank i in ranks replaced by the triplet
+:ref:`MPI_Group_incl`. A call to :ref:`MPI_Group_incl` is equivalent to a call to
+:ref:`MPI_Group_range_incl` with each rank i in ranks replaced by the triplet
 (i,i,1) in the argument ranges.
 
 NOTE
@@ -107,7 +107,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -3,7 +3,7 @@
 MPI_Type_contiguous
 ~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Type_contiguous`  - Creates a contiguous datatype.
+:ref:`MPI_Type_contiguous` - Creates a contiguous datatype.
 
 SYNTAX
 ======
@@ -59,7 +59,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-The simplest datatype constructor is :ref:`MPI_Type_contiguous` , which allows
+The simplest datatype constructor is :ref:`MPI_Type_contiguous`, which allows
 replication of a datatype into contiguous locations.
 
 *newtype* is the datatype obtained by concatenating *count* copies of
@@ -106,6 +106,6 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.

@@ -3,7 +3,7 @@
 MPI_Wtime
 ~~~~~~~~~
 
-:ref:`MPI_Wtime`  - Returns an elapsed time on the calling processor.
+:ref:`MPI_Wtime` - Returns an elapsed time on the calling processor.
 
 SYNTAX
 ======
@@ -44,7 +44,7 @@ Time in seconds since an arbitrary time in the past.
 DESCRIPTION
 ===========
 
-:ref:`MPI_Wtime`  returns a floating-point number of seconds, representing
+:ref:`MPI_Wtime` returns a floating-point number of seconds, representing
 elapsed wall-clock time since some time in the past.
 
 The "time in the past" is guaranteed not to change during the life of
@@ -71,21 +71,21 @@ requirement that different nodes return the "same" time.
 NOTES
 =====
 
-The boolean variable :ref:`MPI_WTIME_IS_GLOBAL` , a predefined attribute key
+The boolean variable :ref:`MPI_WTIME_IS_GLOBAL`, a predefined attribute key
 that indicates whether clocks are synchronized, does not have a valid
 value in Open MPI, as the clocks are not guaranteed to be synchronized.
 
 This function is intended to be a high-resolution, elapsed (or wall)
-clock. See :ref:`MPI_Wtick`  to determine the resolution of :ref:`MPI_Wtime` .
+clock. See :ref:`MPI_Wtick` to determine the resolution of :ref:`MPI_Wtime`.
 
 On POSIX platforms, this function may utilize a timer that is cheaper to
 invoke than the gettimeofday() system call, but will fall back to
 gettimeofday() if a cheap high-resolution timer is not available. The
 ompi_info command can be consulted to see if Open MPI supports a native
-high-resolution timer on your platform; see the value for ":ref:`MPI_WTIME` 
+high-resolution timer on your platform; see the value for ":ref:`MPI_WTIME`
 support" (or "options:mpi-wtime" when viewing the parsable output). If
 this value is "native", a method that is likely to be cheaper than
-gettimeofday() will be used to obtain the time when :ref:`MPI_Wtime`  is
+gettimeofday() will be used to obtain the time when :ref:`MPI_Wtime` is
 invoked.
 
 For example, on platforms that support it, the *clock_gettime()*
@@ -100,7 +100,7 @@ in some cases (e.g., if the MPI process is not bound to a single
 processor core).
 
 This function does not return an error value. Consequently, the result
-of calling it before :ref:`MPI_Init`  or after :ref:`MPI_Finalize`  is undefined.
+of calling it before :ref:`MPI_Init` or after :ref:`MPI_Finalize` is undefined.
 
 
 .. seealso:: | :ref:`MPI_Wtick` 

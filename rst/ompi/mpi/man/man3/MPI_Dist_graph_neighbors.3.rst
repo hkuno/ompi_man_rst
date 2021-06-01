@@ -3,7 +3,7 @@
 MPI_Dist_graph_neighbors
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Dist_graph_neighbors`  - Returns the neighbors of the calling
+:ref:`MPI_Dist_graph_neighbors` - Returns the neighbors of the calling
 process in a distributed graph topology.
 
 SYNTAX
@@ -72,14 +72,14 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Dist_graph_neighbors`  returns the source and destination ranks in a
+:ref:`MPI_Dist_graph_neighbors` returns the source and destination ranks in a
 distributed graph topology for the calling process. This call will
 return up to *maxindegree* source ranks in the *sources* array and up to
 *maxoutdegree* destination ranks in the *destinations* array. If weights
 were specified at the time of the communicator's creation then the
 associated weights are returned in the *sourceweights* and *destweights*
 arrays. If the communicator was created with
-:ref:`MPI_Dist_graph_create_adjacent`  then the order of the values in *sources*
+:ref:`MPI_Dist_graph_create_adjacent` then the order of the values in *sources*
 and *destinations* is identical to the input that was used by the
 process with the same rank in comm_old in the creation call.
 
@@ -92,7 +92,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler :ref:`MPI_ERRORS_RETURN` 
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

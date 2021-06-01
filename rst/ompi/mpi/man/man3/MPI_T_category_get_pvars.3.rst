@@ -3,7 +3,7 @@
 MPI_T_category_get_pvars
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_category_get_pvars`  - Query which performance variables are in
+:ref:`MPI_T_category_get_pvars` - Query which performance variables are in
 a category
 
 SYNTAX
@@ -33,17 +33,17 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_category_get_pvars`  can be used to query which performance
+:ref:`MPI_T_category_get_pvars` can be used to query which performance
 variables are contained in a particular category. A category contains
 zero or more performance variables.
 
 ERRORS
 ======
 
-:ref:`MPI_T_category_get_pvars()`  will fail if:
+:ref:`MPI_T_category_get_pvars()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]` 
+[:ref:`MPI_T_ERR_INVALID_INDEX]`
    The category index is invalid

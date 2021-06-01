@@ -103,4 +103,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Buffer_detach` 
+.. seealso:: :ref:`MPI_Buffer_detach`

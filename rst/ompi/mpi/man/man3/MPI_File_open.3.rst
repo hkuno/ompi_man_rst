@@ -3,7 +3,7 @@
 MPI_File_open
 ~~~~~~~~~~~~~
 
-:ref:`MPI_File_open`  - Opens a file (collective).
+:ref:`MPI_File_open` - Opens a file (collective).
 
 SYNTAX
 ======
@@ -68,71 +68,71 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_File_open`  opens the file identified by the filename *filename* on
-all processes in the *comm* communicator group. :ref:`MPI_File_open`  is a
+:ref:`MPI_File_open` opens the file identified by the filename *filename* on
+all processes in the *comm* communicator group. :ref:`MPI_File_open` is a
 collective routine; all processes must provide the same value for
 *amode,* and all processes must provide filenames that reference the
 same file which are textually identical (note: Open MPI I/O plugins may
 have restrictions on characters that can be used in filenames. For
 example, the ROMIO plugin may disallow the colon (":") character from
 appearing in a filename). A process can open a file independently of
-other processes by using the :ref:`MPI_COMM_SELF`  communicator. The file handle
+other processes by using the :ref:`MPI_COMM_SELF` communicator. The file handle
 returned, *fh,* can be subsequently used to access the file until the
-file is closed using :ref:`MPI_File_close` . Before calling :ref:`MPI_Finalize` , the
-user is required to close (via :ref:`MPI_File_close)`  all files that were
-opened with :ref:`MPI_File_open` . Note that the communicator *comm* is
-unaffected by :ref:`MPI_File_open`  and continues to be usable in all MPI
+file is closed using :ref:`MPI_File_close`. Before calling :ref:`MPI_Finalize`, the
+user is required to close (via :ref:`MPI_File_close)` all files that were
+opened with :ref:`MPI_File_open`. Note that the communicator *comm* is
+unaffected by :ref:`MPI_File_open` and continues to be usable in all MPI
 routines. Furthermore, use of *comm* will not interfere with I/O
 behavior.
 
 Initially, all processes view the file as a linear byte stream; that is,
-the *etype* and *filetype* are both :ref:`MPI_BYTE` . The file view can be
-changed via the :ref:`MPI_File_set_view`  routine.
+the *etype* and *filetype* are both :ref:`MPI_BYTE`. The file view can be
+changed via the :ref:`MPI_File_set_view` routine.
 
 The following access modes are supported (specified in amode, in a
 bit-vector OR in one of the following integer constants):
 
  o
-   :ref:`MPI_MODE_APPEND` 
+   :ref:`MPI_MODE_APPEND`
 
  o
-   :ref:`MPI_MODE_CREATE`  -- Create the file if it does not exist.
+   :ref:`MPI_MODE_CREATE` -- Create the file if it does not exist.
 
  o
-   :ref:`MPI_MODE_DELETE_ON_CLOSE` 
+   :ref:`MPI_MODE_DELETE_ON_CLOSE`
 
  o
-   :ref:`MPI_MODE_EXCL`  -- Error creating a file that already exists.
+   :ref:`MPI_MODE_EXCL` -- Error creating a file that already exists.
 
  o
-   :ref:`MPI_MODE_RDONLY`  -- Read only.
+   :ref:`MPI_MODE_RDONLY` -- Read only.
 
  o
-   :ref:`MPI_MODE_RDWR`  -- Reading and writing.
+   :ref:`MPI_MODE_RDWR` -- Reading and writing.
 
  o
-   :ref:`MPI_MODE_SEQUENTIAL` 
+   :ref:`MPI_MODE_SEQUENTIAL`
 
  o
-   :ref:`MPI_MODE_WRONLY`  -- Write only.
+   :ref:`MPI_MODE_WRONLY` -- Write only.
 
  o
-   :ref:`MPI_MODE_UNIQUE_OPEN` 
+   :ref:`MPI_MODE_UNIQUE_OPEN`
 
-The modes :ref:`MPI_MODE_RDONLY` , :ref:`MPI_MODE_RDWR` , :ref:`MPI_MODE_WRONLY` , and
-:ref:`MPI_MODE_CREATE`  have identical semantics to their POSIX counterparts. It
-is erroneous to specify :ref:`MPI_MODE_CREATE`  in conjunction with
-:ref:`MPI_MODE_RDONLY` . Errors related to the access mode are raised in the
-class :ref:`MPI_ERR_AMODE` .
+The modes :ref:`MPI_MODE_RDONLY`, :ref:`MPI_MODE_RDWR`, :ref:`MPI_MODE_WRONLY`, and
+:ref:`MPI_MODE_CREATE` have identical semantics to their POSIX counterparts. It
+is erroneous to specify :ref:`MPI_MODE_CREATE` in conjunction with
+:ref:`MPI_MODE_RDONLY`. Errors related to the access mode are raised in the
+class :ref:`MPI_ERR_AMODE`.
 
 On single-node clusters, files are opened by default using nonatomic
 mode file consistency semantics. The more stringent atomic-mode
 consistency semantics, required for atomicity of overlapping accesses,
 are the default when processors in a communicator group reside on more
-than one node. This setting can be changed using :ref:`MPI_File_set_atomicity` .
+than one node. This setting can be changed using :ref:`MPI_File_set_atomicity`.
 
-The :ref:`MPI_File_open`  interface allows the user to pass information via the
-*info* argument. It can be set to :ref:`MPI_INFO_NULL` . See the HINTS section
+The :ref:`MPI_File_open` interface allows the user to pass information via the
+*info* argument. It can be set to :ref:`MPI_INFO_NULL`. See the HINTS section
 for a list of hints that can be set.
 
 HINTS
@@ -142,14 +142,14 @@ The following hints can be used as values for the *info* argument.
 
 SETTABLE HINTS:
 
-- :ref:`MPI_INFO_NULL` 
+- :ref:`MPI_INFO_NULL`
 
 - shared_file_timeout: Amount of time (in seconds) to wait for access to
-the shared file pointer before exiting with :ref:`MPI_ERR_TIMEDOUT` .
+the shared file pointer before exiting with :ref:`MPI_ERR_TIMEDOUT`.
 
 - rwlock_timeout: Amount of time (in seconds) to wait for obtaining a
 read or write lock on a contiguous chunk of a UNIX file before exiting
-with :ref:`MPI_ERR_TIMEDOUT` .
+with :ref:`MPI_ERR_TIMEDOUT`.
 
 - noncoll_read_bufsize: Maximum size of the buffer used by MPI I/O to
 satisfy multiple noncontiguous read requests in the noncollective
@@ -197,7 +197,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN` . The error handler may be changed with
-:ref:`MPI_File_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL`  may be used to make I/O errors fatal. Note that MPI
+:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+:ref:`MPI_File_set_errhandler`; the predefined error handler
+:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

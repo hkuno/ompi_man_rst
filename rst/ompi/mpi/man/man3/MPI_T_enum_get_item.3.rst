@@ -3,7 +3,7 @@
 MPI_T_enum_get_item
 ~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_T_enum_get_item`  - Query information about an enumerator
+:ref:`MPI_T_enum_get_item` - Query information about an enumerator
 
 SYNTAX
 ======
@@ -40,7 +40,7 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_enum_get_item`  can be used to query information about an item in an
+:ref:`MPI_T_enum_get_item` can be used to query information about an item in an
 enumerator. This function returns the enumeration value in the *value*
 parameter.
 
@@ -59,10 +59,10 @@ and the string is not returned. For more information see MPI-3 � 14.3.3.
 ERRORS
 ======
 
-:ref:`MPI_T_enum_get_item()`  will fail if:
+:ref:`MPI_T_enum_get_item()` will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]` 
+[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]` 
+[:ref:`MPI_T_ERR_INVALID_INDEX]`
    The enumeration is invalid or has been deleted

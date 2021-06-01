@@ -69,4 +69,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Init` :ref:`MPI_Init_thread` :ref:`MPI_Initialized` :ref:`MPI_Finalize` 
+.. seealso:: :ref:`MPI_Init`:ref:`MPI_Init_thread`:ref:`MPI_Initialized`:ref:`MPI_Finalize`
