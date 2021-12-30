@@ -3,8 +3,9 @@
 MPI_Reduce_scatter_block
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Reduce_scatter_block`, :ref:`MPI_Ireduce_scatter_block` - Combines
-values and scatters the results in blocks.
+:ref:`MPI_Reduce_scatter_block`, :ref:`MPI_Ireduce_scatter_block`,
+:ref:`MPI_Reduce_scatter_block_init` - Combines values and scatters the
+results in blocks.
 
 SYNTAX
 ======
@@ -21,6 +22,10 @@ C Syntax
 
    int MPI_Ireduce_scatter_block(const void *sendbuf, void *recvbuf, int recvcount,
    	MPI_Datatype datatype, MPI_Op op, MPI_Comm comm, MPI_Request *request)
+
+
+   int MPI_Reduce_scatter_block_init(const void *sendbuf, void *recvbuf, int recvcount,
+   	MPI_Datatype datatype, MPI_Op op, MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
 --------------
@@ -39,6 +44,12 @@ Fortran Syntax
    		COMM, REQUEST, IERROR)
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	RECVCOUNT, DATATYPE, OP, COMM, REQUEST, IERROR
+
+
+   MPI_REDUCE_SCATTER_BLOCK_INOT(SENDBUF, RECVBUF, RECVCOUNT, DATATYPE, OP,
+   		COMM, INFO, REQUEST, IERROR)
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	RECVCOUNT, DATATYPE, OP, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -68,6 +79,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Reduce_scatter_block_init(sendbuf, recvbuf, recvcount, datatype, op, comm,
+   		info, request, ierror)
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN) :: recvcount
+   	TYPE(MPI_Datatype), INTENT(IN) :: datatype
+   	TYPE(MPI_Op), INTENT(IN) :: op
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -80,6 +103,8 @@ INPUT PARAMETERS
 * ``op``: Operation (handle). 
 
 * ``comm``: Communicator (handle). 
+
+* ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
 =================

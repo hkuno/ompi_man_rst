@@ -3,8 +3,9 @@
 MPI_Neighbor_alltoall
 ~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Neighbor_alltoall`, :ref:`MPI_Ineighbor_alltoall` - All processes send
-data to neighboring processes in a virtual topology communicator
+:ref:`MPI_Neighbor_alltoall`, :ref:`MPI_Ineighbor_alltoall`, :ref:`MPI_Neighbor_alltoall`
+- All processes send data to neighboring processes in a virtual topology
+communicator
 
 SYNTAX
 ======
@@ -23,6 +24,10 @@ C Syntax
    int MPI_Ineighbor_alltoall(const void *sendbuf, int sendcount,
    	MPI_Datatype sendtype, void *recvbuf, int recvcount,
    	MPI_Datatype recvtype, MPI_Comm comm, MPI_Request *request)
+
+   int MPI_Neighbor_alltoall_init(const void *sendbuf, int sendcount,
+   	MPI_Datatype sendtype, void *recvbuf, int recvcount,
+   	MPI_Datatype recvtype, MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
 --------------
@@ -45,6 +50,13 @@ Fortran Syntax
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE
    	INTEGER	COMM, REQUEST, IERROR
+
+   MPI_NEIGHBOR_ALLTOALL_INIT(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF, RECVCOUNT,
+   	RECVTYPE, COMM, INFO, REQUEST, IERROR)
+
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE
+   	INTEGER	COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -74,6 +86,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Neighbor_alltoall_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
+   		recvtype, comm, info, request, ierror)
+
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN) :: sendcount, recvcount
+   	TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -88,6 +112,8 @@ INPUT PARAMETERS
 * ``recvtype``: Datatype of receive buffer elements (handle). 
 
 * ``comm``: Communicator over which data is to be exchanged (handle). 
+
+* ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
 =================

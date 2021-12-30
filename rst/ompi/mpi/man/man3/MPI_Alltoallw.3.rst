@@ -3,8 +3,9 @@
 MPI_Alltoallw
 ~~~~~~~~~~~~~
 
-:ref:`MPI_Alltoallw`, :ref:`MPI_Ialltoallw` - All processes send data of different
-types to, and receive data of different types from, all processes
+:ref:`MPI_Alltoallw`, :ref:`MPI_Ialltoallw`, :ref:`MPI_Alltoallw_init` - All processes
+send data of different types to, and receive data of different types
+from, all processes
 
 SYNTAX
 ======
@@ -25,6 +26,12 @@ C Syntax
    	const int sdispls[], const MPI_Datatype sendtypes[],
    	void *recvbuf, const int recvcounts[], const int rdispls[],
    	const MPI_Datatype recvtypes[], MPI_Comm comm,
+   	MPI_Request *request)
+
+   int MPI_Alltoallw_init(const void *sendbuf, const int sendcounts[],
+   	const int sdispls[], const MPI_Datatype sendtypes[],
+   	void *recvbuf, const int recvcounts[], const int rdispls[],
+   	const MPI_Datatype recvtypes[], MPI_Comm comm, MPI_Info info,
    	MPI_Request *request)
 
 Fortran Syntax
@@ -50,6 +57,14 @@ Fortran Syntax
    	INTEGER	SENDCOUNTS(*), SDISPLS(*), SENDTYPES(*)
    	INTEGER	RECVCOUNTS(*), RDISPLS(*), RECVTYPES(*)
    	INTEGER	COMM, REQUEST, IERROR
+
+   MPI_ALLTOALLW_INIT(SENDBUF, SENDCOUNTS, SDISPLS, SENDTYPES,
+   	RECVBUF, RECVCOUNTS, RDISPLS, RECVTYPES, COMM, INFO, REQUEST, IERROR)
+
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	SENDCOUNTS(*), SDISPLS(*), SENDTYPES(*)
+   	INTEGER	RECVCOUNTS(*), RDISPLS(*), RECVTYPES(*)
+   	INTEGER	COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -83,6 +98,20 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
+   		recvcounts, rdispls, recvtypes, comm, fIinfo, request, ierror)
+
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN), ASYNCHRONOUS :: sendcounts(*), sdispls(*),
+   	recvcounts(*), rdispls(*)
+   	TYPE(MPI_Datatype), INTENT(IN), ASYNCHRONOUS :: sendtypes(*),
+   	recvtypes(*)
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -90,17 +119,19 @@ INPUT PARAMETERS
 
 * ``sendcounts``: Integer array, where entry i specifies the number of elements to send to rank i. 
 
-* ``sdispls``: Integer array, where entry i specifies the displacement (in bytes, offset from *sendbuf*) from which to send data to rank i. 
+* ``sdispls``: Integer array, where entry i specifies the displacement (in bytes, offset from *sendbuf) from which to send data to rank i.* 
 
 * ``sendtypes``: Datatype array, where entry i specifies the datatype to use when sending data to rank i. 
 
 * ``recvcounts``: Integer array, where entry j specifies the number of elements to receive from rank j. 
 
-* ``rdispls``: Integer array, where entry j specifies the displacement (in bytes, offset from *recvbuf*) to which data from rank j should be written. 
+* ``rdispls``: Integer array, where entry j specifies the displacement (in bytes, offset from *recvbuf) to which data from rank j should* be written. 
 
 * ``recvtypes``: Datatype array, where entry j specifies the datatype to use when receiving data from rank j. 
 
 * ``comm``: Communicator over which data is to be exchanged. 
+
+* ``info``: Info (handle, persistent only) 
 
 OUTPUT PARAMETERS
 =================
@@ -120,7 +151,7 @@ adds flexibility to :ref:`MPI_Alltoallv` by allowing the user to specify the
 datatype of individual data blocks (in addition to displacement and
 element count). Its operation can be thought of in the following way,
 where each process performs 2n (n being the number of processes in
-communicator *comm*) independent point-to-point communications
+communicator *comm) independent point-to-point communications*
 (including communication with itself).
 
 ::
@@ -133,8 +164,8 @@ communicator *comm*) independent point-to-point communications
    	    MPI_Recv(recvbuf + rdispls[i], recvcounts[i],
    	        recvtypes[i], i, ..., comm);
 
-Process j sends the k-th block of its local *sendbuf* to process k,
-which places the data in the j-th block of its local *recvbuf*.
+Process j sends the k-th block of its local *sendbuf to process* k,
+which places the data in the j-th block of its local *recvbuf.*
 
 When a pair of processes exchanges data, each may pass different element
 count and datatype arguments so long as the sender specifies the same

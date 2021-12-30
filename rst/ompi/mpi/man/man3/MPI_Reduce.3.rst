@@ -3,8 +3,8 @@
 MPI_Reduce
 ~~~~~~~~~~
 
-:ref:`MPI_Reduce`, :ref:`MPI_Ireduce` - Reduces values on all processes within a
-group.
+:ref:`MPI_Reduce`, :ref:`MPI_Ireduce`, :ref:`MPI_Reduce_init` - Reduces values on all
+processes within a group.
 
 SYNTAX
 ======
@@ -24,6 +24,11 @@ C Syntax
                    MPI_Datatype datatype, MPI_Op op, int root,
                    MPI_Comm comm, MPI_Request *request)
 
+
+   int MPI_Reduce_init(const void *sendbuf, void *recvbuf, int count,
+                   MPI_Datatype datatype, MPI_Op op, int root,
+                   MPI_Comm comm, MPI_Info info, MPI_Request *request)
+
 Fortran Syntax
 --------------
 
@@ -41,6 +46,11 @@ Fortran Syntax
                REQUEST, IERROR)
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	COUNT, DATATYPE, OP, ROOT, COMM, REQUEST, IERROR
+
+   MPI_REDUCE_INIT(SENDBUF, RECVBUF, COUNT, DATATYPE, OP, ROOT, COMM,
+               INFO, REQUEST, IERROR)
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	COUNT, DATATYPE, OP, ROOT, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -69,6 +79,19 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
+   MPI_Reduce_init(sendbuf, recvbuf, count, datatype, op, root, comm, info, request,
+   		ierror)
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN) :: count, root
+   	TYPE(MPI_Datatype), INTENT(IN) :: datatype
+   	TYPE(MPI_Op), INTENT(IN) :: op
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -83,6 +106,8 @@ INPUT PARAMETERS
 * ``root``: Rank of root process (integer). 
 
 * ``comm``: Communicator (handle). 
+
+* ``info``: Info (handle, persistent). 
 
 OUTPUT PARAMETERS
 =================

@@ -3,8 +3,8 @@
 MPI_Scatterv
 ~~~~~~~~~~~~
 
-:ref:`MPI_Scatterv`, :ref:`MPI_Iscatterv` - Scatters a buffer in parts to all
-tasks in a group.
+:ref:`MPI_Scatterv`, :ref:`MPI_Iscatterv`, :ref:`MPI_Scatterv_init` - Scatters a buffer
+in parts to all tasks in a group.
 
 SYNTAX
 ======
@@ -23,6 +23,10 @@ C Syntax
    int MPI_Iscatterv(const void *sendbuf, const int sendcounts[], const int displs[],
    	MPI_Datatype sendtype, void *recvbuf, int recvcount,
    	MPI_Datatype recvtype, int root, MPI_Comm comm, MPI_Request *request)
+
+   int MPI_Scatterv_init(const void *sendbuf, const int sendcounts[], const int displs[],
+   	MPI_Datatype sendtype, void *recvbuf, int recvcount,
+   	MPI_Datatype recvtype, int root, MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
 --------------
@@ -43,6 +47,12 @@ Fortran Syntax
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	SENDCOUNTS(*), DISPLS(*), SENDTYPE
    	INTEGER	RECVCOUNT, RECVTYPE, ROOT, COMM, REQUEST, IERROR
+
+   MPI_SCATTERV_INIT(SENDBUF, SENDCOUNTS, DISPLS, SENDTYPE, RECVBUF,
+   		RECVCOUNT, RECVTYPE, ROOT, COMM, INFO, REQUEST, IERROR)
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	SENDCOUNTS(*), DISPLS(*), SENDTYPE
+   	INTEGER	RECVCOUNT, RECVTYPE, ROOT, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -71,6 +81,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_scatterv_init(sendbuf, sendcounts, displs, sendtype, recvbuf, recvcount,
+   		recvtype, root, comm, info, request, ierror)
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN), ASYNCHRONOUS :: sendcounts(*), displs(*)
+   	INTEGER, INTENT(IN) :: recvcount, root
+   	TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -89,6 +111,8 @@ INPUT PARAMETERS
 * ``root``: Rank of sending process (integer). 
 
 * ``comm``: Communicator (handle). 
+
+* ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
 =================

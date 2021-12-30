@@ -3,9 +3,9 @@
 MPI_Allgatherv
 ~~~~~~~~~~~~~~
 
-:ref:`MPI_Allgatherv`, :ref:`MPI_Iallgatherv` - Gathers data from all processes
-and delivers it to all. Each process may contribute a different amount
-of data.
+:ref:`MPI_Allgatherv`, :ref:`MPI_Iallgatherv`, :ref:`MPI_Allgatherv_init` - Gathers data
+from all processes and delivers it to all. Each process may contribute a
+different amount of data.
 
 SYNTAX
 ======
@@ -26,6 +26,11 @@ C Syntax
    	const int displs[], MPI_Datatype recvtype, MPI_Comm comm,
            MPI_Request *request)
 
+   int MPI_Allgatherv_init(const void *sendbuf, int sendcount,
+   	MPI_Datatype sendtype, void *recvbuf, const int recvcounts[],
+   	const int displs[], MPI_Datatype recvtype, MPI_Comm comm,
+           MPI_Info info, MPI_Request *request)
+
 Fortran Syntax
 --------------
 
@@ -41,10 +46,16 @@ Fortran Syntax
    	INTEGER	DISPLS(*), RECVTYPE, COMM, IERROR
 
    MPI_IALLGATHERV(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF,
-   		RECVCOUNT, DISPLS, RECVTYPE, COMM, REQUEST, IERROR)
+   		RECVCOUNT, DISPLS, RECVTYPE, COMM,  REQUEST,  IERROR)
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT(*),
    	INTEGER	DISPLS(*), RECVTYPE, COMM, REQUEST, IERROR
+
+   MPI_ALLGATHERV_INIT(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF,
+   		RECVCOUNT, DISPLS, RECVTYPE, COMM,  INFO,  REQUEST,  IERROR)
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT(*),
+   	INTEGER	DISPLS(*), RECVTYPE, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -73,6 +84,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Allgatherv_init(sendbuf, sendcount, sendtype, recvbuf, recvcounts, displs,
+   			recvtype, comm, info, request, ierror)
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN) :: sendcount
+   	INTEGER, INTENT(IN), ASYNCHRONOUS :: recvcounts(*), displs(*)
+   	TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -89,6 +112,8 @@ INPUT PARAMETERS
 * ``recvtype``: Datatype of receive buffer elements (handle). 
 
 * ``comm``: Communicator (handle). 
+
+* ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
 =================

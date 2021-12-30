@@ -3,8 +3,9 @@
 MPI_Alltoallv
 ~~~~~~~~~~~~~
 
-:ref:`MPI_Alltoallv`, :ref:`MPI_Ialltoallv` - All processes send different amount
-of data to, and receive different amount of data from, all processes
+:ref:`MPI_Alltoallv`, :ref:`MPI_Ialltoallv`, :ref:`MPI_Alltoallv_init` - All processes
+send different amount of data to, and receive different amount of data
+from, all processes
 
 SYNTAX
 ======
@@ -26,6 +27,12 @@ C Syntax
    	void *recvbuf, const int recvcounts[],
    	const int rdispls[], MPI_Datatype recvtype, MPI_Comm comm,
    	MPI_Request *request)
+
+   int MPI_Alltoallv_init(const void *sendbuf, const int sendcounts[],
+   	const int sdispls[], MPI_Datatype sendtype,
+   	void *recvbuf, const int recvcounts[],
+   	const int rdispls[], MPI_Datatype recvtype, MPI_Comm comm,
+   	MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
 --------------
@@ -50,6 +57,14 @@ Fortran Syntax
    	INTEGER	SENDCOUNTS(*), SDISPLS(*), SENDTYPE
    	INTEGER	RECVCOUNTS(*), RDISPLS(*), RECVTYPE
    	INTEGER	COMM, REQUEST, IERROR
+
+   MPI_ALLTOALLV_INIT(SENDBUF, SENDCOUNTS, SDISPLS, SENDTYPE,
+   	RECVBUF, RECVCOUNTS, RDISPLS, RECVTYPE, COMM, INFO, REQUEST, IERROR)
+
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	SENDCOUNTS(*), SDISPLS(*), SENDTYPE
+   	INTEGER	RECVCOUNTS(*), RDISPLS(*), RECVTYPE
+   	INTEGER	COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -81,6 +96,19 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Alltoallv_init(sendbuf, sendcounts, sdispls, sendtype, recvbuf, recvcounts,
+   			rdispls, recvtype, comm, info, request, ierror)
+
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN), ASYNCHRONOUS :: sendcounts(*), sdispls(*),
+   	recvcounts(*), rdispls(*)
+   	TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -99,6 +127,8 @@ INPUT PARAMETERS
 * ``recvtype``: Datatype of receive buffer elements. 
 
 * ``comm``: Communicator over which data is to be exchanged. 
+
+* ``info``: Info (handle, persistent only) 
 
 OUTPUT PARAMETERS
 =================

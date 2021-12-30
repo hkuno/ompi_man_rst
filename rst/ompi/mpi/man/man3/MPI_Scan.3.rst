@@ -3,7 +3,8 @@
 MPI_Scan
 ~~~~~~~~
 
-:ref:`MPI_Scan`, :ref:`MPI_Iscan` - Computes an inclusive scan (partial reduction)
+:ref:`MPI_Scan`, :ref:`MPI_Iscan`, :ref:`MPI_Scan_init` - Computes an inclusive scan
+(partial reduction)
 
 SYNTAX
 ======
@@ -22,6 +23,10 @@ C Syntax
                  MPI_Datatype datatype, MPI_Op op, MPI_Comm comm,
                  MPI_Request *request)
 
+   int MPI_Scan_init(const void *sendbuf, void *recvbuf, int count,
+                 MPI_Datatype datatype, MPI_Op op, MPI_Comm comm,
+                 MPI_Info info, MPI_Request *request)
+
 Fortran Syntax
 --------------
 
@@ -37,6 +42,10 @@ Fortran Syntax
    MPI_ISCAN(SENDBUF, RECVBUF, COUNT, DATATYPE, OP, COMM, REQUEST, IERROR)
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	COUNT, DATATYPE, OP, COMM, REQUEST, IERROR
+
+   MPI_SCAN_INIT(SENDBUF, RECVBUF, COUNT, DATATYPE, OP, COMM, INFO, REQUEST, IERROR)
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	COUNT, DATATYPE, OP, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -64,6 +73,17 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Scan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierror)
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN) :: count
+   	TYPE(MPI_Datatype), INTENT(IN) :: datatype
+   	TYPE(MPI_Op), INTENT(IN) :: op
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -76,6 +96,8 @@ INPUT PARAMETERS
 * ``op``: Operation (handle). 
 
 * ``comm``: Communicator (handle). 
+
+* ``info``: Info (handle, persistent only) 
 
 OUTPUT PARAMETERS
 =================

@@ -3,8 +3,8 @@
 MPI_Allgather
 ~~~~~~~~~~~~~
 
-:ref:`MPI_Allgather`, :ref:`MPI_Iallgather` - Gathers data from all processes and
-distributes it to all processes
+:ref:`MPI_Allgather`, :ref:`MPI_Iallgather`, :ref:`MPI_Allgather_init` - Gathers data
+from all processes and distributes it to all processes
 
 SYNTAX
 ======
@@ -23,6 +23,10 @@ C Syntax
    int MPI_Iallgather(const void *sendbuf, int  sendcount,
    	 MPI_Datatype sendtype, void *recvbuf, int recvcount,
    	 MPI_Datatype recvtype, MPI_Comm comm, MPI_Request *request)
+
+   int MPI_Allgather_init(const void *sendbuf, int  sendcount,
+   	 MPI_Datatype sendtype, void *recvbuf, int recvcount,
+   	 MPI_Datatype recvtype, MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
 --------------
@@ -43,6 +47,12 @@ Fortran Syntax
    	<type>	SENDBUF(*), RECVBUF (*)
    	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE, COMM
    	INTEGER	REQUEST, IERROR
+
+   MPI_ALLGATHER_INIT(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF, RECVCOUNT,
+   			RECVTYPE, COMM, INFO, REQUEST, IERROR)
+   	<type>	SENDBUF(*), RECVBUF (*)
+   	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE, COMM
+   	INTEGER	INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -70,6 +80,17 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Allgather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype,
+   			comm, info, request, ierror)
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN) :: sendcount, recvcount
+   	TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -86,6 +107,8 @@ INPUT PARAMETERS
 * ``recvtype``: Datatype of receive buffer elements (handle). 
 
 * ``comm``: Communicator (handle). 
+
+* ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
 =================

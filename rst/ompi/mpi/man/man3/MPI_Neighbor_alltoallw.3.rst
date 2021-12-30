@@ -3,9 +3,9 @@
 MPI_Neighbor_alltoallw
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Neighbor_alltoallw`, :ref:`MPI_Ineighbor_alltoallw` - All processes send
-data of different types to, and receive data of different types from,
-all processes
+:ref:`MPI_Neighbor_alltoallw`, :ref:`MPI_Ineighbor_alltoallw`,
+:ref:`MPI_Neighbor_alltoallw_init` - All processes send data of different
+types to, and receive data of different types from, all processes
 
 SYNTAX
 ======
@@ -26,6 +26,11 @@ C Syntax
    	const MPI_Aint sdispls[], const MPI_Datatype sendtypes[],
    	void *recvbuf, const int recvcounts[], const MPI_Aint rdispls[],
    	const MPI_Datatype recvtypes[], MPI_Comm comm, MPI_Request *request)
+
+   int MPI_Neighbor_alltoallw_init(const void *sendbuf, const int sendcounts[],
+   	const MPI_Aint sdispls[], const MPI_Datatype sendtypes[],
+   	void *recvbuf, const int recvcounts[], const MPI_Aint rdispls[],
+   	const MPI_Datatype recvtypes[], MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
 --------------
@@ -52,6 +57,15 @@ Fortran Syntax
    	INTEGER	RECVCOUNTS(*), RECVTYPES(*)
    	INTEGER(KIND=MPI_ADDRESS_KIND) SDISPLS(*), RDISPLS(*)
    	INTEGER	COMM, REQUEST, IERROR
+
+   MPI_NEIGHBOR_ALLTOALLW_INIT(SENDBUF, SENDCOUNTS, SDISPLS, SENDTYPES,
+   	RECVBUF, RECVCOUNTS, RDISPLS, RECVTYPES, COMM, INFO, REQUEST, IERROR)
+
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	SENDCOUNTS(*), SENDTYPES(*)
+   	INTEGER	RECVCOUNTS(*), RECVTYPES(*)
+   	INTEGER(KIND=MPI_ADDRESS_KIND) SDISPLS(*), RDISPLS(*)
+   	INTEGER	COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -85,6 +99,21 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Neighbor_alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
+   		recvcounts, rdispls, recvtypes, comm, info, request, ierror)
+
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN), ASYNCHRONOUS :: sendcounts(*), recvcounts(*)
+   	INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(IN), ASYNCHRONOUS ::
+   	sdispls(*), rdispls(*)
+   	TYPE(MPI_Datatype), INTENT(IN), ASYNCHRONOUS :: sendtypes(*),
+   	recvtypes(*)
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -103,6 +132,8 @@ INPUT PARAMETERS
 * ``recvtypes``: Datatype array, where entry j specifies the datatype to use when receiving data from neighbor j. 
 
 * ``comm``: Communicator over which data is to be exchanged. 
+
+* ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
 =================

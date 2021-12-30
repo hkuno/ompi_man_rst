@@ -3,8 +3,8 @@
 MPI_Reduce_scatter
 ~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Reduce_scatter`, :ref:`MPI_Ireduce_scatter` - Combines values and
-scatters the results.
+:ref:`MPI_Reduce_scatter`, :ref:`MPI_Ireduce_scatter`, :ref:`MPI_Reduce_scatter_init` -
+Combines values and scatters the results.
 
 SYNTAX
 ======
@@ -21,6 +21,10 @@ C Syntax
 
    int MPI_Ireduce_scatter(const void *sendbuf, void *recvbuf, const int recvcounts[],
    	MPI_Datatype datatype, MPI_Op op, MPI_Comm comm, MPI_Request *request)
+
+int :ref:`MPI_Reduce_scatter_init(const` void \*\ *sendbuf*, void\ *\*recvbuf*,
+const int\ *recvcounts*\ [], :ref:`MPI_Datatype`\ *datatype*, :ref:`MPI_Op`\ *op*,
+:ref:`MPI_Comm`\ *comm*, :ref:`MPI_Info` *info*, :ref:`MPI_Request` *\*request*)
 
 Fortran Syntax
 --------------
@@ -39,6 +43,11 @@ Fortran Syntax
    		COMM, REQUEST, IERROR)
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	RECVCOUNTS(*), DATATYPE, OP, COMM, REQUEST, IERROR
+
+   MPI_REDUCE_SCATTER_INIT(SENDBUF, RECVBUF, RECVCOUNTS, DATATYPE, OP,
+   		COMM, INFO, REQUEST, IERROR)
+   	<type>	SENDBUF(*), RECVBUF(*)
+   	INTEGER	RECVCOUNTS(*), DATATYPE, OP, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -68,6 +77,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Reduce_scatter_init(sendbuf, recvbuf, recvcounts, datatype, op, comm,
+   		info, request, ierror)
+   	TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+   	TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+   	INTEGER, INTENT(IN), ASYNCHRONOUS :: recvcounts(*)
+   	TYPE(MPI_Datatype), INTENT(IN) :: datatype
+   	TYPE(MPI_Op), INTENT(IN) :: op
+   	TYPE(MPI_Comm), INTENT(IN) :: comm
+   	TYPE(MPI_Info), INTENT(IN) :: info
+   	TYPE(MPI_Request), INTENT(OUT) :: request
+   	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 INPUT PARAMETERS
 ================
 
@@ -80,6 +101,8 @@ INPUT PARAMETERS
 * ``op``: Operation (handle). 
 
 * ``comm``: Communicator (handle). 
+
+* ``info``: Info (handle, persistent). 
 
 OUTPUT PARAMETERS
 =================
