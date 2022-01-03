@@ -1,0 +1,205 @@
+.\" Man page generated from reStructuredText.
+.
+.TH "MPI_PROBE" "3" "Jan 03, 2022" "" "Open MPI"
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.sp
+\fI\%MPI_Probe\fP \- Blocking test for a message.
+.SH SYNTAX
+.SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+#include <mpi.h>
+int MPI_Probe(int source, int tag, MPI_Comm comm, MPI_Status *status)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+MPI_PROBE(SOURCE, TAG, COMM, STATUS, IERROR)
+     INTEGER SOURCE, TAG, COMM, STATUS(MPI_STATUS_SIZE), IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+USE mpi_f08
+MPI_Probe(source, tag, comm, status, ierror)
+     INTEGER, INTENT(IN) :: source, tag
+     TYPE(MPI_Comm), INTENT(IN) :: comm
+     TYPE(MPI_Status) :: status
+     INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH INPUT PARAMETERS
+.INDENT 0.0
+.IP \(bu 2
+\fBsource\fP: Source rank or MPI_ANY_SOURCE (integer).
+.IP \(bu 2
+\fBtag\fP: Tag value or MPI_ANY_TAG (integer).
+.IP \(bu 2
+\fBcomm\fP: Communicator (handle).
+.UNINDENT
+.SH OUTPUT PARAMETERS
+.INDENT 0.0
+.IP \(bu 2
+\fBstatus\fP: Status object (status).
+.IP \(bu 2
+\fBIERROR\fP: Fortran only: Error status (integer).
+.UNINDENT
+.SH DESCRIPTION
+.sp
+The \fI\%MPI_Probe\fP and MPI_Iprobe operations allow checking of incoming
+messages, without actual receipt of them. The user can then decide how
+to receive them, based on the information returned by the probe in the
+status variable. For example, the user may allocate memory for the
+receive buffer, according to the length of the probed message.
+.sp
+\fI\%MPI_Probe\fP behaves like MPI_Iprobe except that it is a blocking call that
+returns only after a matching message has been found.
+.sp
+If your application does not need to examine the \fIstatus\fP field, you can
+save resources by using the predefined constant MPI_STATUS_IGNORE as a
+special value for the \fIstatus\fP argument.
+.sp
+The semantics of \fI\%MPI_Probe\fP and MPI_Iprobe guarantee progress: If a call
+to \fI\%MPI_Probe\fP has been issued by a process, and a send that matches the
+probe has been initiated by some process, then the call to \fI\%MPI_Probe\fP
+will return, unless the message is received by another concurrent
+receive operation (that is executed by another thread at the probing
+process). Similarly, if a process busy waits with MPI_Iprobe and a
+matching message has been issued, then the call to MPI_Iprobe will
+eventually return flag = true unless the message is received by another
+concurrent receive operation.
+.sp
+\fBExample 1:\fP Use blocking probe to wait for an incoming message.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+CALL MPI_COMM_RANK(comm, rank, ierr)
+       IF (rank.EQ.0) THEN
+            CALL MPI_SEND(i, 1, MPI_INTEGER, 2, 0, comm, ierr)
+       ELSE IF(rank.EQ.1) THEN
+            CALL MPI_SEND(x, 1, MPI_REAL, 2, 0, comm, ierr)
+       ELSE   ! rank.EQ.2
+           DO i=1, 2
+              CALL MPI_PROBE(MPI_ANY_SOURCE, 0,
+                              comm, status, ierr)
+              IF (status(MPI_SOURCE) = 0) THEN
+100                CALL MPI_RECV(i, 1, MPI_INTEGER, 0, 0, status, ierr)
+              ELSE
+200                CALL MPI_RECV(x, 1, MPI_REAL, 1, 0, status, ierr)
+              END IF
+           END DO
+       END IF
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Each message is received with the right type.
+.sp
+\fBExample 2:\fP A program similar to the previous example, but with a
+problem.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+CALL MPI_COMM_RANK(comm, rank, ierr)
+       IF (rank.EQ.0) THEN
+            CALL MPI_SEND(i, 1, MPI_INTEGER, 2, 0, comm, ierr)
+       ELSE IF(rank.EQ.1) THEN
+            CALL MPI_SEND(x, 1, MPI_REAL, 2, 0, comm, ierr)
+       ELSE
+           DO i=1, 2
+              CALL MPI_PROBE(MPI_ANY_SOURCE, 0,
+                              comm, status, ierr)
+              IF (status(MPI_SOURCE) = 0) THEN
+100                CALL MPI_RECV(i, 1, MPI_INTEGER, MPI_ANY_SOURCE,
+                                 0, status, ierr)
+              ELSE
+200                CALL MPI_RECV(x, 1, MPI_REAL, MPI_ANY_SOURCE,
+                                 0, status, ierr)
+              END IF
+           END DO
+       END IF
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+We slightly modified Example 2, using MPI_ANY_SOURCE as the source
+argument in the two receive calls in statements labeled 100 and 200. The
+program is now incorrect: The receive operation may receive a message
+that is distinct from the message probed by the preceding call to
+\fI\%MPI_Probe\fP\&.
+.SH ERRORS
+.sp
+Almost all MPI routines return an error value; C routines as the value
+of the function and Fortran routines in the last argument.
+.sp
+Before the error value is returned, the current MPI error handler is
+called. By default, this error handler aborts the MPI job, except for
+I/O function errors. The error handler may be changed with
+MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN
+may be used to cause error values to be returned. Note that MPI does not
+guarantee that an MPI program can continue past an error.
+.sp
+\fBSEE ALSO:\fP
+.INDENT 0.0
+.INDENT 3.5
+.nf
+MPI_Iprobe | MPI_Cancel
+.fi
+.sp
+.UNINDENT
+.UNINDENT
+.SH COPYRIGHT
+2020, The Open MPI Community
+.\" Generated by docutils manpage writer.
+.

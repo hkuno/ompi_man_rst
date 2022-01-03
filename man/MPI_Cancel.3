@@ -1,0 +1,168 @@
+.\" Man page generated from reStructuredText.
+.
+.TH "MPI_CANCEL" "3" "Jan 03, 2022" "" "Open MPI"
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+
+.sp
+.ce
+----
+
+.ce 0
+.sp
+.sp
+\fI\%MPI_Cancel\fP \- Cancels a communication request.
+.SH SYNTAX
+.SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Cancel(MPI_Request *request)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_CANCEL(REQUEST, IERROR)
+    INTEGER REQUEST, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Cancel(request, ierror)
+    TYPE(MPI_Request), INTENT(IN) :: request
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH INPUT PARAMETER
+.INDENT 0.0
+.IP \(bu 2
+\fBrequest\fP : Communication request (handle).
+.UNINDENT
+.SH OUTPUT PARAMETER
+.INDENT 0.0
+.IP \(bu 2
+\fBIERROR\fP : Fortran only: Error status (integer).
+.UNINDENT
+.SH DESCRIPTION
+.sp
+The \fI\%MPI_Cancel\fP operation allows pending communications to be
+canceled. This is required for cleanup. Posting a send or a receive ties
+up user resources (send or receive buffers), and a cancel may be needed
+to free these resources gracefully.
+.sp
+A call to \fI\%MPI_Cancel\fP marks for cancellation a pending, nonblocking
+communication operation (send or receive). The cancel call is local. It
+returns immediately, possibly before the communication is actually
+canceled. It is still necessary to complete a communication that has
+been marked for cancellation, using a call to MPI_Request_free,\(ga\(ga
+MPI_Wait, or MPI_Test (or any of the derived operations).
+.sp
+If a communication is marked for cancellation, then an MPI_Wait call
+for that communication is guaranteed to return, irrespective of the
+activities of other processes (i.e., MPI_Wait behaves as a local
+function); similarly if MPI_Test is repeatedly called in a busy wait
+loop for a canceled communication, then MPI_Test will eventually be
+successful.
+.sp
+\fI\%MPI_Cancel\fP can be used to cancel a communication that uses a
+persistent \fBrequest\fP (see Section 3.9 in the MPI\-1 Standard,
+"Persistent Communication Requests") in the same way it is used for
+nonpersistent \fBrequest\fPs. A successful cancellation cancels the
+active communication, but not the \fBrequest\fP itself. After the call to
+\fI\%MPI_Cancel\fP and the subsequent call to MPI_Wait or MPI_Test,
+the \fBrequest\fP becomes inactive and can be activated for a new
+communication.
+.sp
+The successful cancellation of a buffered send frees the buffer space
+occupied by the pending message.
+.sp
+Either the cancellation succeeds or the communication succeeds, but not
+both. If a send is marked for cancellation, then it must be the case
+that either the send completes normally, in which case the message sent
+is received at the destination process, or that the send is successfully
+canceled, in which case no part of the message is received at the
+destination. Then, any matching receive has to be satisfied by another
+send. If a receive is marked for cancellation, then it must be the case
+that either the receive completes normally, or that the receive is
+successfully canceled, in which case no part of the receive buffer is
+altered. Then, any matching send has to be satisfied by another receive.
+.sp
+If the operation has been canceled, then information to that effect will
+be returned in the status argument of the operation that completes the
+communication.
+.SH NOTES
+.sp
+The primary expected use of \fI\%MPI_Cancel\fP is in multi\-buffering
+schemes, where speculative MPI_Irecvs are made. When the computation
+completes, some of these \fBrequest\fPs may remain; using \fI\%MPI_Cancel\fP
+allows the user to cancel these unsatisfied \fBrequest\fPs.
+.SH ERRORS
+.sp
+Almost all MPI routines return an error value; C routines as the value
+of the function and Fortran routines in the last argument. Before the
+error value is returned, the current MPI error handler is called. By
+default, this error handler aborts the MPI job, except for I/O function
+errors. The error handler may be changed with
+MPI_Comm_set_errhandler; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
+Note that MPI does not guarantee that an MPI program can continue past
+an error.
+.sp
+\fBSEE ALSO:\fP
+.INDENT 0.0
+.INDENT 3.5
+MPI_Probe MPI_Iprobe MPI_Test_cancelled MPI_Cart_coords
+.UNINDENT
+.UNINDENT
+.SH COPYRIGHT
+2020, The Open MPI Community
+.\" Generated by docutils manpage writer.
+.

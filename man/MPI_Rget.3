@@ -1,0 +1,207 @@
+.\" Man page generated from reStructuredText.
+.
+.TH "MPI_RGET" "3" "Jan 03, 2022" "" "Open MPI"
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.SH MPI_GET
+
+.sp
+.ce
+----
+
+.ce 0
+.sp
+.sp
+\fI\%MPI_Get\fP, MPI_Rget \- Copies data from the target memory to the
+origin.
+.SS Syntax
+.SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+#include <mpi.h>
+
+MPI_Get(void *origin_addr, int origin_count, MPI_Datatype
+    origin_datatype, int target_rank, MPI_Aint target_disp,
+    int target_count, MPI_Datatype target_datatype, MPI_Win win)
+
+MPI_Rget(void *origin_addr, int origin_count, MPI_Datatype
+     origin_datatype, int target_rank, MPI_Aint target_disp,
+     int target_count, MPI_Datatype target_datatype, MPI_Win win,
+         MPI_Request *request)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Fortran Syntax (See Fortran 77 Notes)
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_GET(ORIGIN_ADDR, ORIGIN_COUNT, ORIGIN_DATATYPE, TARGET_RANK,
+    TARGET_DISP, TARGET_COUNT, TARGET_DATATYPE, WIN, IERROR)
+    <type> ORIGIN_ADDR(*)
+    INTEGER(KIND=MPI_ADDRESS_KIND) TARGET_DISP
+    INTEGER ORIGIN_COUNT, ORIGIN_DATATYPE, TARGET_RANK,
+    TARGET_COUNT, TARGET_DATATYPE, WIN, IERROR
+
+MPI_RGET(ORIGIN_ADDR, ORIGIN_COUNT, ORIGIN_DATATYPE, TARGET_RANK,
+     TARGET_DISP, TARGET_COUNT, TARGET_DATATYPE, WIN, REQUEST, IERROR)
+     <type> ORIGIN_ADDR(*)
+     INTEGER(KIND=MPI_ADDRESS_KIND) TARGET_DISP
+     INTEGER ORIGIN_COUNT, ORIGIN_DATATYPE, TARGET_RANK,
+     TARGET_COUNT, TARGET_DATATYPE, WIN, REQUEST, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Get(origin_addr, origin_count, origin_datatype, target_rank,
+        target_disp, target_count, target_datatype, win, ierror)
+    TYPE(*), DIMENSION(..), ASYNCHRONOUS :: origin_addr
+    INTEGER, INTENT(IN) :: origin_count, target_rank, target_count
+    TYPE(MPI_Datatype), INTENT(IN) :: origin_datatype, target_datatype
+    INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(IN) :: target_disp
+    TYPE(MPI_Win), INTENT(IN) :: win
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
+MPI_Rget(origin_addr, origin_count, origin_datatype, target_rank,
+    target_disp, target_count, target_datatype, win, request,
+        ierror)
+    TYPE(*), DIMENSION(..), ASYNCHRONOUS :: origin_addr
+    INTEGER, INTENT(IN) :: origin_count, target_rank, target_count
+    TYPE(MPI_Datatype), INTENT(IN) :: origin_datatype, target_datatype
+    INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(IN) :: target_disp
+    TYPE(MPI_Win), INTENT(IN) :: win
+    TYPE(MPI_Request), INTENT(OUT) :: request
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Input Parameters
+.INDENT 0.0
+.IP \(bu 2
+\fBorigin_addr\fP : Initial address of origin buffer (choice).
+.IP \(bu 2
+\fBorigin_count\fP : Number of entries in origin buffer (nonnegative
+integer).
+.IP \(bu 2
+\fBorigin_datatype\fP : Data type of each entry in origin buffer
+(handle).
+.IP \(bu 2
+\fBtarget_rank\fP : Rank of target (nonnegative integer).
+.IP \(bu 2
+\fBtarget_disp\fP : Displacement from window start to the beginning of
+the target buffer (nonnegative integer).
+.IP \(bu 2
+\fBtarget_count\fP : Number of entries in target buffer (nonnegative
+integer).
+.IP \(bu 2
+\fBtarget datatype\fP : datatype of each entry in target buffer
+(handle)
+.IP \(bu 2
+\fBwin\fP : window object used for communication (handle)
+.UNINDENT
+.SS Output Parameter
+.INDENT 0.0
+.IP \(bu 2
+\fBrequest\fP : MPI_Rget: RMA request
+.IP \(bu 2
+\fBIERROR\fP : Fortran only: Error status (integer).
+.UNINDENT
+.SS Description
+.sp
+\fI\%MPI_Get\fP copies data from the target memory to the origin, similar to
+MPI_Put, except that the direction of data transfer is reversed. The
+\fBorigin_datatype\fP may not specify overlapping entries in the origin
+buffer. The target buffer must be contained within the target window,
+and the copied data must fit, without truncation, in the origin buffer.
+Only processes within the same node can access the target window.
+.sp
+MPI_Rget is similar to \fI\%MPI_Get\fP, except that it allocates a
+communication \fBrequest\fP object and associates it with the \fBrequest\fP
+handle (the argument \fBrequest\fP) that can be used to wait or test for
+completion. The completion of an MPI_Rget operation indicates that
+the data is available in the origin buffer. If \fBorigin_addr\fP points to
+memory attached to a window, then the data becomes available in the
+private copy of this window.
+.SS Fortran 77 Notes
+.sp
+The MPI standard prescribes portable Fortran syntax for the
+\fBTARGET_DISP\fP argument only for Fortran 90. FORTRAN 77 users may use
+the non\-portable syntax
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+INTEGER*MPI_ADDRESS_KIND TARGET_DISP
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+where \fBMPI_ADDRESS_KIND\fP is a constant defined in mpif.h and gives the
+length of the declared integer in bytes.
+.SS Errors
+.sp
+Almost all MPI routines return an error value; C routines as the value
+of the function and Fortran routines in the last argument.
+.sp
+Before the error value is returned, the current MPI error handler is
+called. By default, this error handler aborts the MPI job, except for
+I/O function errors. The error handler may be changed with
+MPI_Comm_set_errhandler; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
+Note that MPI does not guarantee that an MPI program can continue past
+an error.
+.sp
+\fBSEE ALSO:\fP
+.INDENT 0.0
+.INDENT 3.5
+MPI_Put
+.UNINDENT
+.UNINDENT
+.SH COPYRIGHT
+2020, The Open MPI Community
+.\" Generated by docutils manpage writer.
+.
