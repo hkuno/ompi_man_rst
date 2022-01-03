@@ -1,4 +1,4 @@
-.. _MPI_T_cvar_write:
+.. _mpi_t_cvar_write:
 
 MPI_T_cvar_write
 ~~~~~~~~~~~~~~~~
@@ -37,18 +37,18 @@ processes. For more information see MPI-3 � 14.3.6.
 ERRORS
 ======
 
-:ref:`MPI_T_cvar_write()` will fail if:
+MPI_T_cvar_write() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_HANDLE]`
+[MPI_T_ERR_INVALID_HANDLE]
    The handle is invalid
 
-[:ref:`MPI_T_ERR_CVAR_SET_NOT_NOW]`
+[MPI_T_ERR_CVAR_SET_NOT_NOW]
    Variable cannot be set at this moment
 
-[:ref:`MPI_T_ERR_CVAR_SET_NEVER]`
+[MPI_T_ERR_CVAR_SET_NEVER]
    Variable cannot be set until end of execution
 
 

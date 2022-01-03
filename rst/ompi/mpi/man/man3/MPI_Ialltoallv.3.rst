@@ -1,6 +1,8 @@
-.. _MPI_Ialltoallv:
-==============
-MPI_Ialltoallv
-==============
+.. _mpi_ialltoallv:
  
+==============
+mpi_ialltoallv
+==============
+
 .. include:: ../man3/MPI_Alltoallv.3.rst
+

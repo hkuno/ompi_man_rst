@@ -1,10 +1,10 @@
-.. _MPI_T_init_thread:
+.. _mpi_t_init_thread:
 
 MPI_T_init_thread
 ~~~~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_T_init_thread`  - Initializes the MPI Tool information interface
+:ref:`MPI_T_init_thread` - Initializes the MPI Tool information interface
 
 SYNTAX
 ======
@@ -30,25 +30,25 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_T_init_thread()`  initializes the MPI tool information interface.
+MPI_T_init_thread() initializes the MPI tool information interface.
 Calls to MPI tool functions are allowed at any point in execution
-(including before :ref:`MPI_Init()`  and after :ref:`MPI_Finalize()` ) as long
-as :ref:`MPI_T_init_thread()`  has been called at least once and the number
-of calls to :ref:`MPI_T_init_thread()`  is greater than the number of calls
-to :ref:`MPI_T_finalize()` . If at any point in execution the number of
-calls to :ref:`MPI_T_finalize()`  equals the number of calls to
-:ref:`MPI_T_init_thread()`  the MPI tool interface will no longer be
-available until another call to :ref:`MPI_T_init_thread()` .
+(including before MPI_Init() and after MPI_Finalize()) as long
+as MPI_T_init_thread() has been called at least once and the number
+of calls to MPI_T_init_thread() is greater than the number of calls
+to MPI_T_finalize(). If at any point in execution the number of
+calls to MPI_T_finalize() equals the number of calls to
+MPI_T_init_thread() the MPI tool interface will no longer be
+available until another call to MPI_T_init_thread().
 
-:ref:`MPI_T_init_thread()` , like :ref:`MPI_Init_thread()` , has a provision to
+MPI_T_init_thread(), like MPI_Init_thread(), has a provision to
 request a certain level of thread support in ``required``:
 
--  :ref:`MPI_THREAD_SINGLE` : Only one thread will execute.
--  :ref:`MPI_THREAD_FUNNELED` : If the process is multithreaded, only the
-   thread that called :ref:`MPI_Init_thread()`  will make MPI calls.
--  :ref:`MPI_THREAD_SERIALIZED` : If the process is multithreaded, only one
+-  MPI_THREAD_SINGLE: Only one thread will execute.
+-  MPI_THREAD_FUNNELED: If the process is multithreaded, only the
+   thread that called MPI_Init_thread() will make MPI calls.
+-  MPI_THREAD_SERIALIZED: If the process is multithreaded, only one
    thread will make MPI library calls at one time.
--  :ref:`MPI_THREAD_MULTIPLE` : If the process is multithreaded, multiple
+-  MPI_THREAD_MULTIPLE: If the process is multithreaded, multiple
    threads may call MPI at once with no restrictions.
 
 The level of thread support available to the program is set in
@@ -65,11 +65,11 @@ it may be less than what was requested in ``required``.
 ERRORS
 ======
 
-:ref:`MPI_T_init_thread()`  will fail if:
+MPI_T_init_thread() will fail if:
 
--  :ref:`MPI_T_ERR_MEMORY` : Out of memory
--  :ref:`MPI_T_ERR_CANNOT_INIT` : Interface not in the state to be
+-  MPI_T_ERR_MEMORY: Out of memory
+-  MPI_T_ERR_CANNOT_INIT: Interface not in the state to be
    initialized
 
 
-.. seealso:: :ref:`MPI_T`:ref:`MPI_Init_thread`:ref:`MPI_T_finalize`
+.. seealso:: :ref:`MPI_T` :ref:`MPI_Init_thread` :ref:`MPI_T_finalize` 

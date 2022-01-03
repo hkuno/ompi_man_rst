@@ -1,4 +1,4 @@
-.. _MPI_Register_datarep:
+.. _mpi_register_datarep:
 
 MPI_Register_datarep
 ~~~~~~~~~~~~~~~~~~~~
@@ -93,9 +93,9 @@ conversion functions to convert all data items accessed between file
 data representation and native representation. :ref:`MPI_Register_datarep` is a
 local operation and only registers the data representation for the
 calling MPI process. If *datarep* is already defined, an error in the
-error class :ref:`MPI_ERR_DUP_DATAREP` is raised using the default file error
+error class MPI_ERR_DUP_DATAREP is raised using the default file error
 handler. The length of a data representation string is limited to the
-value of :ref:`MPI_MAX_DATAREP_STRING`. :ref:`MPI_MAX_DATAREP_STRING` must have a
+value of MPI_MAX_DATAREP_STRING. MPI_MAX_DATAREP_STRING must have a
 value of at least 64. No routines are provided to delete data
 representations and free the associated resources; it is not expected
 that an application will generate them in significant numbers.
@@ -121,7 +121,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+MPI_ERRORS_RETURN. The error handler may be changed with
 :ref:`MPI_File_set_errhandler`; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
+MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

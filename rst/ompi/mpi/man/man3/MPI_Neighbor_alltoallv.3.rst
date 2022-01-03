@@ -1,10 +1,10 @@
-.. _MPI_Neighbor_alltoallv:
+.. _mpi_neighbor_alltoallv:
 
 MPI_Neighbor_alltoallv
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Neighbor_alltoallv`, :ref:`MPI_Ineighbor_alltoallv`,
-:ref:`MPI_Neighbor_alltoallv_init` - All processes send different amounts of
+:ref:`MPI_Neighbor_alltoallv`, MPI_Ineighbor_alltoallv,
+MPI_Neighbor_alltoallv_init - All processes send different amounts of
 data to, and receive different amounts of data from, all neighbors
 
 SYNTAX
@@ -200,18 +200,18 @@ sources and destinations in the communication routines are 2*ndims with
 ndims defined in :ref:`MPI_Cart_create`. If a neighbor does not exist, i.e., at
 the border of a Cartesian topology in the case of a non-periodic virtual
 grid dimension (i.e., periods[...]==false), then this neighbor is
-defined to be :ref:`MPI_PROC_NULL`.
+defined to be MPI_PROC_NULL.
 
-If a neighbor in any of the functions is :ref:`MPI_PROC_NULL`, then the
+If a neighbor in any of the functions is MPI_PROC_NULL, then the
 neighborhood collective communication behaves like a point-to-point
-communication with :ref:`MPI_PROC_NULL` in this direction. That is, the buffer
+communication with MPI_PROC_NULL in this direction. That is, the buffer
 is still part of the sequence of neighbors but it is neither
 communicated nor updated.
 
 NOTES
 =====
 
-The :ref:`MPI_IN_PLACE` option for *sendbuf* is not meaningful for this
+The MPI_IN_PLACE option for *sendbuf* is not meaningful for this
 operation.
 
 The specification of counts and displacements should not cause any
@@ -233,7 +233,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

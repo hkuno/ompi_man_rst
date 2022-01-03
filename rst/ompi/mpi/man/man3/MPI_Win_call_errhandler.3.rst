@@ -1,4 +1,4 @@
-.. _MPI_Win_call_errhandler:
+.. _mpi_win_call_errhandler:
 
 MPI_Win_call_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -59,13 +59,13 @@ DESCRIPTION
 This function invokes the error handler assigned to the window *win*
 with the supplied error code *errorcode*. If the error handler was
 successfully called, the process is not aborted, and the error handler
-returns, this function returns :ref:`MPI_SUCCESS`.
+returns, this function returns MPI_SUCCESS.
 
 NOTES
 =====
 
 Users should note that the default error handler is
-:ref:`MPI_ERRORS_ARE_FATAL`. Thus, calling this function will abort the window
+MPI_ERRORS_ARE_FATAL. Thus, calling this function will abort the window
 processes if the default error handler has not been changed for this
 window.
 

@@ -1,4 +1,4 @@
-.. _MPI_T_enum_get_info:
+.. _mpi_t_enum_get_info:
 
 MPI_T_enum_get_info
 ~~~~~~~~~~~~~~~~~~~
@@ -57,10 +57,10 @@ returned.
 ERRORS
 ======
 
-:ref:`MPI_T_enum_get_info()` will fail if:
+MPI_T_enum_get_info() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]`
+[MPI_T_ERR_INVALID_INDEX]
    The enumeration is invalid or has been deleted

@@ -43,4 +43,4 @@ implementation, the major and minor version returned by these calls is
 consistent with the compile-time constants defined in its shmem.h.
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_my_pe` \ (3), *:ref:`shmem_init` \ (3)
+.. seealso:: *intro_shmem\ (3), *:ref:`shmem_my_pe` \ (3), *:ref:`shmem_init` \ (3)

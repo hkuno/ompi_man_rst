@@ -1,4 +1,4 @@
-.. _MPI_Type_create_f90_integer:
+.. _mpi_type_create_f90_integer:
 
 MPI_Type_create_f90_integer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -80,7 +80,7 @@ function, will match if and only if they have identical values for *r*.
 
 The interaction between the datatypes returned by this function and the
 external32 data representation - used by :ref:`MPI_Pack_external`,
-:ref:`MPI_Unpack_external` and many :ref:`MPI_File` functions - is subtle. The
+:ref:`MPI_Unpack_external` and many MPI_File functions - is subtle. The
 external32 representation of returned datatypes is as follows.
 
 ::
@@ -118,7 +118,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

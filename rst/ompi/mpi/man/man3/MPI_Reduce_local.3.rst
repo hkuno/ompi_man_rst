@@ -1,4 +1,4 @@
-.. _MPI_Reduce_local:
+.. _mpi_reduce_local:
 
 MPI_Reduce_local
 ~~~~~~~~~~~~~~~~
@@ -67,7 +67,7 @@ DESCRIPTION
 ===========
 
 The global reduce functions (:ref:`MPI_Reduce_local`, :ref:`MPI_Op_create`,
-:ref:`MPI_Op_free`, :ref:`MPI_Allreduce`, :ref:`MPI_Reduce_local_scatter`, :ref:`MPI_Scan)` perform
+:ref:`MPI_Op_free`, :ref:`MPI_Allreduce`, MPI_Reduce_local_scatter, MPI_Scan) perform
 a global reduce operation (such as sum, max, logical AND, etc.) across
 all the members of a group. The reduction operation can be either one of
 a predefined list of operations, or a user-defined operation. The global
@@ -85,15 +85,15 @@ buffer is defined by the arguments inoutbuf, count, and datatype; both
 have the same number of elements, with the same type. The routine is a
 local call. The process can provide one element, or a sequence of
 elements, in which case the combine operation is executed element-wise
-on each entry of the sequence. For example, if the operation is :ref:`MPI_MAX`
+on each entry of the sequence. For example, if the operation is MPI_MAX
 and the input buffer contains two elements that are floating-point
-numbers (count = 2 and datatype = :ref:`MPI_FLOAT)`, then inoutbuf(1) = global
+numbers (count = 2 and datatype = MPI_FLOAT), then inoutbuf(1) = global
 max (inbuf(1)) and inoutbuf(2) = global max(inbuf(2)).
 
 USE OF IN-PLACE OPTION
 ======================
 
-The use of :ref:`MPI_IN_PLACE` is disallowed with :ref:`MPI_Reduce_local`.
+The use of MPI_IN_PLACE is disallowed with :ref:`MPI_Reduce_local`.
 
 PREDEFINED REDUCE OPERATIONS
 ============================
@@ -104,7 +104,7 @@ datatypes each operation can be applied to. In addition, users may
 define their own operations that can be overloaded to operate on several
 datatypes, either basic or derived. This is further explained in the
 description of the user-defined operations (see the man pages for
-:ref:`MPI_Op_create` and :ref:`MPI_Op_free)`.
+:ref:`MPI_Op_create` and MPI_Op_free).
 
 The operation op is always assumed to be associative. All predefined
 operations are also assumed to be commutative. Users may define
@@ -145,7 +145,7 @@ These operations are invoked by placing the following in op:
    	MPI_MAXLOC          max value and location
    	MPI_MINLOC          min value and location
 
-The two operations :ref:`MPI_MINLOC` and :ref:`MPI_MAXLOC` are discussed separately
+The two operations MPI_MINLOC and MPI_MAXLOC are discussed separately
 below (MINLOC and MAXLOC). For the other predefined operations, we
 enumerate below the allowed combinations of op and datatype arguments.
 First, define groups of MPI basic datatypes in the following way:
@@ -184,13 +184,13 @@ Now, the valid datatypes for each option is specified below.
 MINLOC AND MAXLOC
 =================
 
-The operator :ref:`MPI_MINLOC` is used to compute a global minimum and also an
-index attached to the minimum value. :ref:`MPI_MAXLOC` similarly computes a
+The operator MPI_MINLOC is used to compute a global minimum and also an
+index attached to the minimum value. MPI_MAXLOC similarly computes a
 global maximum and index. One application of these is to compute a
 global minimum (maximum) and the rank of the process containing this
 value.
 
-The operation that defines :ref:`MPI_MAXLOC` is
+The operation that defines MPI_MAXLOC is
 
 .. code-block:: c
    :linenos:
@@ -230,14 +230,14 @@ The operation that defines :ref:`MPI_MAXLOC` is
             (
             (  j           if u > v)
 
-Both operations are associative and commutative. Note that if :ref:`MPI_MAXLOC`
+Both operations are associative and commutative. Note that if MPI_MAXLOC
 is applied to reduce a sequence of pairs (u(0), 0), (u(1), 1), ...,
 (u(n-1), n-1), then the value returned is (u , r), where u= max(i) u(i)
 and r is the index of the first global maximum in the sequence. Thus, if
 each process supplies a value and its rank within the group, then a
-reduce operation with op = :ref:`MPI_MAXLOC` will return the maximum value and
-the rank of the first process with that value. Similarly, :ref:`MPI_MINLOC` can
-be used to return a minimum and its index. More generally, :ref:`MPI_MINLOC`
+reduce operation with op = MPI_MAXLOC will return the maximum value and
+the rank of the first process with that value. Similarly, MPI_MINLOC can
+be used to return a minimum and its index. More generally, MPI_MINLOC
 computes a lexicographic minimum, where elements are ordered according
 to the first component of each pair, and ties are resolved according to
 the second component.
@@ -250,10 +250,10 @@ having the MPI-provided type consist of a pair of the same type as
 value, and coercing the index to this type also. In C, the MPI-provided
 pair type has distinct types and the index is an int.
 
-In order to use :ref:`MPI_MINLOC` and :ref:`MPI_MAXLOC` in a reduce operation, one
+In order to use MPI_MINLOC and MPI_MAXLOC in a reduce operation, one
 must provide a datatype argument that represents a pair (value and
 index). MPI provides nine such predefined datatypes. The operations
-:ref:`MPI_MAXLOC` and :ref:`MPI_MINLOC` can be used with each of the following
+MPI_MAXLOC and MPI_MINLOC can be used with each of the following
 datatypes:
 
 ::
@@ -282,7 +282,7 @@ The data type MPI_2REAL is equivalent to:
 Similar statements apply for MPI_2INTEGER, MPI_2DOUBLE_PRECISION, and
 MPI_2INT.
 
-The datatype :ref:`MPI_FLOAT_INT` is as if defined by the following sequence of
+The datatype MPI_FLOAT_INT is as if defined by the following sequence of
 instructions.
 
 ::
@@ -295,19 +295,19 @@ instructions.
        block[1] = 1
        MPI_TYPE_STRUCT(2, block, disp, type, MPI_FLOAT_INT)
 
-Similar statements apply for :ref:`MPI_LONG_INT` and :ref:`MPI_DOUBLE_INT`.
+Similar statements apply for MPI_LONG_INT and MPI_DOUBLE_INT.
 
-All MPI objects (e.g., :ref:`MPI_Datatype`, :ref:`MPI_Comm)` are of type INTEGER in
+All MPI objects (e.g., MPI_Datatype, MPI_Comm) are of type INTEGER in
 Fortran.
 
 NOTES ON COLLECTIVE OPERATIONS
 ==============================
 
-The reduction operators ( :ref:`MPI_Op` ) do not return an error value. As a
+The reduction operators ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call
 :ref:`MPI_Abort` or silently skip the problem. Thus, if you change the error
-handler from :ref:`MPI_ERRORS_ARE_FATAL` to something else, for example,
-:ref:`MPI_ERRORS_RETURN` , then no error may be indicated.
+handler from MPI_ERRORS_ARE_FATAL to something else, for example,
+MPI_ERRORS_RETURN , then no error may be indicated.
 
 The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
@@ -321,7 +321,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

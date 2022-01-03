@@ -1,4 +1,4 @@
-.. _MPI_File_write_all:
+.. _mpi_file_write_all:
 
 MPI_File_write_all
 ~~~~~~~~~~~~~~~~~~
@@ -77,7 +77,7 @@ into those parts of the file specified by the current view.
 :ref:`MPI_File_write_all` stores the number of *datatype* elements actually
 written in *status.* All other fields of *status* are undefined.
 
-It is erroneous to call this function if :ref:`MPI_MODE_SEQUENTIAL` mode was
+It is erroneous to call this function if MPI_MODE_SEQUENTIAL mode was
 specified when the file was opened.
 
 ERRORS
@@ -88,7 +88,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+MPI_ERRORS_RETURN. The error handler may be changed with
 :ref:`MPI_File_set_errhandler`; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
+MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

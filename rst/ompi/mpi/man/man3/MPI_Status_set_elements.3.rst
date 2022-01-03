@@ -1,9 +1,9 @@
-.. _MPI_Status_set_elements:
+.. _mpi_status_set_elements:
 
 MPI_Status_set_elements
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Status_set_elements`, :ref:`MPI_Status_set_elements_x` - Modifies
+:ref:`MPI_Status_set_elements`, MPI_Status_set_elements_x - Modifies
 opaque part of *status* to allow :ref:`MPI_Get_elements` to return *count*.
 
 SYNTAX
@@ -73,12 +73,12 @@ DESCRIPTION
 ===========
 
 :ref:`MPI_Status_set_elements` modifies the opaque part of *status so that a
-call to :ref:`MPI_Get_elements` or :ref:`MPI_Get_elements_x` will return count.
+call to :ref:`MPI_Get_elements` or MPI_Get_elements_x will return count.
 :ref:`MPI_Get_count` will return a compatible value.*
 
-A subsequent call to :ref:`MPI_Get_count(status`, datatype, count), to
-:ref:`MPI_Get_elements(status`, datatype, count), or to
-:ref:`MPI_Get_elements_x(status`, datatype, count) must use a data-type
+A subsequent call to MPI_Get_count(status, datatype, count), to
+MPI_Get_elements(status, datatype, count), or to
+MPI_Get_elements_x(status, datatype, count) must use a data-type
 argument that has the same type signature as the data-type argument that
 was used in the call to :ref:`MPI_Status_set_elements`.*
 
@@ -104,7 +104,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
@@ -112,7 +112,7 @@ FORTRAN 77 NOTES
 ================
 
 The MPI standard prescribes portable Fortran syntax for the *COUNT
-argument of :ref:`MPI_Status_set_elements_x` only for Fortran 90. FORTRAN 77
+argument of MPI_Status_set_elements_x only for Fortran 90. FORTRAN 77
 users may use the non-portable syntax*
 
 ::

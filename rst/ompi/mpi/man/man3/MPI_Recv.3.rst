@@ -1,4 +1,4 @@
-.. _MPI_Recv:
+.. _mpi_recv:
 
 MPI_Recv
 ~~~~~~~~
@@ -85,7 +85,7 @@ located at *address_buf*. The type of each of these elements is
 specified by *datatype*.
 
 The length of the received message must be less than or equal to the
-length of the receive buffer. An :ref:`MPI_ERR_TRUNCATE` is returned upon the
+length of the receive buffer. An MPI_ERR_TRUNCATE is returned upon the
 overflow condition.
 
 If a message that is shorter than the length of the receive buffer
@@ -110,18 +110,18 @@ to the receiving process, and if its source, tag, and communicator
 (comm) values match the source, tag, and comm values specified by the
 receive operation. The receive operation may specify a wildcard value
 for source and/or tag, indicating that any source and/or tag are
-acceptable. The wildcard value for source is source = :ref:`MPI_ANY_SOURCE`.
-The wildcard value for tag is tag = :ref:`MPI_ANY_TAG`. There is no wildcard
+acceptable. The wildcard value for source is source = MPI_ANY_SOURCE.
+The wildcard value for tag is tag = MPI_ANY_TAG. There is no wildcard
 value for comm. The scope of these wildcards is limited to the proceses
 in the group of the specified communicator.
 
 The message tag is specified by the tag argument of the receive
 operation.
 
-The argument source, if different from :ref:`MPI_ANY_SOURCE`, is specified as a
+The argument source, if different from MPI_ANY_SOURCE, is specified as a
 rank within the process group associated with that same communicator
 (remote process group, for intercommunicators). Thus, the range of valid
-values for the source argument is {0,...,n-1} {:ref:`MPI_ANY_SOURCE`}, where n
+values for the source argument is {0,...,n-1} {MPI_ANY_SOURCE}, where n
 is the number of processes in this group.
 
 Note the asymmetry between send and receive operations: A receive
@@ -138,7 +138,7 @@ above, since this may lead to deadlock. See Section 3.5 of the MPI-1
 Standard, "Semantics of Point-to-Point Communication."
 
 If your application does not need to examine the *status* field, you can
-save resources by using the predefined constant :ref:`MPI_STATUS_IGNORE` as a
+save resources by using the predefined constant MPI_STATUS_IGNORE as a
 special value for the *status* argument.
 
 ERRORS
@@ -150,7 +150,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

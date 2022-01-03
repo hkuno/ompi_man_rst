@@ -1,4 +1,4 @@
-.. _MPI_Intercomm_create:
+.. _mpi_intercomm_create:
 
 MPI_Intercomm_create
 ~~~~~~~~~~~~~~~~~~~~
@@ -79,7 +79,7 @@ and with tag tag between the leaders. Thus, care must be taken that
 there be no pending communication on peer_comm that could interfere with
 this communication.
 
-If multiple :ref:`MPI_Intercomm_creates` are being made, they should use
+If multiple MPI_Intercomm_creates are being made, they should use
 different tags (more precisely, they should ensure that the local and
 remote leaders are using different tags for each MPI_intercomm_create).
 
@@ -87,7 +87,7 @@ NOTES
 =====
 
 We recommend using a dedicated peer communicator, such as a duplicate of
-:ref:`MPI_COMM_WORLD`, to avoid trouble with peer communicators.
+MPI_COMM_WORLD, to avoid trouble with peer communicators.
 
 The MPI 1.1 Standard contains two mutually exclusive comments on the
 input intracommunicators. One says that their respective groups must be
@@ -107,7 +107,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

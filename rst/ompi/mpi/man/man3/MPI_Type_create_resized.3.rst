@@ -1,4 +1,4 @@
-.. _MPI_Type_create_resized:
+.. _mpi_type_create_resized:
 
 MPI_Type_create_resized
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -85,7 +85,7 @@ non-portable syntax
    or
         INTEGER*MPI_ADDRESS_KIND EXTENT
 
-where :ref:`MPI_ADDRESS_KIND` is a constant defined in mpif.h and gives the
+where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 NOTE
@@ -103,7 +103,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

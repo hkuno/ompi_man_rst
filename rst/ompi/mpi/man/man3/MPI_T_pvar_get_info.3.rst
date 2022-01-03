@@ -1,4 +1,4 @@
-.. _MPI_T_pvar_get_info:
+.. _mpi_t_pvar_get_info:
 
 MPI_T_pvar_get_info
 ~~~~~~~~~~~~~~~~~~~
@@ -74,62 +74,62 @@ Performance variables are categorized into classes which describe their
 initial value, valid types, and behavior. The class returned in the
 *var_class* parameter may be one of the following:
 
-:ref:`MPI_T_PVAR_CLASS_STATE`
+MPI_T_PVAR_CLASS_STATE
    Variable represents a set of discrete states that may be described by
    an enumerator. Variables of this class must be represented by an
-   :ref:`MPI_INT`. The starting value is the current state of the variable.
+   MPI_INT. The starting value is the current state of the variable.
 
-:ref:`MPI_T_PVAR_CLASS_LEVEL`
+MPI_T_PVAR_CLASS_LEVEL
    Variable represents the current utilization level of a resource.
-   Variables of this class must be represented by an :ref:`MPI_UNSIGNED`,
-   :ref:`MPI_UNSIGNED_LONG`, :ref:`MPI_UNSIGNED_LONG_LONG`, or :ref:`MPI_DOUBLE`. The
+   Variables of this class must be represented by an MPI_UNSIGNED,
+   MPI_UNSIGNED_LONG, MPI_UNSIGNED_LONG_LONG, or MPI_DOUBLE. The
    starting value is the current utilization level of the resource.
 
-:ref:`MPI_T_PVAR_CLASS_SIZE`
+MPI_T_PVAR_CLASS_SIZE
    Variable represents the fixed size of a resource. Variables of this
-   class are represented by an :ref:`MPI_UNSIGNED`, :ref:`MPI_UNSIGNED_LONG`,
-   :ref:`MPI_UNSIGNED_LONG_LONG`, or :ref:`MPI_DOUBLE`. The starting value is the
+   class are represented by an MPI_UNSIGNED, MPI_UNSIGNED_LONG,
+   MPI_UNSIGNED_LONG_LONG, or MPI_DOUBLE. The starting value is the
    current size of the resource.
 
-:ref:`MPI_T_PVAR_CLASS_PERCENTAGE`
+MPI_T_PVAR_CLASS_PERCENTAGE
    Variable represents the current precentage utilization level of a
-   resource. Variables of this class are represented by an :ref:`MPI_DOUBLE`.
+   resource. Variables of this class are represented by an MPI_DOUBLE.
    The starting value is the current percentage utilization of the
    resource.
 
-:ref:`MPI_T_PVAR_CLASS_HIGHWATERMARK`
+MPI_T_PVAR_CLASS_HIGHWATERMARK
    Variable represents the high watermark of the utilization of a
-   resource. Variables of this class are represented by an :ref:`MPI_UNSIGNED`,
-   :ref:`MPI_UNSIGNED_LONG`, :ref:`MPI_UNSIGNED_LONG_LONG`, or :ref:`MPI_DOUBLE`. The
+   resource. Variables of this class are represented by an MPI_UNSIGNED,
+   MPI_UNSIGNED_LONG, MPI_UNSIGNED_LONG_LONG, or MPI_DOUBLE. The
    starting value is the current utilization of the resource.
 
-:ref:`MPI_T_PVAR_CLASS_HIGHWATERMARK`
+MPI_T_PVAR_CLASS_HIGHWATERMARK
    Variable represents the low watermark of the utilization of a
-   resource. Variables of this class are represented by an :ref:`MPI_UNSIGNED`,
-   :ref:`MPI_UNSIGNED_LONG`, :ref:`MPI_UNSIGNED_LONG_LONG`, or :ref:`MPI_DOUBLE`. The
+   resource. Variables of this class are represented by an MPI_UNSIGNED,
+   MPI_UNSIGNED_LONG, MPI_UNSIGNED_LONG_LONG, or MPI_DOUBLE. The
    starting value is the current utilization of the resource.
 
-:ref:`MPI_T_PVAR_CLASS_COUNTER`
+MPI_T_PVAR_CLASS_COUNTER
    Variable represents a count of the number of occurrences of a
    specific event. Variables of this class are represented by an
-   :ref:`MPI_UNSIGNED`, :ref:`MPI_UNSIGNED_LONG`, or :ref:`MPI_UNSIGNED_LONG_LONG`. The
+   MPI_UNSIGNED, MPI_UNSIGNED_LONG, or MPI_UNSIGNED_LONG_LONG. The
    starting value is 0.
 
-:ref:`MPI_T_PVAR_CLASS_COUNTER`
+MPI_T_PVAR_CLASS_COUNTER
    Variable represents an aggregated value that represents a sum of
    arguments processed during a specific event. Variables of this class
-   are represented by an :ref:`MPI_UNSIGNED`, :ref:`MPI_UNSIGNED_LONG`,
-   :ref:`MPI_UNSIGNED_LONG_LONG`, or :ref:`MPI_DOUBLE`. The starting value is 0.
+   are represented by an MPI_UNSIGNED, MPI_UNSIGNED_LONG,
+   MPI_UNSIGNED_LONG_LONG, or MPI_DOUBLE. The starting value is 0.
 
-:ref:`MPI_T_PVAR_CLASS_TIMER`
+MPI_T_PVAR_CLASS_TIMER
    Variable represents the aggregated time spent by the MPI
    implementation while processing an event, type of event, or section
-   of code. Variables of this class are represented by an :ref:`MPI_UNSIGNED`,
-   :ref:`MPI_UNSIGNED_LONG`, :ref:`MPI_UNSIGNED_LONG_LONG`, or :ref:`MPI_DOUBLE`. If the
-   variable is represented by an :ref:`MPI_DOUBLE` the units will be the same
-   as those used by :ref:`MPI_Wtime()`. The starting value is 0.
+   of code. Variables of this class are represented by an MPI_UNSIGNED,
+   MPI_UNSIGNED_LONG, MPI_UNSIGNED_LONG_LONG, or MPI_DOUBLE. If the
+   variable is represented by an MPI_DOUBLE the units will be the same
+   as those used by MPI_Wtime(). The starting value is 0.
 
-:ref:`MPI_T_PVAR_CLASS_GENERIC`
+MPI_T_PVAR_CLASS_GENERIC
    Variable does not fit into any other class. Can by represented by an
    type supported by the MPI tool information interface (see DATATYPE).
    Starting value is variable specific.
@@ -140,8 +140,8 @@ DATATYPE
 ========
 
 The datatype returned by :ref:`MPI_T_pvar_get_info` is restricted to one of the
-following datatypes: :ref:`MPI_INT`, :ref:`MPI_UNSIGNED`, :ref:`MPI_UNSIGNED_LONG`,
-:ref:`MPI_UNSIGNED_LONG_LONG`, :ref:`MPI_COUNT`, :ref:`MPI_CHAR`, and :ref:`MPI_DOUBLE`. For more
+following datatypes: MPI_INT, MPI_UNSIGNED, MPI_UNSIGNED_LONG,
+MPI_UNSIGNED_LONG_LONG, MPI_COUNT, MPI_CHAR, and MPI_DOUBLE. For more
 information on datatypes in the MPI Tool information interface see MPI-3
 � 14.3.5.
 
@@ -151,37 +151,37 @@ BINDING
 Performance variables may be bound to an MPI object. The binding
 returned in the *bind* parameter may be one of the following:
 
-:ref:`MPI_T_BIND_NO_OBJECT`
+MPI_T_BIND_NO_OBJECT
    No object
 
-:ref:`MPI_T_BIND_MPI_COMM`
+MPI_T_BIND_MPI_COMM
    MPI communicator
 
-:ref:`MPI_T_BIND_MPI_DATATYPE`
+MPI_T_BIND_MPI_DATATYPE
    MPI datatype
 
-:ref:`MPI_T_BIND_MPI_ERRHANDLER`
+MPI_T_BIND_MPI_ERRHANDLER
    MPI error handler
 
-:ref:`MPI_T_BIND_MPI_FILE`
+MPI_T_BIND_MPI_FILE
    MPI file handle
 
-:ref:`MPI_T_BIND_MPI_GROUP`
+MPI_T_BIND_MPI_GROUP
    MPI group
 
-:ref:`MPI_T_BIND_MPI_OP`
+MPI_T_BIND_MPI_OP
    MPI reduction operator
 
-:ref:`MPI_T_BIND_MPI_REQUEST`
+MPI_T_BIND_MPI_REQUEST
    MPI request
 
-:ref:`MPI_T_BIND_MPI_WIN`
+MPI_T_BIND_MPI_WIN
    MPI window for one-sided communication
 
-:ref:`MPI_T_BIND_MPI_MESSAGE`
+MPI_T_BIND_MPI_MESSAGE
    MPI message object
 
-:ref:`MPI_T_BIND_MPI_INFO`
+MPI_T_BIND_MPI_INFO
    MPI info object
 
 For more information see MPI-3 � 14.3.2.
@@ -202,12 +202,12 @@ ignored and the string is not returned. For more information see MPI-3 �
 ERRORS
 ======
 
-:ref:`MPI_T_pvar_get_info()` will fail if:
+MPI_T_pvar_get_info() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]`
+[MPI_T_ERR_INVALID_INDEX]
    The performance variable index is invalid
 
 

@@ -1,4 +1,4 @@
-.. _MPI_Group_rank:
+.. _mpi_group_rank:
 
 MPI_Group_rank
 ~~~~~~~~~~~~~~
@@ -58,7 +58,7 @@ DESCRIPTION
 
 :ref:`MPI_Group_rank` returns as the output parameter *rank* the rank of the
 calling process in group. If the process is not a member of group then
-:ref:`MPI_UNDEFINED` is returned.
+MPI_UNDEFINED is returned.
 
 ERRORS
 ======
@@ -69,6 +69,6 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.

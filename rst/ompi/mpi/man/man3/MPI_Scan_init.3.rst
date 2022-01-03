@@ -1,6 +1,8 @@
-.. _MPI_Scan_init:
-=============
-MPI_Scan_init
-=============
+.. _mpi_scan_init:
  
+=============
+mpi_scan_init
+=============
+
 .. include:: ../man3/MPI_Scan.3.rst
+

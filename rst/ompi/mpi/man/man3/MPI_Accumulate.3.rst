@@ -1,9 +1,9 @@
-.. _MPI_Accumulate:
+.. _mpi_accumulate:
 
 MPI_Accumulate
 ~~~~~~~~~~~~~~
 
-:ref:`MPI_Accumulate`, :ref:`MPI_Raccumulate` - Combines the contents of the
+:ref:`MPI_Accumulate`, MPI_Raccumulate - Combines the contents of the
 origin buffer with that of a target buffer.
 
 SYNTAX
@@ -121,7 +121,7 @@ except that data is combined into the target area instead of overwriting
 it.
 
 Any of the predefined operations for :ref:`MPI_Reduce` can be used.
-User-defined functions cannot be used. For example, if *op* is :ref:`MPI_SUM`,
+User-defined functions cannot be used. For example, if *op* is MPI_SUM,
 each element of the origin buffer is added to the corresponding element
 in the target, replacing the former value in the target.
 
@@ -132,14 +132,14 @@ data type. The operation *op* applies to elements of that predefined
 type. The *target_datatype* argument must not specify overlapping
 entries, and the target buffer must fit in the target window.
 
-A new predefined operation, :ref:`MPI_REPLACE`, is defined. It corresponds to
+A new predefined operation, MPI_REPLACE, is defined. It corresponds to
 the associative function f(a, b) =b; that is, the current value in the
 target memory is replaced by the value supplied by the origin.
 
-:ref:`MPI_Raccumulate` is similar to :ref:`MPI_Accumulate`, except that it
+MPI_Raccumulate is similar to :ref:`MPI_Accumulate`, except that it
 allocates a communication request object and associates it with the
 request handle (the argument *request*) that can be used to wait or test
-for completion. The completion of an :ref:`MPI_Raccumulate` operation
+for completion. The completion of an MPI_Raccumulate operation
 indicates that the *origin_addr* buffer is free to be updated. It does
 not indicate that the operation has completed at the target window.
 
@@ -154,14 +154,14 @@ non-portable syntax
 
         INTEGER*MPI_ADDRESS_KIND TARGET_DISP
 
-where :ref:`MPI_ADDRESS_KIND` is a constant defined in mpif.h and gives the
+where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 NOTES
 =====
 
 :ref:`MPI_Put` is a special case of :ref:`MPI_Accumulate`, with the operation
-:ref:`MPI_REPLACE`. Note, however, that :ref:`MPI_Put` and :ref:`MPI_Accumulate` have
+MPI_REPLACE. Note, however, that :ref:`MPI_Put` and :ref:`MPI_Accumulate` have
 different constraints on concurrent updates.
 
 It is the user's responsibility to guarantee that, when using the
@@ -178,7 +178,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

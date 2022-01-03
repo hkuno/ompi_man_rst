@@ -1,9 +1,9 @@
-.. _MPI_Allgatherv:
+.. _mpi_allgatherv:
 
 MPI_Allgatherv
 ~~~~~~~~~~~~~~
 
-:ref:`MPI_Allgatherv`, :ref:`MPI_Iallgatherv`, :ref:`MPI_Allgatherv_init` - Gathers data
+:ref:`MPI_Allgatherv`, MPI_Iallgatherv, MPI_Allgatherv_init - Gathers data
 from all processes and delivers it to all. Each process may contribute a
 different amount of data.
 
@@ -152,7 +152,7 @@ USE OF IN-PLACE OPTION
 
 When the communicator is an intracommunicator, you can perform an
 all-gather operation in-place (the output buffer is used as the input
-buffer). Use the variable :ref:`MPI_IN_PLACE` as the value of *sendbuf*. In
+buffer). Use the variable MPI_IN_PLACE as the value of *sendbuf*. In
 this case, *sendcount* and *sendtype* are ignored. The input data of
 each process is assumed to be in the area where that process would
 receive its own contribution to the receive buffer. Specifically, the
@@ -166,8 +166,8 @@ identical to the case in which all processes executed *n* calls to
 
    for root =0, ... , n-1.
 
-Note that :ref:`MPI_IN_PLACE` is a special kind of value; it has the same
-restrictions on its use as :ref:`MPI_BOTTOM`.
+Note that MPI_IN_PLACE is a special kind of value; it has the same
+restrictions on its use as MPI_BOTTOM.
 
 Because the in-place option converts the receive buffer into a
 send-and-receive buffer, a Fortran binding that includes INTENT must
@@ -194,7 +194,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -1,9 +1,9 @@
-.. _MPI_Scatter:
+.. _mpi_scatter:
 
 MPI_Scatter
 ~~~~~~~~~~~
 
-:ref:`MPI_Scatter`, :ref:`MPI_Iscatter`, :ref:`MPI_Scatter_init` - Sends data from one
+:ref:`MPI_Scatter`, MPI_Iscatter, MPI_Scatter_init - Sends data from one
 task to all tasks in a group.
 
 SYNTAX
@@ -138,7 +138,7 @@ and each process executed a receive,
        MPI_Recv(recvbuf, recvcount, recvtype, i, ...).
 
 An alternative description is that the root sends a message with
-:ref:`MPI_Send(sendbuf`, *sendcount* \* *n*, *sendtype*, ...). This message
+MPI_Send(sendbuf, *sendcount* \* *n*, *sendtype*, ...). This message
 is split into *n* equal segments, the ith segment is sent to the ith
 process in the group, and each process receives this message as above.
 
@@ -183,12 +183,12 @@ USE OF IN-PLACE OPTION
 
 When the communicator is an intracommunicator, you can perform a scatter
 operation in-place (the output buffer is used as the input buffer). Use
-the variable :ref:`MPI_IN_PLACE` as the value of the root process *recvbuf*. In
+the variable MPI_IN_PLACE as the value of the root process *recvbuf*. In
 this case, *recvcount* and *recvtype* are ignored, and the root process
 sends no data to itself.
 
-Note that :ref:`MPI_IN_PLACE` is a special kind of value; it has the same
-restrictions on its use as :ref:`MPI_BOTTOM`.
+Note that MPI_IN_PLACE is a special kind of value; it has the same
+restrictions on its use as MPI_BOTTOM.
 
 Because the in-place option converts the receive buffer into a
 send-and-receive buffer, a Fortran binding that includes INTENT must
@@ -199,8 +199,8 @@ WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
 
 When the communicator is an inter-communicator, the root process in the
 first group sends data to all processes in the second group. The first
-group defines the root process. That process uses :ref:`MPI_ROOT` as the value
-of its *root* argument. The remaining processes use :ref:`MPI_PROC_NULL` as the
+group defines the root process. That process uses MPI_ROOT as the value
+of its *root* argument. The remaining processes use MPI_PROC_NULL as the
 value of their *root* argument. All processes in the second group use
 the rank of that root process in the first group as the value of their
 *root* argument. The receive buffer argument of the root process in the
@@ -216,7 +216,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

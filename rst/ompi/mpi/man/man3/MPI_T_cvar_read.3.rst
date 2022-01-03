@@ -1,4 +1,4 @@
-.. _MPI_T_cvar_read:
+.. _mpi_t_cvar_read:
 
 MPI_T_cvar_read
 ~~~~~~~~~~~~~~~
@@ -36,12 +36,12 @@ variable.
 ERRORS
 ======
 
-:ref:`MPI_T_cvar_read()` will fail if:
+MPI_T_cvar_read() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_HANDLE]`
+[MPI_T_ERR_INVALID_HANDLE]
    The handle is invalid
 
 

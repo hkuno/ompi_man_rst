@@ -1,6 +1,8 @@
-.. _MPI_Ineighbor_allgatherv:
-========================
-MPI_Ineighbor_allgatherv
-========================
+.. _mpi_ineighbor_allgatherv:
  
+========================
+mpi_ineighbor_allgatherv
+========================
+
 .. include:: ../man3/MPI_Neighbor_allgatherv.3.rst
+

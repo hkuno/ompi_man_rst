@@ -1,4 +1,4 @@
-.. _MPI_Precv_init:
+.. _mpi_precv_init:
 
 MPI_Precv_init
 ~~~~~~~~~~~~~~
@@ -78,7 +78,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
@@ -87,7 +87,7 @@ NOTE
 
 The current implementation is an early prototype and is not fully
 compliant with the MPI-4.0 specification. Specifically this function and
-it's counterpart (:ref:`MPI_Psend_init)` will block until the partitioned
+it's counterpart (MPI_Psend_init) will block until the partitioned
 communication request is initialized on both ends. This behavior will be
 corrected in future versions.
 

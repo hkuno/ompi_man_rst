@@ -1,9 +1,9 @@
-.. _MPI_Scan:
+.. _mpi_scan:
 
 MPI_Scan
 ~~~~~~~~
 
-:ref:`MPI_Scan`, :ref:`MPI_Iscan`, :ref:`MPI_Scan_init` - Computes an inclusive scan
+:ref:`MPI_Scan`, MPI_Iscan, MPI_Scan_init - Computes an inclusive scan
 (partial reduction)
 
 SYNTAX
@@ -218,18 +218,18 @@ USE OF IN-PLACE OPTION
 
 When the communicator is an intracommunicator, you can perform a
 scanning operation in place (the output buffer is used as the input
-buffer). Use the variable :ref:`MPI_IN_PLACE` as the value of the *sendbuf*
+buffer). Use the variable MPI_IN_PLACE as the value of the *sendbuf*
 argument. The input data is taken from the receive buffer and replaced
 by the output data.
 
 NOTES ON COLLECTIVE OPERATIONS
 ==============================
 
-The reduction functions of type :ref:`MPI_Op` do not return an error value. As
+The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either
 call :ref:`MPI_Abort` or silently skip the problem. Thus, if the error handler
-is changed from :ref:`MPI_ERRORS_ARE_FATAL` to something else (e.g.,
-:ref:`MPI_ERRORS_RETURN)`, then no error may be indicated.
+is changed from MPI_ERRORS_ARE_FATAL to something else (e.g.,
+MPI_ERRORS_RETURN), then no error may be indicated.
 
 The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
@@ -243,7 +243,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

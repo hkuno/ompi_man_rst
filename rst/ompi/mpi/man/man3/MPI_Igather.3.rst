@@ -1,6 +1,8 @@
-.. _MPI_Igather:
-===========
-MPI_Igather
-===========
+.. _mpi_igather:
  
+===========
+mpi_igather
+===========
+
 .. include:: ../man3/MPI_Gather.3.rst
+

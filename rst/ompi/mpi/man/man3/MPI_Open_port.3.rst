@@ -1,4 +1,4 @@
-.. _MPI_Open_port:
+.. _mpi_open_port:
 
 MPI_Open_port
 ~~~~~~~~~~~~~
@@ -64,7 +64,7 @@ clients. *port_name* is supplied by the system.
 MPI copies a system-supplied port name into *port_name*. *port_name*
 identifies the newly opened port and can be used by a client to contact
 the server. The maximum size string that may be supplied by the system
-is :ref:`MPI_MAX_PORT_NAME`.
+is MPI_MAX_PORT_NAME.
 
 SUPPORTED INFO KEYS
 ===================
@@ -80,7 +80,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

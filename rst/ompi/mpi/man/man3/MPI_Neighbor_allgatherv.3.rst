@@ -1,10 +1,10 @@
-.. _MPI_Neighbor_allgatherv:
+.. _mpi_neighbor_allgatherv:
 
 MPI_Neighbor_allgatherv
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Neighbor_allgatherv`, :ref:`MPI_Ineighbor_allgatherv`,
-:ref:`MPI_Neighbor_allgatherv_init` - Gathers and distributes data from and
+:ref:`MPI_Neighbor_allgatherv`, MPI_Ineighbor_allgatherv,
+MPI_Neighbor_allgatherv_init - Gathers and distributes data from and
 to all neighbors. Each process may contribute a different amount of
 data.
 
@@ -159,18 +159,18 @@ sources and destinations in the communication routines are 2*ndims with
 ndims defined in :ref:`MPI_Cart_create`. If a neighbor does not exist, i.e., at
 the border of a Cartesian topology in the case of a non-periodic virtual
 grid dimension (i.e., periods[...]==false), then this neighbor is
-defined to be :ref:`MPI_PROC_NULL`.
+defined to be MPI_PROC_NULL.
 
-If a neighbor in any of the functions is :ref:`MPI_PROC_NULL`, then the
+If a neighbor in any of the functions is MPI_PROC_NULL, then the
 neighborhood collective communication behaves like a point-to-point
-communication with :ref:`MPI_PROC_NULL` in this direction. That is, the buffer
+communication with MPI_PROC_NULL in this direction. That is, the buffer
 is still part of the sequence of neighbors but it is neither
 communicated nor updated.
 
 NOTES
 =====
 
-The :ref:`MPI_IN_PLACE` option for *sendbuf* is not meaningful for this
+The MPI_IN_PLACE option for *sendbuf* is not meaningful for this
 operation.
 
 ERRORS
@@ -182,7 +182,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

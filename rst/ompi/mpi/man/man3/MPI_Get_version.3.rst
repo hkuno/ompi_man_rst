@@ -1,10 +1,10 @@
-.. _MPI_Get_version:
+.. _mpi_get_version:
 
 MPI_Get_version
 ~~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Get_version`  - Returns the version of the standard corresponding
+:ref:`MPI_Get_version` - Returns the version of the standard corresponding
 to the current implementation.
 
 Syntax
@@ -59,8 +59,8 @@ Since Open MPI is MPI 3.1 compliant, this function will return a
 Note
 ====
 
-:ref:`MPI_Get_version`  is one of the few functions that can be called
-before :ref:`MPI_Init`  and after :ref:`MPI_Finalize` .
+:ref:`MPI_Get_version` is one of the few functions that can be called
+before :ref:`MPI_Init` and after :ref:`MPI_Finalize`.
 
 Errors
 ======
@@ -71,7 +71,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error.

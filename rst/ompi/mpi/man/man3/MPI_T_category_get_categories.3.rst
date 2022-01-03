@@ -1,4 +1,4 @@
-.. _MPI_T_category_get_categories:
+.. _mpi_t_category_get_categories:
 
 MPI_T_category_get_categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,10 +39,10 @@ categories are in a category.
 ERRORS
 ======
 
-:ref:`MPI_T_category_get_categories()` will fail if:
+MPI_T_category_get_categories() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]`
+[MPI_T_ERR_INVALID_INDEX]
    The category index is invalid

@@ -1,4 +1,4 @@
-.. _MPI_Op_free:
+.. _mpi_op_free:
 
 MPI_Op_free
 ~~~~~~~~~~~
@@ -53,7 +53,7 @@ DESCRIPTION
 ===========
 
 Marks a user-defined reduction operation for deallocation and sets *op*
-to :ref:`MPI_OP_NULL`.
+to MPI_OP_NULL.
 
 ERRORS
 ======
@@ -64,7 +64,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -1,4 +1,4 @@
-.. _MPI_File_get_byte_offset:
+.. _mpi_file_get_byte_offset:
 
 MPI_File_get_byte_offset
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -80,7 +80,7 @@ non-portable syntax
    or
         INTEGER*MPI_OFFSET_KIND DISP
 
-where :ref:`MPI_OFFSET_KIND` is a constant defined in mpif.h and gives the
+where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
@@ -91,7 +91,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+MPI_ERRORS_RETURN. The error handler may be changed with
 :ref:`MPI_File_set_errhandler`; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
+MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

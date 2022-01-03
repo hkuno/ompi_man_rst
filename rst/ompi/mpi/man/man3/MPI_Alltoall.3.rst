@@ -1,9 +1,9 @@
-.. _MPI_Alltoall:
+.. _mpi_alltoall:
 
 MPI_Alltoall
 ~~~~~~~~~~~~
 
-:ref:`MPI_Alltoall`, :ref:`MPI_Ialltoall`, :ref:`MPI_Alltoall_init` - All processes send
+:ref:`MPI_Alltoall`, MPI_Ialltoall, MPI_Alltoall_init - All processes send
 data to all processes
 
 SYNTAX
@@ -160,9 +160,9 @@ the data is gathered from all the members of the second group and
 received by all the members of the first. The operation exhibits a
 symmetric, full-duplex behavior.
 
-The first group defines the root process. The root process uses :ref:`MPI_ROOT`
+The first group defines the root process. The root process uses MPI_ROOT
 as the value of *root*. All other processes in the first group use
-:ref:`MPI_PROC_NULL` as the value of *root*. All processes in the second group
+MPI_PROC_NULL as the value of *root*. All processes in the second group
 use the rank of the root process in the first group as the value of
 *root*.
 
@@ -174,7 +174,7 @@ USE OF IN-PLACE OPTION
 
 When the communicator is an intracommunicator, you can perform an
 all-to-all operation in-place (the output buffer is used as the input
-buffer). Use the variable :ref:`MPI_IN_PLACE` as the value of *sendbuf*. In
+buffer). Use the variable MPI_IN_PLACE as the value of *sendbuf*. In
 this case, *sendcount* and *sendtype* are ignored. The input data of
 each process is assumed to be in the area where that process would
 receive its own contribution to the receive buffer.
@@ -200,7 +200,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

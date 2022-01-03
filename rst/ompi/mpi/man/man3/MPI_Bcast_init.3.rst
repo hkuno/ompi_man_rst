@@ -1,6 +1,8 @@
-.. _MPI_Bcast_init:
-==============
-MPI_Bcast_init
-==============
+.. _mpi_bcast_init:
  
+==============
+mpi_bcast_init
+==============
+
 .. include:: ../man3/MPI_Bcast.3.rst
+

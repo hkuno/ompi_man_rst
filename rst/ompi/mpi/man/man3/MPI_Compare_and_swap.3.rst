@@ -1,4 +1,4 @@
-.. _MPI_Compare_and_swap:
+.. _mpi_compare_and_swap:
 
 MPI_Compare_and_swap
 ~~~~~~~~~~~~~~~~~~~~
@@ -99,7 +99,7 @@ non-portable syntax
 
         INTEGER*MPI_ADDRESS_KIND TARGET_DISP
 
-where :ref:`MPI_ADDRESS_KIND` is a constant defined in mpif.h and gives the
+where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 NOTES
@@ -120,6 +120,6 @@ Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
 :ref:`MPI_Comm_set_errhandler`; the predefined error handler
-:ref:`MPI_ERRORS_RETURN` may be used to cause error values to be returned. Note
+MPI_ERRORS_RETURN may be used to cause error values to be returned. Note
 that MPI does not guarantee that an MPI program can continue past an
 error.

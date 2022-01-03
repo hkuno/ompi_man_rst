@@ -1,4 +1,4 @@
-.. _MPI_Pack_external:
+.. _mpi_pack_external:
 
 MPI_Pack_external
 ~~~~~~~~~~~~~~~~~
@@ -152,12 +152,12 @@ unit now contains the equivalent information that would have been stored
 in a message by one send call with a send buffer that is the
 "concatenation" of the individual send buffers.
 
-A packing unit can be sent using type :ref:`MPI_BYTE`. Any point-to-point or
+A packing unit can be sent using type MPI_BYTE. Any point-to-point or
 collective communication function can be used to move the sequence of
 bytes that forms the packing unit from one process to another. This
 packing unit can now be received using any receive operation, with any
 datatype. (The type-matching rules are relaxed for messages sent with
-type :ref:`MPI_BYTE`.)
+type MPI_BYTE.)
 
 A packing unit can be unpacked into several successive messages. This is
 effected by several successive related calls to :ref:`MPI_Unpack_external`,
@@ -182,7 +182,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

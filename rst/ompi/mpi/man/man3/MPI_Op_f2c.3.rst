@@ -1,6 +1,8 @@
-.. _MPI_Op_f2c:
-==========
-MPI_Op_f2c
-==========
+.. _mpi_op_f2c:
  
+==========
+mpi_op_f2c
+==========
+
 .. include:: ../man3/MPI_Comm_f2c.3.rst
+

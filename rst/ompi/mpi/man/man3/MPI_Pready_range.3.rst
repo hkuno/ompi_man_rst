@@ -1,4 +1,4 @@
-.. _MPI_Pready_range:
+.. _mpi_pready_range:
 
 MPI_Pready_range
 ~~~~~~~~~~~~~~~~
@@ -64,9 +64,9 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Pready,`  :ref:`MPI_Pready_list,`  :ref:`MPI_Parrived` 
+.. seealso:: | MPI_Pready, MPI_Pready_list, :ref:`MPI_Parrived` 

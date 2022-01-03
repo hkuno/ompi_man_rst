@@ -1,4 +1,4 @@
-.. _MPI_T_category_get_num:
+.. _mpi_t_category_get_num:
 
 MPI_T_category_get_num
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -31,7 +31,7 @@ categories.
 ERRORS
 ======
 
-:ref:`MPI_T_category_get_num()` will fail if:
+MPI_T_category_get_num() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized

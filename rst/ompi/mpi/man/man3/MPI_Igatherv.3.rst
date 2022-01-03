@@ -1,6 +1,8 @@
-.. _MPI_Igatherv:
-============
-MPI_Igatherv
-============
+.. _mpi_igatherv:
  
+============
+mpi_igatherv
+============
+
 .. include:: ../man3/MPI_Gatherv.3.rst
+

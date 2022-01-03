@@ -1,4 +1,4 @@
-.. _MPI_Win_start:
+.. _mpi_win_start:
 
 MPI_Win_start
 ~~~~~~~~~~~~~
@@ -70,7 +70,7 @@ the call that may be used for various optimizations. (See Section 6.4.4
 of the MPI-2 Standard.) A value of *assert* = 0 is always valid. The
 following assertion value is supported:
 
-:ref:`MPI_MODE_NOCHECK`
+MPI_MODE_NOCHECK
    When this value is passed in to this call, the library assumes that
    the post call on the target has been called and it is not necessary
    for the library to check to see if such a call has been made.
@@ -84,7 +84,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Win_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Win_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

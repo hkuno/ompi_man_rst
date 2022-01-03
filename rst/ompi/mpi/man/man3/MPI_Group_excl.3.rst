@@ -1,10 +1,10 @@
-.. _MPI_Group_excl:
+.. _mpi_group_excl:
 
 MPI_Group_excl
 ~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Group_excl`  - Produces a group by reordering an existing group
+:ref:`MPI_Group_excl` - Produces a group by reordering an existing group
 and taking only unlisted members.
 
 Syntax
@@ -62,7 +62,7 @@ Output Parameters
 Description
 ===========
 
-The function :ref:`MPI_Group_excl`  creates a ``group`` of processes
+The function :ref:`MPI_Group_excl` creates a ``group`` of processes
 ``newgroup`` that is obtained by deleting from ``group`` those processes
 with ranks ``ranks[0]``, ... ``ranks[n-1]``. The ordering of processes
 in ``newgroup`` is identical to the ordering in ``group``. Each of the n
@@ -86,10 +86,10 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Group_range_excl`:ref:`MPI_Group_free`
+.. seealso:: :ref:`MPI_Group_range_excl` :ref:`MPI_Group_free` 

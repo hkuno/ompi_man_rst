@@ -1,4 +1,4 @@
-.. _MPI_Win_create:
+.. _mpi_win_create:
 
 MPI_Win_create
 ~~~~~~~~~~~~~~
@@ -93,7 +93,7 @@ The following info keys are supported:
 no_locks
    If set to *true*, then the implementation may assume that the local
    window is never locked (by a call to :ref:`MPI_Win_lock` or
-   :ref:`MPI_Win_lock_all)`. Setting this value if only active synchronization
+   MPI_Win_lock_all). Setting this value if only active synchronization
    may allow the implementation to enable certain optimizations.
 
 accumulate_ordering
@@ -111,7 +111,7 @@ accumulate_ops
    concurrent accumulate calls to the same target address will use the
    same operation. If set to *same_op_no_op*, then the implementation
    will assume that all concurrent accumulate calls to the same target
-   address will use the same operation or :ref:`MPI_NO_OP`. The default is
+   address will use the same operation or MPI_NO_OP. The default is
    *same_op_no_op*.
 
 same_size
@@ -148,7 +148,7 @@ syntax
 
         INTEGER*MPI_ADDRESS_KIND SIZE
 
-where :ref:`MPI_ADDRESS_KIND` is a constant defined in mpif.h and gives the
+where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
@@ -160,7 +160,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

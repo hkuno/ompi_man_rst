@@ -1,4 +1,4 @@
-.. _MPI_T_pvar_readreset:
+.. _mpi_t_pvar_readreset:
 
 MPI_T_pvar_readreset
 ~~~~~~~~~~~~~~~~~~~~
@@ -41,21 +41,21 @@ of the performance variable.
 ERRORS
 ======
 
-:ref:`MPI_T_pvar_readreset()` will fail if:
+MPI_T_pvar_readreset() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_HANDLE]`
+[MPI_T_ERR_INVALID_HANDLE]
    The handle is invalid or not associated with the session
 
-[:ref:`MPI_T_ERR_INVALID_SESSION]`
+[MPI_T_ERR_INVALID_SESSION]
    Session argument is not a valid session
 
-[:ref:`MPI_T_ERR_PVAR_NO_ATOMIC]`
+[MPI_T_ERR_PVAR_NO_ATOMIC]
    Variable cannot be read and written atomically
 
-[:ref:`MPI_T_ERR_PVAR_NO_WRITE]`
+[MPI_T_ERR_PVAR_NO_WRITE]
    Variable cannot be reset
 
 

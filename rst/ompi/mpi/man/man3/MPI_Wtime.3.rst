@@ -1,4 +1,4 @@
-.. _MPI_Wtime:
+.. _mpi_wtime:
 
 MPI_Wtime
 ~~~~~~~~~
@@ -71,7 +71,7 @@ requirement that different nodes return the "same" time.
 NOTES
 =====
 
-The boolean variable :ref:`MPI_WTIME_IS_GLOBAL`, a predefined attribute key
+The boolean variable MPI_WTIME_IS_GLOBAL, a predefined attribute key
 that indicates whether clocks are synchronized, does not have a valid
 value in Open MPI, as the clocks are not guaranteed to be synchronized.
 

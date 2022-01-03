@@ -1,15 +1,15 @@
-.. _MPI_Info_env:
+.. _mpi_info_env:
 
 MPI_Info_env
 ~~~~~~~~~~~~
 
-:ref:`MPI_INFO_ENV` - Static :ref:`MPI_Info` object containing info about the
+:ref:`MPI_INFO_ENV` - Static MPI_Info object containing info about the
 application
 
 DESCRIPTION
 ===========
 
-The MPI-3 standard established a static :ref:`MPI_Info` object named
+The MPI-3 standard established a static MPI_Info object named
 :ref:`MPI_INFO_ENV` that can be used to access information about how the
 application was executed from the run-time.
 
@@ -82,7 +82,7 @@ ompi_positioned_file_dir
 ERRORS
 ======
 
-| When calling :ref:`MPI_INFO_GET(3)`, the *flag* parameter will be set to zero
+| When calling :ref:`MPI_INFO_GET`, the *flag* parameter will be set to zero
   (false) if a value for the field has not been set.
 
 

@@ -43,4 +43,4 @@ the call to shmem_finalize returns, but they will no longer have access
 to any resources that have been released.
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_my_pe` \ (3), *:ref:`shmem_init` \ (3)
+.. seealso:: *intro_shmem\ (3), *:ref:`shmem_my_pe` \ (3), *:ref:`shmem_init` \ (3)

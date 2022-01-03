@@ -1,10 +1,10 @@
-.. _MPI_Neighbor_alltoallw:
+.. _mpi_neighbor_alltoallw:
 
 MPI_Neighbor_alltoallw
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Neighbor_alltoallw`, :ref:`MPI_Ineighbor_alltoallw`,
-:ref:`MPI_Neighbor_alltoallw_init` - All processes send data of different
+:ref:`MPI_Neighbor_alltoallw`, MPI_Ineighbor_alltoallw,
+MPI_Neighbor_alltoallw_init - All processes send data of different
 types to, and receive data of different types from, all processes
 
 SYNTAX
@@ -199,7 +199,7 @@ communicator.
 NOTES
 =====
 
-The :ref:`MPI_IN_PLACE` option for *sendbuf* is not meaningful for this
+The MPI_IN_PLACE option for *sendbuf* is not meaningful for this
 operation
 
 The specification of counts, types, and displacements should not cause
@@ -221,7 +221,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

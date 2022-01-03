@@ -36,4 +36,4 @@ between 0 and npes - 1, where npes is the total number of PEs executing
 the current program.
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_n_pes` \ (3), *:ref:`shmem_init` \ (3)
+.. seealso:: *intro_shmem\ (3), *:ref:`shmem_n_pes` \ (3), *:ref:`shmem_init` \ (3)

@@ -1,6 +1,8 @@
-.. _MPI_Win_detach:
-==============
-MPI_Win_detach
-==============
+.. _mpi_win_detach:
  
+==============
+mpi_win_detach
+==============
+
 .. include:: ../man3/MPI_Win_attach.3.rst
+

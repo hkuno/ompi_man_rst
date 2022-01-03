@@ -96,4 +96,4 @@ space (which may have moved); otherwise, it returns a null pointer (with
 malloc_error set).
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_my_pe` \ (3I), *:ref:`shmem_init` \ (3)
+.. seealso:: *intro_shmem\ (3), *:ref:`shmem_my_pe` \ (3I), *:ref:`shmem_init` \ (3)

@@ -1,4 +1,4 @@
-.. _MPI_Pcontrol:
+.. _mpi_pcontrol:
 
 MPI_Pcontrol
 ~~~~~~~~~~~~

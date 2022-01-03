@@ -1,4 +1,4 @@
-.. _MPI_File_delete:
+.. _mpi_file_delete:
 
 MPI_File_delete
 ~~~~~~~~~~~~~~~
@@ -61,7 +61,7 @@ DESCRIPTION
 provided it is not currently open by any process. It is an error to
 delete the file with :ref:`MPI_File_delete` if some process has it open, but
 :ref:`MPI_File_delete` does not check this. If the file does not exist,
-:ref:`MPI_File_delete` returns an error in the class :ref:`MPI_ERR_NO_SUCH_FILE`.
+:ref:`MPI_File_delete` returns an error in the class MPI_ERR_NO_SUCH_FILE.
 
 ERRORS
 ======
@@ -71,7 +71,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+MPI_ERRORS_RETURN. The error handler may be changed with
 :ref:`MPI_File_set_errhandler`; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
+MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

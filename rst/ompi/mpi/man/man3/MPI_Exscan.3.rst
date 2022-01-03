@@ -1,9 +1,9 @@
-.. _MPI_Exscan:
+.. _mpi_exscan:
 
 MPI_Exscan
 ~~~~~~~~~~
 
-:ref:`MPI_Exscan`, :ref:`MPI_Iexscan` - Computes an exclusive scan (partial
+:ref:`MPI_Exscan`, MPI_Iexscan - Computes an exclusive scan (partial
 reduction)
 
 SYNTAX
@@ -126,11 +126,11 @@ USE OF IN-PLACE OPTION
 ======================
 
 The \`in place' option for intracommunicators is specified by passing
-:ref:`MPI_IN_PLACE` in the *sendbuf* argument. In this case, the input data is
+MPI_IN_PLACE in the *sendbuf* argument. In this case, the input data is
 taken from the receive buffer, and replaced by the output data.
 
-Note that :ref:`MPI_IN_PLACE` is a special kind of value; it has the same
-restrictions on its use as :ref:`MPI_BOTTOM`.
+Note that MPI_IN_PLACE is a special kind of value; it has the same
+restrictions on its use as MPI_BOTTOM.
 
 Because the in-place option converts the receive buffer into a
 send-and-receive buffer, a Fortran binding that includes INTENT must
@@ -155,11 +155,11 @@ operations.
 NOTES ON COLLECTIVE OPERATIONS
 ==============================
 
-The reduction functions of type :ref:`MPI_Op` do not return an error value. As
+The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either
 call :ref:`MPI_Abort` or silently skip the problem. Thus, if the error handler
-is changed from :ref:`MPI_ERRORS_ARE_FATAL` to something else (e.g.,
-:ref:`MPI_ERRORS_RETURN)`, then no error may be indicated.
+is changed from MPI_ERRORS_ARE_FATAL to something else (e.g.,
+MPI_ERRORS_RETURN), then no error may be indicated.
 
 The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
@@ -173,7 +173,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

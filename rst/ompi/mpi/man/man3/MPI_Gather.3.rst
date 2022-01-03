@@ -1,11 +1,11 @@
-.. _MPI_Gather:
+.. _mpi_gather:
 
 MPI_Gather
 ~~~~~~~~~~
 ====
 
-:ref:`MPI_Gather` , :ref:`MPI_Igather`  - Gathers values from a group of
-processes.
+:ref:`MPI_Gather`, MPI_Igather, MPI_Gather_init - Gathers values
+from a group of processes.
 
 Synopsis
 ========
@@ -24,6 +24,10 @@ C Syntax
    int MPI_Igather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
        void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
        MPI_Comm comm, MPI_Request *request)
+
+   int MPI_Gather_init(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+       void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
+       MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
 --------------
@@ -44,6 +48,12 @@ Fortran Syntax
        <type>  SENDBUF(*), RECVBUF(*)
        INTEGER SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE, ROOT
        INTEGER COMM, REQUEST, IERROR
+
+   MPI_GATHER_INIT(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF, RECVCOUNT,
+           RECVTYPE, ROOT, COMM, INFO, REQUEST, IERROR)
+       <type>  SENDBUF(*), RECVBUF(*)
+       INTEGER SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE, ROOT
+       INTEGER COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 -------------------
@@ -71,6 +81,17 @@ Fortran 2008 Syntax
        TYPE(MPI_Request), INTENT(OUT) :: request
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+   MPI_Gather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype,
+           root, comm, info, request, ierror)
+       TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+       TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+       INTEGER, INTENT(IN) :: sendcount, recvcount, root
+       TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       TYPE(MPI_Info), INTENT(IN) :: info
+       TYPE(MPI_Request), INTENT(OUT) :: request
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 Input Parameters
 ================
 
@@ -83,6 +104,7 @@ Input Parameters
    only at root).
 -  ``root`` : Rank of receiving process (integer).
 -  ``comm`` : Communicator (handle).
+-  ``info`` : Info (handle, persistent only).
 
 Output Parameters
 =================
@@ -193,12 +215,12 @@ Use Of In-Place Option
 
 When the communicator is an intracommunicator, you can perform a gather
 operation in-place (the output buffer is used as the input buffer). Use
-the variable :ref:`MPI_IN_PLACE`  as the value of the root process
+the variable MPI_IN_PLACE as the value of the root process
 ``sendbuf``. In this case, ``sendcount`` and ``sendtype`` are ignored,
 and the contribution of the root process to the gathered vector is
 assumed to already be in the correct place in the receive buffer. Note
-that :ref:`MPI_IN_PLACE`  is a special kind of value; it has the same
-restrictions on its use as :ref:`MPI_BOTTOM` . Because the in-place option
+that MPI_IN_PLACE is a special kind of value; it has the same
+restrictions on its use as MPI_BOTTOM. Because the in-place option
 converts the receive buffer into a send-and-receive buffer, a Fortran
 binding that includes ``INTENT`` must mark these as ``INOUT``, not
 ``OUT``.
@@ -208,9 +230,9 @@ When Communicator Is An Inter-Communicator
 
 When the communicator is an inter-communicator, the root process in the
 first group gathers data from all the processes in the second group. The
-first group defines the root process. That process uses :ref:`MPI_ROOT`  as the
+first group defines the root process. That process uses MPI_ROOT as the
 value of its ``root`` argument. The remaining processes use
-:ref:`MPI_PROC_NULL`  as the value of their ``root`` argument. All processes
+MPI_PROC_NULL as the value of their ``root`` argument. All processes
 in the second group use the rank of that root process in the first group
 as the value of their ``root`` argument. The send buffer argument of the
 processes in the first group must be consistent with the receive buffer
@@ -224,10 +246,10 @@ of the function and Fortran routines in the last argument. Before the
 error value is returned, the current MPI error handler is called. By
 default, this error handler aborts the MPI job, except for I/O function
 errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error. See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso:: :ref:`MPI_Gatherv`:ref:`MPI_Scatter`:ref:`MPI_Scatterv`
+.. seealso:: :ref:`MPI_Gatherv` :ref:`MPI_Scatter` :ref:`MPI_Scatterv` 

@@ -1,4 +1,4 @@
-.. _MPI_T_category_get_pvars:
+.. _mpi_t_category_get_pvars:
 
 MPI_T_category_get_pvars
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -40,10 +40,10 @@ zero or more performance variables.
 ERRORS
 ======
 
-:ref:`MPI_T_category_get_pvars()` will fail if:
+MPI_T_category_get_pvars() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]`
+[MPI_T_ERR_INVALID_INDEX]
    The category index is invalid

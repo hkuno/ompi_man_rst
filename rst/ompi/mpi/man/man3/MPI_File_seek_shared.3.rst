@@ -1,4 +1,4 @@
-.. _MPI_File_seek_shared:
+.. _mpi_file_seek_shared:
 
 MPI_File_seek_shared
 ~~~~~~~~~~~~~~~~~~~~
@@ -66,14 +66,14 @@ DESCRIPTION
 *whence,* which could have the following possible values:
 
  o
-   :ref:`MPI_SEEK_SET` - The pointer is set to *offset.*
+   MPI_SEEK_SET - The pointer is set to *offset.*
 
  o
-   :ref:`MPI_SEEK_CUR` - The pointer is set to the current pointer position
+   MPI_SEEK_CUR - The pointer is set to the current pointer position
    plus *offset.*
 
  o
-   :ref:`MPI_SEEK_END` - The pointer is set to the end of the file plus
+   MPI_SEEK_END - The pointer is set to the end of the file plus
    *offset.*
 
 :ref:`MPI_File_seek_shared` is collective; all the processes in the
@@ -99,7 +99,7 @@ syntax
 
         INTEGER*MPI_OFFSET_KIND OFFSET
 
-where :ref:`MPI_OFFSET_KIND` is a constant defined in mpif.h and gives the
+where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
@@ -110,7 +110,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+MPI_ERRORS_RETURN. The error handler may be changed with
 :ref:`MPI_File_set_errhandler`; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
+MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

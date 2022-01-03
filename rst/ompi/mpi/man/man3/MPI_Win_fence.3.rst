@@ -1,4 +1,4 @@
-.. _MPI_Win_fence:
+.. _mpi_win_fence:
 
 MPI_Win_fence
 ~~~~~~~~~~~~~
@@ -80,20 +80,20 @@ The *assert* argument is used to provide assertions on the context of
 the call that may be used for various optimizations. A value of *assert*
 - 0 is always valid. The following assertion value is supported:
 
-:ref:`MPI_MODE_NOPRECEDE`
+MPI_MODE_NOPRECEDE
    No local RMA calls have been issued before this fence. This assertion
    must be provided by all or no members of the group of the window. It
    may enable faster fence call by avoiding unnecessary synchronization.
 
-:ref:`MPI_MODE_NOSTORE`
+MPI_MODE_NOSTORE
    Informs that the local window was not updated by local stores or get
    calls in the preceding epoch.
 
-:ref:`MPI_MODE_NOPUT`
+MPI_MODE_NOPUT
    Informs that the local window will not be updated by any put or
    accummulate calls in the ensuing epoch (until next fence call).
 
-:ref:`MPI_MODE_NOSUCCEED`
+MPI_MODE_NOSUCCEED
    No local RMA calls will be issued after this fence. This assertion
    must be provided by all or no members of the group of the window. It
    may enable faster fence call by avoiding unnecessary synchronization.
@@ -113,7 +113,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

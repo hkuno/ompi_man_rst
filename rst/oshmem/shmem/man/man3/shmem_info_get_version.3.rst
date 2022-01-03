@@ -37,4 +37,4 @@ SHMEM_MINOR_VERSION, defined in its shmem.h. The valid major version
 value is 1, and the valid minor version value is 2.
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_my_pe` \ (3), *:ref:`shmem_init` \ (3)
+.. seealso:: *intro_shmem\ (3), *:ref:`shmem_my_pe` \ (3), *:ref:`shmem_init` \ (3)

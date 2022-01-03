@@ -193,4 +193,4 @@ Consider this simple example for Fortran.
    END
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_put` \ (3), *:ref:`shmem_iget` \ (3),*:ref:`shmem_quiet` \ (3)
+.. seealso:: *intro_shmem\ (3), *shmem_put\ (3), *shmem_iget\ (3),*:ref:`shmem_quiet` \ (3)

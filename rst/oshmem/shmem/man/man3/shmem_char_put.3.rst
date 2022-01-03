@@ -196,4 +196,4 @@ The following shmem_put example is for C/C++ programs:
    }
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_iput` \ (3), *:ref:`shmem_quiet` \ (3)
+.. seealso:: *intro_shmem\ (3), *shmem_iput\ (3), *:ref:`shmem_quiet` \ (3)

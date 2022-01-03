@@ -52,4 +52,4 @@ and accessible via SHMEM operations from the specified remote PE;
 otherwise, it is .FALSE..
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_pe_accessible` \ (3)
+.. seealso:: *intro_shmem\ (3), *:ref:`shmem_pe_accessible` \ (3)

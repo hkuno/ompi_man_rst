@@ -1,4 +1,4 @@
-.. _MPI_Startall:
+.. _mpi_startall:
 
 MPI_Startall
 ~~~~~~~~~~~~
@@ -59,7 +59,7 @@ DESCRIPTION
 ===========
 
 Starts all communications associated with requests in array_of_requests.
-A call to :ref:`MPI_Startall(count`, array_of_requests) has the same effect as
+A call to MPI_Startall(count, array_of_requests) has the same effect as
 calls to :ref:`MPI_Start` (&array_of_requests[i]), executed for i=0 ,...,
 count-1, in some arbitrary order.
 
@@ -104,7 +104,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

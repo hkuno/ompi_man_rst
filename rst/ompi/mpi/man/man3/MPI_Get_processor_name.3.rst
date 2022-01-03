@@ -1,10 +1,10 @@
-.. _MPI_Get_processor_name:
+.. _mpi_get_processor_name:
 
 MPI_Get_processor_name
 ~~~~~~~~~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Get_processor_name`  - Gets the name of the processor.
+:ref:`MPI_Get_processor_name` - Gets the name of the processor.
 
 Syntax
 ======
@@ -57,7 +57,7 @@ This routine returns the ``name`` of the processor on which it was
 called at the moment of the call. The ``name`` is a character string for
 maximum flexibility. From this value it must be possible to identify a
 specific piece of hardware. The argument ``name`` must represent storage
-that is at least :ref:`MPI_MAX_PROCESSOR_NAME`  characters long.
+that is at least MPI_MAX_PROCESSOR_NAME characters long.
 
 The number of characters actually written is returned in the output
 argument, ``resultlen``.
@@ -65,7 +65,7 @@ argument, ``resultlen``.
 Notes
 =====
 
-The user must provide at least :ref:`MPI_MAX_PROCESSOR_NAME`  space to write
+The user must provide at least MPI_MAX_PROCESSOR_NAME space to write
 the processor ``name``; processor ``name``\ s can be this long. The user
 should examine the output argument, ``resultlen``, to determine the
 actual length of the ``name``.
@@ -79,7 +79,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error.

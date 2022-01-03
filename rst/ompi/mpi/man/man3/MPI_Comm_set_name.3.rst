@@ -1,4 +1,4 @@
-.. _MPI_Comm_set_name:
+.. _mpi_comm_set_name:
 
 MPI_Comm_set_name
 ~~~~~~~~~~~~~~~~~
@@ -71,9 +71,9 @@ only the name of the communicator as seen in the process that made the
 name be assigned to a communicator in every process where it exists.
 
 The length of the name that can be stored is limited to the value of
-:ref:`MPI_MAX_OBJECT_NAME` in Fortran and :ref:`MPI_MAX_OBJECT_NAME`-1 in C (to allow
+MPI_MAX_OBJECT_NAME in Fortran and MPI_MAX_OBJECT_NAME-1 in C (to allow
 for the null terminator). Attempts to set names longer than this will
-result in truncation of the name. :ref:`MPI_MAX_OBJECT_NAME` must have a value
+result in truncation of the name. MPI_MAX_OBJECT_NAME must have a value
 of at least 64.
 
 NOTES
@@ -85,7 +85,7 @@ exists, to avoid confusion.
 
 Regarding name length, under circumstances of store exhaustion, an
 attempt to set a name of any length could fail; therefore, the value of
-:ref:`MPI_MAX_OBJECT_NAME` should be viewed only as a strict upper bound on the
+MPI_MAX_OBJECT_NAME should be viewed only as a strict upper bound on the
 name length, not a guarantee that setting names of less than this length
 will always succeed.
 
@@ -98,7 +98,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

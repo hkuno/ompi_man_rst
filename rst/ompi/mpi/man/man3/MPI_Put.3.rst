@@ -1,9 +1,9 @@
-.. _MPI_Put:
+.. _mpi_put:
 
 MPI_Put
 ~~~~~~~
 
-:ref:`MPI_Put`, :ref:`MPI_Rput` - Copies data from the origin memory to the
+:ref:`MPI_Put`, MPI_Rput - Copies data from the origin memory to the
 target.
 
 SYNTAX
@@ -137,13 +137,13 @@ the origin process. The target data type must contain only relative
 displacements, not absolute addresses. The same holds for get and
 accumulate.
 
-:ref:`MPI_Rput` is similar to :ref:`MPI_Put`, except that it allocates a
+MPI_Rput is similar to :ref:`MPI_Put`, except that it allocates a
 communication request object and associates it with the request handle
-(the argument *request*). The completion of an :ref:`MPI_Rput` operation (i.e.,
+(the argument *request*). The completion of an MPI_Rput operation (i.e.,
 after the corresponding test or wait) indicates that the sender is now
 free to update the locations in the *origin_addr* buffer. It does not
 indicate that the data is available at the target window. If remote
-completion is required, :ref:`MPI_Win_flush`, :ref:`MPI_Win_flush_all`,
+completion is required, :ref:`MPI_Win_flush`, MPI_Win_flush_all,
 :ref:`MPI_Win_unlock`, or :ref:`MPI_Win_unlock_all` can be used.
 
 NOTES
@@ -175,7 +175,7 @@ non-portable syntax
 
         INTEGER*MPI_ADDRESS_KIND TARGET_DISP
 
-where :ref:`MPI_ADDRESS_KIND` is a constant defined in mpif.h and gives the
+where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
@@ -187,9 +187,9 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Get`  :ref:`MPI_Rget` | :ref:`MPI_Accumulate`  :ref:`MPI_Win_flush`  :ref:`MPI_Win_flush_all`  :ref:`MPI_Win_unlock`   :ref:`MPI_Win_unlock_all` 
+.. seealso:: | :ref:`MPI_Get`  MPI_Rget| :ref:`MPI_Accumulate`  :ref:`MPI_Win_flush`  MPI_Win_flush_all :ref:`MPI_Win_unlock`   :ref:`MPI_Win_unlock_all` 

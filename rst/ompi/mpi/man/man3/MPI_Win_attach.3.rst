@@ -1,9 +1,9 @@
-.. _MPI_Win_attach:
+.. _mpi_win_attach:
 
 MPI_Win_attach
 ~~~~~~~~~~~~~~
 
-:ref:`MPI_Win_attach`, :ref:`MPI_Win_detach` - One-sided MPI call that attaches /
+:ref:`MPI_Win_attach`, MPI_Win_detach - One-sided MPI call that attaches /
 detaches a memory region to / from a window object for RMA operations.
 
 SYNTAX
@@ -85,7 +85,7 @@ If the *base* value used by :ref:`MPI_Win_attach` was allocated by
 :ref:`MPI_Alloc_mem`, the size of the window can be no larger than the value
 set by the :ref:`MPI_ALLOC_MEM` function.
 
-:ref:`MPI_Win_detach` can be used to detach a previously attached memory region
+MPI_Win_detach can be used to detach a previously attached memory region
 from *win*. The memory address *base* and *win* must match arguments
 passed to a previous call to :ref:`MPI_Win_attach`.
 
@@ -105,6 +105,6 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.

@@ -1,4 +1,4 @@
-.. _MPI_T_pvar_get_num:
+.. _mpi_t_pvar_get_num:
 
 MPI_T_pvar_get_num
 ~~~~~~~~~~~~~~~~~~
@@ -32,7 +32,7 @@ throughout the exection of the process but will never decrease.
 ERRORS
 ======
 
-:ref:`MPI_T_pvar_get_num()` will fail if:
+MPI_T_pvar_get_num() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized

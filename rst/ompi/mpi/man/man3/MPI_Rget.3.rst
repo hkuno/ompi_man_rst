@@ -1,6 +1,8 @@
-.. _MPI_Rget:
-========
-MPI_Rget
-========
+.. _mpi_rget:
  
+========
+mpi_rget
+========
+
 .. include:: ../man3/MPI_Get.3.rst
+

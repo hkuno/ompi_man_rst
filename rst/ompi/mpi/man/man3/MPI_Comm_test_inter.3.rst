@@ -1,4 +1,4 @@
-.. _MPI_Comm_test_inter:
+.. _mpi_comm_test_inter:
 
 MPI_Comm_test_inter
 ~~~~~~~~~~~~~~~~~~~
@@ -79,16 +79,16 @@ inter-communicator, use the :ref:`MPI_Comm_remote_group` and
 
 The operation :ref:`MPI_Comm_compare` is valid for intercommunicators. Both
 communicators must be either intra- or intercommunicators, or else
-:ref:`MPI_UNEQUAL` results. Both corresponding local and remote groups must
-compare correctly to get the results :ref:`MPI_CONGRUENT` and :ref:`MPI_SIMILAR`. In
-particular, it is possible for :ref:`MPI_SIMILAR` to result because either the
+MPI_UNEQUAL results. Both corresponding local and remote groups must
+compare correctly to get the results MPI_CONGRUENT and MPI_SIMILAR. In
+particular, it is possible for MPI_SIMILAR to result because either the
 local or remote groups were similar but not identical.
 
 The following accessors provide consistent access to the remote group of
 an intercommunicator: :ref:`MPI_Comm_remote_size`, :ref:`MPI_Comm_remote_group`.
 
 The intercommunicator accessors (:ref:`MPI_Comm_test_inter`,
-:ref:`MPI_Comm_remote_size`, :ref:`MPI_Comm_remote_group)` are all local operations.
+:ref:`MPI_Comm_remote_size`, MPI_Comm_remote_group) are all local operations.
 
 ERRORS
 ======
@@ -99,7 +99,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

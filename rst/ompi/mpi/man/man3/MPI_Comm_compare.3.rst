@@ -1,10 +1,10 @@
-.. _MPI_Comm_compare:
+.. _mpi_comm_compare:
 
 MPI_Comm_compare
 ~~~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Comm_compare`  - Compares two communicators.
+:ref:`MPI_Comm_compare` - Compares two communicators.
 
 Syntax
 ======
@@ -56,12 +56,12 @@ Output Parameters
 Description
 ===========
 
-:ref:`MPI_IDENT`  ``result``\ s if and only if ``comm1`` and ``comm2`` are
+MPI_IDENT ``result``\ s if and only if ``comm1`` and ``comm2`` are
 handles for the same object (identical groups and same contexts).
-:ref:`MPI_CONGRUENT`  results if the underlying groups are identical in
+MPI_CONGRUENT results if the underlying groups are identical in
 constituents and rank order; these communicators differ only by context.
-:ref:`MPI_SIMILAR`  results of the group members of both communicators are
-the same but the rank order differs. :ref:`MPI_UNEQUAL`  results otherwise.
+MPI_SIMILAR results of the group members of both communicators are
+the same but the rank order differs. MPI_UNEQUAL results otherwise.
 
 Errors
 ======
@@ -71,7 +71,7 @@ of the function and Fortran routines in the last argument. Before the
 error value is returned, the current MPI error handler is called. By
 default, this error handler aborts the MPI job, except for I/O function
 errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error.

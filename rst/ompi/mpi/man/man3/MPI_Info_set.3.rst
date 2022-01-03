@@ -1,4 +1,4 @@
-.. _MPI_Info_set:
+.. _mpi_info_set:
 
 MPI_Info_set
 ~~~~~~~~~~~~
@@ -65,8 +65,8 @@ DESCRIPTION
 if a value for the same key was previously set. The *key* and *value*
 parameters are null-terminated strings in C. In Fortran, leading and
 trailing spaces in *key* and *value* are stripped. If either *key* or
-*value* is larger than the allowed maximums, the error :ref:`MPI_ERR_INFO_KEY`
-or :ref:`MPI_ERR_INFO_VALUE` is raised, respectively.
+*value* is larger than the allowed maximums, the error MPI_ERR_INFO_KEY
+or MPI_ERR_INFO_VALUE is raised, respectively.
 
 ERRORS
 ======
@@ -77,7 +77,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

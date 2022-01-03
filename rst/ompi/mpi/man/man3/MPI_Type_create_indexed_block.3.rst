@@ -1,9 +1,9 @@
-.. _MPI_Type_create_indexed_block:
+.. _mpi_type_create_indexed_block:
 
 MPI_Type_create_indexed_block
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Type_create_indexed_block`, :ref:`MPI_Type_create_hindexed_block` -
+:ref:`MPI_Type_create_indexed_block`, MPI_Type_create_hindexed_block -
 Creates an indexed data type with the same block length for all blocks.
 
 SYNTAX
@@ -84,11 +84,11 @@ OUTPUT PARAMETERS
 DESCRIPTION
 ===========
 
-:ref:`MPI_Type_create_indexed_block` and :ref:`MPI_Type_create_hindexed_block` create
+:ref:`MPI_Type_create_indexed_block` and MPI_Type_create_hindexed_block create
 an indexed data type with the same block length for all blocks. The only
 difference between the two functions is :ref:`MPI_Type_create_indexed_block`
 takes an array of displacements in units of the extent of *oldtype*
-while :ref:`MPI_Type_create_hindexed_block` takes displacements in bytes.
+while MPI_Type_create_hindexed_block takes displacements in bytes.
 
 ERRORS
 ======
@@ -99,7 +99,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

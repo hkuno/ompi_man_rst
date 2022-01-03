@@ -1,6 +1,8 @@
-.. _MPI_Iscatter:
-============
-MPI_Iscatter
-============
+.. _mpi_iscatter:
  
+============
+mpi_iscatter
+============
+
 .. include:: ../man3/MPI_Scatter.3.rst
+

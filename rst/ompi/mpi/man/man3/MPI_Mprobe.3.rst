@@ -1,4 +1,4 @@
-.. _MPI_Mprobe:
+.. _mpi_mprobe:
 
 MPI_Mprobe
 ~~~~~~~~~~
@@ -74,11 +74,11 @@ to decide how to receive the message, based on the information returned
 by the probe. In particular, the application may allocate memory for the
 receive buffer according to the length of the probed message.
 
-A matching probe with :ref:`MPI_PROC_NULL` as *source* returns *message* =
-:ref:`MPI_MESSAGE_NO_PROC`, and the *status* object returns source =
-:ref:`MPI_PROC_NULL`, tag = :ref:`MPI_ANY_TAG`, and count = 0.
+A matching probe with MPI_PROC_NULL as *source* returns *message* =
+MPI_MESSAGE_NO_PROC, and the *status* object returns source =
+MPI_PROC_NULL, tag = MPI_ANY_TAG, and count = 0.
 
-When :ref:`MPI_Mprobe` returns (from a non-:ref:`MPI_PROC_NULL` *source*), the matched
+When :ref:`MPI_Mprobe` returns (from a non-MPI_PROC_NULL *source*), the matched
 message can then be received by passing the *message* handle to the
 :ref:`MPI_Mrecv` or :ref:`MPI_Imrecv` functions.
 
@@ -91,7 +91,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

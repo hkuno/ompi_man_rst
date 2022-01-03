@@ -1,4 +1,4 @@
-.. _MPI_Type_match_size:
+.. _mpi_type_match_size:
 
 MPI_Type_match_size
 ~~~~~~~~~~~~~~~~~~~
@@ -63,8 +63,8 @@ The function returns an MPI datatype matching a local variable of type
 (*typeclass*, *size*). The returned type is a reference (handle) to a
 predefined named datatype, not a duplicate. This type cannot be freed.
 
-The value of *typeclass* may be set to one of :ref:`MPI_TYPECLASS_REAL`,
-:ref:`MPI_TYPECLASS_INTEGER`, or :ref:`MPI_TYPECLASS_COMPLEX`, corresponding to the
+The value of *typeclass* may be set to one of MPI_TYPECLASS_REAL,
+MPI_TYPECLASS_INTEGER, or MPI_TYPECLASS_COMPLEX, corresponding to the
 desired datatype.
 
 MPI_type_match_size can be used to obtain a size-specific type that
@@ -83,7 +83,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -1,4 +1,4 @@
-.. _MPI_File_set_view:
+.. _mpi_file_set_view:
 
 MPI_File_set_view
 ~~~~~~~~~~~~~~~~~
@@ -105,14 +105,14 @@ The following hints can be used as values for the *info* argument.
 
 SETTABLE HINTS:
 
-- :ref:`MPI_INFO_NULL`
+- MPI_INFO_NULL
 
 - shared_file_timeout: Amount of time (in seconds) to wait for access to
-the shared file pointer before exiting with :ref:`MPI_ERR_TIMEDOUT`.
+the shared file pointer before exiting with MPI_ERR_TIMEDOUT.
 
 - rwlock_timeout: Amount of time (in seconds) to wait for obtaining a
 read or write lock on a contiguous chunk of a UNIX file before exiting
-with :ref:`MPI_ERR_TIMEDOUT`.
+with MPI_ERR_TIMEDOUT.
 
 - noncoll_read_bufsize: Maximum size of the buffer used by MPI I/O to
 satisfy read requests in the noncollective data-access routines. (See
@@ -163,7 +163,7 @@ syntax
 
         INTEGER*MPI_OFFSET_KIND DISP
 
-where :ref:`MPI_OFFSET_KIND` is a constant defined in mpif.h and gives the
+where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
@@ -174,7 +174,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+MPI_ERRORS_RETURN. The error handler may be changed with
 :ref:`MPI_File_set_errhandler`; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
+MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

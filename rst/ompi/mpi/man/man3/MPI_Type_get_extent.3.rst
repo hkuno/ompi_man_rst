@@ -1,9 +1,9 @@
-.. _MPI_Type_get_extent:
+.. _mpi_type_get_extent:
 
 MPI_Type_get_extent
 ~~~~~~~~~~~~~~~~~~~
 
-:ref:`MPI_Type_get_extent`, :ref:`MPI_Type_get_extent_x` - Returns the lower
+:ref:`MPI_Type_get_extent`, MPI_Type_get_extent_x - Returns the lower
 bound and extent of a data type.
 
 SYNTAX
@@ -73,7 +73,7 @@ DESCRIPTION
 *datatype*. For either function, if either the *lb* or *extent*
 parameter cannot express the value to be returned (e.g., if the
 parameter is too small to hold the output value), it is set to
-:ref:`MPI_UNDEFINED`.
+MPI_UNDEFINED.
 
 NOTE
 ====
@@ -96,7 +96,7 @@ non-portable syntax
    or
         INTEGER*MPI_ADDRESS_KIND EXTENT
 
-:ref:`MPI_Type_get_extent_x`:
+MPI_Type_get_extent_x:
 
 ::
 
@@ -104,7 +104,7 @@ non-portable syntax
    or
         INTEGER*MPI_COUNT_KIND EXTENT
 
-where :ref:`MPI_ADDRESS_KIND` and :ref:`MPI_COUNT_KIND` are constants defined in
+where MPI_ADDRESS_KIND and MPI_COUNT_KIND are constants defined in
 mpif.h and give the length of the declared integer in bytes.
 
 ERRORS
@@ -116,6 +116,6 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.

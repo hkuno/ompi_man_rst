@@ -1,4 +1,4 @@
-.. _MPI_File_call_errhandler:
+.. _mpi_file_call_errhandler:
 
 MPI_File_call_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -59,10 +59,10 @@ DESCRIPTION
 This function invokes the error handler assigned to the file handle *fh*
 with the supplied error code *errorcode*. If the error handler was
 successfully called, the process is not aborted, and the error handler
-returns, this function returns :ref:`MPI_SUCCESS`.
+returns, this function returns MPI_SUCCESS.
 
 Unlike errors on communicators and windows, the default errorhandler for
-files is :ref:`MPI_ERRORS_RETURN`.
+files is MPI_ERRORS_RETURN.
 
 ERRORS
 ======

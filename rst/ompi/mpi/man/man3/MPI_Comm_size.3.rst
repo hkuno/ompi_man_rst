@@ -1,4 +1,4 @@
-.. _MPI_Comm_size:
+.. _mpi_comm_size:
 
 MPI_Comm_size
 ~~~~~~~~~~~~~
@@ -57,7 +57,7 @@ DESCRIPTION
 ===========
 
 This function indicates the number of processes involved in a
-communicator. For :ref:`MPI_COMM_WORLD`, it indicates the total number of
+communicator. For MPI_COMM_WORLD, it indicates the total number of
 processes available. This function is equivalent to accessing the
 communicator's group with :ref:`MPI_Comm_group`, computing the size using
 :ref:`MPI_Group_size`, and then freeing the temporary group via :ref:`MPI_Group_free`.
@@ -74,7 +74,7 @@ indicates the rank of the process that calls it in the range from 0 . .
 NOTE
 ====
 
-:ref:`MPI_COMM_NULL` is not considered a valid argument to this function.
+MPI_COMM_NULL is not considered a valid argument to this function.
 
 ERRORS
 ======
@@ -85,7 +85,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

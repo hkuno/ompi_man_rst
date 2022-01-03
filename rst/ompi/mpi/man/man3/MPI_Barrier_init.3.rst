@@ -1,6 +1,8 @@
-.. _MPI_Barrier_init:
-================
-MPI_Barrier_init
-================
+.. _mpi_barrier_init:
  
+================
+mpi_barrier_init
+================
+
 .. include:: ../man3/MPI_Barrier.3.rst
+

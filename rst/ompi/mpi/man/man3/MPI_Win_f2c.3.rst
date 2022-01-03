@@ -1,6 +1,8 @@
-.. _MPI_Win_f2c:
-===========
-MPI_Win_f2c
-===========
+.. _mpi_win_f2c:
  
+===========
+mpi_win_f2c
+===========
+
 .. include:: ../man3/MPI_Comm_f2c.3.rst
+

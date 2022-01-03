@@ -1,10 +1,10 @@
-.. _MPI_Finalized:
+.. _mpi_finalized:
 
 MPI_Finalized
 ~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Finalized`  - Checks whether MPI has been finalized
+:ref:`MPI_Finalized` - Checks whether MPI has been finalized
 
 Syntax
 ======
@@ -52,7 +52,7 @@ Description
 
 This routine may be used to determine whether MPI has been finalized. It
 is one of a small number of routines that may be called before MPI is
-initialized and after MPI has been finalized (:ref:`MPI_Initialized`  is
+initialized and after MPI has been finalized (:ref:`MPI_Initialized` is
 another).
 
 Errors
@@ -63,10 +63,10 @@ of the function and Fortran routines in the last argument. Before the
 error value is returned, the current MPI error handler is called. By
 default, this error handler aborts the MPI job, except for I/O function
 errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Init`:ref:`MPI_Init_thread`:ref:`MPI_Initialized`:ref:`MPI_Finalize`
+.. seealso:: :ref:`MPI_Init` :ref:`MPI_Init_thread` :ref:`MPI_Initialized` :ref:`MPI_Finalize` 

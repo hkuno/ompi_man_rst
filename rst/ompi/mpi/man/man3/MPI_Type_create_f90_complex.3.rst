@@ -1,4 +1,4 @@
-.. _MPI_Type_create_f90_complex:
+.. _mpi_type_create_f90_complex:
 
 MPI_Type_create_f90_complex
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,7 +70,7 @@ between +\ *r* and -*r* (inclusive).
 
 Either *p* or *r*, but not both, may be omitted from calls to
 SELECTED_REAL_KIND. Similarly, either argument to
-:ref:`MPI_Type_create_f90_complex` may be set to :ref:`MPI_UNDEFINED`.
+:ref:`MPI_Type_create_f90_complex` may be set to MPI_UNDEFINED.
 
 NOTES
 =====
@@ -92,7 +92,7 @@ identical values for both *p* and *r*.
 
 The interaction between the datatypes returned by this function and the
 external32 data representation - used by :ref:`MPI_Pack_external`,
-:ref:`MPI_Unpack_external`, and many :ref:`MPI_File` functions - is subtle. The
+:ref:`MPI_Unpack_external`, and many MPI_File functions - is subtle. The
 external32 representation of returned datatypes is as follows.
 
 ::
@@ -126,7 +126,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

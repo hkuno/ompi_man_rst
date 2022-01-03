@@ -1,4 +1,4 @@
-.. _MPI_T_cvar_get_info:
+.. _mpi_t_cvar_get_info:
 
 MPI_T_cvar_get_info
 ~~~~~~~~~~~~~~~~~~~
@@ -66,31 +66,31 @@ variables), control variables are categorized into nine verbosity levels
 corresponding to the equivalent ompi_info level. The nine levels are (in
 increasing order):
 
-:ref:`MPI_T_VERBOSITY_USER_BASIC`
+MPI_T_VERBOSITY_USER_BASIC
    Basic information of interest to users
 
-:ref:`MPI_T_VERBOSITY_USER_DETAIL`
+MPI_T_VERBOSITY_USER_DETAIL
    Detailed information of interest to users
 
-:ref:`MPI_T_VERBOSITY_USER_ALL`
+MPI_T_VERBOSITY_USER_ALL
    All remaining information of interest to users
 
-:ref:`MPI_T_VERBOSITY_TUNER_BASIC`
+MPI_T_VERBOSITY_TUNER_BASIC
    Basic information required for tuning
 
-:ref:`MPI_T_VERBOSITY_TUNER_DETAIL`
+MPI_T_VERBOSITY_TUNER_DETAIL
    Detailed information required for tuning
 
-:ref:`MPI_T_VERBOSITY_TUNER_ALL`
+MPI_T_VERBOSITY_TUNER_ALL
    All remaining information required for tuning
 
-:ref:`MPI_T_VERBOSITY_MPIDEV_BASIC`
+MPI_T_VERBOSITY_MPIDEV_BASIC
    Basic information for MPI implementors
 
-:ref:`MPI_T_VERBOSITY_MPIDEV_DETAIL`
+MPI_T_VERBOSITY_MPIDEV_DETAIL
    Detailed information for MPI implementors
 
-:ref:`MPI_T_VERBOSITY_MPIDEV_ALL`
+MPI_T_VERBOSITY_MPIDEV_ALL
    All remaining information for MPI implementors
 
 For more information see MPI-3 � 14.3.1.
@@ -99,8 +99,8 @@ DATATYPE
 ========
 
 The datatype returned by :ref:`MPI_T_cvar_get_info` is restricted to one of the
-following datatypes: :ref:`MPI_INT`, :ref:`MPI_UNSIGNED`, :ref:`MPI_UNSIGNED_LONG`,
-:ref:`MPI_UNSIGNED_LONG_LONG`, :ref:`MPI_COUNT`, :ref:`MPI_CHAR`, and :ref:`MPI_DOUBLE`. For more
+following datatypes: MPI_INT, MPI_UNSIGNED, MPI_UNSIGNED_LONG,
+MPI_UNSIGNED_LONG_LONG, MPI_COUNT, MPI_CHAR, and MPI_DOUBLE. For more
 information on datatypes in MPI_T see MPI-3 � 14.3.5.
 
 SCOPE
@@ -109,28 +109,28 @@ SCOPE
 The scope describes when and how changes can be made to a control
 variable. From MPI-3 � 14.3.6, the scope may be any of the following:
 
-:ref:`MPI_T_SCOPE_CONSTANT`
+MPI_T_SCOPE_CONSTANT
    read-only, value is constant
 
-:ref:`MPI_T_SCOPE_READONLY`
+MPI_T_SCOPE_READONLY
    read-only, cannot be written, but can change
 
-:ref:`MPI_T_SCOPE_LOCAL`
+MPI_T_SCOPE_LOCAL
    may be writeable, writing is a local operation
 
-:ref:`MPI_T_SCOPE_GROUP`
+MPI_T_SCOPE_GROUP
    may be writeable, must be done to a group of processes, all processes
    in a group must be set to consistent values
 
-:ref:`MPI_T_SCOPE_GROUP_EQ`
+MPI_T_SCOPE_GROUP_EQ
    may be writeable, must be done to a group of processes, all processes
    in a group must be set to the same value
 
-:ref:`MPI_T_SCOPE_ALL`
+MPI_T_SCOPE_ALL
    may be writeable, must be done to all processes, all connected
    processes must be set to consistent values
 
-:ref:`MPI_T_SCOPE_ALL_EQ`
+MPI_T_SCOPE_ALL_EQ
    may be writeable, must be done to all processes, all connected
    processes must be set to the same value
 
@@ -154,13 +154,13 @@ objects.
 ERRORS
 ======
 
-:ref:`MPI_T_cvar_get_info()` will fail if:
+MPI_T_cvar_get_info() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]`
+[MPI_T_ERR_INVALID_INDEX]
    The control variable index is invalid
 
 
-.. seealso::    o:ref:`mpi_info` 
+.. seealso::    ompi_info

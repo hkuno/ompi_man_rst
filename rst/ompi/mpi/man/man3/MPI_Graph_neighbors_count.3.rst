@@ -1,10 +1,10 @@
-.. _MPI_Graph_neighbors_count:
+.. _mpi_graph_neighbors_count:
 
 MPI_Graph_neighbors_count
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Graph_neighbors_count`  - Returns the number of neighbors of a
+:ref:`MPI_Graph_neighbors_count` - Returns the number of neighbors of a
 node associated with a graph topology.
 
 Syntax
@@ -59,9 +59,9 @@ Output Parameters
 Description
 ===========
 
-:ref:`MPI_Graph_neighbors_count`  and :ref:`MPI_Graph_neighbors`  provide
+:ref:`MPI_Graph_neighbors_count` and :ref:`MPI_Graph_neighbors` provide
 adjacency information for a general, graph topology.
-:ref:`MPI_Graph_neighbors_count`  returns the number of neighbors for the
+:ref:`MPI_Graph_neighbors_count` returns the number of neighbors for the
 process signified by ``rank``.
 
 Errors
@@ -73,10 +73,10 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Graph_neighbors`
+.. seealso:: :ref:`MPI_Graph_neighbors` 

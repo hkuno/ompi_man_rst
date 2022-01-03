@@ -1,4 +1,4 @@
-.. _MPI_Testall:
+.. _mpi_testall:
 
 MPI_Testall
 ~~~~~~~~~~~
@@ -72,7 +72,7 @@ handle in the list is active). In this case, each status entry that
 corresponds to an active handle request is set to the status of the
 corresponding communication; if the request was allocated by a
 nonblocking communication call then it is deallocated, and the handle is
-set to :ref:`MPI_REQUEST_NULL`. Each status entry that corresponds to a null or
+set to MPI_REQUEST_NULL. Each status entry that corresponds to a null or
 inactive handle is set to empty.
 
 Otherwise, *flag* = false is returned, no request is modified and the
@@ -80,7 +80,7 @@ values of the status entries are undefined. This is a local operation.
 
 If your application does not need to examine the *array_of_statuses*
 field, you can save resources by using the predefined constant
-:ref:`MPI_STATUSES_IGNORE` can be used as a special value for the
+MPI_STATUSES_IGNORE can be used as a special value for the
 *array_of_statuses* argument.
 
 Errors that occurred during the execution of :ref:`MPI_Testall` are handled in
@@ -101,19 +101,19 @@ MPI error, only the *first* MPI request that caused an error will be
 passed to its corresponding error handler. No other error handlers will
 be invoked (even if multiple requests generated errors). However, *all*
 requests that generate an error will have a relevant error code set in
-the corresponding status.:ref:`MPI_ERROR` field (unless :ref:`MPI_STATUSES_IGNORE` was
+the corresponding status.MPI_ERROR field (unless MPI_STATUSES_IGNORE was
 used).
 
 The default error handler aborts the MPI job, except for I/O function
 errors. The error handler may be changed with :ref:`MPI_Comm_set_errhandler`,
 :ref:`MPI_File_set_errhandler`, or :ref:`MPI_Win_set_errhandler` (depending on the
 type of MPI handle that generated the MPI request); the predefined error
-handler :ref:`MPI_ERRORS_RETURN` may be used to cause error values to be
+handler MPI_ERRORS_RETURN may be used to cause error values to be
 returned. Note that MPI does not guarantee that an MPI program can
 continue past an error.
 
 If the invoked error handler allows :ref:`MPI_Testall` to return to the caller,
-the value :ref:`MPI_ERR_IN_STATUS` will be returned in the C and Fortran
+the value MPI_ERR_IN_STATUS will be returned in the C and Fortran
 bindings.
 
 

@@ -1,4 +1,4 @@
-.. _MPI_File_read_ordered_end:
+.. _mpi_file_read_ordered_end:
 
 MPI_File_read_ordered_end
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,7 +65,7 @@ DESCRIPTION
 
 :ref:`MPI_File_read_ordered_end` is the ending part of a split collective
 routine that must be called by all processes in the communicator group
-associated with the file handle *fh.* :ref:`MPI_File_rad_ordered_end` blocks
+associated with the file handle *fh.* MPI_File_rad_ordered_end blocks
 until the operation initiated by :ref:`MPI_File_read_ordered_begin` completes.
 It attempts to read the file associated with *fh* into the user's buffer
 *buf.* The shared file pointer is updated by the amounts of data
@@ -90,7 +90,7 @@ of the function and Fortran routines in the last argument.
 
 Before the error value is returned, the current MPI error handler is
 called. For MPI I/O function errors, the default error handler is set to
-:ref:`MPI_ERRORS_RETURN`. The error handler may be changed with
+MPI_ERRORS_RETURN. The error handler may be changed with
 :ref:`MPI_File_set_errhandler`; the predefined error handler
-:ref:`MPI_ERRORS_ARE_FATAL` may be used to make I/O errors fatal. Note that MPI
+MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.

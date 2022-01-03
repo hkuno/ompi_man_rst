@@ -1,4 +1,4 @@
-.. _MPI_Win_create_errhandler:
+.. _mpi_win_create_errhandler:
 
 MPI_Win_create_errhandler
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,8 +45,8 @@ Fortran 2008 Syntax
 DEPRECATED TYPE NAME NOTE
 =========================
 
-MPI-2.2 deprecated the :ref:`MPI_Win_errhandler_fn` and MPI::Win::Errhandler_fn
-types in favor of :ref:`MPI_Win_errhandler_function` and
+MPI-2.2 deprecated the MPI_Win_errhandler_fn and MPI::Win::Errhandler_fn
+types in favor of MPI_Win_errhandler_function and
 MPI::Win::Errhandler_function, respectively. Open MPI supports both
 names (indeed, the \_fn names are typedefs to the \_function names).
 
@@ -66,7 +66,7 @@ DESCRIPTION
 ===========
 
 :ref:`MPI_Win_create_errhandler` should be, in C, a function of type
-:ref:`MPI_Win_errhandler_function`, which is defined as
+MPI_Win_errhandler_function, which is defined as
 
 ::
 
@@ -92,6 +92,6 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Win_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Win_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.

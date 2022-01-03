@@ -113,4 +113,4 @@ Fortran example:
    CALL SHMEM_BARRIER(PE_START, LOGPE_STRIDE, PE_SIZE, PSYNC)
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_barrier_all` \ (3)
+.. seealso:: *intro_shmem\ (3), *:ref:`shmem_barrier_all` \ (3)

@@ -1,4 +1,4 @@
-.. _MPI_Waitany:
+.. _mpi_waitany:
 
 MPI_Waitany
 ~~~~~~~~~~~
@@ -69,16 +69,16 @@ of several requests.
 The array_of_requests list may contain null or inactive handles. If the
 list contains no active handles (list has length zero or all entries are
 null or inactive), then the call returns immediately with index =
-:ref:`MPI_UNDEFINED`, and an empty status.
+MPI_UNDEFINED, and an empty status.
 
-The execution of :ref:`MPI_Waitany(count`, array_of_requests, index, status)
-has the same effect as the execution of :ref:`MPI_Wait(`&array_of_requests[i],
+The execution of MPI_Waitany(count, array_of_requests, index, status)
+has the same effect as the execution of MPI_Wait(&array_of_requests[i],
 status), where i is the value returned by index (unless the value of
-index is :ref:`MPI_UNDEFINED)`. :ref:`MPI_Waitany` with an array containing one active
+index is MPI_UNDEFINED). :ref:`MPI_Waitany` with an array containing one active
 entry is equivalent to :ref:`MPI_Wait`.
 
 If your application does not need to examine the *status* field, you can
-save resources by using the predefined constant :ref:`MPI_STATUS_IGNORE` as a
+save resources by using the predefined constant MPI_STATUS_IGNORE as a
 special value for the *status* argument.
 
 **Example:** Client-server code (starvation can occur).
@@ -116,16 +116,16 @@ called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
 :ref:`MPI_Comm_set_errhandler`, :ref:`MPI_File_set_errhandler`, or
 :ref:`MPI_Win_set_errhandler` (depending on the type of MPI handle that
-generated the request); the predefined error handler :ref:`MPI_ERRORS_RETURN`
+generated the request); the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 Note that per MPI-1 section 3.2.5, MPI errors on requests passed to
-:ref:`MPI_WAITANY` do not set the status.:ref:`MPI_ERROR` field in the returned
+:ref:`MPI_WAITANY` do not set the status.MPI_ERROR field in the returned
 status. The error code is passed to the back-end error handler and may
 be passed back to the caller through the return value of :ref:`MPI_WAITANY` if
 the back-end error handler returns it. The pre-defined MPI error handler
-:ref:`MPI_ERRORS_RETURN` exhibits this behavior, for example.
+MPI_ERRORS_RETURN exhibits this behavior, for example.
 
 
 .. seealso:: | :ref:`MPI_Comm_set_errhandler` | :ref:`MPI_File_set_errhandler` | :ref:`MPI_Test` | :ref:`MPI_Testall` | :ref:`MPI_Testany` | :ref:`MPI_Testsome` | :ref:`MPI_Wait` | :ref:`MPI_Waitall` | :ref:`MPI_Waitsome` | :ref:`MPI_Win_set_errhandler` 

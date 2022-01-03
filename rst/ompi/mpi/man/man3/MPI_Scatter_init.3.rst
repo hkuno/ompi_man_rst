@@ -1,6 +1,8 @@
-.. _MPI_Scatter_init:
-================
-MPI_Scatter_init
-================
+.. _mpi_scatter_init:
  
+================
+mpi_scatter_init
+================
+
 .. include:: ../man3/MPI_Scatter.3.rst
+

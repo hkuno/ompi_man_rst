@@ -1,10 +1,10 @@
-.. _MPI_Comm_create_keyval:
+.. _mpi_comm_create_keyval:
 
 MPI_Comm_create_keyval
 ~~~~~~~~~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Comm_create_keyval`  - Generates a new attribute key.
+:ref:`MPI_Comm_create_keyval` - Generates a new attribute key.
 
 Syntax
 ======
@@ -69,18 +69,18 @@ Output Parameter
 Description
 ===========
 
-This function replaces :ref:`MPI_Keyval_create` , the use of which is
+This function replaces :ref:`MPI_Keyval_create`, the use of which is
 deprecated. The C binding is identical. The Fortran binding differs in
 that ``extra_state`` is an address-sized integer. Also, the copy and
 delete callback functions have Fortran bindings that are consistent with
 address-sized attributes. The argument ``comm_copy_attr_fn`` may be
-specified as :ref:`MPI_COMM_NULL_COPY_FN`  or :ref:`MPI_COMM_DUP_FN`  from C or
-Fortran. :ref:`MPI_COMM_NULL_COPY_FN`  is a function that does nothing more
-than returning ``flag = 0`` and :ref:`MPI_SUCCESS` . :ref:`MPI_COMM_DUP_FN`  is
+specified as MPI_COMM_NULL_COPY_FN or MPI_COMM_DUP_FN from C or
+Fortran. MPI_COMM_NULL_COPY_FN is a function that does nothing more
+than returning ``flag = 0`` and MPI_SUCCESS. MPI_COMM_DUP_FN is
 a simple-minded copy function that sets ``flag = 1``, returns the value
 of ``attribute_val_in`` in ``attribute_val_out``, and returns
-:ref:`MPI_SUCCESS` . These replace the MPI-1 predefined callbacks
-:ref:`MPI_NULL_COPY_FN`  and :ref:`MPI_DUP_FN` , the use of which is deprecated.
+MPI_SUCCESS. These replace the MPI-1 predefined callbacks
+MPI_NULL_COPY_FN and MPI_DUP_FN, the use of which is deprecated.
 The two C callback functions are:
 
 .. code:: c
@@ -133,8 +133,8 @@ of the function and Fortran routines in the last argument. Before the
 error value is returned, the current MPI error handler is called. By
 default, this error handler aborts the MPI job, except for I/O function
 errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error. See the MPI man page for a full list of MPI error codes. SEE
 ALSO

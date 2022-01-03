@@ -1,4 +1,4 @@
-.. _MPI_T_pvar_read:
+.. _mpi_t_pvar_read:
 
 MPI_T_pvar_read
 ~~~~~~~~~~~~~~~
@@ -38,15 +38,15 @@ to hold the entire value of the performance variable.
 ERRORS
 ======
 
-:ref:`MPI_T_pvar_read()` will fail if:
+MPI_T_pvar_read() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_HANDLE]`
+[MPI_T_ERR_INVALID_HANDLE]
    The handle is invalid or not associated with the session
 
-[:ref:`MPI_T_ERR_INVALID_SESSION]`
+[MPI_T_ERR_INVALID_SESSION]
    Session argument is not a valid session
 
 

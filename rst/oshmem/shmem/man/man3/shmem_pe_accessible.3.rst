@@ -49,4 +49,4 @@ Fortran
    for SHMEM functions; otherwise, it is .FALSE..
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_addr_accessible` \ (3)
+.. seealso:: *intro_shmem\ (3), *:ref:`shmem_addr_accessible` \ (3)

@@ -1,4 +1,4 @@
-.. _MPI_Comm_set_info:
+.. _mpi_comm_set_info:
 
 MPI_Comm_set_info
 ~~~~~~~~~~~~~~~~~
@@ -64,12 +64,12 @@ with the same value in each process's *info* object.
 The following info key assertions may be accepted by Open MPI:
 
 *mpi_assert_no_any_tag* (boolean): If set to true, then the
-implementation may assume that the process will not use the :ref:`MPI_ANY_TAG`
+implementation may assume that the process will not use the MPI_ANY_TAG
 wildcard on the given communicator.
 
 *mpi_assert_no_any_source* (boolean): If set to true, then the
 implementation may assume that the process will not use the
-:ref:`MPI_ANY_SOURCE` wildcard on the given communicator.
+MPI_ANY_SOURCE wildcard on the given communicator.
 
 *mpi_assert_exact_length* (boolean): If set to true, then the
 implementation may assume that the lengths of messages received by the
@@ -94,9 +94,9 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Comm_get_info,`  :ref:`MPI_Info_create,`  :ref:`MPI_Info_set,`  :ref:`MPI_Info_free` 
+.. seealso:: MPI_Comm_get_info, MPI_Info_create, MPI_Info_set, :ref:`MPI_Info_free` 

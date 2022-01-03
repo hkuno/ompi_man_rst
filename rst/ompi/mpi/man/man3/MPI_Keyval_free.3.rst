@@ -1,4 +1,4 @@
-.. _MPI_Keyval_free:
+.. _mpi_keyval_free:
 
 MPI_Keyval_free
 ~~~~~~~~~~~~~~~
@@ -45,7 +45,7 @@ Note that use of this routine is *deprecated* as of MPI-2. Please use
 :ref:`MPI_Comm_free_keyval` instead.
 
 Frees an extant attribute key. This function sets the value of keyval to
-:ref:`MPI_KEYVAL_INVALID`. Note that it is not erroneous to free an attribute
+MPI_KEYVAL_INVALID. Note that it is not erroneous to free an attribute
 key that is in use, because the actual free does not transpire until
 after all references (in other communicators on the process) to the key
 have been freed. These references need to be explicitly freed by the
@@ -67,7 +67,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -1,10 +1,10 @@
-.. _MPI_Graph_create:
+.. _mpi_graph_create:
 
 MPI_Graph_create
 ~~~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Graph_create`  - Makes a new communicator to which topology
+:ref:`MPI_Graph_create` - Makes a new communicator to which topology
 information has been attached.
 
 Syntax
@@ -68,13 +68,13 @@ Output Parameters
 Description
 ===========
 
-:ref:`MPI_Graph_create`  returns a handle to a new communicator to which the
+:ref:`MPI_Graph_create` returns a handle to a new communicator to which the
 graph topology information is attached. If ``reorder`` = false then the
 rank of each process in the new group is identical to its rank in the
 old group. Otherwise, the function may ``reorder`` the processes. If the
 size, ``nnodes``, of the graph is smaller than the size of the group of
-``comm_old``, then some processes are returned :ref:`MPI_COMM_NULL` , in
-analogy to :ref:`MPI_Cart_create`  and :ref:`MPI_Comm_split` . The call is
+``comm_old``, then some processes are returned MPI_COMM_NULL, in
+analogy to :ref:`MPI_Cart_create` and :ref:`MPI_Comm_split`. The call is
 erroneous if it specifies a graph that is larger than the group size of
 the input communicator.
 
@@ -132,10 +132,10 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Graph_get`:ref:`MPI_Graphdims_get`
+.. seealso:: :ref:`MPI_Graph_get` :ref:`MPI_Graphdims_get` 

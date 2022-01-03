@@ -1,4 +1,4 @@
-.. _MPI_Group_union:
+.. _mpi_group_union:
 
 MPI_Group_union
 ~~~~~~~~~~~~~~~
@@ -77,7 +77,7 @@ group is determined primarily by order in the first group (if possible)
 and then, if necessary, by order in the second group. Neither union nor
 intersection are commutative, but both are associative.
 
-The new group can be empty, that is, equal to :ref:`MPI_GROUP_EMPTY`.
+The new group can be empty, that is, equal to MPI_GROUP_EMPTY.
 
 ERRORS
 ======
@@ -88,7 +88,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -1,4 +1,4 @@
-.. _MPI_T:
+.. _mpi_t:
 
 MPI_T
 ~~~~~
@@ -42,7 +42,7 @@ initialized may affect *how* MPI is initialized (e.g., by influencing
 which frameworks and components are selected).
 
 The following example sets the ``pml`` and ``btl`` MCA params before
-invoking :ref:`MPI_Init(3)`  in order to force a specific selection of PML
+invoking :ref:`MPI_Init` in order to force a specific selection of PML
 and BTL components:
 
 .. code:: c
@@ -123,4 +123,4 @@ Open MPI's MPI_T categories are organized hierarchically:
       framework in the ``opal`` layer.
 
 
-.. seealso:: :ref:`MPI_T_init`:ref:`MPI_T_finalize`
+.. seealso:: MPI_T_init:ref:`MPI_T_finalize` 

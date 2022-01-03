@@ -1,10 +1,10 @@
-.. _MPI_Status_f082f:
+.. _mpi_status_f082f:
 
 MPI_Status_f082f
 ~~~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Status_f082f` , :ref:`MPI_Status_c2f08`  - Translates a Fortran 2008 status
+:ref:`MPI_Status_f082f`, MPI_Status_c2f08 - Translates a Fortran 2008 status
 into a Fortran INTEGER-style status, or vice versa.
 
 SYNTAX
@@ -67,18 +67,18 @@ These two procedures are provided to convert from a Fortran 2008 status
 on all the information in ``status``, including that which is hidden.
 That is, no status information is lost in the conversion.
 
-When using :ref:`MPI_Status_f082f()` , if ``f08_status`` is a valid Fortran
-status, but not the Fortran value of :ref:`MPI_F08_STATUS_IGNORE`  (in C),
-:ref:`MPI_STATUS_IGNORE`  (in Fortran) or :ref:`MPI_F08_STATUSES_IGNORE`  (in C)
-or :ref:`MPI_STATUSES_IGNORE`  (in Fortran), then :ref:`MPI_Status_f082f()` 
+When using MPI_Status_f082f(), if ``f08_status`` is a valid Fortran
+status, but not the Fortran value of MPI_F08_STATUS_IGNORE (in C),
+MPI_STATUS_IGNORE (in Fortran) or MPI_F08_STATUSES_IGNORE (in C)
+or MPI_STATUSES_IGNORE (in Fortran), then MPI_Status_f082f()
 returns in ``f_status`` a valid array with the same content. If
-``f08_status`` is the C value of :ref:`MPI_F08_STATUS_IGNORE`  or
-:ref:`MPI_F08_STATUSES_IGNORE`  or the Fortran value of
-:ref:`MPI_STATUS_IGNORE`  or :ref:`MPI_STATUSES_IGNORE` , or if ``f08_status``
+``f08_status`` is the C value of MPI_F08_STATUS_IGNORE or
+MPI_F08_STATUSES_IGNORE or the Fortran value of
+MPI_STATUS_IGNORE or MPI_STATUSES_IGNORE, or if ``f08_status``
 is not a valid Fortran status, then the call is erroneous.
 
-When using :ref:`MPI_Status_f2f08()` , the opposite conversion is applied.
-If ``f_status`` is :ref:`MPI_STATUS_IGNORE`  or :ref:`MPI_STATUSES_IGNORE` , or
+When using MPI_Status_f2f08(), the opposite conversion is applied.
+If ``f_status`` is MPI_STATUS_IGNORE or MPI_STATUSES_IGNORE, or
 if ``f_status`` is not a valid Fortran status, then the call is
 erroneous.
 
@@ -94,7 +94,7 @@ NOTES
 
 The Fortran subroutines for these MPI routines are only available in the
 ``mpi`` and ``mpi_f08`` modules (including the type specification for
-``TYPE(:ref:`MPI_Status)` ; they are (intentionally) not available in``\ mpif.h`.
+``TYPE(MPI_Status); they are (intentionally) not available in``\ mpif.h`.
 
 
-.. seealso:: :ref:`MPI_Status_c2f`:ref:`MPI_Status_f2c`:ref:`MPI_Status_f082c`:ref:`MPI_Status_c2f08`
+.. seealso:: MPI_Status_c2f:ref:`MPI_Status_f2c` :ref:`MPI_Status_f082c` MPI_Status_c2f08

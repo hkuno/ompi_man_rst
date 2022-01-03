@@ -1,4 +1,4 @@
-.. _MPI_T_category_changed:
+.. _mpi_t_category_changed:
 
 MPI_T_category_changed
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -33,7 +33,7 @@ added or changed.
 ERRORS
 ======
 
-:ref:`MPI_T_category_changed()` will fail if:
+MPI_T_category_changed() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized

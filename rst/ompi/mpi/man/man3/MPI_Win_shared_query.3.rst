@@ -1,4 +1,4 @@
-.. _MPI_Win_shared_query:
+.. _mpi_win_shared_query:
 
 MPI_Win_shared_query
 ~~~~~~~~~~~~~~~~~~~~
@@ -73,9 +73,9 @@ return different process-local addresses for the same physical memory on
 different processes. The returned memory can be used for load/store
 accesses subject to the constraints defined in MPI-3.1 � 11.7. This
 function can only be called with windows of flavor
-:ref:`MPI_WIN_FLAVOR_SHARED`. If the passed window is not of flavor
-:ref:`MPI_WIN_FLAVOR_SHARED`, the error :ref:`MPI_ERR_RMA_FLAVOR` is raised. When rank
-is :ref:`MPI_PROC_NULL`, the *pointer*, *disp_unit*, and *size* returned are
+MPI_WIN_FLAVOR_SHARED. If the passed window is not of flavor
+MPI_WIN_FLAVOR_SHARED, the error MPI_ERR_RMA_FLAVOR is raised. When rank
+is MPI_PROC_NULL, the *pointer*, *disp_unit*, and *size* returned are
 the pointer, disp_unit, and size of the memory segment belonging the
 lowest rank that specified *size* > 0. If all processes in the group
 attached to the window specified *size* = 0, then the call returns
@@ -98,7 +98,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

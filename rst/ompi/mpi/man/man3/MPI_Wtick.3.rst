@@ -1,4 +1,4 @@
-.. _MPI_Wtick:
+.. _mpi_wtick:
 
 MPI_Wtick
 ~~~~~~~~~

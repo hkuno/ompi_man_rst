@@ -203,4 +203,4 @@ program. Compile this example with the -lsma compiler option.
    END
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_get` \ (3), *:ref:`shmem_quiet` \ (3)
+.. seealso:: *intro_shmem\ (3), *shmem_get\ (3), *:ref:`shmem_quiet` \ (3)

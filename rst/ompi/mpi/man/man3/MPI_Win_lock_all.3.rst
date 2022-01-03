@@ -1,4 +1,4 @@
-.. _MPI_Win_lock_all:
+.. _mpi_win_lock_all:
 
 MPI_Win_lock_all
 ~~~~~~~~~~~~~~~~
@@ -57,7 +57,7 @@ DESCRIPTION
 ===========
 
 Starts an RMA access epoch to all processes in *win*, with a lock type
-of :ref:`MPI_LOCK_SHARED`. During the epoch, the calling process can access the
+of MPI_LOCK_SHARED. During the epoch, the calling process can access the
 window memory on all processes in *win* by using RMA operations. A
 window locked with :ref:`MPI_Win_lock_all` must be unlocked with
 :ref:`MPI_Win_unlock_all`. This routine is not collective — the ALL refers to a
@@ -77,7 +77,7 @@ the call that may be used for various optimizations. (See Section 6.4.4
 of the MPI-2 Standard.) A value of *assert* = 0 is always valid. The
 following assertion value is supported:
 
-:ref:`MPI_MODE_NOCHECK`
+MPI_MODE_NOCHECK
    No other processes will hold or attempt to acquire a conflicting lock
    while the caller holds the window lock.
 
@@ -99,7 +99,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

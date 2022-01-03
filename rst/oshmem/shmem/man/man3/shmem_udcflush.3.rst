@@ -76,4 +76,4 @@ These routines have been retained for improved backward compatability
 with legacy architectures.
 
 
-.. seealso:: *intro_:ref:`shmem` \ (3), *:ref:`shmem_put` \ (3), *:ref:`shmem_swap` \ (3)
+.. seealso:: *intro_shmem\ (3), *shmem_put\ (3), *:ref:`shmem_swap` \ (3)

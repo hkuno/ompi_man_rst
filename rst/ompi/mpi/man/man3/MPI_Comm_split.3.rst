@@ -1,4 +1,4 @@
-.. _MPI_Comm_split:
+.. _mpi_comm_split:
 
 MPI_Comm_split
 ~~~~~~~~~~~~~~
@@ -67,27 +67,27 @@ processes of the same color. Within each subgroup, the processes are
 ranked in the order defined by the value of the argument key, with ties
 broken according to their rank in the old group. A new communicator is
 created for each subgroup and returned in newcomm. A process may supply
-the color value :ref:`MPI_UNDEFINED`, in which case newcomm returns
-:ref:`MPI_COMM_NULL`. This is a collective call, but each process is permitted
+the color value MPI_UNDEFINED, in which case newcomm returns
+MPI_COMM_NULL. This is a collective call, but each process is permitted
 to provide different values for color and key.
 
 When you call :ref:`MPI_Comm_split` on an inter-communicator, the processes on
 the left with the same color as those on the right combine to create a
 new inter-communicator. The key argument describes the relative rank of
 processes on each side of the inter-communicator. The function returns
-:ref:`MPI_COMM_NULL` for those colors that are specified on only one side of
-the inter-communicator, or for those that specify :ref:`MPI_UNDEFINED` as the
+MPI_COMM_NULL for those colors that are specified on only one side of
+the inter-communicator, or for those that specify MPI_UNDEFINED as the
 color.
 
-A call to :ref:`MPI_Comm_create(comm`, *group*, *newcomm*) is equivalent to a
-call to :ref:`MPI_Comm_split(comm`, *color*,\ *key*, *newcomm*), where all
+A call to MPI_Comm_create(comm, *group*, *newcomm*) is equivalent to a
+call to MPI_Comm_split(comm, *color*,\ *key*, *newcomm*), where all
 members of *group* provide *color* = 0 and *key* = rank in group, and
 all processes that are not members of *group* provide *color* =
-:ref:`MPI_UNDEFINED`. The function :ref:`MPI_Comm_split` allows more general
+MPI_UNDEFINED. The function :ref:`MPI_Comm_split` allows more general
 partitioning of a group into one or more subgroups with optional
 reordering.
 
-The value of *color* must be nonnegative or :ref:`MPI_UNDEFINED`.
+The value of *color* must be nonnegative or MPI_UNDEFINED.
 
 NOTES
 =====
@@ -125,7 +125,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

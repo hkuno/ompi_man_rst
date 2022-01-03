@@ -1,4 +1,4 @@
-.. _MPI_Win_free:
+.. _mpi_win_free:
 
 MPI_Win_free
 ~~~~~~~~~~~~
@@ -53,7 +53,7 @@ DESCRIPTION
 ===========
 
 :ref:`MPI_Win_free` frees the window object *win* and returns a null handle
-(equal to :ref:`MPI_WIN_NULL)`. This collective call is executed by all
+(equal to MPI_WIN_NULL). This collective call is executed by all
 processes in the group associated with *win*. It can be invoked by a
 process only after it has completed its involvement in RMA
 communications on window *win*, that is, the process has called
@@ -76,7 +76,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

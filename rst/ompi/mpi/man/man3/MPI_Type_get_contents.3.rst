@@ -1,4 +1,4 @@
-.. _MPI_Type_get_contents:
+.. _mpi_type_get_contents:
 
 MPI_Type_get_contents
 ~~~~~~~~~~~~~~~~~~~~~
@@ -114,9 +114,9 @@ returned.*
 
 In the MPI-1 data-type constructor calls, the address arguments in
 Fortran are of type INTEGER. In the new MPI-2 calls, the address
-arguments are of type INTEGER(KIND=:ref:`MPI_ADDRESS_KIND)`. The call
+arguments are of type INTEGER(KIND=MPI_ADDRESS_KIND). The call
 :ref:`MPI_Type_get_contents` returns all addresses in an argument of type
-INTEGER(KIND=:ref:`MPI_ADDRESS_KIND)`. This is true even if the old MPI-1 calls
+INTEGER(KIND=MPI_ADDRESS_KIND). This is true even if the old MPI-1 calls
 were used. Thus, the location of values returned can be thought of as
 being returned by the C bindings. It can also be determined by examining
 the new MPI-2 calls for data-type constructors for the deprecated MPI-1
@@ -133,7 +133,7 @@ use the non-portable syntax
 
         INTEGER*MPI_ADDRESS_KIND ARRAY_OF_ADDRESSES(*)
 
-where :ref:`MPI_ADDRESS_KIND` is a constant defined in mpif.h and gives the
+where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
@@ -145,7 +145,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

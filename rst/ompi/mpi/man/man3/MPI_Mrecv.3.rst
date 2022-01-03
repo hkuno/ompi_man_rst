@@ -1,4 +1,4 @@
-.. _MPI_Mrecv:
+.. _mpi_mrecv:
 
 MPI_Mrecv
 ~~~~~~~~~
@@ -70,10 +70,10 @@ DESCRIPTION
 The functions :ref:`MPI_Mrecv` and :ref:`MPI_Imrecv` receive messages that have been
 previously matched by a matching probe.
 
-If :ref:`MPI_Mrecv` is called with :ref:`MPI_MESSAGE_NULL` as the message argument,
+If :ref:`MPI_Mrecv` is called with MPI_MESSAGE_NULL as the message argument,
 the call returns immediately with the *status* object set to *source* =
-:ref:`MPI_PROC_NULL`, *tag* = :ref:`MPI_ANY_TAG`, and *count* = 0, as if a receive
-from :ref:`MPI_PROC_NULL` was issued.
+MPI_PROC_NULL, *tag* = MPI_ANY_TAG, and *count* = 0, as if a receive
+from MPI_PROC_NULL was issued.
 
 ERRORS
 ======
@@ -84,7 +84,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

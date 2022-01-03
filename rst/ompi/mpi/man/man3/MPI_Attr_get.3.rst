@@ -1,4 +1,4 @@
-.. _MPI_Attr_get:
+.. _mpi_attr_get:
 
 MPI_Attr_get
 ~~~~~~~~~~~~
@@ -56,7 +56,7 @@ have a mpi_f08 binding.
 Retrieves attribute value by key. The call is erroneous if there is no
 key with value keyval. On the other hand, the call is correct if the key
 value exists, but no attribute is attached on comm for that key; in such
-case, the call returns flag = false. In particular :ref:`MPI_KEYVAL_INVALID` is
+case, the call returns flag = false. In particular MPI_KEYVAL_INVALID is
 an erroneous key value.
 
 ERRORS
@@ -68,7 +68,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

@@ -1,6 +1,8 @@
-.. _MPI_Iscan:
-=========
-MPI_Iscan
-=========
+.. _mpi_iscan:
  
+=========
+mpi_iscan
+=========
+
 .. include:: ../man3/MPI_Scan.3.rst
+

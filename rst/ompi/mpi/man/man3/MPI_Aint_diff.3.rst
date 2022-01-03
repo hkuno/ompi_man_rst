@@ -1,6 +1,8 @@
-.. _MPI_Aint_diff:
-=============
-MPI_Aint_diff
-=============
+.. _mpi_aint_diff:
  
+=============
+mpi_aint_diff
+=============
+
 .. include:: ../man3/MPI_Aint_add.3.rst
+

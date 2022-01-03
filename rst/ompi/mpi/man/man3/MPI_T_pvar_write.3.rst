@@ -1,4 +1,4 @@
-.. _MPI_T_pvar_write:
+.. _mpi_t_pvar_write:
 
 MPI_T_pvar_write
 ~~~~~~~~~~~~~~~~
@@ -38,18 +38,18 @@ the entire value of the performance variable.
 ERRORS
 ======
 
-:ref:`MPI_T_pvar_write()` will fail if:
+MPI_T_pvar_write() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_HANDLE]`
+[MPI_T_ERR_INVALID_HANDLE]
    The handle is invalid or not associated with the session
 
-[:ref:`MPI_T_ERR_INVALID_SESSION]`
+[MPI_T_ERR_INVALID_SESSION]
    Session argument is not a valid session
 
-[:ref:`MPI_T_ERR_PVAR_NO_WRITE]`
+[MPI_T_ERR_PVAR_NO_WRITE]
    Variable cannot be written
 
 

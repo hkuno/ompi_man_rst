@@ -1,4 +1,4 @@
-.. _MPI_Probe:
+.. _mpi_probe:
 
 MPI_Probe
 ~~~~~~~~~
@@ -70,7 +70,7 @@ receive buffer, according to the length of the probed message.
 returns only after a matching message has been found.
 
 If your application does not need to examine the *status* field, you can
-save resources by using the predefined constant :ref:`MPI_STATUS_IGNORE` as a
+save resources by using the predefined constant MPI_STATUS_IGNORE as a
 special value for the *status* argument.
 
 The semantics of :ref:`MPI_Probe` and :ref:`MPI_Iprobe` guarantee progress: If a call
@@ -130,7 +130,7 @@ problem.
               END DO
           END IF
 
-We slightly modified Example 2, using :ref:`MPI_ANY_SOURCE` as the source
+We slightly modified Example 2, using MPI_ANY_SOURCE as the source
 argument in the two receive calls in statements labeled 100 and 200. The
 program is now incorrect: The receive operation may receive a message
 that is distinct from the message probed by the preceding call to
@@ -145,7 +145,7 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler`; the predefined error handler :ref:`MPI_ERRORS_RETURN`
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 

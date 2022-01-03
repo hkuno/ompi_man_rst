@@ -1,10 +1,10 @@
-.. _MPI_Comm_dup_with_info:
+.. _mpi_comm_dup_with_info:
 
 MPI_Comm_dup_with_info
 ~~~~~~~~~~~~~~~~~~~~~~
 ====
 
-:ref:`MPI_Comm_dup_with_info`  - Duplicates an existing communicator using
+:ref:`MPI_Comm_dup_with_info` - Duplicates an existing communicator using
 provided info.
 
 Syntax
@@ -58,11 +58,11 @@ Output Parameters
 Description
 ===========
 
-:ref:`MPI_Comm_dup_with_info`  acts exactly like :ref:`MPI_Comm_dup`  except
+:ref:`MPI_Comm_dup_with_info` acts exactly like :ref:`MPI_Comm_dup` except
 that the ``info`` hints associated with the communicator ``comm`` are
 not duplicated in ``newcomm``. The hints provided by the argument
 ``info`` are associated with the output communicator ``newcomm``
-instead. See :ref:`MPI_Comm_set_info(3)`  for the list of recognized
+instead. See :ref:`MPI_Comm_set_info` for the list of recognized
 ``info`` keys.
 
 Notes
@@ -74,8 +74,8 @@ original communicator. This includes any attributes (see below) and
 topologies (see Chapter 6, "Process Topologies," in the MPI-1 Standard).
 This call is valid even if there are pending point-to-point
 communications involving the communicator ``comm``. A typical call might
-involve an :ref:`MPI_Comm_dup_with_info`  at the beginning of the parallel
-call, and an :ref:`MPI_Comm_free`  of that duplicated communicator at the
+involve an :ref:`MPI_Comm_dup_with_info` at the beginning of the parallel
+call, and an :ref:`MPI_Comm_free` of that duplicated communicator at the
 end of the call. Other models of communicator management are also
 possible. This call applies to both intra- and intercommunicators. Note
 that it is not defined by the MPI standard what happens if the attribute
@@ -92,10 +92,10 @@ of the function and Fortran routines in the last argument. Before the
 error value is returned, the current MPI error handler is called. By
 default, this error handler aborts the MPI job, except for I/O function
 errors. The error handler may be changed with
-:ref:`MPI_Comm_set_errhandler` ; the predefined error handler
-:ref:`MPI_ERRORS_RETURN`  may be used to cause error values to be returned.
+:ref:`MPI_Comm_set_errhandler`; the predefined error handler
+MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Comm_dup`:ref:`MPI_Comm_idup`:ref:`MPI_Comm_set_info`
+.. seealso:: :ref:`MPI_Comm_dup` :ref:`MPI_Comm_idup` :ref:`MPI_Comm_set_info` 

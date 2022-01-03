@@ -1,4 +1,4 @@
-.. _MPI_T_enum_get_item:
+.. _mpi_t_enum_get_item:
 
 MPI_T_enum_get_item
 ~~~~~~~~~~~~~~~~~~~
@@ -59,10 +59,10 @@ and the string is not returned. For more information see MPI-3 � 14.3.3.
 ERRORS
 ======
 
-:ref:`MPI_T_enum_get_item()` will fail if:
+MPI_T_enum_get_item() will fail if:
 
-[:ref:`MPI_T_ERR_NOT_INITIALIZED]`
+[MPI_T_ERR_NOT_INITIALIZED]
    The MPI Tools interface not initialized
 
-[:ref:`MPI_T_ERR_INVALID_INDEX]`
+[MPI_T_ERR_INVALID_INDEX]
    The enumeration is invalid or has been deleted
