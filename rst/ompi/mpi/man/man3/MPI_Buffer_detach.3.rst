@@ -1,17 +1,17 @@
 .. _mpi_buffer_detach:
 
 MPI_Buffer_detach
-~~~~~~~~~~~~~~~~~
-====
+=================
+.. include_body
 
 :ref:`MPI_Buffer_detach` - Removes an existing buffer (for use in in
 :ref:`MPI_Bsend`, etc.)
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Buffer_detach(void *buf, int *size)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -32,7 +32,7 @@ Fortran Syntax
        INTEGER SIZE, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -45,14 +45,14 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Output Parameters
-=================
+-----------------
 
 -  ``buf`` : Initial buffer address (choice).
 -  ``size`` : Buffer size, in bytes (integer).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 Detach the buffer currently associated with MPI. The call returns the
 address and the size of the detached buffer. This operation will block
@@ -76,7 +76,7 @@ Example: Calls to attach and detach buffers.
    /* Buffer of 10000 bytes available again */
 
 Notes
-=====
+-----
 
 The reason that :ref:`MPI_Buffer_detach` returns the address and size of
 the buffer being detached is to allow nested libraries to replace and
@@ -113,7 +113,7 @@ MPI_Buffer_attach; the address of the pointer is passed to
 MPI_Buffer_detach, so that this call can return the pointer value.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

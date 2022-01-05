@@ -1,7 +1,8 @@
 .. _shmem_short_sum_to_all:
 
 shmem_short_sum_to_all
-~~~~~~~~~~~~~~~~~~~~~~
+======================
+.. include_body
 
 *shmem_comp4_sum_to_all*\ (3), *shmem_comp8_sum_to_all*\ (3),
 *shmem_complexd_sum_to_all*\ (3), *shmem_complexf_sum_to_all*\ (3),
@@ -14,7 +15,7 @@ shmem_short_sum_to_all
 a sum reduction across a set of processing elements (PEs)
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -94,7 +95,7 @@ Fortran:
    & PE_start, logPE_stride, PE_size, pWrk, pSync)
 
 DESCRIPTION
-===========
+-----------
 
 The shared memory (SHMEM) reduction routines compute one or more
 reductions across symmetric arrays on multiple virtual PEs. A reduction
@@ -215,7 +216,7 @@ local PE: The target array is updated. The values in the pSync array are
 restored to the original values.
 
 NOTES
-=====
+-----
 
 The terms collective, symmetric, and cache aligned are defined in
 *intro_shmem*\ (3).
@@ -239,7 +240,7 @@ being called with the same active set, you can allocate two pSync and
 pWrk arrays and alternate between them on successive calls.
 
 EXAMPLES
-========
+--------
 
 **Example 1:** This Fortran example statically initializes the pSync
 array and finds the sum of the real variable FOO across all even PEs.

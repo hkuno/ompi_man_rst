@@ -1,16 +1,17 @@
 .. _mpi_parrived:
 
 MPI_Parrived
-~~~~~~~~~~~~
+============
+.. include_body
 
 :ref:`MPI_Parrived` - Tests for completion of a specified receive-side
 partition.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Parrived(MPI_Request *request, int partition, int *flag)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	REQUEST, PARTITION, FLAG(*), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -43,21 +44,21 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``request``: Communication request (handle). 
 
 * ``partition``: The number of the partition to test for completion (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``flag``: True if partition is completed. 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

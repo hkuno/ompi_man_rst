@@ -1,7 +1,8 @@
 .. _shmem_collect32:
 
 shmem_collect32
-~~~~~~~~~~~~~~~
+===============
+.. include_body
 
 *shmem_collect4*\ (3), *shmem_collect8*\ (3), *shmem_collect32*\ (3),
 *shmem_collect64*\ (3), *shmem_fcollect*\ (3), *shmem_fcollect4*\ (3),
@@ -10,7 +11,7 @@ shmem_collect32
 an array in every PE
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -59,7 +60,7 @@ Fortran:
    & logPE_stride, PE_size, pSync)
 
 DESCRIPTION
-===========
+-----------
 
 The shared memory (SHMEM) collect and fcollect routines concatenate
 nelems 64-bit or 32-bit data items from the source array into the target
@@ -153,7 +154,7 @@ local PE: The target array is updated. The values in the pSync array are
 restored to the original values.
 
 NOTES
-=====
+-----
 
 The terms collective and symmetric are defined in *intro_shmem*\ (3).
 All SHMEM collective routines reset the values in pSync before they
@@ -179,7 +180,7 @@ non-power-of-two PE_size with some performance degradation. They operate
 with no performance degradation when nelems is a non-power-of-two value.
 
 EXAMPLES
-========
+--------
 
 C/C++:
 

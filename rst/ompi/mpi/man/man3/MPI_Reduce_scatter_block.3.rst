@@ -1,17 +1,18 @@
 .. _mpi_reduce_scatter_block:
 
 MPI_Reduce_scatter_block
-~~~~~~~~~~~~~~~~~~~~~~~~
+========================
+.. include_body
 
-:ref:`MPI_Reduce_scatter_block`, MPI_Ireduce_scatter_block,
-MPI_Reduce_scatter_block_init - Combines values and scatters the
+:ref:`MPI_Reduce_scatter_block`, :ref:`MPI_Ireduce_scatter_block`,
+:ref:`MPI_Reduce_scatter_block_init` - Combines values and scatters the
 results in blocks.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -28,7 +29,7 @@ C Syntax
    	MPI_Datatype datatype, MPI_Op op, MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -52,7 +53,7 @@ Fortran Syntax
    	INTEGER	RECVCOUNT, DATATYPE, OP, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -92,7 +93,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Starting address of send buffer (choice). 
 
@@ -107,7 +108,7 @@ INPUT PARAMETERS
 * ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Starting address of receive buffer (choice). 
 
@@ -116,7 +117,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Reduce_scatter_block` first does an element-wise reduction on vector
 of *count* = n \* *recvcount* elements in the send buffer defined by
@@ -128,7 +129,7 @@ elements. The ith segment is sent to process i and stored in the receive
 buffer defined by *recvbuf*, *recvcount*, and *datatype*.
 
 USE OF IN-PLACE OPTION
-======================
+--- -- -------- ------
 
 When the communicator is an intracommunicator, you can perform a
 reduce-scatter operation in-place (the output buffer is used as the
@@ -138,7 +139,7 @@ receive buffer. The area occupied by the input data may be either longer
 or shorter than the data filled by the output data.
 
 WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
-==========================================
+---- ------------ -- -- ------------------
 
 When the communicator is an inter-communicator, the reduce-scatter
 operation occurs in two phases. First, the result of the reduction
@@ -151,7 +152,7 @@ and the sum of the *recvcounts* values should be the same for both
 groups.
 
 NOTES ON COLLECTIVE OPERATIONS
-==============================
+----- -- ---------- ----------
 
 The reduction functions ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call
@@ -163,7 +164,7 @@ The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,17 +1,18 @@
 .. _mpi_add_error_class:
 
 MPI_Add_error_class
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
 ::
 
    MPI_Add_error_class - Creates a new error class and returns its value
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    int MPI_Add_error_class(int *errorclass)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	INTEGER	ERRORCLASS, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,19 +43,19 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``errorclass``: New error class (integer). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The function :ref:`MPI_Add_error_class` creates a new, local error class.
 
 NOTES
-=====
+-----
 
 Because this function is local, the same value of *errorclass* may not
 be returned on all processes that make this call, even if they call the
@@ -72,7 +73,7 @@ that an application will create them in significant numbers.
 The value returned is always greater than or equal to MPI_ERR_LASTCODE.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

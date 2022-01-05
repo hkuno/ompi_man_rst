@@ -1,13 +1,14 @@
 .. _shmem_info_get_name:
 
 shmem_info_get_name
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
 shmem_info_get_name - This routine returns the vendor defined character
 string.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -27,7 +28,7 @@ Fortran:
    CHARACTER *(*)NAME
 
 DESCRIPTION
-===========
+-----------
 
 shmem_info_get_name() This routine returns the vendor defined character
 string of size defined by the constant SHMEM_MAX_NAME_LEN. The program

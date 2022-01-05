@@ -1,16 +1,17 @@
 .. _mpi_file_set_info:
 
 MPI_File_set_info
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 :ref:`MPI_File_set_info` - Sets new values for hints (collective).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_File_set_info(MPI_File fh, MPI_Info info)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	FH, INFO, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,22 +43,22 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``fh``: File handle (handle). 
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``info``: Info object (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_set_info` is a collective routine that sets new values for the
 hints of the file associated with *fh*. These hints are set for each
@@ -70,7 +71,7 @@ process's info object. See the HINTS section for a list of hints that
 can be set.
 
 HINTS
-=====
+-----
 
 The following hints can be used as values for the *info* argument.
 
@@ -122,7 +123,7 @@ NON-SETTABLE HINTS:
 - filename: Access this hint to get the name of the file.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

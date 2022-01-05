@@ -1,16 +1,16 @@
 .. _mpi_finalize:
 
 MPI_Finalize
-~~~~~~~~~~~~
-====
+============
+.. include_body
 
 :ref:`MPI_Finalize` - Terminates MPI execution environment.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
    int MPI_Finalize()
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -30,7 +30,7 @@ Fortran Syntax
        INTEGER IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -40,12 +40,12 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Output Parameter
-================
+----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 This routine cleans up all MPI states. Once this routine is called, no
 MPI routine (not even :ref:`MPI_Init`) may be called, except for
@@ -64,7 +64,7 @@ collective over MPI_COMM_WORLD. Otherwise, it is collective over the
 union of all processes that have been and continue to be connected.
 
 Notes
-=====
+-----
 
 All processes must call this routine before exiting. All processes will
 still exist but may not make any further MPI calls. :ref:`MPI_Finalize`
@@ -97,7 +97,7 @@ callback functions. Once you have done this with MPI_COMM_SELF, the
 results of :ref:`MPI_Finalize` are not specified.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

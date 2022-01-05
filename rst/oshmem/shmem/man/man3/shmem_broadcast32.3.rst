@@ -1,7 +1,8 @@
 .. _shmem_broadcast32:
 
 shmem_broadcast32
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 *shmem_broadcast4*\ (3), *shmem_broadcast8*\ (3),
 *shmem_broadcast32*\ (3), *shmem_broadcast64*\ (3) - Copy a data object
@@ -9,7 +10,7 @@ from a designated PE to a target location on all other PEs of the active
 set.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -49,7 +50,7 @@ Fortran:
    & PE_root, PE_start, logPE_stride, PE_size, pSync)
 
 DESCRIPTION
-===========
+-----------
 
 The broadcast routines write the data at address source of the PE
 specified by **PE_root** to address **target** on all other PEs in the
@@ -135,7 +136,7 @@ is updated. The values in the pSync array are restored to the original
 values.
 
 NOTES
-=====
+-----
 
 The terms collective and symmetric are defined in *intro_shmem*\ (3).
 
@@ -158,7 +159,7 @@ called with the same active set, you can allocate two pSync arrays and
 alternate between them on successive calls.
 
 EXAMPLES
-========
+--------
 
 In the following examples, the call to shmem_broadcast64 copies source
 on PE 4 to target on PEs 5, 6, and 7.

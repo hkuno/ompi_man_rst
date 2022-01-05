@@ -1,15 +1,16 @@
 .. _mpi_comm_spawn:
 
 MPI_Comm_spawn
-~~~~~~~~~~~~~~
+==============
+.. include_body
 
 :ref:`MPI_Comm_spawn` - Spawns a number of identical binaries.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    	MPI_Comm *intercomm, int array_of_errcodes[])
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -35,7 +36,7 @@ Fortran Syntax
    	ARRAY_OF_ERRCODES(*), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -52,7 +53,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``command``: Name of program to be spawned (string, significant only at *root*). 
 
@@ -67,7 +68,7 @@ INPUT PARAMETERS
 * ``comm``: Intracommunicator containing group of spawning processes (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``intercomm``: Intercommunicator between original group and the newly spawned group (handle). 
 
@@ -76,7 +77,7 @@ OUTPUT PARAMETER
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Comm_spawn` tries to start *maxprocs* identical copies of the MPI
 program specified by *command*, establishing communication with them and
@@ -264,14 +265,14 @@ Fortran, an application may pass MPI_ERRCODES_IGNORE if it is not
 interested in the error codes.
 
 NOTES
-=====
+-----
 
 Completion of :ref:`MPI_Comm_spawn` in the parent does not necessarily mean
 that :ref:`MPI_Init` has been called in the children (although the returned
 intercommunicator can be used immediately).
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

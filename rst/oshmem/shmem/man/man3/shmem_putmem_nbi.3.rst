@@ -1,7 +1,8 @@
 .. _shmem_putmem_nbi:
 
 shmem_putmem_nbi
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 *shmem_putmem_nbi*\ (3), *shmem_char_put_nbi*\ (3),
 *shmem_short_put_nbi*\ (3), *shmem_int_put_nbi*\ (3),
@@ -14,7 +15,7 @@ for copying data from a contiguous local data object to a data object on
 a specified PE.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -99,7 +100,7 @@ Fortran:
    CALL SHMEM_PUT128_NBI(dest, source, nelems, pe)
 
 DESCRIPTION
-===========
+-----------
 
 The routines return after posting the operation. The operation is
 considered complete after a subsequent call to shmem_quiet. At the
@@ -133,12 +134,12 @@ example, a real variable must be declared as REAL, REAL*4, or
 REAL(KIND=4).
 
 NOTES
-=====
+-----
 
 See *intro_shmem*\ (3) for a definition of the term remotely accessible.
 
 EXAMPLES
-========
+--------
 
 Consider this simple example for C.
 

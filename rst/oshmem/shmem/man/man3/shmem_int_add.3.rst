@@ -1,14 +1,15 @@
 .. _shmem_int_add:
 
 shmem_int_add
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 *shmem_int_add*\ (3), *shmem_int4_add*\ (3), *shmem_int8_add*\ (3),
 *shmem_long_add*\ (3), *shmem_longlong_add*\ (3) - Performs an atomic
 add operation.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -35,7 +36,7 @@ Fortran:
    CALL SHMEM_INT8_ADD(target, value, pe)
 
 DESCRIPTION
-===========
+-----------
 
 The atomic add routines add **value** to the data at address **target**
 on PE **pe**. The operation completes without the possibility of another
@@ -62,7 +63,7 @@ pe
    value.
 
 NOTES
-=====
+-----
 
 The term remotely accessible is defined in *intro_shmem*\ (3).
 

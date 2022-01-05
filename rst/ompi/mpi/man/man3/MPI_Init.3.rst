@@ -1,15 +1,16 @@
 .. _mpi_init:
 
 MPI_Init
-~~~~~~~~
+========
+.. include_body
 
 :ref:`MPI_Init` - Initializes the MPI execution environment
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Init(int *argc, char ***argv)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER	IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -39,19 +40,19 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``argc``: C only: Pointer to the number of arguments. 
 
 * ``argv``: C only: Argument vector. 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This routine, or :ref:`MPI_Init_thread`, must be called before most other MPI
 routines are called. There are a small number of errors, such as
@@ -73,7 +74,7 @@ modifies, interprets, nor distributes them:
    	}
 
 NOTES
-=====
+-----
 
 The Fortran version does not have provisions for *argc* and *argv* and
 takes only IERROR.
@@ -85,7 +86,7 @@ external state of the program, such as opening files, reading standard
 input, or writing to standard output.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,16 +1,16 @@
 .. _mpi_get_address:
 
 MPI_Get_address
-~~~~~~~~~~~~~~~
-====
+===============
+.. include_body
 
 :ref:`MPI_Get_address` - Gets the address of a location in memory.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
    int MPI_Get_address(const void *location, MPI_Aint *address)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -32,7 +32,7 @@ Fortran Syntax
        INTEGER IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -44,18 +44,18 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``location`` : Location in caller memory (choice).
 
 Output Parameters
-=================
+-----------------
 
 -  ``address`` : Address of location (integer).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Get_address` returns the byte ``address`` of a location in
 memory.
@@ -73,7 +73,7 @@ Example: Using :ref:`MPI_Get_address` for an array.
    ! implementation dependent.
 
 Notes
-=====
+-----
 
 Current Fortran MPI codes will run unmodified and will port to any
 system. However, they may fail if ``addresses`` larger than 2^32 - 1 are
@@ -84,7 +84,7 @@ new functions. This provides compatibility with C and avoids errors on
 support KIND declarations.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,16 +1,16 @@
 .. _mpi_finalized:
 
 MPI_Finalized
-~~~~~~~~~~~~~
-====
+=============
+.. include_body
 
 :ref:`MPI_Finalized` - Checks whether MPI has been finalized
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
    int MPI_Finalized(int *flag)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -42,13 +42,13 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Output Parameter
-================
+----------------
 
 -  ``flag`` : True if MPI was finalized, and false otherwise (logical).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 This routine may be used to determine whether MPI has been finalized. It
 is one of a small number of routines that may be called before MPI is
@@ -56,7 +56,7 @@ initialized and after MPI has been finalized (:ref:`MPI_Initialized` is
 another).
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

@@ -1,13 +1,14 @@
 .. _shmem_barrier_all:
 
 shmem_barrier_all
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 shmem_barrier_all - Suspends the execution of the calling PE until all
 other PEs issue a call to this particular shmem_barrier_all() statement.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -28,7 +29,7 @@ Fortran:
    CALL SHMEM_BARRIER_ALL
 
 DESCRIPTION
-===========
+-----------
 
 The shmem_barrier_all routine does not return until all other PEs have
 entered this routine at the same point of the execution path.
@@ -38,7 +39,7 @@ completion of all previously issued local memory stores and remote
 memory updates issued via SHMEM functions such as *shmem_put32*\ (3).
 
 EXAMPLES
-========
+--------
 
 ::
 

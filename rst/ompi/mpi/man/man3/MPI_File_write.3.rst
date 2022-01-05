@@ -1,17 +1,18 @@
 .. _mpi_file_write:
 
 MPI_File_write
-~~~~~~~~~~~~~~
+==============
+.. include_body
 
 :ref:`MPI_File_write` - Writes a file starting at the location specified by
 the individual file pointer (blocking, noncollective).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -22,7 +23,7 @@ C Syntax
    	MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -35,7 +36,7 @@ Fortran Syntax
    	INTEGER	FH, COUNT, DATATYPE, STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -50,12 +51,12 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``fh``: File handle (handle). 
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``buf``: Initial address of buffer (choice). 
 
@@ -64,14 +65,14 @@ INPUT PARAMETERS
 * ``datatype``: Data type of each buffer element (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``status``: Status object (status). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_write` attempts to write into the file associated with *fh* (at
 the current individual file pointer position maintained by the system) a
@@ -85,7 +86,7 @@ It is erroneous to call this function if MPI_MODE_SEQUENTIAL mode was
 specified when the file was opened.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,18 +1,18 @@
 .. _mpi_get_accumulate:
 
 MPI_Get_accumulate
-~~~~~~~~~~~~~~~~~~
-====
+==================
+.. include_body
 
-:ref:`MPI_Get_accumulate`, MPI_Rget_accumulate - Combines the contents
+:ref:`MPI_Get_accumulate`, :ref:`MPI_Rget_accumulate` - Combines the contents
 of the origin buffer with that of a target buffer and returns the target
 buffer value.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -32,7 +32,7 @@ C Syntax
        MPI_Request *request)
 
 Fortran Syntax (See Fortran 77 Notes)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -56,7 +56,7 @@ Fortran Syntax (See Fortran 77 Notes)
            TARGET_RANK, TARGET_COUNT, TARGET_DATATYPE, OP, WIN, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -89,7 +89,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``origin_addr`` : Initial address of buffer (choice).
 -  ``origin_count`` : Number of entries in buffer (nonnegative integer).
@@ -109,13 +109,13 @@ Input Parameters
 -  ``win`` : Window object (handle).
 
 Output Parameter
-================
+----------------
 
--  MPI_Rget_accumulate: RMA request
+-  :ref:`MPI_Rget_accumulate`: RMA request
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Get_accumulate` is a function used for one-sided MPI
 communication that adds the contents of the origin buffer (as defined by
@@ -148,16 +148,16 @@ the assiciative function f(a, b) = a; that is the current value in the
 target memory is returned in the result buffer at the origin and no
 operation is performed on the target buffer.
 
-MPI_Rget_accumulate is similar to :ref:`MPI_Get_accumulate`, except
+:ref:`MPI_Rget_accumulate` is similar to :ref:`MPI_Get_accumulate`, except
 that it allocates a communication request object and associates it with
 the request handle (the argument request) that can be used to wait or
-test for completion. The completion of an MPI_Rget_accumulate
+test for completion. The completion of an :ref:`MPI_Rget_accumulate`
 operation indicates that the data is available in the result buffer and
 the origin buffer is free to be updated. It does not indicate that the
 operation has been completed at the target window.
 
 Fortran 77 Notes
-================
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 ``TARGET_DISP`` argument only for Fortran 90. FORTRAN 77 users may use
@@ -171,7 +171,7 @@ where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 Notes
-=====
+-----
 
 The generic functionality of :ref:`MPI_Get_accumulate` might limit the
 performance of fetch-and-increment or fetch-and-add calls that might be
@@ -189,7 +189,7 @@ accesses to the window are properly aligned according to the data type
 arguments in the call to the :ref:`MPI_Get_accumulate` function.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

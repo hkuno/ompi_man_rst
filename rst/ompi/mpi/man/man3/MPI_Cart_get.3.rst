@@ -1,17 +1,17 @@
 .. _mpi_cart_get:
 
 MPI_Cart_get
-~~~~~~~~~~~~
-====
+============
+.. include_body
 
 :ref:`MPI_Cart_get` - Retrieves Cartesian topology information associated
 with a communicator.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
        int coords[])
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -33,7 +33,7 @@ Fortran Syntax
        LOGICAL PERIODS(*)
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -47,14 +47,14 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm`` : Communicator with Cartesian structure (handle).
 -  ``maxdims`` : Length of vectors dims, periods, and coords in the
    calling program (integer).
 
 Output Parameters
-=================
+-----------------
 
 -  ``dims`` : Number of processes for each Cartesian dimension (array of
    integers).
@@ -65,14 +65,14 @@ Output Parameters
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 The functions :ref:`MPI_Cartdim_get` and :ref:`MPI_Cart_get` return the
 Cartesian topology information that was associated with a
 ``comm``\ unicator by :ref:`MPI_Cart_create`.``
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

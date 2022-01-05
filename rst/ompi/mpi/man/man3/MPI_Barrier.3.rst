@@ -1,17 +1,17 @@
 .. _mpi_barrier:
 
 MPI_Barrier
-~~~~~~~~~~~
-====
+===========
+.. include_body
 
-:ref:`MPI_Barrier`, MPI_Ibarrier - Synchronization between MPI processes in a
+:ref:`MPI_Barrier`, :ref:`MPI_Ibarrier` - Synchronization between MPI processes in a
 group
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
    int MPI_barrier_init(MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -35,7 +35,7 @@ Fortran Syntax
        INTEGER COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -54,25 +54,25 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
-===============
+---------------
 
 -  ``comm`` : Communicator (handle).
 -  ``info`` : Info (handle, persistent only).
 
 Output Parameters
-=================
+-----------------
 
 -  ``request`` : Request (handle, non-blocking only).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 An MPI barrier completes after all groups members have entered the
 barrier.
 
 When Communicator is an Inter-Communicator
-==========================================
+------------------------------------------
 
 When the communicator is an inter-communicator, the barrier operation is
 performed across all processes in both groups. All processes in the
@@ -80,7 +80,7 @@ first group may exit the barrier when all processes in the second group
 have entered the barrier.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

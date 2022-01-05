@@ -1,19 +1,19 @@
 .. _mpi_t:
 
 MPI_T
-~~~~~
-====
+=====
+.. include_body
 
 Open MPI's MPI_T interface - General information
 
 DESCRIPTION
-===========
+-----------
 
 There are a few Open MPI-specific notes worth mentioning about its
 ``MPI_T`` interface implementation.
 
 MPI_T Control Variables
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Open MPI's implementation of the ``MPI_T`` Control Variable ("cvar")
 APIs is an interface to Open MPI's underlying Modular Component
@@ -34,7 +34,7 @@ following mechanisms to set MCA parameters:
    MCA-variable setting mechanisms.
 
 MPI initialization
-------------------
+^^^^^^^^^^^^^^^^^^
 
 An application may use the ``MPI_T`` interface before MPI is initialized
 to set MCA parameters. Setting MPI-level MCA parameters before MPI is
@@ -85,7 +85,7 @@ parameters are only used during MPI initialization; setting them after
 MPI has already been initialized would be meaningless, anyway.
 
 MPI_T Categories
-----------------
+^^^^^^^^^^^^^^^^
 
 Open MPI's MPI_T categories are organized hierarchically:
 

@@ -1,15 +1,16 @@
 .. _mpi_pack:
 
 MPI_Pack
-~~~~~~~~
+========
+.. include_body
 
 :ref:`MPI_Pack` - Packs data of a given datatype into contiguous memory.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	void *outbuf, int outsize, int *position, MPI_Comm comm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax
    	INTEGER	INCOUNT, DATATYPE, OUTSIZE, POSITION, COMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -48,7 +49,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``inbuf``: Input buffer start (choice). 
 
@@ -61,19 +62,19 @@ INPUT PARAMETERS
 * ``comm``: Communicator for packed message (handle). 
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``position``: Current position in buffer, in bytes (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``outbuf``: Output buffer start (choice). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Packs the message in the send buffer specified by *inbuf*, *incount*,
 *datatype* into the buffer space specified by *outbuf* and *outsize*.
@@ -115,7 +116,7 @@ subsequently used for sending the packed message.
        }
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

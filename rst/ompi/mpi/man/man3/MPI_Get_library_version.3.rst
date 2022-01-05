@@ -1,17 +1,17 @@
 .. _mpi_get_library_version:
 
 MPI_Get_library_version
-~~~~~~~~~~~~~~~~~~~~~~~
-====
+=======================
+.. include_body
 
 :ref:`MPI_Get_library_version` - Returns a string of the current Open MPI
 version
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Get_library_version(char *version, int *resultlen)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -32,7 +32,7 @@ Fortran Syntax
        INTEGER RESULTLEN, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -44,7 +44,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Output Parameters
-=================
+-----------------
 
 -  ``version`` : A string containing the Open MPI version (string).
 -  ``resultlen`` : Length (in characters) of result returned in
@@ -52,7 +52,7 @@ Output Parameters
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 This routine returns a string representing the ``version`` of the MPI
 library. The ``version`` argument is a character string for maximum
@@ -66,7 +66,7 @@ padded on the right with blank characters. The ``resultlen`` cannot be
 larger than MPI_MAX_LIBRARY_VERSION_STRING.
 
 Note
-====
+----
 
 The ``version`` string that is passed must be at least
 MPI_MAX_LIBRARY_VERSION_STRING characters long.
@@ -75,7 +75,7 @@ MPI_MAX_LIBRARY_VERSION_STRING characters long.
 called before :ref:`MPI_Init` and after :ref:`MPI_Finalize`.``
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

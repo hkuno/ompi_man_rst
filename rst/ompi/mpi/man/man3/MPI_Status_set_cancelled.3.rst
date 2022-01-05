@@ -1,16 +1,17 @@
 .. _mpi_status_set_cancelled:
 
 MPI_Status_set_cancelled
-~~~~~~~~~~~~~~~~~~~~~~~~
+========================
+.. include_body
 
 :ref:`MPI_Status_set_cancelled` - Sets *status* to indicate a request has
 been canceled.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Status_set_cancelled(MPI_Status *status, int flag)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	LOGICAL FLAG
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -43,29 +44,29 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``status``: Status with which to associate cancel flag (status). 
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``flag``: If true, indicates request was canceled (logical). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 If *flag* is set to true, then a subsequent call to
 MPI_Test_cancelled(status, flag*) will also return *flag* = true;
 otherwise it will return false.
 
 NOTES
-=====
+-----
 
 Users are advised not to reuse the status fields for values other than
 those for which they were intended. Doing so may lead to unexpected
@@ -78,7 +79,7 @@ values in a status set internally by MPI, such as :ref:`MPI_Recv`, may lead to
 unpredictable results and is strongly discouraged.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

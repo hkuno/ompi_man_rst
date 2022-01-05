@@ -1,15 +1,16 @@
 .. _mpi_t_pvar_reset:
 
 MPI_T_pvar_reset
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 :ref:`MPI_T_pvar_reset` - Reset the value of a performance variable
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,14 +19,14 @@ C Syntax
    int MPI_T_pvar_reset(MPI_T_pvar_session session, MPI_T_pvar_handle handle)
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``session``: Performance experiment session. 
 
 * ``handle``: Performance variable handle or MPI_T_PVAR_ALL_HANDLES. 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_T_pvar_reset` sets the performance variable specified by the handle
 in *handle* to its initial value. The special value
@@ -33,7 +34,7 @@ MPI_T_PVAR_ALL_HANDLES can be passed in *handle* to reset all read-write
 handles in the session specified in *session*.
 
 ERRORS
-======
+------
 
 MPI_T_pvar_reset() will fail if:
 

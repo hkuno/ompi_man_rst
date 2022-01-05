@@ -1,16 +1,17 @@
 .. _mpi_comm_size:
 
 MPI_Comm_size
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Comm_size` - Returns the size of the group associated with a
 communicator.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Comm_size(MPI_Comm comm, int *size)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	COMM, SIZE, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,19 +43,19 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``size``: Number of processes in the group of comm (integer). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This function indicates the number of processes involved in a
 communicator. For MPI_COMM_WORLD, it indicates the total number of
@@ -72,12 +73,12 @@ indicates the rank of the process that calls it in the range from 0 . .
 . size-1, where size is the return value of :ref:`MPI_Comm_size`.
 
 NOTE
-====
+----
 
 MPI_COMM_NULL is not considered a valid argument to this function.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

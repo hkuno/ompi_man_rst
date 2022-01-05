@@ -1,17 +1,17 @@
 .. _mpi_get_version:
 
 MPI_Get_version
-~~~~~~~~~~~~~~~
-====
+===============
+.. include_body
 
 :ref:`MPI_Get_version` - Returns the version of the standard corresponding
 to the current implementation.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Get_version(int *version, int *subversion)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER VERSION, SUBVERSION, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -42,7 +42,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Output Parameters
-=================
+-----------------
 
 -  ``version`` : The major version number of the corresponding standard
    (integer).
@@ -51,19 +51,19 @@ Output Parameters
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 Since Open MPI is MPI 3.1 compliant, this function will return a
 ``version`` value of 3 and a subversion value of 1 for this release.
 
 Note
-====
+----
 
 :ref:`MPI_Get_version` is one of the few functions that can be called
 before :ref:`MPI_Init` and after :ref:`MPI_Finalize`.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

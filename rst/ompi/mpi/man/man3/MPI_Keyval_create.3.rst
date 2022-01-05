@@ -1,16 +1,17 @@
 .. _mpi_keyval_create:
 
 MPI_Keyval_create
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 :ref:`MPI_Keyval_create` - Generates a new attribute key -- use of this
 routine is deprecated.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    	MPI_Delete_function *delete_fn, int *keyval, void *extra_state)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	INTEGER	KEYVAL, EXTRA_STATE, IERROR
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``copy_fn``: Copy callback function for keyval. 
 
@@ -40,14 +41,14 @@ INPUT PARAMETERS
 * ``extra_state``: Extra state for callback functions. 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``keyval``: Key value for future access (integer). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Note that use of this routine is *deprecated* as of MPI-2. Please use
 :ref:`MPI_Comm_create_keyval` instead.
@@ -93,7 +94,7 @@ function that sets flag = 1, returns the value of attribute_val_in in
 attribute_val_out, and returns MPI_SUCCESS.
 
 NOTES
-=====
+-----
 
 Key values are global (available for any and all communicators).
 
@@ -150,7 +151,7 @@ The special key value MPI_KEYVAL_INVALID is never returned by
 of key values.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

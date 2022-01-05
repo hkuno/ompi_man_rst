@@ -1,7 +1,8 @@
 .. _shmem_char_p:
 
 shmem_char_p
-~~~~~~~~~~~~
+============
+.. include_body
 
 *shmem_char_p*\ (3), *shmem_float_p*\ (3), *shmem_int_p*\ (3),
 *shmem_long_p*\ (3), *shmem_short_p*\ (3), *shmem_longlong_p*\ (3),
@@ -10,7 +11,7 @@ mechanism to write basic types (char, short, int, float, double, long,
 long long, long double) to symmetric data objects on remote PEs.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -37,7 +38,7 @@ C or C++:
    void shmem_longdouble_p(long double *addr, long double value, int pe);
 
 DESCRIPTION
-===========
+-----------
 
 These routines provide a very low latency put capability for single
 elements of most basic types.

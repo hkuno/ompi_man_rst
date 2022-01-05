@@ -1,17 +1,17 @@
 .. _mpi_graph_create:
 
 MPI_Graph_create
-~~~~~~~~~~~~~~~~
-====
+================
+.. include_body
 
 :ref:`MPI_Graph_create` - Makes a new communicator to which topology
 information has been attached.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
        const int edges[], int reorder, MPI_Comm *comm_graph)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -35,7 +35,7 @@ Fortran Syntax
        LOGICAL   REORDER
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -50,7 +50,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm_old`` : Input communicator without topology (handle).
 -  ``nnodes`` : Number of nodes in graph (integer).
@@ -60,13 +60,13 @@ Input Parameters
    (logical).
 
 Output Parameters
-=================
+-----------------
 
 -  ``comm_graph`` : Communicator with graph topology added (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Graph_create` returns a handle to a new communicator to which the
 graph topology information is attached. If ``reorder`` = false then the
@@ -94,14 +94,14 @@ are illustrated with the following simple example.
 Example: Assume there are four processes 0, 1, 2, 3 with the following
 adjacency matrix:
 
-======= =========
+------- ---------
 Process Neighbors
-======= =========
+------- ---------
 0       1, 3
 1       0
 2       3
 3       0, 2
-======= =========
+------- ---------
 
 Then, the input arguments are:
 
@@ -124,7 +124,7 @@ nnodes-1; the list of neighbors of ``node`` zero is stored in
 ``index(i + 1)``.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

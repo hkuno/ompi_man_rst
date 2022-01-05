@@ -1,17 +1,17 @@
 .. _mpi_free_mem:
 
 MPI_Free_mem
-~~~~~~~~~~~~
-====
+============
+.. include_body
 
 :ref:`MPI_Free_mem` - Frees memory that has been allocated using
 :ref:`MPI_Alloc_mem`.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Free_mem(void *base)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -32,7 +32,7 @@ Fortran Syntax
        INTEGER IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -43,24 +43,24 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
-===============
+---------------
 
 -  ``base`` : Initial address of memory segment allocated by
    :ref:`MPI_Alloc_mem` (choice).
 
 Output Parameter
-================
+----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Free_mem` frees memory that has been allocated by
 :ref:`MPI_Alloc_mem`.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

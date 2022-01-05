@@ -1,16 +1,16 @@
 .. _mpi_buffer_attach:
 
 MPI_Buffer_attach
-~~~~~~~~~~~~~~~~~
-====
+=================
+.. include_body
 
 :ref:`MPI_Buffer_attach` - Attaches a user-defined buffer for sending.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
    int MPI_Buffer_attach(void *buf, int size)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER SIZE, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -43,25 +43,25 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``buf`` : Initial buffer address (choice).
 -  ``size`` : Buffer size, in bytes (integer).
 
 Output Parameter
-================
+----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 Provides to MPI a buffer in the user's memory to be used for buffering
 outgoing messages. The buffer is used only by messages sent in buffered
 mode. Only one buffer can be attached to a process at a time.
 
 Notes
-=====
+-----
 
 The size given should be the sum of the sizes of all outstanding Bsends
 that you intend to have, plus MPI_BSEND_OVERHEAD bytes for each
@@ -89,7 +89,7 @@ be used by the Bsend routines. This value is in mpi.h for C and mpif.h
 for Fortran.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

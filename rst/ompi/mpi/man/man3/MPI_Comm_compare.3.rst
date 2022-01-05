@@ -1,16 +1,16 @@
 .. _mpi_comm_compare:
 
 MPI_Comm_compare
-~~~~~~~~~~~~~~~~
-====
+================
+.. include_body
 
 :ref:`MPI_Comm_compare` - Compares two communicators.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
    int MPI_Comm_compare(MPI_Comm comm1, MPI_Comm comm2, int *result)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -30,7 +30,7 @@ Fortran Syntax
        INTEGER COMM1, COMM2, RESULT, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -42,19 +42,19 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm1`` : Comm1 (handle).
 -  ``comm2`` : Comm2 (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``result`` : Result of comparison (integer).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 MPI_IDENT ``result``\ s if and only if ``comm1`` and ``comm2`` are
 handles for the same object (identical groups and same contexts).
@@ -64,7 +64,7 @@ MPI_SIMILAR results of the group members of both communicators are
 the same but the rank order differs. MPI_UNEQUAL results otherwise.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

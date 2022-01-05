@@ -1,16 +1,17 @@
 .. _mpi_comm_test_inter:
 
 MPI_Comm_test_inter
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
 :ref:`MPI_Comm_test_inter` - Tests to see if a comm is an
 intercommunicator.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Comm_test_inter(MPI_Comm comm, int *flag)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	LOGICAL	FLAG
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -43,19 +44,19 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``flag (Logical.)``: 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This local routine allows the calling process to determine the type of a
 communicator. It returns true for an intercommunicator, false for an
@@ -91,7 +92,7 @@ The intercommunicator accessors (:ref:`MPI_Comm_test_inter`,
 :ref:`MPI_Comm_remote_size`, MPI_Comm_remote_group) are all local operations.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,15 +1,16 @@
 .. _mpi_alloc_mem:
 
 MPI_Alloc_mem
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Alloc_mem` - Allocates a specified memory segment.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Alloc_mem(MPI_Aint size, MPI_Info info, void *baseptr)
 
 Fortran Syntax (see FORTRAN NOTES)
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax (see FORTRAN NOTES)
    	INTEGER(KIND=MPI_ADDRESS_KIND) SIZE, BASEPTR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -44,34 +45,34 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``size``: Size of memory segment in bytes (nonnegative integer). 
 
 * ``info``: Info argument (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``baseptr``: Pointer to beginning of memory segment allocated. 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Alloc_mem` allocates *size* bytes of memory. The starting address of
 this memory is returned in the variable *baseptr*.
 
 C NOTES
-=======
+- -----
 
 The parameter *baseptr* is of type *void \** to allow passing any
 pointer object for this parameter. The provided argument should be a
 pointer to a pointer of arbitrary type (e.g., *void \*\**).
 
 FORTRAN NOTES
-=============
+------- -----
 
 There is no portable FORTRAN 77 syntax for using :ref:`MPI_Alloc_mem`. There is
 no portable Fortran syntax for using pointers returned from
@@ -106,7 +107,7 @@ User's Guide and are supported by many Fortran compilers. For example,
               CALL MPI_FREE_MEM(A, IERR)
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

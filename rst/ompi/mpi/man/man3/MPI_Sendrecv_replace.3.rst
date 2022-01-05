@@ -1,16 +1,17 @@
 .. _mpi_sendrecv_replace:
 
 MPI_Sendrecv_replace
-~~~~~~~~~~~~~~~~~~~~
+====================
+.. include_body
 
 :ref:`MPI_Sendrecv_replace` - Sends and receives a message using a single
 buffer.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -36,7 +37,7 @@ Fortran Syntax
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -52,12 +53,12 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``buf``: Initial address of send and receive buffer (choice). 
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Number of elements in send and receive buffer (integer). 
 
@@ -74,14 +75,14 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``status``: Status object (status). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The send-receive operations combine in one call the sending of a message
 to one destination and the receiving of another message, from another
@@ -111,7 +112,7 @@ the caller forked two concurrent threads, one to execute the send, and
 one to execute the receive, followed by a join of these two threads.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

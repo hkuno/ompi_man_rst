@@ -1,20 +1,21 @@
 .. _mpi_info_env:
 
 MPI_Info_env
-~~~~~~~~~~~~
+============
+.. include_body
 
 :ref:`MPI_INFO_ENV` - Static MPI_Info object containing info about the
 application
 
 DESCRIPTION
-===========
+-----------
 
 The MPI-3 standard established a static MPI_Info object named
 :ref:`MPI_INFO_ENV` that can be used to access information about how the
 application was executed from the run-time.
 
 SUPPORTED FIELDS
-================
+--------- ------
 
 command
    If available, the value will be set to argv[0]. Note that the value
@@ -80,7 +81,7 @@ ompi_positioned_file_dir
    MPI-specific field and value.
 
 ERRORS
-======
+------
 
 | When calling :ref:`MPI_INFO_GET`, the *flag* parameter will be set to zero
   (false) if a value for the field has not been set.

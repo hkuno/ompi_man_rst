@@ -1,16 +1,17 @@
 .. _mpi_pready_list:
 
 MPI_Pready_list
-~~~~~~~~~~~~~~~
+===============
+.. include_body
 
 :ref:`MPI_Pready_list` - Indicates that a list given send-side partitions
 are ready to be transferred.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Pready_list(int length, int *partitions, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	LENGTH, PARTITIONS(*), REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -43,7 +44,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``length``: The length of the given partition array (integer). 
 
@@ -52,12 +53,12 @@ INPUT PARAMETERS
 * ``request``: Communication request (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

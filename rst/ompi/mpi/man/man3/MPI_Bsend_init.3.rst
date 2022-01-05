@@ -1,16 +1,16 @@
 .. _mpi_bsend_init:
 
 MPI_Bsend_init
-~~~~~~~~~~~~~~
-====
+==============
+.. include_body
 
 :ref:`MPI_Bsend_init` - Builds a handle for a buffered send.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
        int dest, int tag, MPI_Comm comm, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -33,7 +33,7 @@ Fortran Syntax
        INTEGER COMM, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -48,7 +48,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``buf`` : Initial address of send buffer (choice).
 -  ``count`` : Number of elements sent (integer).
@@ -58,13 +58,13 @@ Input Parameters
 -  ``comm`` : Communicator (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``request`` : Communication request (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 Creates a persistent communication ``request`` for a buffered mode send,
 and binds to it all the arguments of a send operation.
@@ -73,7 +73,7 @@ A communication (send or receive) that uses a persistent ``request`` is
 initiated by the function :ref:`MPI_Start`.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

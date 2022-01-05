@@ -1,16 +1,16 @@
 .. _mpi_comm_accept:
 
 MPI_Comm_accept
-~~~~~~~~~~~~~~~
-====
+===============
+.. include_body
 
 :ref:`MPI_Comm_accept` - Establishes communication with a client.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
    int MPI_Comm_accept(const char *port_name, MPI_Info info, int root, MPI_Comm comm, MPI_Comm *newcomm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER     INFO, ROOT, COMM, NEWCOMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -46,7 +46,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``port_name`` : Port name (string, used only on *root*).
 -  ``info`` : Options given by root for the accept (handle, used only on
@@ -55,13 +55,13 @@ Input Parameters
 -  ``comm`` : Intracommunicator over which call is collective (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``newcomm`` : Intercommunicator with client as remote group (handle)
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Comm_accept` establishes communication with a client. It is
 collective over the calling communicator. It returns an
@@ -71,7 +71,7 @@ client has connected with the :ref:`MPI_Comm_accept` function using the
 established through a call to :ref:`MPI_Open_port` on the ``root``.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

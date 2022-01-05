@@ -1,16 +1,17 @@
 .. _mpi_type_create_hvector:
 
 MPI_Type_create_hvector
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
+.. include_body
 
 :ref:`MPI_Type_create_hvector` - Creates a vector (strided) data type with
 offset in bytes.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    	MPI_Aint stride, MPI_Datatype oldtype, MPI_Datatype *newtype)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -34,7 +35,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER(KIND=MPI_ADDRESS_KIND) STRIDE
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -49,7 +50,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Number of blocks (nonnegative integer). 
 
@@ -60,14 +61,14 @@ INPUT PARAMETERS
 * ``oldtype``: Old data type (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``newtype``: New data type (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Type_create_hvector` creates a vector (strided) data type with offset
 in bytes.
@@ -76,7 +77,7 @@ NOTE - This routine replaces :ref:`MPI_Type_hvector`, which is deprecated. See
 the man page :ref:`MPI_Type_hvector` for information about that routine.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the *STRIDE*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -90,7 +91,7 @@ where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

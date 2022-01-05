@@ -1,15 +1,16 @@
 .. _mpi_recv_init:
 
 MPI_Recv_init
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Recv_init` - Builds a handle for a receive.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	int source, int tag, MPI_Comm comm, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax
    	INTEGER	COUNT, DATATYPE, SOURCE, TAG, COMM, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -47,7 +48,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Maximum number of elements to receive (integer). 
 
@@ -60,19 +61,19 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``buf``: Initial address of receive buffer (choice). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``request``: Communication request (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Creates a persistent communication request for a receive operation. The
 argument *buf* is marked as OUT because the user gives permission to
@@ -85,7 +86,7 @@ A communication (send or receive) that uses a persistent request is
 initiated by the function :ref:`MPI_Start` or :ref:`MPI_Startall`.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

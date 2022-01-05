@@ -1,16 +1,17 @@
 .. _mpi_info_get_valuelen:
 
 MPI_Info_get_valuelen
-~~~~~~~~~~~~~~~~~~~~~
+=====================
+.. include_body
 
 :ref:`MPI_Info_get_valuelen` - Retrieves the length of the key value
 associated with an info object.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    	int *valuelen, int *flag)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax
    	CHARACTER*(*)	KEY
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -47,14 +48,14 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``info``: Info object (handle). 
 
 * ``key``: Key (string). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``valuelen``: Length of value arg (integer). 
 
@@ -63,7 +64,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Info_get_valuelen` retrieves the length of the *value* associated
 with *key*. If *key* is defined, *valuelen* is set to the length of its
@@ -74,7 +75,7 @@ returned in C does not include the end-of-string character.
 If *key* is larger than MPI_MAX_INFO_KEY, the call is erroneous.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

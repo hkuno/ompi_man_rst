@@ -1,17 +1,17 @@
 .. _mpi_bcast:
 
 MPI_Bcast
-~~~~~~~~~
-====
+=========
+.. include_body
 
-:ref:`MPI_Bcast`, MPI_Ibcast - Broadcasts a message from the process
+:ref:`MPI_Bcast`, :ref:`MPI_Ibcast` - Broadcasts a message from the process
 with rank *root* to all other processes of the group.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: C
 
@@ -23,7 +23,7 @@ C Syntax
        int root, MPI_Comm comm, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: Fortran
 
@@ -38,7 +38,7 @@ Fortran Syntax
        INTEGER COUNT, DATATYPE, ROOT, COMM, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: Fortran
 
@@ -59,7 +59,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETERS
-=======================
+-----------------------
 
 -  ``buffer``: Starting address of buffer (choice).
 -  ``count``: Number of entries in buffer (integer).
@@ -68,13 +68,13 @@ INPUT/OUTPUT PARAMETERS
 -  ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
-=================
+-----------------
 
 -  ``request``: Request (handle, non-blocking only).
 -  ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Bcast` broadcasts a message from the process with rank root to
 all processes of the group, itself included. It is called by all members
@@ -106,7 +106,7 @@ variables (such as comm in the example above) have been assigned
 appropriate values.
 
 WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
-==========================================
+------------------------------------------
 
 When the communicator is an inter-communicator, the root process in the
 first group broadcasts data to all the processes in the second group.
@@ -119,12 +119,12 @@ the processes in the second group must be consistent with the send
 buffer argument of the root process in the first group.
 
 NOTES
-=====
+-----
 
 This function does not support the in-place option.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

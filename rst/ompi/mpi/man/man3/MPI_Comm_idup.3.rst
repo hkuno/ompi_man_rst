@@ -1,16 +1,17 @@
 .. _mpi_comm_idup:
 
 MPI_Comm_idup
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Comm_idup` - Start the nonblocking duplication of an existing
 communicator with all its cached information.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Comm_idup(MPI_Comm comm, MPI_Comm *newcomm, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	COMM, NEWCOMM, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -43,12 +44,12 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``newcomm``: Copy of comm (handle). 
 
@@ -57,7 +58,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Comm_idup` starts the nonblocking duplication of an existing
 communicator comm with associated key values. For each key value, the
@@ -74,7 +75,7 @@ by calling any of :ref:`MPI_Wait`, :ref:`MPI_Waitany`, :ref:`MPI_Test`, or :ref:
 the request returned by this function.
 
 NOTES
-=====
+-----
 
 This operation is used to provide a parallel library call with a
 duplicate communication space that has the same properties as the
@@ -95,7 +96,7 @@ or delete attributes on the same object on which the attribute copy
 callback is being invoked.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

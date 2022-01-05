@@ -1,16 +1,17 @@
 .. _mpi_status_set_elements:
 
 MPI_Status_set_elements
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
+.. include_body
 
-:ref:`MPI_Status_set_elements`, MPI_Status_set_elements_x - Modifies
+:ref:`MPI_Status_set_elements`, :ref:`MPI_Status_set_elements_x` - Modifies
 opaque part of *status* to allow :ref:`MPI_Get_elements` to return *count*.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    int MPI_Status_set_elements_x(MPI_Status *status, MPI_Datatype datatype, MPI_Count count)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -35,7 +36,7 @@ Fortran Syntax
            INTEGER IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -53,27 +54,27 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``status``: Status to associate with *count (status).* 
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``datatype``: Data type associated with *count (handle).* 
 
 * ``count``: Number of elements to associate with *status (integer).* 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Status_set_elements` modifies the opaque part of *status so that a
-call to :ref:`MPI_Get_elements` or MPI_Get_elements_x will return count.
+call to :ref:`MPI_Get_elements` or :ref:`MPI_Get_elements_x` will return count.
 :ref:`MPI_Get_count` will return a compatible value.*
 
 A subsequent call to MPI_Get_count(status, datatype, count), to
@@ -83,7 +84,7 @@ argument that has the same type signature as the data-type argument that
 was used in the call to :ref:`MPI_Status_set_elements`.*
 
 NOTES
-=====
+-----
 
 Users are advised not to reuse the status fields for values other than
 those for which they were intended. Doing so may lead to unexpected
@@ -96,7 +97,7 @@ values in a status set internally by MPI, such as :ref:`MPI_Recv`, may lead to
 unpredictable results and is strongly discouraged.*
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.
@@ -109,10 +110,10 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the *COUNT
-argument of MPI_Status_set_elements_x only for Fortran 90. FORTRAN 77
+argument of :ref:`MPI_Status_set_elements_x` only for Fortran 90. FORTRAN 77
 users may use the non-portable syntax*
 
 ::

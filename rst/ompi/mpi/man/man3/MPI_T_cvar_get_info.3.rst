@@ -1,15 +1,16 @@
 .. _mpi_t_cvar_get_info:
 
 MPI_T_cvar_get_info
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
 :ref:`MPI_T_cvar_get_info` - Query information from a control variable
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,19 +21,19 @@ C Syntax
                            const *desc, int *desc_len, int *bind, int *scope)
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``cvar_index``: Index of the control variable to be queried. 
 
 INPUT/OUTPUT PARAMETERS
-=======================
+-----/------ ----------
 
 * ``name_len``: Length of the string and/or buffer for name. 
 
 * ``desc_len``: Length of the string and/or buffer for desc. 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``name``: Buffer to return the string containing the name of the control variable. 
 
@@ -49,7 +50,7 @@ OUTPUT PARAMETERS
 * ``scope``: Scope of when changes to this variable are possible. 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_T_cvar_get_info` can be used to query information about a control
 variable. The function returns the verbosity, datatype, enumeration
@@ -59,7 +60,7 @@ respectively. Control variables in Open MPI are the same as MCA
 parameters.
 
 VERBOSITY
-=========
+---------
 
 As Open MPI exposes a very large number of MCA parameters (control
 variables), control variables are categorized into nine verbosity levels
@@ -96,7 +97,7 @@ MPI_T_VERBOSITY_MPIDEV_ALL
 For more information see MPI-3 � 14.3.1.
 
 DATATYPE
-========
+--------
 
 The datatype returned by :ref:`MPI_T_cvar_get_info` is restricted to one of the
 following datatypes: MPI_INT, MPI_UNSIGNED, MPI_UNSIGNED_LONG,
@@ -104,7 +105,7 @@ MPI_UNSIGNED_LONG_LONG, MPI_COUNT, MPI_CHAR, and MPI_DOUBLE. For more
 information on datatypes in MPI_T see MPI-3 � 14.3.5.
 
 SCOPE
-=====
+-----
 
 The scope describes when and how changes can be made to a control
 variable. From MPI-3 � 14.3.6, the scope may be any of the following:
@@ -137,7 +138,7 @@ MPI_T_SCOPE_ALL_EQ
 For more information see MPI-3 � 14.3.6 Table 14.4.
 
 NOTES
-=====
+-----
 
 This MPI tool interface function returns two strings. This function
 takes two argument for each string: a buffer to store the string, and a
@@ -152,7 +153,7 @@ Open MPI does not currently support binding control variables to MPI
 objects.
 
 ERRORS
-======
+------
 
 MPI_T_cvar_get_info() will fail if:
 

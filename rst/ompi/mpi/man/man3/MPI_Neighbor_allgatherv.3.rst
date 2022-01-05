@@ -1,18 +1,19 @@
 .. _mpi_neighbor_allgatherv:
 
 MPI_Neighbor_allgatherv
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
+.. include_body
 
-:ref:`MPI_Neighbor_allgatherv`, MPI_Ineighbor_allgatherv,
-MPI_Neighbor_allgatherv_init - Gathers and distributes data from and
+:ref:`MPI_Neighbor_allgatherv`, :ref:`MPI_Ineighbor_allgatherv`,
+:ref:`MPI_Neighbor_allgatherv_init` - Gathers and distributes data from and
 to all neighbors. Each process may contribute a different amount of
 data.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -33,7 +34,7 @@ C Syntax
            MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -59,7 +60,7 @@ Fortran Syntax
    	INTEGER	DISPLS(*), RECVTYPE, COMM,INFO,REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -98,7 +99,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Starting address of send buffer (choice). 
 
@@ -117,7 +118,7 @@ INPUT PARAMETERS
 * ``info Info (handle, persistent only).``: 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Address of receive buffer (choice). 
 
@@ -126,7 +127,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Neighbor_allgatherv` is similar to :ref:`MPI_Neighbor_allgather` in that all
 processes gather data from all neighbors, except that each process can
@@ -140,7 +141,7 @@ must be equal to the type signature associated with the corresponding
 entry in *recvcounts* on neighboring processes.
 
 NEIGHBOR ORDERING
-=================
+-------- --------
 
 For a distributed graph topology, created with :ref:`MPI_Dist_graph_create`,
 the sequence of neighbors in the send and receive buffers at each
@@ -168,13 +169,13 @@ is still part of the sequence of neighbors but it is neither
 communicated nor updated.
 
 NOTES
-=====
+-----
 
 The MPI_IN_PLACE option for *sendbuf* is not meaningful for this
 operation.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

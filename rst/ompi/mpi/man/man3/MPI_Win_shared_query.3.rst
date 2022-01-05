@@ -1,15 +1,16 @@
 .. _mpi_win_shared_query:
 
 MPI_Win_shared_query
-~~~~~~~~~~~~~~~~~~~~
+====================
+.. include_body
 
 :ref:`MPI_Win_shared_query` - Query a shared memory window
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
                              int *disp_unit, void *baseptr)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
            INTEGER(KIND=MPI_ADDRESS_KIND) SIZE, BASEPTR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -47,14 +48,14 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``win``: Shared memory window object (handle). 
 
 * ``rank``: Rank in the group of window *win* (non-negative integer) or MPI_PROC_NULL. 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``size``: Size of the window segment (non-negative integer). 
 
@@ -65,7 +66,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Win_shared_query` queries the process-local address for remote
 memory segments created with :ref:`MPI_Win_allocate_shared`. This function can
@@ -83,14 +84,14 @@ attached to the window specified *size* = 0, then the call returns
 *size* = 0.
 
 C NOTES
-=======
+- -----
 
 The parameter *baseptr* is of type *void \** to allow passing any
 pointer object for this parameter. The provided argument should be a
 pointer to a pointer of arbitrary type (e.g. *void \*\**).
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

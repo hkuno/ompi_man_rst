@@ -1,17 +1,17 @@
 .. _mpi_status_f082f:
 
 MPI_Status_f082f
-~~~~~~~~~~~~~~~~
-====
+================
+.. include_body
 
-:ref:`MPI_Status_f082f`, MPI_Status_c2f08 - Translates a Fortran 2008 status
+:ref:`MPI_Status_f082f`, :ref:`MPI_Status_c2f08` - Translates a Fortran 2008 status
 into a Fortran INTEGER-style status, or vice versa.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
    int MPI_Status_f2f08(const MPI_Fint *f_status, MPI_F08_status *f08_status)
 
 Fortran mpi Module Syntax
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -36,7 +36,7 @@ Fortran mpi Module Syntax
        TYPE(MPI_Status) :: F08_STATUS
 
 Fortran mpi_f08 Module Syntax
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -53,13 +53,13 @@ Fortran mpi_f08 Module Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 PARAMETERS
-==========
+----------
 
 -  ``f08_status``: ``mpi_f08``-style MPI status object
 -  ``f_status``: ``mpi``-style ``INTEGER`` MPI status object
 
 DESCRIPTION
-===========
+-----------
 
 These two procedures are provided to convert from a Fortran 2008 status
 (which is a derived datatype made of integers) to a Fortran status
@@ -90,11 +90,11 @@ case the value of the error field in the output status argument is
 undefined.
 
 NOTES
-=====
+-----
 
 The Fortran subroutines for these MPI routines are only available in the
 ``mpi`` and ``mpi_f08`` modules (including the type specification for
 ``TYPE(MPI_Status); they are (intentionally) not available in``\ mpif.h`.
 
 
-.. seealso:: MPI_Status_c2f:ref:`MPI_Status_f2c` :ref:`MPI_Status_f082c` MPI_Status_c2f08
+.. seealso:: :ref:`MPI_Status_c2f` :ref:`MPI_Status_f2c` :ref:`MPI_Status_f082c` :ref:`MPI_Status_c2f08` 

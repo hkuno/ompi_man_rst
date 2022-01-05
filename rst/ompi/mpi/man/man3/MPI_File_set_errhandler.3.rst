@@ -1,15 +1,16 @@
 .. _mpi_file_set_errhandler:
 
 MPI_File_set_errhandler
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
+.. include_body
 
 :ref:`MPI_File_set_errhandler` - Sets the error handler for a file.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	errhandler)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	FILE, ERRHANDLER, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,29 +43,29 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``file``: File (handle). 
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``errhandler``: New error handler for file (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Attaches a new error handler to a file. The error handler must be either
 a predefined error handler or an error handler created by a call to
 :ref:`MPI_File_create_errhandler`.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

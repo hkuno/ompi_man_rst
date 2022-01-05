@@ -1,17 +1,18 @@
 .. _mpi_file_get_byte_offset:
 
 MPI_File_get_byte_offset
-~~~~~~~~~~~~~~~~~~~~~~~~
+========================
+.. include_body
 
 :ref:`MPI_File_get_byte_offset` - Converts a view-relative offset into an
 absolute byte position.
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_Offset *disp)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER(KIND=MPI_OFFSET_KIND)	OFFSET, DISP
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -46,21 +47,21 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``fh``: File handle (handle). 
 
 * ``offset``: Offset (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``disp``: Absolute byte position of offset (integer). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_get_byte_offset` converts an offset specified for the current
 view to its corresponding displacement value, or absolute byte position,
@@ -68,7 +69,7 @@ from the beginning of the file. The absolute byte position of *offset*
 relative to the current view of *fh* is returned in *disp*.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the *OFFSET* and
 *DISP* arguments only for Fortran 90. Sun FORTRAN 77 users may use the
@@ -84,7 +85,7 @@ where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

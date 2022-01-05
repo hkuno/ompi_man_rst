@@ -1,13 +1,13 @@
 .. _open-mpi:
 
 Open-MPI
-~~~~~~~~
-====
+========
+.. include_body
 
 Open MPI - General information
 
 OPEN MPI
-========
+--------
 
 Open MPI is an open source implementation of MPI (message-passing
 interface), the industry-standard specification for writing
@@ -29,7 +29,7 @@ For more information about Open MPI, see https://www.open-mpi.org.
 The MPI standards are available at https://www.mpi-forum.org.
 
 MAN PAGE SYNTAX
-===============
+---------------
 
 Man pages for Open MPI and Open MPI I/O routines are named according to
 C syntax, that is, they begin with the prefix ``MPI_``, all in
@@ -38,7 +38,7 @@ uppercase. The rest of the letters in the routine are all lowercase, for
 example, :ref:`MPI_Comm_get_attr`.
 
 ENVIRONMENT
-===========
+-----------
 
 To fine-tune your Open MPI environment, you can either use arguments to
 the ``mpirun`` or ``mpiexec`` commands, or you can use MCA parameters.
@@ -51,7 +51,7 @@ FAQ on the Open MPI web site at
 https://www.open-mpi.org/faq/?category=tuning#mca-params.
 
 ERRORS
-======
+------
 
 All MPI routines (except :ref:`MPI_Wtime` and :ref:`MPI_Wtick`) return an
 error value; C routines as the value of the function and Fortran

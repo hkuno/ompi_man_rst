@@ -1,13 +1,14 @@
 .. _shmem_info_get_version:
 
 shmem_info_get_version
-~~~~~~~~~~~~~~~~~~~~~~
+======================
+.. include_body
 
 shmem_info_get_version - Returns the major and minor version of the
 library implementation.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -27,7 +28,7 @@ Fortran:
    INTEGER MAJOR, MINOR
 
 DESCRIPTION
-===========
+-----------
 
 shmem_info_get_version() This routine returns the major and minor
 version of the OpenSHMEM standard in use. For a given library

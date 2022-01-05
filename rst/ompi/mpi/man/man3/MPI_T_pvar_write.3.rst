@@ -1,15 +1,16 @@
 .. _mpi_t_pvar_write:
 
 MPI_T_pvar_write
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 :ref:`MPI_T_pvar_write` - Write the value of a control variable
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_T_pvar_write(MPI_T_pvar_session session, MPI_T_pvar_handle handle, const void *buf)
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``session``: Performance experiment session. 
 
@@ -27,7 +28,7 @@ INPUT PARAMETERS
 * ``buf``: Initial address of storage location for variable value. 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_T_pvar_write` attempts to set the value of the performance variable
 identified by the handle specified in *handle* in the session specified
@@ -36,7 +37,7 @@ must ensure that the buffer specified in *buf* is large enough to hold
 the entire value of the performance variable.
 
 ERRORS
-======
+------
 
 MPI_T_pvar_write() will fail if:
 

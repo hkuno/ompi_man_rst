@@ -1,17 +1,17 @@
 .. _mpi_group_intersection:
 
 MPI_Group_intersection
-~~~~~~~~~~~~~~~~~~~~~~
-====
+======================
+.. include_body
 
 :ref:`MPI_Group_intersection` - Produces a group at the intersection of two
 existing groups.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
        MPI_Group *newgroup)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -32,7 +32,7 @@ Fortran Syntax
        INTEGER GROUP1, GROUP2, NEWGROUP, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -44,19 +44,19 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``group1`` : First group (handle).
 -  ``group2`` : Second group (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``newgroup`` : Intersection group (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 The set-like operations are defined as follows:
 
@@ -75,7 +75,7 @@ intersection are commutative, but both are associative.
 The new group can be empty, that is, equal to MPI_GROUP_EMPTY.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

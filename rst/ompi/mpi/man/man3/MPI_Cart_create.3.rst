@@ -1,17 +1,17 @@
 .. _mpi_cart_create:
 
 MPI_Cart_create
-~~~~~~~~~~~~~~~
-====
+===============
+.. include_body
 
 :ref:`MPI_Cart_create` - Makes a new communicator to which Cartesian
 topology information has been attached.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -22,7 +22,7 @@ C Syntax
        const int periods[], int reorder, MPI_Comm *comm_cart)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -35,7 +35,7 @@ Fortran Syntax
        LOGICAL PERIODS(*), REORDER
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -49,7 +49,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm_old`` : Input communicator (handle).
 -  ``ndims`` : Number of dimensions of Cartesian grid (integer).
@@ -61,13 +61,13 @@ Input Parameters
    (logical).
 
 Output Parameters
-=================
+-----------------
 
 -  ``comm_cart`` : Communicator with new Cartesian topology (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Cart_create` returns a handle to a new communicator to which the
 Cartesian topology information is attached. If ``reorder`` = false then
@@ -80,7 +80,7 @@ returned MPI_COMM_NULL, in analogy to :ref:`MPI_Comm_split`. The call
 is erroneous if it specifies a grid that is larger than the group size.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

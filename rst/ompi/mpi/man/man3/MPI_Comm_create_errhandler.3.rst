@@ -1,17 +1,17 @@
 .. _mpi_comm_create_errhandler:
 
 MPI_Comm_create_errhandler
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-====
+==========================
+.. include_body
 
 :ref:`MPI_Comm_create_errhandler` - Creates an error handler that can be
 attached to communicators.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
        MPI_Errhandler *errhandler)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -33,7 +33,7 @@ Fortran Syntax
        INTEGER ERRHANDLER, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -45,7 +45,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Deprecated Type Name Note
-=========================
+-------------------------
 
 MPI-2.2 deprecated the MPI_Comm_errhandler_fn and
 ``MPI::Comm::Errhandler_fn`` types in favor of
@@ -54,18 +54,18 @@ respectively. Open MPI supports both names (indeed, the \_fn names are
 typedefs to the \_function names).
 
 Input Parameter
-===============
+---------------
 
 -  ``function`` : User-defined error handling procedure (function).
 
 Output Parameters
-=================
+-----------------
 
 -  ``errhandler`` : MPI error handler (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Comm_create_errhandler` creates an error handler that can be
 attached to communicators. This ``function`` is identical to
@@ -88,7 +88,7 @@ deprecated. In Fortran, the user routine should be of this form:
       INTEGER COMM, ERROR_CODE
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the ``function`` and Fortran routines in the last argument. Before
