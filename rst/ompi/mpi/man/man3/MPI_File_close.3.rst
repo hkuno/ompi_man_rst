@@ -1,16 +1,17 @@
 .. _mpi_file_close:
 
 MPI_File_close
-~~~~~~~~~~~~~~
+==============
+.. include_body
 
 :ref:`MPI_File_close` - Closes a file (collective).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_File_close(MPI_File *fh)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	FH, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -41,17 +42,17 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``fh``: File handle (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_close` first synchronizes file state, then closes the file
 associated with *fh.* :ref:`MPI_File_close` is a collective routine. The user
@@ -59,7 +60,7 @@ is responsible for ensuring that all outstanding requests associated
 with *fh* have completed before calling :ref:`MPI_File_close`.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

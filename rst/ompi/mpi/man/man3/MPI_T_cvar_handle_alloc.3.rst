@@ -1,16 +1,17 @@
 .. _mpi_t_cvar_handle_alloc:
 
 MPI_T_cvar_handle_alloc
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
+.. include_body
 
-:ref:`MPI_T_cvar_handle_alloc`, MPI_T_cvar_handle_free - Allocate/free
+:ref:`MPI_T_cvar_handle_alloc`, :ref:`MPI_T_cvar_handle_free` - Allocate/free
 contol variable handles
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -22,7 +23,7 @@ C Syntax
    int MPI_T_cvar_handle_free(MPI_T_cvar_handle *handle)
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_T_cvar_handle_alloc` binds the control variable specified in
 *cvar_index* to the MPI object specified in *obj_handle*. If
@@ -32,18 +33,18 @@ represented by this control variable is returned in the *count*
 parameter. If the control variable represents a string then *count* will
 be the maximum length of the string.
 
-MPI_T_cvar_handle_free frees a handle allocated by
+:ref:`MPI_T_cvar_handle_free` frees a handle allocated by
 :ref:`MPI_T_cvar_handle_alloc` and sets the *handle* argument to
 MPI_T_CVAR_HANDLE_NULL.
 
 NOTES
-=====
+-----
 
 Open MPI does not currently support binding MPI objects to control
 variables so the *obj_handle* argument is always ignored.
 
 ERRORS
-======
+------
 
 MPI_T_cvar_handle_alloc() will fail if:
 

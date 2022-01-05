@@ -1,18 +1,19 @@
 .. _mpi_file_read_ordered_begin:
 
 MPI_File_read_ordered_begin
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================
+.. include_body
 
 :ref:`MPI_File_read_ordered_begin` - Reads a file at a location specified
 by a shared file pointer; beginning part of a split collective routine
 (nonblocking).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -22,7 +23,7 @@ C Syntax
    	int count, MPI_Datatype datatype)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -34,7 +35,7 @@ Fortran Syntax
    	INTEGER	FH, COUNT, DATATYPE, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -48,26 +49,26 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``fh``: File handle (handle). 
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Number of elements in buffer (integer). 
 
 * ``datatype``: Data type of each buffer element (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``buf``: Initial address of buffer (choice). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_read_ordered_begin` is the beginning part of a split collective,
 nonblocking routine that must be called by all processes in the
@@ -81,7 +82,7 @@ would be after all processes whose ranks within the group are less than
 that of this process had read their data.
 
 NOTES
-=====
+-----
 
 All the nonblocking collective routines for data access are "split" into
 two routines, each with \_begin or \_end as a suffix. These split
@@ -89,7 +90,7 @@ collective routines are subject to the semantic rules described in
 Section 9.4.5 of the MPI-2 standard.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

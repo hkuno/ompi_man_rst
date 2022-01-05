@@ -1,15 +1,16 @@
 .. _mpi_wait:
 
 MPI_Wait
-~~~~~~~~
+========
+.. include_body
 
 :ref:`MPI_Wait` - Waits for an MPI send or receive to complete.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Wait(MPI_Request *request, MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER	REQUEST, STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -41,19 +42,19 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``request``: Request (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``status``: Status object (status). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 A call to :ref:`MPI_Wait` returns when the operation identified by request is
 complete. If the communication object associated with this request was
@@ -77,7 +78,7 @@ argument. In this case the operation returns immediately with empty
 status.
 
 NOTES
-=====
+-----
 
 Successful return of :ref:`MPI_Wait` after an :ref:`MPI_Ibsend` implies that the user
 send buffer can be reused i.e., data has been sent out or copied into a
@@ -104,7 +105,7 @@ Example: Simple usage of nonblocking operations and :ref:`MPI_Wait`.
        END IF
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

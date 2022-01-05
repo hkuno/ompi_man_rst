@@ -1,17 +1,18 @@
 .. _mpi_file_set_view:
 
 MPI_File_set_view
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 :ref:`MPI_File_set_view` - Changes process's view of data in file
 (collective).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -22,7 +23,7 @@ C Syntax
    	const char *datarep, MPI_Info info)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -36,7 +37,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER(KIND=MPI_OFFSET_KIND)	DISP
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -51,12 +52,12 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``fh``: File handle (handle). 
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``disp``: Displacement (integer). 
 
@@ -69,12 +70,12 @@ INPUT PARAMETERS
 * ``info``: Info object (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The :ref:`MPI_File_set_view` routine changes the process's view of the data in
 the file -- the beginning of the data accessible in the file through
@@ -99,7 +100,7 @@ information via the *info* argument. See the HINTS section for a list of
 hints that can be set. For more information, see the MPI-2 standard.
 
 HINTS
-=====
+-----
 
 The following hints can be used as values for the *info* argument.
 
@@ -153,7 +154,7 @@ NON-SETTABLE HINTS:
 - filename: Access this hint to get the name of the file.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the *DISP*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -167,7 +168,7 @@ where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

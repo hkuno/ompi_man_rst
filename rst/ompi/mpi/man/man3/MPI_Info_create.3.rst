@@ -1,15 +1,16 @@
 .. _mpi_info_create:
 
 MPI_Info_create
-~~~~~~~~~~~~~~~
+===============
+.. include_body
 
 :ref:`MPI_Info_create` - Creates a new info object.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Info_create(MPI_Info *info)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER	INFO, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -40,20 +41,20 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``info``: Info object created (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Info_create` creates a new info object. The newly created object
 contains no key/value pairs.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

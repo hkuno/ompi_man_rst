@@ -1,16 +1,16 @@
 .. _mpi_graph_map:
 
 MPI_Graph_map
-~~~~~~~~~~~~~
-====
+=============
+.. include_body
 
 :ref:`MPI_Graph_map` - Maps process to graph topology information.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
        const int edges[], int *newrank)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER COMM, NNODES, INDEX(*), EDGES(*), NEWRANK, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -44,7 +44,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm`` : Input communicator (handle).
 -  ``nnodes`` : Number of graph nodes (integer).
@@ -53,14 +53,14 @@ Input Parameters
 -  ``edges`` : Integer array specifying the graph structure.
 
 Output Parameters
-=================
+-----------------
 
 -  ``newrank`` : Reordered rank of the calling process; MPI_UNDEFINED if
    the calling process does not belong to graph (integer).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Cart_map` and :ref:`MPI_Graph_map` can be used to implement all
 other topology functions. In general they will not be called by the user
@@ -68,7 +68,7 @@ directly, unless he or she is creating additional virtual topology
 capability other than that provided by MPI.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

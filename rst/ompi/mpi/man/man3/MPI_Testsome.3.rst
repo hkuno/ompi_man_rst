@@ -1,16 +1,17 @@
 .. _mpi_testsome:
 
 MPI_Testsome
-~~~~~~~~~~~~
+============
+.. include_body
 
 :ref:`MPI_Testsome` - Tests for completion of one or more previously
 initiated communications in a list.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_Status array_of_statuses[])
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -35,7 +36,7 @@ Fortran Syntax
    	INTEGER	ARRAY_OF_STATUSES(MPI_STATUS_SIZE,*), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -50,14 +51,14 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``incount``: Length of array_of_requests (integer). 
 
 * ``array_of_requests``: Array of requests (array of handles). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``outcount``: Number of completed requests (integer). 
 
@@ -68,7 +69,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Behaves like :ref:`MPI_Waitsome`, except that it returns immediately.
 
@@ -103,7 +104,7 @@ MPI_STATUSES_IGNORE can be used as a special value for the
 *array_of_statuses* argument.
 
 NOTES
-=====
+-----
 
 The use of :ref:`MPI_Testsome` is likely to be more efficient than the use of
 :ref:`MPI_Testany`. The former returns information on all completed
@@ -118,7 +119,7 @@ is used instead, then one client could starve while requests from
 another client always sneak in first.
 
 ERRORS
-======
+------
 
 For each invocation of :ref:`MPI_Testsome`, if one or more requests generate an
 MPI error, only the *first* MPI request that caused an error will be

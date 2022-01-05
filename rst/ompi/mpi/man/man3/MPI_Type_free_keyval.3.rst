@@ -1,15 +1,16 @@
 .. _mpi_type_free_keyval:
 
 MPI_Type_free_keyval
-~~~~~~~~~~~~~~~~~~~~
+====================
+.. include_body
 
 :ref:`MPI_Type_free_keyval` - Frees a previously created type key value.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Type_free_keyval(int *type_keyval)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER	TYPE_KEYVAL, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -40,20 +41,20 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``type_keyval``: Key value to free (integer). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

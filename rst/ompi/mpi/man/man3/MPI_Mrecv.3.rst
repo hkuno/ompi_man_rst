@@ -1,15 +1,16 @@
 .. _mpi_mrecv:
 
 MPI_Mrecv
-~~~~~~~~~
+=========
+.. include_body
 
 :ref:`MPI_Mrecv` - Blocking receive for a matched message
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	MPI_Message *message, MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -47,7 +48,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Number of elements to receive (nonnegative integer). 
 
@@ -56,7 +57,7 @@ INPUT PARAMETERS
 * ``message``: Message (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``buf``: Initial address of receive buffer (choice). 
 
@@ -65,7 +66,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The functions :ref:`MPI_Mrecv` and :ref:`MPI_Imrecv` receive messages that have been
 previously matched by a matching probe.
@@ -76,7 +77,7 @@ MPI_PROC_NULL, *tag* = MPI_ANY_TAG, and *count* = 0, as if a receive
 from MPI_PROC_NULL was issued.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

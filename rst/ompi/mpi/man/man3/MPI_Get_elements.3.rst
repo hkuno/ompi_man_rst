@@ -1,17 +1,17 @@
 .. _mpi_get_elements:
 
 MPI_Get_elements
-~~~~~~~~~~~~~~~~
-====
+================
+.. include_body
 
-:ref:`MPI_Get_elements`, MPI_Get_elements_x - Returns the number of
+:ref:`MPI_Get_elements`, :ref:`MPI_Get_elements_x` - Returns the number of
 basic elements in a data type.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -24,7 +24,7 @@ C Syntax
        MPI_Count *count)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -40,7 +40,7 @@ Fortran Syntax
            INTEGER IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -59,26 +59,26 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``status`` : Return status of receive operation (status).
 -  ``datatype`` : Datatype used by receive operation (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
-:ref:`MPI_Get_elements` and MPI_Get_elements_x behave different from
+:ref:`MPI_Get_elements` and :ref:`MPI_Get_elements_x` behave different from
 :ref:`MPI_Get_count`, which returns the number of "top-level entries"
 received, i.e., the number of "copies" of type ``datatype``.
 :ref:`MPI_Get_count` may return any integer value k, where 0 =< k =< count.
 If :ref:`MPI_Get_count` returns k, then the number of basic elements
 received (and the value returned by :ref:`MPI_Get_elements` and
-MPI_Get_elements_x) is n k, where n is the number of basic elements
+:ref:`MPI_Get_elements_x`) is n k, where n is the number of basic elements
 in the type map of ``datatype``. If the number of basic elements
 received is not a multiple of n, that is, if the receive operation has
 not received an integral number of ``datatype`` "copies," then
@@ -115,7 +115,7 @@ functions ``MPI_Get_count`` and ``MPI_Get_elements`` return the same
 values when they are used with primitive data types.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.
@@ -129,10 +129,10 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 Fortran 77 Notes
-================
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the COUNT
-argument of MPI_Get_elements_x only for Fortran 90. FORTRAN 77 users
+argument of :ref:`MPI_Get_elements_x` only for Fortran 90. FORTRAN 77 users
 may use the non-portable syntax
 
 .. code:: Fortran

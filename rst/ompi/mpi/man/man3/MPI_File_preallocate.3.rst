@@ -1,17 +1,18 @@
 .. _mpi_file_preallocate:
 
 MPI_File_preallocate
-~~~~~~~~~~~~~~~~~~~~
+====================
+.. include_body
 
 :ref:`MPI_File_preallocate` - Preallocates a specified amount of storage
 space at the beginning of a file (collective).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    int MPI_File_preallocate(MPI_File fh, MPI_Offset size)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER(KIND=MPI_OFFSET_KIND)	SIZE
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -44,22 +45,22 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``fh``: File handle (handle). 
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``size``: Size to preallocate file, in bytes (integer). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_preallocate` ensures that storage space is allocated for the
 first *size* bytes of the file associated with *fh*.
@@ -79,7 +80,7 @@ MPI_MODE_SEQUENTIAL mode was specified when the file was opened, it is
 erroneous to call this routine.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the *SIZE*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -93,7 +94,7 @@ where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 NOTES
-=====
+-----
 
 When using the collective routine :ref:`MPI_File_set_size` on a UNIX file, if
 the size that is set is smaller than the current file size, the file is
@@ -108,7 +109,7 @@ regions. You may reserve file space either by using :ref:`MPI_File_preallocate`
 or by performing a read or write to certain bytes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

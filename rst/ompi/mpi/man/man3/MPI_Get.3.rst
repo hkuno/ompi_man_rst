@@ -1,17 +1,17 @@
 .. _mpi_get:
 
 MPI_Get
-~~~~~~~
-====
+=======
+.. include_body
 
-:ref:`MPI_Get`, MPI_Rget - Copies data from the target memory to the
+:ref:`MPI_Get`, :ref:`MPI_Rget` - Copies data from the target memory to the
 origin.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -27,7 +27,7 @@ C Syntax
             MPI_Request *request)
 
 Fortran Syntax (See Fortran 77 Notes)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -49,7 +49,7 @@ Fortran Syntax (See Fortran 77 Notes)
         TARGET_COUNT, TARGET_DATATYPE, WIN, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -76,7 +76,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``origin_addr`` : Initial address of origin buffer (choice).
 -  ``origin_count`` : Number of entries in origin buffer (nonnegative
@@ -93,13 +93,13 @@ Input Parameters
 -  ``win`` : window object used for communication (handle)
 
 Output Parameter
-================
+----------------
 
--  ``request`` : MPI_Rget: RMA request
+-  ``request`` : :ref:`MPI_Rget`: RMA request
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Get` copies data from the target memory to the origin, similar to
 :ref:`MPI_Put`, except that the direction of data transfer is reversed. The
@@ -108,16 +108,16 @@ buffer. The target buffer must be contained within the target window,
 and the copied data must fit, without truncation, in the origin buffer.
 Only processes within the same node can access the target window.
 
-MPI_Rget is similar to :ref:`MPI_Get`, except that it allocates a
+:ref:`MPI_Rget` is similar to :ref:`MPI_Get`, except that it allocates a
 communication ``request`` object and associates it with the ``request``
 handle (the argument ``request``) that can be used to wait or test for
-completion. The completion of an MPI_Rget operation indicates that
+completion. The completion of an :ref:`MPI_Rget` operation indicates that
 the data is available in the origin buffer. If ``origin_addr`` points to
 memory attached to a window, then the data becomes available in the
 private copy of this window.
 
 Fortran 77 Notes
-================
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 ``TARGET_DISP`` argument only for Fortran 90. FORTRAN 77 users may use
@@ -131,7 +131,7 @@ where ``MPI_ADDRESS_KIND`` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

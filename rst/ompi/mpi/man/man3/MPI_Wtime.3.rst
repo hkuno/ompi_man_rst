@@ -1,15 +1,16 @@
 .. _mpi_wtime:
 
 MPI_Wtime
-~~~~~~~~~
+=========
+.. include_body
 
 :ref:`MPI_Wtime` - Returns an elapsed time on the calling processor.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    double MPI_Wtime()
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -28,7 +29,7 @@ Fortran Syntax
    DOUBLE PRECISION MPI_WTIME()
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -37,12 +38,12 @@ Fortran 2008 Syntax
    DOUBLE PRECISION MPI_WTIME()
 
 RETURN VALUE
-============
+------ -----
 
 Time in seconds since an arbitrary time in the past.
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Wtime` returns a floating-point number of seconds, representing
 elapsed wall-clock time since some time in the past.
@@ -69,7 +70,7 @@ The times returned are local to the node that called them. There is no
 requirement that different nodes return the "same" time.
 
 NOTES
-=====
+-----
 
 The boolean variable MPI_WTIME_IS_GLOBAL, a predefined attribute key
 that indicates whether clocks are synchronized, does not have a valid

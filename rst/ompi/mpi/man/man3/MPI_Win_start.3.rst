@@ -1,15 +1,16 @@
 .. _mpi_win_start:
 
 MPI_Win_start
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Win_start` - Starts an RMA access epoch for *win*
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Win_start(MPI_Group group, int assert, MPI_Win win)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER GROUP, ASSERT, WIN, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,7 +43,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``group``: The group of target processes (handle). 
 
@@ -51,12 +52,12 @@ INPUT PARAMETERS
 * ``win``: Window object (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Win_start` is a one-sided MPI communication synchronization call that
 starts an RMA access epoch for *win*. RMA calls issued on *win* during
@@ -76,7 +77,7 @@ MPI_MODE_NOCHECK
    for the library to check to see if such a call has been made.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,16 +1,16 @@
 .. _mpi_get_count:
 
 MPI_Get_count
-~~~~~~~~~~~~~
-====
+=============
+.. include_body
 
 :ref:`MPI_Get_count` - Gets the number of top-level elements received.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
        int *count)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER STATUS(MPI_STATUS_SIZE), DATATYPE, COUNT, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -44,19 +44,19 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``status`` : Return status of receive operation (status).
 -  ``datatype`` : Datatype of each receive buffer element (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``count`` : Number of received elements (integer).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 Returns the number of entries received. (We count entries, each of type
 ``datatype``, not bytes.) The ``datatype`` argument should match the
@@ -71,7 +71,7 @@ elements it contains, and the ``count`` value is often not needed. Also,
 this allows the same function to be used after a call to :ref:`MPI_Probe`.
 
 Notes
-=====
+-----
 
 If the size of the ``datatype`` is zero, this routine will return a
 ``count`` of zero. If the amount of data in ``status`` is not an exact
@@ -79,7 +79,7 @@ multiple of the size of ``datatype`` (so that ``count`` would not be
 integral), a ``count`` of MPI_UNDEFINED is returned instead.
 
 Errors
-======
+------
 
 If the value to be returned is larger than can fit into the ``count``
 parameter, an MPI_ERR_TRUNCATE error is raised.

@@ -1,15 +1,16 @@
 .. _mpi_op_create:
 
 MPI_Op_create
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Op_create` - Creates a user-defined combination function handle.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	MPI_Op *op)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax
    	INTEGER	OP, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -45,21 +46,21 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``function``: User-defined function (function). 
 
 * ``commute``: True if commutative; false otherwise. 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``op``: Operation (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Op_create` binds a user-defined global operation to an op handle that
 can subsequently be used in :ref:`MPI_Reduce`, :ref:`MPI_Allreduce`,
@@ -124,7 +125,7 @@ No MPI communication function may be called inside the user function.
 :ref:`MPI_Abort` may be called inside the function in case of an error.
 
 NOTES
-=====
+-----
 
 Suppose one defines a library of user-defined reduce functions that are
 overloaded: The datatype argument is used to select the right execution
@@ -198,7 +199,7 @@ convention and the C representation of a datatype handle. Users who plan
 to mix languages should define their reduction functions accordingly.
 
 NOTES ON COLLECTIVE OPERATIONS
-==============================
+----- -- ---------- ----------
 
 The reduction functions ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call
@@ -210,7 +211,7 @@ The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

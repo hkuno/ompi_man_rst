@@ -1,17 +1,17 @@
 .. _mpi_cart_rank:
 
 MPI_Cart_rank
-~~~~~~~~~~~~~
-====
+=============
+.. include_body
 
 :ref:`MPI_Cart_rank` - Determines process rank in communicator given
 Cartesian location.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Cart_rank(MPI_Comm comm, int coords[], int *rank)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER COMM, COORDS(*), RANK, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -44,7 +44,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm`` : Communicator with Cartesian structure (handle).
 -  ``coords`` : Integer array (of size ndims, which was defined by
@@ -52,13 +52,13 @@ Input Parameters
    process.
 
 Output Parameter
-================
+----------------
 
 -  ``rank`` : Rank of specified process (integer).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 For a process group with Cartesian structure, the function
 :ref:`MPI_Cart_rank` translates the logical process coordinates to process
@@ -70,7 +70,7 @@ out of range, that is, ``coords(i)`` < 0 or ``coords(i)`` >=
 nonperiodic dimensions.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

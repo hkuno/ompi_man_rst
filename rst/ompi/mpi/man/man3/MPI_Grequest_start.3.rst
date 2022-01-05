@@ -1,17 +1,17 @@
 .. _mpi_grequest_start:
 
 MPI_Grequest_start
-~~~~~~~~~~~~~~~~~~
-====
+==================
+.. include_body
 
 :ref:`MPI_Grequest_start` - Starts a generalized request and returns a
 handle to it in ``request``.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -23,7 +23,7 @@ C Syntax
        MPI_Request *request)
 
 Fortran Syntax (See Fortran 77 Notes)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -37,7 +37,7 @@ Fortran Syntax (See Fortran 77 Notes)
          INTEGER(KIND=MPI_ADDRESS_KIND) EXTRA_STATE
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -53,7 +53,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``query_fn`` : Callback function invoked when request status is
    queried (function).
@@ -64,13 +64,13 @@ Input Parameters
 -  ``extra_state`` : Extra state.
 
 Output Parameters
-=================
+-----------------
 
 -  ``request`` : Generalized request (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Grequest_start` starts a generalized ``request`` and returns a
 handle to it in ``request``.
@@ -175,7 +175,7 @@ MPI passes to the callback function complete=true if
 complete=false otherwise.
 
 Fortran 77 Notes
-================
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 ``EXTRA_STATE`` argument only for Fortran 90. FORTRAN 77 users may use
@@ -189,7 +189,7 @@ where ``MPI_ADDRESS_KIND`` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

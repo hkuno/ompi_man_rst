@@ -1,15 +1,16 @@
 .. _mpi_win_get_attr:
 
 MPI_Win_get_attr
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 :ref:`MPI_Win_get_attr` - Obtains the value of a window attribute.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	void *attribute_val, int *flag)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	LOGICAL FLAG
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -46,14 +47,14 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``win``: Window to which the attribute is attached (handle). 
 
 * ``win_keyval``: Key value (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``attribute_val``: Attribute value, unless *ag* = false 
 
@@ -62,12 +63,12 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Obtains the value of a window attribute.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the
 *ATTRIBUTE_VAL* argument only for Fortran 90. FORTRAN 77 users may use
@@ -81,7 +82,7 @@ where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

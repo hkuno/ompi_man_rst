@@ -1,16 +1,17 @@
 .. _mpi_type_hindexed:
 
 MPI_Type_hindexed
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 :ref:`MPI_Type_hindexed` - Creates an indexed datatype with offsets in
 bytes -- use of this routine is deprecated.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_Datatype *newtype)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -34,7 +35,7 @@ Fortran Syntax
    	INTEGER	IERROR
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Number of blocks -- also number of entries in array_of_displacements and array_of_blocklengths (integer). 
 
@@ -45,17 +46,17 @@ INPUT PARAMETERS
 * ``oldtype``: Old datatype (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``newtype``: New datatype (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Note that use of this routine is *deprecated* as of MPI-2. Use
-MPI_Type_create_hindexed instead.
+:ref:`MPI_Type_create_hindexed` instead.
 
 The function is identical to :ref:`MPI_Type_indexed`, except that block
 displacements in array_of_displacements are specified in bytes, rather
@@ -83,7 +84,7 @@ array_of_displacements argument. The newly created datatype has
      (type(n-1), disp(n-1) + D[count-1] + (B[count-1] -1)* ex)}
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.
@@ -96,4 +97,4 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | MPI_Type_create_hindexed| :ref:`MPI_Type_indexed` 
+.. seealso:: | :ref:`MPI_Type_create_hindexed` | :ref:`MPI_Type_indexed` 

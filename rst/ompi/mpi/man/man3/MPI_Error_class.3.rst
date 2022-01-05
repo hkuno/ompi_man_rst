@@ -1,15 +1,16 @@
 .. _mpi_error_class:
 
 MPI_Error_class
-~~~~~~~~~~~~~~~
+===============
+.. include_body
 
 :ref:`MPI_Error_class` - Converts an error code into an error class.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Error_class(int errorcode, int *errorclass)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER	ERRORCODE, ERRORCLASS, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -41,25 +42,25 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``errorcode``: Error code returned by an MPI routine. 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``errorclass``: Error class associated with errorcode. 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The function :ref:`MPI_Error_class` maps each standard error code (error class)
 onto itself.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

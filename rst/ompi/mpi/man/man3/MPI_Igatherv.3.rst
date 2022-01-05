@@ -1,8 +1,9 @@
 .. _mpi_igatherv:
  
+MPI_Igatherv
 ============
-mpi_igatherv
-============
+    .. include_body
 
 .. include:: ../man3/MPI_Gatherv.3.rst
+    :start-after: .. include_body
 

@@ -1,17 +1,18 @@
 .. _mpi_publish_name:
 
 MPI_Publish_name
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 ::
 
    MPI_Publish_name - Publishes a service name associated with a port
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	const char *port_name)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax
    	INTEGER		INFO, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -45,7 +46,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``service_name``: A service name (string). 
 
@@ -54,12 +55,12 @@ INPUT PARAMETERS
 * ``port_name``: A port name (string). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This routine publishes the pair (*service_name, port_name*) so that an
 application may retrieve *port_name* by calling :ref:`MPI_Lookup_name` with
@@ -68,7 +69,7 @@ application may retrieve *port_name* by calling :ref:`MPI_Lookup_name` with
 previously opened by the calling process via a call to :ref:`MPI_Open_port`.
 
 INFO ARGUMENTS
-==============
+---- ---------
 
 The following keys for *info* are recognized:
 
@@ -101,7 +102,7 @@ publish function will default to global scope first, followed by local.
 Otherwise, the data will default to publish with local scope.
 
 NAME SCOPE
-==========
+---- -----
 
 Open MPI supports two name scopes: *global* and *local*. Local scope
 will place the specified service/port pair in a data store located on
@@ -147,7 +148,7 @@ to contact the central server and the process could establish
 communication with it.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,14 +1,15 @@
 .. _shmem_finalize:
 
 shmem_finalize
-~~~~~~~~~~~~~~
+==============
+.. include_body
 
 shmem_finalize - A collective operation that releases resources used by
 the OpenSHMEM library. This only terminates the Open-SHMEM portion of a
 program, not the entire program.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -27,7 +28,7 @@ Fortran:
    CALL SHMEM_FINALIZE
 
 DESCRIPTION
-===========
+-----------
 
 shmem_finalize is a collective operation that ends the OpenSHMEM portion
 of a program previously initialized by shmem_init and releases resources

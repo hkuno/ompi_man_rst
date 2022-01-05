@@ -1,16 +1,17 @@
 .. _mpi_exscan:
 
 MPI_Exscan
-~~~~~~~~~~
+==========
+.. include_body
 
-:ref:`MPI_Exscan`, MPI_Iexscan - Computes an exclusive scan (partial
+:ref:`MPI_Exscan`, :ref:`MPI_Iexscan` - Computes an exclusive scan (partial
 reduction)
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -28,7 +29,7 @@ C Syntax
    	MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -48,7 +49,7 @@ Fortran Syntax
    	INTEGER	COUNT, DATATYPE, OP, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -85,7 +86,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Send buffer (choice). 
 
@@ -98,7 +99,7 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Receive buffer (choice). 
 
@@ -107,7 +108,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Exscan` is used to perform an exclusive prefix reduction on data
 distributed across the calling processes. The operation returns, in the
@@ -123,7 +124,7 @@ The value in *recvbuf* on process 0 is undefined and unreliable as
 process 1 is always the value in *sendbuf* on process 0.
 
 USE OF IN-PLACE OPTION
-======================
+--- -- -------- ------
 
 The \`in place' option for intracommunicators is specified by passing
 MPI_IN_PLACE in the *sendbuf* argument. In this case, the input data is
@@ -137,7 +138,7 @@ send-and-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
 
 NOTES
-=====
+-----
 
 MPI does not specify which process computes which operation. In
 particular, both processes 0 and 1 may participate in the computation
@@ -153,7 +154,7 @@ there is no way for MPI to "know" the unit value for these custom
 operations.
 
 NOTES ON COLLECTIVE OPERATIONS
-==============================
+----- -- ---------- ----------
 
 The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either
@@ -165,7 +166,7 @@ The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

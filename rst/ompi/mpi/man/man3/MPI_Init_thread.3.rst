@@ -1,15 +1,16 @@
 .. _mpi_init_thread:
 
 MPI_Init_thread
-~~~~~~~~~~~~~~~
+===============
+.. include_body
 
 :ref:`MPI_Init_thread` - Initializes the MPI execution environment
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	int required, int *provided)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	REQUIRED, PROVIDED, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,7 +43,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``argc``: C only: Pointer to the number of arguments. 
 
@@ -51,14 +52,14 @@ INPUT PARAMETERS
 * ``required``: Desired level of thread support (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``provided``: Available level of thread support (integer). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This routine, or :ref:`MPI_Init`, must be called before most other MPI routines
 are called. There are a small number of exceptions, such as
@@ -106,7 +107,7 @@ modifies, interprets, nor distributes them:
    	}
 
 NOTES
-=====
+-----
 
 The Fortran version does not have provisions for *argc* and *argv* and
 takes only IERROR.
@@ -121,7 +122,7 @@ anything that changes the external state of the program, such as opening
 files, reading standard input, or writing to standard output.
 
 MPI_THREAD_MULTIPLE Support
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MPI_THREAD_MULTIPLE support is included if the environment in which Open
 MPI was built supports threading. You can check the output of
@@ -141,7 +142,7 @@ MPI_THREAD_MULTIPLE support; latencies for short messages will be higher
 as compared to when using MPI_THREAD_SINGLE, for example.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

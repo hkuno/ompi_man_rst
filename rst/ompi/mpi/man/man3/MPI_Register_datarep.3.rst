@@ -1,16 +1,17 @@
 .. _mpi_register_datarep:
 
 MPI_Register_datarep
-~~~~~~~~~~~~~~~~~~~~
+====================
+.. include_body
 
 :ref:`MPI_Register_datarep` - Defines data representation.
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -23,7 +24,7 @@ C Syntax
    	void *extra_state)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -39,7 +40,7 @@ Fortran Syntax
    	INTEGER(KIND=MPI_ADDRESS_KIND)	EXTRA_STATE
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -55,7 +56,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``datarep``: Data representation identifier (string). 
 
@@ -68,12 +69,12 @@ INPUT PARAMETERS
 * ``extra_state``: Extra state. 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Register_datarep` defines a data representation. It associates the
 data representation's identifier (a string) with the functions that
@@ -101,7 +102,7 @@ representations and free the associated resources; it is not expected
 that an application will generate them in significant numbers.
 
 NOTES
-=====
+-----
 
 The Fortran version of each MPI I/O routine includes a final argument,
 IERROR, which is not defined in the PARAMETERS sections. This argument
@@ -114,7 +115,7 @@ return value.
 Error classes are found in mpi.h (for C) and mpif.h (for Fortran).
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

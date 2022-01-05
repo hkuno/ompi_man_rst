@@ -1,17 +1,17 @@
 .. _mpi_status_f2c:
 
 MPI_Status_f2c
-~~~~~~~~~~~~~~
-====
+==============
+.. include_body
 
 :ref:`MPI_Status_f2c`, :ref:`MPI_Status_f2c` - Translates a C status into a Fortran
 INTEGER-style status, or vice versa.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,13 +21,13 @@ C Syntax
    int MPI_Status_c2f(const MPI_Status *c_status, MPI_Fint *f_status)
 
 PARAMETERS
-==========
+----------
 
 -  ``f_status``: ``mpi``-style ``INTEGER`` MPI status object
 -  ``c_status``: C-style MPI status object
 
 DESCRIPTION
-===========
+-----------
 
 These two procedures are provided in C to convert from a Fortran status
 (which is an array of integers) to a C status (which is a structure),
@@ -55,10 +55,10 @@ case the value of the error field in the output status argument is
 undefined.
 
 NOTES
-=====
+-----
 
 These functions are only available in C; they are not available in any
 of the Fortran MPI interfaces.
 
 
-.. seealso:: :ref:`MPI_Status_f082c` MPI_Status_c2f08:ref:`MPI_Status_f082f` MPI_Status_f2f08
+.. seealso:: :ref:`MPI_Status_f082c` :ref:`MPI_Status_c2f08` :ref:`MPI_Status_f082f` :ref:`MPI_Status_f2f08` 

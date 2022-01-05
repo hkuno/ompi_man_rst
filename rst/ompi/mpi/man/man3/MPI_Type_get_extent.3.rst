@@ -1,16 +1,17 @@
 .. _mpi_type_get_extent:
 
 MPI_Type_get_extent
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
-:ref:`MPI_Type_get_extent`, MPI_Type_get_extent_x - Returns the lower
+:ref:`MPI_Type_get_extent`, :ref:`MPI_Type_get_extent_x` - Returns the lower
 bound and extent of a data type.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -22,7 +23,7 @@ C Syntax
    	MPI_Count *extent)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -37,7 +38,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER(KIND=MPI_COUNT_KIND) LB, EXTENT
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -53,12 +54,12 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``datatype``: Data type (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``lb``: Lower bound of data type (integer). 
 
@@ -67,7 +68,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Type_get_extent` returns the lower bound and the extent of
 *datatype*. For either function, if either the *lb* or *extent*
@@ -76,13 +77,13 @@ parameter is too small to hold the output value), it is set to
 MPI_UNDEFINED.
 
 NOTE
-====
+----
 
 Use of :ref:`MPI_Type_get_extent` is strongly recommended over the old MPI-1
 functions :ref:`MPI_Type_extent` and :ref:`MPI_Type_lb`.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the *LB* and
 *EXTENT* arguments only for Fortran 90. FORTRAN 77 users may use the
@@ -96,7 +97,7 @@ non-portable syntax
    or
         INTEGER*MPI_ADDRESS_KIND EXTENT
 
-MPI_Type_get_extent_x:
+:ref:`MPI_Type_get_extent_x`:
 
 ::
 
@@ -108,7 +109,7 @@ where MPI_ADDRESS_KIND and MPI_COUNT_KIND are constants defined in
 mpif.h and give the length of the declared integer in bytes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,15 +1,16 @@
 .. _mpi_iprobe:
 
 MPI_Iprobe
-~~~~~~~~~~
+==========
+.. include_body
 
 :ref:`MPI_Iprobe` - Nonblocking test for a message.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	INTEGER	SOURCE, TAG, COMM, STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -45,7 +46,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``source``: Source rank or MPI_ANY_SOURCE (integer). 
 
@@ -54,7 +55,7 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``flag``: Message-waiting flag (logical). 
 
@@ -63,7 +64,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The :ref:`MPI_Probe` and :ref:`MPI_Iprobe` operations allow checking of incoming
 messages without actual receipt of them. The user can then decide how to
@@ -106,13 +107,13 @@ probed for, and the same message may be probed for several times before
 it is received.
 
 NOTE
-====
+----
 
 Users of libmpi-mt should remember that two threads may do an :ref:`MPI_Iprobe`
 that actually returns true for the same message for both threads.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

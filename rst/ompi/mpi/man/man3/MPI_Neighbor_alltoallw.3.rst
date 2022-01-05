@@ -1,17 +1,18 @@
 .. _mpi_neighbor_alltoallw:
 
 MPI_Neighbor_alltoallw
-~~~~~~~~~~~~~~~~~~~~~~
+======================
+.. include_body
 
-:ref:`MPI_Neighbor_alltoallw`, MPI_Ineighbor_alltoallw,
-MPI_Neighbor_alltoallw_init - All processes send data of different
+:ref:`MPI_Neighbor_alltoallw`, :ref:`MPI_Ineighbor_alltoallw`,
+:ref:`MPI_Neighbor_alltoallw_init` - All processes send data of different
 types to, and receive data of different types from, all processes
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -33,7 +34,7 @@ C Syntax
    	const MPI_Datatype recvtypes[], MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -68,7 +69,7 @@ Fortran Syntax
    	INTEGER	COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -115,7 +116,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Starting address of send buffer. 
 
@@ -136,7 +137,7 @@ INPUT PARAMETERS
 * ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Address of receive buffer. 
 
@@ -145,7 +146,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status. 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Neighbor_alltoallw` is a generalized collective operation in which
 all processes send data to and receive data from all neighbors. It adds
@@ -197,7 +198,7 @@ different amounts and types of data to different processes in the
 communicator.
 
 NOTES
-=====
+-----
 
 The MPI_IN_PLACE option for *sendbuf* is not meaningful for this
 operation
@@ -213,7 +214,7 @@ this to :ref:`MPI_Neighbor_alltoallv`, where these offsets are measured in
 units of *sendtype* and *recvtype*, respectively.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

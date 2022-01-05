@@ -1,17 +1,18 @@
 .. _mpi_file_write_at_all_begin:
 
 MPI_File_write_at_all_begin
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================
+.. include_body
 
 :ref:`MPI_File_write_at_all_begin` - Writes a file at explicitly specified
 offsets; beginning part of a split collective routine (nonblocking).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	const void *buf, int count, MPI_Datatype datatype)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -34,7 +35,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER(KIND=MPI_OFFSET_KIND)	OFFSET
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -49,12 +50,12 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``fh``: File handle (handle). 
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``offset``: File offset (handle). 
 
@@ -65,12 +66,12 @@ INPUT PARAMETERS
 * ``datatype``: Data type of each buffer element (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_write_at_all_begin` is the beginning part of a split collective,
 that is, a nonblocking routine that attempts to write into the file
@@ -81,7 +82,7 @@ holes are not counted when locating an offset. The data is written into
 those parts of the file specified by the current view.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the *OFFSET*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -95,7 +96,7 @@ where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 NOTES
-=====
+-----
 
 All the nonblocking collective routines for data access are "split" into
 two routines, each with \_begin or \_end as a suffix. These split
@@ -103,7 +104,7 @@ collective routines are subject to the semantic rules described in
 Section 9.4.5 of the MPI-2 standard.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

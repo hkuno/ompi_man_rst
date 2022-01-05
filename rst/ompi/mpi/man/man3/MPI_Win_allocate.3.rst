@@ -1,16 +1,17 @@
 .. _mpi_win_allocate:
 
 MPI_Win_allocate
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 :ref:`MPI_Win_allocate` - One-sided MPI call that allocates memory and
 returns a window object for RMA operations.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
                          MPI_Comm comm, void *baseptr, MPI_Win *win)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax
    	INTEGER DISP_UNIT, INFO, COMM, WIN, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -49,7 +50,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``size``: Size of window in bytes (nonnegative integer). 
 
@@ -60,7 +61,7 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``baseptr``: Initial address of window. 
 
@@ -69,7 +70,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Win_allocate` is a collective call executed by all processes in
 the group of *comm*. On each process, it allocates memory of at least
@@ -93,7 +94,7 @@ process, at window creation.
 For supported info keys see :ref:`MPI_Win_create`\ *.*
 
 NOTES
-=====
+-----
 
 Common choices for *disp_unit are 1 (no scaling), and (in C* syntax)
 *sizeof(type), for a window that consists of an array of* elements of
@@ -106,14 +107,14 @@ by*\ :ref:`MPI_Win_allocate`\ *. It is thus erroneous to manually free
 baseptr.*
 
 C NOTES
-=======
+- -----
 
 While *baseptr is a void \* type, this is to allow easy use of any
 pointer object for this parameter. This argument is really a void \*\*
 type.*
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

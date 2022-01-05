@@ -1,16 +1,17 @@
 .. _mpi_type_hvector:
 
 MPI_Type_hvector
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 :ref:`MPI_Type_hvector` - Creates a vector (strided) datatype with offset
 in bytes -- use of this routine is deprecated.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    	MPI_Datatype oldtype, MPI_Datatype *newtype)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax
    	INTEGER	NEWTYPE, IERROR
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Number of blocks (nonnegative integer). 
 
@@ -43,14 +44,14 @@ INPUT PARAMETERS
 * ``oldtype``: Old datatype (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``newtype``: New datatype (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Note that use of this routine is *deprecated* as of MPI-2. Use
 :ref:`MPI_Type_create_hvector` instead.
@@ -84,7 +85,7 @@ has a type map with count \* bl \* n entries:
      (type(n-1), disp(n-1) + stride * (count -1) + (bl -1) * ex)}
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

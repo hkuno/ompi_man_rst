@@ -1,15 +1,16 @@
 .. _mpi_win_free:
 
 MPI_Win_free
-~~~~~~~~~~~~
+============
+.. include_body
 
 :ref:`MPI_Win_free` - Frees the window object and returns a null handle.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Win_free(MPI_Win *win)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER WIN, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -40,17 +41,17 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``win``: Window object (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Win_free` frees the window object *win* and returns a null handle
 (equal to MPI_WIN_NULL). This collective call is executed by all
@@ -61,14 +62,14 @@ communications on window *win*, that is, the process has called
 :ref:`MPI_Win_lock`. When the call returns, the window memory can be freed.
 
 NOTES
-=====
+-----
 
 If the window was created through :ref:`MPI_Win_allocate` or
 :ref:`MPI_Win_allocate_shared` then the memory buffer allocated in that
 call will be freed when calling :ref:`MPI_Win_free`.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

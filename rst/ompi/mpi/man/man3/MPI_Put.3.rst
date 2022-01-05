@@ -1,16 +1,17 @@
 .. _mpi_put:
 
 MPI_Put
-~~~~~~~
+=======
+.. include_body
 
-:ref:`MPI_Put`, MPI_Rput - Copies data from the origin memory to the
+:ref:`MPI_Put`, :ref:`MPI_Rput` - Copies data from the origin memory to the
 target.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -26,7 +27,7 @@ C Syntax
    	 MPI_Request *request)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -48,7 +49,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	 TARGET_DATATYPE, WIN, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -75,7 +76,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``origin_addr``: Initial address of origin buffer (choice). 
 
@@ -94,20 +95,20 @@ INPUT PARAMETERS
 * ``win``: Window object used for communication (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``request``: MPI_Rput: RMA request 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Put` transfers *origin_count* successive entries of the type
 specified by *origin_datatype*, starting at address *origin_addr* on the
 origin node to the target node specified by the *win*, *target_rank*
 pair. The data are written in the target buffer at address *target_addr*
-- *window_base* + *target_disp* x *disp_unit*, where *window_base* and
+^ *window_base* + *target_disp* x *disp_unit*, where *window_base* and
 *disp_unit* are the base address and window displacement unit specified
 at window initialization, by the target process.
 
@@ -137,17 +138,17 @@ the origin process. The target data type must contain only relative
 displacements, not absolute addresses. The same holds for get and
 accumulate.
 
-MPI_Rput is similar to :ref:`MPI_Put`, except that it allocates a
+:ref:`MPI_Rput` is similar to :ref:`MPI_Put`, except that it allocates a
 communication request object and associates it with the request handle
-(the argument *request*). The completion of an MPI_Rput operation (i.e.,
+(the argument *request*). The completion of an :ref:`MPI_Rput` operation (i.e.,
 after the corresponding test or wait) indicates that the sender is now
 free to update the locations in the *origin_addr* buffer. It does not
 indicate that the data is available at the target window. If remote
-completion is required, :ref:`MPI_Win_flush`, MPI_Win_flush_all,
+completion is required, :ref:`MPI_Win_flush`, :ref:`MPI_Win_flush_all`,
 :ref:`MPI_Win_unlock`, or :ref:`MPI_Win_unlock_all` can be used.
 
 NOTES
-=====
+-----
 
 The *target_datatype* argument is a handle to a datatype object that is
 defined at the origin process, even though it defines a data layout in
@@ -165,7 +166,7 @@ systems; the alignment of the communication buffers may also impact
 performance.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the
 *TARGET_DISP* argument only for Fortran 90. FORTRAN 77 users may use the
@@ -179,7 +180,7 @@ where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.
@@ -192,4 +193,4 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Get`  MPI_Rget| :ref:`MPI_Accumulate`  :ref:`MPI_Win_flush`  MPI_Win_flush_all :ref:`MPI_Win_unlock`   :ref:`MPI_Win_unlock_all` 
+.. seealso:: | :ref:`MPI_Get`  :ref:`MPI_Rget` | :ref:`MPI_Accumulate`  :ref:`MPI_Win_flush`  :ref:`MPI_Win_flush_all`  :ref:`MPI_Win_unlock`   :ref:`MPI_Win_unlock_all` 

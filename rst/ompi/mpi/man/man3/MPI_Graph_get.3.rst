@@ -1,17 +1,17 @@
 .. _mpi_graph_get:
 
 MPI_Graph_get
-~~~~~~~~~~~~~
-====
+=============
+.. include_body
 
 :ref:`MPI_Graph_get` - Retrieves graph topology information associated with
 a communicator.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
        int index[], int edges[])
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -33,7 +33,7 @@ Fortran Syntax
        INTEGER EDGES(*), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -46,7 +46,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm`` : Communicator with graph structure (handle).
 -  ``maxindex`` : Length of vector index in the calling program
@@ -55,7 +55,7 @@ Input Parameters
    (integer).
 
 Output Parameters
-=================
+-----------------
 
 -  ``index`` : Array of integers containing the graph structure (for
    details see the definition of :ref:`MPI_Graph_create`).
@@ -63,7 +63,7 @@ Output Parameters
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 Functions :ref:`MPI_Graphdims_get` and :ref:`MPI_Graph_get` retrieve the
 graph-topology information that was associated with a communicator by
@@ -74,7 +74,7 @@ dimension the vectors ``index`` and ``edges`` correctly for a call to
 :ref:`MPI_Graph_get`.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

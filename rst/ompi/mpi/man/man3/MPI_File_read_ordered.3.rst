@@ -1,16 +1,17 @@
 .. _mpi_file_read_ordered:
 
 MPI_File_read_ordered
-~~~~~~~~~~~~~~~~~~~~~
+=====================
+.. include_body
 
 :ref:`MPI_File_read_ordered` - Reads a file at a location specified by a
 shared file pointer (blocking, collective).
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -34,7 +35,7 @@ Fortran Syntax
    	INTEGER	FH, COUNT, DATATYPE, STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -49,7 +50,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``fh``: File handle (handle). 
 
@@ -58,7 +59,7 @@ INPUT PARAMETERS
 * ``datatype``: Data type of each buffer element (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``buf``: Initial address of buffer (choice). 
 
@@ -67,7 +68,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_read_ordered` is a collective routine. This routine must be
 called by all processes in the communicator group associated with the
@@ -83,7 +84,7 @@ read in *status.* The shared file pointer is updated by the amounts of
 data requested by all processes of the group.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

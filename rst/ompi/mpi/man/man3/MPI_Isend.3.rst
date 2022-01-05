@@ -1,15 +1,16 @@
 .. _mpi_isend:
 
 MPI_Isend
-~~~~~~~~~
+=========
+.. include_body
 
 :ref:`MPI_Isend` - Starts a standard-mode, nonblocking send.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	int tag, MPI_Comm comm, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	INTEGER	COUNT, DATATYPE, DEST, TAG, COMM, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -46,7 +47,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``buf``: Initial address of send buffer (choice). 
 
@@ -61,14 +62,14 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``request``: Communication request (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Isend` starts a standard-mode, nonblocking send. Nonblocking calls
 allocate a communication request object and associate it with the
@@ -85,7 +86,7 @@ A send request can be determined being completed by calling the
 this function.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,15 +1,16 @@
 .. _mpi_comm_join:
 
 MPI_Comm_join
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Comm_join` - Establishes communication between MPI jobs
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Comm_join(int fd, MPI_Comm *intercomm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER	FD, INTERCOMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -41,19 +42,19 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``fd``: socket file descriptor (socket). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``intercomm``: Intercommunicator between processes (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Comm_join` creates an intercommunicator from the union of two MPI
 processes that are connected by a socket. *fd* is a file descriptor
@@ -66,7 +67,7 @@ connected state, and must be quiescent when :ref:`MPI_Comm_join` is called.
 It does not return until both processes have called :ref:`MPI_Comm_join`.
 
 NOTES
-=====
+-----
 
 There are no MPI library calls for opening and manipulating a socket.
 The socket *fd* can be opened using standard socket API calls. MPI uses
@@ -84,7 +85,7 @@ additional processes, through the usual MPI communicator-creation
 mechanisms.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

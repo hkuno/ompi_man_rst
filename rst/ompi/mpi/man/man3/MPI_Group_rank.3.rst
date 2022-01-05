@@ -1,16 +1,17 @@
 .. _mpi_group_rank:
 
 MPI_Group_rank
-~~~~~~~~~~~~~~
+==============
+.. include_body
 
 :ref:`MPI_Group_rank` - Returns the rank of the calling process in the
 given group.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Group_rank(MPI_Group group, int *rank)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	GROUP, RANK, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,26 +43,26 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``group``: Group (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``rank``: Rank of the calling process in group, or MPI_UNDEFINED if the process is not a member (integer). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Group_rank` returns as the output parameter *rank* the rank of the
 calling process in group. If the process is not a member of group then
 MPI_UNDEFINED is returned.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

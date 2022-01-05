@@ -1,17 +1,17 @@
 .. _mpi_cartdim_get:
 
 MPI_Cartdim_get
-~~~~~~~~~~~~~~~
-====
+===============
+.. include_body
 
 :ref:`MPI_Cartdim_get` - Retrieves Cartesian topology information
 associated with a communicator.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Cartdim_get(MPI_Comm comm, int *ndims)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER COMM, NDIMS, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -43,25 +43,25 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
-===============
+---------------
 
 -  ``comm`` : Communicator with Cartesian structure (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``ndims`` : Number of dimensions of the Cartesian structure
    (integer).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Cartdim_get` returns the number of dimensions of the Cartesian
 structure.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

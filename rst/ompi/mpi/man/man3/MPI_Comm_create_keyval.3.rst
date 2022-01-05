@@ -1,16 +1,16 @@
 .. _mpi_comm_create_keyval:
 
 MPI_Comm_create_keyval
-~~~~~~~~~~~~~~~~~~~~~~
-====
+======================
+.. include_body
 
 :ref:`MPI_Comm_create_keyval` - Generates a new attribute key.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -22,7 +22,7 @@ C Syntax
        void *extra_state)
 
 Fortran Syntax (See Fortran 77 Notes)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -37,7 +37,7 @@ Fortran Syntax (See Fortran 77 Notes)
        INTEGER(KIND=MPI_ADDRESS_KIND) EXTRA_STATE
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -52,7 +52,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm_copy_attr_fn`` : Copy callback function for ``comm_keyval``
    (function).
@@ -61,13 +61,13 @@ Input Parameters
 -  ``extra_state`` : Extra state for callback functions.
 
 Output Parameter
-================
+----------------
 
 -  ``comm_keyval`` : Key value for future access (integer).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 This function replaces :ref:`MPI_Keyval_create`, the use of which is
 deprecated. The C binding is identical. The Fortran binding differs in
@@ -112,7 +112,7 @@ names are deprecated. The two Fortran callback functions are:
        INTEGER(KIND=MPI_ADDRESS_KIND) ATTRIBUTE_VAL, EXTRA_STATE
 
 Fortran 77 Notes
-----------------
+^^^^^^^^^^^^^^^^
 
 The MPI standard prescribes portable Fortran syntax for the
 ``EXTRA_STATE`` argument only for Fortran 90. FORTRAN 77 users may use
@@ -126,7 +126,7 @@ where ``MPI_ADDRESS_KIND`` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

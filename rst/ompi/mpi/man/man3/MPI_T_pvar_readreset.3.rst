@@ -1,16 +1,17 @@
 .. _mpi_t_pvar_readreset:
 
 MPI_T_pvar_readreset
-~~~~~~~~~~~~~~~~~~~~
+====================
+.. include_body
 
 :ref:`MPI_T_pvar_readreset` - Atomically read and reset the value of a
 performance variable
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_T_pvar_readreset(MPI_T_pvar_session session, MPI_T_pvar_handle handle, const void *buf)
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``session``: Performance experiment session. 
 
@@ -28,7 +29,7 @@ INPUT PARAMETERS
 * ``buf``: Initial address of storage location for variable value. 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_T_pvar_readreset` atomically queries and resets the value of a
 performance variable bound to the handle specified by *handle* in the
@@ -39,7 +40,7 @@ the buffer pointed to by *buf* is large enough to hold the entire value
 of the performance variable.
 
 ERRORS
-======
+------
 
 MPI_T_pvar_readreset() will fail if:
 

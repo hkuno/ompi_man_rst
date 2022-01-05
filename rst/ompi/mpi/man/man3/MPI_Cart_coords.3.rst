@@ -1,17 +1,17 @@
 .. _mpi_cart_coords:
 
 MPI_Cart_coords
-~~~~~~~~~~~~~~~
-====
+===============
+.. include_body
 
 :ref:`MPI_Cart_coords` - Determines process coords in Cartesian topology
 given rank in group.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
        int coords[])
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -32,7 +32,7 @@ Fortran Syntax
        INTEGER COMM, RANK, MAXDIMS, COORDS(*), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -45,7 +45,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm`` : Communicator with Cartesian structure (handle).
 -  ``rank`` : Rank of a process within group of comm (integer).
@@ -53,7 +53,7 @@ Input Parameters
    (integer). Length of vector coords in the calling program (integer).
 
 Output Parameters
-=================
+-----------------
 
 -  ``coords`` : Integer array (of size ndims,which was defined by
    :ref:`MPI_Cart_create` call) containing the Cartesian coordinates of
@@ -61,13 +61,13 @@ Output Parameters
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Cart_coords` provies a mapping of ``rank``\ s to Cartesian
 coordinates.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

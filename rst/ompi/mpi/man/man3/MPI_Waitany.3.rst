@@ -1,15 +1,16 @@
 .. _mpi_waitany:
 
 MPI_Waitany
-~~~~~~~~~~~
+===========
+.. include_body
 
 :ref:`MPI_Waitany` - Waits for any specified send or receive to complete.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	int *index, MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -45,14 +46,14 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: List length (integer). 
 
 * ``array_of_requests``: Array of requests (array of handles). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``index``: Index of handle for operation that completed (integer). In the range 0 to count-1. In Fortran, the range is 1 to count. 
 
@@ -61,7 +62,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 A call to :ref:`MPI_Waitany` can be used to wait for the completion of one out
 of several requests.
@@ -106,7 +107,7 @@ special value for the *status* argument.
        END IF
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

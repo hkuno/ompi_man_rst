@@ -1,16 +1,17 @@
 .. _mpi_info_get_string:
 
 MPI_Info_get_string
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
 :ref:`MPI_Info_get_string` - Retrieves the value associated with a key in
 an info object.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Info_get_string(MPI_Info info, const char *key, int *buflen, char *value, int *flag)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax
    	LOGICAL FLAG
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -47,14 +48,14 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``info``: Info object (handle). 
 
 * ``key``: Key (string). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``buflen On entry, length of value arg. On return, set to required size to``: hold value string (integer). 
 
@@ -65,7 +66,7 @@ OUTPUT PARAMETER
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Info_get_string` retrieves the value associated with *key* from
 *info*, if any. If such a key exists in info, it sets *flag* to true and
@@ -84,7 +85,7 @@ value is greater than 0.
 If *key* is larger than MPI_MAX_INFO_KEY, the call is erroneous.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

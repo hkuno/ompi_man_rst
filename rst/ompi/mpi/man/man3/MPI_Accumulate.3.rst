@@ -1,16 +1,17 @@
 .. _mpi_accumulate:
 
 MPI_Accumulate
-~~~~~~~~~~~~~~
+==============
+.. include_body
 
-:ref:`MPI_Accumulate`, MPI_Raccumulate - Combines the contents of the
+:ref:`MPI_Accumulate`, :ref:`MPI_Raccumulate` - Combines the contents of the
 origin buffer with that of a target buffer.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -28,7 +29,7 @@ C Syntax
    	MPI_Request *request)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -50,7 +51,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	TARGET_DATATYPE, OP, WIN, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -79,7 +80,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``origin_addr``: Initial address of buffer (choice). 
 
@@ -100,7 +101,7 @@ INPUT PARAMETERS
 * ``win``: Window object (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``MPI_Raccumulate``:  RMA request
 
@@ -108,7 +109,7 @@ OUTPUT PARAMETER
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Accumulate` is a function used for one-sided MPI communication
 that adds the contents of the origin buffer (as defined by
@@ -136,15 +137,15 @@ A new predefined operation, MPI_REPLACE, is defined. It corresponds to
 the associative function f(a, b) =b; that is, the current value in the
 target memory is replaced by the value supplied by the origin.
 
-MPI_Raccumulate is similar to :ref:`MPI_Accumulate`, except that it
+:ref:`MPI_Raccumulate` is similar to :ref:`MPI_Accumulate`, except that it
 allocates a communication request object and associates it with the
 request handle (the argument *request*) that can be used to wait or test
-for completion. The completion of an MPI_Raccumulate operation
+for completion. The completion of an :ref:`MPI_Raccumulate` operation
 indicates that the *origin_addr* buffer is free to be updated. It does
 not indicate that the operation has completed at the target window.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the
 *TARGET_DISP* argument only for Fortran 90. FORTRAN 77 users may use the
@@ -158,7 +159,7 @@ where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 NOTES
-=====
+-----
 
 :ref:`MPI_Put` is a special case of :ref:`MPI_Accumulate`, with the operation
 MPI_REPLACE. Note, however, that :ref:`MPI_Put` and :ref:`MPI_Accumulate` have
@@ -170,7 +171,7 @@ accesses to the window are properly aligned according to the data type
 arguments in the call to the :ref:`MPI_Accumulate` function.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

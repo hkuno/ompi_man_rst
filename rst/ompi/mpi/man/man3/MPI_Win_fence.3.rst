@@ -1,15 +1,16 @@
 .. _mpi_win_fence:
 
 MPI_Win_fence
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Win_fence` - Synchronizes RMA calls on a window.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Win_fence(int assert, MPI_Win win)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER ASSERT, WIN, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -41,19 +42,19 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``assert``: Program assertion (integer). 
 
 * ``win``: Window object (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Win_fence` synchronizes RMA calls on *win*. The call is collective on
 the group of *win*. All RMA operations on *win* originating at a given
@@ -78,7 +79,7 @@ wait*.
 
 The *assert* argument is used to provide assertions on the context of
 the call that may be used for various optimizations. A value of *assert*
-- 0 is always valid. The following assertion value is supported:
+^ 0 is always valid. The following assertion value is supported:
 
 MPI_MODE_NOPRECEDE
    No local RMA calls have been issued before this fence. This assertion
@@ -99,13 +100,13 @@ MPI_MODE_NOSUCCEED
    may enable faster fence call by avoiding unnecessary synchronization.
 
 NOTE
-====
+----
 
 Calls to :ref:`MPI_Win_fence` should both precede and follow calls to put, get
 or accumulate that are synchronized with fence calls.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

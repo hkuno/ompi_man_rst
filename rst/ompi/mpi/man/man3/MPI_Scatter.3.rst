@@ -1,16 +1,17 @@
 .. _mpi_scatter:
 
 MPI_Scatter
-~~~~~~~~~~~
+===========
+.. include_body
 
-:ref:`MPI_Scatter`, MPI_Iscatter, MPI_Scatter_init - Sends data from one
+:ref:`MPI_Scatter`, :ref:`MPI_Iscatter`, :ref:`MPI_Scatter_init` - Sends data from one
 task to all tasks in a group.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -29,7 +30,7 @@ C Syntax
    	MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -55,7 +56,7 @@ Fortran Syntax
    	INTEGER	COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -92,7 +93,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Address of send buffer (choice, significant only at root). 
 
@@ -111,7 +112,7 @@ INPUT PARAMETERS
 * ``info``: Info (handle, persistent). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Address of receive buffer (choice). 
 
@@ -120,7 +121,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Scatter` is the inverse operation to :ref:`MPI_Gather`.
 
@@ -179,7 +180,7 @@ sets of 100 ints from the root to each process in the group.
                        MPI_INT, root, comm);
 
 USE OF IN-PLACE OPTION
-======================
+--- -- -------- ------
 
 When the communicator is an intracommunicator, you can perform a scatter
 operation in-place (the output buffer is used as the input buffer). Use
@@ -195,7 +196,7 @@ send-and-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
 
 WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
-==========================================
+---- ------------ -- -- ------------------
 
 When the communicator is an inter-communicator, the root process in the
 first group sends data to all processes in the second group. The first
@@ -208,7 +209,7 @@ first group must be consistent with the receive buffer argument of the
 processes in the second group.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,17 +1,18 @@
 .. _mpi_alltoallw:
 
 MPI_Alltoallw
-~~~~~~~~~~~~~
+=============
+.. include_body
 
-:ref:`MPI_Alltoallw`, MPI_Ialltoallw, MPI_Alltoallw_init - All processes
+:ref:`MPI_Alltoallw`, :ref:`MPI_Ialltoallw`, :ref:`MPI_Alltoallw_init` - All processes
 send data of different types to, and receive data of different types
 from, all processes
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -35,7 +36,7 @@ C Syntax
    	MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -67,7 +68,7 @@ Fortran Syntax
    	INTEGER	COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -113,7 +114,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Starting address of send buffer. 
 
@@ -134,7 +135,7 @@ INPUT PARAMETERS
 * ``info``: Info (handle, persistent only) 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Address of receive buffer. 
 
@@ -143,7 +144,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status. 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Alltoallw` is a generalized collective operation in which all
 processes send data to and receive data from all other processes. It
@@ -195,7 +196,7 @@ When the communicator is an intra-communicator, these groups are the
 same, and the operation occurs in a single phase.
 
 USE OF IN-PLACE OPTION
-======================
+--- -- -------- ------
 
 When the communicator is an intracommunicator, you can perform an
 all-to-all operation in-place (the output buffer is used as the input
@@ -205,7 +206,7 @@ input data of each process is assumed to be in the area where that
 process would receive its own contribution to the receive buffer.
 
 NOTES
-=====
+-----
 
 The specification of counts, types, and displacements should not cause
 any location to be written more than once.
@@ -218,7 +219,7 @@ this to :ref:`MPI_Alltoallv`, where these offsets are measured in units of
 *sendtype* and *recvtype*, respectively.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

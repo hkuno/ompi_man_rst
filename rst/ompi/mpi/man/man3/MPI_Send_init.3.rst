@@ -1,15 +1,16 @@
 .. _mpi_send_init:
 
 MPI_Send_init
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Send_init` - Builds a handle for a standard send.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	int dest, int tag, MPI_Comm comm, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax
    	INTEGER	COMM, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -48,7 +49,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``buf``: Initial address of send buffer (choice). 
 
@@ -63,14 +64,14 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``request``: Communication request (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Creates a persistent communication request for a standard mode send
 operation, and binds to it all the arguments of a send operation.
@@ -79,7 +80,7 @@ A communication (send or receive) that uses a persistent request is
 initiated by the function :ref:`MPI_Start` or :ref:`MPI_Startall`.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

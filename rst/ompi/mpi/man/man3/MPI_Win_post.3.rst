@@ -1,16 +1,17 @@
 .. _mpi_win_post:
 
 MPI_Win_post
-~~~~~~~~~~~~
+============
+.. include_body
 
 :ref:`MPI_Win_post` - Starts an RMA exposure epoch for the local window
 associated with *win*
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Win_post(MPI_Group group, int assert, MPI_Win win)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER GROUP, ASSERT, WIN, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -43,7 +44,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``group``: The group of origin processes (handle) 
 
@@ -52,12 +53,12 @@ INPUT PARAMETERS
 * ``win``: Window object (handle) 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Starts an RMA exposure epoch for the local window associated with *win*.
 Only the processes belonging to *group* should access the window with
@@ -66,7 +67,7 @@ a matching call to :ref:`MPI_Win_start`. :ref:`MPI_Win_post` does not block.
 
 The *assert* argument is used to provide assertions on the context of
 the call that may be used for various optimizations. A value of *assert*
-- 0 is always valid. The following assertion values are supported:
+^ 0 is always valid. The following assertion values are supported:
 
 MPI_MODE_NOCHECK
    The matching calls to :ref:`MPI_Win_start` have not yet occurred on any
@@ -82,7 +83,7 @@ MPI_MODE_NOPUT
    accummulate calls until the ensuing wait synchronization.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

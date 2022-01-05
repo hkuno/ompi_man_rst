@@ -1,15 +1,16 @@
 .. _mpi_unpack_external:
 
 MPI_Unpack_external
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
 :ref:`MPI_Unpack_external` - Reads data from a portable format
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_Datatype datatype)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -37,7 +38,7 @@ Fortran Syntax
    	<type>		INBUF(*), OUTBUF(*)
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -55,7 +56,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``datarep``: Data Representation (string). 
 
@@ -68,19 +69,19 @@ INPUT PARAMETERS
 * ``datatype``: Datatype of each output data item (handle). 
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``position``: Current position in buffer, in bytes (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``outbuf``: Output buffer start (choice). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Unpack_external` unpacks data from the external32 format, a universal
 data representation defined by the MPI Forum. This format is useful for
@@ -100,7 +101,7 @@ first location in *inbuf* following the message that was unpacked. This
 way it may be used as input to a subsequent call to :ref:`MPI_Unpack_external`.
 
 NOTES
-=====
+-----
 
 Note the difference between :ref:`MPI_Recv` and :ref:`MPI_Unpack_external`: In
 :ref:`MPI_Recv`, the *count* argument specifies the maximum number of items
@@ -152,7 +153,7 @@ related sequence of pack calls must be unpacked as a unit by a sequence
 of related unpack calls.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

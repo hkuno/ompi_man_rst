@@ -1,18 +1,18 @@
 .. _mpi_file_write_ordered_begin:
 
 MPI_File_write_ordered_begin
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-====
+============================
+.. include_body
 
 :ref:`MPI_File_write_ordered_begin` - Writes a file at a location specified
 by a shared file pointer; beginning part of a split collective routine
 (nonblocking).
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -22,7 +22,7 @@ C Syntax
        int count, MPI_Datatype datatype)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -34,7 +34,7 @@ Fortran Syntax
        INTEGER FH, COUNT, DATATYPE, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -48,24 +48,24 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input/Output Parameter
-======================
+----------------------
 
 -  ``fh`` : File handle (handle).
 
 Input Parameters
-================
+----------------
 
 -  ``buf`` : Initial address of buffer (choice).
 -  ``count`` : Number of elements in buffer (integer).
 -  ``datatype`` : Data type of each buffer element (handle).
 
 Output Parameter
-================
+----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_File_write_ordered_begin` is the beginning part of a split
 collective, nonblocking routine that must be called by all processes in
@@ -81,7 +81,7 @@ whose ranks within the group are less than that of this process had
 written their data.
 
 Notes
-=====
+-----
 
 All the nonblocking collective routines for data access are "split" into
 two routines, each with \_begin or \_end as a suffix. These split
@@ -89,7 +89,7 @@ collective routines are subject to the semantic rules described in
 Section 9.4.5 of the MPI-2 standard.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

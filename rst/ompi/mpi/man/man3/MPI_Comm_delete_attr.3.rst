@@ -1,17 +1,17 @@
 .. _mpi_comm_delete_attr:
 
 MPI_Comm_delete_attr
-~~~~~~~~~~~~~~~~~~~~
-====
+====================
+.. include_body
 
 :ref:`MPI_Comm_delete_attr` - Deletes attribute value associated with a
 key.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Comm_delete_attr(MPI_Comm comm, int comm_keyval)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER COMM, COMM_KEYVAL, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -43,22 +43,22 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input/Output Parameter
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 -  ``comm`` : Communicator from which the attribute is deleted (handle).
 
 Input Parameter
-===============
+---------------
 
 -  ``comm_keyval`` : Key value (integer).
 
 Output Parameter
-================
+----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Comm_delete_attr` deletes an attribute from cache by key. This
 function invokes the attribute delete function ``delete_fn`` specified
@@ -74,7 +74,7 @@ function is the same as :ref:`MPI_Attr_delete` but is needed to match the
 The use of :ref:`MPI_Attr_delete` is deprecated.
 
 Notes
-=====
+-----
 
 Note that it is not defined by the MPI standard what happens if the
 ``delete_fn`` callback invokes other MPI functions. In Open MPI, it is
@@ -83,7 +83,7 @@ or delete attributes on the same object on which the ``delete_fn``
 callback is being invoked.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

@@ -1,16 +1,17 @@
 .. _mpi_alltoall:
 
 MPI_Alltoall
-~~~~~~~~~~~~
+============
+.. include_body
 
-:ref:`MPI_Alltoall`, MPI_Ialltoall, MPI_Alltoall_init - All processes send
+:ref:`MPI_Alltoall`, :ref:`MPI_Ialltoall`, :ref:`MPI_Alltoall_init` - All processes send
 data to all processes
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -29,7 +30,7 @@ C Syntax
    	MPI_Datatype recvtype, MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -58,7 +59,7 @@ Fortran Syntax
    	INTEGER	COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -98,7 +99,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Starting address of send buffer (choice). 
 
@@ -115,7 +116,7 @@ INPUT PARAMETERS
 * ``info``: Info (handle, persistent only) 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Starting address of receive buffer (choice). 
 
@@ -124,7 +125,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Alltoall` is a collective operation in which all processes send the
 same amount of data to each other, and receive the same amount of data
@@ -170,7 +171,7 @@ When the communicator is an intra-communicator, these groups are the
 same, and the operation occurs in a single phase.
 
 USE OF IN-PLACE OPTION
-======================
+--- -- -------- ------
 
 When the communicator is an intracommunicator, you can perform an
 all-to-all operation in-place (the output buffer is used as the input
@@ -180,7 +181,7 @@ each process is assumed to be in the area where that process would
 receive its own contribution to the receive buffer.
 
 NOTES
-=====
+-----
 
 All arguments on all processes are significant. The *comm* argument, in
 particular, must describe the same communicator on all processes.
@@ -192,7 +193,7 @@ receive different amounts of data. :ref:`MPI_Alltoallw` expands :ref:`MPI_Alltoa
 functionality to allow the exchange of data with different datatypes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,16 +1,17 @@
 .. _mpi_comm_split_type:
 
 MPI_Comm_split_type
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
 :ref:`MPI_Comm_split_type` - Creates new communicators based on colors and
 keys.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    	MPI_Info info, MPI_Comm *newcomm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	INTEGER	COMM, SPLIT_TYPE, KEY, INFO, NEWCOMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -45,7 +46,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``comm``: Communicator (handle). 
 
@@ -56,14 +57,14 @@ INPUT PARAMETERS
 * ``info``: Info argument (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``newcomm``: New communicator (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This function partitions the group associated with *comm* into disjoint
 subgroups, based on the type specied by *split_type*. Each subgroup
@@ -77,7 +78,7 @@ exception to this rule is that a process may supply the type value
 MPI_UNDEFINED, in which case newcomm returns MPI_COMM_NULL.
 
 SPLIT TYPES
-===========
+----- -----
 
 MPI_COMM_TYPE_SHARED
    This type splits the communicator into subcommunicators, each of
@@ -131,7 +132,7 @@ OMPI_COMM_TYPE_CLUSTER
    which belongs to the same cluster.
 
 NOTES
-=====
+-----
 
 The communicator keys denoted with an *OMPI\_* prefix instead of an
 *MPI\_* prefix are specific to Open MPI, and are not part of the MPI
@@ -139,7 +140,7 @@ standard. Their use should be protected by the *OPEN_MPI* C preprocessor
 macro.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

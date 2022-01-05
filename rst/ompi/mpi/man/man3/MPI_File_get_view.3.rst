@@ -1,16 +1,17 @@
 .. _mpi_file_get_view:
 
 MPI_File_get_view
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 :ref:`MPI_File_get_view` - Returns the process's view of data in the file.
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	char *datarep)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -35,7 +36,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER(KIND=MPI_OFFSET_KIND)	DISP
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -49,12 +50,12 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``fh``: File handle (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``disp``: Displacement (integer). 
 
@@ -67,7 +68,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The :ref:`MPI_File_get_view` routine returns the process's view of the data in
 the file. The current values of the displacement, etype, and filetype
@@ -77,7 +78,7 @@ The :ref:`MPI_File_get_view` interface allows the user to pass a
 data-representation string via the *datarep* argument.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the *DISP*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -91,7 +92,7 @@ where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

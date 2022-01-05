@@ -1,15 +1,16 @@
 .. _mpi_type_commit:
 
 MPI_Type_commit
-~~~~~~~~~~~~~~~
+===============
+.. include_body
 
 :ref:`MPI_Type_commit` - Commits a data type.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Type_commit(MPI_Datatype *datatype)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER	DATATYPE, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -40,17 +41,17 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``datatype``: Data type (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The commit operation commits the data type. A data type is the formal
 description of a communication buffer, not the content of that buffer.
@@ -73,7 +74,7 @@ If the data type specified in *datatype* is already committed, it is
 equivalent to a no-op.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

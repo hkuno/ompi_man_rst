@@ -1,15 +1,16 @@
 .. _mpi_errhandler_free:
 
 MPI_Errhandler_free
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
 :ref:`MPI_Errhandler_free` - Frees an MPI-style error handler.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Errhandler_free(MPI_Errhandler *errhandler)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    	INTEGER	ERRHANDLER, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -40,17 +41,17 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``errhandler``: MPI error handler (handle). Set to MPI_ERRHANDLER_NULL on exit. 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Marks the error handler associated with errhandler for deallocation and
 sets errhandler to MPI_ERRHANDLER_NULL. The error handler will be
@@ -58,7 +59,7 @@ deallocated after all communicators associated with it have been
 deallocated.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

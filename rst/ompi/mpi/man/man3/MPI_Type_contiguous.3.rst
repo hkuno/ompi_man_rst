@@ -1,15 +1,16 @@
 .. _mpi_type_contiguous:
 
 MPI_Type_contiguous
-~~~~~~~~~~~~~~~~~~~
+===================
+.. include_body
 
 :ref:`MPI_Type_contiguous` - Creates a contiguous datatype.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	MPI_Datatype *newtype)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	COUNT, OLDTYPE, NEWTYPE, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -43,21 +44,21 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Replication count (nonnegative integer). 
 
 * ``oldtype``: Old datatype (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``newtype``: New datatype (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The simplest datatype constructor is :ref:`MPI_Type_contiguous`, which allows
 replication of a datatype into contiguous locations.
@@ -98,7 +99,7 @@ For more information about derived datatypes, see Section 3.12 of the
 MPI-1 Standard.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.
