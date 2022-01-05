@@ -1,16 +1,17 @@
 .. _mpi_t_pvar_handle_alloc:
 
 MPI_T_pvar_handle_alloc
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
+.. include_body
 
-:ref:`MPI_T_pvar_handle_alloc`, MPI_T_pvar_handle_free - Allocate/free
+:ref:`MPI_T_pvar_handle_alloc`, :ref:`MPI_T_pvar_handle_free` - Allocate/free
 MPI performance variable handles
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -22,7 +23,7 @@ C Syntax
    int MPI_T_pvar_handle_free(int session, MPI_T_pvar_handle *handle)
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_T_pvar_handle_alloc` binds the performance variable specified in
 *pvar_index* to the MPI object specified in *obj_handle* in the session
@@ -41,12 +42,12 @@ determined from a prior call to :ref:`MPI_T_PVAR_GET_NUM`. The type of the
 MPI object it references must be consistent with the type returned in
 the bind argument in a prior call to :ref:`MPI_T_PVAR_GET_INFO`.
 
-MPI_T_pvar_handle_free frees a handle allocated by
+:ref:`MPI_T_pvar_handle_free` frees a handle allocated by
 :ref:`MPI_T_pvar_handle_alloc` and sets the *handle* argument to
 MPI_T_PVAR_HANDLE_NULL.
 
 ERRORS
-======
+------
 
 MPI_T_pvar_handle_alloc() will fail if:
 

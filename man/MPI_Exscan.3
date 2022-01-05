@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_EXSCAN" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_EXSCAN" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Exscan, MPI_Iexscan \- Computes an exclusive scan (partial
+\fI\%MPI_Exscan\fP, MPI_Iexscan \- Computes an exclusive scan (partial
 reduction)
 .SH SYNTAX
 .SS C Syntax
@@ -116,7 +116,9 @@ MPI_Exscan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierr
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Send buffer (choice).
@@ -129,7 +131,9 @@ MPI_Exscan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierr
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Receive buffer (choice).
@@ -140,7 +144,7 @@ MPI_Exscan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierr
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Exscan is used to perform an exclusive prefix reduction on data
+\fI\%MPI_Exscan\fP is used to perform an exclusive prefix reduction on data
 distributed across the calling processes. The operation returns, in the
 \fIrecvbuf\fP of the process with rank i, the reduction (calculated
 according to the function \fIop\fP) of the values in the \fIsendbuf\fPs of
@@ -152,7 +156,9 @@ send and receive buffers are as for MPI_Reduce\&.
 The value in \fIrecvbuf\fP on process 0 is undefined and unreliable as
 \fIrecvbuf\fP is not significant for process 0. The value of \fIrecvbuf\fP on
 process 1 is always the value in \fIsendbuf\fP on process 0.
-.SH USE OF IN-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 The \(gain place\(aq option for intracommunicators is specified by passing
 MPI_IN_PLACE in the \fIsendbuf\fP argument. In this case, the input data is
@@ -172,13 +178,15 @@ even though the results for both processes\(aq \fIrecvbuf\fP are degenerate.
 Therefore, all processes, including 0 and 1, must provide the same \fIop\fP\&.
 .sp
 It can be argued, from a mathematical perspective, that the definition
-of MPI_Exscan is unsatisfactory because the output at process 0 is
+of \fI\%MPI_Exscan\fP is unsatisfactory because the output at process 0 is
 undefined. The "mathematically correct" output for process 0 would be
 the unit element of the reduction operation. However, such a definition
 of an exclusive scan would not work with user\-defined \fIop\fP functions as
 there is no way for MPI to "know" the unit value for these custom
 operations.
-.SH NOTES ON COLLECTIVE OPERATIONS
+.sp
+NOTES ON COLLECTIVE OPERATIONS
+\-\-\-\-\- \-\- \-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .sp
 The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either

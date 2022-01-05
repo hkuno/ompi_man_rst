@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_EXSCAN_INIT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_EXSCAN_INIT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_EXSCAN
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 MPI_Exscan, MPI_Iexscan \- Computes an exclusive scan (partial
 reduction)
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -117,7 +120,9 @@ MPI_Exscan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierr
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Send buffer (choice).
@@ -130,7 +135,9 @@ MPI_Exscan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierr
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Receive buffer (choice).
@@ -139,7 +146,7 @@ MPI_Exscan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierr
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 MPI_Exscan is used to perform an exclusive prefix reduction on data
 distributed across the calling processes. The operation returns, in the
@@ -153,7 +160,9 @@ send and receive buffers are as for MPI_Reduce\&.
 The value in \fIrecvbuf\fP on process 0 is undefined and unreliable as
 \fIrecvbuf\fP is not significant for process 0. The value of \fIrecvbuf\fP on
 process 1 is always the value in \fIsendbuf\fP on process 0.
-.SS USE OF IN\-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 The \(gain place\(aq option for intracommunicators is specified by passing
 MPI_IN_PLACE in the \fIsendbuf\fP argument. In this case, the input data is
@@ -165,7 +174,7 @@ restrictions on its use as MPI_BOTTOM.
 Because the in\-place option converts the receive buffer into a
 send\-and\-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
-.SS NOTES
+.SH NOTES
 .sp
 MPI does not specify which process computes which operation. In
 particular, both processes 0 and 1 may participate in the computation
@@ -179,7 +188,9 @@ the unit element of the reduction operation. However, such a definition
 of an exclusive scan would not work with user\-defined \fIop\fP functions as
 there is no way for MPI to "know" the unit value for these custom
 operations.
-.SS NOTES ON COLLECTIVE OPERATIONS
+.sp
+NOTES ON COLLECTIVE OPERATIONS
+\-\-\-\-\- \-\- \-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .sp
 The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either
@@ -189,7 +200,7 @@ MPI_ERRORS_RETURN), then no error may be indicated.
 .sp
 The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

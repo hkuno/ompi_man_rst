@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_NEIGHBOR_ALLTOALLV" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_NEIGHBOR_ALLTOALLV" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Neighbor_alltoallv, MPI_Ineighbor_alltoallv,
+\fI\%MPI_Neighbor_alltoallv\fP, MPI_Ineighbor_alltoallv,
 MPI_Neighbor_alltoallv_init \- All processes send different amounts of
 data to, and receive different amounts of data from, all neighbors
 .SH SYNTAX
@@ -141,7 +141,9 @@ MPI_Neighbor_alltoallv_init(sendbuf, sendcounts, sdispls, sendtype, recvbuf,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer.
@@ -162,7 +164,9 @@ MPI_Neighbor_alltoallv_init(sendbuf, sendcounts, sdispls, sendtype, recvbuf,
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer.
@@ -173,7 +177,7 @@ MPI_Neighbor_alltoallv_init(sendbuf, sendcounts, sdispls, sendtype, recvbuf,
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Neighbor_alltoallv is a generalized collective operation in which
+\fI\%MPI_Neighbor_alltoallv\fP is a generalized collective operation in which
 all processes send data to and receive data from all neighbors. It adds
 flexibility to MPI_Neighbor_alltoall by allowing the user to specify
 data to send and receive vector\-style (via a displacement and element
@@ -216,7 +220,9 @@ amount of data to send (in bytes) as the receiver expects to receive.
 Note that process i may send a different amount of data to process j
 than it receives from process j. Also, a process may send entirely
 different amounts of data to different processes in the communicator.
-.SH NEIGHBOR ORDERING
+.sp
+NEIGHBOR ORDERING
+\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
 .sp
 For a distributed graph topology, created with MPI_Dist_graph_create,
 the sequence of neighbors in the send and receive buffers at each

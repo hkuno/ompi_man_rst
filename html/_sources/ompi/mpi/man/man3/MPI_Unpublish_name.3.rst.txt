@@ -1,17 +1,18 @@
 .. _mpi_unpublish_name:
 
 MPI_Unpublish_name
-~~~~~~~~~~~~~~~~~~
+==================
+.. include_body
 
 ::
 
    MPI_Unpublish_name - Unpublishes a service name
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	const char *port_name)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax
    	INTEGER		INFO, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -45,7 +46,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``service_name``: A service name (string). 
 
@@ -54,12 +55,12 @@ INPUT PARAMETERS
 * ``port_name``: A port name (string). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This routine removes the pair (*service_name, port_name*) so that
 applications may no longer retrieve *port_name* by calling
@@ -69,7 +70,7 @@ not published via :ref:`MPI_Publish_name`. Both the *service_name* and
 arguments to the previous call to :ref:`MPI_Publish_name`.
 
 INFO ARGUMENTS
-==============
+---- ---------
 
 The following keys for *info* are recognized:
 
@@ -97,7 +98,7 @@ unpublish function will default to global scope first, followed by
 local. Otherwise, the data will default to unpublish with local scope.
 
 NAME SCOPE
-==========
+---- -----
 
 Open MPI supports two name scopes: *global* and *local*. Local scope
 values are placed in a data store located on the mpirun of the calling
@@ -110,7 +111,7 @@ For a more detailed description of scoping rules, please see the
 :ref:`MPI_Publish_name` man page.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

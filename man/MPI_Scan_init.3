@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_SCAN_INIT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_SCAN_INIT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_SCAN
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_Scan\fP, MPI_Iscan, MPI_Scan_init \- Computes an inclusive scan
+MPI_Scan, MPI_Iscan, \fI\%MPI_Scan_init\fP \- Computes an inclusive scan
 (partial reduction)
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -117,7 +120,9 @@ MPI_Scan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierror
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Send buffer (choice).
@@ -132,7 +137,9 @@ MPI_Scan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierror
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only)
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Receive buffer (choice).
@@ -141,16 +148,16 @@ MPI_Scan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierror
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_Scan\fP is used to perform an inclusive prefix reduction on data
+MPI_Scan is used to perform an inclusive prefix reduction on data
 distributed across the calling processes. The operation returns, in the
 \fIrecvbuf\fP of the process with rank i, the reduction (calculated
 according to the function \fIop\fP) of the values in the \fIsendbuf\fPs of
 processes with ranks 0, ..., i (inclusive). The type of operations
 supported, their semantics, and the constraints on send and receive
 buffers are as for MPI_Reduce\&.
-.SS EXAMPLE
+.SH EXAMPLE
 .sp
 This example uses a user\-defined operation to produce a segmented scan.
 A segmented scan takes, as input, a set of values and a set of logicals,
@@ -266,14 +273,18 @@ MPI_Scan(a, answer, 1, sspair, myOp, comm);
 .fi
 .UNINDENT
 .UNINDENT
-.SS USE OF IN\-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 When the communicator is an intracommunicator, you can perform a
 scanning operation in place (the output buffer is used as the input
 buffer). Use the variable MPI_IN_PLACE as the value of the \fIsendbuf\fP
 argument. The input data is taken from the receive buffer and replaced
 by the output data.
-.SS NOTES ON COLLECTIVE OPERATIONS
+.sp
+NOTES ON COLLECTIVE OPERATIONS
+\-\-\-\-\- \-\- \-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .sp
 The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either
@@ -283,7 +294,7 @@ MPI_ERRORS_RETURN), then no error may be indicated.
 .sp
 The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

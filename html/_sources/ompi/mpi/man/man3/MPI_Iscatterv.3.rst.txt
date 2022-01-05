@@ -1,8 +1,9 @@
 .. _mpi_iscatterv:
  
+MPI_Iscatterv
 =============
-mpi_iscatterv
-=============
+    .. include_body
 
 .. include:: ../man3/MPI_Scatterv.3.rst
+    :start-after: .. include_body
 

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_OP_CREATE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_OP_CREATE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -76,14 +76,18 @@ MPI_Op_create(user_fn, commute, op, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBfunction\fP: User\-defined function (function).
 .IP \(bu 2
 \fBcommute\fP: True if commutative; false otherwise.
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBop\fP: Operation (handle).
@@ -240,7 +244,9 @@ function using the Fortran calling conventions and will pass a
 Fortran\-type datatype argument; the C version will use C calling
 convention and the C representation of a datatype handle. Users who plan
 to mix languages should define their reduction functions accordingly.
-.SH NOTES ON COLLECTIVE OPERATIONS
+.sp
+NOTES ON COLLECTIVE OPERATIONS
+\-\-\-\-\- \-\- \-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .sp
 The reduction functions ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call

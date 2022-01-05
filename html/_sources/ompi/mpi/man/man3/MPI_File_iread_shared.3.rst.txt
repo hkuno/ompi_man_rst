@@ -1,17 +1,18 @@
 .. _mpi_file_iread_shared:
 
 MPI_File_iread_shared
-~~~~~~~~~~~~~~~~~~~~~
+=====================
+.. include_body
 
 :ref:`MPI_File_iread_shared` - Reads a file using the shared file pointer
 (nonblocking, noncollective).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_Datatype datatype, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax
    	INTEGER	FH, COUNT, DATATYPE, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -48,19 +49,19 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``fh``: File handle (handle). 
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Number of elements in buffer (integer). 
 
 * ``datatype``: Data type of each buffer element (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``buf``: Initial address of buffer (choice). 
 
@@ -69,7 +70,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_iread_shared` is a nonblocking version of the
 :ref:`MPI_File_read_shared` interface. It uses the shared file pointer to read
@@ -79,7 +80,7 @@ methods of synchronization to impose a particular order among
 processors.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_IBARRIER" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_IBARRIER" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,18 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_BARRIER
-
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-.ce
-----
-
-.ce 0
-.sp
-.sp
-\fI\%MPI_Barrier\fP, MPI_Ibarrier \- Synchronization between MPI processes in a
+MPI_Barrier, \fI\%MPI_Ibarrier\fP \- Synchronization between MPI processes in a
 group
-.SS Syntax
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -95,31 +91,31 @@ MPI_Barrier_init(comm, info, request, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SS Input Parameter
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm\fP : Communicator (handle).
 .IP \(bu 2
 \fBinfo\fP : Info (handle, persistent only).
 .UNINDENT
-.SS Output Parameters
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrequest\fP : Request (handle, non\-blocking only).
 .IP \(bu 2
 \fBIERROR\fP : Fortran only: Error status (integer).
 .UNINDENT
-.SS Description
+.SH DESCRIPTION
 .sp
 An MPI barrier completes after all groups members have entered the
 barrier.
-.SS When Communicator is an Inter\-Communicator
+.SH WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
 .sp
 When the communicator is an inter\-communicator, the barrier operation is
 performed across all processes in both groups. All processes in the
 first group may exit the barrier when all processes in the second group
 have entered the barrier.
-.SS Errors
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

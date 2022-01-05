@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_CREATE_HINDEXED_BLOCK" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_TYPE_CREATE_HINDEXED_BLOCK" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_TYPE_CREATE_INDEXED_BLOCK
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-MPI_Type_create_indexed_block, MPI_Type_create_hindexed_block \-
+MPI_Type_create_indexed_block, \fI\%MPI_Type_create_hindexed_block\fP \-
 Creates an indexed data type with the same block length for all blocks.
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -96,7 +99,9 @@ MPI_Type_create_hindexed_block(count, blocklength, array_of_displacements,
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBcount\fP: Length of array of displacements (integer).
@@ -107,21 +112,23 @@ MPI_Type_create_hindexed_block(count, blocklength, array_of_displacements,
 .IP \(bu 2
 \fBoldtype\fP: Old data type (handle).
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBnewtype\fP: New data type (handle).
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-MPI_Type_create_indexed_block and MPI_Type_create_hindexed_block create
+MPI_Type_create_indexed_block and \fI\%MPI_Type_create_hindexed_block\fP create
 an indexed data type with the same block length for all blocks. The only
 difference between the two functions is MPI_Type_create_indexed_block
 takes an array of displacements in units of the extent of \fIoldtype\fP
-while MPI_Type_create_hindexed_block takes displacements in bytes.
-.SS ERRORS
+while \fI\%MPI_Type_create_hindexed_block\fP takes displacements in bytes.
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

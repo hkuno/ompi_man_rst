@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_WRITE_AT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_FILE_WRITE_AT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -81,7 +81,9 @@ MPI_File_write_at(fh, offset, buf, count, datatype, status, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBfh\fP: File handle (handle).
@@ -94,7 +96,9 @@ MPI_File_write_at(fh, offset, buf, count, datatype, status, ierror)
 .IP \(bu 2
 \fBdatatype\fP: Data type of each buffer element (handle).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBstatus\fP: Status object (status).
@@ -114,7 +118,9 @@ specified by the current view. \fI\%MPI_File_write_at\fP stores the number of
 .sp
 It is erroneous to call this function if MPI_MODE_SEQUENTIAL mode was
 specified when the file was opened.
-.SH FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fIOFFSET\fP
 argument only for Fortran 90. FORTRAN 77 users may use the non\-portable

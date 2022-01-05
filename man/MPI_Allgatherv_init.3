@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ALLGATHERV_INIT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_ALLGATHERV_INIT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,12 +28,15 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_ALLGATHERV
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-MPI_Allgatherv, MPI_Iallgatherv, MPI_Allgatherv_init \- Gathers data
+MPI_Allgatherv, MPI_Iallgatherv, \fI\%MPI_Allgatherv_init\fP \- Gathers data
 from all processes and delivers it to all. Each process may contribute a
 different amount of data.
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -129,7 +132,9 @@ MPI_Allgatherv_init(sendbuf, sendcount, sendtype, recvbuf, recvcounts, displs,
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer (choice).
@@ -148,7 +153,9 @@ MPI_Allgatherv_init(sendbuf, sendcount, sendtype, recvbuf, recvcounts, displs,
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only).
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer (choice).
@@ -157,7 +164,7 @@ MPI_Allgatherv_init(sendbuf, sendcount, sendtype, recvbuf, recvcounts, displs,
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 MPI_Allgatherv is similar to MPI_Allgather in that all processes gather
 data from all other processes, except that each process can send a
@@ -184,7 +191,9 @@ MPI_Allgatherv(sendbuf,sendcount,sendtype,recvbuf,recvcount,
 .sp
 for root = 0 , ..., n\-1. The rules for correct usage of MPI_Allgatherv
 are easily found from the corresponding rules for MPI_Gatherv\&.
-.SS USE OF IN\-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 When the communicator is an intracommunicator, you can perform an
 all\-gather operation in\-place (the output buffer is used as the input
@@ -214,7 +223,9 @@ restrictions on its use as MPI_BOTTOM.
 Because the in\-place option converts the receive buffer into a
 send\-and\-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
-.SS WHEN COMMUNICATOR IS AN INTER\-COMMUNICATOR
+.sp
+WHEN COMMUNICATOR IS AN INTER\-COMMUNICATOR
+\-\-\-\- \-\-\-\-\-\-\-\-\-\-\-\- \-\- \-\- \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .sp
 When the communicator is an inter\-communicator, the gather operation
 occurs in two phases. The data is gathered from all the members of the
@@ -224,7 +235,7 @@ group, concatenated, and received by all the members of the first. The
 send buffer arguments in the one group must be consistent with the
 receive buffer arguments in the other group, and vice versa. The
 operation must exhibit symmetric, full\-duplex behavior.
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_GET" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_GET" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,15 +28,8 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-
 .sp
-.ce
-----
-
-.ce 0
-.sp
-.sp
-MPI_Get, MPI_Rget \- Copies data from the target memory to the
+\fI\%MPI_Get\fP, MPI_Rget \- Copies data from the target memory to the
 origin.
 .SH SYNTAX
 .SS C Syntax
@@ -149,14 +142,14 @@ integer).
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Get copies data from the target memory to the origin, similar to
+\fI\%MPI_Get\fP copies data from the target memory to the origin, similar to
 MPI_Put, except that the direction of data transfer is reversed. The
 \fBorigin_datatype\fP may not specify overlapping entries in the origin
 buffer. The target buffer must be contained within the target window,
 and the copied data must fit, without truncation, in the origin buffer.
 Only processes within the same node can access the target window.
 .sp
-MPI_Rget is similar to MPI_Get, except that it allocates a
+MPI_Rget is similar to \fI\%MPI_Get\fP, except that it allocates a
 communication \fBrequest\fP object and associates it with the \fBrequest\fP
 handle (the argument \fBrequest\fP) that can be used to wait or test for
 completion. The completion of an MPI_Rget operation indicates that

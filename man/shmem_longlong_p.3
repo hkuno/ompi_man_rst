@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONGLONG_P" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_LONGLONG_P" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,14 +28,17 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_CHAR_P
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_char_p\fP(3), \fIshmem_float_p\fP(3), \fIshmem_int_p\fP(3),
 \fIshmem_long_p\fP(3), \fIshmem_short_p\fP(3), \fIshmem_longlong_p\fP(3),
 \fIshmem_longdouble_p\fP(3) \- These routines provide a low latency
 mechanism to write basic types (char, short, int, float, double, long,
 long long, long double) to symmetric data objects on remote PEs.
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -65,7 +68,7 @@ void shmem_longdouble_p(long double *addr, long double value, int pe);
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 These routines provide a very low latency put capability for single
 elements of most basic types.

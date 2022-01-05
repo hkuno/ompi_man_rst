@@ -1,16 +1,17 @@
 .. _mpi_intercomm_create:
 
 MPI_Intercomm_create
-~~~~~~~~~~~~~~~~~~~~
+====================
+.. include_body
 
 :ref:`MPI_Intercomm_create` - Creates an intercommunicator from two
 intracommunicators.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    	MPI_Comm peer_comm, int remote_leader, int tag, MPI_Comm *newintercomm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax
    	INTEGER	TAG, NEWINTERCOMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -47,7 +48,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``local_comm``: The communicator containing the process that initiates the inter-communication (handle). 
 
@@ -60,14 +61,14 @@ INPUT PARAMETERS
 * ``tag``: Message tag used to identify new intercommunicator (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``newintercomm``: Created intercommunicator (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This call creates an intercommunicator. It is collective over the union
 of the local and remote groups. Processes should provide identical
@@ -84,7 +85,7 @@ different tags (more precisely, they should ensure that the local and
 remote leaders are using different tags for each MPI_intercomm_create).
 
 NOTES
-=====
+-----
 
 We recommend using a dedicated peer communicator, such as a duplicate of
 MPI_COMM_WORLD, to avoid trouble with peer communicators.
@@ -99,7 +100,7 @@ intercommunicators (like :ref:`MPI_Intercomm_merge` ) do not make sense if
 the groups are not disjoint.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

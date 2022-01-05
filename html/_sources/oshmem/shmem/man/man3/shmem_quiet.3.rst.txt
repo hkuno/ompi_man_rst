@@ -1,13 +1,14 @@
 .. _shmem_quiet:
 
 shmem_quiet
-~~~~~~~~~~~
+===========
+.. include_body
 
 *shmem_quiet*\ (3) - Waits for completion of all outstanding remote
 writes issued by a processing element (PE).
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -26,7 +27,7 @@ Fortran:
    CALL SHMEM_QUIET
 
 DESCRIPTION
-===========
+-----------
 
 shmem_quiet ensures ordering of put (remote write) operations. All put
 operations issued to any processing element (PE) prior to the call to
@@ -35,7 +36,7 @@ any subsequent memory load or store, remote put or get, or
 synchronization operations that follow the call to shmem_quiet.
 
 NOTES
-=====
+-----
 
 | shmem_quiet is most useful as a way of ensuring ordering of delivery
   of several put operations. For example, you might use shmem_quiet to
@@ -46,7 +47,7 @@ NOTES
   completion of outstanding remote writes (puts).
 
 EXAMPLES
-========
+--------
 
 ::
 

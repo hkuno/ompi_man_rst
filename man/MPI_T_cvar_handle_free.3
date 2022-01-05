@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_CVAR_HANDLE_FREE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_T_CVAR_HANDLE_FREE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_T_CVAR_HANDLE_ALLOC
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_T_cvar_handle_alloc\fP, MPI_T_cvar_handle_free \- Allocate/free
+MPI_T_cvar_handle_alloc, \fI\%MPI_T_cvar_handle_free\fP \- Allocate/free
 contol variable handles
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -48,9 +51,9 @@ int MPI_T_cvar_handle_free(MPI_T_cvar_handle *handle)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_T_cvar_handle_alloc\fP binds the control variable specified in
+MPI_T_cvar_handle_alloc binds the control variable specified in
 \fIcvar_index\fP to the MPI object specified in \fIobj_handle\fP\&. If
 MPI_T_cvar_get_info returns MPI_T_BIND_NO_OBJECT as the binding of the
 variable the \fIobj_handle\fP argument is ignored. The number of values
@@ -58,14 +61,14 @@ represented by this control variable is returned in the \fIcount\fP
 parameter. If the control variable represents a string then \fIcount\fP will
 be the maximum length of the string.
 .sp
-MPI_T_cvar_handle_free frees a handle allocated by
-\fI\%MPI_T_cvar_handle_alloc\fP and sets the \fIhandle\fP argument to
+\fI\%MPI_T_cvar_handle_free\fP frees a handle allocated by
+MPI_T_cvar_handle_alloc and sets the \fIhandle\fP argument to
 MPI_T_CVAR_HANDLE_NULL.
-.SS NOTES
+.SH NOTES
 .sp
 Open MPI does not currently support binding MPI objects to control
 variables so the \fIobj_handle\fP argument is always ignored.
-.SS ERRORS
+.SH ERRORS
 .sp
 MPI_T_cvar_handle_alloc() will fail if:
 .INDENT 0.0

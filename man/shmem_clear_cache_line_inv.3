@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_CLEAR_CACHE_LINE_INV" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_CLEAR_CACHE_LINE_INV" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,12 +28,15 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_UDCFLUSH
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_clear_cache_inv\fP(3), \fIshmem_set_cache_inv\fP(3),
 \fIshmem_set_cache_line_inv\fP(3), \fIshmem_udcflush\fP(3),
 \fIshmem_udcflush_line\fP(3) \- Controls data cache utilities
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -73,7 +76,7 @@ CALL SHMEM_UDCFLUSH_LINE(target)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The following argument is passed to the cache line control routines:
 .INDENT 0.0
@@ -103,7 +106,7 @@ previously enabled by shmem_set_cache_inv or shmem_set_cache_line_inv.
 .sp
 \fBshmem_udcflush_line\fP makes coherent the cache line that corresponds
 with the address specified by target.
-.SS NOTES
+.SH NOTES
 .sp
 These routines have been retained for improved backward compatability
 with legacy architectures.

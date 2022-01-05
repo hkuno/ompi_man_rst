@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_NEIGHBOR_ALLTOALL" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_NEIGHBOR_ALLTOALL" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Neighbor_alltoall, MPI_Ineighbor_alltoall, MPI_Neighbor_alltoall
+\fI\%MPI_Neighbor_alltoall\fP, MPI_Ineighbor_alltoall, \fI\%MPI_Neighbor_alltoall\fP
 \- All processes send data to neighboring processes in a virtual topology
 communicator
 .SH SYNTAX
@@ -130,7 +130,9 @@ MPI_Neighbor_alltoall_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer (choice).
@@ -147,7 +149,9 @@ MPI_Neighbor_alltoall_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Starting address of receive buffer (choice).
@@ -158,14 +162,14 @@ MPI_Neighbor_alltoall_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Neighbor_alltoall is a collective operation in which all processes
+\fI\%MPI_Neighbor_alltoall\fP is a collective operation in which all processes
 send and receive the same amount of data to each neighbor. The operation
 of this routine can be represented as follows, where each process
 performs 2n (n being the number of neighbors in communicator \fIcomm\fP)
 independent point\-to\-point communications. The neighbors and buffer
 layout are determined by the topology of \fIcomm\fP\&.
 .sp
-Example of MPI_Neighbor_alltoall semantics for cartesian topologies:
+Example of \fI\%MPI_Neighbor_alltoall\fP semantics for cartesian topologies:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -199,7 +203,9 @@ sends the k\-th block of its local \fIsendbuf\fP to neighbor k, which places
 the data in the j\-th block of its local \fIrecvbuf\fP\&. The amount of data
 sent must be equal to the amount of data received, pairwise, between
 every pair of processes.
-.SH NEIGHBOR ORDERING
+.sp
+NEIGHBOR ORDERING
+\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
 .sp
 For a distributed graph topology, created with MPI_Dist_graph_create,
 the sequence of neighbors in the send and receive buffers at each
@@ -235,7 +241,7 @@ particular, must describe the same communicator on all processes. \fIcomm\fP
 must be either a cartesian, graph, or dist graph communicator.
 .sp
 There are two MPI library functions that are more general than
-MPI_Neighbor_alltoall\&. MPI_Neighbor_alltoallv allows all\-to\-all
+\fI\%MPI_Neighbor_alltoall\fP\&. MPI_Neighbor_alltoallv allows all\-to\-all
 communication to and from buffers that need not be contiguous; different
 processes may send and receive different amounts of data.
 MPI_Neighbor_alltoallw expands MPI_Neighbor_alltoallv\(aqs functionality to

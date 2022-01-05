@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INT_SWAP" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_INT_SWAP" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,14 +28,17 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_SWAP
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_double_swap\fP(3), \fIshmem_float_swap\fP(3),
 \fIshmem_int_swap\fP(3), \fIshmem_long_swap\fP(3), \fIshmem_swap\fP(3),
 \fIshmem_int4_swap\fP(3), \fIshmem_int8_swap\fP(3), \fIshmem_real4_swap\fP(3),
 \fIshmem_real8_swap\fP(3), \fIshmem_longlong_swap\fP(3) \- Performs an atomic
 swap to a remote data object
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -91,7 +94,7 @@ res = SHMEM_REAL8_SWAP(target, value, pe)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The atomic swap routines write \fBvalue\fP to address target on PE \fBpe\fP,
 and return the previous contents of \fBtarget\fP in one atomic operation.
@@ -124,10 +127,12 @@ An integer that indicates the PE number on which target is to be
 updated. If you are using Fortran, it must be a default integer
 value.
 .UNINDENT
-.SS NOTES
+.SH NOTES
 .sp
 The term remotely accessible is defined in \fIintro_shmem\fP(3).
-.SS RETURN VALUES
+.sp
+RETURN VALUES
+\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 The contents that had been at the target address on the remote PE prior
 to the swap is returned.

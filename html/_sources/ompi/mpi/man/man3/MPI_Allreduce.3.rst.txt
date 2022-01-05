@@ -1,16 +1,17 @@
 .. _mpi_allreduce:
 
 MPI_Allreduce
-~~~~~~~~~~~~~
+=============
+.. include_body
 
-:ref:`MPI_Allreduce`, MPI_Iallreduce, MPI_Allreduce_init - Combines values
+:ref:`MPI_Allreduce`, :ref:`MPI_Iallreduce`, :ref:`MPI_Allreduce_init` - Combines values
 from all processes and distributes the result back to all processes.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -28,7 +29,7 @@ C Syntax
                           MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -48,7 +49,7 @@ Fortran Syntax
    	INTEGER	COUNT, DATATYPE, OP, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -87,7 +88,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Starting address of send buffer (choice). 
 
@@ -102,7 +103,7 @@ INPUT PARAMETERS
 * ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Starting address of receive buffer (choice). 
 
@@ -111,7 +112,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Same as :ref:`MPI_Reduce` except that the result appears in the receive buffer
 of all the group members.
@@ -169,7 +170,7 @@ answer at node zero.
    RETURN
 
 USE OF IN-PLACE OPTION
-======================
+--- -- -------- ------
 
 When the communicator is an intracommunicator, you can perform an
 all-reduce operation in-place (the output buffer is used as the input
@@ -184,7 +185,7 @@ send-and-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
 
 WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
-==========================================
+---- ------------ -- -- ------------------
 
 When the communicator is an inter-communicator, the reduce operation
 occurs in two phases. The data is reduced from all the members of the
@@ -197,7 +198,7 @@ When the communicator is an intra-communicator, these groups are the
 same, and the operation occurs in a single phase.
 
 NOTES ON COLLECTIVE OPERATIONS
-==============================
+----- -- ---------- ----------
 
 The reduction functions ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call
@@ -206,7 +207,7 @@ handler from MPI_ERRORS_ARE_FATAL to something else, for example,
 MPI_ERRORS_RETURN , then no error may be indicated.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

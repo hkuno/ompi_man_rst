@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_RGET" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_RGET" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,18 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_GET
-
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-.ce
-----
-
-.ce 0
-.sp
-.sp
-\fI\%MPI_Get\fP, MPI_Rget \- Copies data from the target memory to the
+MPI_Get, \fI\%MPI_Rget\fP \- Copies data from the target memory to the
 origin.
-.SS Syntax
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -117,7 +113,7 @@ MPI_Rget(origin_addr, origin_count, origin_datatype, target_rank,
 .fi
 .UNINDENT
 .UNINDENT
-.SS Input Parameters
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBorigin_addr\fP : Initial address of origin buffer (choice).
@@ -141,30 +137,30 @@ integer).
 .IP \(bu 2
 \fBwin\fP : window object used for communication (handle)
 .UNINDENT
-.SS Output Parameter
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
-\fBrequest\fP : MPI_Rget: RMA request
+\fBrequest\fP : \fI\%MPI_Rget\fP: RMA request
 .IP \(bu 2
 \fBIERROR\fP : Fortran only: Error status (integer).
 .UNINDENT
-.SS Description
+.SH DESCRIPTION
 .sp
-\fI\%MPI_Get\fP copies data from the target memory to the origin, similar to
+MPI_Get copies data from the target memory to the origin, similar to
 MPI_Put, except that the direction of data transfer is reversed. The
 \fBorigin_datatype\fP may not specify overlapping entries in the origin
 buffer. The target buffer must be contained within the target window,
 and the copied data must fit, without truncation, in the origin buffer.
 Only processes within the same node can access the target window.
 .sp
-MPI_Rget is similar to \fI\%MPI_Get\fP, except that it allocates a
+\fI\%MPI_Rget\fP is similar to MPI_Get, except that it allocates a
 communication \fBrequest\fP object and associates it with the \fBrequest\fP
 handle (the argument \fBrequest\fP) that can be used to wait or test for
-completion. The completion of an MPI_Rget operation indicates that
+completion. The completion of an \fI\%MPI_Rget\fP operation indicates that
 the data is available in the origin buffer. If \fBorigin_addr\fP points to
 memory attached to a window, then the data becomes available in the
 private copy of this window.
-.SS Fortran 77 Notes
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fBTARGET_DISP\fP argument only for Fortran 90. FORTRAN 77 users may use
@@ -182,7 +178,7 @@ INTEGER*MPI_ADDRESS_KIND TARGET_DISP
 .sp
 where \fBMPI_ADDRESS_KIND\fP is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
-.SS Errors
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,16 +1,17 @@
 .. _mpi_testany:
 
 MPI_Testany
-~~~~~~~~~~~
+===========
+.. include_body
 
 :ref:`MPI_Testany` - Tests for completion of any one previously initiated
 communication in a list.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    	int *index, int *flag, MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -48,14 +49,14 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: List length (integer). 
 
 * ``array_of_requests``: Array of requests (array of handles). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``index``: Index of operation that completed, or MPI_UNDEFINED if none completed (integer). 
 
@@ -66,7 +67,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Testany` tests for completion of either one or none of the operations
 associated with active handles. In the former case, it returns *flag* =
@@ -96,7 +97,7 @@ save resources by using the predefined constant MPI_STATUS_IGNORE as a
 special value for the *status* argument.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

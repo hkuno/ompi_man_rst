@@ -1,16 +1,17 @@
 .. _mpi_win_complete:
 
 MPI_Win_complete
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 :ref:`MPI_Win_complete` - Completes an RMA access epoch on *win* started by
 a call to :ref:`MPI_Win_start`
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    MPI_Win_complete(MPI_Win win)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -29,7 +30,7 @@ Fortran Syntax
    MPI_WIN_COMPLETE(WIN, IERROR)
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -40,17 +41,17 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``win``: Window object (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Win_complete` is a one-sided MPI communication synchronization call,
 completing an RMA access epoch on *win* started by a call to
@@ -59,7 +60,7 @@ calls at the origin and not at the target. A put or accumulate call may
 not have completed at the target when it has completed at the origin.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

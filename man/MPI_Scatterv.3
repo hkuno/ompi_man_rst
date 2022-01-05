@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_SCATTERV" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_SCATTERV" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Scatterv, MPI_Iscatterv, MPI_Scatterv_init \- Scatters a buffer
+\fI\%MPI_Scatterv\fP, MPI_Iscatterv, MPI_Scatterv_init \- Scatters a buffer
 in parts to all tasks in a group.
 .SH SYNTAX
 .SS C Syntax
@@ -125,7 +125,9 @@ MPI_scatterv_init(sendbuf, sendcounts, displs, sendtype, recvbuf, recvcount,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Address of send buffer (choice, significant only at root).
@@ -146,7 +148,9 @@ MPI_scatterv_init(sendbuf, sendcounts, displs, sendtype, recvbuf, recvcount,
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer (choice).
@@ -157,9 +161,9 @@ MPI_scatterv_init(sendbuf, sendcounts, displs, sendtype, recvbuf, recvcount,
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Scatterv is the inverse operation to MPI_Gatherv\&.
+\fI\%MPI_Scatterv\fP is the inverse operation to MPI_Gatherv\&.
 .sp
-MPI_Scatterv extends the functionality of MPI_Scatter by allowing a
+\fI\%MPI_Scatterv\fP extends the functionality of MPI_Scatter by allowing a
 varying count of data to be sent to each process, since \fIsendcounts\fP is
 now an array. It also allows more flexibility as to where the data is
 taken from on the root, by providing the new argument, \fIdispls\fP\&.
@@ -245,7 +249,7 @@ a 100 x 150 C array at process \fIi\fP\&.
 \fBExample 2:\fP The reverse of Example 1 in the MPI_Gather manpage. The
 root process scatters sets of 100 ints to the other processes, but the
 sets of 100 are stride ints apart in the sending buffer. Requires use of
-MPI_Scatterv, where \fIstride\fP >= 100.
+\fI\%MPI_Scatterv\fP, where \fIstride\fP >= 100.
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -272,7 +276,9 @@ MPI_Comm_size(comm, &gsize);
 .fi
 .UNINDENT
 .UNINDENT
-.SH USE OF IN-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 When the communicator is an intracommunicator, you can perform a scatter
 operation in\-place (the output buffer is used as the input buffer). Use
@@ -286,7 +292,9 @@ restrictions on its use as MPI_BOTTOM.
 Because the in\-place option converts the receive buffer into a
 send\-and\-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
-.SH WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
+.sp
+WHEN COMMUNICATOR IS AN INTER\-COMMUNICATOR
+\-\-\-\- \-\-\-\-\-\-\-\-\-\-\-\- \-\- \-\- \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .sp
 When the communicator is an inter\-communicator, the root process in the
 first group sends data to all processes in the second group. The first

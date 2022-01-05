@@ -1,15 +1,16 @@
 .. _mpi_comm_get_attr:
 
 MPI_Comm_get_attr
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 :ref:`MPI_Comm_get_attr` - Retrieves attribute value by key.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	void *attribute_val, int *flag)
 
 Fortran Syntax (see FORTRAN 77 NOTES)
--------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	LOGICAL FLAG
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -46,14 +47,14 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``comm``: Communicator to which the attribute is attached (handle). 
 
 * ``comm_keyval``: Key value (integer). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``attribute_val``: Attribute value, unless f\ *lag* = false. 
 
@@ -62,7 +63,7 @@ OUTPUT PARAMETER
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Comm_get_attr` retrieves an attribute value by key. The call is
 erroneous if there is no key with value *keyval*. On the other hand, the
@@ -75,7 +76,7 @@ C binding is identical. The Fortran binding differs in that
 *attribute_val* is an address-sized integer.
 
 FORTRAN 77 NOTES
-================
+------- -- -----
 
 The MPI standard prescribes portable Fortran syntax for the
 *ATTRIBUTE_VAL* argument only for Fortran 90. Sun FORTRAN 77 users may
@@ -89,7 +90,7 @@ where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

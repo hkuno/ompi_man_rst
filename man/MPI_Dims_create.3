@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_DIMS_CREATE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_DIMS_CREATE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -73,19 +73,25 @@ MPI_Dims_create(nnodes, ndims, dims, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBnnodes\fP: Number of nodes in a grid (integer).
 .IP \(bu 2
 \fBndims\fP: Number of Cartesian dimensions (integer).
 .UNINDENT
-.SH IN/OUT PARAMETER
+.sp
+IN/OUT PARAMETER
+\-\-/\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBdims\fP: Integer array of size ndims specifying the number of nodes in each dimension.
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).

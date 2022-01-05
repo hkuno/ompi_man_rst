@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMPARE_AND_SWAP" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_COMPARE_AND_SWAP" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -82,7 +82,9 @@ MPI_Compare_and_swap(origin_addr, compare_addr, result_addr, datatype,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBorigin_addr\fP: Initial address of buffer (choice).
@@ -99,7 +101,9 @@ MPI_Compare_and_swap(origin_addr, compare_addr, result_addr, datatype,
 .IP \(bu 2
 \fBwin\fP: Window object (handle).
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -118,7 +122,9 @@ Multi\-language types, or Byte as specified in MPI\-3 § 5.9.2 on page 176.
 .sp
 The origin and result buffers (\fIorigin_addr\fP and \fIresult_addr\fP) must be
 disjoint.
-.SH FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fITARGET_DISP\fP argument only for Fortran 90. FORTRAN 77 users may use the

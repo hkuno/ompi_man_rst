@@ -1,16 +1,17 @@
 .. _mpi_win_flush:
 
 MPI_Win_flush
-~~~~~~~~~~~~~
+=============
+.. include_body
 
-:ref:`MPI_Win_flush`, MPI_Win_flush_all - Complete all outstanding RMA
+:ref:`MPI_Win_flush`, :ref:`MPI_Win_flush_all` - Complete all outstanding RMA
 operations at both the origin and the target
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    int MPI_Win_flush_all (MPI_Win win)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -35,7 +36,7 @@ Fortran Syntax
    	INTEGER WIN, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -51,30 +52,30 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``rank``: Rank of window (nonnegative integer). 
 
 * ``win``: Window object (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Win_flush` completes all outstanding RMA operations initiated by
 the calling process to the target rank on the specified window. The
 operations are completed both at the origin and at the target.
-MPI_Win_flush_all completes all outstanding RMA operations to all
+:ref:`MPI_Win_flush_all` completes all outstanding RMA operations to all
 targets.
 
 Can only be called from within a passive target epoch.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

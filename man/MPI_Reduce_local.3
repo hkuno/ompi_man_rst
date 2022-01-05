@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_REDUCE_LOCAL" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_REDUCE_LOCAL" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -77,7 +77,9 @@ MPI_Reduce_local(inbuf, inoutbuf, count, datatype, op, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBinbuf\fP: Address of input buffer (choice).
@@ -88,7 +90,9 @@ MPI_Reduce_local(inbuf, inoutbuf, count, datatype, op, ierror)
 .IP \(bu 2
 \fBop\fP: Reduce operation (handle).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBinoutbuf\fP: Address of in/out buffer (choice).
@@ -120,10 +124,14 @@ on each entry of the sequence. For example, if the operation is MPI_MAX
 and the input buffer contains two elements that are floating\-point
 numbers (count = 2 and datatype = MPI_FLOAT), then inoutbuf(1) = global
 max (inbuf(1)) and inoutbuf(2) = global max(inbuf(2)).
-.SH USE OF IN-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 The use of MPI_IN_PLACE is disallowed with \fI\%MPI_Reduce_local\fP\&.
-.SH PREDEFINED REDUCE OPERATIONS
+.sp
+PREDEFINED REDUCE OPERATIONS
+\-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .sp
 The set of predefined operations provided by MPI is listed below
 (Predefined Reduce Operations). That section also enumerates the
@@ -224,7 +232,9 @@ MPI_BXOR
 .fi
 .UNINDENT
 .UNINDENT
-.SH MINLOC AND MAXLOC
+.sp
+MINLOC AND MAXLOC
+\-\-\-\-\-\- \-\-\- \-\-\-\-\-\-
 .sp
 The operator MPI_MINLOC is used to compute a global minimum and also an
 index attached to the minimum value. MPI_MAXLOC similarly computes a
@@ -364,7 +374,9 @@ Similar statements apply for MPI_LONG_INT and MPI_DOUBLE_INT.
 .sp
 All MPI objects (e.g., MPI_Datatype, MPI_Comm) are of type INTEGER in
 Fortran.
-.SH NOTES ON COLLECTIVE OPERATIONS
+.sp
+NOTES ON COLLECTIVE OPERATIONS
+\-\-\-\-\- \-\- \-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .sp
 The reduction operators ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call

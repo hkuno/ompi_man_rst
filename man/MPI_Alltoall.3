@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ALLTOALL" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_ALLTOALL" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Alltoall, MPI_Ialltoall, MPI_Alltoall_init \- All processes send
+\fI\%MPI_Alltoall\fP, MPI_Ialltoall, MPI_Alltoall_init \- All processes send
 data to all processes
 .SH SYNTAX
 .SS C Syntax
@@ -129,7 +129,9 @@ MPI_Alltoall_init(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer (choice).
@@ -146,7 +148,9 @@ MPI_Alltoall_init(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype,
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only)
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Starting address of receive buffer (choice).
@@ -157,7 +161,7 @@ MPI_Alltoall_init(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype,
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Alltoall is a collective operation in which all processes send the
+\fI\%MPI_Alltoall\fP is a collective operation in which all processes send the
 same amount of data to each other, and receive the same amount of data
 from each other. The operation of this routine can be represented as
 follows, where each process performs 2n (n being the number of processes
@@ -205,7 +209,9 @@ use the rank of the root process in the first group as the value of
 .sp
 When the communicator is an intra\-communicator, these groups are the
 same, and the operation occurs in a single phase.
-.SH USE OF IN-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 When the communicator is an intracommunicator, you can perform an
 all\-to\-all operation in\-place (the output buffer is used as the input
@@ -219,7 +225,7 @@ All arguments on all processes are significant. The \fIcomm\fP argument, in
 particular, must describe the same communicator on all processes.
 .sp
 There are two MPI library functions that are more general than
-MPI_Alltoall\&. MPI_Alltoallv allows all\-to\-all communication to and from
+\fI\%MPI_Alltoall\fP\&. MPI_Alltoallv allows all\-to\-all communication to and from
 buffers that need not be contiguous; different processes may send and
 receive different amounts of data. MPI_Alltoallw expands MPI_Alltoallv\(aqs
 functionality to allow the exchange of data with different datatypes.

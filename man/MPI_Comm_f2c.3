@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_F2C" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_COMM_F2C" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Comm_f2c, MPI_Comm_c2f, MPI_File_f2c, MPI_File_c2f, MPI_Info_f2c,
+\fI\%MPI_Comm_f2c\fP, MPI_Comm_c2f, MPI_File_f2c, MPI_File_c2f, MPI_Info_f2c,
 MPI_Info_c2f, MPI_Message_f2c, MPI_Message_c2f, MPI_Op_f2c, MPI_Op_c2f,
 MPI_Request_f2c, MPI_Request_c2f, MPI_Type_f2c, MPI_Type_c2f,
 MPI_Win_f2c, MPI_Win_c2f \- Translates a C handle into a Fortran
@@ -83,9 +83,9 @@ are provided in C to convert from a Fortran handle (which is an integer)
 to a C handle, and vice versa.
 .sp
 For example, if \fIcomm\fP is a valid Fortran handle to a communicator, then
-MPI_Comm_f2c returns a valid C handle to that same communicator; if
-\fIcomm\fP = MPI_COMM_NULL (Fortran value), then MPI_Comm_f2c returns a null
-C handle; if \fIcomm\fP is an invalid Fortran handle, then MPI_Comm_f2c
+\fI\%MPI_Comm_f2c\fP returns a valid C handle to that same communicator; if
+\fIcomm\fP = MPI_COMM_NULL (Fortran value), then \fI\%MPI_Comm_f2c\fP returns a null
+C handle; if \fIcomm\fP is an invalid Fortran handle, then \fI\%MPI_Comm_f2c\fP
 returns an invalid C handle.
 .SH NOTE
 .sp

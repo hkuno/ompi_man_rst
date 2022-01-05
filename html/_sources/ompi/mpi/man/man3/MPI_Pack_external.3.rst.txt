@@ -1,15 +1,16 @@
 .. _mpi_pack_external:
 
 MPI_Pack_external
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 :ref:`MPI_Pack_external` - Writes data to a portable format
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_Aint *position)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -37,7 +38,7 @@ Fortran Syntax
    	<type>		INBUF(*), OUTBUF(*)
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -55,7 +56,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``datarep``: Data representation (string). 
 
@@ -68,19 +69,19 @@ INPUT PARAMETERS
 * ``outsize``: Output buffer size, in bytes (integer). 
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``position``: Current position in buffer, in bytes (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``outbuf``: Output buffer start (choice). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Pack_external` packs data into the external32 format, a universal
 data representation defined by the MPI Forum. This format is useful for
@@ -128,7 +129,7 @@ input to a subsequent call to :ref:`MPI_Pack_external`.
    	}
 
 NOTES
-=====
+-----
 
 The *datarep* argument specifies the data format. The only valid value
 in the current version of MPI is "external32". The argument is provided
@@ -174,7 +175,7 @@ related sequence of pack calls must be unpacked as a unit by a sequence
 of related unpack calls.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

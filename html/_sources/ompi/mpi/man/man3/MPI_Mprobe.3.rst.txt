@@ -1,15 +1,16 @@
 .. _mpi_mprobe:
 
 MPI_Mprobe
-~~~~~~~~~~
+==========
+.. include_body
 
 :ref:`MPI_Mprobe` - Blocking matched probe for a message.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	MPI_Message *message, MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -45,7 +46,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``source``: Source rank or MPI_ANY_SOURCE (integer). 
 
@@ -54,7 +55,7 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``message``: Message (handle). 
 
@@ -63,7 +64,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Like :ref:`MPI_Probe` and :ref:`MPI_Iprobe`, the :ref:`MPI_Mprobe` and :ref:`MPI_Improbe` operations
 allow incoming messages to be queried without actually receiving them,
@@ -83,7 +84,7 @@ message can then be received by passing the *message* handle to the
 :ref:`MPI_Mrecv` or :ref:`MPI_Imrecv` functions.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

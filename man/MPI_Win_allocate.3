@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_ALLOCATE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_WIN_ALLOCATE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -80,7 +80,9 @@ MPI_Win_allocate(size, disp_unit, info, comm, baseptr, win, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsize\fP: Size of window in bytes (nonnegative integer).
@@ -91,7 +93,9 @@ MPI_Win_allocate(size, disp_unit, info, comm, baseptr, win, ierror)
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBbaseptr\fP: Initial address of window.
@@ -133,7 +137,9 @@ heterogeneous environment.
 Calling MPI_Win_free\fIwill deallocate the memory allocated
 by\fP\fI\%MPI_Win_allocate\fP\fI\&. It is thus erroneous to manually free
 baseptr.\fP
-.SH C NOTES
+.sp
+C NOTES
+\- \-\-\-\-\-
 .sp
 While \fIbaseptr is a void * type, this is to allow easy use of any
 pointer object for this parameter. This argument is really a void **

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_SCAN" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_SCAN" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Scan, MPI_Iscan, MPI_Scan_init \- Computes an inclusive scan
+\fI\%MPI_Scan\fP, MPI_Iscan, MPI_Scan_init \- Computes an inclusive scan
 (partial reduction)
 .SH SYNTAX
 .SS C Syntax
@@ -116,7 +116,9 @@ MPI_Scan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierror
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Send buffer (choice).
@@ -131,7 +133,9 @@ MPI_Scan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierror
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only)
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Receive buffer (choice).
@@ -142,7 +146,7 @@ MPI_Scan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierror
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Scan is used to perform an inclusive prefix reduction on data
+\fI\%MPI_Scan\fP is used to perform an inclusive prefix reduction on data
 distributed across the calling processes. The operation returns, in the
 \fIrecvbuf\fP of the process with rank i, the reduction (calculated
 according to the function \fIop\fP) of the values in the \fIsendbuf\fPs of
@@ -265,14 +269,18 @@ MPI_Scan(a, answer, 1, sspair, myOp, comm);
 .fi
 .UNINDENT
 .UNINDENT
-.SH USE OF IN-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 When the communicator is an intracommunicator, you can perform a
 scanning operation in place (the output buffer is used as the input
 buffer). Use the variable MPI_IN_PLACE as the value of the \fIsendbuf\fP
 argument. The input data is taken from the receive buffer and replaced
 by the output data.
-.SH NOTES ON COLLECTIVE OPERATIONS
+.sp
+NOTES ON COLLECTIVE OPERATIONS
+\-\-\-\-\- \-\- \-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .sp
 The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_IMPROBE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_IMPROBE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -78,7 +78,9 @@ MPI_Improbe(source, tag, comm, flag, message, status, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsource\fP: Source rank or MPI_ANY_SOURCE (integer).
@@ -87,7 +89,9 @@ MPI_Improbe(source, tag, comm, flag, message, status, ierror)
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBflag\fP: Flag (logical).
@@ -111,7 +115,7 @@ receive buffer according to the length of the probed message.
 .sp
 A matching probe with MPI_PROC_NULL as \fIsource\fP returns \fIflag\fP = true,
 \fImessage\fP = MPI_MESSAGE_NO_PROC, and the \fIstatus\fP object returns source
-\- MPI_PROC_NULL, tag \- MPI_ANY_TAG, and count \- 0.
+^ MPI_PROC_NULL, tag ^ MPI_ANY_TAG, and count ^ 0.
 .sp
 MPI_Iprobe returns a true value in \fIflag\fP if a message has been matched
 and can be received by passing the \fImessage\fP handle to the MPI_Mrecv or

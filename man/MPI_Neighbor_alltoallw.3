@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_NEIGHBOR_ALLTOALLW" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_NEIGHBOR_ALLTOALLW" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Neighbor_alltoallw, MPI_Ineighbor_alltoallw,
+\fI\%MPI_Neighbor_alltoallw\fP, MPI_Ineighbor_alltoallw,
 MPI_Neighbor_alltoallw_init \- All processes send data of different
 types to, and receive data of different types from, all processes
 .SH SYNTAX
@@ -146,7 +146,9 @@ MPI_Neighbor_alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer.
@@ -167,7 +169,9 @@ MPI_Neighbor_alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer.
@@ -178,7 +182,7 @@ MPI_Neighbor_alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Neighbor_alltoallw is a generalized collective operation in which
+\fI\%MPI_Neighbor_alltoallw\fP is a generalized collective operation in which
 all processes send data to and receive data from all neighbors. It adds
 flexibility to MPI_Neighbor_alltoallv by allowing the user to specify
 the datatype of individual data blocks (in addition to displacement and

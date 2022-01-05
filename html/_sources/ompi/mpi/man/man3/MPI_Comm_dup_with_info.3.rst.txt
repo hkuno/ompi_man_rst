@@ -1,17 +1,17 @@
 .. _mpi_comm_dup_with_info:
 
 MPI_Comm_dup_with_info
-~~~~~~~~~~~~~~~~~~~~~~
-====
+======================
+.. include_body
 
 :ref:`MPI_Comm_dup_with_info` - Duplicates an existing communicator using
 provided info.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Comm_dup_with_info(MPI_Comm comm, MPI_Info info, MPI_Comm *newcomm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER COMM, INFO, NEWCOMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -44,19 +44,19 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
-===============
+---------------
 
 -  ``comm`` : Communicator (handle).
 -  ``info`` : Info argument (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``newcomm`` : Copy of comm (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Comm_dup_with_info` acts exactly like :ref:`MPI_Comm_dup` except
 that the ``info`` hints associated with the communicator ``comm`` are
@@ -66,7 +66,7 @@ instead. See :ref:`MPI_Comm_set_info` for the list of recognized
 ``info`` keys.
 
 Notes
-=====
+-----
 
 This operation is used to provide a parallel library call with a
 duplicate communication space that has the same properties as the
@@ -85,7 +85,7 @@ attributes on the same object on which the attribute copy callback is
 being invoked.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

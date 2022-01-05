@@ -1,17 +1,17 @@
 .. _mpi_file_write_shared:
 
 MPI_File_write_shared
-~~~~~~~~~~~~~~~~~~~~~
-====
+=====================
+.. include_body
 
 :ref:`MPI_File_write_shared` - Writes a file using the shared file pointer
 (blocking, noncollective).
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
        MPI_Datatype datatype, MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -33,7 +33,7 @@ Fortran Syntax
          INTEGER   FH, COUNT, DATATYPE, STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -48,32 +48,32 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input/Output Parameter
-======================
+----------------------
 
 -  ``fh`` : File handle (handle).
 
 Input Parameters
-================
+----------------
 
 -  ``buf`` : Initial address of buffer (choice).
 -  ``count`` : Number of elements in buffer (integer).
 -  ``datatype`` : Data type of each buffer element (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``status`` : Status object (status).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_File_write_shared` is a blocking routine that uses the shared
 file pointer to write files. The order of serialization is not
 deterministic for this noncollective routine.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

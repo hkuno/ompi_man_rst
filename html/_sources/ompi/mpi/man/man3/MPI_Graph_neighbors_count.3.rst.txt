@@ -1,17 +1,17 @@
 .. _mpi_graph_neighbors_count:
 
 MPI_Graph_neighbors_count
-~~~~~~~~~~~~~~~~~~~~~~~~~
-====
+=========================
+.. include_body
 
 :ref:`MPI_Graph_neighbors_count` - Returns the number of neighbors of a
 node associated with a graph topology.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
        int *nneighbors)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -32,7 +32,7 @@ Fortran Syntax
        INTEGER COMM, RANK, NNEIGHBORS, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -45,19 +45,19 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm`` : Communicator with graph topology (handle).
 -  ``rank`` : Rank of process in group of comm (integer).
 
 Output Parameters
-=================
+-----------------
 
 -  ``nneighbors`` : Number of neighbors of specified process (integer).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Graph_neighbors_count` and :ref:`MPI_Graph_neighbors` provide
 adjacency information for a general, graph topology.
@@ -65,7 +65,7 @@ adjacency information for a general, graph topology.
 process signified by ``rank``.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

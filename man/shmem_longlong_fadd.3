@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONGLONG_FADD" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_LONGLONG_FADD" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,12 +28,15 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_INT_FADD
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_int4_fadd\fP(3), \fIshmem_int8_fadd\fP(3), \fIshmem_int_fadd\fP(3),
 \fIshmem_long_fadd\fP(3), \fIshmem_longlong_fadd\fP(3) \- Performs an atomic
 fetch\-and\-add operation on a remote data object
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -73,7 +76,7 @@ ires = SHMEM_INT8_FADD(target, value, pe)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 shmem_fadd functions perform an atomic fetch\-and\-add operation. An
 atomic fetch\-and\-add operation fetches the old target and adds value to
@@ -99,10 +102,12 @@ An integer that indicates the PE number on which target is to be
 updated. If you are using Fortran, it must be a default integer
 value.
 .UNINDENT
-.SS NOTES
+.SH NOTES
 .sp
 The term remotely accessible is defined in \fIintro_shmem\fP(3).
-.SS RETURN VALUES
+.sp
+RETURN VALUES
+\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 The contents that had been at the target address on the remote PE prior
 to the atomic addition operation.

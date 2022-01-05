@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_GET_NAME" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_COMM_GET_NAME" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -75,12 +75,16 @@ MPI_Comm_get_name(comm, comm_name, resultlen, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETER
+.sp
+INPUT PARAMETER
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm\fP: Communicator the name of which is to be returned (handle).
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm_name\fP: Name previously stored on the communicator, or an empty string if no such name exists (string).

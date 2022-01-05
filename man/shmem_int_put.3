@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INT_PUT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_INT_PUT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,7 +28,10 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_CHAR_PUT
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_character_put\fP(3), \fIshmem_complex_put\fP(3),
 \fIshmem_double_put\fP(3), \fIshmem_float_put\fP(3), \fIshmem_int_put\fP(3),
@@ -38,7 +41,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fIshmem_put32\fP(3), \fIshmem_put64\fP(3), \fIshmem_put128\fP(3),
 \fIshmem_putmem\fP(3), \fIshmem_real_put\fP(3), \fIshmem_short_put\fP(3) \-
 Transfers data to a specified processing element (PE)
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -124,7 +127,7 @@ CALL SHMEM_REAL_PUT(target, source, len, pe)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 These routines transfer \fBnelems\fP elements of the data object at
 address \fBsource\fP on the calling PE, to the data object at address
@@ -208,7 +211,7 @@ If you are using Fortran, data types must be of default size. For
 example, a real variable must be declared as REAL, REAL*4, or
 REAL(KIND=4).
 .UNINDENT
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 The following shmem_put example is for C/C++ programs:
 .INDENT 0.0

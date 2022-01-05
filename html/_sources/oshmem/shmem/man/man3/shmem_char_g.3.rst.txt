@@ -1,7 +1,8 @@
 .. _shmem_char_g:
 
 shmem_char_g
-~~~~~~~~~~~~
+============
+.. include_body
 
 *shmem_char_g*\ (3), *shmem_float_g*\ (3), *shmem_int_g*\ (3),
 *shmem_long_g*\ (3), *shmem_short_g*\ (3), *shmem_longlong_g*\ (3),
@@ -10,7 +11,7 @@ mechanism to read basic types (char, short, int, float, double, long,
 long long, long double) from symmetric data objects on remote PEs.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -37,7 +38,7 @@ C or C++:
    long shmem_longdouble_g(const long double *addr, int pe);
 
 DESCRIPTION
-===========
+-----------
 
 These routines provide a very low latency get capability for single
 elements of most basic types.

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_AINT_ADD" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_AINT_ADD" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Aint_add, MPI_Aint_diff \- Portable functions for arithmetic
+\fI\%MPI_Aint_add\fP, MPI_Aint_diff \- Portable functions for arithmetic
 on MPI_Aint values.
 .SH SYNTAX
 .SS C Syntax
@@ -79,7 +79,9 @@ INTEGER(KIND=MPI_ADDRESS_KIND) MPI_AINT_DIFF(ADDR1, ADDR2)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBbase\fP: Base address (integer).
@@ -92,7 +94,7 @@ INTEGER(KIND=MPI_ADDRESS_KIND) MPI_AINT_DIFF(ADDR1, ADDR2)
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Aint_add produces a new MPI_Aint value that is equivalent to the
+\fI\%MPI_Aint_add\fP produces a new MPI_Aint value that is equivalent to the
 sum of the \fIbase\fP and \fIdisp\fP arguments, where \fIbase\fP represents a base
 address returned by a call to MPI_Get_address and \fIdisp\fP represents
 a signed integer displacement. The resulting address is valid only at

@@ -1,17 +1,18 @@
 .. _mpi_neighbor_allgather:
 
 MPI_Neighbor_allgather
-~~~~~~~~~~~~~~~~~~~~~~
+======================
+.. include_body
 
-:ref:`MPI_Neighbor_allgather`, MPI_Ineighbor_allgather,
+:ref:`MPI_Neighbor_allgather`, :ref:`MPI_Ineighbor_allgather`,
 :ref:`MPI_Neighbor_allgather` - Gathers and distributes data from and to all
 neighbors
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -30,7 +31,7 @@ C Syntax
    	 MPI_Datatype recvtype, MPI_Comm comm, MPI_Infoinfo, MPI_Request req)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -56,7 +57,7 @@ Fortran Syntax
    	INTEGER	INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -93,7 +94,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Starting address of send buffer (choice). 
 
@@ -110,7 +111,7 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Address of receive buffer (choice). 
 
@@ -119,7 +120,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Neighbor_allgather` is similar to :ref:`MPI_Allgather`, except that only the
 neighboring processes receive the result, instead of all processes. The
@@ -130,7 +131,7 @@ be equal to the type signature associated with recvcount, recvtype at
 any other process.
 
 NEIGHBOR ORDERING
-=================
+-------- --------
 
 For a distributed graph topology, created with :ref:`MPI_Dist_graph_create`,
 the sequence of neighbors in the send and receive buffers at each
@@ -158,13 +159,13 @@ is still part of the sequence of neighbors but it is neither
 communicated nor updated.
 
 NOTES
-=====
+-----
 
 The MPI_IN_PLACE option for *sendbuf* is not meaningful for this
 operation.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

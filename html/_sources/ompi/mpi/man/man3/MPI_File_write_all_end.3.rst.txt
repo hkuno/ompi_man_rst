@@ -1,18 +1,19 @@
 .. _mpi_file_write_all_end:
 
 MPI_File_write_all_end
-~~~~~~~~~~~~~~~~~~~~~~
+======================
+.. include_body
 
 :ref:`MPI_File_write_all_end` - Writes a file starting at the locations
 specified by individual file pointers; ending part of a split collective
 routine (blocking).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    int MPI_File_write_all_end(MPI_File fh, const void *buf, MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax
    	INTEGER	FH, STATUS, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -46,24 +47,24 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``fh``: File handle (handle). 
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``buf``: Initial address of buffer (choice). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``status``: Status object (status). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_write_all_end` is the ending part of a split collective routine
 that stores the number of elements actually written into the file
@@ -74,7 +75,7 @@ of the file specified by the current view. All other fields of *status*
 are undefined.
 
 NOTES
-=====
+-----
 
 All the nonblocking collective routines for data access are "split" into
 two routines, each with \_begin or \_end as a suffix. These split
@@ -82,7 +83,7 @@ collective routines are subject to the semantic rules described in
 Section 9.4.5 of the MPI-2 standard.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

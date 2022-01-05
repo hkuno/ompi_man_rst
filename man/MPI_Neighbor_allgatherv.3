@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_NEIGHBOR_ALLGATHERV" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_NEIGHBOR_ALLGATHERV" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Neighbor_allgatherv, MPI_Ineighbor_allgatherv,
+\fI\%MPI_Neighbor_allgatherv\fP, MPI_Ineighbor_allgatherv,
 MPI_Neighbor_allgatherv_init \- Gathers and distributes data from and
 to all neighbors. Each process may contribute a different amount of
 data.
@@ -129,7 +129,9 @@ MPI_Neighbor_allgatherv_init(sendbuf, sendcount, sendtype, recvbuf, recvcounts,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer (choice).
@@ -148,7 +150,9 @@ MPI_Neighbor_allgatherv_init(sendbuf, sendcount, sendtype, recvbuf, recvcounts,
 .IP \(bu 2
 \fBinfo Info (handle, persistent only).\fP:
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer (choice).
@@ -159,7 +163,7 @@ MPI_Neighbor_allgatherv_init(sendbuf, sendcount, sendtype, recvbuf, recvcounts,
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Neighbor_allgatherv is similar to MPI_Neighbor_allgather in that all
+\fI\%MPI_Neighbor_allgatherv\fP is similar to MPI_Neighbor_allgather in that all
 processes gather data from all neighbors, except that each process can
 send a different amount of data. The block of data sent from the jth
 neighbor is received by every neighbor and placed in the jth block of
@@ -169,7 +173,9 @@ topology of \fIcomm\fP\&. \fIrecvbuf.\fP
 The type signature associated with sendcount, sendtype, at process j
 must be equal to the type signature associated with the corresponding
 entry in \fIrecvcounts\fP on neighboring processes.
-.SH NEIGHBOR ORDERING
+.sp
+NEIGHBOR ORDERING
+\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
 .sp
 For a distributed graph topology, created with MPI_Dist_graph_create,
 the sequence of neighbors in the send and receive buffers at each

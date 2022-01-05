@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ABORT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_ABORT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -72,14 +72,18 @@ MPI_Abort(comm, errorcode, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm\fP: Communicator of tasks to abort.
 .IP \(bu 2
 \fBerrorcode\fP: Error code to return to invoking environment.
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -93,9 +97,9 @@ should handle this as a return errorcode from the main program or an
 abort (errorcode).
 .sp
 The long\-term goal of the Open MPI implementation is to terminate all
-processes in all tasks that contain a process in *comm, and the error
+processes in all tasks that contain a process in \fIcomm, and the error
 code is not returned to the invoking environment. At the moment, this
-isn\(aqt fully implemented and \fI\%MPI_Abort\fP will terminate the entire job.
+isn\(aqt fully implemented and :ref:\(gaMPI_Abort\(ga will terminate the entire job.\fP
 .sp
 Note: All associated processes are sent a SIGTERM.
 .SH ERRORS

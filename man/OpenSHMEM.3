@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "OPENSHMEM" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "OPENSHMEM" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,10 +28,13 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH INTRO_SHMEM
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 intro_shmem \- Introduction to the OpenSHMEM programming model
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The SHMEM programming model consists of library routines that provide
 low\-latency, high\-bandwidth communication for use in highly parallelized
@@ -60,7 +63,9 @@ by another PE. Other operations supported are collective broadcast and
 reduction, barrier synchronization, and atomic memory operations. An
 atomic memory operation is an atomic read\-and\-update operation, such as
 a fetch\-and\-increment, on a remote or local data object.
-.SS OPENSHMEM ROUTINES
+.sp
+OPENSHMEM ROUTINES
+\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
 .sp
 This section lists the significant OpenSHMEM message\-passing routines.
 .sp
@@ -1014,7 +1019,9 @@ describe the OpenSHMEM collective routines:
 \fIshmem_xor\fP(3)
 .UNINDENT
 .UNINDENT
-.SS USING THE SYMMETRIC WORK ARRAY, PSYNC
+.sp
+USING THE SYMMETRIC WORK ARRAY, PSYNC
+\-\-\-\-\- \-\-\- \-\-\-\-\-\-\-\-\- \-\-\-\- \-\-\-\-\-\- \-\-\-\-\-
 .sp
 Multiple pSync arrays are often needed if a particular PE calls as
 OpenSHMEM collective routine twice without intervening barrier
@@ -1042,7 +1049,9 @@ all PEs by the time processing of a third call begins on any PE.
 Because the SHMEM routines restore pSync to its original contents,
 multiple calls that use the same pSync array do not require that pSync
 be reinitialized after the first call.
-.SS SHMEM ENVIRONMENT VARIABLES
+.sp
+SHMEM ENVIRONMENT VARIABLES
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .sp
 This section lists the significant SHMEM environment variables.
 .INDENT 0.0
@@ -1067,7 +1076,9 @@ initialize the SHMEM runtime.
 .sp
 Calling any other SHMEM routines beforehand has undefined behavior.
 Multiple calls to this routine is not allowed.
-.SS COMPILING AND RUNNING OPENSHMEM PROGRAMS
+.sp
+COMPILING AND RUNNING OPENSHMEM PROGRAMS
+\-\-\-\-\-\-\-\-\- \-\-\- \-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
 .sp
 The OpenSHMEM specification is silent regarding how OpenSHMEM programs
 are compiled, linked and run. This section shows some examples of how
@@ -1121,7 +1132,7 @@ oshrun \-np 32 ./a.out
 .fi
 .UNINDENT
 .UNINDENT
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 \fBExample 1\fP: The following Fortran OpenSHMEM program directs all PEs
 to sum simultaneously the numbers in the VALUES variable across all PEs:
@@ -1181,7 +1192,7 @@ main() {
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-The following man pages also contain information on OpenSHMEM routines.See the specific man pages for implementation information.*shmem_add(3), \fIshmem_and(3), *:ref:\(gashmem_barrier\(ga (3),\fPshmem_barrier_all (3), \fIshmem_broadcast(3), *shmem_cache(3),*shmem_collect(3), *shmem_cswap(3), *shmem_fadd(3),\fPshmem_fence (3), \fIshmem_finc(3), *shmem_get(3),*shmem_iget(3), *shmem_inc(3), *shmem_iput(3),*shmem_lock(3), *shmem_max(3), *shmem_min(3),\fPshmem_my_pe (3), \fIshmem_or(3), *shmem_prod(3),*shmem_put(3), *:ref:\(gashmem_quiet\(ga (3), *shmem_short_g(3),*shmem_short_p(3), *shmem_sum(3), *:ref:\(gashmem_swap\(ga (3),\fPshmem_wait (3), \fIshmem_xor(3), *:ref:\(gashmem_pe_accessible\(ga (3),\fPshmem_addr_accessible (3), \fI:ref:\(gashmem_init\(ga (3), *:ref:\(gashmem_malloc\(ga (3C),\fPshmem_my_pe (3I), 
+The following man pages also contain information on OpenSHMEM routines.See the specific man pages for implementation information.*shmem_add(3), \fIshmem_and(3), *:ref:\(gashmem_barrier\(ga (3),\fPshmem_barrier_all (3), \fIshmem_broadcast(3), *shmem_cache(3),*shmem_collect(3), *shmem_cswap(3), *shmem_fadd(3),\fPshmem_fence (3), \fIshmem_finc(3), *shmem_get(3),*shmem_iget(3), *shmem_inc(3), *shmem_iput(3),*shmem_lock(3), *shmem_max(3), *shmem_min(3),\fPshmem_my_pe (3), \fIshmem_or(3), *shmem_prod(3),*shmem_put(3), *:ref:\(gashmem_quiet\(ga (3), *:ref:\(gashmem_short_g\(ga (3),\fPshmem_short_p (3), \fIshmem_sum(3), *:ref:\(gashmem_swap\(ga (3),\fPshmem_wait (3), \fIshmem_xor(3), *:ref:\(gashmem_pe_accessible\(ga (3),\fPshmem_addr_accessible (3), \fI:ref:\(gashmem_init\(ga (3), *:ref:\(gashmem_malloc\(ga (3C),\fPshmem_my_pe (3I), 
 .nf
 *
 .fi

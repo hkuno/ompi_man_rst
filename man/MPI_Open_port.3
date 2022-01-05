@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_OPEN_PORT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_OPEN_PORT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -74,12 +74,16 @@ MPI_Open_port(info, port_name, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETER
+.sp
+INPUT PARAMETER
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBinfo\fP: Options on how to establish an address (handle). No options currently supported.
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBport_name\fP: Newly established port (string).
@@ -96,7 +100,9 @@ MPI copies a system\-supplied port name into \fIport_name\fP\&. \fIport_name\fP
 identifies the newly opened port and can be used by a client to contact
 the server. The maximum size string that may be supplied by the system
 is MPI_MAX_PORT_NAME.
-.SH SUPPORTED INFO KEYS
+.sp
+SUPPORTED INFO KEYS
+\-\-\-\-\-\-\-\-\- \-\-\-\- \-\-\-\-
 .sp
 None.
 .SH ERRORS

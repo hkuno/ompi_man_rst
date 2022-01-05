@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_IBCAST" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_IBCAST" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,18 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_BCAST
-
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-.ce
-----
-
-.ce 0
-.sp
-.sp
-\fI\%MPI_Bcast\fP, MPI_Ibcast \- Broadcasts a message from the process
+MPI_Bcast, \fI\%MPI_Ibcast\fP \- Broadcasts a message from the process
 with rank \fIroot\fP to all other processes of the group.
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -100,7 +96,7 @@ MPI_Ibcast(buffer, count, datatype, root, comm, request, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT/OUTPUT PARAMETERS
+.SH INPUT/OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBbuffer\fP: Starting address of buffer (choice).
@@ -113,16 +109,16 @@ MPI_Ibcast(buffer, count, datatype, root, comm, request, ierror)
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrequest\fP: Request (handle, non\-blocking only).
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_Bcast\fP broadcasts a message from the process with rank root to
+MPI_Bcast broadcasts a message from the process with rank root to
 all processes of the group, itself included. It is called by all members
 of group using the same arguments for \fBcomm\fP, \fBroot\fP\&. On return, the
 contents of root\(aqs communication buffer has been copied to all
@@ -132,7 +128,7 @@ General, derived datatypes are allowed for datatype. The type signature
 of count, datatype on any process must be equal to the type signature o
 f count, datatype at the root. This implies that the amount of data sent
 must be equal to the amount received, pairwise between each process and
-the root. \fI\%MPI_Bcast\fP and all other data\-movement collective routines
+the root. MPI_Bcast and all other data\-movement collective routines
 make this restriction. Distinct type maps between sender and receiver
 are still allowed.
 .sp
@@ -156,7 +152,7 @@ MPI_Bcast( array, 100, MPI_INT, root, comm);
 As in many of our sample code fragments, we assume that some of the
 variables (such as comm in the example above) have been assigned
 appropriate values.
-.SS WHEN COMMUNICATOR IS AN INTER\-COMMUNICATOR
+.SH WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
 .sp
 When the communicator is an inter\-communicator, the root process in the
 first group broadcasts data to all the processes in the second group.
@@ -167,10 +163,10 @@ in the second group use the rank of that root process in the first group
 as the value of their \fBroot\fP argument. The receive buffer arguments of
 the processes in the second group must be consistent with the send
 buffer argument of the root process in the first group.
-.SS NOTES
+.SH NOTES
 .sp
 This function does not support the in\-place option.
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

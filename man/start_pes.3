@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "START_PES" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "START_PES" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_INIT
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 shmem_init, start_pes \- Allocates a block of memory from the symmetric
 heap.
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -59,7 +62,7 @@ CALL START_PES(npes)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The start_pes routine should be the first statement in a SHMEM parallel
 program.
@@ -83,7 +86,7 @@ Multiple calls to this function are not allowed.
 For an overview of programming with SHMEM communication routines,
 example SHMEM programs, and instructions for compiling SHMEM programs,
 see the \fIintro_shmem\fP(3) man page.
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 This is a simple program that calls \fIshmem_integer_put\fP(3):
 .INDENT 0.0
@@ -112,7 +115,7 @@ END
 .fi
 .UNINDENT
 .UNINDENT
-.SS NOTES
+.SH NOTES
 .sp
 If the start_pes call is not the first statement in a program,
 unexpected results may occur on some architectures.

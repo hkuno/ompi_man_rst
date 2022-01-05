@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_STATUS_C2F" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_STATUS_C2F" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,18 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_STATUS_F2C
-
-.sp
-.ce
-----
-
-.ce 0
-.sp
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 MPI_Status_f2c, MPI_Status_f2c \- Translates a C status into a Fortran
 INTEGER\-style status, or vice versa.
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -54,14 +50,14 @@ int MPI_Status_c2f(const MPI_Status *c_status, MPI_Fint *f_status)
 .fi
 .UNINDENT
 .UNINDENT
-.SS PARAMETERS
+.SH PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBf_status\fP: \fBmpi\fP\-style \fBINTEGER\fP MPI status object
 .IP \(bu 2
 \fBc_status\fP: C\-style MPI status object
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 These two procedures are provided in C to convert from a Fortran status
 (which is an array of integers) to a C status (which is a structure),
@@ -87,7 +83,7 @@ elements, and cancellation. The conversion function may be called with
 an input status argument that has an undefined error field, in which
 case the value of the error field in the output status argument is
 undefined.
-.SS NOTES
+.SH NOTES
 .sp
 These functions are only available in C; they are not available in any
 of the Fortran MPI interfaces.
@@ -95,7 +91,7 @@ of the Fortran MPI interfaces.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Status_f082c MPI_Status_c2f08:ref:\fIMPI_Status_f082f\fP MPI_Status_f2f08
+MPI_Status_f082c MPI_Status_c2f08 MPI_Status_f082f MPI_Status_f2f08
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

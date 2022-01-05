@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONGLONG_CSWAP" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_LONGLONG_CSWAP" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,13 +28,16 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_INT_CSWAP
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_int_cswap\fP(3), \fIshmem_int4_cswap\fP(3),
 \fIshmem_int8_cswap\fP(3), \fIshmem_long_cswap\fP(3),
 \fIshmem_longlong_cswap\fP(3) \- Performs an atomic conditional swap to a
 remote data object
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -75,7 +78,7 @@ ires = SHMEM_INT8_CSWAP(target, cond, value, pe)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The conditional swap routines conditionally update a target data object
 on an arbitrary processing element (PE) and return the prior contents of
@@ -128,14 +131,16 @@ An integer that indicates the PE number upon which target is to be
 updated. If you are using Fortran, it must be a default integer
 value.
 .UNINDENT
-.SS NOTES
+.SH NOTES
 .sp
 The term remotely accessible is defined in \fIintro_shmem\fP(3).
-.SS RETURN VALUES
+.sp
+RETURN VALUES
+\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 The contents that had been in the target data object on the remote PE
 prior to the conditional swap.
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 The following call ensures that the first PE to execute the conditional
 swap will successfully write its PE number to race_winner on PE 0.

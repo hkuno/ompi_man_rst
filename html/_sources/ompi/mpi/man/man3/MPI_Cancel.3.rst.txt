@@ -1,16 +1,16 @@
 .. _mpi_cancel:
 
 MPI_Cancel
-~~~~~~~~~~
-====
+==========
+.. include_body
 
 :ref:`MPI_Cancel` - Cancels a communication request.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
    int MPI_Cancel(MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -30,7 +30,7 @@ Fortran Syntax
        INTEGER REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -41,17 +41,17 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
-===============
+---------------
 
 -  ``request`` : Communication request (handle).
 
 Output Parameter
-================
+----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 The :ref:`MPI_Cancel` operation allows pending communications to be
 canceled. This is required for cleanup. Posting a send or a receive ties
@@ -100,7 +100,7 @@ be returned in the status argument of the operation that completes the
 communication.
 
 Notes
-=====
+-----
 
 The primary expected use of :ref:`MPI_Cancel` is in multi-buffering
 schemes, where speculative MPI_Irecvs are made. When the computation
@@ -108,7 +108,7 @@ completes, some of these ``request``\ s may remain; using :ref:`MPI_Cancel`
 allows the user to cancel these unsatisfied ``request``\ s.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_NEIGHBOR_ALLGATHER_INIT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_NEIGHBOR_ALLGATHER_INIT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,12 +28,15 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_NEIGHBOR_ALLGATHER
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_Neighbor_allgather\fP, MPI_Ineighbor_allgather,
-\fI\%MPI_Neighbor_allgather\fP \- Gathers and distributes data from and to all
+MPI_Neighbor_allgather, MPI_Ineighbor_allgather,
+MPI_Neighbor_allgather \- Gathers and distributes data from and to all
 neighbors
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -125,7 +128,9 @@ MPI_Neighbor_allgather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer (choice).
@@ -142,7 +147,9 @@ MPI_Neighbor_allgather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer (choice).
@@ -151,16 +158,18 @@ MPI_Neighbor_allgather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_Neighbor_allgather\fP is similar to MPI_Allgather, except that only the
+MPI_Neighbor_allgather is similar to MPI_Allgather, except that only the
 neighboring processes receive the result, instead of all processes. The
 neighbors and buffer layout is determined by the topology of \fIcomm\fP\&.
 .sp
 The type signature associated with sendcount, sendtype at a process must
 be equal to the type signature associated with recvcount, recvtype at
 any other process.
-.SS NEIGHBOR ORDERING
+.sp
+NEIGHBOR ORDERING
+\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
 .sp
 For a distributed graph topology, created with MPI_Dist_graph_create,
 the sequence of neighbors in the send and receive buffers at each
@@ -186,11 +195,11 @@ neighborhood collective communication behaves like a point\-to\-point
 communication with MPI_PROC_NULL in this direction. That is, the buffer
 is still part of the sequence of neighbors but it is neither
 communicated nor updated.
-.SS NOTES
+.SH NOTES
 .sp
 The MPI_IN_PLACE option for \fIsendbuf\fP is not meaningful for this
 operation.
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_FLOAT_SET" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_FLOAT_SET" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,13 +28,16 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_INT_SET
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_double_set\fP(3), \fIshmem_float_set\fP(3), \fIshmem_int_set\fP(3),
 \fIshmem_long_set\fP(3), \fIshmem_longlong_set\fP(3) \fIshmem_int4_set\fP(3),
 \fIshmem_int8_set\fP(3), \fIshmem_real4_set\fP(3), \fIshmem_real8_set\fP(3), \-
 Atomically sets the value of a remote data object
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -76,7 +79,7 @@ CALL SHMEM_REAL8_SET(target, value, pe)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The set routines write the \fBvalue\fP into the address \fBtarget\fP on
 \fBpe\fP as an atomic operation.
@@ -95,7 +98,9 @@ An integer that indicates the PE number upon which target is to be
 updated. If you are using Fortran, it must be a default integer
 value.
 .UNINDENT
-.SS RETURN VALUES
+.sp
+RETURN VALUES
+\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 NONE
 .sp

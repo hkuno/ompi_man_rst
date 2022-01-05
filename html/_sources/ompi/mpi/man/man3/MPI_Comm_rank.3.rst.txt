@@ -1,16 +1,17 @@
 .. _mpi_comm_rank:
 
 MPI_Comm_rank
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_Comm_rank` - Determines the rank of the calling process in the
 communicator.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Comm_rank(MPI_Comm comm, int *rank)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	COMM, RANK, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,19 +43,19 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``rank``: Rank of the calling process in group of comm (integer). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This function gives the rank of the process in the particular
 communicator's group. It is equivalent to accessing the communicator's
@@ -68,7 +69,7 @@ and the other processes will serve as compute nodes. In this framework,
 the various processes of a communicator.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

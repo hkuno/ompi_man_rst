@@ -1,17 +1,17 @@
 .. _mpi_gather:
 
 MPI_Gather
-~~~~~~~~~~
-====
+==========
+.. include_body
 
-:ref:`MPI_Gather`, MPI_Igather, MPI_Gather_init - Gathers values
+:ref:`MPI_Gather`, :ref:`MPI_Igather`, :ref:`MPI_Gather_init` - Gathers values
 from a group of processes.
 
 Synopsis
-========
+--------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -30,7 +30,7 @@ C Syntax
        MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -56,7 +56,7 @@ Fortran Syntax
        INTEGER COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -93,7 +93,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``sendbuf`` : Starting address of send buffer (choice).
 -  ``sendcount`` : Number of elements in send buffer (integer).
@@ -107,7 +107,7 @@ Input Parameters
 -  ``info`` : Info (handle, persistent only).
 
 Output Parameters
-=================
+-----------------
 
 -  ``recvbuf`` : Address of receive buffer (choice, significant only at
    root).
@@ -115,7 +115,7 @@ Output Parameters
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 Each process (root process included) sends the contents of its send
 buffer to the root process. The root process receives the messages and
@@ -211,7 +211,7 @@ process in the gather.
    MPI_Gather( sendarray, 100, MPI_INT, rbuf, 1, rtype, root, comm);
 
 Use Of In-Place Option
-======================
+----------------------
 
 When the communicator is an intracommunicator, you can perform a gather
 operation in-place (the output buffer is used as the input buffer). Use
@@ -226,7 +226,7 @@ binding that includes ``INTENT`` must mark these as ``INOUT``, not
 ``OUT``.
 
 When Communicator Is An Inter-Communicator
-==========================================
+------------------------------------------
 
 When the communicator is an inter-communicator, the root process in the
 first group gathers data from all the processes in the second group. The
@@ -239,7 +239,7 @@ processes in the first group must be consistent with the receive buffer
 argument of the root process in the second group.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

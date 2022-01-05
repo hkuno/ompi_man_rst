@@ -1,16 +1,16 @@
 .. _mpi_comm_create:
 
 MPI_Comm_create
-~~~~~~~~~~~~~~~
-====
+===============
+.. include_body
 
 :ref:`MPI_Comm_create` - Creates a new communicator.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
    int MPI_Comm_create(MPI_Comm comm, MPI_Group group, MPI_Comm *newcomm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -30,7 +30,7 @@ Fortran Syntax
        INTEGER COMM, GROUP, NEWCOMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -43,19 +43,19 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
-===============
+---------------
 
 -  ``comm`` : Communicator (handle).
 -  ``group`` : Group, which is a subset of the group of comm (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``newcomm`` : New communicator (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 This function creates a new communicator ``newcomm`` with communication
 ``group`` defined by ``group`` and a new context. The function sets
@@ -70,7 +70,7 @@ with the same ``group`` as argument, that is: the same processes in the
 same order. Otherwise the call is erroneous.
 
 Notes
-=====
+-----
 
 :ref:`MPI_Comm_create` provides a means of making a subset of processes for
 the purpose of separate MIMD computation, with separate communication
@@ -81,7 +81,7 @@ sub-computations. A more general service is provided by
 :ref:`MPI_Comm_split`.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

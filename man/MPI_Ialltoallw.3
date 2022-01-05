@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_IALLTOALLW" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_IALLTOALLW" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,12 +28,15 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_ALLTOALLW
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_Alltoallw\fP, MPI_Ialltoallw, MPI_Alltoallw_init \- All processes
+MPI_Alltoallw, \fI\%MPI_Ialltoallw\fP, MPI_Alltoallw_init \- All processes
 send data of different types to, and receive data of different types
 from, all processes
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -145,7 +148,9 @@ MPI_Alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer.
@@ -166,7 +171,9 @@ MPI_Alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only)
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer.
@@ -175,9 +182,9 @@ MPI_Alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status.
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_Alltoallw\fP is a generalized collective operation in which all
+MPI_Alltoallw is a generalized collective operation in which all
 processes send data to and receive data from all other processes. It
 adds flexibility to MPI_Alltoallv by allowing the user to specify the
 datatype of individual data blocks (in addition to displacement and
@@ -231,7 +238,9 @@ use the rank of the root process in the first group as the value of
 .sp
 When the communicator is an intra\-communicator, these groups are the
 same, and the operation occurs in a single phase.
-.SS USE OF IN\-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 When the communicator is an intracommunicator, you can perform an
 all\-to\-all operation in\-place (the output buffer is used as the input
@@ -239,7 +248,7 @@ buffer). Use the variable MPI_IN_PLACE as the value of \fIsendbuf\fP\&. In
 this case, \fIsendcounts\fP, \fIsdispls\fP, and \fIsendtypes\fP are ignored. The
 input data of each process is assumed to be in the area where that
 process would receive its own contribution to the receive buffer.
-.SS NOTES
+.SH NOTES
 .sp
 The specification of counts, types, and displacements should not cause
 any location to be written more than once.
@@ -250,7 +259,7 @@ particular, must describe the same communicator on all processes.
 The offsets of \fIsdispls\fP and \fIrdispls\fP are measured in bytes. Compare
 this to MPI_Alltoallv, where these offsets are measured in units of
 \fIsendtype\fP and \fIrecvtype\fP, respectively.
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

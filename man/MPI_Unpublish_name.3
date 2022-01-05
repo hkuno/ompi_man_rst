@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_UNPUBLISH_NAME" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_UNPUBLISH_NAME" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -82,7 +82,9 @@ MPI_Unpublish_name(service_name, info, port_name, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBservice_name\fP: A service name (string).
@@ -91,7 +93,9 @@ MPI_Unpublish_name(service_name, info, port_name, ierror)
 .IP \(bu 2
 \fBport_name\fP: A port name (string).
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -104,7 +108,9 @@ MPI_Lookup_name\&. It is an error to unpublish a \fIservice_name\fP that was
 not published via MPI_Publish_name\&. Both the \fIservice_name\fP and
 \fIport_name\fP arguments to \fI\%MPI_Unpublish_name\fP must be identical to the
 arguments to the previous call to MPI_Publish_name\&.
-.SH INFO ARGUMENTS
+.sp
+INFO ARGUMENTS
+\-\-\-\- \-\-\-\-\-\-\-\-\-
 .sp
 The following keys for \fIinfo\fP are recognized:
 .INDENT 0.0
@@ -136,7 +142,9 @@ If no info key is provided, the function will first check to see if a
 global server has been specified and is available. If so, then the
 unpublish function will default to global scope first, followed by
 local. Otherwise, the data will default to unpublish with local scope.
-.SH NAME SCOPE
+.sp
+NAME SCOPE
+\-\-\-\- \-\-\-\-\-
 .sp
 Open MPI supports two name scopes: \fIglobal\fP and \fIlocal\fP\&. Local scope
 values are placed in a data store located on the mpirun of the calling

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONG_MAX_TO_ALL" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_LONG_MAX_TO_ALL" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,7 +28,10 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_SHORT_MAX_TO_ALL
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_double_max_to_all\fP(3), \fIshmem_float_max_to_all\fP(3),
 \fIshmem_int_max_to_all\fP(3), \fIshmem_int4_max_to_all\fP(3),
@@ -37,7 +40,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fIshmem_real4_max_to_all\fP(3), \fIshmem_real8_max_to_all\fP(3),
 \fIshmem_real16_max_to_all\fP(3), \fIshmem_short_max_to_all\fP(3) \- Performs
 a maximum function reduction across a set of processing elements (PEs).
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -109,7 +112,7 @@ CALL SHMEM_REAL16_MAX_TO_ALL(target, source, nreduce,
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The shared memory (SHMEM) reduction routines compute one or more
 reductions across symmetric arrays on multiple virtual PEs. A reduction
@@ -214,7 +217,7 @@ is ready to accept the results of the reduction.
 Upon return from a reduction routine, the following are true for the
 local PE: The target array is updated. The values in the pSync array are
 restored to the original values.
-.SS NOTES
+.SH NOTES
 .sp
 The terms collective, symmetric, and cache aligned are defined in
 \fIintro_shmem\fP(3). All SHMEM reduction routines reset the values in
@@ -236,7 +239,7 @@ In general, this can be assured only by doing some type of
 synchronization. However, in the special case of reduction routines
 being called with the same active set, you can allocate two pSync and
 pWrk arrays and alternate between them on successive calls.
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 \fBExample 1:\fP This Fortran example statically initializes the pSync
 array and finds the maximum value of real variable FOO across all even

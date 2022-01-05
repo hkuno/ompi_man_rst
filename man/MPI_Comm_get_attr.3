@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_GET_ATTR" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_COMM_GET_ATTR" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -77,14 +77,18 @@ MPI_Comm_get_attr(comm, comm_keyval, attribute_val, flag, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm\fP: Communicator to which the attribute is attached (handle).
 .IP \(bu 2
 \fBcomm_keyval\fP: Key value (integer).
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBattribute_val\fP: Attribute value, unless f\fIlag\fP = false.
@@ -104,7 +108,9 @@ particular, MPI_KEYVAL_INVALID is an erroneous key value.
 This function replaces MPI_Attr_get, the use of which is deprecated. The
 C binding is identical. The Fortran binding differs in that
 \fIattribute_val\fP is an address\-sized integer.
-.SH FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fIATTRIBUTE_VAL\fP argument only for Fortran 90. Sun FORTRAN 77 users may

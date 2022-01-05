@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_PREALLOCATE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_FILE_PREALLOCATE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -74,17 +74,23 @@ MPI_File_preallocate(fh, size, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT/OUTPUT PARAMETER
+.sp
+INPUT/OUTPUT PARAMETER
+\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBfh\fP: File handle (handle).
 .UNINDENT
-.SH INPUT PARAMETER
+.sp
+INPUT PARAMETER
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsize\fP: Size to preallocate file, in bytes (integer).
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -107,7 +113,9 @@ The treatment of file pointers, pending nonblocking accesses, and file
 consistency is the same as with MPI_File_set_size\&. If
 MPI_MODE_SEQUENTIAL mode was specified when the file was opened, it is
 erroneous to call this routine.
-.SH FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fISIZE\fP
 argument only for Fortran 90. FORTRAN 77 users may use the non\-portable

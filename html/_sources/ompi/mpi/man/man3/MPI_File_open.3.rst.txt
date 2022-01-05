@@ -1,16 +1,17 @@
 .. _mpi_file_open:
 
 MPI_File_open
-~~~~~~~~~~~~~
+=============
+.. include_body
 
 :ref:`MPI_File_open` - Opens a file (collective).
 
 SYNTAX
-======
+------
 
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_File *fh)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -33,7 +34,7 @@ Fortran Syntax
    	INTEGER	COMM, AMODE, INFO, FH, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -48,7 +49,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``comm``: Communicator (handle). 
 
@@ -59,14 +60,14 @@ INPUT PARAMETERS
 * ``info``: Info object (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``fh``: New file handle (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_File_open` opens the file identified by the filename *filename* on
 all processes in the *comm* communicator group. :ref:`MPI_File_open` is a
@@ -136,7 +137,7 @@ The :ref:`MPI_File_open` interface allows the user to pass information via the
 for a list of hints that can be set.
 
 HINTS
-=====
+-----
 
 The following hints can be used as values for the *info* argument.
 
@@ -190,7 +191,7 @@ NON-SETTABLE HINTS:
 - filename: Access this hint to get the name of the file.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

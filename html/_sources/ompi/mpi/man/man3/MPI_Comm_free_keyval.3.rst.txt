@@ -1,16 +1,17 @@
 .. _mpi_comm_free_keyval:
 
 MPI_Comm_free_keyval
-~~~~~~~~~~~~~~~~~~~~
+====================
+.. include_body
 
 :ref:`MPI_Comm_free_keyval` - Frees attribute key for communicator cache
 attribute.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Comm_free_keyval(int *comm_keyval)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	COMM_KEYVAL, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -41,17 +42,17 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``comm_keyval``: 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Comm_free_keyval` frees an extant attribute key. This function sets
 the value of *keyval* to MPI_KEYVAL_INVALID. Note that it is not
@@ -68,12 +69,12 @@ match the communicator-specific creation function introduced in the
 MPI-2 standard. The use of :ref:`MPI_Keyval_free` is deprecated.
 
 NOTES
-=====
+-----
 
 Key values are global (they can be used with any and all communicators).
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

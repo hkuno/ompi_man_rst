@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_BROADCAST64" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_BROADCAST64" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,13 +28,16 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_BROADCAST32
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_broadcast4\fP(3), \fIshmem_broadcast8\fP(3),
 \fIshmem_broadcast32\fP(3), \fIshmem_broadcast64\fP(3) \- Copy a data object
 from a designated PE to a target location on all other PEs of the active
 set.
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -82,7 +85,7 @@ CALL SHMEM_BROADCAST64(target, source, nelems,
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The broadcast routines write the data at address source of the PE
 specified by \fBPE_root\fP to address \fBtarget\fP on all other PEs in the
@@ -170,7 +173,7 @@ Upon return from a broadcast routine, the following are true for the
 local PE: If the current PE is not the root PE, the target data object
 is updated. The values in the pSync array are restored to the original
 values.
-.SS NOTES
+.SH NOTES
 .sp
 The terms collective and symmetric are defined in \fIintro_shmem\fP(3).
 .sp
@@ -191,7 +194,7 @@ array. In general, this can be ensured only by doing some type of
 synchronization. However, in the special case of SHMEM routines being
 called with the same active set, you can allocate two pSync arrays and
 alternate between them on successive calls.
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 In the following examples, the call to shmem_broadcast64 copies source
 on PE 4 to target on PEs 5, 6, and 7.

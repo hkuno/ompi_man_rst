@@ -1,17 +1,17 @@
 .. _mpi_status_f082c:
 
 MPI_Status_f082c
-~~~~~~~~~~~~~~~~
-====
+================
+.. include_body
 
-:ref:`MPI_Status_f082c`, MPI_Status_c2f08 - Translates a C status into a
+:ref:`MPI_Status_f082c`, :ref:`MPI_Status_c2f08` - Translates a C status into a
 Fortran 2008 status, or vice versa.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,13 +21,13 @@ C Syntax
    int MPI_Status_c2f08(const MPI_Status *c_status, MPI_F08_status *f08_status)
 
 PARAMETERS
-==========
+----------
 
 -  ``f08_status``: ``mpi_f08``-style MPI status object
 -  ``c_status``: C-style MPI status object
 
 DESCRIPTION
-===========
+-----------
 
 These two procedures are provided in C to convert from a Fortran 2008
 status (which is a derived type made of integers) to a C status (which
@@ -55,10 +55,10 @@ case the value of the error field in the output status argument is
 undefined.
 
 NOTES
-=====
+-----
 
 These functions are only available in C; they are not available in any
 of the Fortran MPI interfaces.
 
 
-.. seealso:: MPI_Status_c2f:ref:`MPI_Status_f2c` :ref:`MPI_Status_f082f` MPI_Status_f2f08
+.. seealso:: :ref:`MPI_Status_c2f` :ref:`MPI_Status_f2c` :ref:`MPI_Status_f082f` :ref:`MPI_Status_f2f08` 

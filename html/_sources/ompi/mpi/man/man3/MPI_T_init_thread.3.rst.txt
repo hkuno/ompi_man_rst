@@ -1,16 +1,16 @@
 .. _mpi_t_init_thread:
 
 MPI_T_init_thread
-~~~~~~~~~~~~~~~~~
-====
+=================
+.. include_body
 
 :ref:`MPI_T_init_thread` - Initializes the MPI Tool information interface
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -18,17 +18,17 @@ C Syntax
    int MPI_T_init_thread(int required, int *provided)
 
 INPUT PARAMETERS
-================
+----------------
 
 -  required: Desired level of thread support (integer).
 
 OUTPUT PARAMETERS
-=================
+-----------------
 
 -  provided: Available level of thread support (integer).
 
 DESCRIPTION
-===========
+-----------
 
 MPI_T_init_thread() initializes the MPI tool information interface.
 Calls to MPI tool functions are allowed at any point in execution
@@ -57,13 +57,13 @@ configured and built. Note that there is no guarantee that ``provided``
 will be greater than or equal to ``required``.
 
 NOTES
-=====
+-----
 
 It is the caller's responsibility to check the value of ``provided``, as
 it may be less than what was requested in ``required``.
 
 ERRORS
-======
+------
 
 MPI_T_init_thread() will fail if:
 

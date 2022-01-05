@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_PVAR_SESSION_FREE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_T_PVAR_SESSION_FREE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_T_PVAR_SESSION_CREATE
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_T_pvar_session_create\fP, MPI_T_pvar_session_free \- Create/free
+MPI_T_pvar_session_create, \fI\%MPI_T_pvar_session_free\fP \- Create/free
 performance variable session
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -47,15 +50,15 @@ int MPI_T_pvar_session_free(MPI_T_pvar_session *session)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_T_pvar_session_create\fP creates a session for accessing performance
+MPI_T_pvar_session_create creates a session for accessing performance
 variables. The new session is returned in the \fIsession\fP parameter.
 .sp
-MPI_T_pvar_session_free releases a session allocated by
-\fI\%MPI_T_pvar_session_create\fP and sets the \fIsession\fP parameter to
+\fI\%MPI_T_pvar_session_free\fP releases a session allocated by
+MPI_T_pvar_session_create and sets the \fIsession\fP parameter to
 MPI_T_PVAR_SESSION_NULL.
-.SS ERRORS
+.SH ERRORS
 .sp
 MPI_T_pvar_session_create() will fail if:
 .INDENT 0.0

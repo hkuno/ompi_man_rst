@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_GET_TRUE_EXTENT_X" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_TYPE_GET_TRUE_EXTENT_X" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,12 +28,15 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_TYPE_GET_TRUE_EXTENT
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_Type_get_true_extent\fP, MPI_Type_get_true_extent_x \- Returns
+MPI_Type_get_true_extent, \fI\%MPI_Type_get_true_extent_x\fP \- Returns
 the true lower bound and extent of a data type\(aqs corresponding typemap,
 ignoring MPI_UB and MPI_LB markers.
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -86,12 +89,16 @@ MPI_Type_get_true_extent_x(datatype, true_lb, true_extent, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETER
+.sp
+INPUT PARAMETER
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBdatatype\fP: Data type for which information is wanted (handle).
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBtrue_lb\fP: True lower bound of data type (integer).
@@ -100,7 +107,7 @@ MPI_Type_get_true_extent_x(datatype, true_lb, true_extent, ierror)
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The \fItrue_lb\fP parameter returns the offset of the lowest unit of store
 that is addressed by the data type, that is, the lower bound of the
@@ -117,13 +124,15 @@ hold a data type, uncompressed.
 .sp
 See § 4.1.8 of the MPI\-3 standard for more detailed definitions of these
 parameters in relation to the typemap.
-.SS FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fITRUE_LB\fP
 and \fITRUE_EXTENT\fP arguments only for Fortran 90. FORTRAN 77 users may
 use the non\-portable syntax
 .sp
-\fI\%MPI_Type_get_true_extent\fP:
+MPI_Type_get_true_extent:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -137,7 +146,7 @@ or
 .UNINDENT
 .UNINDENT
 .sp
-MPI_Type_get_true_extent_x:
+\fI\%MPI_Type_get_true_extent_x\fP:
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -153,7 +162,7 @@ or
 .sp
 where MPI_ADDRESS_KIND and MPI_COUNT_KIND are constants defined in
 mpif.h and give the length of the declared integer in bytes.
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

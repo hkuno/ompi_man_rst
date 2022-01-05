@@ -1,15 +1,16 @@
 .. _mpi_comm_set_name:
 
 MPI_Comm_set_name
-~~~~~~~~~~~~~~~~~
+=================
+.. include_body
 
 :ref:`MPI_Comm_set_name` - Associates a name with a communicator.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -18,7 +19,7 @@ C Syntax
    int MPI_Comm_set_name(MPI_Comm comm, const char *comm_name)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	CHARACTER*(*) COMM_NAME
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,22 +43,22 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``comm``: Communicator whose identifier is to be set (handle). 
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``comm_name``: Character string to be used as the identifier for the communicator (string). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Comm_set_name` allows a user to associate a name string with a
 communicator. The character string that is passed to :ref:`MPI_Comm_set_name`
@@ -77,7 +78,7 @@ result in truncation of the name. MPI_MAX_OBJECT_NAME must have a value
 of at least 64.
 
 NOTES
-=====
+-----
 
 Since :ref:`MPI_Comm_set_name` is provided to help debug code, it is sensible
 to give the same name to a communicator in all of the processes where it
@@ -90,7 +91,7 @@ name length, not a guarantee that setting names of less than this length
 will always succeed.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

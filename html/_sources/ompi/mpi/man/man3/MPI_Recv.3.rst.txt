@@ -1,15 +1,16 @@
 .. _mpi_recv:
 
 MPI_Recv
-~~~~~~~~
+========
+.. include_body
 
 :ref:`MPI_Recv` - Performs a standard-mode blocking receive.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	int source, int tag, MPI_Comm comm, MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -47,7 +48,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Maximum number of elements to receive (integer). 
 
@@ -60,7 +61,7 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``buf``: Initial address of receive buffer (choice). 
 
@@ -69,7 +70,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This basic receive operation, :ref:`MPI_Recv`, is blocking: it returns only
 after the receive buffer contains the newly received message. A receive
@@ -93,7 +94,7 @@ arrives, then only those locations corresponding to the (shorter)
 received message are modified.
 
 NOTES
-=====
+-----
 
 The *count* argument indicates the maximum number of entries of type
 *datatype* that can be received in a message. Once a message is
@@ -142,7 +143,7 @@ save resources by using the predefined constant MPI_STATUS_IGNORE as a
 special value for the *status* argument.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_GET_ELEMENTS" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_GET_ELEMENTS" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,15 +28,8 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-
 .sp
-.ce
-----
-
-.ce 0
-.sp
-.sp
-MPI_Get_elements, MPI_Get_elements_x \- Returns the number of
+\fI\%MPI_Get_elements\fP, MPI_Get_elements_x \- Returns the number of
 basic elements in a data type.
 .SH SYNTAX
 .SS C Syntax
@@ -113,12 +106,12 @@ MPI_Get_elements_x(status, datatype, count, ierror)
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Get_elements and MPI_Get_elements_x behave different from
+\fI\%MPI_Get_elements\fP and MPI_Get_elements_x behave different from
 MPI_Get_count, which returns the number of "top\-level entries"
 received, i.e., the number of "copies" of type \fBdatatype\fP\&.
 MPI_Get_count may return any integer value k, where 0 =< k =< count.
 If MPI_Get_count returns k, then the number of basic elements
-received (and the value returned by MPI_Get_elements and
+received (and the value returned by \fI\%MPI_Get_elements\fP and
 MPI_Get_elements_x) is n k, where n is the number of basic elements
 in the type map of \fBdatatype\fP\&. If the number of basic elements
 received is not a multiple of n, that is, if the receive operation has

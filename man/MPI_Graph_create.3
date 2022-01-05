@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_GRAPH_CREATE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_GRAPH_CREATE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,13 +28,6 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-
-.sp
-.ce
-----
-
-.ce 0
-.sp
 .sp
 \fI\%MPI_Graph_create\fP \- Makes a new communicator to which topology
 information has been attached.
@@ -138,41 +131,15 @@ are illustrated with the following simple example.
 .sp
 Example: Assume there are four processes 0, 1, 2, 3 with the following
 adjacency matrix:
-.TS
-center;
-|l|l|.
-_
-T{
-Process
-T}	T{
-Neighbors
-T}
-_
-T{
-0
-T}	T{
-1, 3
-T}
-_
-T{
-1
-T}	T{
-0
-T}
-_
-T{
-2
-T}	T{
-3
-T}
-_
-T{
-3
-T}	T{
-0, 2
-T}
-_
-.TE
+.sp
+\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+Process Neighbors
+\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+0       1, 3
+1       0
+2       3
+3       0, 2
+\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .sp
 Then, the input arguments are:
 .INDENT 0.0

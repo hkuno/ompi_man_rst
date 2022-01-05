@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_DETACH" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_WIN_DETACH" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_WIN_ATTACH
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_Win_attach\fP, MPI_Win_detach \- One\-sided MPI call that attaches /
+MPI_Win_attach, \fI\%MPI_Win_detach\fP \- One\-sided MPI call that attaches /
 detaches a memory region to / from a window object for RMA operations.
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -88,7 +91,9 @@ MPI_Win_detach(win, base, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBwin\fP: A window that was created with \fIMPI_Win_create_dynamic\fP
@@ -97,35 +102,37 @@ MPI_Win_detach(win, base, ierror)
 .IP \(bu 2
 \fBsize\fP: Size of window in bytes (nonnegative integer).
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBwin\fP: Window object returned by the call (handle).
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_Win_attach\fP is a one\-sided MPI communication call used to attach a
+MPI_Win_attach is a one\-sided MPI communication call used to attach a
 memory region of \fIsize\fP bytes starting at address \fIbase\fP to a window for
 RMA access. The window \fIwin\fP must have been created using
 MPI_Win_create_dynamic\&. Multiple non\-overlapping memory regions may be
 attached to the same dynamic window. Attaching overlapping memory
 regions to the same dynamic window is erroneous.
 .sp
-If the \fIbase\fP value used by \fI\%MPI_Win_attach\fP was allocated by
+If the \fIbase\fP value used by MPI_Win_attach was allocated by
 MPI_Alloc_mem, the size of the window can be no larger than the value
 set by the MPI_ALLOC_MEM function.
 .sp
-MPI_Win_detach can be used to detach a previously attached memory region
+\fI\%MPI_Win_detach\fP can be used to detach a previously attached memory region
 from \fIwin\fP\&. The memory address \fIbase\fP and \fIwin\fP must match arguments
-passed to a previous call to \fI\%MPI_Win_attach\fP\&.
-.SS NOTES
+passed to a previous call to MPI_Win_attach\&.
+.SH NOTES
 .sp
 Use memory allocated by MPI_Alloc_mem to guarantee properly aligned
 window boundaries (such as word, double\-word, cache line, page frame,
 and so on).
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

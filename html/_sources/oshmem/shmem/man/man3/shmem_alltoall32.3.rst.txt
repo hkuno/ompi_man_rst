@@ -1,7 +1,8 @@
 .. _shmem_alltoall32:
 
 shmem_alltoall32
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 *shmem_alltoall32*\ (3), *shmem_alltoall64*\ (3),
 *shmem_alltoalls32*\ (3), *shmem_alltoalls64*\ (3) - collective routine
@@ -9,7 +10,7 @@ where each PE exchanges a fixed amount of data with all other PEs in the
 Active set
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -59,7 +60,7 @@ Fortran:
    & PE_start, logPE_stride, PE_size, pSync)
 
 DESCRIPTION
-===========
+-----------
 
 The shmem_alltoalls routines are collective routines. Each PE in the
 Active set exchanges nelems strided data elements of size 32 bits (for
@@ -160,7 +161,7 @@ routine. The target array on all PEs in the active set is ready to
 accept the alltoall data.
 
 NOTES
-=====
+-----
 
 The terms collective and symmetric are defined in *intro_shmem*\ (3).
 
@@ -183,7 +184,7 @@ called with the same active set, you can allocate two pSync arrays and
 alternate between them on successive calls.
 
 EXAMPLES
-========
+--------
 
 C/C++ example:
 

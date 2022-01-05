@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_ALLTOALL64" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_ALLTOALL64" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,13 +28,16 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_ALLTOALL32
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_alltoall32\fP(3), \fIshmem_alltoall64\fP(3),
 \fIshmem_alltoalls32\fP(3), \fIshmem_alltoalls64\fP(3) \- collective routine
 where each PE exchanges a fixed amount of data with all other PEs in the
 Active set
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -92,7 +95,7 @@ CALL SHMEM_ALLTOALLS64(target, source, dst, sst, nelems,
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The shmem_alltoalls routines are collective routines. Each PE in the
 Active set exchanges nelems strided data elements of size 32 bits (for
@@ -199,7 +202,7 @@ method is often needed to ensure this): The pSync array on all PEs in
 the active set is not still in use from a prior call to a alltoall
 routine. The target array on all PEs in the active set is ready to
 accept the alltoall data.
-.SS NOTES
+.SH NOTES
 .sp
 The terms collective and symmetric are defined in \fIintro_shmem\fP(3).
 .sp
@@ -220,7 +223,7 @@ array. In general, this can be ensured only by doing some type of
 synchronization. However, in the special case of SHMEM routines being
 called with the same active set, you can allocate two pSync arrays and
 alternate between them on successive calls.
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 C/C++ example:
 .INDENT 0.0

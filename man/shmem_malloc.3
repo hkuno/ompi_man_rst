@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_MALLOC" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_MALLOC" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -109,7 +109,9 @@ environment variable. See the \fIintro_shmem\fP(3) man page for futher
 details. The shmem_malloc, shmem_free, and shmem_realloc functions
 differ from the private heap allocation functions in that all PEs in an
 application must call them (a barrier is used to ensure this).
-.SH RETURN VALUES
+.sp
+RETURN VALUES
+\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 The \fBshmem_malloc\fP function returns a pointer to the allocated space
 (which should be identical on all PEs); otherwise, it returns a null

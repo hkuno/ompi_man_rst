@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_GATHERV_INIT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_GATHERV_INIT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,18 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_GATHERV
-
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-.ce
-----
-
-.ce 0
-.sp
-.sp
-MPI_Gatherv, MPI_Igatherv, MPI_Gatherv_init \- Gathers
+MPI_Gatherv, MPI_Igatherv, \fI\%MPI_Gatherv_init\fP \- Gathers
 varying amounts of data from all processes to the root process
-.SS Syntax
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -136,7 +132,7 @@ MPI_Gatherv_init(sendbuf, sendcount, sendtype, recvbuf, recvcounts, displs,
 .fi
 .UNINDENT
 .UNINDENT
-.SS Input Parameters
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP : Starting address of send buffer (choice).
@@ -162,7 +158,7 @@ root) (handle).
 .IP \(bu 2
 \fBinfo\fP : Info (handle, persistent only).
 .UNINDENT
-.SS Output Parameters
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP : Address of receive buffer (choice, significant only at
@@ -172,7 +168,7 @@ root).
 .IP \(bu 2
 \fBIERROR\fP : Fortran only: Error status (integer).
 .UNINDENT
-.SS Description
+.SH DESCRIPTION
 .sp
 MPI_Gatherv extends the functionality of MPI_Gather by allowing
 a varying count of data from each process, since \fBrecvcounts\fP is now
@@ -462,7 +458,7 @@ MPI_Gatherv(sptr, num, stype, rbuf, rcounts,
 .fi
 .UNINDENT
 .UNINDENT
-.SS Use Of In\-Place Option
+.SH USE OF IN-PLACE OPTION
 .sp
 The in\-place option operates in the same way as it does for
 MPI_Gather\&.\(ga\(ga When the communicator is an intracommunicator, you can
@@ -479,7 +475,7 @@ restrictions on its use as MPI_BOTTOM.\(ga\(ga
 Because the in\-place option converts the receive buffer into a
 send\-and\-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
-.SS When Communicator Is An Inter\-Communicator
+.SH WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
 .sp
 When the communicator is an inter\-communicator, the \fBroot\fP process in
 the first group gathers data from all the processes in the second group.
@@ -490,7 +486,7 @@ in the second group use the rank of that root process in the first group
 as the value of their \fBroot\fP argument. The send buffer argument of the
 processes in the first group must be consistent with the receive buffer
 argument of the \fBroot\fP process in the second group.
-.SS Errors
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

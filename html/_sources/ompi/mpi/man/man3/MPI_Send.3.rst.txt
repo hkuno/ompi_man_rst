@@ -1,15 +1,16 @@
 .. _mpi_send:
 
 MPI_Send
-~~~~~~~~
+========
+.. include_body
 
 :ref:`MPI_Send` - Performs a standard-mode blocking send.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    	int tag, MPI_Comm comm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,7 +32,7 @@ Fortran Syntax
    	INTEGER	COUNT, DATATYPE, DEST, TAG, COMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -45,7 +46,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``buf``: Initial address of send buffer (choice). 
 
@@ -60,24 +61,24 @@ INPUT PARAMETERS
 * ``comm``: Communicator (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Send` performs a standard-mode, blocking send.
 
 NOTE
-====
+----
 
 This routine will block until the message is sent to the destination.
 For an in-depth explanation of the semantics of the standard-mode send,
 refer to the MPI-1 Standard.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

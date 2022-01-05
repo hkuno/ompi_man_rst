@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_FLUSH_LOCAL_ALL" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_WIN_FLUSH_LOCAL_ALL" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_WIN_FLUSH_LOCAL
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_Win_flush_local\fP, MPI_Win_flush_local_all \- Complete all
+MPI_Win_flush_local, \fI\%MPI_Win_flush_local_all\fP \- Complete all
 outstanding RMA operations at both the origin
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -83,29 +86,33 @@ MPI_Win_flush_local_all(win, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrank\fP: Rank of window (nonnegative integer).
 .IP \(bu 2
 \fBwin\fP: Window object (handle).
 .UNINDENT
-.SS OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_Win_flush_local\fP locally completes at the origin all outstanding
+MPI_Win_flush_local locally completes at the origin all outstanding
 RMA operations initiated by the calling process to the target process
 specified by rank on the specified window. For example, after this
 routine completes, the user may reuse any buffers provided to put, get,
-or accumulate operations. MPI_Win_flush_local_all locally completes
+or accumulate operations. \fI\%MPI_Win_flush_local_all\fP locally completes
 at the origin all outstanding RMA operations to all targets.
 .sp
 Can only be called from within a passive target epoch.
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

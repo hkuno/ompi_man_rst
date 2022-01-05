@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_GET_TRUE_EXTENT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_TYPE_GET_TRUE_EXTENT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Type_get_true_extent, MPI_Type_get_true_extent_x \- Returns
+\fI\%MPI_Type_get_true_extent\fP, MPI_Type_get_true_extent_x \- Returns
 the true lower bound and extent of a data type\(aqs corresponding typemap,
 ignoring MPI_UB and MPI_LB markers.
 .SH SYNTAX
@@ -85,12 +85,16 @@ MPI_Type_get_true_extent_x(datatype, true_lb, true_extent, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETER
+.sp
+INPUT PARAMETER
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBdatatype\fP: Data type for which information is wanted (handle).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBtrue_lb\fP: True lower bound of data type (integer).
@@ -116,13 +120,15 @@ hold a data type, uncompressed.
 .sp
 See § 4.1.8 of the MPI\-3 standard for more detailed definitions of these
 parameters in relation to the typemap.
-.SH FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fITRUE_LB\fP
 and \fITRUE_EXTENT\fP arguments only for Fortran 90. FORTRAN 77 users may
 use the non\-portable syntax
 .sp
-MPI_Type_get_true_extent:
+\fI\%MPI_Type_get_true_extent\fP:
 .INDENT 0.0
 .INDENT 3.5
 .sp

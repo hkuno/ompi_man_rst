@@ -1,16 +1,17 @@
 .. _mpi_scatterv:
 
 MPI_Scatterv
-~~~~~~~~~~~~
+============
+.. include_body
 
-:ref:`MPI_Scatterv`, MPI_Iscatterv, MPI_Scatterv_init - Scatters a buffer
+:ref:`MPI_Scatterv`, :ref:`MPI_Iscatterv`, :ref:`MPI_Scatterv_init` - Scatters a buffer
 in parts to all tasks in a group.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -29,7 +30,7 @@ C Syntax
    	MPI_Datatype recvtype, int root, MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -55,7 +56,7 @@ Fortran Syntax
    	INTEGER	RECVCOUNT, RECVTYPE, ROOT, COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -94,7 +95,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``sendbuf``: Address of send buffer (choice, significant only at root). 
 
@@ -115,7 +116,7 @@ INPUT PARAMETERS
 * ``info``: Info (handle, persistent only). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``recvbuf``: Address of receive buffer (choice). 
 
@@ -124,7 +125,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Scatterv` is the inverse operation to :ref:`MPI_Gatherv`.
 
@@ -226,7 +227,7 @@ sets of 100 are stride ints apart in the sending buffer. Requires use of
                         rbuf, 100, MPI_INT, root, comm);
 
 USE OF IN-PLACE OPTION
-======================
+--- -- -------- ------
 
 When the communicator is an intracommunicator, you can perform a scatter
 operation in-place (the output buffer is used as the input buffer). Use
@@ -242,7 +243,7 @@ send-and-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
 
 WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
-==========================================
+---- ------------ -- -- ------------------
 
 When the communicator is an inter-communicator, the root process in the
 first group sends data to all processes in the second group. The first
@@ -255,7 +256,7 @@ first group must be consistent with the receive buffer argument of the
 processes in the second group.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

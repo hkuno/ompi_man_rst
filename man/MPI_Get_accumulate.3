@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_GET_ACCUMULATE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_GET_ACCUMULATE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,15 +28,8 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-
 .sp
-.ce
-----
-
-.ce 0
-.sp
-.sp
-MPI_Get_accumulate, MPI_Rget_accumulate \- Combines the contents
+\fI\%MPI_Get_accumulate\fP, MPI_Rget_accumulate \- Combines the contents
 of the origin buffer with that of a target buffer and returns the target
 buffer value.
 .SH SYNTAX
@@ -169,13 +162,13 @@ MPI_Rget_accumulate: RMA request
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Get_accumulate is a function used for one\-sided MPI
+\fI\%MPI_Get_accumulate\fP is a function used for one\-sided MPI
 communication that adds the contents of the origin buffer (as defined by
 \fBorigin_addr\fP, \fBorigin_count\fP, and \fBorigin_datatype\fP) to the
 buffer specified by the arguments \fBtarget_count\fP and
 \fBtarget_datatype\fP, at offset \fBtarget_disp\fP, in the target window
 specified by \fBtarget_rank\fP and \fBwin\fP, using the operation \fBop\fP\&.
-MPI_Get_accumulate returns in the result buffer \fBresult_addr\fP the
+\fI\%MPI_Get_accumulate\fP returns in the result buffer \fBresult_addr\fP the
 contents of the target buffer before the accumulation.
 .sp
 Any of the predefined operations for MPI_Reduce, as well as
@@ -200,7 +193,7 @@ the assiciative function f(a, b) = a; that is the current value in the
 target memory is returned in the result buffer at the origin and no
 operation is performed on the target buffer.
 .sp
-MPI_Rget_accumulate is similar to MPI_Get_accumulate, except
+MPI_Rget_accumulate is similar to \fI\%MPI_Get_accumulate\fP, except
 that it allocates a communication request object and associates it with
 the request handle (the argument request) that can be used to wait or
 test for completion. The completion of an MPI_Rget_accumulate
@@ -227,20 +220,20 @@ where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 .SH NOTES
 .sp
-The generic functionality of MPI_Get_accumulate might limit the
+The generic functionality of \fI\%MPI_Get_accumulate\fP might limit the
 performance of fetch\-and\-increment or fetch\-and\-add calls that might be
 supported by special hardware operations. MPI_Fetch_and_op thus
 allows for a fast implementation of a commonly used subset of the
-functionality of MPI_Get_accumulate\&.
+functionality of \fI\%MPI_Get_accumulate\fP\&.
 .sp
-MPI_Get is a special case of MPI_Get_accumulate, with the
+MPI_Get is a special case of \fI\%MPI_Get_accumulate\fP, with the
 operation MPI_NO_OP. Note, however, that MPI_Get and
-MPI_Get_accumulate have different constraints on concurrent updates.
+\fI\%MPI_Get_accumulate\fP have different constraints on concurrent updates.
 .sp
 It is the user\(aqs responsibility to guarantee that, when using the
 accumulate functions, the target displacement argument is such that
 accesses to the window are properly aligned according to the data type
-arguments in the call to the MPI_Get_accumulate function.
+arguments in the call to the \fI\%MPI_Get_accumulate\fP function.
 .SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value

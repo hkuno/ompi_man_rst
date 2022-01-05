@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_PTR" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_PTR" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -160,7 +160,9 @@ main()
 The shmem_ptr function is available only on systems where ordinary
 memory loads and stores are used to implement SHMEM put and get
 operations.
-.SH RETURN VALUES
+.sp
+RETURN VALUES
+\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 shmem_ptr returns a pointer to the data object on the specified remote
 PE. If target is not remotely accessible, a NULL pointer is returned.

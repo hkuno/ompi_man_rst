@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_FCOLLECT64" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_FCOLLECT64" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,14 +28,17 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_COLLECT32
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_collect4\fP(3), \fIshmem_collect8\fP(3), \fIshmem_collect32\fP(3),
 \fIshmem_collect64\fP(3), \fIshmem_fcollect\fP(3), \fIshmem_fcollect4\fP(3),
 \fIshmem_fcollect8\fP(3), \fIshmem_fcollect32\fP(3), \fIshmem_fcollect64\fP(3)
 \- Concatenates blocks of data from multiple processing elements (PEs) to
 an array in every PE
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -92,7 +95,7 @@ CALL SHMEM_FCOLLECT8(target, source, nelems, PE_start,
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The shared memory (SHMEM) collect and fcollect routines concatenate
 nelems 64\-bit or 32\-bit data items from the source array into the target
@@ -194,7 +197,7 @@ set.
 Upon return from a collective routine, the following are true for the
 local PE: The target array is updated. The values in the pSync array are
 restored to the original values.
-.SS NOTES
+.SH NOTES
 .sp
 The terms collective and symmetric are defined in \fIintro_shmem\fP(3).
 All SHMEM collective routines reset the values in pSync before they
@@ -218,7 +221,7 @@ them on successive calls.
 The collective routines operate on active PE sets that have a
 non\-power\-of\-two PE_size with some performance degradation. They operate
 with no performance degradation when nelems is a non\-power\-of\-two value.
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 C/C++:
 .INDENT 0.0

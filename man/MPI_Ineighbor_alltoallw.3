@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_INEIGHBOR_ALLTOALLW" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_INEIGHBOR_ALLTOALLW" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,12 +28,15 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_NEIGHBOR_ALLTOALLW
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-MPI_Neighbor_alltoallw, MPI_Ineighbor_alltoallw,
+MPI_Neighbor_alltoallw, \fI\%MPI_Ineighbor_alltoallw\fP,
 MPI_Neighbor_alltoallw_init \- All processes send data of different
 types to, and receive data of different types from, all processes
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -147,7 +150,9 @@ MPI_Neighbor_alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer.
@@ -168,7 +173,9 @@ MPI_Neighbor_alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only).
 .UNINDENT
-.SS OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer.
@@ -177,7 +184,7 @@ MPI_Neighbor_alltoallw_init(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status.
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 MPI_Neighbor_alltoallw is a generalized collective operation in which
 all processes send data to and receive data from all neighbors. It adds
@@ -233,7 +240,7 @@ Note that process i may send a different amount of data to process j
 than it receives from process j. Also, a process may send entirely
 different amounts and types of data to different processes in the
 communicator.
-.SS NOTES
+.SH NOTES
 .sp
 The MPI_IN_PLACE option for \fIsendbuf\fP is not meaningful for this
 operation
@@ -247,7 +254,7 @@ particular, must describe the same communicator on all processes.
 The offsets of \fIsdispls\fP and \fIrdispls\fP are measured in bytes. Compare
 this to MPI_Neighbor_alltoallv, where these offsets are measured in
 units of \fIsendtype\fP and \fIrecvtype\fP, respectively.
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

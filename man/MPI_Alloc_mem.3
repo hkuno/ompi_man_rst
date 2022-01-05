@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ALLOC_MEM" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_ALLOC_MEM" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -75,14 +75,18 @@ MPI_Alloc_mem(size, info, baseptr, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsize\fP: Size of memory segment in bytes (nonnegative integer).
 .IP \(bu 2
 \fBinfo\fP: Info argument (handle).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBbaseptr\fP: Pointer to beginning of memory segment allocated.
@@ -93,12 +97,16 @@ MPI_Alloc_mem(size, info, baseptr, ierror)
 .sp
 \fI\%MPI_Alloc_mem\fP allocates \fIsize\fP bytes of memory. The starting address of
 this memory is returned in the variable \fIbaseptr\fP\&.
-.SH C NOTES
+.sp
+C NOTES
+\- \-\-\-\-\-
 .sp
 The parameter \fIbaseptr\fP is of type \fIvoid *\fP to allow passing any
 pointer object for this parameter. The provided argument should be a
 pointer to a pointer of arbitrary type (e.g., \fIvoid **\fP).
-.SH FORTRAN NOTES
+.sp
+FORTRAN NOTES
+\-\-\-\-\-\-\- \-\-\-\-\-
 .sp
 There is no portable FORTRAN 77 syntax for using \fI\%MPI_Alloc_mem\fP\&. There is
 no portable Fortran syntax for using pointers returned from

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONG_FINC" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_LONG_FINC" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,12 +28,15 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_INT_FINC
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_int4_finc\fP(3), \fIshmem_int8_finc\fP(3), \fIshmem_int_finc\fP(3),
 \fIshmem_long_finc\fP(3), \fIshmem_longlong_finc\fP(3) \- Performs an atomic
 fetch\-and\-increment operation on a remote data object
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -72,7 +75,7 @@ ires8 = SHMEM_INT8_FINC(target8, pe)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The fetch and increment routines retrieve the value at address
 \fBtarget\fP on PE \fBpe\fP, and update \fBtarget\fP with the result of
@@ -93,10 +96,12 @@ An integer that indicates the PE number upon which target is to be
 updated. If you are using Fortran, it must be a default integer
 value.
 .UNINDENT
-.SS NOTES
+.SH NOTES
 .sp
 The term remotely accessible is defined in \fIintro_shmem\fP(3).
-.SS RETURN VALUES
+.sp
+RETURN VALUES
+\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 The contents that had been at the target address on the remote PE prior
 to the increment.

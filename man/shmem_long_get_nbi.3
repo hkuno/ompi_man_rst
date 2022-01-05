@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONG_GET_NBI" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_LONG_GET_NBI" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,7 +28,10 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_GETMEM_NBI
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_getmem_nbi\fP(3), \fIshmem_char_get_nbi\fP(3),
 \fIshmem_short_get_nbi\fP(3), \fIshmem_int_get_nbi\fP(3),
@@ -39,7 +42,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fIshmem_get128_nbi\fP(3), \- The nonblocking get routines provide a method
 for copying data from a contiguous remote data object on the specified
 PE to the local data object.
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -132,7 +135,7 @@ CALL SHMEM_GET128_NBI(dest, source, nelems, pe)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The get routines provide a method for copying a contiguous symmetric
 data object from a different PE to a contiguous data object on the local
@@ -165,10 +168,10 @@ default integer type.
 If you are using Fortran, data types must be of default size. For
 example, a real variable must be declared as REAL, REAL*4, or
 REAL(KIND=4).
-.SS NOTES
+.SH NOTES
 .sp
 See \fIintro_shmem\fP(3) for a definition of the term remotely accessible.
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 Consider this simple example for Fortran.
 .INDENT 0.0

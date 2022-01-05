@@ -1,14 +1,15 @@
 .. _shmem_malloc:
 
 shmem_malloc
-~~~~~~~~~~~~
+============
+.. include_body
 
 *shmem_malloc*\ (3), *shmem_free*\ (3), *shmem_align*\ (3),
 *shmem_realloc*\ (3) *shmalloc*\ (3), *shfree*\ (3), *shmemalign*\ (3),
 *shrealloc*\ (3) - Symmetric heap memory management functions.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -32,7 +33,7 @@ C or C++:
    extern long malloc_error;
 
 DESCRIPTION
-===========
+-----------
 
 The **shmem_malloc** function returns a pointer to a block of at least
 size bytes suitably aligned for any use. This space is allocated from
@@ -76,7 +77,7 @@ argument(s) on all PEs; if differing size arguments are used, subsequent
 calls may not return the same symmetric heap address on all PEs.
 
 NOTES
-=====
+-----
 
 The total size of the symmetric heap is determined at job startup. One
 can adjust the size of the heap using the SHMEM_SYMMETRIC_HEAP_SIZE
@@ -86,7 +87,7 @@ differ from the private heap allocation functions in that all PEs in an
 application must call them (a barrier is used to ensure this).
 
 RETURN VALUES
-=============
+------ ------
 
 The **shmem_malloc** function returns a pointer to the allocated space
 (which should be identical on all PEs); otherwise, it returns a null

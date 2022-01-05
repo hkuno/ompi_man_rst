@@ -1,16 +1,16 @@
 .. _mpi_cart_map:
 
 MPI_Cart_map
-~~~~~~~~~~~~
-====
+============
+.. include_body
 
 :ref:`MPI_Cart_map` - Maps process to Cartesian topology information.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
        const int periods[], int *newrank)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -32,7 +32,7 @@ Fortran Syntax
        LOGICAL PERIODS(*)
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -46,7 +46,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm`` : Input communicator (handle).
 -  ``ndims`` : Number of dimensions of Cartesian structure (integer).
@@ -56,7 +56,7 @@ Input Parameters
    specification in each coordinate direction.
 
 Output Parameters
-=================
+-----------------
 
 -  ``newrank`` : Reordered rank of the calling process;
    MPI_UNDEFINED if calling process does not belong to grid
@@ -64,7 +64,7 @@ Output Parameters
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Cart_map` and :ref:`MPI_Graph_map` can be used to implement all
 other topology functions. In general they will not be called by the user
@@ -75,7 +75,7 @@ possible implementation of this function is to always return the rank of
 the calling process, that is, not to perform any reordering.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

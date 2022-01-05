@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_DOUBLE_FETCH" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_DOUBLE_FETCH" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,14 +28,17 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_INT_FETCH
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_int4_fetch\fP(3), \fIshmem_int8_fetch\fP(3),
 \fIshmem_int_fetch\fP(3), \fIshmem_long_fetch\fP(3),
 \fIshmem_longlong_fetch\fP(3) \fIshmem_double_fetch\fP(3)
 \fIshmem_float_fetch\fP(3) \- Atomically fetches the value of a remote data
 object
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -85,7 +88,7 @@ ires = SHMEM_REAL8_FETCH(target, pe)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The shmem_fetch functions perform an atomic fetch operation. They return
 the contents of the \fBtarget\fP as an atomic operation.
@@ -101,7 +104,9 @@ An integer that indicates the PE number from which \fItarget\fP is to be
 fetched. If you are using Fortran, it must be a default integer
 value.
 .UNINDENT
-.SS RETURN VALUES
+.sp
+RETURN VALUES
+\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 The contents at the \fItarget\fP address on the remote PE. The data type of
 the return value is the same as the the type of the remote data object.

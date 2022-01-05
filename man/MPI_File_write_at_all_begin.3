@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_WRITE_AT_ALL_BEGIN" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_FILE_WRITE_AT_ALL_BEGIN" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -79,12 +79,16 @@ MPI_File_write_at_all_begin(fh, offset, buf, count, datatype, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT/OUTPUT PARAMETER
+.sp
+INPUT/OUTPUT PARAMETER
+\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBfh\fP: File handle (handle).
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBoffset\fP: File offset (handle).
@@ -95,7 +99,9 @@ MPI_File_write_at_all_begin(fh, offset, buf, count, datatype, ierror)
 .IP \(bu 2
 \fBdatatype\fP: Data type of each buffer element (handle).
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -109,7 +115,9 @@ associated with \fIfh\fP (at the \fIoffset\fP position) a total number of
 The offset is in etype units relative to the current view. That is,
 holes are not counted when locating an offset. The data is written into
 those parts of the file specified by the current view.
-.SH FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fIOFFSET\fP
 argument only for Fortran 90. FORTRAN 77 users may use the non\-portable

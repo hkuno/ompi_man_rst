@@ -1,16 +1,16 @@
 .. _mpi_comm_create_group:
 
 MPI_Comm_create_group
-~~~~~~~~~~~~~~~~~~~~~
-====
+=====================
+.. include_body
 
 :ref:`MPI_Comm_create_group` - Creates a new communicator.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
    int MPI_Comm_create_group(MPI_Comm comm, MPI_Group group, int tag, MPI_Comm *newcomm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -30,7 +30,7 @@ Fortran Syntax
        INTEGER COMM, GROUP, TAG, NEWCOMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -44,20 +44,20 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``comm`` : Communicator (handle).
 -  ``group`` : Group, which is a subset of the group of comm (handle).
 -  ``tag`` : Tag (integer).
 
 Output Parameters
-=================
+-----------------
 
 -  ``newcomm`` : New communicator (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Comm_create_group` is similar to :ref:`MPI_Comm_create`; however,
 :ref:`MPI_Comm_create` must be called by all processes in the ``group`` of
@@ -81,7 +81,7 @@ call is a local operation and MPI_COMM_NULL is returned as
 ``newcomm``.
 
 Notes
-=====
+-----
 
 :ref:`MPI_Comm_create_group` provides a means of making a subset of
 processes for the purpose of separate MIMD computation, with separate
@@ -92,7 +92,7 @@ further subdivide a computation into parallel sub-computations. A more
 general service is provided by :ref:`MPI_Comm_split`.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

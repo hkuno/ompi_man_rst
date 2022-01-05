@@ -1,17 +1,17 @@
 .. _mpi_file_write_ordered:
 
 MPI_File_write_ordered
-~~~~~~~~~~~~~~~~~~~~~~
-====
+======================
+.. include_body
 
 :ref:`MPI_File_write_ordered` - Writes a file at a location specified by a
 shared file pointer (blocking, collective).
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -22,7 +22,7 @@ C Syntax
        MPI_Status *status)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -35,7 +35,7 @@ Fortran Syntax
        INTEGER FH, COUNT, DATATYPE, STATUS(MPI_STATUS_SIZE), IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -50,7 +50,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``fh`` : File handle (handle).
 -  ``buf`` : Initial address of buffer (choice).
@@ -58,13 +58,13 @@ Input Parameters
 -  ``datatype`` : Data type of each buffer element (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``status`` : Status object (Status).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_File_write_ordered` is a collective routine. This routine must be
 called by all processes in the communicator group associated with the
@@ -81,7 +81,7 @@ pointer is updated by the amounts of data requested by all processes of
 the group.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

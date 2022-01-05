@@ -1,17 +1,17 @@
 .. _mpi_comm_disconnect:
 
 MPI_Comm_disconnect
-~~~~~~~~~~~~~~~~~~~
-====
+===================
+.. include_body
 
 :ref:`MPI_Comm_disconnect` - Deallocates communicator object and sets
 handle to MPI_COMM_NULL.``
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Comm_disconnect(MPI_Comm *comm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER COMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -42,17 +42,17 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input/Output Parameter
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 -  ``comm`` : Communicator (handle).
 
 Output Parameter
-================
+----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Comm_disconnect` waits for all pending communication on ``comm``
 to complete internally, deallocates the communicator object, and sets
@@ -67,7 +67,7 @@ finish internally and enables the guarantee about the behavior of
 disconnected processes.
 
 Notes
-=====
+-----
 
 To disconnect two processes you may need to call
 :ref:`MPI_Comm_disconnect`,`` :ref:`MPI_Win_free`, and :ref:`MPI_File_close` to
@@ -76,7 +76,7 @@ may be necessary to disconnect several communicators (or to free several
 windows or files) before two processes are completely independent.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the

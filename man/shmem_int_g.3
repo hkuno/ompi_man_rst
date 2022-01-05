@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INT_G" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_INT_G" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,14 +28,17 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_CHAR_G
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_char_g\fP(3), \fIshmem_float_g\fP(3), \fIshmem_int_g\fP(3),
 \fIshmem_long_g\fP(3), \fIshmem_short_g\fP(3), \fIshmem_longlong_g\fP(3),
 \fIshmem_longdouble_g\fP(3) \- These routines provide a low latency
 mechanism to read basic types (char, short, int, float, double, long,
 long long, long double) from symmetric data objects on remote PEs.
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -65,7 +68,7 @@ long shmem_longdouble_g(const long double *addr, int pe);
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 These routines provide a very low latency get capability for single
 elements of most basic types.

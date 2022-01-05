@@ -1,16 +1,16 @@
 .. _mpi_bsend:
 
 MPI_Bsend
-~~~~~~~~~
-====
+=========
+.. include_body
 
 :ref:`MPI_Bsend` - Basic send with user-specified buffering.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -19,7 +19,7 @@ C Syntax
       int dest, int tag, MPI_Comm comm)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER COUNT, DATATYPE, DEST, TAG, COMM, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -44,7 +44,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``buf`` : Initial address of send buffer (choice).
 -  ``count`` : Number of entries in send buffer (nonnegative integer).
@@ -54,17 +54,17 @@ Input Parameters
 -  ``comm`` : Communicator (handle).
 
 Output Parameters
-=================
+-----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Bsend` performs a buffered-mode, blocking send.
 
 Notes
-=====
+-----
 
 This send is provided as a convenience function; it allows the user to
 send messages without worrying about where they are buffered (because
@@ -93,7 +93,7 @@ In C, you can force the messages to be delivered by
 delivered.)
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value;
 C routines as the value of the function and Fortran routines in the last

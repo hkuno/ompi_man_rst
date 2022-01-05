@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_ADDR_ACCESSIBLE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_ADDR_ACCESSIBLE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -71,7 +71,9 @@ address is accessible via SHMEM operations from the specified remote PE.
 This function verifies that the remote PE is accessible via SHMEM data
 transfer functions from the local PE, and that the specified address is
 in a symmetric data segment with respect to the remote PE.
-.SH RETURN VALUES
+.sp
+RETURN VALUES
+\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 C: The return value is 1 if addr is a symmetric data object and
 accessible via SHMEM operations from the specified remote PE; otherwise,

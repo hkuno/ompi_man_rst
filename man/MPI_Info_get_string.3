@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_INFO_GET_STRING" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_INFO_GET_STRING" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -78,14 +78,18 @@ MPI_Info_get_string(info, key, buflen, value, flag, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBinfo\fP: Info object (handle).
 .IP \(bu 2
 \fBkey\fP: Key (string).
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBbuflen On entry, length of value arg. On return, set to required size to\fP: hold value string (integer).

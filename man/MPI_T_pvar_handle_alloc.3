@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_PVAR_HANDLE_ALLOC" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_T_PVAR_HANDLE_ALLOC" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_T_pvar_handle_alloc, MPI_T_pvar_handle_free \- Allocate/free
+\fI\%MPI_T_pvar_handle_alloc\fP, MPI_T_pvar_handle_free \- Allocate/free
 MPI performance variable handles
 .SH SYNTAX
 .SS C Syntax
@@ -49,7 +49,7 @@ int MPI_T_pvar_handle_free(int session, MPI_T_pvar_handle *handle)
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_T_pvar_handle_alloc binds the performance variable specified in
+\fI\%MPI_T_pvar_handle_alloc\fP binds the performance variable specified in
 \fIpvar_index\fP to the MPI object specified in \fIobj_handle\fP in the session
 identified by the parameter \fIsession\fP\&. The object is passed in the
 argument \fIobj_handle\fP as an address to a local variable that stores the
@@ -67,7 +67,7 @@ MPI object it references must be consistent with the type returned in
 the bind argument in a prior call to MPI_T_PVAR_GET_INFO\&.
 .sp
 MPI_T_pvar_handle_free frees a handle allocated by
-MPI_T_pvar_handle_alloc and sets the \fIhandle\fP argument to
+\fI\%MPI_T_pvar_handle_alloc\fP and sets the \fIhandle\fP argument to
 MPI_T_PVAR_HANDLE_NULL.
 .SH ERRORS
 .sp

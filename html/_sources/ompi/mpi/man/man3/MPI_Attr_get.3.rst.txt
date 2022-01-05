@@ -1,16 +1,17 @@
 .. _mpi_attr_get:
 
 MPI_Attr_get
-~~~~~~~~~~~~
+============
+.. include_body
 
 :ref:`MPI_Attr_get` - Retrieves attribute value by key -- use of this
 routine is deprecated.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -20,7 +21,7 @@ C Syntax
    	int *flag )
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -31,14 +32,14 @@ Fortran Syntax
    	LOGICAL	FLAG
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``comm``: Communicator to which attribute is attached (handle). 
 
 * ``keyval``: Key value (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``attribute_val``: Attribute value, unless flag = false. 
 
@@ -47,7 +48,7 @@ OUTPUT PARAMETERS
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Note that use of this routine is *deprecated* as of MPI-2, and was
 *deleted* in MPI-3. Please use :ref:`MPI_Comm_get_attr`. This function does not
@@ -60,7 +61,7 @@ case, the call returns flag = false. In particular MPI_KEYVAL_INVALID is
 an erroneous key value.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

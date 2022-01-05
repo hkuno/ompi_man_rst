@@ -1,16 +1,17 @@
 .. _mpi_win_lock:
 
 MPI_Win_lock
-~~~~~~~~~~~~
+============
+.. include_body
 
 :ref:`MPI_Win_lock` - Starts an RMA access epoch locking access to a
 particular rank.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Win_lock(int lock_type, int rank, int assert, MPI_Win win)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER LOCK_TYPE, RANK, ASSERT, WIN, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,7 +43,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``lock_type``: Either MPI_LOCK_EXCLUSIVE or MPI_LOCK_SHARED (state). 
 
@@ -53,12 +54,12 @@ INPUT PARAMETERS
 * ``win``: Window object (handle). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 Starts an RMA access epoch. Locks ensure that only the windows created
 by specific processes can be accessed by those processes (and by no
@@ -83,7 +84,7 @@ MPI_MODE_NOCHECK
    while the caller holds the window lock.
 
 NOTES
-=====
+-----
 
 In a client/server environment in which clients connect to a server and
 create windows that span both the client and the server, if a client or
@@ -92,7 +93,7 @@ abnormally, the server or other clients may hang in a :ref:`MPI_Win_lock` call,
 failing to notice that the peer MPI job has terminated.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

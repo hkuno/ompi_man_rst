@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_PVAR_STOP" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_T_PVAR_STOP" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_T_PVAR_START
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_T_pvar_start\fP, MPI_T_pvar_stop \- Start/stop a performance
+MPI_T_pvar_start, \fI\%MPI_T_pvar_stop\fP \- Start/stop a performance
 variable
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -47,27 +50,29 @@ int MPI_T_pvar_stop(MPI_T_pvar_session session, MPI_T_pvar_handle handle)
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsession\fP: Performance experiment session.
 .IP \(bu 2
 \fBhandle\fP: Performance variable handle.
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_T_pvar_start\fP starts the performance variable with the handle
+MPI_T_pvar_start starts the performance variable with the handle
 specified in \fIhandle\fP\&. The special value MPI_T_PVAR_ALL_HANDLES can be
 passed in \fIhandle\fP to start all non\-continuous handles in the session
 specified in \fIsession\fP\&.
 .sp
-MPI_T_pvar_stop stops the performance variable with the handle specified
+\fI\%MPI_T_pvar_stop\fP stops the performance variable with the handle specified
 in \fIhandle\fP\&. The special value MPI_T_PVAR_ALL_HANDLES can be passed in
 \fIhandle\fP to stop all non\-continuous handles in the session specified in
 \fIsession\fP\&.
 .sp
 Continuous performance variables can neither be started nor stopped.
-.SS ERRORS
+.SH ERRORS
 .sp
 MPI_T_pvar_start() and MPI_T_pvar_stop() will fail if:
 .INDENT 0.0

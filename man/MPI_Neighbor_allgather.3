@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_NEIGHBOR_ALLGATHER" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_NEIGHBOR_ALLGATHER" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,8 +29,8 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Neighbor_allgather, MPI_Ineighbor_allgather,
-MPI_Neighbor_allgather \- Gathers and distributes data from and to all
+\fI\%MPI_Neighbor_allgather\fP, MPI_Ineighbor_allgather,
+\fI\%MPI_Neighbor_allgather\fP \- Gathers and distributes data from and to all
 neighbors
 .SH SYNTAX
 .SS C Syntax
@@ -124,7 +124,9 @@ MPI_Neighbor_allgather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer (choice).
@@ -141,7 +143,9 @@ MPI_Neighbor_allgather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer (choice).
@@ -152,14 +156,16 @@ MPI_Neighbor_allgather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Neighbor_allgather is similar to MPI_Allgather, except that only the
+\fI\%MPI_Neighbor_allgather\fP is similar to MPI_Allgather, except that only the
 neighboring processes receive the result, instead of all processes. The
 neighbors and buffer layout is determined by the topology of \fIcomm\fP\&.
 .sp
 The type signature associated with sendcount, sendtype at a process must
 be equal to the type signature associated with recvcount, recvtype at
 any other process.
-.SH NEIGHBOR ORDERING
+.sp
+NEIGHBOR ORDERING
+\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
 .sp
 For a distributed graph topology, created with MPI_Dist_graph_create,
 the sequence of neighbors in the send and receive buffers at each

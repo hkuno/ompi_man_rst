@@ -1,13 +1,14 @@
 .. _shmem_n_pes:
 
 shmem_n_pes
-~~~~~~~~~~~
+===========
+.. include_body
 
 num_pes, \_num_pes, shmem_n_pes - Returns the number of processing
 elements (PEs) used to run the application.
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -28,7 +29,7 @@ Fortran:
    I = SHMEM_N_PES ()
 
 DESCRIPTION
-===========
+-----------
 
 num_pes() or shmem_n_pes() return the total number of PEs running in an
 application.

@@ -1,17 +1,18 @@
 .. _mpi_type_create_f90_complex:
 
 MPI_Type_create_f90_complex
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================
+.. include_body
 
 ::
 
    MPI_Type_create_f90_complex - Returns a bounded MPI complex datatype
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -21,7 +22,7 @@ C Syntax
    	MPI_Datatype *newtype)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -32,7 +33,7 @@ Fortran Syntax
    	INTEGER	P, R, NEWTYPE, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -44,21 +45,21 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``p``: Precision, in decimal digits (integer). 
 
 * ``r``: Decimal exponent range (integer). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``newtype``: New data type (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 This function provides a way to declare KIND-parameterized COMPLEX MPI
 datatypes. The arguments are interpreted in a similar fashion to the F90
@@ -73,7 +74,7 @@ SELECTED_REAL_KIND. Similarly, either argument to
 :ref:`MPI_Type_create_f90_complex` may be set to MPI_UNDEFINED.
 
 NOTES
-=====
+-----
 
 It is erroneous to supply values for *p* and *r* not supported by the
 compiler.
@@ -118,7 +119,7 @@ the only way to obtain a matching MPI datatype is to use the functions
 :ref:`MPI_Sizeof` and :ref:`MPI_Type_match_size`.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

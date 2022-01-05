@@ -1,16 +1,17 @@
 .. _mpi_type_indexed:
 
 MPI_Type_indexed
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
-:ref:`MPI_Type_indexed`, MPI_Type_create_hindexed - Creates an indexed
+:ref:`MPI_Type_indexed`, :ref:`MPI_Type_create_hindexed` - Creates an indexed
 datatype.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -26,7 +27,7 @@ C Syntax
    	MPI_Datatype *newtype)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -47,7 +48,7 @@ Fortran Syntax
    	INTEGER	IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -71,7 +72,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``count``: Number of blocks -- also number of entries in array_of_displacements and array_of_blocklengths (nonnegative integer). 
 
@@ -82,14 +83,14 @@ INPUT PARAMETERS
 * ``oldtype``: Old datatype (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``newtype``: New datatype (handle). 
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 The function :ref:`MPI_Type_indexed` allows replication of an old datatype into
 a sequence of blocks (each block is a concatenation of the old
@@ -146,12 +147,12 @@ newtype) where
 
        B[j] = blocklength, j = 0, .., count-1
 
-The function MPI_Type_create_hindexed is identical to :ref:`MPI_Type_indexed`,
+The function :ref:`MPI_Type_create_hindexed` is identical to :ref:`MPI_Type_indexed`,
 except that block displacements in *array_of_displacements* are
 specified in bytes, rather than in multiples of the *oldtype* extent.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

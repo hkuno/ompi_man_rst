@@ -1,16 +1,17 @@
 .. _mpi_type_delete_attr:
 
 MPI_Type_delete_attr
-~~~~~~~~~~~~~~~~~~~~
+====================
+.. include_body
 
 :ref:`MPI_Type_delete_attr` - Deletes a datatype-caching attribute value
 associated with a key.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Type_delete_attr(MPI_Datatype type, int type_keyval)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	TYPE, TYPE_KEYVAL, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,29 +43,29 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT/OUTPUT PARAMETER
-======================
+-----/------ ---------
 
 * ``type``: Data type from which the attribute is deleted (handle).n 
 
 INPUT PARAMETER
-===============
+----- ---------
 
 * ``type_keyval``: Key value (integer). 
 
 OUTPUT PARAMETER
-================
+------ ---------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 DESCRIPTION
-===========
+-----------
 
 :ref:`MPI_Type_delete_attr` deletes a datatype-caching attribute value
 associated with a key. This routines partially replaces :ref:`MPI_Attr_delete`,
 which is now deprecated.
 
 NOTES
-=====
+-----
 
 Note that it is not defined by the MPI standard what happens if the
 delete_fn callback invokes other MPI functions. In Open MPI, it is not
@@ -73,7 +74,7 @@ delete attributes on the same object on which the delete_fn callback is
 being invoked.
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

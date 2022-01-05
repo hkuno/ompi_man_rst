@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_SHORT_WAIT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_SHORT_WAIT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,7 +28,10 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_WAIT
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_int_wait\fP(3), \fIshmem_int_wait\fP(3)_until,
 \fIshmem_int4_wait\fP(3), \fIshmem_int4_wait\fP(3)_until,
@@ -38,7 +41,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fIshmem_short_wait\fP(3), \fIshmem_short_wait\fP(3)_until,
 \fIshmem_wait\fP(3), \fIshmem_wait\fP(3)_until \- Waits for a variable on the
 local processing element (PE) to change
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -97,7 +100,7 @@ CALL SHMEM_WAIT_UNTIL(ivar, cmp, cmp_value)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 shmem_wait and shmem_wait_until wait for \fBivar\fP to be changed by a
 remote write or atomic swap issued by a different processor. These
@@ -180,7 +183,7 @@ compare condition is true. The compare condition is defined by the
 ivar argument compared with the cmp_value using the comparison
 operator, cmp.
 .UNINDENT
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 \fBExample 1:\fP The following call returns when variable ivar is not
 equal to 100:

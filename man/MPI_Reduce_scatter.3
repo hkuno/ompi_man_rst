@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_REDUCE_SCATTER" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_REDUCE_SCATTER" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-MPI_Reduce_scatter, MPI_Ireduce_scatter, MPI_Reduce_scatter_init \-
+\fI\%MPI_Reduce_scatter\fP, MPI_Ireduce_scatter, MPI_Reduce_scatter_init \-
 Combines values and scatters the results.
 .SH SYNTAX
 .SS C Syntax
@@ -121,7 +121,9 @@ MPI_Reduce_scatter_init(sendbuf, recvbuf, recvcounts, datatype, op, comm,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer (choice).
@@ -136,7 +138,9 @@ MPI_Reduce_scatter_init(sendbuf, recvbuf, recvcounts, datatype, op, comm,
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Starting address of receive buffer (choice).
@@ -147,14 +151,16 @@ MPI_Reduce_scatter_init(sendbuf, recvbuf, recvcounts, datatype, op, comm,
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Reduce_scatter first does an element\-wise reduction on vector of
+\fI\%MPI_Reduce_scatter\fP first does an element\-wise reduction on vector of
 \fIcount\fP = S(i)\fIrecvcounts\fP[i] elements in the send buffer defined by
 \fIsendbuf\fP, \fIcount\fP, and \fIdatatype\fP\&. Next, the resulting vector of
 results is split into n disjoint segments, where n is the number of
 processes in the group. Segment i contains \fIrecvcounts\fP[i] elements.
 The ith segment is sent to process i and stored in the receive buffer
 defined by \fIrecvbuf\fP, \fIrecvcounts\fP[i], and \fIdatatype\fP\&.
-.SH USE OF IN-PLACE OPTION
+.sp
+USE OF IN\-PLACE OPTION
+\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
 .sp
 When the communicator is an intracommunicator, you can perform a
 reduce\-scatter operation in\-place (the output buffer is used as the
@@ -162,7 +168,9 @@ input buffer). Use the variable MPI_IN_PLACE as the value of the
 \fIsendbuf\fP\&. In this case, the input data is taken from the top of the
 receive buffer. The area occupied by the input data may be either longer
 or shorter than the data filled by the output data.
-.SH WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
+.sp
+WHEN COMMUNICATOR IS AN INTER\-COMMUNICATOR
+\-\-\-\- \-\-\-\-\-\-\-\-\-\-\-\- \-\- \-\- \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 .sp
 When the communicator is an inter\-communicator, the reduce\-scatter
 operation occurs in two phases. First, the result of the reduction
@@ -173,7 +181,9 @@ the second group is scattered among the processes in the first group.
 For each group, all processes provide the same \fIrecvcounts\fP argument,
 and the sum of the \fIrecvcounts\fP values should be the same for both
 groups.
-.SH NOTES ON COLLECTIVE OPERATIONS
+.sp
+NOTES ON COLLECTIVE OPERATIONS
+\-\-\-\-\- \-\- \-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .sp
 The reduction functions ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call

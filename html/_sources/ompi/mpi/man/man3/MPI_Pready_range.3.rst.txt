@@ -1,16 +1,17 @@
 .. _mpi_pready_range:
 
 MPI_Pready_range
-~~~~~~~~~~~~~~~~
+================
+.. include_body
 
 :ref:`MPI_Pready_range` - Indicates that a given range os send-side
 partitions are ready to be transferred.
 
 SYNTAX
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code-block:: c
    :linenos:
@@ -19,7 +20,7 @@ C Syntax
    int MPI_Pready_range(int partition_low, int partition_high, MPI_Request *request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -30,7 +31,7 @@ Fortran Syntax
    	INTEGER	PARTITION_LOW, PARTITION_HIGH, REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
    :linenos:
@@ -42,7 +43,7 @@ Fortran 2008 Syntax
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 INPUT PARAMETERS
-================
+----- ----------
 
 * ``partition_low``: The lowest of the range of partitions to mark ready for transfer (integer). 
 
@@ -51,12 +52,12 @@ INPUT PARAMETERS
 * ``request``: Communication request (handle). 
 
 OUTPUT PARAMETERS
-=================
+------ ----------
 
 * ``IERROR``: Fortran only: Error status (integer). 
 
 ERRORS
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

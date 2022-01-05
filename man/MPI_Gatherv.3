@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_GATHERV" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_GATHERV" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,15 +28,8 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-
 .sp
-.ce
-----
-
-.ce 0
-.sp
-.sp
-MPI_Gatherv, MPI_Igatherv, MPI_Gatherv_init \- Gathers
+\fI\%MPI_Gatherv\fP, MPI_Igatherv, MPI_Gatherv_init \- Gathers
 varying amounts of data from all processes to the root process
 .SH SYNTAX
 .SS C Syntax
@@ -173,7 +166,7 @@ root).
 .UNINDENT
 .SH DESCRIPTION
 .sp
-MPI_Gatherv extends the functionality of MPI_Gather by allowing
+\fI\%MPI_Gatherv\fP extends the functionality of MPI_Gather by allowing
 a varying count of data from each process, since \fBrecvcounts\fP is now
 an array. It also allows more flexibility as to where the data is placed
 on the root, by providing the new argument, \fBdispls\fP\&.

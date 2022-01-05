@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONG_IPUT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "SHMEM_LONG_IPUT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,7 +28,10 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH SHMEM_SHORT_IPUT
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
 \fIshmem_complex_iput\fP(3), \fIshmem_double_iput\fP(3),
 \fIshmem_float_iput\fP(3), \fIshmem_int_iput\fP(3),
@@ -38,7 +41,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fIshmem_longdouble_iput\fP(3), \fIshmem_longlong_iput\fP(3),
 \fIshmem_real_iput\fP(3), \fIshmem_short_iput\fP(3) \- Transfer strided data
 to a specified processing element (PE).
-.SS SYNOPSIS
+.SH SYNOPSIS
 .sp
 C or C++:
 .INDENT 0.0
@@ -121,7 +124,7 @@ CALL SHMEM_REAL_IPUT(target, source, tst, sst, len, pe)
 .fi
 .UNINDENT
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
 The shmem_iput routines read the elements of a local array (\fBsource\fP)
 and write them to a remote array (\fBtarget\fP) on the PE indicated by
@@ -206,10 +209,10 @@ to 64 bits.
 If you are using Fortran, data types must be of default size. For
 example, a real variable must be declared as REAL, REAL*4 or
 REAL(KIND=4).
-.SS NOTES
+.SH NOTES
 .sp
 See \fIintro_shmem\fP(3) for a definition of the term remotely accessible.
-.SS EXAMPLES
+.SH EXAMPLES
 .sp
 Consider the following simple shmem_long_iput example for C/C++
 programs.

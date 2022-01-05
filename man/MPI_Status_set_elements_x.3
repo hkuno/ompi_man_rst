@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_STATUS_SET_ELEMENTS_X" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_STATUS_SET_ELEMENTS_X" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_STATUS_SET_ELEMENTS
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_Status_set_elements\fP, MPI_Status_set_elements_x \- Modifies
+MPI_Status_set_elements, \fI\%MPI_Status_set_elements_x\fP \- Modifies
 opaque part of \fIstatus\fP to allow MPI_Get_elements to return \fIcount\fP\&.
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -85,35 +88,41 @@ MPI_Status_set_elements_x(status, datatype, count, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT/OUTPUT PARAMETER
+.sp
+INPUT/OUTPUT PARAMETER
+\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBstatus\fP: Status to associate with \fIcount (status).\fP
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBdatatype\fP: Data type associated with \fIcount (handle).\fP
 .IP \(bu 2
 \fBcount\fP: Number of elements to associate with \fIstatus (integer).\fP
 .UNINDENT
-.SS OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_Status_set_elements\fP modifies the opaque part of \fIstatus so that a
-call to :ref:\(gaMPI_Get_elements\(ga or MPI_Get_elements_x will return count.
+MPI_Status_set_elements modifies the opaque part of \fIstatus so that a
+call to :ref:\(gaMPI_Get_elements\(ga or :ref:\(gaMPI_Get_elements_x\(ga will return count.
 :ref:\(gaMPI_Get_count\(ga will return a compatible value.\fP
 .sp
 A subsequent call to MPI_Get_count(status, datatype, count), to
 MPI_Get_elements(status, datatype, count), or to
 MPI_Get_elements_x(status, datatype, count) must use a data\-type
 argument that has the same type signature as the data\-type argument that
-was used in the call to \fI\%MPI_Status_set_elements\fP\&.*
-.SS NOTES
+was used in the call to MPI_Status_set_elements\&.*
+.SH NOTES
 .sp
 Users are advised not to reuse the status fields for values other than
 those for which they were intended. Doing so may lead to unexpected
@@ -124,7 +133,7 @@ provided with a generalized request can be used to return information
 that does not logically belong in status. Furthermore, modifying the
 values in a status set internally by MPI, such as :ref:\(gaMPI_Recv\(ga, may lead to
 unpredictable results and is strongly discouraged.\fP
-.SS ERRORS
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.
@@ -135,10 +144,12 @@ I/O function errors. The error handler may be changed with
 MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
-.SS FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fICOUNT
-argument of MPI_Status_set_elements_x only for Fortran 90. FORTRAN 77
+argument of :ref:\(gaMPI_Status_set_elements_x\(ga only for Fortran 90. FORTRAN 77
 users may use the non\-portable syntax\fP
 .INDENT 0.0
 .INDENT 3.5

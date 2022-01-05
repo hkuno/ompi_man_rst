@@ -1,7 +1,8 @@
 .. _shmem_char_put:
 
 shmem_char_put
-~~~~~~~~~~~~~~
+==============
+.. include_body
 
 *shmem_character_put*\ (3), *shmem_complex_put*\ (3),
 *shmem_double_put*\ (3), *shmem_float_put*\ (3), *shmem_int_put*\ (3),
@@ -13,7 +14,7 @@ shmem_char_put
 Transfers data to a specified processing element (PE)
 
 SYNOPSIS
-========
+--------
 
 C or C++:
 
@@ -91,7 +92,7 @@ Fortran:
    CALL SHMEM_REAL_PUT(target, source, len, pe)
 
 DESCRIPTION
-===========
+-----------
 
 These routines transfer **nelems** elements of the data object at
 address **source** on the calling PE, to the data object at address
@@ -169,7 +170,7 @@ constraints, which are as follows:
    REAL(KIND=4).
 
 EXAMPLES
-========
+--------
 
 The following shmem_put example is for C/C++ programs:
 

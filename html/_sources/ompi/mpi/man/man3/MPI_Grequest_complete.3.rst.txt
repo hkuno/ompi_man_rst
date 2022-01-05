@@ -1,17 +1,17 @@
 .. _mpi_grequest_complete:
 
 MPI_Grequest_complete
-~~~~~~~~~~~~~~~~~~~~~
-====
+=====================
+.. include_body
 
 :ref:`MPI_Grequest_complete` - Reports that a generalized request is
 complete.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -20,7 +20,7 @@ C Syntax
    int MPI_Grequest_complete(MPI_Request request)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -31,7 +31,7 @@ Fortran Syntax
        INTEGER REQUEST, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -42,17 +42,17 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input/Output Parameter
-======================
+----------------------
 
 -  ``request`` : Generalized request (handle).
 
 Output Parameter
-================
+----------------
 
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 :ref:`MPI_Grequest_complete` informs MPI that the operations represented by
 the generalized request ``request`` are complete. A call to
@@ -76,7 +76,7 @@ side-effects. The user should guarantee these same properties for newly
 defined operations.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

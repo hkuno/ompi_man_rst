@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_SET_ATTR" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_TYPE_SET_ATTR" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -75,19 +75,25 @@ MPI_Type_set_attr(datatype, type_keyval, attribute_val, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT/OUTPUT PARAMETER
+.sp
+INPUT/OUTPUT PARAMETER
+\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBtype\fP: Data type to which attribute will be attached (handle).
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBtype_keyval\fP: Key value (integer).
 .IP \(bu 2
 \fBattribute_val\fP: Attribute value.
 .UNINDENT
-.SH OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -96,7 +102,9 @@ MPI_Type_set_attr(datatype, type_keyval, attribute_val, ierror)
 .sp
 For the given data type, \fI\%MPI_Type_set_attr\fP sets the key value to the
 value of the specified attribute.
-.SH FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fIATTRIBUTE_VAL\fP argument only for Fortran 90. FORTRAN 77 users may use

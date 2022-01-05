@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_RACCUMULATE" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_RACCUMULATE" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -28,11 +28,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
-.SH MPI_ACCUMULATE
+.INDENT 0.0
+.INDENT 3.5
+.UNINDENT
+.UNINDENT
 .sp
-\fI\%MPI_Accumulate\fP, MPI_Raccumulate \- Combines the contents of the
+MPI_Accumulate, \fI\%MPI_Raccumulate\fP \- Combines the contents of the
 origin buffer with that of a target buffer.
-.SS SYNTAX
+.SH SYNTAX
 .SS C Syntax
 .INDENT 0.0
 .INDENT 3.5
@@ -111,7 +114,9 @@ MPI_Raccumulate(origin_addr, origin_count, origin_datatype, target_rank,
 .fi
 .UNINDENT
 .UNINDENT
-.SS INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBorigin_addr\fP: Initial address of buffer (choice).
@@ -132,16 +137,18 @@ MPI_Raccumulate(origin_addr, origin_count, origin_datatype, target_rank,
 .IP \(bu 2
 \fBwin\fP: Window object (handle).
 .UNINDENT
-.SS OUTPUT PARAMETER
+.sp
+OUTPUT PARAMETER
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBMPI_Raccumulate\fP:  RMA request
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
-.SS DESCRIPTION
+.SH DESCRIPTION
 .sp
-\fI\%MPI_Accumulate\fP is a function used for one\-sided MPI communication
+MPI_Accumulate is a function used for one\-sided MPI communication
 that adds the contents of the origin buffer (as defined by
 \fIorigin_addr\fP, \fIorigin_count\fP, and \fIorigin_datatype\fP) to the buffer
 specified by the arguments \fItarget_count\fP and \fItarget_datatype\fP, at
@@ -167,13 +174,15 @@ A new predefined operation, MPI_REPLACE, is defined. It corresponds to
 the associative function f(a, b) =b; that is, the current value in the
 target memory is replaced by the value supplied by the origin.
 .sp
-MPI_Raccumulate is similar to \fI\%MPI_Accumulate\fP, except that it
+\fI\%MPI_Raccumulate\fP is similar to MPI_Accumulate, except that it
 allocates a communication request object and associates it with the
 request handle (the argument \fIrequest\fP) that can be used to wait or test
-for completion. The completion of an MPI_Raccumulate operation
+for completion. The completion of an \fI\%MPI_Raccumulate\fP operation
 indicates that the \fIorigin_addr\fP buffer is free to be updated. It does
 not indicate that the operation has completed at the target window.
-.SS FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fITARGET_DISP\fP argument only for Fortran 90. FORTRAN 77 users may use the
@@ -191,17 +200,17 @@ INTEGER*MPI_ADDRESS_KIND TARGET_DISP
 .sp
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
-.SS NOTES
+.SH NOTES
 .sp
-MPI_Put is a special case of \fI\%MPI_Accumulate\fP, with the operation
-MPI_REPLACE. Note, however, that MPI_Put and \fI\%MPI_Accumulate\fP have
+MPI_Put is a special case of MPI_Accumulate, with the operation
+MPI_REPLACE. Note, however, that MPI_Put and MPI_Accumulate have
 different constraints on concurrent updates.
 .sp
 It is the user\(aqs responsibility to guarantee that, when using the
 accumulate functions, the target displacement argument is such that
 accesses to the window are properly aligned according to the data type
-arguments in the call to the \fI\%MPI_Accumulate\fP function.
-.SS ERRORS
+arguments in the call to the MPI_Accumulate function.
+.SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

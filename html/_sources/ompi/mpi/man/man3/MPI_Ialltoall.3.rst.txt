@@ -1,8 +1,9 @@
 .. _mpi_ialltoall:
  
+MPI_Ialltoall
 =============
-mpi_ialltoall
-=============
+    .. include_body
 
 .. include:: ../man3/MPI_Alltoall.3.rst
+    :start-after: .. include_body
 

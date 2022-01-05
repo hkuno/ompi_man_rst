@@ -1,17 +1,18 @@
 .. _opal_wrapper:
 
 opal_wrapper
-~~~~~~~~~~~~
+============
+.. include_body
 
 opal_wrapper - Back-end Open MPI wrapper command
 
 SYNOPSIS
-========
+--------
 
 **opal_wrapper [options]**
 
 DESCRIPTION
-===========
+-----------
 
 **opal_wrapper** is not meant to be called directly by end users. It is
 automatically invoked as the back-end by the Open MPI wrapper commands

@@ -1,17 +1,17 @@
 .. _mpi_group_excl:
 
 MPI_Group_excl
-~~~~~~~~~~~~~~
-====
+==============
+.. include_body
 
 :ref:`MPI_Group_excl` - Produces a group by reordering an existing group
 and taking only unlisted members.
 
 Syntax
-======
+------
 
 C Syntax
---------
+^^^^^^^^
 
 .. code:: c
 
@@ -21,7 +21,7 @@ C Syntax
        MPI_Group *newgroup)
 
 Fortran Syntax
---------------
+^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -32,7 +32,7 @@ Fortran Syntax
        INTEGER GROUP, N, RANKS(*), NEWGROUP, IERROR
 
 Fortran 2008 Syntax
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 .. code:: fortran
 
@@ -45,7 +45,7 @@ Fortran 2008 Syntax
        INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
-================
+----------------
 
 -  ``group`` : Group (handle).
 -  ``n`` : Number of elements in array ranks (integer).
@@ -53,14 +53,14 @@ Input Parameters
    newgroup.
 
 Output Parameters
-=================
+-----------------
 
 -  ``newgroup`` : New group derived from above, preserving the order
    defined by group (handle).
 -  ``IERROR`` : Fortran only: Error status (integer).
 
 Description
-===========
+-----------
 
 The function :ref:`MPI_Group_excl` creates a ``group`` of processes
 ``newgroup`` that is obtained by deleting from ``group`` those processes
@@ -71,14 +71,14 @@ must be distinct; otherwise, the call is erroneous. If ``n`` = 0, then
 ``newgroup`` is identical to ``group``.
 
 Note
-====
+----
 
 Currently, each of the ranks to exclude must be a valid rank in the
 ``group`` and all elements must be distinct or the function is
 erroneous. This restriction is per the draft.
 
 Errors
-======
+------
 
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument.

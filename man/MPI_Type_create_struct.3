@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_CREATE_STRUCT" "3" "Jan 03, 2022" "" "Open MPI"
+.TH "MPI_TYPE_CREATE_STRUCT" "3" "Jan 05, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -81,7 +81,9 @@ MPI_Type_create_struct(count, array_of_blocklengths,
 .fi
 .UNINDENT
 .UNINDENT
-.SH INPUT PARAMETERS
+.sp
+INPUT PARAMETERS
+\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBcount\fP: Number of blocks (integer) \-\- also number of entries in arrays \fIarray_of_types\fP, \fIarray_of_displacements\fP, and \fIarray_of_blocklengths\fP\&.
@@ -92,7 +94,9 @@ MPI_Type_create_struct(count, array_of_blocklengths,
 .IP \(bu 2
 \fBarray_of_types\fP: Type of elements in each block (array of handles to data\-type objects).
 .UNINDENT
-.SH OUTPUT PARAMETERS
+.sp
+OUTPUT PARAMETERS
+\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
 .INDENT 0.0
 .IP \(bu 2
 \fBnewtype\fP: New data type (handle).
@@ -106,7 +110,9 @@ replaces MPI_Type_struct, which is now deprecated.
 .sp
 NOTE \- This routine replaces MPI_Type_struct, which is deprecated. See
 the man page MPI_Type_struct for information about that routine.
-.SH FORTRAN 77 NOTES
+.sp
+FORTRAN 77 NOTES
+\-\-\-\-\-\-\- \-\- \-\-\-\-\-
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fIARRAY_OF_DISPLACEMENTS\fP(*) argument only for Fortran 90. FORTRAN 77
