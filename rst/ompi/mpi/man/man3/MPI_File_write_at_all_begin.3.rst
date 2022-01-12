@@ -1,14 +1,18 @@
 .. _mpi_file_write_at_all_begin:
 
+
 MPI_File_write_at_all_begin
 ===========================
+
 .. include_body
 
 :ref:`MPI_File_write_at_all_begin` - Writes a file at explicitly specified
 offsets; beginning part of a split collective routine (nonblocking).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_File_write_at_all_begin(MPI_File fh, MPI_Offset offset,
    	const void *buf, int count, MPI_Datatype datatype)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -33,6 +38,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	<type>	BUF(*)
    	INTEGER	FH, COUNT, DATATYPE, IERROR
    	INTEGER(KIND=MPI_OFFSET_KIND)	OFFSET
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -49,26 +55,21 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(IN) :: datatype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``fh``: File handle (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``fh``: File handle (handle).
 
 INPUT PARAMETERS
------ ----------
-
-* ``offset``: File offset (handle). 
-
-* ``buf``: Initial address of buffer (choice). 
-
-* ``count``: Number of elements in buffer (integer). 
-
-* ``datatype``: Data type of each buffer element (handle). 
+----------------
+* ``offset``: File offset (handle).
+* ``buf``: Initial address of buffer (choice).
+* ``count``: Number of elements in buffer (integer).
+* ``datatype``: Data type of each buffer element (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -81,8 +82,9 @@ The offset is in etype units relative to the current view. That is,
 holes are not counted when locating an offset. The data is written into
 those parts of the file specified by the current view.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *OFFSET*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -95,6 +97,7 @@ syntax
 where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
+
 NOTES
 -----
 
@@ -102,6 +105,7 @@ All the nonblocking collective routines for data access are "split" into
 two routines, each with \_begin or \_end as a suffix. These split
 collective routines are subject to the semantic rules described in
 Section 9.4.5 of the MPI-2 standard.
+
 
 ERRORS
 ------

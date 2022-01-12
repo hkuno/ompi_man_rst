@@ -1,14 +1,18 @@
 .. _mpi_keyval_free:
 
+
 MPI_Keyval_free
 ===============
+
 .. include_body
 
 :ref:`MPI_Keyval_free` - Frees attribute key for communicator cache
 attribute -- use of this routine is deprecated.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Keyval_free(int *keyval)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,15 +34,14 @@ Fortran Syntax
    MPI_KEYVAL_FREE(KEYVAL, IERROR)
    	INTEGER	KEYVAL, IERROR
 
-INPUT PARAMETER
------ ---------
 
-* ``keyval``: Frees the integer key value (integer). 
+INPUT PARAMETER
+---------------
+* ``keyval``: Frees the integer key value (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -54,10 +58,12 @@ program, either via calls to :ref:`MPI_Attr_delete` that free one attribute
 instance, or by calls to :ref:`MPI_Comm_free` that free all attribute instances
 associated with the freed communicator.
 
+
 NOTE
 ----
 
 Key values are global (they can be used with any and all communicators).
+
 
 ERRORS
 ------
@@ -73,4 +79,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Keyval_create` | :ref:`MPI_Comm_free_keyval` 
+.. seealso:: 
+   | :ref:`MPI_Keyval_create`
+   | :ref:`MPI_Comm_free_keyval`

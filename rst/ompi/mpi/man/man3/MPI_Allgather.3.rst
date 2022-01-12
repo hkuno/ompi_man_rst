@@ -1,14 +1,18 @@
 .. _mpi_allgather:
 
+
 MPI_Allgather
 =============
+
 .. include_body
 
 :ref:`MPI_Allgather`, :ref:`MPI_Iallgather`, :ref:`MPI_Allgather_init` - Gathers data
 from all processes and distributes it to all processes
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -28,6 +32,7 @@ C Syntax
    int MPI_Allgather_init(const void *sendbuf, int  sendcount,
    	 MPI_Datatype sendtype, void *recvbuf, int recvcount,
    	 MPI_Datatype recvtype, MPI_Comm comm, MPI_Info info, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -54,6 +59,7 @@ Fortran Syntax
    	<type>	SENDBUF(*), RECVBUF (*)
    	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE, COMM
    	INTEGER	INFO, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -92,33 +98,23 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Starting address of send buffer (choice). 
-
-* ``sendcount``: Number of elements in send buffer (integer). 
-
-* ``sendtype``: Datatype of send buffer elements (handle). 
-
-* ``recvbuf``: Starting address of recv buffer (choice). 
-
-* ``recvcount``: Number of elements received from any process (integer). 
-
-* ``recvtype``: Datatype of receive buffer elements (handle). 
-
-* ``comm``: Communicator (handle). 
-
-* ``info``: Info (handle, persistent only). 
+----------------
+* ``sendbuf``: Starting address of send buffer (choice).
+* ``sendcount``: Number of elements in send buffer (integer).
+* ``sendtype``: Datatype of send buffer elements (handle).
+* ``recvbuf``: Starting address of recv buffer (choice).
+* ``recvcount``: Number of elements received from any process (integer).
+* ``recvtype``: Datatype of receive buffer elements (handle).
+* ``comm``: Communicator (handle).
+* ``info``: Info (handle, persistent only).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Address of receive buffer (choice). 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``recvbuf``: Address of receive buffer (choice).
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -160,8 +156,9 @@ to every process.
 After the call, every process has the group-wide concatenation of the
 sets of data.
 
+
 USE OF IN-PLACE OPTION
---- -- -------- ------
+----------------------
 
 When the communicator is an intracommunicator, you can perform an
 all-gather operation in-place (the output buffer is used as the input
@@ -186,8 +183,9 @@ Because the in-place option converts the receive buffer into a
 send-and-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
 
+
 WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
----- ------------ -- -- ------------------
+------------------------------------------
 
 When the communicator is an inter-communicator, the gather operation
 occurs in two phases. The data is gathered from all the members of the
@@ -198,6 +196,7 @@ not be symmetric. The number of items sent by the processes in first
 group need not be equal to the number of items sent by the the processes
 in the second group. You can move data in only one direction by giving
 *sendcount* a value of 0 for communication in the reverse direction.
+
 
 ERRORS
 ------
@@ -213,4 +212,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Allgatherv` | :ref:`MPI_Gather` 
+.. seealso:: 
+   | :ref:`MPI_Allgatherv`
+   | :ref:`MPI_Gather`

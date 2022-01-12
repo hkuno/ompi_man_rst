@@ -1,12 +1,15 @@
 .. _shmem_int_fadd:
 
+
 shmem_int_fadd
 ==============
+
 .. include_body
 
-*shmem_int4_fadd*\ (3), *shmem_int8_fadd*\ (3), *shmem_int_fadd*\ (3),
-*shmem_long_fadd*\ (3), *shmem_longlong_fadd*\ (3) - Performs an atomic
+shmem_int4_fadd\ (3), shmem_int8_fadd\ (3), :ref:`shmem_int_fadd`\ (3),
+:ref:`shmem_long_fadd`\ (3), :ref:`shmem_longlong_fadd`\ (3) - Performs an atomic
 fetch-and-add operation on a remote data object
+
 
 SYNOPSIS
 --------
@@ -40,6 +43,7 @@ Fortran:
    INTEGER(KIND=8) SHMEM_INT8_FADD, ires, target, value
    ires = SHMEM_INT8_FADD(target, value, pe)
 
+
 DESCRIPTION
 -----------
 
@@ -66,16 +70,19 @@ pe
    updated. If you are using Fortran, it must be a default integer
    value.
 
+
 NOTES
 -----
 
 The term remotely accessible is defined in *intro_shmem*\ (3).
 
+
 RETURN VALUES
------- ------
+-------------
 
 The contents that had been at the target address on the remote PE prior
 to the atomic addition operation.
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

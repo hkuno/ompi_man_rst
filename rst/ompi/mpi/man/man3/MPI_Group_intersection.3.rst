@@ -2,6 +2,7 @@
 
 MPI_Group_intersection
 ======================
+
 .. include_body
 
 :ref:`MPI_Group_intersection` - Produces a group at the intersection of two
@@ -89,4 +90,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Group_free` 
+.. seealso:: :ref:`MPI_Group_free`

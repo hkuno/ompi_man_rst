@@ -1,14 +1,18 @@
 .. _mpi_t_cvar_handle_alloc:
 
+
 MPI_T_cvar_handle_alloc
 =======================
+
 .. include_body
 
 :ref:`MPI_T_cvar_handle_alloc`, :ref:`MPI_T_cvar_handle_free` - Allocate/free
 contol variable handles
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -21,6 +25,7 @@ C Syntax
                                MPI_T_cvar_handle *handle, int *count)
 
    int MPI_T_cvar_handle_free(MPI_T_cvar_handle *handle)
+
 
 DESCRIPTION
 -----------
@@ -37,11 +42,13 @@ be the maximum length of the string.
 :ref:`MPI_T_cvar_handle_alloc` and sets the *handle* argument to
 MPI_T_CVAR_HANDLE_NULL.
 
+
 NOTES
 -----
 
 Open MPI does not currently support binding MPI objects to control
 variables so the *obj_handle* argument is always ignored.
+
 
 ERRORS
 ------
@@ -66,4 +73,7 @@ MPI_T_cvar_handle_free() will fail if:
    The handle is invalid
 
 
-.. seealso::    :ref:`MPI_T_cvar_get_info` 
+.. seealso:: 
+   ::
+
+      MPI_T_cvar_get_info

@@ -2,6 +2,7 @@
 
 MPI_Grequest_complete
 =====================
+
 .. include_body
 
 :ref:`MPI_Grequest_complete` - Reports that a generalized request is

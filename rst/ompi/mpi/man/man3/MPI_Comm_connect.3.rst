@@ -2,6 +2,7 @@
 
 MPI_Comm_connect
 ================
+
 .. include_body
 
 :ref:`MPI_Comm_connect` - Establishes communication with a server.
@@ -93,4 +94,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error. See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso:: :ref:`MPI_Comm_accept` :ref:`MPI_Open_port` 
+.. seealso:: :ref:`MPI_Comm_accept` :ref:`MPI_Open_port`

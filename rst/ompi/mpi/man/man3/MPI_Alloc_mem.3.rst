@@ -1,13 +1,17 @@
 .. _mpi_alloc_mem:
 
+
 MPI_Alloc_mem
 =============
+
 .. include_body
 
 :ref:`MPI_Alloc_mem` - Allocates a specified memory segment.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Alloc_mem(MPI_Aint size, MPI_Info info, void *baseptr)
+
 
 Fortran Syntax (see FORTRAN NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax (see FORTRAN NOTES)
    MPI_ALLOC_MEM(SIZE, INFO, BASEPTR, IERROR)
    	INTEGER INFO, IERROR
    	INTEGER(KIND=MPI_ADDRESS_KIND) SIZE, BASEPTR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -44,19 +50,16 @@ Fortran 2008 Syntax
    	TYPE(C_PTR), INTENT(OUT) :: baseptr
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``size``: Size of memory segment in bytes (nonnegative integer). 
-
-* ``info``: Info argument (handle). 
+----------------
+* ``size``: Size of memory segment in bytes (nonnegative integer).
+* ``info``: Info argument (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``baseptr``: Pointer to beginning of memory segment allocated. 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``baseptr``: Pointer to beginning of memory segment allocated.
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -64,15 +67,17 @@ DESCRIPTION
 :ref:`MPI_Alloc_mem` allocates *size* bytes of memory. The starting address of
 this memory is returned in the variable *baseptr*.
 
+
 C NOTES
-- -----
+-------
 
 The parameter *baseptr* is of type *void \** to allow passing any
 pointer object for this parameter. The provided argument should be a
 pointer to a pointer of arbitrary type (e.g., *void \*\**).
 
+
 FORTRAN NOTES
-------- -----
+-------------
 
 There is no portable FORTRAN 77 syntax for using :ref:`MPI_Alloc_mem`. There is
 no portable Fortran syntax for using pointers returned from
@@ -106,6 +111,7 @@ User's Guide and are supported by many Fortran compilers. For example,
 
               CALL MPI_FREE_MEM(A, IERR)
 
+
 ERRORS
 ------
 
@@ -120,4 +126,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Free_mem` 
+.. seealso:: 
+   :ref:`MPI_Free_mem`

@@ -2,6 +2,7 @@
 
 MPI_Group_excl
 ==============
+
 .. include_body
 
 :ref:`MPI_Group_excl` - Produces a group by reordering an existing group
@@ -92,4 +93,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Group_range_excl` :ref:`MPI_Group_free` 
+.. seealso:: :ref:`MPI_Group_range_excl` :ref:`MPI_Group_free`

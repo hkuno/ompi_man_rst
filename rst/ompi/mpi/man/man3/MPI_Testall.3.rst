@@ -1,14 +1,18 @@
 .. _mpi_testall:
 
+
 MPI_Testall
 ===========
+
 .. include_body
 
 :ref:`MPI_Testall` - Tests for the completion of all previously initiated
 communications in a list.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Testall(int count, MPI_Request array_of_requests[],
    	int *flag, MPI_Status array_of_statuses[])
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -34,6 +39,7 @@ Fortran Syntax
    	INTEGER	COUNT, ARRAY_OF_REQUESTS(*)
    	INTEGER	ARRAY_OF_STATUSES(MPI_STATUS_SIZE,*), IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -48,21 +54,17 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: array_of_statuses(*)
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Lists length (integer). 
-
-* ``array_of_requests``: Array of requests (array of handles). 
+----------------
+* ``count``: Lists length (integer).
+* ``array_of_requests``: Array of requests (array of handles).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``flag``: True if previously initiated communications are complete (logical.) 
-
-* ``array_of_statuses``: Array of status objects (array of status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``flag``: True if previously initiated communications are complete (logical.)
+* ``array_of_statuses``: Array of status objects (array of status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -87,12 +89,14 @@ MPI_STATUSES_IGNORE can be used as a special value for the
 Errors that occurred during the execution of :ref:`MPI_Testall` are handled in
 the same manner as errors in :ref:`MPI_Waitall`.
 
+
 NOTE
 ----
 
 *flag* is true only if all requests have completed. Otherwise, *flag* is
 false, and neither *array_of_requests* nor *array_of_statuses* is
 modified.
+
 
 ERRORS
 ------
@@ -118,4 +122,14 @@ the value MPI_ERR_IN_STATUS will be returned in the C and Fortran
 bindings.
 
 
-.. seealso:: | :ref:`MPI_Comm_set_errhandler` | :ref:`MPI_File_set_errhandler` | :ref:`MPI_Test` | :ref:`MPI_Testany` | :ref:`MPI_Testsome` | :ref:`MPI_Wait` | :ref:`MPI_Waitall` | :ref:`MPI_Waitany` | :ref:`MPI_Waitsome` | :ref:`MPI_Win_set_errhandler` 
+.. seealso:: 
+   | :ref:`MPI_Comm_set_errhandler`
+   | :ref:`MPI_File_set_errhandler`
+   | :ref:`MPI_Test`
+   | :ref:`MPI_Testany`
+   | :ref:`MPI_Testsome`
+   | :ref:`MPI_Wait`
+   | :ref:`MPI_Waitall`
+   | :ref:`MPI_Waitany`
+   | :ref:`MPI_Waitsome`
+   | :ref:`MPI_Win_set_errhandler`

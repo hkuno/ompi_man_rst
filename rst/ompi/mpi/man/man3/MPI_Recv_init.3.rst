@@ -1,13 +1,17 @@
 .. _mpi_recv_init:
 
+
 MPI_Recv_init
 =============
+
 .. include_body
 
 :ref:`MPI_Recv_init` - Builds a handle for a receive.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Recv_init(void *buf, int count, MPI_Datatype datatype,
    	int source, int tag, MPI_Comm comm, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    		IERROR)
    	<type>	BUF(*)
    	INTEGER	COUNT, DATATYPE, SOURCE, TAG, COMM, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,30 +53,23 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Maximum number of elements to receive (integer). 
-
-* ``datatype``: Type of each entry (handle). 
-
-* ``source``: Rank of source (integer). 
-
-* ``tag``: Message tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``count``: Maximum number of elements to receive (integer).
+* ``datatype``: Type of each entry (handle).
+* ``source``: Rank of source (integer).
+* ``tag``: Message tag (integer).
+* ``comm``: Communicator (handle).
 
 INPUT/OUTPUT PARAMETER
------/------ ---------
-
-* ``buf``: Initial address of receive buffer (choice). 
+-----/----------------
+* ``buf``: Initial address of receive buffer (choice).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``request``: Communication request (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``request``: Communication request (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -84,6 +83,7 @@ active communication is attached to the request.
 
 A communication (send or receive) that uses a persistent request is
 initiated by the function :ref:`MPI_Start` or :ref:`MPI_Startall`.
+
 
 ERRORS
 ------
@@ -99,4 +99,11 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Bsend_init` | :ref:`MPI_Rsend_init` | :ref:`MPI_Send_init` | MPI_Sssend_init| :ref:`MPI_Start` | :ref:`MPI_Startall` | :ref:`MPI_Request_free` 
+.. seealso:: 
+   | :ref:`MPI_Bsend_init`
+   | :ref:`MPI_Rsend_init`
+   | :ref:`MPI_Send_init`
+   | MPI_Sssend_init
+   | :ref:`MPI_Start`
+   | :ref:`MPI_Startall`
+   | :ref:`MPI_Request_free`

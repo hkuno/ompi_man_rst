@@ -2,6 +2,7 @@
 
 MPI_Cart_shift
 ==============
+
 .. include_body
 
 :ref:`MPI_Cart_shift` - Returns the shifted source and destination ranks,

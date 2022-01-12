@@ -2,6 +2,7 @@
 
 MPI_Graph_map
 =============
+
 .. include_body
 
 :ref:`MPI_Graph_map` - Maps process to graph topology information.
@@ -82,4 +83,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Cart_map` 
+.. seealso:: :ref:`MPI_Cart_map`

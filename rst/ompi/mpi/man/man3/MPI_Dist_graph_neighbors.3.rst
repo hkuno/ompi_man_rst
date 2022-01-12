@@ -1,14 +1,18 @@
 .. _mpi_dist_graph_neighbors:
 
+
 MPI_Dist_graph_neighbors
 ========================
+
 .. include_body
 
 :ref:`MPI_Dist_graph_neighbors` - Returns the neighbors of the calling
 process in a distributed graph topology.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Dist_graph_neighbors(MPI_Comm comm, int maxindegree, int sources[], int sourceweights[],
                                 int maxoutdegree, int destinations[], int destweights[])
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax
            MAXOUTDEGREE, DESTINATIONS, DESTWEIGHTS, IERROR)
            INTEGER COMM, MAXINDEGREE, SOURCES(*), SOURCEWEIGHTS(*), MAXOUTDEGREE,
                    DESTINATIONS(*), DESTWEIGHTS(*), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -48,27 +54,20 @@ Fortran 2008 Syntax
    	INTEGER :: sourceweights(*), destweights(*)
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``comm``: Communicator with distributed graph topology (handle). 
-
-* ``maxindegree``: Size of *sources* and *sourceweights* arrays (non-negative integer). 
-
-* ``maxoutdegree``: Size of *destinations* and *destweights* arrays (non-negative integer). 
+----------------
+* ``comm``: Communicator with distributed graph topology (handle).
+* ``maxindegree``: Size of *sources* and *sourceweights* arrays (non-negative integer).
+* ``maxoutdegree``: Size of *destinations* and *destweights* arrays (non-negative integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``sources``: Processes for which the calling process is a destination (array of non-negative integers). 
-
-* ``sourceweights``: Weights of the edges into the calling process (array of non-negative integers). 
-
-* ``destinations``: Processes for which the calling process is a source (array of non-negative integers). 
-
-* ``destweights``: Weights of the edges out of the calling process (array of non-negative integers). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``sources``: Processes for which the calling process is a destination (array of non-negative integers).
+* ``sourceweights``: Weights of the edges into the calling process (array of non-negative integers).
+* ``destinations``: Processes for which the calling process is a source (array of non-negative integers).
+* ``destweights``: Weights of the edges out of the calling process (array of non-negative integers).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -84,6 +83,7 @@ arrays. If the communicator was created with
 and *destinations* is identical to the input that was used by the
 process with the same rank in comm_old in the creation call.
 
+
 ERRORS
 ------
 
@@ -98,4 +98,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Dist_graph_neighbors_count` 
+.. seealso:: 
+   :ref:`MPI_Dist_graph_neighbors_count`

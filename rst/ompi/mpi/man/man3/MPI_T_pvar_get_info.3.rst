@@ -1,13 +1,17 @@
 .. _mpi_t_pvar_get_info:
 
+
 MPI_T_pvar_get_info
 ===================
+
 .. include_body
 
 :ref:`MPI_T_pvar_get_info` - Query information from a performance variable
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -21,40 +25,28 @@ C Syntax
                            char *desc, int *desc_len, int *bind, int *readonly, int *continuous,
                            int *atomic)
 
-INPUT PARAMETERS
------ ----------
 
-* ``pvar_index``: Index of the performance variable to be queried. 
+INPUT PARAMETERS
+----------------
+* ``pvar_index``: Index of the performance variable to be queried.
 
 INPUT/OUTPUT PARAMETERS
------/------ ----------
-
-* ``name_len``: Length of the string and/or buffer for name. 
-
-* ``desc_len``: Length of the string and/or buffer for desc. 
+-----/-----------------
+* ``name_len``: Length of the string and/or buffer for name.
+* ``desc_len``: Length of the string and/or buffer for desc.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``name``: Buffer to return the string containing the name of the performance variable. 
-
-* ``verbosity``: Verbosity level of this variable. 
-
-* ``var_class``: Class of performance variable. 
-
-* ``datatype``: MPI datatype of the information stored in the performance variable. 
-
-* ``enumtype``: Optional descriptor for enumeration information. 
-
-* ``desc``: Buffer to return the string containing the description of the performance variable. 
-
-* ``bind``: Type of MPI object to which this variable must be bound. 
-
-* ``readonly``: Flag indicating whether the variable can be written/reset. 
-
-* ``continuous``: Flag indicating whether the variable can be started and stopped or is continuously active. 
-
-* ``atomic``: Flag indicating whether the variable can be atomically read and reset. 
+-----------------
+* ``name``: Buffer to return the string containing the name of the performance variable.
+* ``verbosity``: Verbosity level of this variable.
+* ``var_class``: Class of performance variable.
+* ``datatype``: MPI datatype of the information stored in the performance variable.
+* ``enumtype``: Optional descriptor for enumeration information.
+* ``desc``: Buffer to return the string containing the description of the performance variable.
+* ``bind``: Type of MPI object to which this variable must be bound.
+* ``readonly``: Flag indicating whether the variable can be written/reset.
+* ``continuous``: Flag indicating whether the variable can be started and stopped or is continuously active.
+* ``atomic``: Flag indicating whether the variable can be atomically read and reset.
 
 DESCRIPTION
 -----------
@@ -68,8 +60,9 @@ continuous, or atomic are returns in *readonly*, *continuous*, and
 *atomic* accordingly. See MPI-3 § 14.3.7 for more information. See the
 man page for :ref:`MPI_T_cvar_get_info` for information on variable verbosity.
 
+
 VARIABLE CLASS
--------- -----
+--------------
 
 Performance variables are categorized into classes which describe their
 initial value, valid types, and behavior. The class returned in the
@@ -137,6 +130,7 @@ MPI_T_PVAR_CLASS_GENERIC
 
 For more information see MPI-3 � 14.3.7.
 
+
 DATATYPE
 --------
 
@@ -145,6 +139,7 @@ following datatypes: MPI_INT, MPI_UNSIGNED, MPI_UNSIGNED_LONG,
 MPI_UNSIGNED_LONG_LONG, MPI_COUNT, MPI_CHAR, and MPI_DOUBLE. For more
 information on datatypes in the MPI Tool information interface see MPI-3
 � 14.3.5.
+
 
 BINDING
 -------
@@ -187,6 +182,7 @@ MPI_T_BIND_MPI_INFO
 
 For more information see MPI-3 � 14.3.2.
 
+
 NOTES
 -----
 
@@ -200,6 +196,7 @@ value specified in the length is 0 the corresponding string buffer is
 ignored and the string is not returned. For more information see MPI-3 �
 14.3.3.
 
+
 ERRORS
 ------
 
@@ -212,4 +209,7 @@ MPI_T_pvar_get_info() will fail if:
    The performance variable index is invalid
 
 
-.. seealso::    :ref:`MPI_T_cvar_get_info` 
+.. seealso:: 
+   ::
+
+      MPI_T_cvar_get_info

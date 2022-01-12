@@ -2,6 +2,7 @@
 
 MPI_Comm_compare
 ================
+
 .. include_body
 
 :ref:`MPI_Comm_compare` - Compares two communicators.

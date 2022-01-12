@@ -1,13 +1,17 @@
 .. _mpi_recv:
 
+
 MPI_Recv
 ========
+
 .. include_body
 
 :ref:`MPI_Recv` - Performs a standard-mode blocking receive.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Recv(void *buf, int count, MPI_Datatype datatype,
    	int source, int tag, MPI_Comm comm, MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    	<type>	BUF(*)
    	INTEGER	COUNT, DATATYPE, SOURCE, TAG, COMM
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,27 +53,20 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Maximum number of elements to receive (integer). 
-
-* ``datatype``: Datatype of each receive buffer entry (handle). 
-
-* ``source``: Rank of source (integer). 
-
-* ``tag``: Message tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``count``: Maximum number of elements to receive (integer).
+* ``datatype``: Datatype of each receive buffer entry (handle).
+* ``source``: Rank of source (integer).
+* ``tag``: Message tag (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``buf``: Initial address of receive buffer (choice). 
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``buf``: Initial address of receive buffer (choice).
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -92,6 +91,7 @@ overflow condition.
 If a message that is shorter than the length of the receive buffer
 arrives, then only those locations corresponding to the (shorter)
 received message are modified.
+
 
 NOTES
 -----
@@ -142,6 +142,7 @@ If your application does not need to examine the *status* field, you can
 save resources by using the predefined constant MPI_STATUS_IGNORE as a
 special value for the *status* argument.
 
+
 ERRORS
 ------
 
@@ -156,4 +157,9 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Irecv`    :ref:`MPI_Probe` 
+.. seealso:: 
+   ::
+
+   MPI_Irecv
+   MPI_Probe
+

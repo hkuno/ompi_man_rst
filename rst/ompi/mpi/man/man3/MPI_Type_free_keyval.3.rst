@@ -1,13 +1,17 @@
 .. _mpi_type_free_keyval:
 
+
 MPI_Type_free_keyval
 ====================
+
 .. include_body
 
 :ref:`MPI_Type_free_keyval` - Frees a previously created type key value.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Type_free_keyval(int *type_keyval)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_TYPE_FREE_KEYVAL(TYPE_KEYVAL, IERROR)
    	INTEGER	TYPE_KEYVAL, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -40,18 +46,18 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(INOUT) :: type_keyval
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``type_keyval``: Key value to free (integer). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``type_keyval``: Key value to free (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
+
 
 ERRORS
 ------
@@ -67,4 +73,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Type_create_keyval` 
+.. seealso:: 
+   | :ref:`MPI_Type_create_keyval`

@@ -1,14 +1,17 @@
 .. _shmem_swap:
 
+
 shmem_swap
 ==========
+
 .. include_body
 
-*shmem_double_swap*\ (3), *shmem_float_swap*\ (3),
-*shmem_int_swap*\ (3), *shmem_long_swap*\ (3), *shmem_swap*\ (3),
-*shmem_int4_swap*\ (3), *shmem_int8_swap*\ (3), *shmem_real4_swap*\ (3),
-*shmem_real8_swap*\ (3), *shmem_longlong_swap*\ (3) - Performs an atomic
+:ref:`shmem_double_swap`\ (3), :ref:`shmem_float_swap`\ (3),
+:ref:`shmem_int_swap`\ (3), :ref:`shmem_long_swap`\ (3), :ref:`shmem_swap`\ (3),
+shmem_int4_swap\ (3), shmem_int8_swap\ (3), shmem_real4_swap\ (3),
+shmem_real8_swap\ (3), :ref:`shmem_longlong_swap`\ (3) - Performs an atomic
 swap to a remote data object
+
 
 SYNOPSIS
 --------
@@ -58,6 +61,7 @@ Fortran:
    REAL(KIND=8) SHMEM_REAL8_SWAP
    res = SHMEM_REAL8_SWAP(target, value, pe)
 
+
 DESCRIPTION
 -----------
 
@@ -91,16 +95,19 @@ pe
    updated. If you are using Fortran, it must be a default integer
    value.
 
+
 NOTES
 -----
 
 The term remotely accessible is defined in *intro_shmem*\ (3).
 
+
 RETURN VALUES
------- ------
+-------------
 
 The contents that had been at the target address on the remote PE prior
 to the swap is returned.
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

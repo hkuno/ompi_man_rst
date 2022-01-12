@@ -1,14 +1,18 @@
 .. _mpi_group_range_excl:
 
+
 MPI_Group_range_excl
 ====================
+
 .. include_body
 
 :ref:`MPI_Group_range_excl` - Produces a group by excluding ranges of
 processes from an existing group.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Group_range_excl(MPI_Group group, int n, int ranges[][3],
    	MPI_Group *newgroup)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -30,6 +35,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_GROUP_RANGE_EXCL(GROUP, N, RANGES, NEWGROUP, IERROR)
    	INTEGER	GROUP, N, RANGES(3,*), NEWGROUP, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -44,21 +50,17 @@ Fortran 2008 Syntax
    	TYPE(MPI_Group), INTENT(OUT) :: newgroup
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``group``: Group (handle). 
-
-* ``n``: Number of triplets in array ranges (integer). 
-
-* ``ranges``: A one-dimensional array of integer triplets of the form (first rank, last rank, stride), indicating the ranks in group of processes to be excluded from the output group newgroup. 
+----------------
+* ``group``: Group (handle).
+* ``n``: Number of triplets in array ranges (integer).
+* ``ranges``: A one-dimensional array of integer triplets of the form (first rank, last rank, stride), indicating the ranks in group of processes to be excluded from the output group newgroup.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newgroup``: New group derived from above, preserving the order in group (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newgroup``: New group derived from above, preserving the order in group (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -72,6 +74,7 @@ passing the resulting array of ranks and other arguments to
 :ref:`MPI_Group_excl`. A call to :ref:`MPI_Group_excl` is equivalent to a call to
 :ref:`MPI_Group_range_excl` with each rank i in ranks replaced by the triplet
 (i,i,1) in the argument ranges.
+
 
 ERRORS
 ------
@@ -87,4 +90,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Group_excl` | :ref:`MPI_Group_free` 
+.. seealso:: 
+   | :ref:`MPI_Group_excl`
+   | :ref:`MPI_Group_free`

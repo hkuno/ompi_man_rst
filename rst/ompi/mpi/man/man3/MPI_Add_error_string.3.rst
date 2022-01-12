@@ -1,15 +1,19 @@
 .. _mpi_add_error_string:
 
+
 MPI_Add_error_string
 ====================
+
 .. include_body
 
 ::
 
    MPI_Add_error_string - Associates a string with an error code or class
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Add_error_string(int errorcode, const char *string)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax
    	INTEGER		ERRORCODE, IERROR
    	CHARACTER*(*)	STRING
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -44,17 +50,15 @@ Fortran 2008 Syntax
    	CHARACTER(LEN=*), INTENT(IN) :: string
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``errorcode``: MPI error class, or an error code returned by an MPI routine (integer). 
-
-* ``string``: Text that corresponds to the error code or class (string). 
+----------------
+* ``errorcode``: MPI error class, or an error code returned by an MPI routine (integer).
+* ``string``: Text that corresponds to the error code or class (string).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -65,6 +69,7 @@ an associated error string will replace the old string with the new one.
 It is erroneous to call :ref:`MPI_Add_error_string` for an error value not
 generated via :ref:`MPI_Add_error_class` or :ref:`MPI_Add_error_code` (e.g., an error
 code or class with a value not greater than MPI_LAST_ERRCODE).
+
 
 ERRORS
 ------
@@ -80,4 +85,10 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Add_error_class`    :ref:`MPI_Add_error_code`    :ref:`MPI_Error_class`    :ref:`MPI_Error_string` 
+.. seealso:: 
+   ::
+
+   MPI_Add_error_class
+   MPI_Add_error_code
+   MPI_Error_class
+      MPI_Error_string

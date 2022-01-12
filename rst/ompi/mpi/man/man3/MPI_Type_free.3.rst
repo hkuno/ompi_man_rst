@@ -1,13 +1,17 @@
 .. _mpi_type_free:
 
+
 MPI_Type_free
 =============
+
 .. include_body
 
 :ref:`MPI_Type_free` - Frees a data type.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Type_free(MPI_Datatype *datatype)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_TYPE_FREE(DATATYPE, IERROR)
    	INTEGER	DATATYPE, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -40,15 +46,14 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(INOUT) :: datatype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``datatype``: Datatype that is freed (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``datatype``: Datatype that is freed (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -61,6 +66,7 @@ defined from the freed datatype are not affected.
 Freeing a datatype does not affect any other datatype that was built
 from the freed datatype. The system behaves as if input datatype
 arguments to derived datatype constructors are passed by value.
+
 
 ERRORS
 ------

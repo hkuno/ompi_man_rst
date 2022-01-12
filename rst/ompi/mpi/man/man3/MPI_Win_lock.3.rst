@@ -1,14 +1,18 @@
 .. _mpi_win_lock:
 
+
 MPI_Win_lock
 ============
+
 .. include_body
 
 :ref:`MPI_Win_lock` - Starts an RMA access epoch locking access to a
 particular rank.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_lock(int lock_type, int rank, int assert, MPI_Win win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_LOCK(LOCK_TYPE, RANK, ASSERT, WIN, IERROR)
    	INTEGER LOCK_TYPE, RANK, ASSERT, WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,21 +48,17 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``lock_type``: Either MPI_LOCK_EXCLUSIVE or MPI_LOCK_SHARED (state). 
-
-* ``rank``: Rank of locked window (nonnegative integer). 
-
-* ``assert``: Program assertion (integer). 
-
-* ``win``: Window object (handle). 
+----------------
+* ``lock_type``: Either MPI_LOCK_EXCLUSIVE or MPI_LOCK_SHARED (state).
+* ``rank``: Rank of locked window (nonnegative integer).
+* ``assert``: Program assertion (integer).
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -83,6 +85,7 @@ MPI_MODE_NOCHECK
    No other processes will hold or attempt to acquire a conflicting lock
    while the caller holds the window lock.
 
+
 NOTES
 -----
 
@@ -91,6 +94,7 @@ create windows that span both the client and the server, if a client or
 server that has obtained a lock on such a window and then terminates
 abnormally, the server or other clients may hang in a :ref:`MPI_Win_lock` call,
 failing to notice that the peer MPI job has terminated.
+
 
 ERRORS
 ------
@@ -106,4 +110,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_unlock`  :ref:`MPI_Win_lock_all` 
+.. seealso:: 
+   | :ref:`MPI_Win_unlock` :ref:`MPI_Win_lock_all`

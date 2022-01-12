@@ -1,13 +1,17 @@
 .. _mpi_win_create_keyval:
 
+
 MPI_Win_create_keyval
 =====================
+
 .. include_body
 
 :ref:`MPI_Win_create_keyval` - Creates a keyval for a window.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    int MPI_Win_create_keyval(MPI_Win_copy_attr_function *win_copy_attr_fn,
    	MPI_Win_delete_attr_function *win_delete_attr_fn,
    	int *win_keyval, void *extra_state)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -33,6 +38,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	EXTERNAL WIN_COPY_ATTR_FN, WIN_DELETE_ATTR_FN
    	INTEGER WIN_KEYVAL, IERROR
    	INTEGER(KIND=MPI_ADDRESS_KIND) EXTRA_STATE
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -49,21 +55,17 @@ Fortran 2008 Syntax
    	INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(IN) :: extra_state
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``win_copy_attr_fn``: Copy callback function for *win_keyval* (function). 
-
-* ``win_delete_attr_fn``: Delete callback function for *win_keyval* (function). 
-
-* ``extra_state``: Extra state for callback functions. 
+----------------
+* ``win_copy_attr_fn``: Copy callback function for *win_keyval* (function).
+* ``win_delete_attr_fn``: Delete callback function for *win_keyval* (function).
+* ``extra_state``: Extra state for callback functions.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``win_keyval``: Key value for future access (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``win_keyval``: Key value for future access (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -116,8 +118,9 @@ and
    	INTEGER WIN, WIN_KEYVAL, IERROR
    	INTEGER(KIND=MPI_ADDRESS_KIND) ATTRIBUTE_VAL, EXTRA_STATE
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 *EXTRA_STATE* argument only for Fortran 90. FORTRAN 77 users may use the
@@ -129,6 +132,7 @@ non-portable syntax
 
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------

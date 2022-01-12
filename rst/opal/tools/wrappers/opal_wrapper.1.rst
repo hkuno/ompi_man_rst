@@ -1,15 +1,19 @@
 .. _opal_wrapper:
 
+
 opal_wrapper
 ============
+
 .. include_body
 
 opal_wrapper - Back-end Open MPI wrapper command
+
 
 SYNOPSIS
 --------
 
 **opal_wrapper [options]**
+
 
 DESCRIPTION
 -----------
@@ -29,4 +33,21 @@ and **mpif77.openmpi**), **mpicxx.openmpi**, **mpiCC.openmpi**,
 **ortecc**, and **ortec++**,
 
 
-.. seealso:: The following may exist depending on your particular Open MPIinstallation: **mpicc\ (1), **mpiCC\ (1), **mpic++\ (1),**mpifort\ (1), **mpifort.openmpi\ (1), **mpicxx.openmpi\ (1),**mpiCC.openmpi\ (1), **mpicc.openmpi\ (1), **mpic++.openmpi\ (1),**ortecc**\ (1), **ortec++**\ (1), **opalccc**\ (1), and the website at*https://www.open-mpi.org/*.AUTHORS=======The Open MPI maintainers -- see *https://www.open-mpi.org/* or the file*AUTHORS*.This manual page was originally contributed by Dirk Eddelbuettel<edd@debian.org>, one of the Debian GNU/Linux maintainers for Open MPI,and may be used by others.
+.. seealso:: 
+   The following may exist depending on your particular Open MPI
+   installation: **mpicc**\ (1), **mpiCC**\ (1), **mpic++**\ (1),
+   **mpifort**\ (1), **mpifort.openmpi**\ (1), **mpicxx.openmpi**\ (1),
+   **mpiCC.openmpi**\ (1), **mpicc.openmpi**\ (1), **mpic++.openmpi**\ (1),
+   **ortecc**\ (1), **ortec++**\ (1), **opalccc**\ (1), and the website at
+   *https://www.open-mpi.org/*.
+
+
+AUTHORS
+-------
+
+   The Open MPI maintainers -- see *https://www.open-mpi.org/* or the file
+   *AUTHORS*.
+
+   This manual page was originally contributed by Dirk Eddelbuettel
+   <edd@debian.org>, one of the Debian GNU/Linux maintainers for Open MPI,
+   and may be used by others.

@@ -1,13 +1,17 @@
 .. _mpi_register_datarep:
 
+
 MPI_Register_datarep
 ====================
+
 .. include_body
 
 :ref:`MPI_Register_datarep` - Defines data representation.
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -22,6 +26,7 @@ C Syntax
    	MPI_Datarep_conversion_function *write_conversion_fn,
    	MPI_Datarep_extent_function *dtype_file_extent_fn,
    	void *extra_state)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -39,6 +44,7 @@ Fortran Syntax
    	INTEGER	IERROR
    	INTEGER(KIND=MPI_ADDRESS_KIND)	EXTRA_STATE
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -55,23 +61,18 @@ Fortran 2008 Syntax
    	INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(IN) :: extra_state
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``datarep``: Data representation identifier (string). 
-
-* ``read_conversion_fn``: Function invoked to convert from file representation to native representation (function). 
-
-* ``write_conversion_fn``: Function invoked to convert from native representation to file representation (function). 
-
-* ``dtype_file_extent_fn``: Function invoked to get the extent of a data type as represented in the file (function). 
-
-* ``extra_state``: Extra state. 
+----------------
+* ``datarep``: Data representation identifier (string).
+* ``read_conversion_fn``: Function invoked to convert from file representation to native representation (function).
+* ``write_conversion_fn``: Function invoked to convert from native representation to file representation (function).
+* ``dtype_file_extent_fn``: Function invoked to get the extent of a data type as represented in the file (function).
+* ``extra_state``: Extra state.
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -101,6 +102,7 @@ value of at least 64. No routines are provided to delete data
 representations and free the associated resources; it is not expected
 that an application will generate them in significant numbers.
 
+
 NOTES
 -----
 
@@ -113,6 +115,7 @@ The C version of each routine returns an error status as an integer
 return value.
 
 Error classes are found in mpi.h (for C) and mpif.h (for Fortran).
+
 
 ERRORS
 ------

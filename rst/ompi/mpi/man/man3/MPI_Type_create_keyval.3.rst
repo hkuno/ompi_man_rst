@@ -1,14 +1,18 @@
 .. _mpi_type_create_keyval:
 
+
 MPI_Type_create_keyval
 ======================
+
 .. include_body
 
 :ref:`MPI_Type_create_keyval` - Generates a new attribute key for caching
 on data types.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Type_create_keyval(MPI_Type_copy_attr_function *type_copy_attr_fn,
    	MPI_Type_delete_attr_function *type_delete_attr_fn,
    	int *type_keyval, void *extra_state)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -34,6 +39,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	EXTERNAL TYPE_COPY_ATTR_FN, TYPE_DELETE_ATTR_FN
    	INTEGER	TYPE_KEYVAL, IERROR
    	INTEGER(KIND=MPI_ADDRESS_KIND) EXTRA_STATE
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -50,21 +56,17 @@ Fortran 2008 Syntax
    	INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(IN) :: extra_state
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``type_copy_attr_fn``: Copy callback function for *type_keyval* (function). 
-
-* ``type_delete_attr_fn``: Delete callback function for *type_keyval* (function). 
-
-* ``extra_state``: Extra state for callback functions. 
+----------------
+* ``type_copy_attr_fn``: Copy callback function for *type_keyval* (function).
+* ``type_delete_attr_fn``: Delete callback function for *type_keyval* (function).
+* ``extra_state``: Extra state for callback functions.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``type_keyval``: Key value for future access (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``type_keyval``: Key value for future access (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -118,8 +120,9 @@ and
        INTEGER TYPE, TYPE_KEYVAL, IERROR
        INTEGER(KIND=MPI_ADDRESS_KIND) ATTRIBUTE VAL, EXTRA_STATE
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 *EXTRA_STATE* argument only for Fortran 90. FORTRAN 77 users may use the
@@ -131,6 +134,7 @@ non-portable syntax
 
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------
@@ -146,4 +150,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Type_free_keyval` 
+.. seealso:: 
+   :ref:`MPI_Type_free_keyval`

@@ -1,13 +1,17 @@
 .. _mpi_comm_set_name:
 
+
 MPI_Comm_set_name
 =================
+
 .. include_body
 
 :ref:`MPI_Comm_set_name` - Associates a name with a communicator.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_set_name(MPI_Comm comm, const char *comm_name)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    	INTEGER	COMM, IERROR
    	CHARACTER*(*) COMM_NAME
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -42,20 +48,18 @@ Fortran 2008 Syntax
    	CHARACTER(LEN=*), INTENT(IN) :: comm_name
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``comm``: Communicator whose identifier is to be set (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``comm``: Communicator whose identifier is to be set (handle).
 
 INPUT PARAMETER
------ ---------
-
-* ``comm_name``: Character string to be used as the identifier for the communicator (string). 
+---------------
+* ``comm_name``: Character string to be used as the identifier for the communicator (string).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -77,6 +81,7 @@ for the null terminator). Attempts to set names longer than this will
 result in truncation of the name. MPI_MAX_OBJECT_NAME must have a value
 of at least 64.
 
+
 NOTES
 -----
 
@@ -89,6 +94,7 @@ attempt to set a name of any length could fail; therefore, the value of
 MPI_MAX_OBJECT_NAME should be viewed only as a strict upper bound on the
 name length, not a guarantee that setting names of less than this length
 will always succeed.
+
 
 ERRORS
 ------
@@ -104,4 +110,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Comm_get_name` 
+.. seealso:: 
+   :ref:`MPI_Comm_get_name`

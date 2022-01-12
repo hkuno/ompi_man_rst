@@ -1,14 +1,18 @@
 .. _mpi_win_wait:
 
+
 MPI_Win_wait
 ============
+
 .. include_body
 
 :ref:`MPI_Win_wait` - Completes an RMA exposure epoch started by a call to
 :ref:`MPI_Win_post` on *win*
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_wait(MPI_Win win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_WIN_WAIT( WIN, IERROR)
    	INTEGER  WIN, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -41,15 +47,14 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETERS
------ ----------
 
-* ``win``: Window object (handle). 
+INPUT PARAMETERS
+----------------
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -63,6 +68,7 @@ epoch. The call to :ref:`MPI_Win_wait` blocks until all matching calls to
 processes have completed their RMA accesses to the local window. When
 the call returns, all these RMA accesses will have completed at the
 target window.
+
 
 ERRORS
 ------
@@ -78,4 +84,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_post` 
+.. seealso:: 
+   | :ref:`MPI_Win_post`

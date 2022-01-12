@@ -1,13 +1,17 @@
 .. _mpi_file_get_size:
 
+
 MPI_File_get_size
 =================
+
 .. include_body
 
 :ref:`MPI_File_get_size` - Returns the current size of the file.
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_File_get_size(MPI_File fh, MPI_Offset *size)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER	FH, ERROR
    	INTEGER(KIND=MPI_OFFSET_KIND)	SIZE
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -43,17 +49,15 @@ Fortran 2008 Syntax
    	INTEGER(KIND=MPI_OFFSET_KIND), INTENT(OUT) :: size
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``size``: Size of the file in bytes (integer). 
+----------------
+* ``fh``: File handle (handle).
+* ``size``: Size of the file in bytes (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -64,8 +68,9 @@ returned by Solaris may not represent the number of bytes physically
 allocated for the file in those cases where all bytes in this file have
 not been written at least once.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *SIZE*
 argument only for Fortran 90. Sun FORTRAN 77 users may use the
@@ -77,6 +82,7 @@ non-portable syntax
 
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------
@@ -92,4 +98,6 @@ MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: || :ref:`MPI_File_preallocate` 
+.. seealso:: 
+   |
+   | :ref:`MPI_File_preallocate`

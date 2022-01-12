@@ -1,13 +1,17 @@
 .. _mpi_file_set_size:
 
+
 MPI_File_set_size
 =================
+
 .. include_body
 
 :ref:`MPI_File_set_size` - Resizes a file (collective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_File_set_size(MPI_File fh, MPI_Offset size)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER	FH, IERROR
    	INTEGER(KIND=MPI_OFFSET_KIND)	SIZE
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -43,17 +49,15 @@ Fortran 2008 Syntax
    	INTEGER(KIND=MPI_OFFSET_KIND), INTENT(IN) :: size
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``size``: Size to truncate or expand file (integer). 
+----------------
+* ``fh``: File handle (handle).
+* ``size``: Size to truncate or expand file (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -78,8 +82,9 @@ Note that the actual amount of storage space cannot be allocated by
 It is erroneous to call this function if MPI_MODE_SEQUENTIAL mode was
 specified when the file was opened.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *SIZE*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -91,6 +96,7 @@ syntax
 
 where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------

@@ -1,13 +1,17 @@
 .. _mpi_reduce_local:
 
+
 MPI_Reduce_local
 ================
+
 .. include_body
 
 :ref:`MPI_Reduce_local` - Perform a local reduction
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Reduce_local(const void *inbuf, void *inoutbuf, int count,
    	MPI_Datatype datatype, MPI_Op op)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_REDUCE_LOCAL(INBUF, INOUTBUF, COUNT, DATATYPE, OP, IERROR)
    	<type>	INBUF(*), INOUTBUF(*)
    	INTEGER	COUNT, DATATYPE, OP, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -46,23 +52,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Op), INTENT(IN) :: op
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``inbuf``: Address of input buffer (choice). 
-
-* ``count``: Number of elements in input buffer (integer). 
-
-* ``datatype``: Data type of elements of input buffer (handle). 
-
-* ``op``: Reduce operation (handle). 
+----------------
+* ``inbuf``: Address of input buffer (choice).
+* ``count``: Number of elements in input buffer (integer).
+* ``datatype``: Data type of elements of input buffer (handle).
+* ``op``: Reduce operation (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``inoutbuf``: Address of in/out buffer (choice). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``inoutbuf``: Address of in/out buffer (choice).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -91,13 +92,15 @@ and the input buffer contains two elements that are floating-point
 numbers (count = 2 and datatype = MPI_FLOAT), then inoutbuf(1) = global
 max (inbuf(1)) and inoutbuf(2) = global max(inbuf(2)).
 
+
 USE OF IN-PLACE OPTION
---- -- -------- ------
+----------------------
 
 The use of MPI_IN_PLACE is disallowed with :ref:`MPI_Reduce_local`.
 
+
 PREDEFINED REDUCE OPERATIONS
----------- ------ ----------
+----------------------------
 
 The set of predefined operations provided by MPI is listed below
 (Predefined Reduce Operations). That section also enumerates the
@@ -182,8 +185,9 @@ Now, the valid datatypes for each option is specified below.
    	MPI_BAND, MPI_BOR,		C integer, Fortran integer, byte
    	MPI_BXOR
 
+
 MINLOC AND MAXLOC
------- --- ------
+-----------------
 
 The operator MPI_MINLOC is used to compute a global minimum and also an
 index attached to the minimum value. MPI_MAXLOC similarly computes a
@@ -301,8 +305,9 @@ Similar statements apply for MPI_LONG_INT and MPI_DOUBLE_INT.
 All MPI objects (e.g., MPI_Datatype, MPI_Comm) are of type INTEGER in
 Fortran.
 
+
 NOTES ON COLLECTIVE OPERATIONS
------ -- ---------- ----------
+------------------------------
 
 The reduction operators ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call
@@ -312,6 +317,7 @@ MPI_ERRORS_RETURN , then no error may be indicated.
 
 The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
+
 
 ERRORS
 ------
@@ -327,4 +333,10 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Allreduce` | :ref:`MPI_Reduce` | :ref:`MPI_Reduce_scatter` | :ref:`MPI_Scan` | :ref:`MPI_Op_create` | :ref:`MPI_Op_free` 
+.. seealso:: 
+   | :ref:`MPI_Allreduce`
+   | :ref:`MPI_Reduce`
+   | :ref:`MPI_Reduce_scatter`
+   | :ref:`MPI_Scan`
+   | :ref:`MPI_Op_create`
+   | :ref:`MPI_Op_free`

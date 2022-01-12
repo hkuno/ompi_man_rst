@@ -1,12 +1,15 @@
 .. _shmem_int_inc:
 
+
 shmem_int_inc
 =============
+
 .. include_body
 
-*shmem_int4_inc*\ (3), *shmem_int8_inc*\ (3), *shmem_int_inc*\ (3),
-*shmem_long_inc*\ (3), *shmem_longlong_inc*\ (3) - These routines
+shmem_int4_inc\ (3), shmem_int8_inc\ (3), :ref:`shmem_int_inc`\ (3),
+:ref:`shmem_long_inc`\ (3), :ref:`shmem_longlong_inc`\ (3) - These routines
 perform an atomic increment operation on a remote data object.
+
 
 SYNOPSIS
 --------
@@ -39,6 +42,7 @@ Fortran:
 
    ires8 = SHMEM_INT8_INC(target8, pe)
 
+
 DESCRIPTION
 -----------
 
@@ -59,15 +63,18 @@ pe
    updated. If you are using Fortran, it must be a default integer
    value.
 
+
 NOTES
 -----
 
 The term remotely accessible is defined in *intro_shmem*\ (3).
 
+
 RETURN VALUES
------- ------
+-------------
 
 None.
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

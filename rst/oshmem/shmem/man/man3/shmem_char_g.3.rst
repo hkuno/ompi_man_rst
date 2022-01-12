@@ -1,14 +1,17 @@
 .. _shmem_char_g:
 
+
 shmem_char_g
 ============
+
 .. include_body
 
-*shmem_char_g*\ (3), *shmem_float_g*\ (3), *shmem_int_g*\ (3),
-*shmem_long_g*\ (3), *shmem_short_g*\ (3), *shmem_longlong_g*\ (3),
-*shmem_longdouble_g*\ (3) - These routines provide a low latency
+:ref:`shmem_char_g`\ (3), :ref:`shmem_float_g`\ (3), :ref:`shmem_int_g`\ (3),
+:ref:`shmem_long_g`\ (3), :ref:`shmem_short_g`\ (3), :ref:`shmem_longlong_g`\ (3),
+:ref:`shmem_longdouble_g`\ (3) - These routines provide a low latency
 mechanism to read basic types (char, short, int, float, double, long,
 long long, long double) from symmetric data objects on remote PEs.
+
 
 SYNOPSIS
 --------
@@ -37,6 +40,7 @@ C or C++:
 
    long shmem_longdouble_g(const long double *addr, int pe);
 
+
 DESCRIPTION
 -----------
 
@@ -53,4 +57,5 @@ pe
    The number of the remote PE.
 
 
-.. seealso:: *intro_shmem\ (3), *shmem_get\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_get*\ (3)

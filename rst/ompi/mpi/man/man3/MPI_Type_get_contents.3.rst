@@ -1,14 +1,18 @@
 .. _mpi_type_get_contents:
 
+
 MPI_Type_get_contents
 =====================
+
 .. include_body
 
 :ref:`MPI_Type_get_contents` - Returns information about arguments used in
 creation of a data type.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Type_get_contents(MPI_Datatype datatype, int max_integers,
    	int max_addresses, int max_datatypes, int array_of_integers[], MPI_Aint array_of_addresses[], MPI_Datatype array_of_datatypes[])
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -34,6 +39,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER	DATATYPE, MAX_INTEGERS, MAX_ADDRESSES, MAX_DATATYPES
    	INTEGER	ARRAY_OF_INTEGERS(*), ARRAY_OF_DATATYPES(*), IERROR
    	INTEGER(KIND=MPI_ADDRESS_KIND) ARRAY_OF_ADDRESSES(*)
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -53,27 +59,20 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(OUT) :: array_of_datatypes(max_datatypes)
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``datatype``: Data type to access (handle). 
-
-* ``max_integers``: Number of elements in *array_of_integers (nonnegative integer).* 
-
-* ``max_addresses``: Number of elements in *array_of_addresses (nonnegative integer).* 
-
-* ``max_datatypes``: Number of elements in *array_of_datatypes (nonnegative integer).* 
+----------------
+* ``datatype``: Data type to access (handle).
+* ``max_integers``: Number of elements in *array_of_integers (nonnegative integer).*
+* ``max_addresses``: Number of elements in *array_of_addresses (nonnegative integer).*
+* ``max_datatypes``: Number of elements in *array_of_datatypes (nonnegative integer).*
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``array_of_integers``: Contains integer arguments used in constructing *datatype (array of integers).* 
-
-* ``array_of_addresses``: Contains address arguments used in constructing *datatype (array of integers).* 
-
-* ``array_of_datatypes``: Contains data-type arguments used in constructing *datatype (array of integers).* 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``array_of_integers``: Contains integer arguments used in constructing *datatype (array of integers).*
+* ``array_of_addresses``: Contains address arguments used in constructing *datatype (array of integers).*
+* ``array_of_datatypes``: Contains data-type arguments used in constructing *datatype (array of integers).*
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -123,8 +122,9 @@ being returned by the C bindings. It can also be determined by examining
 the new MPI-2 calls for data-type constructors for the deprecated MPI-1
 calls that involve addresses.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 *ARRAY_OF_ADDRESSES argument only for Fortran 90. FORTRAN 77* users may
@@ -136,6 +136,7 @@ use the non-portable syntax
 
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------
@@ -151,4 +152,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Type_get_envelope` 
+.. seealso:: 
+   | :ref:`MPI_Type_get_envelope`

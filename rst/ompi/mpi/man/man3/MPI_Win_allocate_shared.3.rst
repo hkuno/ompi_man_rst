@@ -1,14 +1,18 @@
 .. _mpi_win_allocate_shared:
 
+
 MPI_Win_allocate_shared
 =======================
+
 .. include_body
 
 :ref:`MPI_Win_allocate_shared` - One-sided MPI call that allocates shared
 memory and returns a window object for RMA operations.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Win_allocate_shared (MPI_Aint size, int disp_unit, MPI_Info info,
                                 MPI_Comm comm, void *baseptr, MPI_Win *win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    MPI_WIN_ALLOCATE_SHARED(SIZE, DISP_UNIT, INFO, COMM, BASEPTR, WIN, IERROR)
    	INTEGER(KIND=MPI_ADDRESS_KIND) SIZE, BASEPTR
    	INTEGER DISP_UNIT, INFO, COMM, WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -49,25 +55,19 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(OUT) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``size``: Size of window in bytes (nonnegative integer). 
-
-* ``disp_unit``: Local unit size for displacements, in bytes (positive integer). 
-
-* ``info``: Info argument (handle). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``size``: Size of window in bytes (nonnegative integer).
+* ``disp_unit``: Local unit size for displacements, in bytes (positive integer).
+* ``info``: Info argument (handle).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``baseptr``: Initial address of window. 
-
-* ``win``: Window object returned by the call (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``baseptr``: Initial address of window.
+* ``win``: Window object returned by the call (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -113,6 +113,7 @@ blocking_fence
 
 For additional supported info keys see :ref:`MPI_Win_create`.
 
+
 NOTES
 -----
 
@@ -126,12 +127,14 @@ Calling :ref:`MPI_Win_free` will deallocate the memory allocated by
 :ref:`MPI_Win_allocate_shared`. It is thus erroneous to manually free
 *baseptr*.
 
+
 C NOTES
-- -----
+-------
 
 While *baseptr* is a *void \** type, this is to allow easy use of any
 pointer object for this parameter. This argument is really a *void \*\**
 type.
+
 
 ERRORS
 ------
@@ -147,4 +150,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Alloc_mem`  :ref:`MPI_Free_mem`  :ref:`MPI_Win_allocate`  :ref:`MPI_Win_create` :ref:`MPI_Win_shared_query`  :ref:`MPI_Win_free` 
+.. seealso:: 
+   :ref:`MPI_Alloc_mem` :ref:`MPI_Free_mem` :ref:`MPI_Win_allocate` :ref:`MPI_Win_create`
+   :ref:`MPI_Win_shared_query` :ref:`MPI_Win_free`

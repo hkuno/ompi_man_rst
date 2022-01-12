@@ -1,13 +1,17 @@
 .. _mpi_op_create:
 
+
 MPI_Op_create
 =============
+
 .. include_body
 
 :ref:`MPI_Op_create` - Creates a user-defined combination function handle.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Op_create(MPI_User_function *function, int commute,
    	MPI_Op *op)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax
    	LOGICAL	COMMUTE
    	INTEGER	OP, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -45,19 +51,16 @@ Fortran 2008 Syntax
    	TYPE(MPI_Op), INTENT(OUT) :: op
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``function``: User-defined function (function). 
-
-* ``commute``: True if commutative; false otherwise. 
+----------------
+* ``function``: User-defined function (function).
+* ``commute``: True if commutative; false otherwise.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``op``: Operation (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``op``: Operation (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -123,6 +126,7 @@ datatypes that are not contiguous is likely to lead to inefficiencies.
 
 No MPI communication function may be called inside the user function.
 :ref:`MPI_Abort` may be called inside the function in case of an error.
+
 
 NOTES
 -----
@@ -198,8 +202,9 @@ Fortran-type datatype argument; the C version will use C calling
 convention and the C representation of a datatype handle. Users who plan
 to mix languages should define their reduction functions accordingly.
 
+
 NOTES ON COLLECTIVE OPERATIONS
------ -- ---------- ----------
+------------------------------
 
 The reduction functions ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call
@@ -209,6 +214,7 @@ MPI_ERRORS_RETURN , then no error may be indicated.
 
 The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
+
 
 ERRORS
 ------
@@ -224,4 +230,11 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Reduce`    :ref:`MPI_Reduce_scatter`    :ref:`MPI_Allreduce`    :ref:`MPI_Scan`    :ref:`MPI_Op_free` 
+.. seealso:: 
+   ::
+
+   MPI_Reduce
+   MPI_Reduce_scatter
+   MPI_Allreduce
+   MPI_Scan
+      MPI_Op_free

@@ -2,6 +2,7 @@
 
 MPI_Get_elements
 ================
+
 .. include_body
 
 :ref:`MPI_Get_elements`, :ref:`MPI_Get_elements_x` - Returns the number of
@@ -143,4 +144,4 @@ where ``MPI_COUNT_KIND`` is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
 
-.. seealso:: :ref:`MPI_Get_count` 
+.. seealso:: :ref:`MPI_Get_count`

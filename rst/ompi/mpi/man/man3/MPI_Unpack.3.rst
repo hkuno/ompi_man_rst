@@ -1,13 +1,17 @@
 .. _mpi_unpack:
 
+
 MPI_Unpack
 ==========
+
 .. include_body
 
 :ref:`MPI_Unpack` - Unpacks a datatype into contiguous memory.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    int MPI_Unpack(const void *inbuf, int insize, int *position,
    	void *outbuf, int outcount, MPI_Datatype datatype,
    	MPI_Comm comm)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -33,6 +38,7 @@ Fortran Syntax
    	<type>	INBUF(*), OUTBUF(*)
    	INTEGER	INSIZE, POSITION, OUTCOUNT, DATATYPE,
    		COMM, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -51,30 +57,23 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(IN) :: comm
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``inbuf``: Input buffer start (choice). 
-
-* ``insize``: Size of input buffer, in bytes (integer). 
-
-* ``outcount``: Number of items to be unpacked (integer). 
-
-* ``datatype``: Datatype of each output data item (handle). 
-
-* ``comm``: Communicator for packed message (handle). 
+----------------
+* ``inbuf``: Input buffer start (choice).
+* ``insize``: Size of input buffer, in bytes (integer).
+* ``outcount``: Number of items to be unpacked (integer).
+* ``datatype``: Datatype of each output data item (handle).
+* ``comm``: Communicator for packed message (handle).
 
 INPUT/OUTPUT PARAMETER
------/------ ---------
-
-* ``position``: Current position in bytes (integer). 
+-----/----------------
+* ``position``: Current position in bytes (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``outbuf``: Output buffer start (choice). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``outbuf``: Output buffer start (choice).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -89,6 +88,7 @@ by the size of the packed message, so that the output value of position
 is the first location in the input buffer after the locations occupied
 by the message that was unpacked. *comm* is the communicator used to
 receive the packed message.
+
 
 NOTES
 -----
@@ -147,6 +147,7 @@ unit as a separate packing unit. Each packing unit that was created by a
 related sequence of pack calls or by a regular send must be unpacked as
 a unit, by a sequence of related unpack calls.
 
+
 ERRORS
 ------
 
@@ -161,4 +162,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Pack` | :ref:`MPI_Pack_size` 
+.. seealso:: 
+   | :ref:`MPI_Pack`
+   | :ref:`MPI_Pack_size`

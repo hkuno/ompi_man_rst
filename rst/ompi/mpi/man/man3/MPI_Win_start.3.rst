@@ -1,13 +1,17 @@
 .. _mpi_win_start:
 
+
 MPI_Win_start
 =============
+
 .. include_body
 
 :ref:`MPI_Win_start` - Starts an RMA access epoch for *win*
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_start(MPI_Group group, int assert, MPI_Win win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_START(GROUP, ASSERT, WIN, IERROR)
    	INTEGER GROUP, ASSERT, WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,19 +48,16 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``group``: The group of target processes (handle). 
-
-* ``assert``: Program assertion (integer). 
-
-* ``win``: Window object (handle). 
+----------------
+* ``group``: The group of target processes (handle).
+* ``assert``: Program assertion (integer).
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -76,6 +79,7 @@ MPI_MODE_NOCHECK
    the post call on the target has been called and it is not necessary
    for the library to check to see if such a call has been made.
 
+
 ERRORS
 ------
 
@@ -90,4 +94,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_post`  :ref:`MPI_Win_complete` 
+.. seealso:: 
+   | :ref:`MPI_Win_post` :ref:`MPI_Win_complete`

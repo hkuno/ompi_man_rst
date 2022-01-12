@@ -1,15 +1,19 @@
 .. _mpi_type_create_f90_real:
 
+
 MPI_Type_create_f90_real
 ========================
+
 .. include_body
 
 ::
 
    MPI_Type_create_f90_real - Returns a bounded MPI real datatype
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Type_create_f90_real(int p, int r, MPI_Datatype *newtype)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_TYPE_CREATE_F90_REAL (P, R, NEWTYPE, IERROR)
    	INTEGER	P, R, NEWTYPE, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,19 +49,16 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(OUT) :: newtype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``p``: Precision, in decimal digits (integer). 
-
-* ``r``: Decimal exponent range (integer). 
+----------------
+* ``p``: Precision, in decimal digits (integer).
+* ``r``: Decimal exponent range (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newtype``: New data type (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newtype``: New data type (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -71,6 +74,7 @@ between +\ *r* and -*r* (inclusive).
 Either *p* or *r*, but not both, may be omitted from calls to
 SELECTED_REAL_KIND. Similarly, either argument to
 :ref:`MPI_Type_create_f90_real` may be set to MPI_UNDEFINED.
+
 
 NOTES
 -----
@@ -117,6 +121,7 @@ not obtained with SELECTED_REAL_KIND (i.e., *p* and/or *r* are unknown),
 the only way to obtain a matching MPI datatype is to use the functions
 :ref:`MPI_Sizeof` and :ref:`MPI_Type_match_size`.
 
+
 ERRORS
 ------
 
@@ -133,4 +138,11 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Pack_external`    :ref:`MPI_Sizeof`    :ref:`MPI_Type_match_size`    :ref:`MPI_Unpack_external`    SELECTED_REAL_KIND
+.. seealso:: 
+   ::
+
+   MPI_Pack_external
+   MPI_Sizeof
+   MPI_Type_match_size
+   MPI_Unpack_external
+      SELECTED_REAL_KIND

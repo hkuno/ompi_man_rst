@@ -1,13 +1,17 @@
 .. _mpi_win_free_keyval:
 
+
 MPI_Win_free_keyval
 ===================
+
 .. include_body
 
 :ref:`MPI_Win_free_keyval` - Frees a window keyval.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_free_keyval(int *win_keyval)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_WIN_FREE_KEYVAL(WIN_KEYVAL, IERROR)
    	INTEGER WIN_KEYVAL, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -40,15 +46,14 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(INOUT) :: win_keyval
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``win_keyval``: Key value (integer). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``win_keyval``: Key value (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 ERRORS
 ------

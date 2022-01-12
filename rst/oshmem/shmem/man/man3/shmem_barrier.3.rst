@@ -1,11 +1,14 @@
 .. _shmem_barrier:
 
+
 shmem_barrier
 =============
+
 .. include_body
 
-shmem_barrier - Performs a barrier operation on a subset of processing
+:ref:`shmem_barrier` - Performs a barrier operation on a subset of processing
 elements (PEs).
+
 
 SYNOPSIS
 --------
@@ -32,10 +35,11 @@ Fortran:
 
    CALL SHMEM_BARRIER(PE_start, logPE_stride, PE_size, pSync)
 
+
 DESCRIPTION
 -----------
 
-The shmem_barrier routine does not return until the subset of PEs
+The :ref:`shmem_barrier` routine does not return until the subset of PEs
 specified by **PE_start**, **logPE_stride** and **PE_size**, has entered
 this routine at the same point of the execution path.
 
@@ -65,19 +69,20 @@ pSync
    and size SHMEM_BARRIER_SYNC_SIZE. If you are using Fortran, it must
    be a default integer type. Every element of this array must be
    initialized to 0 before any of the PEs in the active set enter
-   shmem_barrier the first time.
+   :ref:`shmem_barrier` the first time.
 
 The values of arguments PE_start, logPE_stride, and PE_size must be
 equal on all PEs in the active set. The same work array must be passed
 in pSync to all PEs in the active set.
 
-shmem_barrier ensures that all previously issued local stores and
+:ref:`shmem_barrier` ensures that all previously issued local stores and
 previously issued remote memory updates done by any of the PEs in the
-active set (by using SHMEM calls, for example *shmem_put*\ (3)) are
+active set (by using SHMEM calls, for example shmem_put\ (3)) are
 complete before returning.
 
-The same pSync array may be reused on consecutive calls to shmem_barrier
+The same pSync array may be reused on consecutive calls to :ref:`shmem_barrier`
 if the same active PE set is used.
+
 
 NOTES
 -----
@@ -85,12 +90,13 @@ NOTES
 The term symmetric is defined in *intro_shmem*\ (3).
 
 If the pSync array is initialized at run time, be sure to use some type
-of synchronization, for example, a call to *shmem_barrier_all*\ (3),
-before calling shmem_barrier for the first time.
+of synchronization, for example, a call to :ref:`shmem_barrier_all`\ (3),
+before calling :ref:`shmem_barrier` for the first time.
 
-If the active set does not change, shmem_barrier can be called
+If the active set does not change, :ref:`shmem_barrier` can be called
 repeatedly with the same pSync array. No additional synchronization
-beyond that implied by shmem_barrier itself is necessary in this case.
+beyond that implied by :ref:`shmem_barrier` itself is necessary in this case.
+
 
 EXAMPLES
 --------
@@ -114,4 +120,5 @@ Fortran example:
    CALL SHMEM_BARRIER(PE_START, LOGPE_STRIDE, PE_SIZE, PSYNC)
 
 
-.. seealso:: *intro_shmem\ (3), *:ref:`shmem_barrier_all` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_barrier_all*\ (3)

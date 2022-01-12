@@ -1,15 +1,19 @@
 .. _mpi_neighbor_alltoallw:
 
+
 MPI_Neighbor_alltoallw
 ======================
+
 .. include_body
 
 :ref:`MPI_Neighbor_alltoallw`, :ref:`MPI_Ineighbor_alltoallw`,
 :ref:`MPI_Neighbor_alltoallw_init` - All processes send data of different
 types to, and receive data of different types from, all processes
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -32,6 +36,7 @@ C Syntax
    	const MPI_Aint sdispls[], const MPI_Datatype sendtypes[],
    	void *recvbuf, const int recvcounts[], const MPI_Aint rdispls[],
    	const MPI_Datatype recvtypes[], MPI_Comm comm, MPI_Info info, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -67,6 +72,7 @@ Fortran Syntax
    	INTEGER	RECVCOUNTS(*), RECVTYPES(*)
    	INTEGER(KIND=MPI_ADDRESS_KIND) SDISPLS(*), RDISPLS(*)
    	INTEGER	COMM, INFO, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -115,35 +121,24 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Starting address of send buffer. 
-
-* ``sendcounts``: Integer array, where entry i specifies the number of elements to send to neighbor i. 
-
-* ``sdispls``: Integer array, where entry i specifies the displacement (in bytes, offset from *sendbuf*) from which to send data to neighbor i. 
-
-* ``sendtypes``: Datatype array, where entry i specifies the datatype to use when sending data to neighbor i. 
-
-* ``recvcounts``: Integer array, where entry j specifies the number of elements to receive from neighbor j. 
-
-* ``rdispls``: Integer array, where entry j specifies the displacement (in bytes, offset from *recvbuf*) to which data from neighbor j should be written. 
-
-* ``recvtypes``: Datatype array, where entry j specifies the datatype to use when receiving data from neighbor j. 
-
-* ``comm``: Communicator over which data is to be exchanged. 
-
-* ``info``: Info (handle, persistent only). 
+----------------
+* ``sendbuf``: Starting address of send buffer.
+* ``sendcounts``: Integer array, where entry i specifies the number of elements to send to neighbor i.
+* ``sdispls``: Integer array, where entry i specifies the displacement (in bytes, offset from *sendbuf*) from which to send data to neighbor i.
+* ``sendtypes``: Datatype array, where entry i specifies the datatype to use when sending data to neighbor i.
+* ``recvcounts``: Integer array, where entry j specifies the number of elements to receive from neighbor j.
+* ``rdispls``: Integer array, where entry j specifies the displacement (in bytes, offset from *recvbuf*) to which data from neighbor j should be written.
+* ``recvtypes``: Datatype array, where entry j specifies the datatype to use when receiving data from neighbor j.
+* ``comm``: Communicator over which data is to be exchanged.
+* ``info``: Info (handle, persistent only).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Address of receive buffer. 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status. 
+-----------------
+* ``recvbuf``: Address of receive buffer.
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status.
 
 DESCRIPTION
 -----------
@@ -197,6 +192,7 @@ than it receives from process j. Also, a process may send entirely
 different amounts and types of data to different processes in the
 communicator.
 
+
 NOTES
 -----
 
@@ -213,6 +209,7 @@ The offsets of *sdispls* and *rdispls* are measured in bytes. Compare
 this to :ref:`MPI_Neighbor_alltoallv`, where these offsets are measured in
 units of *sendtype* and *recvtype*, respectively.
 
+
 ERRORS
 ------
 
@@ -227,4 +224,11 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Neighbor_alltoall`    :ref:`MPI_Neighbor_alltoallv`    :ref:`MPI_Cart_create`    :ref:`MPI_Graph_create`    :ref:`MPI_Dist_graph_create` 
+.. seealso:: 
+   ::
+
+   MPI_Neighbor_alltoall
+   MPI_Neighbor_alltoallv
+   MPI_Cart_create
+   MPI_Graph_create
+      MPI_Dist_graph_create

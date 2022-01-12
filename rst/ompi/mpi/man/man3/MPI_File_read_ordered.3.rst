@@ -1,14 +1,18 @@
 .. _mpi_file_read_ordered:
 
+
 MPI_File_read_ordered
 =====================
+
 .. include_body
 
 :ref:`MPI_File_read_ordered` - Reads a file at a location specified by a
 shared file pointer (blocking, collective).
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_File_read_ordered(MPI_File fh, void *buf,
    	int count, MPI_Datatype datatype,
    	MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -33,6 +38,7 @@ Fortran Syntax
    	STATUS, IERROR)
    	<type>	BUF(*)
    	INTEGER	FH, COUNT, DATATYPE, STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -49,23 +55,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``count``: Number of elements in buffer (integer). 
-
-* ``datatype``: Data type of each buffer element (handle). 
+----------------
+* ``fh``: File handle (handle).
+* ``count``: Number of elements in buffer (integer).
+* ``datatype``: Data type of each buffer element (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``buf``: Initial address of buffer (choice). 
-
-* ``status``: Status object (Status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``buf``: Initial address of buffer (choice).
+* ``status``: Status object (Status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -82,6 +83,7 @@ the group are less than that of this process had read their data.
 :ref:`MPI_File_read_ordered` returns the actual number of *datatype* elements
 read in *status.* The shared file pointer is updated by the amounts of
 data requested by all processes of the group.
+
 
 ERRORS
 ------

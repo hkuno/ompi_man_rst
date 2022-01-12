@@ -1,14 +1,18 @@
 .. _mpi_type_indexed:
 
+
 MPI_Type_indexed
 ================
+
 .. include_body
 
 :ref:`MPI_Type_indexed`, :ref:`MPI_Type_create_hindexed` - Creates an indexed
 datatype.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -25,6 +29,7 @@ C Syntax
    	const int array_of_blocklengths[],
    	const MPI_Aint array_of_displacements[], MPI_Datatype oldtype,
    	MPI_Datatype *newtype)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -46,6 +51,7 @@ Fortran Syntax
    	INTEGER	OLDTYPE, NEWTYPE
    	INTEGER(KIND=MPI_ADDRESS_KIND) ARRAY_OF_DISPLACEMENTS(*)
    	INTEGER	IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -71,23 +77,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(OUT) :: newtype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Number of blocks -- also number of entries in array_of_displacements and array_of_blocklengths (nonnegative integer). 
-
-* ``array_of_blocklengths``: Number of elements per block (array of nonnegative integers). 
-
-* ``array_of_displacements``: Displacement for each block, in multiples of oldtype extent for MPI_Type_indexed and bytes for MPI_Type_create_hindexed (array of integer for **MPI_TYPE_INDEXED**, array of *MPI_Aint* for **MPI_TYPE_CREATE_HINDEXED**). 
-
-* ``oldtype``: Old datatype (handle). 
+----------------
+* ``count``: Number of blocks -- also number of entries in array_of_displacements and array_of_blocklengths (nonnegative integer).
+* ``array_of_blocklengths``: Number of elements per block (array of nonnegative integers).
+* ``array_of_displacements``: Displacement for each block, in multiples of oldtype extent for MPI_Type_indexed and bytes for MPI_Type_create_hindexed (array of integer for **MPI_TYPE_INDEXED**, array of *MPI_Aint* for **MPI_TYPE_CREATE_HINDEXED**).
+* ``oldtype``: Old datatype (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newtype``: New datatype (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newtype``: New datatype (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -151,6 +152,7 @@ The function :ref:`MPI_Type_create_hindexed` is identical to :ref:`MPI_Type_inde
 except that block displacements in *array_of_displacements* are
 specified in bytes, rather than in multiples of the *oldtype* extent.
 
+
 ERRORS
 ------
 
@@ -165,4 +167,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Type_hindexed` 
+.. seealso:: 
+   | :ref:`MPI_Type_hindexed`

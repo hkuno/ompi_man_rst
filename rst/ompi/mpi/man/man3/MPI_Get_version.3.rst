@@ -2,6 +2,7 @@
 
 MPI_Get_version
 ===============
+
 .. include_body
 
 :ref:`MPI_Get_version` - Returns the version of the standard corresponding

@@ -41,25 +41,25 @@ vendors, application developers and computer science researchers.
    ompi/mpi/man/man3/MPI_Aint_add.3
    ompi/mpi/man/man3/MPI_Aint_diff.3
    ompi/mpi/man/man3/MPI_Allgather.3
-   ompi/mpi/man/man3/MPI_Allgather_init.3.rst
+   ompi/mpi/man/man3/MPI_Allgather_init.3
    ompi/mpi/man/man3/MPI_Allgatherv.3
-   ompi/mpi/man/man3/MPI_Allgatherv_init.3.rst
+   ompi/mpi/man/man3/MPI_Allgatherv_init.3
    ompi/mpi/man/man3/MPI_Alloc_mem.3
    ompi/mpi/man/man3/MPI_Allreduce.3
-   ompi/mpi/man/man3/MPI_Allreduce_init.3.rst
+   ompi/mpi/man/man3/MPI_Allreduce_init.3
    ompi/mpi/man/man3/MPI_Alltoall.3
-   ompi/mpi/man/man3/MPI_Alltoall_init.3.rst
+   ompi/mpi/man/man3/MPI_Alltoall_init.3
    ompi/mpi/man/man3/MPI_Alltoallv.3
-   ompi/mpi/man/man3/MPI_Alltoallv_init.3.rst
+   ompi/mpi/man/man3/MPI_Alltoallv_init.3
    ompi/mpi/man/man3/MPI_Alltoallw.3
-   ompi/mpi/man/man3/MPI_Alltoallw_init.3.rst
+   ompi/mpi/man/man3/MPI_Alltoallw_init.3
    ompi/mpi/man/man3/MPI_Attr_delete.3
    ompi/mpi/man/man3/MPI_Attr_get.3
    ompi/mpi/man/man3/MPI_Attr_put.3
    ompi/mpi/man/man3/MPI_Barrier.3
-   ompi/mpi/man/man3/MPI_Barrier_init.3.rst
+   ompi/mpi/man/man3/MPI_Barrier_init.3
    ompi/mpi/man/man3/MPI_Bcast.3
-   ompi/mpi/man/man3/MPI_Bcast_init.3.rst
+   ompi/mpi/man/man3/MPI_Bcast_init.3
    ompi/mpi/man/man3/MPI_Bsend.3
    ompi/mpi/man/man3/MPI_Bsend_init.3
    ompi/mpi/man/man3/MPI_Buffer_attach.3
@@ -124,7 +124,7 @@ vendors, application developers and computer science researchers.
    ompi/mpi/man/man3/MPI_Error_class.3
    ompi/mpi/man/man3/MPI_Error_string.3
    ompi/mpi/man/man3/MPI_Exscan.3
-   ompi/mpi/man/man3/MPI_Exscan_init.3.rst
+   ompi/mpi/man/man3/MPI_Exscan_init.3
    ompi/mpi/man/man3/MPI_Fetch_and_op.3
    ompi/mpi/man/man3/MPI_File_c2f.3
    ompi/mpi/man/man3/MPI_File_call_errhandler.3
@@ -191,9 +191,9 @@ vendors, application developers and computer science researchers.
    ompi/mpi/man/man3/MPI_Finalized.3
    ompi/mpi/man/man3/MPI_Free_mem.3
    ompi/mpi/man/man3/MPI_Gather.3
-   ompi/mpi/man/man3/MPI_Gather_init.3.rst
+   ompi/mpi/man/man3/MPI_Gather_init.3
    ompi/mpi/man/man3/MPI_Gatherv.3
-   ompi/mpi/man/man3/MPI_Gatherv_init.3.rst
+   ompi/mpi/man/man3/MPI_Gatherv_init.3
    ompi/mpi/man/man3/MPI_Get.3
    ompi/mpi/man/man3/MPI_Get_accumulate.3
    ompi/mpi/man/man3/MPI_Get_address.3
@@ -254,7 +254,7 @@ vendors, application developers and computer science researchers.
    ompi/mpi/man/man3/MPI_Info_get.3
    ompi/mpi/man/man3/MPI_Info_get_nkeys.3
    ompi/mpi/man/man3/MPI_Info_get_nthkey.3
-   ompi/mpi/man/man3/MPI_Info_get_string.3.rst
+   ompi/mpi/man/man3/MPI_Info_get_string.3
    ompi/mpi/man/man3/MPI_Info_get_valuelen.3
    ompi/mpi/man/man3/MPI_Info_set.3
    ompi/mpi/man/man3/MPI_Init.3
@@ -282,15 +282,15 @@ vendors, application developers and computer science researchers.
    ompi/mpi/man/man3/MPI_Mprobe.3
    ompi/mpi/man/man3/MPI_Mrecv.3
    ompi/mpi/man/man3/MPI_Neighbor_allgather.3
-   ompi/mpi/man/man3/MPI_Neighbor_allgather_init.3.rst
+   ompi/mpi/man/man3/MPI_Neighbor_allgather_init.3
    ompi/mpi/man/man3/MPI_Neighbor_allgatherv.3
-   ompi/mpi/man/man3/MPI_Neighbor_allgatherv_init.3.rst
+   ompi/mpi/man/man3/MPI_Neighbor_allgatherv_init.3
    ompi/mpi/man/man3/MPI_Neighbor_alltoall.3
-   ompi/mpi/man/man3/MPI_Neighbor_alltoall_init.3.rst
+   ompi/mpi/man/man3/MPI_Neighbor_alltoall_init.3
    ompi/mpi/man/man3/MPI_Neighbor_alltoallv.3
-   ompi/mpi/man/man3/MPI_Neighbor_alltoallv_init.3.rst
+   ompi/mpi/man/man3/MPI_Neighbor_alltoallv_init.3
    ompi/mpi/man/man3/MPI_Neighbor_alltoallw.3
-   ompi/mpi/man/man3/MPI_Neighbor_alltoallw_init.3.rst
+   ompi/mpi/man/man3/MPI_Neighbor_alltoallw_init.3
    ompi/mpi/man/man3/MPI_Op_c2f.3
    ompi/mpi/man/man3/MPI_Op_commutative.3
    ompi/mpi/man/man3/MPI_Op_create.3
@@ -316,12 +316,12 @@ vendors, application developers and computer science researchers.
    ompi/mpi/man/man3/MPI_Recv.3
    ompi/mpi/man/man3/MPI_Recv_init.3
    ompi/mpi/man/man3/MPI_Reduce.3
-   ompi/mpi/man/man3/MPI_Reduce_init.3.rst
+   ompi/mpi/man/man3/MPI_Reduce_init.3
    ompi/mpi/man/man3/MPI_Reduce_local.3
    ompi/mpi/man/man3/MPI_Reduce_scatter.3
    ompi/mpi/man/man3/MPI_Reduce_scatter_block.3
-   ompi/mpi/man/man3/MPI_Reduce_scatter_block_init.3.rst
-   ompi/mpi/man/man3/MPI_Reduce_scatter_init.3.rst
+   ompi/mpi/man/man3/MPI_Reduce_scatter_block_init.3
+   ompi/mpi/man/man3/MPI_Reduce_scatter_init.3
    ompi/mpi/man/man3/MPI_Register_datarep.3
    ompi/mpi/man/man3/MPI_Request_c2f.3
    ompi/mpi/man/man3/MPI_Request_f2c.3
@@ -333,11 +333,11 @@ vendors, application developers and computer science researchers.
    ompi/mpi/man/man3/MPI_Rsend.3
    ompi/mpi/man/man3/MPI_Rsend_init.3
    ompi/mpi/man/man3/MPI_Scan.3
-   ompi/mpi/man/man3/MPI_Scan_init.3.rst
+   ompi/mpi/man/man3/MPI_Scan_init.3
    ompi/mpi/man/man3/MPI_Scatter.3
-   ompi/mpi/man/man3/MPI_Scatter_init.3.rst
+   ompi/mpi/man/man3/MPI_Scatter_init.3
    ompi/mpi/man/man3/MPI_Scatterv.3
-   ompi/mpi/man/man3/MPI_Scatterv_init.3.rst
+   ompi/mpi/man/man3/MPI_Scatterv_init.3
    ompi/mpi/man/man3/MPI_Send.3
    ompi/mpi/man/man3/MPI_Send_init.3
    ompi/mpi/man/man3/MPI_Sendrecv.3
@@ -481,11 +481,14 @@ vendors, application developers and computer science researchers.
    ompi/mpi/man/man3/MPI_Wtime.3
    ompi/mpi/man/man5/MPI_T.5
    ompi/mpi/man/man5/Open-MPI.5
-   opal/tools/wrappers/generic_wrapper.1.rst
-   opal/tools/wrappers/opal.pc..rst
-   opal/tools/wrappers/opal_wrapper.1.rst
-   opal/tools/wrappers/opalc++-wrapper-data.txt..rst
-   opal/tools/wrappers/opalcc-wrapper-data.txt..rst
+   ompi/mpiext/affinity/c/OMPI_Affinity_str.3
+   ompi/mpiext/cuda/c/MPIX_Query_cuda_support.3
+   ompi/tools/mpisync/mpisync.1
+   ompi/tools/ompi_info/ompi_info.1
+   ompi/tools/wrappers/mpif77.1
+   ompi/tools/wrappers/mpijavac.1
+   opal/tools/wrappers/generic_wrapper.1
+   opal/tools/wrappers/opal_wrapper.1
    oshmem/shmem/man/man3/OpenSHMEM.3
    oshmem/shmem/man/man3/_my_pe.3
    oshmem/shmem/man/man3/_num_pes.3
@@ -705,6 +708,7 @@ vendors, application developers and computer science researchers.
    oshmem/shmem/man/man3/shmemalign.3
    oshmem/shmem/man/man3/shrealloc.3
    oshmem/shmem/man/man3/start_pes.3
+   oshmem/tools/oshmem_info/oshmem_info.1
 
 Questions?  Problems?
 =====================

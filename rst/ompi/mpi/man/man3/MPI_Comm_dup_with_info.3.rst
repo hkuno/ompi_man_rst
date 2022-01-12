@@ -2,6 +2,7 @@
 
 MPI_Comm_dup_with_info
 ======================
+
 .. include_body
 
 :ref:`MPI_Comm_dup_with_info` - Duplicates an existing communicator using
@@ -98,4 +99,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Comm_dup` :ref:`MPI_Comm_idup` :ref:`MPI_Comm_set_info` 
+.. seealso:: :ref:`MPI_Comm_dup` :ref:`MPI_Comm_idup` :ref:`MPI_Comm_set_info`

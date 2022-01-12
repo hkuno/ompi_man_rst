@@ -1,13 +1,17 @@
 .. _mpi_t_enum_get_item:
 
+
 MPI_T_enum_get_item
 ===================
+
 .. include_body
 
 :ref:`MPI_T_enum_get_item` - Query information about an enumerator
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,24 +23,20 @@ C Syntax
    int MPI_T_enum_get_item(MPI_T_enum enumtype, int index, int *value, char *name,
                            int *name_len)
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``enumtype``: Enumeration to be queried. 
-
-* ``index``: Number of the value to be queried in this enumeration. 
+----------------
+* ``enumtype``: Enumeration to be queried.
+* ``index``: Number of the value to be queried in this enumeration.
 
 INPUT/OUTPUT PARAMETERS
------/------ ----------
-
-* ``name_len``: Length of the string and/or buffer for name. 
+-----/-----------------
+* ``name_len``: Length of the string and/or buffer for name.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``value``: Variable value. 
-
-* ``name``: Buffer to return the string containing the name of the category. 
+-----------------
+* ``value``: Variable value.
+* ``name``: Buffer to return the string containing the name of the category.
 
 DESCRIPTION
 -----------
@@ -44,6 +44,7 @@ DESCRIPTION
 :ref:`MPI_T_enum_get_item` can be used to query information about an item in an
 enumerator. This function returns the enumeration value in the *value*
 parameter.
+
 
 NOTES
 -----
@@ -56,6 +57,7 @@ most n - 1 characters of the string into the buffer and sets the length
 to the number of characters copied - 1. If the length argument is NULL
 or the value specified in the length is 0 the string buffer is ignored
 and the string is not returned. For more information see MPI-3 � 14.3.3.
+
 
 ERRORS
 ------

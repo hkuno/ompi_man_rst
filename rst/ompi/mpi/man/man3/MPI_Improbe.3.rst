@@ -1,13 +1,17 @@
 .. _mpi_improbe:
 
+
 MPI_Improbe
 ===========
+
 .. include_body
 
 :ref:`MPI_Improbe` - Non-blocking matched probe for a message.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Improbe(int source, int tag, MPI_Comm comm,
    	int *flag, MPI_Message *message, MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    	LOGICAL	FLAG
    	INTEGER	SOURCE, TAG, COMM, MESSAGE
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,25 +53,19 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``source``: Source rank or MPI_ANY_SOURCE (integer). 
-
-* ``tag``: Tag value or MPI_ANY_TAG (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``source``: Source rank or MPI_ANY_SOURCE (integer).
+* ``tag``: Tag value or MPI_ANY_TAG (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``flag``: Flag (logical). 
-
-* ``message``: Message (handle). 
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``flag``: Flag (logical).
+* ``message``: Message (handle).
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -80,12 +80,14 @@ by the probe. In particular, the application may allocate memory for the
 receive buffer according to the length of the probed message.
 
 A matching probe with MPI_PROC_NULL as *source* returns *flag* = true,
+
 *message* = MPI_MESSAGE_NO_PROC, and the *status* object returns source
 ^ MPI_PROC_NULL, tag ^ MPI_ANY_TAG, and count ^ 0.
 
 :ref:`MPI_Iprobe` returns a true value in *flag* if a message has been matched
 and can be received by passing the *message* handle to the :ref:`MPI_Mrecv` or
 :ref:`MPI_Imrecv` functions, provided the *source* was not MPI_PROC_NULL.
+
 
 ERRORS
 ------
@@ -101,4 +103,12 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Mprobe`    :ref:`MPI_Probe`    :ref:`MPI_Iprobe`    :ref:`MPI_Mrecv`    :ref:`MPI_Imrecv`    :ref:`MPI_Cancel` 
+.. seealso:: 
+   ::
+
+   MPI_Mprobe
+   MPI_Probe
+   MPI_Iprobe
+   MPI_Mrecv
+   MPI_Imrecv
+      MPI_Cancel

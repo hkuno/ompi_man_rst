@@ -1,13 +1,17 @@
 .. _mpi_win_create_errhandler:
 
+
 MPI_Win_create_errhandler
 =========================
+
 .. include_body
 
 :ref:`MPI_Win_create_errhandler` - Creates an error handler for a window.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Win_create_errhandler(MPI_Win_errhandler_function *function,
    	MPI_Errhandler *errhandler)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    	EXTERNAL FUNCTION
    	INTEGER ERRHANDLER, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -43,25 +49,24 @@ Fortran 2008 Syntax
    	TYPE(MPI_Errhandler), INTENT(OUT) :: errhandler
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 DEPRECATED TYPE NAME NOTE
----------- ---- ---- ----
+-------------------------
 
 MPI-2.2 deprecated the MPI_Win_errhandler_fn and MPI::Win::Errhandler_fn
 types in favor of MPI_Win_errhandler_function and
 MPI::Win::Errhandler_function, respectively. Open MPI supports both
 names (indeed, the \_fn names are typedefs to the \_function names).
 
-INPUT PARAMETER
------ ---------
 
-* ``function``: User-defined error-handling procedure (function). 
+INPUT PARAMETER
+---------------
+* ``function``: User-defined error-handling procedure (function).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``errhandler``: MPI error handler (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``errhandler``: MPI error handler (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -83,6 +88,7 @@ In Fortran, the user routine should be of the form:
 
    SUBROUTINE WIN_ERRHANDLER_FUNCTION(WIN, ERROR_CODE, ...)
        INTEGER WIN, ERROR_CODE
+
 
 ERRORS
 ------

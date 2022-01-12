@@ -1,14 +1,18 @@
 .. _mpi_scatterv:
 
+
 MPI_Scatterv
 ============
+
 .. include_body
 
 :ref:`MPI_Scatterv`, :ref:`MPI_Iscatterv`, :ref:`MPI_Scatterv_init` - Scatters a buffer
 in parts to all tasks in a group.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -28,6 +32,7 @@ C Syntax
    int MPI_Scatterv_init(const void *sendbuf, const int sendcounts[], const int displs[],
    	MPI_Datatype sendtype, void *recvbuf, int recvcount,
    	MPI_Datatype recvtype, int root, MPI_Comm comm, MPI_Info info, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -54,6 +59,7 @@ Fortran Syntax
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	SENDCOUNTS(*), DISPLS(*), SENDTYPE
    	INTEGER	RECVCOUNT, RECVTYPE, ROOT, COMM, INFO, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -94,35 +100,24 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Address of send buffer (choice, significant only at root). 
-
-* ``sendcounts``: Integer array (of length group size) specifying the number of elements to send to each processor. 
-
-* ``displs``: Integer array (of length group size). Entry i specifies the displacement (relative to sendbuf) from which to take the outgoing data to process i. 
-
-* ``sendtype``: Datatype of send buffer elements (handle). 
-
-* ``recvcount``: Number of elements in receive buffer (integer). 
-
-* ``recvtype``: Datatype of receive buffer elements (handle). 
-
-* ``root``: Rank of sending process (integer). 
-
-* ``comm``: Communicator (handle). 
-
-* ``info``: Info (handle, persistent only). 
+----------------
+* ``sendbuf``: Address of send buffer (choice, significant only at root).
+* ``sendcounts``: Integer array (of length group size) specifying the number of elements to send to each processor.
+* ``displs``: Integer array (of length group size). Entry i specifies the displacement (relative to sendbuf) from which to take the outgoing data to process i.
+* ``sendtype``: Datatype of send buffer elements (handle).
+* ``recvcount``: Number of elements in receive buffer (integer).
+* ``recvtype``: Datatype of receive buffer elements (handle).
+* ``root``: Rank of sending process (integer).
+* ``comm``: Communicator (handle).
+* ``info``: Info (handle, persistent only).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Address of receive buffer (choice). 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``recvbuf``: Address of receive buffer (choice).
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -226,8 +221,9 @@ sets of 100 are stride ints apart in the sending buffer. Requires use of
            MPI_Scatterv(sendbuf, scounts, displs, MPI_INT,
                         rbuf, 100, MPI_INT, root, comm);
 
+
 USE OF IN-PLACE OPTION
---- -- -------- ------
+----------------------
 
 When the communicator is an intracommunicator, you can perform a scatter
 operation in-place (the output buffer is used as the input buffer). Use
@@ -242,8 +238,9 @@ Because the in-place option converts the receive buffer into a
 send-and-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
 
+
 WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
----- ------------ -- -- ------------------
+------------------------------------------
 
 When the communicator is an inter-communicator, the root process in the
 first group sends data to all processes in the second group. The first
@@ -254,6 +251,7 @@ the rank of that root process in the first group as the value of their
 *root* argument. The receive buffer argument of the root process in the
 first group must be consistent with the receive buffer argument of the
 processes in the second group.
+
 
 ERRORS
 ------
@@ -269,4 +267,10 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Gather`    :ref:`MPI_Gatherv`    :ref:`MPI_Scatter` 
+.. seealso:: 
+   ::
+
+   MPI_Gather
+   MPI_Gatherv
+   MPI_Scatter
+

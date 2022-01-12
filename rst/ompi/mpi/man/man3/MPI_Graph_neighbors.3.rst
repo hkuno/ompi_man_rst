@@ -1,14 +1,18 @@
 .. _mpi_graph_neighbors:
 
+
 MPI_Graph_neighbors
 ===================
+
 .. include_body
 
 :ref:`MPI_Graph_neighbors` - Returns the neighbors of a node associated
 with a graph topology.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Graph_neighbors(MPI_Comm comm, int rank, int maxneighbors,
    	int neighbors[])
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -30,6 +35,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_GRAPH_NEIGHBORS(COMM, RANK, MAXNEIGHBORS, NEIGHBORS, IERROR)
    	INTEGER	COMM, RANK, MAXNEIGHBORS, NEIGHBORS(*), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -44,21 +50,17 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: neighbors(maxneighbors)
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``comm``: Communicator with graph topology (handle). 
-
-* ``rank``: Rank of process in group of comm (integer). 
-
-* ``maxneighbors``: Size of array neighbors (integer). 
+----------------
+* ``comm``: Communicator with graph topology (handle).
+* ``rank``: Rank of process in group of comm (integer).
+* ``maxneighbors``: Size of array neighbors (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``neighbors``: Ranks of processes that are neighbors to specified process (array of integers). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``neighbors``: Ranks of processes that are neighbors to specified process (array of integers).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -104,6 +106,7 @@ and performs an appropriate permutation for each.
          CALL MPI_SENDRECV_REPLACE(A, 1, MPI_REAL, neighbors(3), 0,
         +     neighbors(2), 0, comm, status, ierr)
 
+
 ERRORS
 ------
 
@@ -118,4 +121,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Graph_neighbors_count` 
+.. seealso:: 
+   :ref:`MPI_Graph_neighbors_count`

@@ -1,13 +1,17 @@
 .. _mpi_file_get_errhandler:
 
+
 MPI_File_get_errhandler
 =======================
+
 .. include_body
 
 :ref:`MPI_File_get_errhandler` - Gets the error handler for a file.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    int MPI_File_get_errhandler(MPI_File file, MPI_Errhandler
    	*errhandler)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_FILE_GET_ERRHANDLER(FILE, ERRHANDLER, IERROR)
    	INTEGER	FILE, ERRHANDLER, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,23 +48,22 @@ Fortran 2008 Syntax
    	TYPE(MPI_Errhandler), INTENT(OUT) :: errhandler
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``file``: File (handle). 
+INPUT PARAMETER
+---------------
+* ``file``: File (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``errhandler``: MPI error handler currently associated with file (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``errhandler``: MPI error handler currently associated with file (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 Returns in *errhandler* (a handle to) the error handler that is
 currently associated with file *file*.
+
 
 ERRORS
 ------

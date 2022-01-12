@@ -1,14 +1,18 @@
 .. _mpi_sendrecv_replace:
 
+
 MPI_Sendrecv_replace
 ====================
+
 .. include_body
 
 :ref:`MPI_Sendrecv_replace` - Sends and receives a message using a single
 buffer.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Sendrecv_replace(void *buf, int count, MPI_Datatype datatype,
    	int dest, int sendtag, int source, int recvtag, MPI_Comm comm,
    	MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -35,6 +40,7 @@ Fortran Syntax
    	INTEGER	COUNT, DATATYPE, DEST, SENDTAG
    	INTEGER	SOURCE, RECVTAG, COMM
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -52,34 +58,25 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``buf``: Initial address of send and receive buffer (choice). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``buf``: Initial address of send and receive buffer (choice).
 
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Number of elements in send and receive buffer (integer). 
-
-* ``datatype``: Type of elements to send and receive (handle). 
-
-* ``dest``: Rank of destination (integer). 
-
-* ``sendtag``: Send message tag (integer). 
-
-* ``source``: Rank of source (integer). 
-
-* ``recvtag``: Receive message tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``count``: Number of elements in send and receive buffer (integer).
+* ``datatype``: Type of elements to send and receive (handle).
+* ``dest``: Rank of destination (integer).
+* ``sendtag``: Send message tag (integer).
+* ``source``: Rank of source (integer).
+* ``recvtag``: Receive message tag (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -111,6 +108,7 @@ The semantics of a send-receive operation is what would be obtained if
 the caller forked two concurrent threads, one to execute the send, and
 one to execute the receive, followed by a join of these two threads.
 
+
 ERRORS
 ------
 
@@ -125,4 +123,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Sendrecv` 
+.. seealso:: 
+   :ref:`MPI_Sendrecv`

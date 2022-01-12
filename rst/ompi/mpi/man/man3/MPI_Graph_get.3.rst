@@ -2,6 +2,7 @@
 
 MPI_Graph_get
 =============
+
 .. include_body
 
 :ref:`MPI_Graph_get` - Retrieves graph topology information associated with
@@ -88,4 +89,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Graph_create` :ref:`MPI_Graphdims_get` 
+.. seealso:: :ref:`MPI_Graph_create` :ref:`MPI_Graphdims_get`

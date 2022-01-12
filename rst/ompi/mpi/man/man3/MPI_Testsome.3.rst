@@ -1,14 +1,18 @@
 .. _mpi_testsome:
 
+
 MPI_Testsome
 ============
+
 .. include_body
 
 :ref:`MPI_Testsome` - Tests for completion of one or more previously
 initiated communications in a list.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Testsome(int incount, MPI_Request array_of_requests[],
    	int *outcount, int array_of_indices[],
    	MPI_Status array_of_statuses[])
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -34,6 +39,7 @@ Fortran Syntax
    	INTEGER	INCOUNT, ARRAY_OF_REQUESTS(*)
    	INTEGER	OUTCOUNT, ARRAY_OF_INDICES(*)
    	INTEGER	ARRAY_OF_STATUSES(MPI_STATUS_SIZE,*), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -50,23 +56,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: array_of_statuses(*)
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``incount``: Length of array_of_requests (integer). 
-
-* ``array_of_requests``: Array of requests (array of handles). 
+----------------
+* ``incount``: Length of array_of_requests (integer).
+* ``array_of_requests``: Array of requests (array of handles).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``outcount``: Number of completed requests (integer). 
-
-* ``array_of_indices``: Array of indices of operations that completed (array of integers). 
-
-* ``array_of_statuses``: Array of status objects for operations that completed (array of status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``outcount``: Number of completed requests (integer).
+* ``array_of_indices``: Array of indices of operations that completed (array of integers).
+* ``array_of_statuses``: Array of status objects for operations that completed (array of status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -103,6 +104,7 @@ field, you can save resources by using the predefined constant
 MPI_STATUSES_IGNORE can be used as a special value for the
 *array_of_statuses* argument.
 
+
 NOTES
 -----
 
@@ -117,6 +119,7 @@ The server calls :ref:`MPI_Waitsome` with one receive request for each client,
 then handles all receives that have completed. If a call to :ref:`MPI_Waitany`
 is used instead, then one client could starve while requests from
 another client always sneak in first.
+
 
 ERRORS
 ------
@@ -142,4 +145,14 @@ caller, the value MPI_ERR_IN_STATUS will be returned in the C and
 Fortran bindings.
 
 
-.. seealso:: | :ref:`MPI_Comm_set_errhandler` | :ref:`MPI_File_set_errhandler` | :ref:`MPI_Test` | :ref:`MPI_Testall` | :ref:`MPI_Testany` | :ref:`MPI_Wait` | :ref:`MPI_Waitall` | :ref:`MPI_Waitany` | :ref:`MPI_Waitsome` | :ref:`MPI_Win_set_errhandler` 
+.. seealso:: 
+   | :ref:`MPI_Comm_set_errhandler`
+   | :ref:`MPI_File_set_errhandler`
+   | :ref:`MPI_Test`
+   | :ref:`MPI_Testall`
+   | :ref:`MPI_Testany`
+   | :ref:`MPI_Wait`
+   | :ref:`MPI_Waitall`
+   | :ref:`MPI_Waitany`
+   | :ref:`MPI_Waitsome`
+   | :ref:`MPI_Win_set_errhandler`

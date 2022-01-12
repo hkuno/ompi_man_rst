@@ -1,14 +1,18 @@
 .. _mpi_info_get:
 
+
 MPI_Info_get
 ============
+
 .. include_body
 
 :ref:`MPI_Info_get` - Retrieves the value associated with a key in an info
 object.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Info_get(MPI_Info info, const char *key, int valuelen, char *value, int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    	INTEGER	INFO, VALUELEN, IERROR
    	CHARACTER*(*) KEY, VALUE
    	LOGICAL FLAG
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,23 +53,18 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``info``: Info object (handle). 
-
-* ``key``: Key (string). 
-
-* ``valuelen``: Length of value arg (integer). 
+----------------
+* ``info``: Info object (handle).
+* ``key``: Key (string).
+* ``valuelen``: Length of value arg (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``value``: Value (string). 
-
-* ``flag``: Returns true if key defined, false if not (boolean). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``value``: Value (string).
+* ``flag``: Returns true if key defined, false if not (boolean).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -77,6 +78,7 @@ returned value is truncated. In C, *valuelen* should be one less than
 the amount of allocated space to allow for the null terminator.
 
 If *key* is larger than MPI_MAX_INFO_KEY, the call is erroneous.
+
 
 ERRORS
 ------
@@ -92,4 +94,12 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Info_create` | :ref:`MPI_Info_delete` | :ref:`MPI_Info_dup` | :ref:`MPI_Info_free` | :ref:`MPI_Info_get_valuelen` | :ref:`MPI_Info_get_nkeys` | :ref:`MPI_Info_get_nthkey` | :ref:`MPI_Info_set` 
+.. seealso:: 
+   | :ref:`MPI_Info_create`
+   | :ref:`MPI_Info_delete`
+   | :ref:`MPI_Info_dup`
+   | :ref:`MPI_Info_free`
+   | :ref:`MPI_Info_get_valuelen`
+   | :ref:`MPI_Info_get_nkeys`
+   | :ref:`MPI_Info_get_nthkey`
+   | :ref:`MPI_Info_set`

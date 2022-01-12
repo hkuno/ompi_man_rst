@@ -1,14 +1,18 @@
 .. _mpi_win_attach:
 
+
 MPI_Win_attach
 ==============
+
 .. include_body
 
 :ref:`MPI_Win_attach`, :ref:`MPI_Win_detach` - One-sided MPI call that attaches /
 detaches a memory region to / from a window object for RMA operations.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    MPI_Win_attach(MPI_Win win, void *base, MPI_Aint size)
 
    MPI_Win_detach(MPI_Win win, void *base)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -37,6 +42,7 @@ Fortran Syntax
    MPI_WIN_DETACH(WIN, BASE, IERROR)
    	<type> BASE(*)
    	INTEGER WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -56,21 +62,17 @@ Fortran 2008 Syntax
    	TYPE(*), DIMENSION(..), INTENT(IN) :: base
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``win``: A window that was created with *MPI_Win_create_dynamic* 
-
-* ``base``: Initial address of window (choice). 
-
-* ``size``: Size of window in bytes (nonnegative integer). 
+----------------
+* ``win``: A window that was created with *MPI_Win_create_dynamic*
+* ``base``: Initial address of window (choice).
+* ``size``: Size of window in bytes (nonnegative integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``win``: Window object returned by the call (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``win``: Window object returned by the call (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -90,12 +92,14 @@ set by the :ref:`MPI_ALLOC_MEM` function.
 from *win*. The memory address *base* and *win* must match arguments
 passed to a previous call to :ref:`MPI_Win_attach`.
 
+
 NOTES
 -----
 
 Use memory allocated by :ref:`MPI_Alloc_mem` to guarantee properly aligned
 window boundaries (such as word, double-word, cache line, page frame,
 and so on).
+
 
 ERRORS
 ------

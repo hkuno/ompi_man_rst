@@ -1,13 +1,17 @@
 .. _mpi_wtime:
 
+
 MPI_Wtime
 =========
+
 .. include_body
 
 :ref:`MPI_Wtime` - Returns an elapsed time on the calling processor.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    double MPI_Wtime()
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    DOUBLE PRECISION MPI_WTIME()
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -37,10 +43,12 @@ Fortran 2008 Syntax
    USE mpi_f08
    DOUBLE PRECISION MPI_WTIME()
 
+
 RETURN VALUE
------- -----
+------------
 
 Time in seconds since an arbitrary time in the past.
+
 
 DESCRIPTION
 -----------
@@ -68,6 +76,7 @@ like this:
 
 The times returned are local to the node that called them. There is no
 requirement that different nodes return the "same" time.
+
 
 NOTES
 -----
@@ -104,4 +113,5 @@ This function does not return an error value. Consequently, the result
 of calling it before :ref:`MPI_Init` or after :ref:`MPI_Finalize` is undefined.
 
 
-.. seealso:: | :ref:`MPI_Wtick` 
+.. seealso:: 
+   | :ref:`MPI_Wtick`

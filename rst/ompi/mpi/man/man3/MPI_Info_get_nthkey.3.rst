@@ -1,13 +1,17 @@
 .. _mpi_info_get_nthkey:
 
+
 MPI_Info_get_nthkey
 ===================
+
 .. include_body
 
 :ref:`MPI_Info_get_nthkey` - Returns the *n*\ th defined key in *info*.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Info_get_nthkey(MPI_Info info, int n, char *key)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_INFO_GET_NTHKEY(INFO, N, KEY, IERROR)
    	INTEGER		INFO, N, IERROR
    	CHARACTER*(*)	KEY
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,19 +49,16 @@ Fortran 2008 Syntax
    	CHARACTER(LEN=*), INTENT(OUT) :: key
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``info``: Info object (handle). 
-
-* ``n``: Key number (integer). 
+----------------
+* ``info``: Info object (handle).
+* ``n``: Key number (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``key``: Key (string). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``key``: Key (string).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -65,6 +68,7 @@ numbered 0...\ *N* - 1 where *N* is the value returned by
 :ref:`MPI_Info_get_nkeys`. All keys between 0 and *N* - 1 are guaranteed to be
 defined. The number of a given key does not change as long as *info* is
 not modified with :ref:`MPI_Info_set` or :ref:`MPI_Info_delete`.
+
 
 ERRORS
 ------
@@ -80,4 +84,7 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Info_get` | :ref:`MPI_Info_get_nkeys` | :ref:`MPI_Info_get_valuelen` 
+.. seealso:: 
+   | :ref:`MPI_Info_get`
+   | :ref:`MPI_Info_get_nkeys`
+   | :ref:`MPI_Info_get_valuelen`

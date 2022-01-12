@@ -1,14 +1,18 @@
 .. _mpi_accumulate:
 
+
 MPI_Accumulate
 ==============
+
 .. include_body
 
 :ref:`MPI_Accumulate`, :ref:`MPI_Raccumulate` - Combines the contents of the
 origin buffer with that of a target buffer.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -27,6 +31,7 @@ C Syntax
    	MPI_Aint target_disp, int target_count,
    	MPI_Datatype target_datatype, MPI_Op op, MPI_Win win,
    	MPI_Request *request)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -49,6 +54,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER(KIND=MPI_ADDRESS_KIND) TARGET_DISP
    	INTEGER ORIGIN_COUNT, ORIGIN_DATATYPE, TARGET_RANK, TARGET_COUNT,
    	TARGET_DATATYPE, OP, WIN, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -79,34 +85,23 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``origin_addr``: Initial address of buffer (choice). 
-
-* ``origin_count``: Number of entries in buffer (nonnegative integer). 
-
-* ``origin_datatype``: Data type of each buffer entry (handle). 
-
-* ``target_rank``: Rank of target (nonnegative integer). 
-
-* ``target_disp``: Displacement from start of window to beginning of target buffer (nonnegative integer). 
-
-* ``target_count``: Number of entries in target buffer (nonnegative integer). 
-
-* ``target_datatype``: Data type of each entry in target buffer (handle). 
-
-* ``op``: Reduce operation (handle). 
-
-* ``win``: Window object (handle). 
+----------------
+* ``origin_addr``: Initial address of buffer (choice).
+* ``origin_count``: Number of entries in buffer (nonnegative integer).
+* ``origin_datatype``: Data type of each buffer entry (handle).
+* ``target_rank``: Rank of target (nonnegative integer).
+* ``target_disp``: Displacement from start of window to beginning of target buffer (nonnegative integer).
+* ``target_count``: Number of entries in target buffer (nonnegative integer).
+* ``target_datatype``: Data type of each entry in target buffer (handle).
+* ``op``: Reduce operation (handle).
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
+----------------
 * ``MPI_Raccumulate``:  RMA request
-
-
-* ``IERROR``: Fortran only: Error status (integer). 
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -144,8 +139,9 @@ for completion. The completion of an :ref:`MPI_Raccumulate` operation
 indicates that the *origin_addr* buffer is free to be updated. It does
 not indicate that the operation has completed at the target window.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 *TARGET_DISP* argument only for Fortran 90. FORTRAN 77 users may use the
@@ -158,6 +154,7 @@ non-portable syntax
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
+
 NOTES
 -----
 
@@ -169,6 +166,7 @@ It is the user's responsibility to guarantee that, when using the
 accumulate functions, the target displacement argument is such that
 accesses to the window are properly aligned according to the data type
 arguments in the call to the :ref:`MPI_Accumulate` function.
+
 
 ERRORS
 ------
@@ -184,4 +182,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Put`  :ref:`MPI_Get_accumulate`  :ref:`MPI_Reduce` 
+.. seealso:: 
+   :ref:`MPI_Put` :ref:`MPI_Get_accumulate` :ref:`MPI_Reduce`

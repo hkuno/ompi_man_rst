@@ -2,6 +2,7 @@
 
 MPI_Comm_accept
 ===============
+
 .. include_body
 
 :ref:`MPI_Comm_accept` - Establishes communication with a client.
@@ -83,4 +84,4 @@ MPI_ERRORS_RETURN may be used to cause error values to be returned.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso:: :ref:`MPI_Comm_connect` :ref:`MPI_Open_port` 
+.. seealso:: :ref:`MPI_Comm_connect` :ref:`MPI_Open_port`

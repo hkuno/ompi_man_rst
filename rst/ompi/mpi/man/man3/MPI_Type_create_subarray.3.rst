@@ -1,14 +1,18 @@
 .. _mpi_type_create_subarray:
 
+
 MPI_Type_create_subarray
 ========================
+
 .. include_body
 
 :ref:`MPI_Type_create_subarray` - Creates a data type describing an
 *n*-dimensional subarray of an *n*-dimensional array.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Type_create_subarray(int ndims, const int array_of_sizes[], const int array_of_subsizes[], const int array_of_starts[], int order, MPI_Datatype oldtype, MPI_Datatype *newtype)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax
 
    	INTEGER	NDIMS, ARRAY_OF_SIZES(*), ARRAY_OF_SUBSIZES(*),
    	ARRAY_OF_STARTS(*), ORDER, OLDTYPE, NEWTYPE, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -48,27 +54,20 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(OUT) :: newtype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``ndims``: Number of array dimensions (positive integer). 
-
-* ``array_of_sizes``: Number of elements of type *oldtype* in each dimension of the full array (array of positive integers). 
-
-* ``array_of_subsizes``: Number of elements of type *oldtype* in each dimension of the subarray (array of positive integers). 
-
-* ``array_of_starts``: Starting coordinates of the subarray in each dimension (array of nonnegative integers). 
-
-* ``order``: Array storage order flag (state). 
-
-* ``oldtype``: Array element data type (handle). 
+----------------
+* ``ndims``: Number of array dimensions (positive integer).
+* ``array_of_sizes``: Number of elements of type *oldtype* in each dimension of the full array (array of positive integers).
+* ``array_of_subsizes``: Number of elements of type *oldtype* in each dimension of the subarray (array of positive integers).
+* ``array_of_starts``: Starting coordinates of the subarray in each dimension (array of nonnegative integers).
+* ``order``: Array storage order flag (state).
+* ``oldtype``: Array element data type (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newtype``: New data type (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newtype``: New data type (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -113,10 +112,9 @@ or
 The *order* argument specifies the storage order for the subarray as
 well as the full array. It must be set to one of the following:
 
-- MPI_ORDER_C: The ordering used by C arrays, (that is, row-major order)
+{INDENT}{curline}
 
-- MPI_ORDER_FORTRAN: The ordering used by Fortran arrays, (that is,
-column-major order)
+{INDENT}{curline}
 
 A *ndims*-dimensional subarray (*newtype*) with no extra padding can be
 defined by the function Subarray() as follows:
@@ -146,12 +144,14 @@ page 72 of the MPI-2 standard.
 For an example use of :ref:`MPI_Type_create_subarray` in the context of I/O,
 see Section 9.9.2 of the MPI-2 standard.
 
+
 NOTES
 -----
 
 In a Fortran program with arrays indexed starting from 1, if the
 starting coordinate of a particular dimension of the subarray is *n*,
 then the entry in array of starts for that dimension is *n*-1.
+
 
 ERRORS
 ------

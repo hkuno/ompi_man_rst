@@ -1,14 +1,18 @@
 .. _mpi_intercomm_merge:
 
+
 MPI_Intercomm_merge
 ===================
+
 .. include_body
 
 :ref:`MPI_Intercomm_merge` - Creates an intracommunicator from an
 intercommunicator.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Intercomm_merge(MPI_Comm intercomm, int high,
         MPI_Comm *newintracomm)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    MPI_INTERCOMM_MERGE(INTERCOMM, HIGH, NEWINTRACOMM, IERROR)
    	INTEGER	INTERCOMM, NEWINTRACOMM, IERROR
    	LOGICAL	HIGH
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -45,19 +51,16 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(OUT) :: newintracomm
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``intercomm``: Intercommunicator (type indicator). 
-
-* ``high``: Used to order the groups of the two intracommunicators within comm when creating the new communicator (type indicator). 
+----------------
+* ``intercomm``: Intercommunicator (type indicator).
+* ``high``: Used to order the groups of the two intracommunicators within comm when creating the new communicator (type indicator).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newintracomm``: Created intracommunicator (type indicator). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newintracomm``: Created intracommunicator (type indicator).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -70,6 +73,7 @@ provide the value high = true, then the union orders the "low" group
 before the "high" group. If all processes provide the same high
 argument, then the order of the union is arbitrary. This call is
 blocking and collective within the union of the two groups.
+
 
 ERRORS
 ------
@@ -85,4 +89,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Intercomm_create` | :ref:`MPI_Comm_free` 
+.. seealso:: 
+   | :ref:`MPI_Intercomm_create`
+   | :ref:`MPI_Comm_free`
