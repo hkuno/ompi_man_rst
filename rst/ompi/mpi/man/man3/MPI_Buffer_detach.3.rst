@@ -2,6 +2,7 @@
 
 MPI_Buffer_detach
 =================
+
 .. include_body
 
 :ref:`MPI_Buffer_detach` - Removes an existing buffer (for use in in
@@ -127,4 +128,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Buffer_attach` :ref:`MPI_Bsend` 
+.. seealso:: :ref:`MPI_Buffer_attach` :ref:`MPI_Bsend`

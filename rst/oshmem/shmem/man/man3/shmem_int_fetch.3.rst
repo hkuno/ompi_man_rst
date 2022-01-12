@@ -1,14 +1,17 @@
 .. _shmem_int_fetch:
 
+
 shmem_int_fetch
 ===============
+
 .. include_body
 
-*shmem_int4_fetch*\ (3), *shmem_int8_fetch*\ (3),
-*shmem_int_fetch*\ (3), *shmem_long_fetch*\ (3),
-*shmem_longlong_fetch*\ (3) *shmem_double_fetch*\ (3)
-*shmem_float_fetch*\ (3) - Atomically fetches the value of a remote data
+shmem_int4_fetch\ (3), shmem_int8_fetch\ (3),
+:ref:`shmem_int_fetch`\ (3), :ref:`shmem_long_fetch`\ (3),
+:ref:`shmem_longlong_fetch`\ (3) :ref:`shmem_double_fetch`\ (3)
+:ref:`shmem_float_fetch`\ (3) - Atomically fetches the value of a remote data
 object
+
 
 SYNOPSIS
 --------
@@ -52,6 +55,7 @@ Fortran:
    REAL(KIND=8) SHMEM_INT8_FETCH, ires, target
    ires = SHMEM_REAL8_FETCH(target, pe)
 
+
 DESCRIPTION
 -----------
 
@@ -68,11 +72,13 @@ pe
    fetched. If you are using Fortran, it must be a default integer
    value.
 
+
 RETURN VALUES
------- ------
+-------------
 
 The contents at the *target* address on the remote PE. The data type of
 the return value is the same as the the type of the remote data object.
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

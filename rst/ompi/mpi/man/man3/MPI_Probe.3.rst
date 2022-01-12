@@ -1,13 +1,17 @@
 .. _mpi_probe:
 
+
 MPI_Probe
 =========
+
 .. include_body
 
 :ref:`MPI_Probe` - Blocking test for a message.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Probe(int source, int tag, MPI_Comm comm, MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_PROBE(SOURCE, TAG, COMM, STATUS, IERROR)
    	INTEGER	SOURCE, TAG, COMM, STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,21 +48,17 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``source``: Source rank or MPI_ANY_SOURCE (integer). 
-
-* ``tag``: Tag value or MPI_ANY_TAG (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``source``: Source rank or MPI_ANY_SOURCE (integer).
+* ``tag``: Tag value or MPI_ANY_TAG (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -137,6 +139,7 @@ program is now incorrect: The receive operation may receive a message
 that is distinct from the message probed by the preceding call to
 :ref:`MPI_Probe`.
 
+
 ERRORS
 ------
 
@@ -151,4 +154,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Iprobe` | :ref:`MPI_Cancel` 
+.. seealso:: 
+   | :ref:`MPI_Iprobe`
+   | :ref:`MPI_Cancel`

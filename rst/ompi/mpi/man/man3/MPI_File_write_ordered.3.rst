@@ -2,6 +2,7 @@
 
 MPI_File_write_ordered
 ======================
+
 .. include_body
 
 :ref:`MPI_File_write_ordered` - Writes a file at a location specified by a

@@ -1,13 +1,17 @@
 .. _mpi_win_set_info:
 
+
 MPI_Win_set_info
 ================
+
 .. include_body
 
 :ref:`MPI_Win_set_info` - Set window info hints
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_set_info(MPI_Win win, MPI_Info info)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_SET_INFO(WIN, INFO, IERROR)
    	INTEGER	WIN, INFO, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -41,17 +47,15 @@ Fortran 2008 Syntax
    	TYPE(MPI_Info), INTENT(IN) :: info
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``win``: Window on which to set info hints 
-
-* ``info``: Info object containing hints to be set on *win* 
+----------------
+* ``win``: Window on which to set info hints
+* ``info``: Info object containing hints to be set on *win*
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -61,6 +65,7 @@ with *win.* :ref:`MPI_WIN_SET_INFO` is a collective routine. The info object
 may be different on each process, but any info entries that an
 implementation requires to be the same on all processes must appear with
 the same value in each process's *info* object.
+
 
 ERRORS
 ------
@@ -76,4 +81,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: MPI_Win_get_info, MPI_Info_create, MPI_Info_set, :ref:`MPI_Info_free` 
+.. seealso:: 
+   MPI_Win_get_info, MPI_Info_create, MPI_Info_set, :ref:`MPI_Info_free`

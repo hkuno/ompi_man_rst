@@ -1,13 +1,17 @@
 .. _mpi_is_thread_main:
 
+
 MPI_Is_thread_main
 ==================
+
 .. include_body
 
 :ref:`MPI_Is_thread_main` - Determines if thread called :ref:`MPI_Init`
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Is_thread_main(int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    	LOGICAL	FLAG
    	INTEGER	IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -41,12 +47,11 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 OUTPUT PARAMETERS
------- ----------
-
-* ``flag``: True if calling thread is main thread (boolean). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``flag``: True if calling thread is main thread (boolean).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -54,6 +59,7 @@ DESCRIPTION
 :ref:`MPI_Is_thread_main` is called by a thread to find out whether the caller
 is the main thread (that is, the thread that called :ref:`MPI_Init` or
 MPI_Init_thread).
+
 
 ERRORS
 ------
@@ -71,4 +77,8 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Init`    :ref:`MPI_Init_thread` 
+.. seealso:: 
+   ::
+
+   MPI_Init
+      MPI_Init_thread

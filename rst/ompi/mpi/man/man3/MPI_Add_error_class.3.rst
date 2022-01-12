@@ -1,15 +1,19 @@
 .. _mpi_add_error_class:
 
+
 MPI_Add_error_class
 ===================
+
 .. include_body
 
 ::
 
    MPI_Add_error_class - Creates a new error class and returns its value
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Add_error_class(int *errorclass)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    MPI_ADD_ERROR_CLASS(ERRORCLASS, IERROR)
    	INTEGER	ERRORCLASS, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -42,17 +48,17 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: errorclass
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 OUTPUT PARAMETERS
------- ----------
-
-* ``errorclass``: New error class (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``errorclass``: New error class (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 The function :ref:`MPI_Add_error_class` creates a new, local error class.
+
 
 NOTES
 -----
@@ -72,6 +78,7 @@ that an application will create them in significant numbers.
 
 The value returned is always greater than or equal to MPI_ERR_LASTCODE.
 
+
 ERRORS
 ------
 
@@ -86,4 +93,10 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Add_error_code`    :ref:`MPI_Add_error_string`    :ref:`MPI_Error_class`    :ref:`MPI_Error_string` 
+.. seealso:: 
+   ::
+
+   MPI_Add_error_code
+   MPI_Add_error_string
+   MPI_Error_class
+      MPI_Error_string

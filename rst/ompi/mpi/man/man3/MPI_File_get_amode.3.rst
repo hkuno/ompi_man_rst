@@ -1,14 +1,18 @@
 .. _mpi_file_get_amode:
 
+
 MPI_File_get_amode
 ==================
+
 .. include_body
 
 :ref:`MPI_File_get_amode` - Returns access mode associated with an open
 file.
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_File_get_amode(MPI_File fh, int *amode)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -30,6 +35,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_FILE_GET_AMODE(FH, AMODE, IERROR)
    	INTEGER	FH, AMODE, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,23 +49,22 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: amode
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``fh``: File handle (handle). 
+INPUT PARAMETER
+---------------
+* ``fh``: File handle (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``amode``: File access mode used to open the file (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``amode``: File access mode used to open the file (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 :ref:`MPI_File_get_amode` returns, in *amode,* the access mode associated with
 the open file *fh.*
+
 
 ERRORS
 ------

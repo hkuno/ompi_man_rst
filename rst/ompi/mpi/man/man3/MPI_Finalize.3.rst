@@ -2,6 +2,7 @@
 
 MPI_Finalize
 ============
+
 .. include_body
 
 :ref:`MPI_Finalize` - Terminates MPI execution environment.
@@ -111,4 +112,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Init` :ref:`MPI_Init_thread` :ref:`MPI_Initialized` :ref:`MPI_Finalized` 
+.. seealso:: :ref:`MPI_Init` :ref:`MPI_Init_thread` :ref:`MPI_Initialized` :ref:`MPI_Finalized`

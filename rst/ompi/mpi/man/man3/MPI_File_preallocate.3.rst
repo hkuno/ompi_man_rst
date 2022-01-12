@@ -1,14 +1,18 @@
 .. _mpi_file_preallocate:
 
+
 MPI_File_preallocate
 ====================
+
 .. include_body
 
 :ref:`MPI_File_preallocate` - Preallocates a specified amount of storage
 space at the beginning of a file (collective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -19,6 +23,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_File_preallocate(MPI_File fh, MPI_Offset size)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER	FH, IERROR
    	INTEGER(KIND=MPI_OFFSET_KIND)	SIZE
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -44,20 +50,18 @@ Fortran 2008 Syntax
    	INTEGER(KIND=MPI_OFFSET_KIND), INTENT(IN) :: size
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``fh``: File handle (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``fh``: File handle (handle).
 
 INPUT PARAMETER
------ ---------
-
-* ``size``: Size to preallocate file, in bytes (integer). 
+---------------
+* ``size``: Size to preallocate file, in bytes (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -79,8 +83,9 @@ consistency is the same as with :ref:`MPI_File_set_size`. If
 MPI_MODE_SEQUENTIAL mode was specified when the file was opened, it is
 erroneous to call this routine.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *SIZE*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -92,6 +97,7 @@ syntax
 
 where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 NOTES
 -----
@@ -107,6 +113,7 @@ size and the larger, newly set file size.
 Sun MPI I/O does not necessarily allocate file space for such new
 regions. You may reserve file space either by using :ref:`MPI_File_preallocate`
 or by performing a read or write to certain bytes.
+
 
 ERRORS
 ------

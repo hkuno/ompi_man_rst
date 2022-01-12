@@ -1,14 +1,18 @@
 .. _mpi_comm_idup:
 
+
 MPI_Comm_idup
 =============
+
 .. include_body
 
 :ref:`MPI_Comm_idup` - Start the nonblocking duplication of an existing
 communicator with all its cached information.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_idup(MPI_Comm comm, MPI_Comm *newcomm, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_COMM_IDUP(COMM, NEWCOMM, REQUEST, IERROR)
    	INTEGER	COMM, NEWCOMM, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,19 +49,16 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``comm``: Communicator (handle). 
+INPUT PARAMETER
+---------------
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newcomm``: Copy of comm (handle). 
-
-* ``request``: Communication request (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newcomm``: Copy of comm (handle).
+* ``request``: Communication request (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -73,6 +76,7 @@ the MPI-1 Standard, "Functionality"). The communicator returned in
 The completion of a communicator duplication request can be determined
 by calling any of :ref:`MPI_Wait`, :ref:`MPI_Waitany`, :ref:`MPI_Test`, or :ref:`MPI_Testany` with
 the request returned by this function.
+
 
 NOTES
 -----
@@ -95,6 +99,7 @@ not valid for attribute copy callbacks (or any of their children) to add
 or delete attributes on the same object on which the attribute copy
 callback is being invoked.
 
+
 ERRORS
 ------
 
@@ -109,4 +114,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Comm_dup`  :ref:`MPI_Comm_dup_with_info` 
+.. seealso:: 
+   :ref:`MPI_Comm_dup` :ref:`MPI_Comm_dup_with_info`

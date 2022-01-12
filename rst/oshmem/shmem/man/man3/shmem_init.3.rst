@@ -1,11 +1,14 @@
 .. _shmem_init:
 
+
 shmem_init
 ==========
+
 .. include_body
 
-shmem_init, start_pes - Allocates a block of memory from the symmetric
+:ref:`shmem_init`, start_pes - Allocates a block of memory from the symmetric
 heap.
+
 
 SYNOPSIS
 --------
@@ -25,6 +28,7 @@ Fortran:
 
    CALL SHMEM_INIT()
    CALL START_PES(npes)
+
 
 DESCRIPTION
 -----------
@@ -50,10 +54,11 @@ For an overview of programming with SHMEM communication routines,
 example SHMEM programs, and instructions for compiling SHMEM programs,
 see the *intro_shmem*\ (3) man page.
 
+
 EXAMPLES
 --------
 
-This is a simple program that calls *shmem_integer_put*\ (3):
+This is a simple program that calls shmem_integer_put\ (3):
 
 ::
 
@@ -75,6 +80,7 @@ This is a simple program that calls *shmem_integer_put*\ (3):
      ENDIF
    END
 
+
 NOTES
 -----
 
@@ -82,4 +88,6 @@ If the start_pes call is not the first statement in a program,
 unexpected results may occur on some architectures.
 
 
-.. seealso:: *intro_shmem\ (3), *:ref:`shmem_barrier` \ (3), *:ref:`shmem_barrier_all` \ (3),*shmem_put\ (3), *my_pe*\ (3I), *:ref:`shmem_n_pes` \ (3I)
+.. seealso:: 
+   *intro_shmem*\ (3), :ref:`shmem_barrier`\ (3), :ref:`shmem_barrier_all`\ (3),
+   *shmem_put*\ (3), *my_pe*\ (3I), *shmem_n_pes*\ (3I)

@@ -1,13 +1,17 @@
 .. _mpi_info_set:
 
+
 MPI_Info_set
 ============
+
 .. include_body
 
 :ref:`MPI_Info_set` - Adds a key/value pair to *info*.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Info_set(MPI_Info info, char *key, char *value)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    	INTEGER		INFO, IERROR
    	CHARACTER*(*)	KEY, VALUE
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -42,22 +48,19 @@ Fortran 2008 Syntax
    	CHARACTER(LEN=*), INTENT(IN) :: key, value
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``info``: Info object (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``info``: Info object (handle).
 
 INPUT PARAMETERS
------ ----------
-
-* ``key``: Key (string). 
-
-* ``value``: Value (string). 
+----------------
+* ``key``: Key (string).
+* ``value``: Value (string).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -68,6 +71,7 @@ parameters are null-terminated strings in C. In Fortran, leading and
 trailing spaces in *key* and *value* are stripped. If either *key* or
 *value* is larger than the allowed maximums, the error MPI_ERR_INFO_KEY
 or MPI_ERR_INFO_VALUE is raised, respectively.
+
 
 ERRORS
 ------
@@ -83,4 +87,9 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Info_create` | :ref:`MPI_Info_delete` | :ref:`MPI_Info_dup` | :ref:`MPI_Info_free` | :ref:`MPI_Info_set` 
+.. seealso:: 
+   | :ref:`MPI_Info_create`
+   | :ref:`MPI_Info_delete`
+   | :ref:`MPI_Info_dup`
+   | :ref:`MPI_Info_free`
+   | :ref:`MPI_Info_set`

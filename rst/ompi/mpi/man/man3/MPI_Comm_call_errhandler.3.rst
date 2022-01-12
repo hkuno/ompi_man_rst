@@ -2,6 +2,7 @@
 
 MPI_Comm_call_errhandler
 ========================
+
 .. include_body
 
 :ref:`MPI_Comm_call_errhandler` - Passes the supplied error code to the
@@ -77,4 +78,4 @@ of the function and Fortran routines in the last argument. See the MPI
 man page for a full list of MPI error codes.
 
 
-.. seealso:: :ref:`MPI_Comm_create_errhandler` :ref:`MPI_Comm_set_errhandler` 
+.. seealso:: :ref:`MPI_Comm_create_errhandler` :ref:`MPI_Comm_set_errhandler`

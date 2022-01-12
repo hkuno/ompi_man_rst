@@ -1,13 +1,17 @@
 .. _mpi_info_dup:
 
+
 MPI_Info_dup
 ============
+
 .. include_body
 
 :ref:`MPI_Info_dup` - Duplicates an info object.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Info_dup(MPI_Info info, MPI_Info *newinfo)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_INFO_DUP(INFO, NEWINFO, IERROR)
    	INTEGER		INFO, NEWINFO, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -41,23 +47,22 @@ Fortran 2008 Syntax
    	TYPE(MPI_Info), INTENT(OUT) :: newinfo
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``info``: Info object (handle). 
+INPUT PARAMETER
+---------------
+* ``info``: Info object (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newinfo``: Info object (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newinfo``: Info object (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 :ref:`MPI_Info_dup` duplicates an existing info object, creating a new object,
 with the same (key,value) pairs and the same ordering of keys.
+
 
 ERRORS
 ------
@@ -73,4 +78,9 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Info_create` | :ref:`MPI_Info_delete` | :ref:`MPI_Info_free` | :ref:`MPI_Info_get` | :ref:`MPI_Info_set` 
+.. seealso:: 
+   | :ref:`MPI_Info_create`
+   | :ref:`MPI_Info_delete`
+   | :ref:`MPI_Info_free`
+   | :ref:`MPI_Info_get`
+   | :ref:`MPI_Info_set`

@@ -1,18 +1,21 @@
 .. _shmem_putmem_nbi:
 
+
 shmem_putmem_nbi
 ================
+
 .. include_body
 
-*shmem_putmem_nbi*\ (3), *shmem_char_put_nbi*\ (3),
-*shmem_short_put_nbi*\ (3), *shmem_int_put_nbi*\ (3),
-*shmem_long_put_nbi*\ (3), *shmem_longlong_put_nbi*\ (3),
-*shmem_float_put_nbi*\ (3), *shmem_double_put_nbi*\ (3),
-*shmem_longdouble_put_nbi*\ (3), *shmem_put8_nbi*\ (3),
-*shmem_put16_nbi*\ (3), *shmem_put32_nbi*\ (3), *shmem_put64_nbi*\ (3),
-*shmem_put128_nbi*\ (3), - The nonblocking put routines provide a method
+:ref:`shmem_putmem_nbi`\ (3), :ref:`shmem_char_put_nbi`\ (3),
+:ref:`shmem_short_put_nbi`\ (3), :ref:`shmem_int_put_nbi`\ (3),
+:ref:`shmem_long_put_nbi`\ (3), :ref:`shmem_longlong_put_nbi`\ (3),
+:ref:`shmem_float_put_nbi`\ (3), :ref:`shmem_double_put_nbi`\ (3),
+:ref:`shmem_longdouble_put_nbi`\ (3), :ref:`shmem_put8_nbi`\ (3),
+:ref:`shmem_put16_nbi`\ (3), :ref:`shmem_put32_nbi`\ (3), :ref:`shmem_put64_nbi`\ (3),
+:ref:`shmem_put128_nbi`\ (3), - The nonblocking put routines provide a method
 for copying data from a contiguous local data object to a data object on
 a specified PE.
+
 
 SYNOPSIS
 --------
@@ -99,16 +102,17 @@ Fortran:
 
    CALL SHMEM_PUT128_NBI(dest, source, nelems, pe)
 
+
 DESCRIPTION
 -----------
 
 The routines return after posting the operation. The operation is
-considered complete after a subsequent call to shmem_quiet. At the
-completion of shmem_quiet, the data has been copied into the dest array
+considered complete after a subsequent call to :ref:`shmem_quiet`. At the
+completion of :ref:`shmem_quiet`, the data has been copied into the dest array
 on the destination PE. The delivery of data words into the data object
 on the destination PE may occur in any order. Furthermore, two
 successive put routines may deliver data out of order unless a call to
-shmem_fence is introduced between the two calls.
+:ref:`shmem_fence` is introduced between the two calls.
 
 The arguments are as follows:
 
@@ -133,10 +137,12 @@ If you are using Fortran, data types must be of default size. For
 example, a real variable must be declared as REAL, REAL*4, or
 REAL(KIND=4).
 
+
 NOTES
 -----
 
 See *intro_shmem*\ (3) for a definition of the term remotely accessible.
+
 
 EXAMPLES
 --------
@@ -167,4 +173,5 @@ Consider this simple example for C.
    }
 
 
-.. seealso:: *intro_shmem\ (3), *:ref:`shmem_quiet` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_quiet*\ (3)

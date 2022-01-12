@@ -1,14 +1,18 @@
 .. _mpi_type_hindexed:
 
+
 MPI_Type_hindexed
 =================
+
 .. include_body
 
 :ref:`MPI_Type_hindexed` - Creates an indexed datatype with offsets in
 bytes -- use of this routine is deprecated.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Type_hindexed(int count, int *array_of_blocklengths,
    	MPI_Aint *array_of_displacements, MPI_Datatype oldtype,
    	MPI_Datatype *newtype)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -34,23 +39,18 @@ Fortran Syntax
    	INTEGER	ARRAY_OF_DISPLACEMENTS(*), OLDTYPE, NEWTYPE
    	INTEGER	IERROR
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Number of blocks -- also number of entries in array_of_displacements and array_of_blocklengths (integer). 
-
-* ``array_of_blocklengths``: Number of elements in each block (array of nonnegative integers). 
-
-* ``array_of_displacements``: Byte displacement of each block (C: array of *MPI_Aint*, Fortran: array of integer). 
-
-* ``oldtype``: Old datatype (handle). 
+----------------
+* ``count``: Number of blocks -- also number of entries in array_of_displacements and array_of_blocklengths (integer).
+* ``array_of_blocklengths``: Number of elements in each block (array of nonnegative integers).
+* ``array_of_displacements``: Byte displacement of each block (C: array of *MPI_Aint*, Fortran: array of integer).
+* ``oldtype``: Old datatype (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newtype``: New datatype (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newtype``: New datatype (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -83,6 +83,7 @@ array_of_displacements argument. The newly created datatype has
      (type(0), disp(0) +  D[count-1] + (B[count-1] -1)* ex),...,
      (type(n-1), disp(n-1) + D[count-1] + (B[count-1] -1)* ex)}
 
+
 ERRORS
 ------
 
@@ -97,4 +98,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Type_create_hindexed` | :ref:`MPI_Type_indexed` 
+.. seealso:: 
+   | :ref:`MPI_Type_create_hindexed`
+   | :ref:`MPI_Type_indexed`

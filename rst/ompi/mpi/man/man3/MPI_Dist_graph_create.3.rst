@@ -1,14 +1,18 @@
 .. _mpi_dist_graph_create:
 
+
 MPI_Dist_graph_create
 =====================
+
 .. include_body
 
 :ref:`MPI_Dist_graph_create` - Makes a new communicator to which topology
 information has been attached.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Dist_graph_create(MPI_Comm comm_old, int n, const int sources[],
    	const int degrees[], const int destinations[], const int weights[],
            MPI_Info info, int reorder, MPI_Comm *comm_dist_graph)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -34,6 +39,7 @@ Fortran Syntax
    	INTEGER	COMM_OLD, N, SOURCES(*), DEGRES(*), WEIGHTS(*), INFO
    	INTEGER	COMM_DIST_GRAPH, IERROR
    	LOGICAL   REORDER
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -52,31 +58,22 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(OUT) :: comm_dist_graph
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``comm_old``: Input communicator without topology (handle). 
-
-* ``n``: Number of source nodes for which this process specifies edges (non-negative integer). 
-
-* ``sources``: Array containing the *n* source nodes for which this process specifies edges (array of non-negative integers). 
-
-* ``degrees``: Array specifying the number of destinations for each source node in the source node array (array of non-negative integers). 
-
-* ``destinations``: Destination nodes for the source nodes in the source node array (array of non-negative integers). 
-
-* ``weights``: Weights for source to destination edges (array of non-negative integers). 
-
-* ``info``: Hints on optimization and interpretation of weights (handle). 
-
-* ``reorder``: Ranking may be reordered (true) or not (false) (logical). 
+----------------
+* ``comm_old``: Input communicator without topology (handle).
+* ``n``: Number of source nodes for which this process specifies edges (non-negative integer).
+* ``sources``: Array containing the *n* source nodes for which this process specifies edges (array of non-negative integers).
+* ``degrees``: Array specifying the number of destinations for each source node in the source node array (array of non-negative integers).
+* ``destinations``: Destination nodes for the source nodes in the source node array (array of non-negative integers).
+* ``weights``: Weights for source to destination edges (array of non-negative integers).
+* ``info``: Hints on optimization and interpretation of weights (handle).
+* ``reorder``: Ranking may be reordered (true) or not (false) (logical).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``comm_dist_graph``: Communicator with distributed graph topology added (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``comm_dist_graph``: Communicator with distributed graph topology added (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -115,6 +112,7 @@ communication on the edges of the communication graph. The weight
 associated with each edge is a hint to the MPI library about the amount
 or intensity of communication on that edge, and may be used to compute a
 
+
 WEIGHTS
 -------
 
@@ -136,6 +134,7 @@ argument. In Fortran, MPI_UNWEIGHTED and MPI_WEIGHTS_EMPTY are objects
 like MPI_BOTTOM (not usable for initialization or assignment). See MPI-3
 § 2.5.4.
 
+
 ERRORS
 ------
 
@@ -150,4 +149,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Dist_graph_create_adjacent`  :ref:`MPI_Dist_graph_neighbors` :ref:`MPI_Dist_graph_neighbors_count` 
+.. seealso:: 
+   :ref:`MPI_Dist_graph_create_adjacent` :ref:`MPI_Dist_graph_neighbors`
+   :ref:`MPI_Dist_graph_neighbors_count`

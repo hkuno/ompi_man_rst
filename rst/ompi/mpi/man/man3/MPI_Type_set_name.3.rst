@@ -1,13 +1,17 @@
 .. _mpi_type_set_name:
 
+
 MPI_Type_set_name
 =================
+
 .. include_body
 
 :ref:`MPI_Type_set_name` - Sets the name of a data type.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Type_set_name(MPI_Datatype type, const char *type_name)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    	INTEGER	TYPE, IERROR
    	CHARACTER*(*) TYPE_NAME
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -42,26 +48,25 @@ Fortran 2008 Syntax
    	CHARACTER(LEN=*), INTENT(IN) :: type_name
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``type``: Data type for which the identifier is to be set (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``type``: Data type for which the identifier is to be set (handle).
 
 INPUT PARAMETER
------ ---------
-
-* ``type_name``: The character string remembered as the name (string). 
+---------------
+* ``type_name``: The character string remembered as the name (string).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 :ref:`MPI_Type_set_name` associates a printable identifier with an MPI data
 type.
+
 
 ERRORS
 ------
@@ -77,4 +82,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Type_get_name` 
+.. seealso:: 
+   | :ref:`MPI_Type_get_name`

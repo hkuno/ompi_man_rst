@@ -1,13 +1,17 @@
 .. _mpi_init:
 
+
 MPI_Init
 ========
+
 .. include_body
 
 :ref:`MPI_Init` - Initializes the MPI execution environment
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Init(int *argc, char ***argv)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_INIT(IERROR)
    	INTEGER	IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -39,17 +45,15 @@ Fortran 2008 Syntax
    MPI_Init(ierror)
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``argc``: C only: Pointer to the number of arguments. 
-
-* ``argv``: C only: Argument vector. 
+----------------
+* ``argc``: C only: Pointer to the number of arguments.
+* ``argv``: C only: Argument vector.
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -73,6 +77,7 @@ modifies, interprets, nor distributes them:
    		MPI_Finalize();
    	}
 
+
 NOTES
 -----
 
@@ -84,6 +89,7 @@ or after an :ref:`MPI_Finalize`. In the Open MPI implementation, it should do
 as little as possible. In particular, avoid anything that changes the
 external state of the program, such as opening files, reading standard
 input, or writing to standard output.
+
 
 ERRORS
 ------
@@ -101,4 +107,10 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Init_thread`    :ref:`MPI_Initialized`    :ref:`MPI_Finalize`    :ref:`MPI_Finalized` 
+.. seealso:: 
+   ::
+
+   MPI_Init_thread
+   MPI_Initialized
+   MPI_Finalize
+      MPI_Finalized

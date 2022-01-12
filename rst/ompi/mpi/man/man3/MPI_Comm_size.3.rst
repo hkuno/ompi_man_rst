@@ -1,14 +1,18 @@
 .. _mpi_comm_size:
 
+
 MPI_Comm_size
 =============
+
 .. include_body
 
 :ref:`MPI_Comm_size` - Returns the size of the group associated with a
 communicator.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_size(MPI_Comm comm, int *size)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_COMM_SIZE(COMM, SIZE, IERROR)
    	INTEGER	COMM, SIZE, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,17 +48,15 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: size
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``comm``: Communicator (handle). 
+INPUT PARAMETER
+---------------
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``size``: Number of processes in the group of comm (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``size``: Number of processes in the group of comm (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -72,10 +76,12 @@ concurrency available for a specific library or program. :ref:`MPI_Comm_rank`
 indicates the rank of the process that calls it in the range from 0 . .
 . size-1, where size is the return value of :ref:`MPI_Comm_size`.
 
+
 NOTE
 ----
 
 MPI_COMM_NULL is not considered a valid argument to this function.
+
 
 ERRORS
 ------
@@ -91,4 +97,9 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Comm_group`    :ref:`MPI_Comm_rank`    :ref:`MPI_Comm_compare` 
+.. seealso:: 
+   ::
+
+   MPI_Comm_group
+   MPI_Comm_rank
+      MPI_Comm_compare

@@ -2,6 +2,7 @@
 
 MPI_Graph_create
 ================
+
 .. include_body
 
 :ref:`MPI_Graph_create` - Makes a new communicator to which topology
@@ -138,4 +139,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Graph_get` :ref:`MPI_Graphdims_get` 
+.. seealso:: :ref:`MPI_Graph_get` :ref:`MPI_Graphdims_get`

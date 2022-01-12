@@ -1,14 +1,18 @@
 .. _mpi_attr_put:
 
+
 MPI_Attr_put
 ============
+
 .. include_body
 
 :ref:`MPI_Attr_put` - Stores attribute value associated with a key -- use
 of this routine is deprecated.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Attr_put(MPI_Comm comm, int keyval, void *attribute_val)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,19 +34,16 @@ Fortran Syntax
    MPI_ATTR_PUT(COMM, KEYVAL, ATTRIBUTE_VAL, IERROR)
    	INTEGER	COMM, KEYVAL, ATTRIBUTE_VAL, IERROR
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``comm``: Communicator to which attribute will be attached (handle). 
-
-* ``keyval``: Key value, as returned by MPI_KEYVAL_CREATE (integer). 
-
-* ``attribute_val``: Attribute value. 
+----------------
+* ``comm``: Communicator to which attribute will be attached (handle).
+* ``keyval``: Key value, as returned by MPI_KEYVAL_CREATE (integer).
+* ``attribute_val``: Attribute value.
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -59,6 +61,7 @@ value keyval; in particular MPI_KEYVAL_INVALID is an erroneous key
 value. The call will fail if the delete_fn function returned an error
 code other than MPI_SUCCESS.
 
+
 NOTES
 -----
 
@@ -74,6 +77,7 @@ are systems for which a pointer does not fit in an integer, e.g., any
 If an attribute is already present, the delete function (specified when
 the corresponding keyval was created) will be called.
 
+
 ERRORS
 ------
 
@@ -88,4 +92,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Comm_set_attr` 
+.. seealso:: 
+   | :ref:`MPI_Comm_set_attr`

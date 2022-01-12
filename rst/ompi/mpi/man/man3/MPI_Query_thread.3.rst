@@ -1,13 +1,17 @@
 .. _mpi_query_thread:
 
+
 MPI_Query_thread
 ================
+
 .. include_body
 
 :ref:`MPI_Query_thread` - Returns the current level of thread support
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Query_thread(int *provided)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_QUERY_THREAD(PROVIDED, IERROR)
    	INTEGER	PROVIDED, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -40,12 +46,11 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: provided
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 OUTPUT PARAMETERS
------- ----------
-
-* ``provided``: C/Fortran only: Level of thread support (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``provided``: C/Fortran only: Level of thread support (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -71,12 +76,14 @@ MPI_THREAD_MULTIPLE
    If the process is multithreaded, multiple threads may call MPI at
    once with no restrictions.
 
+
 NOTES
 -----
 
 In Open MPI, *provided* is always MPI_THREAD_SINGLE, unless the program
 has been linked with the multithreaded library, in which case *provided*
 is MPI_THREAD_MULTIPLE.
+
 
 ERRORS
 ------
@@ -94,4 +101,8 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Init`    :ref:`MPI_Init_thread` 
+.. seealso:: 
+   ::
+
+   MPI_Init
+      MPI_Init_thread

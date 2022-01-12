@@ -2,6 +2,7 @@
 
 MPI_Status_f2c
 ==============
+
 .. include_body
 
 :ref:`MPI_Status_f2c`, :ref:`MPI_Status_f2c` - Translates a C status into a Fortran
@@ -61,4 +62,4 @@ These functions are only available in C; they are not available in any
 of the Fortran MPI interfaces.
 
 
-.. seealso:: :ref:`MPI_Status_f082c` :ref:`MPI_Status_c2f08` :ref:`MPI_Status_f082f` :ref:`MPI_Status_f2f08` 
+.. seealso:: :ref:`MPI_Status_f082c` :ref:`MPI_Status_c2f08` :ref:`MPI_Status_f082f` :ref:`MPI_Status_f2f08`

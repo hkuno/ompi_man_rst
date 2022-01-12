@@ -2,6 +2,7 @@
 
 MPI_Bcast
 =========
+
 .. include_body
 
 :ref:`MPI_Bcast`, :ref:`MPI_Ibcast` - Broadcasts a message from the process

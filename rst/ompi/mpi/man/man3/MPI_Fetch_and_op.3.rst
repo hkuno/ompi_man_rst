@@ -1,14 +1,18 @@
 .. _mpi_fetch_and_op:
 
+
 MPI_Fetch_and_op
 ================
+
 .. include_body
 
 :ref:`MPI_Fetch_and_op` - Combines the contents of the origin buffer with
 that of a target buffer and returns the target buffer value.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Fetch_and_op(const void *origin_addr, void *result_addr,
    	MPI_Datatype datatype, int target_rank, MPI_Aint target_disp,
    	MPI_Op op, MPI_Win win)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -34,6 +39,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	<type> ORIGIN_ADDR, RESULT_ADDR(*)
    	INTEGER(KIND=MPI_ADDRESS_KIND) TARGET_DISP
    	INTEGER DATATYPE, TARGET_RANK, OP, WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -53,27 +59,20 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``origin_addr``: Initial address of buffer (choice). 
-
-* ``result_addr``: Initial address of result buffer (choice). 
-
-* ``datatype``: Data type of the entry in origin, result, and target buffers (handle). 
-
-* ``target_rank``: Rank of target (nonnegative integer). 
-
-* ``target_disp``: Displacement from start of window to beginning of target buffer (nonnegative integer). 
-
-* ``op``: Reduce operation (handle). 
-
-* ``win``: Window object (handle). 
+----------------
+* ``origin_addr``: Initial address of buffer (choice).
+* ``result_addr``: Initial address of result buffer (choice).
+* ``datatype``: Data type of the entry in origin, result, and target buffers (handle).
+* ``target_rank``: Rank of target (nonnegative integer).
+* ``target_disp``: Displacement from start of window to beginning of target buffer (nonnegative integer).
+* ``op``: Reduce operation (handle).
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -99,8 +98,9 @@ assiciative function f(a, b) = a; that is the current value in the
 target memory is returned in the result buffer at the origin and no
 operation is performed on the target buffer.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 *TARGET_DISP* argument only for Fortran 90. FORTRAN 77 users may use the
@@ -113,6 +113,7 @@ non-portable syntax
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
 
+
 NOTES
 -----
 
@@ -120,6 +121,7 @@ It is the user's responsibility to guarantee that, when using the
 accumulate functions, the target displacement argument is such that
 accesses to the window are properly aligned according to the data type
 arguments in the call to the :ref:`MPI_Fetch_and_op` function.
+
 
 ERRORS
 ------
@@ -136,4 +138,6 @@ that MPI does not guarantee that an MPI program can continue past an
 error.
 
 
-.. seealso:: | :ref:`MPI_Get_accumulate` | :ref:`MPI_Reduce` 
+.. seealso:: 
+   | :ref:`MPI_Get_accumulate`
+   | :ref:`MPI_Reduce`

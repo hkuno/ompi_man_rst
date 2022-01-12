@@ -2,6 +2,7 @@
 
 MPI_Cart_create
 ===============
+
 .. include_body
 
 :ref:`MPI_Cart_create` - Makes a new communicator to which Cartesian

@@ -1,13 +1,17 @@
 .. _mpi_error_string:
 
+
 MPI_Error_string
 ================
+
 .. include_body
 
 :ref:`MPI_Error_string` - Returns a string for a given error code.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Error_string(int errorcode, char *string, int *resultlen)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_ERROR_STRING(ERRORCODE, STRING, RESULTLEN, IERROR)
    	INTEGER		ERRORCODE, RESULTLEN, IERROR
    	CHARACTER*(*)	STRING
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,19 +49,16 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: resultlen
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``errorcode``: Error code returned by an MPI routine or an MPI error class. 
+INPUT PARAMETER
+---------------
+* ``errorcode``: Error code returned by an MPI routine or an MPI error class.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``string``: Text that corresponds to the errorcode. 
-
-* ``resultlen``: Length of string. 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``string``: Text that corresponds to the errorcode.
+* ``resultlen``: Length of string.
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -66,6 +69,7 @@ MPI_MAX_ERROR_STRING characters long.
 
 The number of characters actually written is returned in the output
 argument, resultlen.
+
 
 ERRORS
 ------
@@ -81,4 +85,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Error_class` 
+.. seealso:: 
+   :ref:`MPI_Error_class`

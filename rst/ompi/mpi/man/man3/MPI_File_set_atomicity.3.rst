@@ -1,14 +1,18 @@
 .. _mpi_file_set_atomicity:
 
+
 MPI_File_set_atomicity
 ======================
+
 .. include_body
 
 :ref:`MPI_File_set_atomicity` - Sets consistency semantics for data-access
 operations (collective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_File_set_atomicity(MPI_File fh, int flag)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -30,6 +35,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_FILE_SET_ATOMICITY(FH, FLAG, IERROR)
    	INTEGER	FH, FLAG, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,17 +49,15 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(IN) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``flag``: **true** to enable atomic mode, **false** to enable nonatomic mode (boolean). 
+----------------
+* ``fh``: File handle (handle).
+* ``flag``: **true** to enable atomic mode, **false** to enable nonatomic mode (boolean).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -67,6 +71,7 @@ atomic mode is set; if *flag* is *false,* nonatomic mode is set.
 The default value on a call to :ref:`MPI_File_open` in Open MPI is *true* for
 jobs running on more than one node, *false* for jobs running on a single
 SMP. For more information, see the MPI-2 standard.
+
 
 ERRORS
 ------

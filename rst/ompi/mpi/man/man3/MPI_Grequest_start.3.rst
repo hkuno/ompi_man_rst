@@ -2,6 +2,7 @@
 
 MPI_Grequest_start
 ==================
+
 .. include_body
 
 :ref:`MPI_Grequest_start` - Starts a generalized request and returns a

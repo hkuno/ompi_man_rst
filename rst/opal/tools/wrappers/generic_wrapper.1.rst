@@ -1,15 +1,19 @@
 .. _generic_wrapper:
 
+
 generic_wrapper
 ===============
+
 .. include_body
 
 #COMMAND# -- #PROJECT# #LANGUAGE# wrapper compiler
+
 
 SYNTAX
 ------
 
 #COMMAND# [-showme|-showme:compile|-showme:link] ...
+
 
 OPTIONS
 -------
@@ -62,6 +66,7 @@ OPTIONS
 
 See the man page for your underlying #LANGUAGE# compiler for other
 options that can be passed through #COMMAND#.
+
 
 DESCRIPTION
 -----------
@@ -150,6 +155,7 @@ shell$ cc -c file2.c \`mpicc -showme:compile\`
 
 shell$ cc file1.o file2.o \`mpicc -showme:link\` -o my_mpi_program
 
+
 NOTES
 -----
 
@@ -162,6 +168,7 @@ activated (for example, in a binary package providing both 32 and 64 bit
 support). More information can be found at:
 
 https://github.com/open-mpi/ompi/wiki/compilerwrapper3264
+
 
 FILES
 -----
@@ -176,8 +183,9 @@ of #PROJECT#.
 It is rarely necessary to edit this file, but it can be examined to gain
 insight into what flags the wrappers are placing on the command line.
 
+
 ENVIRONMENT VARIABLES
------------ ---------
+---------------------
 
 By default, the wrappers use the compilers that were selected when
 #PROJECT# was configured. These compilers were either found

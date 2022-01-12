@@ -2,6 +2,7 @@
 
 MPI_Gatherv
 ===========
+
 .. include_body
 
 :ref:`MPI_Gatherv`, :ref:`MPI_Igatherv`, :ref:`MPI_Gatherv_init` - Gathers
@@ -411,4 +412,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Gather` :ref:`MPI_Scatter` :ref:`MPI_Scatterv` 
+.. seealso:: :ref:`MPI_Gather` :ref:`MPI_Scatter` :ref:`MPI_Scatterv`

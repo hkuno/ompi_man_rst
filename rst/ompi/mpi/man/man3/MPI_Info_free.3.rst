@@ -1,13 +1,17 @@
 .. _mpi_info_free:
 
+
 MPI_Info_free
 =============
+
 .. include_body
 
 :ref:`MPI_Info_free` - Frees an info object.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Info_free(MPI_Info *info)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_INFO_FREE(INFO, IERROR)
    	INTEGER		INFO, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -40,20 +46,20 @@ Fortran 2008 Syntax
    	TYPE(MPI_Info), INTENT(INOUT) :: info
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``info``: Info object (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``info``: Info object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 :ref:`MPI_Info_free` frees *info* and sets it to MPI_INFO_NULL.
+
 
 ERRORS
 ------
@@ -69,4 +75,9 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Info_create` | :ref:`MPI_Info_delete` | :ref:`MPI_Info_dup` | :ref:`MPI_Info_get` | :ref:`MPI_Info_set` 
+.. seealso:: 
+   | :ref:`MPI_Info_create`
+   | :ref:`MPI_Info_delete`
+   | :ref:`MPI_Info_dup`
+   | :ref:`MPI_Info_get`
+   | :ref:`MPI_Info_set`

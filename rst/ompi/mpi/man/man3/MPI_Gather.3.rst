@@ -2,6 +2,7 @@
 
 MPI_Gather
 ==========
+
 .. include_body
 
 :ref:`MPI_Gather`, :ref:`MPI_Igather`, :ref:`MPI_Gather_init` - Gathers values
@@ -252,4 +253,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error. See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso:: :ref:`MPI_Gatherv` :ref:`MPI_Scatter` :ref:`MPI_Scatterv` 
+.. seealso:: :ref:`MPI_Gatherv` :ref:`MPI_Scatter` :ref:`MPI_Scatterv`

@@ -2,6 +2,7 @@
 
 MPI_Get_library_version
 =======================
+
 .. include_body
 
 :ref:`MPI_Get_library_version` - Returns a string of the current Open MPI
@@ -89,4 +90,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Get_version` 
+.. seealso:: :ref:`MPI_Get_version`

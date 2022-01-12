@@ -1,13 +1,17 @@
 .. _mpi_t_finalize:
 
+
 MPI_T_finalize
 ==============
+
 .. include_body
 
 :ref:`MPI_T_finalize` - Finalize the MPI tool information interface
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_T_finalize(void)
+
 
 DESCRIPTION
 -----------
@@ -31,11 +36,13 @@ number of calls to MPI_T_finalize() equals the number of calls to
 MPI_T_init_thread() the MPI tool interface will no longer be available
 until another call to MPI_T_init_thread().
 
+
 NOTES
 -----
 
 Before the end of execution the number of calls to MPI_T_init_thread()
 and :ref:`MPI_T_finalize` must be the same.
+
 
 ERRORS
 ------
@@ -46,4 +53,7 @@ MPI_T_finalize() will fail if:
    The MPI Tools interface not initialized
 
 
-.. seealso::    :ref:`MPI_T_init_thread` 
+.. seealso:: 
+   ::
+
+      MPI_T_init_thread

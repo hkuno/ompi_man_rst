@@ -2,6 +2,7 @@
 
 MPI_T_init_thread
 =================
+
 .. include_body
 
 :ref:`MPI_T_init_thread` - Initializes the MPI Tool information interface
@@ -72,4 +73,4 @@ MPI_T_init_thread() will fail if:
    initialized
 
 
-.. seealso:: :ref:`MPI_T` :ref:`MPI_Init_thread` :ref:`MPI_T_finalize` 
+.. seealso:: :ref:`MPI_T` :ref:`MPI_Init_thread` :ref:`MPI_T_finalize`

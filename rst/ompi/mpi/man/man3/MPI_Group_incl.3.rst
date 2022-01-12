@@ -2,6 +2,7 @@
 
 MPI_Group_incl
 ==============
+
 .. include_body
 
 :ref:`MPI_Group_incl` - Produces a group by reordering an existing group
@@ -93,4 +94,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Group_compare` :ref:`MPI_Group_range_incl` :ref:`MPI_Group_free` 
+.. seealso:: :ref:`MPI_Group_compare` :ref:`MPI_Group_range_incl` :ref:`MPI_Group_free`

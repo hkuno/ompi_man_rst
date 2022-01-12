@@ -1,14 +1,18 @@
 .. _mpi_win_lock_all:
 
+
 MPI_Win_lock_all
 ================
+
 .. include_body
 
 :ref:`MPI_Win_lock_all` - Starts an RMA access epoch locking access to all
 processes in the window
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_lock_all(int assert, MPI_Win win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_LOCK_ALL(ASSERT, WIN, IERROR)
    	INTEGER ASSERT, WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,17 +48,15 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``assert``: Program assertion (integer). 
-
-* ``win``: Window object (handle). 
+----------------
+* ``assert``: Program assertion (integer).
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -82,6 +86,7 @@ MPI_MODE_NOCHECK
    No other processes will hold or attempt to acquire a conflicting lock
    while the caller holds the window lock.
 
+
 NOTES
 -----
 
@@ -90,6 +95,7 @@ create windows that span both the client and the server, if a client or
 server that has obtained a lock on such a window and then terminates
 abnormally, the server or other clients may hang in a :ref:`MPI_Win_lock_all`
 call, failing to notice that the peer MPI job has terminated.
+
 
 ERRORS
 ------
@@ -105,4 +111,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_unlock_all`  :ref:`MPI_Win_lock` 
+.. seealso:: 
+   | :ref:`MPI_Win_unlock_all` :ref:`MPI_Win_lock`

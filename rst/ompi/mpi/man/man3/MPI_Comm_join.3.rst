@@ -1,13 +1,17 @@
 .. _mpi_comm_join:
 
+
 MPI_Comm_join
 =============
+
 .. include_body
 
 :ref:`MPI_Comm_join` - Establishes communication between MPI jobs
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_join(int fd, MPI_Comm *intercomm)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_COMM_JOIN(FD, INTERCOMM, IERROR)
    	INTEGER	FD, INTERCOMM, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -41,17 +47,15 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(OUT) :: intercomm
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``fd``: socket file descriptor (socket). 
+INPUT PARAMETER
+---------------
+* ``fd``: socket file descriptor (socket).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``intercomm``: Intercommunicator between processes (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``intercomm``: Intercommunicator between processes (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -65,6 +69,7 @@ connected state, and must be quiescent when :ref:`MPI_Comm_join` is called.
 
 :ref:`MPI_Comm_join` must be called by the process at each end of the socket.
 It does not return until both processes have called :ref:`MPI_Comm_join`.
+
 
 NOTES
 -----
@@ -84,6 +89,7 @@ the socket, and may be used to establish MPI communication with
 additional processes, through the usual MPI communicator-creation
 mechanisms.
 
+
 ERRORS
 ------
 
@@ -100,4 +106,9 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    socket(3SOCKET)   :ref:`MPI_Comm_create`    :ref:`MPI_Comm_group` 
+.. seealso:: 
+   ::
+
+   socket(3SOCKET)
+   MPI_Comm_create
+      MPI_Comm_group

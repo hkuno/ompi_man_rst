@@ -1,14 +1,18 @@
 .. _mpi_open_port:
 
+
 MPI_Open_port
 =============
+
 .. include_body
 
 :ref:`MPI_Open_port` - Establishes a network address for a server to accept
 connections from clients.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Open_port(MPI_Info info, char *port_name)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    	CHARACTER*(*)	PORT_NAME
    	INTEGER		INFO, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -43,17 +49,15 @@ Fortran 2008 Syntax
    	CHARACTER(LEN=MPI_MAX_PORT_NAME), INTENT(OUT) :: port_name
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``info``: Options on how to establish an address (handle). No options currently supported. 
+INPUT PARAMETER
+---------------
+* ``info``: Options on how to establish an address (handle). No options currently supported.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``port_name``: Newly established port (string). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``port_name``: Newly established port (string).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -67,10 +71,12 @@ identifies the newly opened port and can be used by a client to contact
 the server. The maximum size string that may be supplied by the system
 is MPI_MAX_PORT_NAME.
 
+
 SUPPORTED INFO KEYS
---------- ---- ----
+-------------------
 
 None.
+
 
 ERRORS
 ------
@@ -86,4 +92,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Comm_accept`  :ref:`MPI_Comm_connect` 
+.. seealso:: 
+   | :ref:`MPI_Comm_accept` :ref:`MPI_Comm_connect`

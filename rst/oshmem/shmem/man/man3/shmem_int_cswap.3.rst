@@ -1,13 +1,16 @@
 .. _shmem_int_cswap:
 
+
 shmem_int_cswap
 ===============
+
 .. include_body
 
-*shmem_int_cswap*\ (3), *shmem_int4_cswap*\ (3),
-*shmem_int8_cswap*\ (3), *shmem_long_cswap*\ (3),
-*shmem_longlong_cswap*\ (3) - Performs an atomic conditional swap to a
+:ref:`shmem_int_cswap`\ (3), shmem_int4_cswap\ (3),
+shmem_int8_cswap\ (3), :ref:`shmem_long_cswap`\ (3),
+:ref:`shmem_longlong_cswap`\ (3) - Performs an atomic conditional swap to a
 remote data object
+
 
 SYNOPSIS
 --------
@@ -41,6 +44,7 @@ Fortran:
 
    INTEGER(KIND=8) SHMEM_INT8_CSWAP
    ires = SHMEM_INT8_CSWAP(target, cond, value, pe)
+
 
 DESCRIPTION
 -----------
@@ -95,16 +99,19 @@ pe
    updated. If you are using Fortran, it must be a default integer
    value.
 
+
 NOTES
 -----
 
 The term remotely accessible is defined in *intro_shmem*\ (3).
 
+
 RETURN VALUES
------- ------
+-------------
 
 The contents that had been in the target data object on the remote PE
 prior to the conditional swap.
+
 
 EXAMPLES
 --------
@@ -126,4 +133,5 @@ swap will successfully write its PE number to race_winner on PE 0.
    }
 
 
-.. seealso:: *intro_shmem\ (3), *shmem_cache\ (3), *:ref:`shmem_swap` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_cache*\ (3), *shmem_swap*\ (3)

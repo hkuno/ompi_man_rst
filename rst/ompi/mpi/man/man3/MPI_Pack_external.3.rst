@@ -1,13 +1,17 @@
 .. _mpi_pack_external:
 
+
 MPI_Pack_external
 =================
+
 .. include_body
 
 :ref:`MPI_Pack_external` - Writes data to a portable format
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    	int incount, MPI_Datatype datatype,
    	void *outbuf, MPI_Aint outsize,
    	MPI_Aint *position)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -36,6 +41,7 @@ Fortran Syntax
    	INTEGER(KIND=MPI_ADDRESS_KIND) OUTSIZE, POSITION
    	CHARACTER*(*)	DATAREP
    	<type>		INBUF(*), OUTBUF(*)
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -55,30 +61,23 @@ Fortran 2008 Syntax
    	INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(INOUT) :: position
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``datarep``: Data representation (string). 
-
-* ``inbuf``: Input buffer start (choice). 
-
-* ``incount``: Number of input data items (integer). 
-
-* ``datatype``: Datatype of each input data item (handle). 
-
-* ``outsize``: Output buffer size, in bytes (integer). 
+----------------
+* ``datarep``: Data representation (string).
+* ``inbuf``: Input buffer start (choice).
+* ``incount``: Number of input data items (integer).
+* ``datatype``: Datatype of each input data item (handle).
+* ``outsize``: Output buffer size, in bytes (integer).
 
 INPUT/OUTPUT PARAMETER
------/------ ---------
-
-* ``position``: Current position in buffer, in bytes (integer). 
+-----/----------------
+* ``position``: Current position in buffer, in bytes (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``outbuf``: Output buffer start (choice). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``outbuf``: Output buffer start (choice).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -128,6 +127,7 @@ input to a subsequent call to :ref:`MPI_Pack_external`.
    		    MPI_DOUBLE, &msg, i, &position);
    	}
 
+
 NOTES
 -----
 
@@ -174,6 +174,7 @@ unit as a separate packing unit. Each packing unit that was created by a
 related sequence of pack calls must be unpacked as a unit by a sequence
 of related unpack calls.
 
+
 ERRORS
 ------
 
@@ -190,4 +191,10 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Pack_external_size`    :ref:`MPI_Send`    :ref:`MPI_Unpack_external`    sscanf(3C)
+.. seealso:: 
+   ::
+
+   MPI_Pack_external_size
+   MPI_Send
+   MPI_Unpack_external
+      sscanf(3C)

@@ -2,6 +2,7 @@
 
 MPI_Cart_rank
 =============
+
 .. include_body
 
 :ref:`MPI_Cart_rank` - Determines process rank in communicator given
@@ -83,4 +84,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Cart_create` 
+.. seealso:: :ref:`MPI_Cart_create`

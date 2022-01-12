@@ -1,13 +1,16 @@
 .. _shmem_alltoall32:
 
+
 shmem_alltoall32
 ================
+
 .. include_body
 
-*shmem_alltoall32*\ (3), *shmem_alltoall64*\ (3),
-*shmem_alltoalls32*\ (3), *shmem_alltoalls64*\ (3) - collective routine
+:ref:`shmem_alltoall32`\ (3), :ref:`shmem_alltoall64`\ (3),
+:ref:`shmem_alltoalls32`\ (3), :ref:`shmem_alltoalls64`\ (3) - collective routine
 where each PE exchanges a fixed amount of data with all other PEs in the
 Active set
+
 
 SYNOPSIS
 --------
@@ -59,6 +62,7 @@ Fortran:
    CALL SHMEM_ALLTOALLS64(target, source, dst, sst, nelems,
    & PE_start, logPE_stride, PE_size, pSync)
 
+
 DESCRIPTION
 -----------
 
@@ -89,11 +93,11 @@ The arguments are as follows:
 
 A symmetric data object with one of the following data types:
 
-   **shmem_alltoall32**: Any noncharacter type that
+   :ref:`shmem_alltoall32`: Any noncharacter type that
       has an element size of 32 bits. No Fortran derived types or C/C++
       structures are allowed.
 
-   **shmem_alltoall64**: Any noncharacter type that has an element size
+   :ref:`shmem_alltoall64`: Any noncharacter type that has an element size
       of 64 bits. No Fortran derived types or C/C++ structures are
       allowed.
 
@@ -160,6 +164,7 @@ the active set is not still in use from a prior call to a alltoall
 routine. The target array on all PEs in the active set is ready to
 accept the alltoall data.
 
+
 NOTES
 -----
 
@@ -182,6 +187,7 @@ array. In general, this can be ensured only by doing some type of
 synchronization. However, in the special case of SHMEM routines being
 called with the same active set, you can allocate two pSync arrays and
 alternate between them on successive calls.
+
 
 EXAMPLES
 --------
@@ -234,4 +240,5 @@ C/C++ example:
    }
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

@@ -1,14 +1,18 @@
 .. _mpi_file_iread_all:
 
+
 MPI_File_iread_all
 ==================
+
 .. include_body
 
 :ref:`MPI_File_iread_all` - Reads a file starting at the location specified
 by the individual file pointer (nonblocking, collective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -21,6 +25,7 @@ C Syntax
    int MPI_File_iread_all(MPI_File fh, void  *buf, int  count,
    	MPI_Datatype  datatype, MPI_Request  *request)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -32,6 +37,7 @@ Fortran Syntax
    MPI_FILE_IREAD_ALL(FH, BUF, COUNT, DATATYPE, REQUEST, IERROR)
    	<type>	BUF(*)
    	INTEGER	FH, COUNT, DATATYPE, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -48,26 +54,21 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``fh``: File handle (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``fh``: File handle (handle).
 
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Number of elements in the buffer (integer). 
-
-* ``datatype``: Data type of each buffer element (handle). 
+----------------
+* ``count``: Number of elements in the buffer (integer).
+* ``datatype``: Data type of each buffer element (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``buf``: Initial address of buffer (choice). 
-
-* ``request``: Request object (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``buf``: Initial address of buffer (choice).
+* ``request``: Request object (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -81,6 +82,7 @@ file specified by the current view. :ref:`MPI_File_iread_all` stores the number
 of data-type elements actually read in *status.* All other fields of
 *status* are undefined. It is erroneous to call this function if
 MPI_MODE_SEQUENTIAL mode was specified when the file was opened.
+
 
 ERRORS
 ------

@@ -1,13 +1,17 @@
 .. _mpi_request_free:
 
+
 MPI_Request_free
 ================
+
 .. include_body
 
 :ref:`MPI_Request_free` - Frees a communication request object.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Request_free(MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_REQUEST_FREE(REQUEST, IERROR)
    	INTEGER	REQUEST, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -40,10 +46,10 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(INOUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``request``: Communication request (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``request``: Communication request (handle).
 
 DESCRIPTION
 -----------
@@ -55,6 +61,7 @@ for the associated communication to complete.
 request to MPI_REQUEST_NULL. Any ongoing communication that is
 associated with the request will be allowed to complete. The request
 will be deallocated only after its completion.
+
 
 NOTES
 -----
@@ -109,6 +116,7 @@ request.
 It **is** permitted to free an active request. However, once freed, you
 can not use the request in a wait or test routine (e.g., :ref:`MPI_Wait` ).
 
+
 ERRORS
 ------
 
@@ -123,4 +131,21 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Isend` | :ref:`MPI_Irecv` | :ref:`MPI_Issend` | :ref:`MPI_Ibsend` | :ref:`MPI_Irsend` | :ref:`MPI_Recv_init` | :ref:`MPI_Send_init` | :ref:`MPI_Ssend_init` | :ref:`MPI_Rsend_init` | :ref:`MPI_Test` | :ref:`MPI_Wait` | :ref:`MPI_Waitall` | :ref:`MPI_Waitany` | :ref:`MPI_Waitsome` | :ref:`MPI_Testall` | :ref:`MPI_Testany` | :ref:`MPI_Testsome` 
+.. seealso:: 
+   | :ref:`MPI_Isend`
+   | :ref:`MPI_Irecv`
+   | :ref:`MPI_Issend`
+   | :ref:`MPI_Ibsend`
+   | :ref:`MPI_Irsend`
+   | :ref:`MPI_Recv_init`
+   | :ref:`MPI_Send_init`
+   | :ref:`MPI_Ssend_init`
+   | :ref:`MPI_Rsend_init`
+   | :ref:`MPI_Test`
+   | :ref:`MPI_Wait`
+   | :ref:`MPI_Waitall`
+   | :ref:`MPI_Waitany`
+   | :ref:`MPI_Waitsome`
+   | :ref:`MPI_Testall`
+   | :ref:`MPI_Testany`
+   | :ref:`MPI_Testsome`

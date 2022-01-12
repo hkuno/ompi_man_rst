@@ -1,15 +1,19 @@
 .. _mpi_type_create_f90_integer:
 
+
 MPI_Type_create_f90_integer
 ===========================
+
 .. include_body
 
 ::
 
    MPI_Type_create_f90_integer - Returns a bounded MPI integer datatype
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Type_create_f90_integer(int r, MPI_Datatype *newtype)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_TYPE_CREATE_F90_INTEGER (R, NEWTYPE, IERROR)
    	INTEGER	R, NEWTYPE, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,17 +49,15 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(OUT) :: newtype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``r``: Precision, in decimal digits (integer). 
+INPUT PARAMETER
+---------------
+* ``r``: Precision, in decimal digits (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newtype``: New data type (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newtype``: New data type (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -62,6 +66,7 @@ This function provides a way to declare KIND-parameterized INTEGER MPI
 datatypes. The argument is interpreted in a similar fashion to the F90
 function SELECTED_INT_KIND: *r* must be a scalar integer, and represents
 the desired level of numerical precision, in decimal digits.
+
 
 NOTES
 -----
@@ -110,6 +115,7 @@ not obtained with SELECTED_INT_KIND (i.e., *r* is unknown), the only way
 to obtain a matching MPI datatype is to use the functions :ref:`MPI_Sizeof` and
 :ref:`MPI_Type_match_size`.
 
+
 ERRORS
 ------
 
@@ -126,4 +132,11 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Pack_external`    :ref:`MPI_Sizeof`    :ref:`MPI_Type_match_size`    :ref:`MPI_Unpack_external`    SELECTED_INT_KIND
+.. seealso:: 
+   ::
+
+   MPI_Pack_external
+   MPI_Sizeof
+   MPI_Type_match_size
+   MPI_Unpack_external
+      SELECTED_INT_KIND

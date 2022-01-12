@@ -1,15 +1,19 @@
 .. _mpi_dist_graph_neighbors_count:
 
+
 MPI_Dist_graph_neighbors_count
 ==============================
+
 .. include_body
 
 :ref:`MPI_Dist_graph_neighbors_count` - Returns the number of in and out
 edges for the calling processes in a distributed graph topology and a
 flag indicating whether the distributed graph is weighted.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Dist_graph_neighbors_count(MPI_Comm comm, int *indegree,
    	int *outdegree, int *weighted)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax
    MPI_DIST_GRAPH_NEIGHBORS_COUNT(COMM, INDEGREE, OUTDEGREE, WEIGHTED, IERROR)
    	INTEGER	COMM, INDEGREE, OUTDEGREE, IERROR
            LOGICAL WEIGHTED
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -46,21 +52,17 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: weighted
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETERS
------ ----------
 
-* ``comm``: Communicator with distributed graph topology (handle). 
+INPUT PARAMETERS
+----------------
+* ``comm``: Communicator with distributed graph topology (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``indegree``: Number of edges into this process (non-negative integer). 
-
-* ``outdegree``: Number of edges out of this process (non-negative integer). 
-
-* ``weighted``: False if MPI_UNWEIGHTED was supplied during creation, true otherwise (logical). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``indegree``: Number of edges into this process (non-negative integer).
+* ``outdegree``: Number of edges out of this process (non-negative integer).
+* ``weighted``: False if MPI_UNWEIGHTED was supplied during creation, true otherwise (logical).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -69,6 +71,7 @@ DESCRIPTION
 information for a distributed graph topology.
 :ref:`MPI_Dist_graph_neighbors_count` returns the number of sources and
 destinations for the calling process.
+
 
 ERRORS
 ------
@@ -84,4 +87,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Dist_graph_neighbors` 
+.. seealso:: 
+   :ref:`MPI_Dist_graph_neighbors`

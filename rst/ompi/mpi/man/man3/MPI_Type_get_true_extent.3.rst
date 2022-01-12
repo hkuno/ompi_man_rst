@@ -1,15 +1,19 @@
 .. _mpi_type_get_true_extent:
 
+
 MPI_Type_get_true_extent
 ========================
+
 .. include_body
 
 :ref:`MPI_Type_get_true_extent`, :ref:`MPI_Type_get_true_extent_x` - Returns
 the true lower bound and extent of a data type's corresponding typemap,
 ignoring MPI_UB and MPI_LB markers.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -22,6 +26,7 @@ C Syntax
    	MPI_Aint *true_lb, MPI_Aint *true_extent)
    int MPI_Type_get_true_extent_x(MPI_Datatype datatype,
    	MPI_Count *true_lb, MPI_Count *true_extent)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -37,6 +42,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    MPI_TYPE_GET_TRUE_EXTENT_X(DATATYPE, TRUE_LB, TRUE_EXTENT, IERROR)
    	INTEGER	DATATYPE, IERROR
    	INTEGER(KIND=MPI_COUNT_KIND) TRUE_LB, TRUE_EXTENT
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -54,19 +60,16 @@ Fortran 2008 Syntax
    	INTEGER(KIND = MPI_COUNT_KIND), INTENT(OUT) :: true_lb, true_extent
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``datatype``: Data type for which information is wanted (handle). 
+INPUT PARAMETER
+---------------
+* ``datatype``: Data type for which information is wanted (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``true_lb``: True lower bound of data type (integer). 
-
-* ``true_extent``: True size of data type (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``true_lb``: True lower bound of data type (integer).
+* ``true_extent``: True size of data type (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -87,8 +90,9 @@ hold a data type, uncompressed.
 See § 4.1.8 of the MPI-3 standard for more detailed definitions of these
 parameters in relation to the typemap.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *TRUE_LB*
 and *TRUE_EXTENT* arguments only for Fortran 90. FORTRAN 77 users may
@@ -112,6 +116,7 @@ use the non-portable syntax
 
 where MPI_ADDRESS_KIND and MPI_COUNT_KIND are constants defined in
 mpif.h and give the length of the declared integer in bytes.
+
 
 ERRORS
 ------

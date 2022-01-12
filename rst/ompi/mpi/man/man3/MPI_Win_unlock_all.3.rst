@@ -1,14 +1,18 @@
 .. _mpi_win_unlock_all:
 
+
 MPI_Win_unlock_all
 ==================
+
 .. include_body
 
 :ref:`MPI_Win_unlock_all` - Completes an RMA access epoch started by a call
 to :ref:`MPI_Win_lock_all`.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_unlock_all(MPI_Win win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_WIN_UNLOCK_ALL(WIN, IERROR)
    	INTEGER WIN, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -41,15 +47,14 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETERS
------ ----------
 
-* ``win``: Window object (handle). 
+INPUT PARAMETERS
+----------------
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -67,6 +72,7 @@ same window that are lock protected. Accesses that are protected by a
 shared lock will not be concurrent at the window site with accesses
 protected by an exclusive lock to the same window.
 
+
 ERRORS
 ------
 
@@ -81,4 +87,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_lock_all`  :ref:`MPI_Win_unlock` 
+.. seealso:: 
+   | :ref:`MPI_Win_lock_all` :ref:`MPI_Win_unlock`

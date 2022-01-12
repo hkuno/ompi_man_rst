@@ -1,14 +1,18 @@
 .. _mpi_file_read:
 
+
 MPI_File_read
 =============
+
 .. include_body
 
 :ref:`MPI_File_read` - Reads a file starting at the location specified by
 the individual file pointer (blocking, noncollective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_File_read(MPI_File fh, void *buf,
    	int count, MPI_Datatype datatype, MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -33,6 +38,7 @@ Fortran Syntax
    	DATATYPE, STATUS, IERROR)
    	<type>	BUF(*)
    	INTEGER	FH, COUNT, DATATYPE, STATUS(MPI_STATUS_SIZE),IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -49,23 +55,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``count``: Number of elements in buffer (integer). 
-
-* ``datatype``: Data type of each buffer element (handle). 
+----------------
+* ``fh``: File handle (handle).
+* ``count``: Number of elements in buffer (integer).
+* ``datatype``: Data type of each buffer element (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``buf``: Initial address of buffer (integer). 
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``buf``: Initial address of buffer (integer).
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -80,6 +81,7 @@ data-type elements actually read in *status.* All other fields of
 
 It is erroneous to call this function if MPI_MODE_SEQUENTIAL mode was
 specified when the file was opened.
+
 
 ERRORS
 ------

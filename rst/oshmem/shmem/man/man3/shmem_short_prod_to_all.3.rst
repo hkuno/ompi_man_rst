@@ -1,18 +1,21 @@
 .. _shmem_short_prod_to_all:
 
+
 shmem_short_prod_to_all
 =======================
+
 .. include_body
 
-*shmem_comp4_prod_to_all*\ (3), *shmem_comp8_prod_to_all*\ (3),
-*shmem_complexd_prod_to_all*\ (3), *shmem_complexf_prod_to_all*\ (3),
-*shmem_double_prod_to_all*\ (3), *shmem_float_prod_to_all*\ (3),
-*shmem_int_prod_to_all*\ (3), *shmem_int4_prod_to_all*\ (3),
-*shmem_int8_prod_to_all*\ (3), *shmem_long_prod_to_all*\ (3),
-*shmem_longdouble_prod_to_all*\ (3), *shmem_longlong_prod_to_all*\ (3),
-*shmem_real8_prod_to_all*\ (3), *shmem_real16_prod_to_all*\ (3),
-*shmem_real4_prod_to_all*\ (3), *shmem_short_prod_to_all*\ (3) -
+shmem_comp4_prod_to_all\ (3), shmem_comp8_prod_to_all\ (3),
+:ref:`shmem_complexd_prod_to_all`\ (3), :ref:`shmem_complexf_prod_to_all`\ (3),
+:ref:`shmem_double_prod_to_all`\ (3), :ref:`shmem_float_prod_to_all`\ (3),
+:ref:`shmem_int_prod_to_all`\ (3), shmem_int4_prod_to_all\ (3),
+shmem_int8_prod_to_all\ (3), :ref:`shmem_long_prod_to_all`\ (3),
+:ref:`shmem_longdouble_prod_to_all`\ (3), :ref:`shmem_longlong_prod_to_all`\ (3),
+shmem_real8_prod_to_all\ (3), shmem_real16_prod_to_all\ (3),
+shmem_real4_prod_to_all\ (3), :ref:`shmem_short_prod_to_all`\ (3) -
 Performs a product reduction across a set of processing elements (PEs)
+
 
 SYNOPSIS
 --------
@@ -95,6 +98,7 @@ Fortran:
    CALL SHMEM_REAL16_PROD_TO_ALL(target, source, nreduce, PE_start,
    & logPE_stride, PE_size, pWrk, pSync)
 
+
 DESCRIPTION
 -----------
 
@@ -126,21 +130,21 @@ target
    information. When calling from Fortran, the target data types are as
    follows:
 
-   **shmem_comp4_prod_to_all**: Complex, with an element size equal to two
+   shmem_comp4_prod_to_all: Complex, with an element size equal to two
       4-byte real values.
 
-   **shmem_comp8_prod_to_all**: Complex, with an element size equal to two
+   shmem_comp8_prod_to_all: Complex, with an element size equal to two
       8-byte real values.
 
-   **shmem_int4_prod_to_all**: Integer, with an element size of 4 bytes
+   shmem_int4_prod_to_all: Integer, with an element size of 4 bytes
 
-   **shmem_int8_prod_to_all**: Integer, with an element size of 8 bytes
+   shmem_int8_prod_to_all: Integer, with an element size of 8 bytes
 
-   **shmem_real4_prod_to_all**: Real, with an element size of 4 bytes
+   shmem_real4_prod_to_all: Real, with an element size of 4 bytes
 
-   **shmem_real8_prod_to_all**: Real, with an element size of 8 bytes
+   shmem_real8_prod_to_all: Real, with an element size of 8 bytes
 
-   **shmem_real16_prod_to_all**: Real, with an element size of 16 bytes
+   shmem_real16_prod_to_all: Real, with an element size of 16 bytes
 
 source
    A symmetric array, of length nreduce elements, that contains one
@@ -195,6 +199,7 @@ Upon return from a reduction routine, the following are true for the
 local PE: The target array is updated. The values in the pSync array are
 restored to the original values.
 
+
 NOTES
 -----
 
@@ -216,6 +221,7 @@ pWrk arrays. In general, this can be assured only by doing some type of
 synchronization. However, in the special case of reduction routines
 being called with the same active set, you can allocate two pSync and
 pWrk arrays and alternate between them on successive calls.
+
 
 EXAMPLES
 --------
@@ -264,4 +270,5 @@ Note that two sets of pWrk and pSync arrays are used alternately because
 no synchronization is done between calls.
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

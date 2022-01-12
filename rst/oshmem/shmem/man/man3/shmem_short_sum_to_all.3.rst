@@ -1,18 +1,21 @@
 .. _shmem_short_sum_to_all:
 
+
 shmem_short_sum_to_all
 ======================
+
 .. include_body
 
-*shmem_comp4_sum_to_all*\ (3), *shmem_comp8_sum_to_all*\ (3),
-*shmem_complexd_sum_to_all*\ (3), *shmem_complexf_sum_to_all*\ (3),
-*shmem_double_sum_to_all*\ (3), *shmem_float_sum_to_all*\ (3),
-*shmem_int_sum_to_all*\ (3), *shmem_int4_sum_to_all*\ (3),
-*shmem_int8_sum_to_all*\ (3), *shmem_long_sum_to_all*\ (3),
-*shmem_longdouble_sum_to_all*\ (3), *shmem_longlong_sum_to_all*\ (3),
-*shmem_real4_sum_to_all*\ (3), *shmem_real8_sum_to_all*\ (3),
-*shmem_real16_sum_to_all*\ (3), *shmem_short_sum_to_all*\ (3) - Performs
+shmem_comp4_sum_to_all\ (3), shmem_comp8_sum_to_all\ (3),
+:ref:`shmem_complexd_sum_to_all`\ (3), :ref:`shmem_complexf_sum_to_all`\ (3),
+:ref:`shmem_double_sum_to_all`\ (3), :ref:`shmem_float_sum_to_all`\ (3),
+:ref:`shmem_int_sum_to_all`\ (3), shmem_int4_sum_to_all\ (3),
+shmem_int8_sum_to_all\ (3), :ref:`shmem_long_sum_to_all`\ (3),
+:ref:`shmem_longdouble_sum_to_all`\ (3), :ref:`shmem_longlong_sum_to_all`\ (3),
+shmem_real4_sum_to_all\ (3), shmem_real8_sum_to_all\ (3),
+shmem_real16_sum_to_all\ (3), :ref:`shmem_short_sum_to_all`\ (3) - Performs
 a sum reduction across a set of processing elements (PEs)
+
 
 SYNOPSIS
 --------
@@ -94,6 +97,7 @@ Fortran:
    CALL SHMEM_REAL16_SUM_TO_ALL(target, source, nreduce,
    & PE_start, logPE_stride, PE_size, pWrk, pSync)
 
+
 DESCRIPTION
 -----------
 
@@ -143,22 +147,22 @@ target
      C/C++, refer to the SYNOPSIS section for data type information.
      When calling from Fortran, the target data types are as follows:
 
-   **shmem_comp4_sum_to_all:** COMPLEX(KIND=4).
+   shmem_comp4_sum_to_all:** COMPLEX(KIND=4).
 
-   **shmem_comp8_sum_to_all:** Complex. If you are using Fortran, it must be
+   shmem_comp8_sum_to_all:** Complex. If you are using Fortran, it must be
       a default complex value.
 
-   **shmem_int4_sum_to_all:** INTEGER(KIND=4).
+   shmem_int4_sum_to_all:** INTEGER(KIND=4).
 
-   **shmem_int8_sum_to_all:** Integer. If you are using Fortran, it must be a
+   shmem_int8_sum_to_all:** Integer. If you are using Fortran, it must be a
       default integer value.
 
-   **shmem_real4_sum_to_all:** REAL(KIND=4).
+   shmem_real4_sum_to_all:** REAL(KIND=4).
 
-   **shmem_real8_sum_to_all:** Real. If you are using Fortran, it must be a
+   shmem_real8_sum_to_all:** Real. If you are using Fortran, it must be a
       default real value.
 
-   **shmem_real16_sum_to_all:** Real. If you are using Fortran, it must be a
+   shmem_real16_sum_to_all:** Real. If you are using Fortran, it must be a
       default real value.
 
 source
@@ -215,6 +219,7 @@ Upon return from a reduction routine, the following are true for the
 local PE: The target array is updated. The values in the pSync array are
 restored to the original values.
 
+
 NOTES
 -----
 
@@ -238,6 +243,7 @@ pWrk arrays. In general, this can be assured only by doing some type of
 synchronization. However, in the special case of reduction routines
 being called with the same active set, you can allocate two pSync and
 pWrk arrays and alternate between them on successive calls.
+
 
 EXAMPLES
 --------
@@ -285,4 +291,5 @@ the combination of the following calls:
    synchronization is done between calls.
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

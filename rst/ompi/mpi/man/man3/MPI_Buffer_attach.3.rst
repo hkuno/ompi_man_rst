@@ -2,6 +2,7 @@
 
 MPI_Buffer_attach
 =================
+
 .. include_body
 
 :ref:`MPI_Buffer_attach` - Attaches a user-defined buffer for sending.
@@ -103,4 +104,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Buffer_detach` 
+.. seealso:: :ref:`MPI_Buffer_detach`

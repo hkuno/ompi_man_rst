@@ -1,13 +1,17 @@
 .. _mpi_group_size:
 
+
 MPI_Group_size
 ==============
+
 .. include_body
 
 :ref:`MPI_Group_size` - Returns the size of a group.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Group_size(MPI_Group group, int *size)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_GROUP_SIZE(GROUP, SIZE, IERROR)
    	INTEGER	GROUP, SIZE, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -41,17 +47,15 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: size
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETERS
------ ----------
 
-* ``group``: Group (handle). 
+INPUT PARAMETERS
+----------------
+* ``group``: Group (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``size``: Number of processes in the group (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``size``: Number of processes in the group (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -59,6 +63,7 @@ DESCRIPTION
 :ref:`MPI_Group_size` returns in *size* the number of processes in the group.
 Thus, if group = MPI_GROUP_EMPTY, then the call will return size = 0. On
 the other hand, a call with group = MPI_GROUP_NULL is erroneous.
+
 
 ERRORS
 ------

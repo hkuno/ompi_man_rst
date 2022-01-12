@@ -2,6 +2,7 @@
 
 MPI_Free_mem
 ============
+
 .. include_body
 
 :ref:`MPI_Free_mem` - Frees memory that has been allocated using
@@ -74,4 +75,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Alloc_mem` 
+.. seealso:: :ref:`MPI_Alloc_mem`

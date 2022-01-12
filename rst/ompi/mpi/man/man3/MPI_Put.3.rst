@@ -1,14 +1,18 @@
 .. _mpi_put:
 
+
 MPI_Put
 =======
+
 .. include_body
 
 :ref:`MPI_Put`, :ref:`MPI_Rput` - Copies data from the origin memory to the
 target.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -25,6 +29,7 @@ C Syntax
    	 origin_datatype, int target_rank, MPI_Aint target_disp,
    	 int target_count, MPI_Datatype target_datatype, MPI_Win win,
    	 MPI_Request *request)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -47,6 +52,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	 INTEGER(KIND=MPI_ADDRESS_KIND) TARGET_DISP
    	 INTEGER ORIGIN_COUNT, ORIGIN_DATATYPE, TARGET_RANK, TARGET_COUNT,
    	 TARGET_DATATYPE, WIN, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -75,31 +81,22 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``origin_addr``: Initial address of origin buffer (choice). 
-
-* ``origin_count``: Number of entries in origin buffer (nonnegative integer). 
-
-* ``origin_datatype``: Data type of each entry in origin buffer (handle). 
-
-* ``target_rank``: Rank of target (nonnegative integer). 
-
-* ``target_disp``: Displacement from start of window to target buffer (nonnegative integer). 
-
-* ``target_count``: Number of entries in target buffer (nonnegative integer). 
-
-* ``target_datatype``: Data type of each entry in target buffer (handle). 
-
-* ``win``: Window object used for communication (handle). 
+----------------
+* ``origin_addr``: Initial address of origin buffer (choice).
+* ``origin_count``: Number of entries in origin buffer (nonnegative integer).
+* ``origin_datatype``: Data type of each entry in origin buffer (handle).
+* ``target_rank``: Rank of target (nonnegative integer).
+* ``target_disp``: Displacement from start of window to target buffer (nonnegative integer).
+* ``target_count``: Number of entries in target buffer (nonnegative integer).
+* ``target_datatype``: Data type of each entry in target buffer (handle).
+* ``win``: Window object used for communication (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``request``: MPI_Rput: RMA request 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``request``: MPI_Rput: RMA request
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -107,6 +104,7 @@ DESCRIPTION
 :ref:`MPI_Put` transfers *origin_count* successive entries of the type
 specified by *origin_datatype*, starting at address *origin_addr* on the
 origin node to the target node specified by the *win*, *target_rank*
+
 pair. The data are written in the target buffer at address *target_addr*
 ^ *window_base* + *target_disp* x *disp_unit*, where *window_base* and
 *disp_unit* are the base address and window displacement unit specified
@@ -147,6 +145,7 @@ indicate that the data is available at the target window. If remote
 completion is required, :ref:`MPI_Win_flush`, :ref:`MPI_Win_flush_all`,
 :ref:`MPI_Win_unlock`, or :ref:`MPI_Win_unlock_all` can be used.
 
+
 NOTES
 -----
 
@@ -165,8 +164,9 @@ transfers from contiguous buffers will be faster on most, if not all,
 systems; the alignment of the communication buffers may also impact
 performance.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 *TARGET_DISP* argument only for Fortran 90. FORTRAN 77 users may use the
@@ -178,6 +178,7 @@ non-portable syntax
 
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------
@@ -193,4 +194,7 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Get`  :ref:`MPI_Rget` | :ref:`MPI_Accumulate`  :ref:`MPI_Win_flush`  :ref:`MPI_Win_flush_all`  :ref:`MPI_Win_unlock`   :ref:`MPI_Win_unlock_all` 
+.. seealso:: 
+   | :ref:`MPI_Get` :ref:`MPI_Rget`
+   | :ref:`MPI_Accumulate` :ref:`MPI_Win_flush` :ref:`MPI_Win_flush_all` :ref:`MPI_Win_unlock`
+     :ref:`MPI_Win_unlock_all`

@@ -2,6 +2,7 @@
 
 MPI_Cart_map
 ============
+
 .. include_body
 
 :ref:`MPI_Cart_map` - Maps process to Cartesian topology information.
@@ -88,4 +89,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Graph_map` 
+.. seealso:: :ref:`MPI_Graph_map`

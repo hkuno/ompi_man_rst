@@ -1,14 +1,18 @@
 .. _mpi_type_struct:
 
+
 MPI_Type_struct
 ===============
+
 .. include_body
 
 :ref:`MPI_Type_struct` - Creates a *struct* data type -- use of this
 routine is deprecated.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Type_struct(int count, int *array_of_blocklengths,
    	MPI_Aint *array_of_displacements, MPI_Datatype *array_of_types,
    	MPI_Datatype *newtype)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -35,23 +40,18 @@ Fortran Syntax
    	INTEGER	ARRAY_OF_DISPLACEMENTS(*)
    	INTEGER	ARRAY_OF_TYPES(*), NEWTYPE, IERROR
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Number of blocks (integer) also number of entries in arrays array_of_types, array_of_displacements, and array_of_blocklengths. 
-
-* ``array_of_blocklengths``: Number of elements in each block (array). 
-
-* ``array_of_displacements``: Byte displacement of each block (array). 
-
-* ``array_of_types``: Type of elements in each block (array of handles to datatype objects). 
+----------------
+* ``count``: Number of blocks (integer) also number of entries in arrays array_of_types, array_of_displacements, and array_of_blocklengths.
+* ``array_of_blocklengths``: Number of elements in each block (array).
+* ``array_of_displacements``: Byte displacement of each block (array).
+* ``array_of_types``: Type of elements in each block (array of handles to datatype objects).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newtype``: New datatype (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newtype``: New datatype (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -85,6 +85,7 @@ type1 starting at 16, followed by three copies of MPI_CHAR, starting at
 26. (We assume that a float occupies 4 bytes.)
 
 For more information, see section 3.12.1 of the MPI-1.1 Standard.
+
 
 NOTES
 -----
@@ -124,6 +125,7 @@ be used for the structure foo:
        blen[2] = 1; indices[2] = sizeof(foo); oldtypes[2] = MPI_UB;
        MPI_Type_struct( 3, blen, indices, oldtypes, &newtype );
 
+
 ERRORS
 ------
 
@@ -138,4 +140,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Type_create_struct` | :ref:`MPI_Type_create_hindexed` 
+.. seealso:: 
+   | :ref:`MPI_Type_create_struct`
+   | :ref:`MPI_Type_create_hindexed`

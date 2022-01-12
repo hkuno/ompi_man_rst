@@ -1,13 +1,17 @@
 .. _mpi_sendrecv:
 
+
 MPI_Sendrecv
 ============
+
 .. include_body
 
 :ref:`MPI_Sendrecv` - Sends and receives a message.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    	int dest, int sendtag, void *recvbuf, int recvcount,
    	MPI_Datatype recvtype, int source, int recvtag,
    	MPI_Comm comm, MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -36,6 +41,7 @@ Fortran Syntax
    	INTEGER	SENDCOUNT, SENDTYPE, DEST, SENDTAG
    	INTEGER	RECVCOUNT, RECVTYPE, SOURCE, RECVTAG, COMM
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -55,37 +61,25 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Initial address of send buffer (choice). 
-
-* ``sendcount``: Number of elements to send (integer). 
-
-* ``sendtype``: Type of elements in send buffer (handle). 
-
-* ``dest``: Rank of destination (integer). 
-
-* ``sendtag``: Send tag (integer). 
-
-* ``recvcount``: Maximum number of elements to receive (integer). 
-
-* ``recvtype``: Type of elements in receive buffer (handle). 
-
-* ``source``: Rank of source (integer). 
-
-* ``recvtag``: Receive tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``sendbuf``: Initial address of send buffer (choice).
+* ``sendcount``: Number of elements to send (integer).
+* ``sendtype``: Type of elements in send buffer (handle).
+* ``dest``: Rank of destination (integer).
+* ``sendtag``: Send tag (integer).
+* ``recvcount``: Maximum number of elements to receive (integer).
+* ``recvtype``: Type of elements in receive buffer (handle).
+* ``source``: Rank of source (integer).
+* ``recvtag``: Receive tag (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Initial address of receive buffer (choice). 
-
-* ``status``: Status object (status). This refers to the receive operation. 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``recvbuf``: Initial address of receive buffer (choice).
+* ``status``: Status object (status). This refers to the receive operation.
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -118,6 +112,7 @@ If your application does not need to examine the *status* field, you can
 save resources by using the predefined constant MPI_STATUS_IGNORE as a
 special value for the *status* argument.
 
+
 ERRORS
 ------
 
@@ -132,4 +127,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Sendrecv_replace` 
+.. seealso:: 
+   :ref:`MPI_Sendrecv_replace`

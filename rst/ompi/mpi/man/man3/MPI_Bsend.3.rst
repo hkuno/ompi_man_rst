@@ -2,6 +2,7 @@
 
 MPI_Bsend
 =========
+
 .. include_body
 
 :ref:`MPI_Bsend` - Basic send with user-specified buffering.

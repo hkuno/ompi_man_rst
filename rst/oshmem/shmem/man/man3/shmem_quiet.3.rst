@@ -1,11 +1,14 @@
 .. _shmem_quiet:
 
+
 shmem_quiet
 ===========
+
 .. include_body
 
-*shmem_quiet*\ (3) - Waits for completion of all outstanding remote
+:ref:`shmem_quiet`\ (3) - Waits for completion of all outstanding remote
 writes issued by a processing element (PE).
+
 
 SYNOPSIS
 --------
@@ -26,25 +29,28 @@ Fortran:
 
    CALL SHMEM_QUIET
 
+
 DESCRIPTION
 -----------
 
-shmem_quiet ensures ordering of put (remote write) operations. All put
+:ref:`shmem_quiet` ensures ordering of put (remote write) operations. All put
 operations issued to any processing element (PE) prior to the call to
-shmem_quiet are guaranteed to be visible to all other PEs no later than
+:ref:`shmem_quiet` are guaranteed to be visible to all other PEs no later than
 any subsequent memory load or store, remote put or get, or
-synchronization operations that follow the call to shmem_quiet.
+synchronization operations that follow the call to :ref:`shmem_quiet`.
+
 
 NOTES
 -----
 
-| shmem_quiet is most useful as a way of ensuring ordering of delivery
-  of several put operations. For example, you might use shmem_quiet to
+| :ref:`shmem_quiet` is most useful as a way of ensuring ordering of delivery
+  of several put operations. For example, you might use :ref:`shmem_quiet` to
   await delivery of a block of data before issuing another put, which
   sets a completion flag on another PE.
-| shmem_quiet is not usually needed if *shmem_barrier_all*\ (3) or
-  *shmem_barrier*\ (3) are called. The barrier routines all wait for the
+| :ref:`shmem_quiet` is not usually needed if :ref:`shmem_barrier_all`\ (3) or
+  :ref:`shmem_barrier`\ (3) are called. The barrier routines all wait for the
   completion of outstanding remote writes (puts).
+
 
 EXAMPLES
 --------
@@ -77,4 +83,6 @@ EXAMPLES
    END
 
 
-.. seealso:: *intro_shmem\ (3), *:ref:`shmem_barrier` \ (3), *:ref:`shmem_barrier_all` \ (3),*:ref:`shmem_fence` \ (3), *shmem_put\ (3), *:ref:`shmem_wait` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), :ref:`shmem_barrier`\ (3), :ref:`shmem_barrier_all`\ (3),
+   *shmem_fence*\ (3), *shmem_put*\ (3), *shmem_wait*\ (3)

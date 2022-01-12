@@ -1,15 +1,19 @@
 .. _mpi_unpublish_name:
 
+
 MPI_Unpublish_name
 ==================
+
 .. include_body
 
 ::
 
    MPI_Unpublish_name - Unpublishes a service name
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Unpublish_name(const char *service_name, MPI_Info info,
    	const char *port_name)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -33,6 +38,7 @@ Fortran Syntax
    	CHARACTER*(*)	SERVICE_NAME, PORT_NAME
    	INTEGER		INFO, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -45,19 +51,16 @@ Fortran 2008 Syntax
    	TYPE(MPI_Info), INTENT(IN) :: info
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``service_name``: A service name (string). 
-
-* ``info``: Options to the name service functions (handle). 
-
-* ``port_name``: A port name (string). 
+----------------
+* ``service_name``: A service name (string).
+* ``info``: Options to the name service functions (handle).
+* ``port_name``: A port name (string).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -69,8 +72,9 @@ not published via :ref:`MPI_Publish_name`. Both the *service_name* and
 *port_name* arguments to :ref:`MPI_Unpublish_name` must be identical to the
 arguments to the previous call to :ref:`MPI_Publish_name`.
 
+
 INFO ARGUMENTS
----- ---------
+--------------
 
 The following keys for *info* are recognized:
 
@@ -97,8 +101,9 @@ global server has been specified and is available. If so, then the
 unpublish function will default to global scope first, followed by
 local. Otherwise, the data will default to unpublish with local scope.
 
+
 NAME SCOPE
----- -----
+----------
 
 Open MPI supports two name scopes: *global* and *local*. Local scope
 values are placed in a data store located on the mpirun of the calling
@@ -109,6 +114,7 @@ the specified service name is not found on the indicated location.
 
 For a more detailed description of scoping rules, please see the
 :ref:`MPI_Publish_name` man page.
+
 
 ERRORS
 ------
@@ -126,4 +132,9 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Publish_name`    :ref:`MPI_Lookup_name`    :ref:`MPI_Open_port` 
+.. seealso:: 
+   ::
+
+   MPI_Publish_name
+   MPI_Lookup_name
+      MPI_Open_port

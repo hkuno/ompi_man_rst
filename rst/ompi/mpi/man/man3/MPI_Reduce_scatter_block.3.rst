@@ -1,15 +1,19 @@
 .. _mpi_reduce_scatter_block:
 
+
 MPI_Reduce_scatter_block
 ========================
+
 .. include_body
 
 :ref:`MPI_Reduce_scatter_block`, :ref:`MPI_Ireduce_scatter_block`,
 :ref:`MPI_Reduce_scatter_block_init` - Combines values and scatters the
 results in blocks.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -27,6 +31,7 @@ C Syntax
 
    int MPI_Reduce_scatter_block_init(const void *sendbuf, void *recvbuf, int recvcount,
    	MPI_Datatype datatype, MPI_Op op, MPI_Comm comm, MPI_Info info, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -51,6 +56,7 @@ Fortran Syntax
    		COMM, INFO, REQUEST, IERROR)
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	RECVCOUNT, DATATYPE, OP, COMM, INFO, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -92,29 +98,21 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Starting address of send buffer (choice). 
-
-* ``recvcount``: lement count per block (non-negative integer). 
-
-* ``datatype``: Datatype of elements of input buffer (handle). 
-
-* ``op``: Operation (handle). 
-
-* ``comm``: Communicator (handle). 
-
-* ``info``: Info (handle, persistent only). 
+----------------
+* ``sendbuf``: Starting address of send buffer (choice).
+* ``recvcount``: lement count per block (non-negative integer).
+* ``datatype``: Datatype of elements of input buffer (handle).
+* ``op``: Operation (handle).
+* ``comm``: Communicator (handle).
+* ``info``: Info (handle, persistent only).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Starting address of receive buffer (choice). 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``recvbuf``: Starting address of receive buffer (choice).
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -128,8 +126,9 @@ number of processes in the group. Each segments contains *recvcount*
 elements. The ith segment is sent to process i and stored in the receive
 buffer defined by *recvbuf*, *recvcount*, and *datatype*.
 
+
 USE OF IN-PLACE OPTION
---- -- -------- ------
+----------------------
 
 When the communicator is an intracommunicator, you can perform a
 reduce-scatter operation in-place (the output buffer is used as the
@@ -138,8 +137,9 @@ input buffer). Use the variable MPI_IN_PLACE as the value of the
 receive buffer. The area occupied by the input data may be either longer
 or shorter than the data filled by the output data.
 
+
 WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
----- ------------ -- -- ------------------
+------------------------------------------
 
 When the communicator is an inter-communicator, the reduce-scatter
 operation occurs in two phases. First, the result of the reduction
@@ -151,8 +151,9 @@ For each group, all processes provide the same *recvcounts* argument,
 and the sum of the *recvcounts* values should be the same for both
 groups.
 
+
 NOTES ON COLLECTIVE OPERATIONS
------ -- ---------- ----------
+------------------------------
 
 The reduction functions ( MPI_Op ) do not return an error value. As a
 result, if the functions detect an error, all they can do is either call
@@ -162,6 +163,7 @@ MPI_ERRORS_RETURN , then no error may be indicated.
 
 The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
+
 
 ERRORS
 ------
@@ -177,4 +179,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Reduce_scatter` 
+.. seealso:: 
+   :ref:`MPI_Reduce_scatter`

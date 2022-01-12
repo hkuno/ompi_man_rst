@@ -1,11 +1,14 @@
 .. _shmalloc:
 
+
 shmalloc
 ========
+
 .. include_body
 
 *shmalloc*\ (3), *shfree*\ (3), *shmemalign*\ (3), *shrealloc*\ (3) -
 Symmetric heap memory management functions.
+
 
 SYNOPSIS
 --------
@@ -26,6 +29,7 @@ C or C++:
    void *shmemalign(size_t alignment, size_t size);
 
    extern long malloc_error;
+
 
 DESCRIPTION
 -----------
@@ -63,13 +67,14 @@ The shmalloc, shfree, and shrealloc functions are provided so that
 multiple PEs in an application can allocate symmetric, remotely
 accessible memory blocks. These memory blocks can then be used with
 (shmem) communication routines. Each of these functions call the
-*shmem_barrier_all*\ (3) function before returning; this ensures that
+:ref:`shmem_barrier_all`\ (3) function before returning; this ensures that
 all PEs participate in the memory allocation, and that the memory on
 other PEs can be used as soon as the local PE returns.
 
 The user is responsible for calling these functions with identical
 argument(s) on all PEs; if differing size arguments are used, subsequent
 calls may not return the same symmetric heap address on all PEs.
+
 
 NOTES
 -----
@@ -81,8 +86,9 @@ details. The shmalloc, shfree, and shrealloc functions differ from the
 private heap allocation functions in that all PEs in an application must
 call them (a barrier is used to ensure this).
 
+
 RETURN VALUES
------- ------
+-------------
 
 The **shmalloc** function returns a pointer to the allocated space
 (which should be identical on all PEs); otherwise, it returns a null
@@ -92,4 +98,5 @@ space (which may have moved); otherwise, it returns a null pointer (with
 malloc_error set).
 
 
-.. seealso:: *intro_shmem*\ (3), *my_pe*\ (3I), *start_pes*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *my_pe*\ (3I), *start_pes*\ (3)

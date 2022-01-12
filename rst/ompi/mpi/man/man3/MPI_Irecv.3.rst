@@ -1,13 +1,17 @@
 .. _mpi_irecv:
 
+
 MPI_Irecv
 =========
+
 .. include_body
 
 :ref:`MPI_Irecv` - Starts a standard-mode, nonblocking receive.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Irecv(void *buf, int count, MPI_Datatype datatype,
            int source, int tag, MPI_Comm comm, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    		IERROR)
    	<type>	BUF(*)
    	INTEGER	COUNT, DATATYPE, SOURCE, TAG, COMM, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,27 +53,20 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``buf``: Initial address of receive buffer (choice). 
-
-* ``count``: Number of elements in receive buffer (integer). 
-
-* ``datatype``: Datatype of each receive buffer element (handle). 
-
-* ``source``: Rank of source (integer). 
-
-* ``tag``: Message tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``buf``: Initial address of receive buffer (choice).
+* ``count``: Number of elements in receive buffer (integer).
+* ``datatype``: Datatype of each receive buffer element (handle).
+* ``source``: Rank of source (integer).
+* ``tag``: Message tag (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``request``: Communication request (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``request``: Communication request (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -86,6 +85,7 @@ A receive request can be determined being completed by calling the
 :ref:`MPI_Wait`, :ref:`MPI_Waitany`, :ref:`MPI_Test`, or :ref:`MPI_Testany` with request returned by
 this function.
 
+
 ERRORS
 ------
 
@@ -100,4 +100,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Recv`  :ref:`MPI_Probe`  :ref:`MPI_Test`  :ref:`MPI_Testany`  :ref:`MPI_Wait`  :ref:`MPI_Waitany` 
+.. seealso:: 
+   | :ref:`MPI_Recv` :ref:`MPI_Probe` :ref:`MPI_Test` :ref:`MPI_Testany` :ref:`MPI_Wait` :ref:`MPI_Waitany`

@@ -1,13 +1,17 @@
 .. _mpi_win_get_name:
 
+
 MPI_Win_get_name
 ================
+
 .. include_body
 
 :ref:`MPI_Win_get_name` - Obtains the name of a window.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_get_name(MPI_Win win, char *win_name, int *resultlen)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_WIN_GET_NAME(WIN, WIN_NAME, RESULTLEN, IERROR)
    	INTEGER WIN, RESULTLEN, IERROR
    	CHARACTER*(*) WIN_NAME
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,22 +49,20 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: resultlen
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``win``: Window whose name is to be returned (handle). 
+INPUT PARAMETER
+---------------
+* ``win``: Window whose name is to be returned (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``win_name``: the name previously stored on the window, or an empty string if no such name exists (string). 
-
-* ``resultlen``: Length of returned name (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``win_name``: the name previously stored on the window, or an empty string if no such name exists (string).
+* ``resultlen``: Length of returned name (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
+
 
 ERRORS
 ------

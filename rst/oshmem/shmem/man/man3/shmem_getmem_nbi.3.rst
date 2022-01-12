@@ -1,18 +1,21 @@
 .. _shmem_getmem_nbi:
 
+
 shmem_getmem_nbi
 ================
+
 .. include_body
 
-*shmem_getmem_nbi*\ (3), *shmem_char_get_nbi*\ (3),
-*shmem_short_get_nbi*\ (3), *shmem_int_get_nbi*\ (3),
-*shmem_long_get_nbi*\ (3), *shmem_longlong_get_nbi*\ (3),
-*shmem_float_get_nbi*\ (3), *shmem_double_get_nbi*\ (3),
-*shmem_longdouble_get_nbi*\ (3), *shmem_get8_nbi*\ (3),
-*shmem_get16_nbi*\ (3), *shmem_get32_nbi*\ (3), *shmem_get64_nbi*\ (3),
-*shmem_get128_nbi*\ (3), - The nonblocking get routines provide a method
+:ref:`shmem_getmem_nbi`\ (3), :ref:`shmem_char_get_nbi`\ (3),
+:ref:`shmem_short_get_nbi`\ (3), :ref:`shmem_int_get_nbi`\ (3),
+:ref:`shmem_long_get_nbi`\ (3), :ref:`shmem_longlong_get_nbi`\ (3),
+:ref:`shmem_float_get_nbi`\ (3), :ref:`shmem_double_get_nbi`\ (3),
+:ref:`shmem_longdouble_get_nbi`\ (3), :ref:`shmem_get8_nbi`\ (3),
+:ref:`shmem_get16_nbi`\ (3), :ref:`shmem_get32_nbi`\ (3), :ref:`shmem_get64_nbi`\ (3),
+:ref:`shmem_get128_nbi`\ (3), - The nonblocking get routines provide a method
 for copying data from a contiguous remote data object on the specified
 PE to the local data object.
+
 
 SYNOPSIS
 --------
@@ -99,14 +102,15 @@ Fortran:
 
    CALL SHMEM_GET128_NBI(dest, source, nelems, pe)
 
+
 DESCRIPTION
 -----------
 
 The get routines provide a method for copying a contiguous symmetric
 data object from a different PE to a contiguous data object on the local
 PE. The routines return after posting the operation. The operation is
-considered complete after a subsequent call to shmem_quiet. At the
-completion of shmem_quiet, the data has been delivered to the dest array
+considered complete after a subsequent call to :ref:`shmem_quiet`. At the
+completion of :ref:`shmem_quiet`, the data has been delivered to the dest array
 on the local PE.
 
 The arguments are as follows:
@@ -132,10 +136,12 @@ If you are using Fortran, data types must be of default size. For
 example, a real variable must be declared as REAL, REAL*4, or
 REAL(KIND=4).
 
+
 NOTES
 -----
 
 See *intro_shmem*\ (3) for a definition of the term remotely accessible.
+
 
 EXAMPLES
 --------
@@ -164,4 +170,5 @@ Consider this simple example for Fortran.
    END
 
 
-.. seealso:: *intro_shmem\ (3), *:ref:`shmem_quiet` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_quiet*\ (3)

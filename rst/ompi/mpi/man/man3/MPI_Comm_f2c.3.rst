@@ -1,7 +1,9 @@
 .. _mpi_comm_f2c:
 
+
 MPI_Comm_f2c
 ============
+
 .. include_body
 
 :ref:`MPI_Comm_f2c`, :ref:`MPI_Comm_c2f`, :ref:`MPI_File_f2c`, :ref:`MPI_File_c2f`, :ref:`MPI_Info_f2c`,
@@ -10,8 +12,10 @@ MPI_Comm_f2c
 :ref:`MPI_Win_f2c`, :ref:`MPI_Win_c2f` - Translates a C handle into a Fortran
 handle, or vice versa.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -47,6 +51,7 @@ C Syntax
    MPI_Win MPI_Win_f2c(MPI_Fint win)
    MPI_Fint MPI_Win_c2f(MPI_Win win)
 
+
 DESCRIPTION
 -----------
 
@@ -63,6 +68,7 @@ For example, if *comm* is a valid Fortran handle to a communicator, then
 *comm* = MPI_COMM_NULL (Fortran value), then :ref:`MPI_Comm_f2c` returns a null
 C handle; if *comm* is an invalid Fortran handle, then :ref:`MPI_Comm_f2c`
 returns an invalid C handle.
+
 
 NOTE
 ----

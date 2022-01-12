@@ -1,13 +1,17 @@
 .. _mpi_initialized:
 
+
 MPI_Initialized
 ===============
+
 .. include_body
 
 :ref:`MPI_Initialized` - Checks whether MPI has been initialized
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Initialized(int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    	LOGICAL	FLAG
    	INTEGER	IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -41,12 +47,11 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 OUTPUT PARAMETERS
------- ----------
-
-* ``flag``: True if MPI has been initialized, and false otherwise (logical). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``flag``: True if MPI has been initialized, and false otherwise (logical).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -54,6 +59,7 @@ DESCRIPTION
 This routine may be used to determine whether MPI has been initialized.
 It is one of a small number of routines that may be called before MPI is
 initialized and after MPI has been finalized (:ref:`MPI_Finalized` is another).
+
 
 ERRORS
 ------
@@ -69,4 +75,10 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Init`    :ref:`MPI_Init_thread`    :ref:`MPI_Finalize`    :ref:`MPI_Finalized` 
+.. seealso:: 
+   ::
+
+   MPI_Init
+   MPI_Init_thread
+   MPI_Finalize
+      MPI_Finalized

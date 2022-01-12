@@ -1,13 +1,17 @@
 .. _mpi_comm_get_attr:
 
+
 MPI_Comm_get_attr
 =================
+
 .. include_body
 
 :ref:`MPI_Comm_get_attr` - Retrieves attribute value by key.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Comm_get_attr(MPI_Comm comm, int comm_keyval,
    	void *attribute_val, int *flag)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	INTEGER	COMM, COMM_KEYVAL, IERROR
    	INTEGER(KIND=MPI_ADDRESS_KIND) ATTRIBUTE_VAL
    	LOGICAL FLAG
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -46,21 +52,17 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``comm``: Communicator to which the attribute is attached (handle). 
-
-* ``comm_keyval``: Key value (integer). 
+----------------
+* ``comm``: Communicator to which the attribute is attached (handle).
+* ``comm_keyval``: Key value (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``attribute_val``: Attribute value, unless f\ *lag* = false. 
-
-* ``flag``: False if no attribute is associated with the key (logical). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``attribute_val``: Attribute value, unless f\ *lag* = false.
+* ``flag``: False if no attribute is associated with the key (logical).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -75,8 +77,9 @@ This function replaces :ref:`MPI_Attr_get`, the use of which is deprecated. The
 C binding is identical. The Fortran binding differs in that
 *attribute_val* is an address-sized integer.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 *ATTRIBUTE_VAL* argument only for Fortran 90. Sun FORTRAN 77 users may
@@ -88,6 +91,7 @@ use the non-portable syntax
 
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------

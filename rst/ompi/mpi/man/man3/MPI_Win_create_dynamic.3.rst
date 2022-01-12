@@ -1,14 +1,18 @@
 .. _mpi_win_create_dynamic:
 
+
 MPI_Win_create_dynamic
 ======================
+
 .. include_body
 
 :ref:`MPI_Win_create_dynamic` - One-sided MPI call that returns a window
 object for RMA operations.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    MPI_Win_create_dynamic(MPI_Info info, MPI_Comm comm, MPI_Win *win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_CREATE_DYNAMIC(INFO, COMM, WIN, IERROR)
    	INTEGER INFO, COMM, WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,19 +49,16 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(OUT) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``info``: Info argument (handle). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``info``: Info argument (handle).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``win``: Window object returned by the call (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``win``: Window object returned by the call (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -95,6 +98,7 @@ accumulate_ops
    address will use the same operation or MPI_NO_OP. The default is
    *same_op_no_op*.
 
+
 NOTES
 -----
 
@@ -104,6 +108,7 @@ has to communicate the actual address at the target using
 
 Dynamic memory does not have any *disp_unit* associated and requires
 correct offset calculations with proper type handling.
+
 
 ERRORS
 ------
@@ -119,4 +124,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_attach`  :ref:`MPI_Win_detach`  :ref:`MPI_Get_address` 
+.. seealso:: 
+   | :ref:`MPI_Win_attach` :ref:`MPI_Win_detach` :ref:`MPI_Get_address`

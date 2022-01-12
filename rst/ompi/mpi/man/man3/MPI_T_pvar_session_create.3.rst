@@ -1,14 +1,18 @@
 .. _mpi_t_pvar_session_create:
 
+
 MPI_T_pvar_session_create
 =========================
+
 .. include_body
 
 :ref:`MPI_T_pvar_session_create`, :ref:`MPI_T_pvar_session_free` - Create/free
 performance variable session
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -21,6 +25,7 @@ C Syntax
 
    int MPI_T_pvar_session_free(MPI_T_pvar_session *session)
 
+
 DESCRIPTION
 -----------
 
@@ -30,6 +35,7 @@ variables. The new session is returned in the *session* parameter.
 :ref:`MPI_T_pvar_session_free` releases a session allocated by
 :ref:`MPI_T_pvar_session_create` and sets the *session* parameter to
 MPI_T_PVAR_SESSION_NULL.
+
 
 ERRORS
 ------

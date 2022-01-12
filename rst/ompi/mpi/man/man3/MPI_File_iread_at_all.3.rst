@@ -1,14 +1,18 @@
 .. _mpi_file_iread_at_all:
 
+
 MPI_File_iread_at_all
 =====================
+
 .. include_body
 
 :ref:`MPI_File_iread_at_all` - Reads a file at an explicitly specified
 offset (nonblocking, collective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -22,6 +26,7 @@ C Syntax
    	void *buf, int count, MPI_Datatype datatype,
    	MPI_Request *request)
 
+
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -34,6 +39,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	<type>	BUF(*)
    	INTEGER	FH, COUNT, DATATYPE, REQUEST, IERROR
    	INTEGER(KIND=MPI_OFFSET_KIND)	OFFSET
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -51,25 +57,19 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``offset``: File offset (integer). 
-
-* ``count``: Number of elements in the buffer (integer). 
-
-* ``datatype``: Data type of each buffer element (handle). 
+----------------
+* ``fh``: File handle (handle).
+* ``offset``: File offset (integer).
+* ``count``: Number of elements in the buffer (integer).
+* ``datatype``: Data type of each buffer element (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``buf``: Initial address of the buffer (choice). 
-
-* ``request``: Request object (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``buf``: Initial address of the buffer (choice).
+* ``request``: Request object (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -86,8 +86,9 @@ is taken out of those parts of the file specified by the current view.
 :ref:`MPI_File_iread_at_all` stores the number of *datatype* elements actually
 read in *status.* All other fields of *status* are undefined.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *OFFSET*
 argument only for Fortran 90. Sun FORTRAN 77 users may use the
@@ -99,6 +100,7 @@ non-portable syntax
 
 where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------

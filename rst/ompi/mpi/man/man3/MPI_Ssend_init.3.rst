@@ -1,13 +1,17 @@
 .. _mpi_ssend_init:
 
+
 MPI_Ssend_init
 ==============
+
 .. include_body
 
 :ref:`MPI_Ssend_init` - Builds a handle for a synchronous send.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Ssend_init(const void *buf, int count, MPI_Datatype datatype,
    	int dest, int tag, MPI_Comm comm, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    		IERROR)
    	<type>	BUF(*)
    	INTEGER	COUNT, DATATYPE, DEST, TAG, COMM, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,27 +53,20 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``buf``: Initial address of send buffer (choice). 
-
-* ``count``: Number of elements to send (integer). 
-
-* ``datatype``: Type of each element (handle). 
-
-* ``dest``: Rank of destination (integer). 
-
-* ``tag``: Message tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``buf``: Initial address of send buffer (choice).
+* ``count``: Number of elements to send (integer).
+* ``datatype``: Type of each element (handle).
+* ``dest``: Rank of destination (integer).
+* ``tag``: Message tag (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``request``: Communication request (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``request``: Communication request (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -77,6 +76,7 @@ operation, and binds to it all the arguments of a send operation.
 
 A communication (send or receive) that uses a persistent request is
 initiated by the function :ref:`MPI_Start`.
+
 
 ERRORS
 ------
@@ -92,4 +92,11 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Bsend_init` | :ref:`MPI_Send_init` | :ref:`MPI_Rsend_init` | :ref:`MPI_Recv_init` | :ref:`MPI_Start` | :ref:`MPI_Startall` | :ref:`MPI_Ssend` 
+.. seealso:: 
+   | :ref:`MPI_Bsend_init`
+   | :ref:`MPI_Send_init`
+   | :ref:`MPI_Rsend_init`
+   | :ref:`MPI_Recv_init`
+   | :ref:`MPI_Start`
+   | :ref:`MPI_Startall`
+   | :ref:`MPI_Ssend`

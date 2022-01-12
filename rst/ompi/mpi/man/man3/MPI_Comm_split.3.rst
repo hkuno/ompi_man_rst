@@ -1,13 +1,17 @@
 .. _mpi_comm_split:
 
+
 MPI_Comm_split
 ==============
+
 .. include_body
 
 :ref:`MPI_Comm_split` - Creates new communicators based on colors and keys.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    int MPI_Comm_split(MPI_Comm comm, int color, int key,
    	MPI_Comm *newcomm)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_COMM_SPLIT(COMM, COLOR, KEY, NEWCOMM, IERROR)
    	INTEGER	COMM, COLOR, KEY, NEWCOMM, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,21 +49,17 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(OUT) :: newcomm
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``comm``: Communicator (handle). 
-
-* ``color``: Control of subset assignment (nonnegative integer). 
-
-* ``key``: Control of rank assignment (integer). 
+----------------
+* ``comm``: Communicator (handle).
+* ``color``: Control of subset assignment (nonnegative integer).
+* ``key``: Control of rank assignment (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newcomm``: New communicator (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newcomm``: New communicator (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -90,6 +92,7 @@ reordering.
 
 The value of *color* must be nonnegative or MPI_UNDEFINED.
 
+
 NOTES
 -----
 
@@ -117,6 +120,7 @@ Essentially, making the key value zero for all processes of a given
 color means that one needn't really pay attention to the rank-order of
 the processes in the new communicator.
 
+
 ERRORS
 ------
 
@@ -131,4 +135,8 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Comm_create` | :ref:`MPI_Intercomm_create` | :ref:`MPI_Comm_dup` | :ref:`MPI_Comm_free` 
+.. seealso:: 
+   | :ref:`MPI_Comm_create`
+   | :ref:`MPI_Intercomm_create`
+   | :ref:`MPI_Comm_dup`
+   | :ref:`MPI_Comm_free`

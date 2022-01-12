@@ -1,13 +1,17 @@
 .. _mpi_type_get_name:
 
+
 MPI_Type_get_name
 =================
+
 .. include_body
 
 :ref:`MPI_Type_get_name` - Gets the name of a data type.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Type_get_name(MPI_Datatype type, char *type_name,
    	int *resultlen)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_TYPE_GET_NAME(TYPE, TYPE_NAME, RESULTLEN, IERROR)
    	INTEGER	TYPE, RESULTLEN, IERROR
    	CHARACTER*(*) TYPE_NAME
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -44,25 +50,23 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: resultlen
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``type``: Data type whose name is to be returned (handle). 
+INPUT PARAMETER
+---------------
+* ``type``: Data type whose name is to be returned (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``type_name``: The name previously stored on the data type, or an empty string if not such name exists (string). 
-
-* ``resultlen``: Length of returned name (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``type_name``: The name previously stored on the data type, or an empty string if not such name exists (string).
+* ``resultlen``: Length of returned name (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 :ref:`MPI_Type_get_name` returns the printable identifier associated with an
 MPI data type.
+
 
 ERRORS
 ------
@@ -78,4 +82,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Type_set_name` 
+.. seealso:: 
+   | :ref:`MPI_Type_set_name`

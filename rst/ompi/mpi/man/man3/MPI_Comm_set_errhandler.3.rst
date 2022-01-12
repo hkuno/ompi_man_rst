@@ -1,14 +1,18 @@
 .. _mpi_comm_set_errhandler:
 
+
 MPI_Comm_set_errhandler
 =======================
+
 .. include_body
 
 :ref:`MPI_Comm_set_errhandler` - Attaches a new error handler to a
 communicator.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Comm_set_errhandler(MPI_Comm comm,
    	MPI_Errhandler errhandler)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -30,6 +35,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_COMM_SET_ERRHANDLER(COMM, ERRHANDLER, IERROR)
    	INTEGER	COMM, ERRHANDLER, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,17 +49,15 @@ Fortran 2008 Syntax
    	TYPE(MPI_Errhandler), INTENT(IN) :: errhandler
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``comm``: Communicator (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``errhandler``: New error handler for communicator (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``errhandler``: New error handler for communicator (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -62,6 +66,7 @@ DESCRIPTION
 The error handler must be either a predefined error handler or an error
 handler created by a call to :ref:`MPI_Comm_create_errhandler`. This call is
 identical to :ref:`MPI_Errhandler_set`, the use of which is deprecated.
+
 
 ERRORS
 ------

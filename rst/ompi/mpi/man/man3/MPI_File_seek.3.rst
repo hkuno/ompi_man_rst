@@ -1,13 +1,17 @@
 .. _mpi_file_seek:
 
+
 MPI_File_seek
 =============
+
 .. include_body
 
 :ref:`MPI_File_seek` - Updates individual file pointers (noncollective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -20,6 +24,7 @@ C Syntax
    int MPI_File_seek(MPI_File fh, MPI_Offset offset,
    	int whence)
 
+
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -31,6 +36,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    MPI_FILE_SEEK(FH, OFFSET, WHENCE, IERROR)
    	INTEGER	FH, WHENCE, IERROR
    	INTEGER(KIND=MPI_OFFSET_KIND)	OFFSET
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -45,19 +51,16 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(IN) :: whence
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``offset``: File offset (integer). 
-
-* ``whence``: Update mode (integer). 
+----------------
+* ``fh``: File handle (handle).
+* ``offset``: File offset (integer).
+* ``whence``: Update mode (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -82,8 +85,9 @@ file is defined to be the location of the next elementary data item
 immediately after the last accessed data item, even if that location is
 a hole.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *OFFSET*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -95,6 +99,7 @@ syntax
 
 where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------

@@ -1,14 +1,18 @@
 .. _mpi_win_flush:
 
+
 MPI_Win_flush
 =============
+
 .. include_body
 
 :ref:`MPI_Win_flush`, :ref:`MPI_Win_flush_all` - Complete all outstanding RMA
 operations at both the origin and the target
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Win_flush (int rank, MPI_Win win)
 
    int MPI_Win_flush_all (MPI_Win win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -34,6 +39,7 @@ Fortran Syntax
 
    MPI_WIN_FLUSH_ALL(WIN, IERROR)
    	INTEGER WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -51,17 +57,15 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``rank``: Rank of window (nonnegative integer). 
-
-* ``win``: Window object (handle). 
+----------------
+* ``rank``: Rank of window (nonnegative integer).
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -73,6 +77,7 @@ operations are completed both at the origin and at the target.
 targets.
 
 Can only be called from within a passive target epoch.
+
 
 ERRORS
 ------
@@ -89,4 +94,5 @@ that MPI does not guarantee that an MPI program can continue past an
 error.
 
 
-.. seealso:: | :ref:`MPI_Win_flush_local`  :ref:`MPI_Win_lock`  :ref:`MPI_Win_lock_all` 
+.. seealso:: 
+   | :ref:`MPI_Win_flush_local` :ref:`MPI_Win_lock` :ref:`MPI_Win_lock_all`
