@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_SPLIT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_COMM_SPLIT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -74,9 +74,7 @@ MPI_Comm_split(comm, color, key, newcomm, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
@@ -85,9 +83,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBkey\fP: Control of rank assignment (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBnewcomm\fP: New communicator (handle).
@@ -164,7 +160,10 @@ guarantee that an MPI program can continue past an error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Comm_create | MPI_Intercomm_create | MPI_Comm_dup | MPI_Comm_free
+MPI_Comm_create
+MPI_Intercomm_create
+MPI_Comm_dup
+MPI_Comm_free
 .fi
 .sp
 .UNINDENT

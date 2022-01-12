@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_GET_ATTR" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_WIN_GET_ATTR" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -77,18 +77,14 @@ MPI_Win_get_attr(win, win_keyval, attribute_val, flag, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBwin\fP: Window to which the attribute is attached (handle).
 .IP \(bu 2
 \fBwin_keyval\fP: Key value (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBattribute_val\fP: Attribute value, unless \fIag\fP = false
@@ -100,9 +96,7 @@ OUTPUT PARAMETERS
 .SH DESCRIPTION
 .sp
 Obtains the value of a window attribute.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fIATTRIBUTE_VAL\fP argument only for Fortran 90. FORTRAN 77 users may use

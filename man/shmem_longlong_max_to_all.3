@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONGLONG_MAX_TO_ALL" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_LONGLONG_MAX_TO_ALL" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,12 +33,12 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_double_max_to_all\fP(3), \fIshmem_float_max_to_all\fP(3),
-\fIshmem_int_max_to_all\fP(3), \fIshmem_int4_max_to_all\fP(3),
-\fIshmem_int8_max_to_all\fP(3), \fIshmem_long_max_to_all\fP(3),
-\fIshmem_longdouble_max_to_all\fP(3), \fIshmem_longlong_max_to_all\fP(3),
-\fIshmem_real4_max_to_all\fP(3), \fIshmem_real8_max_to_all\fP(3),
-\fIshmem_real16_max_to_all\fP(3), \fIshmem_short_max_to_all\fP(3) \- Performs
+shmem_double_max_to_all(3), shmem_float_max_to_all(3),
+shmem_int_max_to_all(3), shmem_int4_max_to_all(3),
+shmem_int8_max_to_all(3), shmem_long_max_to_all(3),
+shmem_longdouble_max_to_all(3), \fI\%shmem_longlong_max_to_all\fP(3),
+shmem_real4_max_to_all(3), shmem_real8_max_to_all(3),
+shmem_real16_max_to_all(3), shmem_short_max_to_all(3) \- Performs
 a maximum function reduction across a set of processing elements (PEs).
 .SH SYNOPSIS
 .sp
@@ -147,17 +147,17 @@ When calling from Fortran, the target data types are as follows:
 .INDENT 3.5
 .INDENT 0.0
 .TP
-\fBshmem_comp8_max_to_all\fP: Complex, with an element size equal to two
+.B shmem_comp8_max_to_all: Complex, with an element size equal to two
 8\-byte real values.
 .UNINDENT
 .sp
-\fBshmem_int4_max_to_all\fP: Integer, with an element size of 4 bytes.
+shmem_int4_max_to_all: Integer, with an element size of 4 bytes.
 .sp
-\fBshmem_int8_max_to_all\fP: Integer, with an element size of 8 bytes.
+shmem_int8_max_to_all: Integer, with an element size of 8 bytes.
 .sp
-\fBshmem_real4_max_to_all\fP: Real, with an element size of 4 bytes.
+shmem_real4_max_to_all: Real, with an element size of 4 bytes.
 .sp
-\fBshmem_real16_max_to_all\fP: Real, with an element size of 16 bytes.
+shmem_real16_max_to_all: Real, with an element size of 16 bytes.
 .UNINDENT
 .UNINDENT
 .INDENT 0.0

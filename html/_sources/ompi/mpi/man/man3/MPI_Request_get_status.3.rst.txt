@@ -1,14 +1,18 @@
 .. _mpi_request_get_status:
 
+
 MPI_Request_get_status
 ======================
+
 .. include_body
 
 :ref:`MPI_Request_get_status` - Access information associated with a
 request without freeing the request.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Request_get_status(MPI_Request request, int *flag, MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_REQUEST_GET_STATUS(REQUEST, FLAG, STATUS, IERROR)
    	INTEGER	REQUEST, STATUS(MPI_STATUS_SIZE), IERROR
    	LOGICAL	FLAG
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -44,17 +50,15 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``request``: Communication request (handle). 
+INPUT PARAMETER
+---------------
+* ``request``: Communication request (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``flag``: Boolean flag, same as from MPI_Test (logical). 
-
-* ``status``: MPI_Status object if flag is true (status). 
+-----------------
+* ``flag``: Boolean flag, same as from MPI_Test (logical).
+* ``status``: MPI_Status object if flag is true (status).
 
 DESCRIPTION
 -----------
@@ -68,6 +72,7 @@ test, wait, or free should be executed with that request.
 If your application does not need to examine the *status* field, you can
 save resources by using the predefined constant MPI_STATUS_IGNORE as a
 special value for the *status* argument.
+
 
 ERRORS
 ------

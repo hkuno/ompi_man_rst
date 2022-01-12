@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_RECV_INIT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_RECV_INIT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -78,9 +78,7 @@ MPI_Recv_init(buf, count, datatype, source, tag, comm, request, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcount\fP: Maximum number of elements to receive (integer).
@@ -95,14 +93,9 @@ INPUT PARAMETERS
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETER
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBbuf\fP: Initial address of receive buffer (choice).
-.UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBbuf\fP: Initial address of receive buffer (choice).
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrequest\fP: Communication request (handle).
@@ -136,7 +129,13 @@ guarantee that an MPI program can continue past an error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Bsend_init | MPI_Rsend_init | MPI_Send_init | MPI_Sssend_init| MPI_Start | MPI_Startall | MPI_Request_free
+MPI_Bsend_init
+MPI_Rsend_init
+MPI_Send_init
+MPI_Sssend_init
+MPI_Start
+MPI_Startall
+MPI_Request_free
 .fi
 .sp
 .UNINDENT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONG_GET" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_LONG_GET" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,14 +33,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_character_get\fP(3), \fIshmem_complex_get\fP(3),
-\fIshmem_double_get\fP(3), \fIshmem_float_get\fP(3), \fIshmem_get4\fP(3),
-\fIshmem_get8\fP(3), \fIshmem_get32\fP(3), \fIshmem_get64\fP(3),
-\fIshmem_get128\fP(3), \fIshmem_getmem\fP(3), \fIshmem_int_get\fP(3),
-\fIshmem_integer_get\fP(3), \fIshmem_logical_get\fP(3),
-\fIshmem_long_get\fP(3), \fIshmem_longdouble_get\fP(3),
-\fIshmem_longlong_get\fP(3), \fIshmem_real_get\fP(3), \fIshmem_short_get\fP(3)
-\- Transfers data from a specified processing element (PE).
+shmem_character_get(3), shmem_complex_get(3),
+shmem_double_get(3), shmem_float_get(3), shmem_get4(3),
+shmem_get8(3), shmem_get32(3), shmem_get64(3),
+shmem_get128(3), shmem_getmem(3), shmem_int_get(3),
+shmem_integer_get(3), shmem_logical_get(3),
+\fI\%shmem_long_get\fP(3), shmem_longdouble_get(3),
+shmem_longlong_get(3), shmem_real_get(3), shmem_short_get(3)
+{INDENT}{curline}
 .SH SYNOPSIS
 .sp
 C or C++:
@@ -157,32 +157,32 @@ The target and source data objects must conform to typing constraints,
 which are as follows:
 .INDENT 0.0
 .TP
-\fBshmem_getmem\fP: Fortran: Any noncharacter type. C: Any data type. len is
+.B shmem_getmem: Fortran: Any noncharacter type. C: Any data type. len is
 scaled in bytes.
 .TP
-\fBshmem_get4, shmem_get32\fP: Any noncharacter type that has a storage size
+.B shmem_get4, shmem_get32: Any noncharacter type that has a storage size
 equal to 32 bits.
 .TP
 .B {shmem_get8, shmem_get64}: Any noncharacter type that has a storage size equal to
 64 bits.
 .TP
-\fBshmem_get128\fP: Any noncharacter type that has a storage size equal to 128
+.B shmem_get128: Any noncharacter type that has a storage size equal to 128
 bits.
 .UNINDENT
 .sp
-\fBshmem_short_get\fP: Elements of type short.
+shmem_short_get: Elements of type short.
 .sp
-\fBshmem_int_get\fP: Elements of type int.
+shmem_int_get: Elements of type int.
 .sp
-\fBshmem_long_get\fP: Elements of type long.
+\fI\%shmem_long_get\fP: Elements of type long.
 .sp
-\fBshmem_longlong_get\fP: Elements of type long long.
+shmem_longlong_get: Elements of type long long.
 .sp
-\fBshmem_float_get\fP: Elements of type float.
+shmem_float_get: Elements of type float.
 .sp
-\fBshmem_double_get\fP: Elements of type double.
+shmem_double_get: Elements of type double.
 .sp
-\fBshmem_longdouble_get\fP: Elements of type long double.
+shmem_longdouble_get: Elements of type long double.
 .INDENT 0.0
 .TP
 \fBSHMEM_CHARACTER_GET\fP: Elements of type character. len is the number of
@@ -238,7 +238,8 @@ END
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem(3), *shmem_put(3), *shmem_iget(3),\fPshmem_quiet (3)
+\fIintro_shmem\fP(3), shmem_put(3), shmem_iget(3),
+\fIshmem_quiet\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

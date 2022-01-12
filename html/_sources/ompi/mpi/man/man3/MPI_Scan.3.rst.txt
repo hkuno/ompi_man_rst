@@ -1,14 +1,18 @@
 .. _mpi_scan:
 
+
 MPI_Scan
 ========
+
 .. include_body
 
 :ref:`MPI_Scan`, :ref:`MPI_Iscan`, :ref:`MPI_Scan_init` - Computes an inclusive scan
 (partial reduction)
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -27,6 +31,7 @@ C Syntax
    int MPI_Scan_init(const void *sendbuf, void *recvbuf, int count,
                  MPI_Datatype datatype, MPI_Op op, MPI_Comm comm,
                  MPI_Info info, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -47,6 +52,7 @@ Fortran Syntax
    MPI_SCAN_INIT(SENDBUF, RECVBUF, COUNT, DATATYPE, OP, COMM, INFO, REQUEST, IERROR)
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	COUNT, DATATYPE, OP, COMM, INFO, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -85,29 +91,21 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Send buffer (choice). 
-
-* ``count``: Number of elements in input buffer (integer). 
-
-* ``datatype``: Data type of elements of input buffer (handle). 
-
-* ``op``: Operation (handle). 
-
-* ``comm``: Communicator (handle). 
-
-* ``info``: Info (handle, persistent only) 
+----------------
+* ``sendbuf``: Send buffer (choice).
+* ``count``: Number of elements in input buffer (integer).
+* ``datatype``: Data type of elements of input buffer (handle).
+* ``op``: Operation (handle).
+* ``comm``: Communicator (handle).
+* ``info``: Info (handle, persistent only)
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Receive buffer (choice). 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``recvbuf``: Receive buffer (choice).
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -119,6 +117,7 @@ according to the function *op*) of the values in the *sendbuf*\ s of
 processes with ranks 0, ..., i (inclusive). The type of operations
 supported, their semantics, and the constraints on send and receive
 buffers are as for :ref:`MPI_Reduce`.
+
 
 EXAMPLE
 -------
@@ -214,8 +213,9 @@ following:
    	...
    	MPI_Scan(a, answer, 1, sspair, myOp, comm);
 
+
 USE OF IN-PLACE OPTION
---- -- -------- ------
+----------------------
 
 When the communicator is an intracommunicator, you can perform a
 scanning operation in place (the output buffer is used as the input
@@ -223,8 +223,9 @@ buffer). Use the variable MPI_IN_PLACE as the value of the *sendbuf*
 argument. The input data is taken from the receive buffer and replaced
 by the output data.
 
+
 NOTES ON COLLECTIVE OPERATIONS
------ -- ---------- ----------
+------------------------------
 
 The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either
@@ -234,6 +235,7 @@ MPI_ERRORS_RETURN), then no error may be indicated.
 
 The reason for this is the performance problems in ensuring that all
 collective routines return the same error value.
+
 
 ERRORS
 ------
@@ -251,4 +253,9 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Exscan`    :ref:`MPI_Op_create`    :ref:`MPI_Reduce` 
+.. seealso:: 
+   ::
+
+   MPI_Exscan
+   MPI_Op_create
+      MPI_Reduce

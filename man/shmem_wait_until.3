@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_WAIT_UNTIL" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_WAIT_UNTIL" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,13 +33,13 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_int_wait\fP(3), \fIshmem_int_wait\fP(3)_until,
-\fIshmem_int4_wait\fP(3), \fIshmem_int4_wait\fP(3)_until,
-\fIshmem_int8_wait\fP(3), \fIshmem_int8_wait\fP(3)_until,
-\fIshmem_long_wait\fP(3), \fIshmem_long_wait\fP(3)_until,
-\fIshmem_longlong_wait\fP(3), \fIshmem_longlong_wait\fP(3)_until,
-\fIshmem_short_wait\fP(3), \fIshmem_short_wait\fP(3)_until,
-\fIshmem_wait\fP(3), \fIshmem_wait\fP(3)_until \- Waits for a variable on the
+shmem_int_wait(3), shmem_int_wait(3)_until,
+shmem_int4_wait(3), shmem_int4_wait(3)_until,
+shmem_int8_wait(3), shmem_int8_wait(3)_until,
+shmem_long_wait(3), shmem_long_wait(3)_until,
+shmem_longlong_wait(3), shmem_longlong_wait(3)_until,
+shmem_short_wait(3), shmem_short_wait(3)_until,
+shmem_wait(3), shmem_wait(3)_until \- Waits for a variable on the
 local processing element (PE) to change
 .SH SYNOPSIS
 .sp
@@ -102,12 +102,12 @@ CALL SHMEM_WAIT_UNTIL(ivar, cmp, cmp_value)
 .UNINDENT
 .SH DESCRIPTION
 .sp
-shmem_wait and shmem_wait_until wait for \fBivar\fP to be changed by a
+shmem_wait and \fI\%shmem_wait_until\fP wait for \fBivar\fP to be changed by a
 remote write or atomic swap issued by a different processor. These
 routines can be used for point\-to\- point directed synchronization. A
 call to shmem_wait does not return until some other processor writes a
 value, not equal to cmp_value, into \fBivar\fP on the waiting processor. A
-call to shmem_wait_until does not return until some other processor
+call to \fI\%shmem_wait_until\fP does not return until some other processor
 changes \fBivar\fP to satisfy the condition implied by cmp and cmp_value.
 This mechanism is useful when a processor needs to tell another
 processor that it has completed some action.
@@ -140,11 +140,11 @@ that implied in the SYNOPSIS section. If you are using Fortran, ivar
 must be a specific sized integer type according to the function being
 called, as follows:
 .sp
-\fBshmem_wait, shmem_wait_until:\fP default INTEGER
+shmem_wait, \fI\%shmem_wait_until\fP:** default INTEGER
 .sp
-\fBshmem_int4_wait, shmem_int4_wait_until:\fP INTEGER*4
+shmem_int4_wait, shmem_int4_wait_until:** INTEGER*4
 .sp
-\fBshmem_int8_wait, shmem_int8_wait_until:\fP INTEGER*8
+shmem_int8_wait, shmem_int8_wait_until:** INTEGER*8
 .TP
 .B cmp
 The compare operator that compares ivar with cmp_value. cmp must be
@@ -178,7 +178,7 @@ cmp_value must be of type integer. If you are using C/C++, the type
 of cmp_value should match thatimplied in the SYNOPSIS section. If you
 are using Fortran, cmp_value must be an integer of the same size and
 kind as ivar. The shmem_wait routines return when ivar is no longer
-equal to cmp_value. The shmem_wait_until routines return when the
+equal to cmp_value. The \fI\%shmem_wait_until\fP routines return when the
 compare condition is true. The compare condition is defined by the
 ivar argument compared with the cmp_value using the comparison
 operator, cmp.
@@ -257,15 +257,7 @@ END
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_put(3)
+\fIintro_shmem\fP(3), \fIshmem_put\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

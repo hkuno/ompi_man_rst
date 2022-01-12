@@ -1,14 +1,18 @@
 .. _mpi_file_iread_shared:
 
+
 MPI_File_iread_shared
 =====================
+
 .. include_body
 
 :ref:`MPI_File_iread_shared` - Reads a file using the shared file pointer
 (nonblocking, noncollective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -21,6 +25,7 @@ C Syntax
    int MPI_File_iread_shared(MPI_File fh, void *buf, int count,
    	MPI_Datatype datatype, MPI_Request *request)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -32,6 +37,7 @@ Fortran Syntax
    MPI_FILE_IREAD_SHARED(FH, BUF, COUNT, DATATYPE, REQUEST, IERROR)
    	<type>	BUF(*)
    	INTEGER	FH, COUNT, DATATYPE, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -48,26 +54,21 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``fh``: File handle (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``fh``: File handle (handle).
 
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Number of elements in buffer (integer). 
-
-* ``datatype``: Data type of each buffer element (handle). 
+----------------
+* ``count``: Number of elements in buffer (integer).
+* ``datatype``: Data type of each buffer element (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``buf``: Initial address of buffer (choice). 
-
-* ``request``: Request object (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``buf``: Initial address of buffer (choice).
+* ``request``: Request object (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -78,6 +79,7 @@ files. The order of serialization among the processors is not
 deterministic for this noncollective routine, so you need to use other
 methods of synchronization to impose a particular order among
 processors.
+
 
 ERRORS
 ------

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_SPLIT_TYPE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_COMM_SPLIT_TYPE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -76,9 +76,7 @@ MPI_Comm_split_type(comm, split_type, key, info, newcomm, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
@@ -89,9 +87,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBinfo\fP: Info argument (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBnewcomm\fP: New communicator (handle).
@@ -110,9 +106,7 @@ is a collective call; all processes must provide the same \fIsplit_type\fP,
 but each process is permitted to provide different values for key. An
 exception to this rule is that a process may supply the type value
 MPI_UNDEFINED, in which case newcomm returns MPI_COMM_NULL.
-.sp
-SPLIT TYPES
-\-\-\-\-\- \-\-\-\-\-
+.SH SPLIT TYPES
 .INDENT 0.0
 .TP
 .B MPI_COMM_TYPE_SHARED
@@ -188,7 +182,11 @@ guarantee that an MPI program can continue past an error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Comm_create | MPI_Intercomm_create | MPI_Comm_dup | MPI_Comm_free | MPI_Comm_split
+MPI_Comm_create
+MPI_Intercomm_create
+MPI_Comm_dup
+MPI_Comm_free
+MPI_Comm_split
 .fi
 .sp
 .UNINDENT

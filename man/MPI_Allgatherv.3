@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ALLGATHERV" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_ALLGATHERV" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -128,9 +128,7 @@ MPI_Allgatherv_init(sendbuf, sendcount, sendtype, recvbuf, recvcounts, displs,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer (choice).
@@ -149,9 +147,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer (choice).
@@ -187,9 +183,7 @@ MPI_Allgatherv(sendbuf,sendcount,sendtype,recvbuf,recvcount,
 .sp
 for root = 0 , ..., n\-1. The rules for correct usage of \fI\%MPI_Allgatherv\fP
 are easily found from the corresponding rules for MPI_Gatherv\&.
-.sp
-USE OF IN\-PLACE OPTION
-\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH USE OF IN-PLACE OPTION
 .sp
 When the communicator is an intracommunicator, you can perform an
 all\-gather operation in\-place (the output buffer is used as the input
@@ -219,9 +213,7 @@ restrictions on its use as MPI_BOTTOM.
 Because the in\-place option converts the receive buffer into a
 send\-and\-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
-.sp
-WHEN COMMUNICATOR IS AN INTER\-COMMUNICATOR
-\-\-\-\- \-\-\-\-\-\-\-\-\-\-\-\- \-\- \-\- \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+.SH WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
 .sp
 When the communicator is an inter\-communicator, the gather operation
 occurs in two phases. The data is gathered from all the members of the
@@ -247,7 +239,8 @@ guarantee that an MPI program can continue past an error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Gatherv | MPI_Allgather
+MPI_Gatherv
+MPI_Allgather
 .fi
 .sp
 .UNINDENT

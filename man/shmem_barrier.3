@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_BARRIER" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_BARRIER" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-shmem_barrier \- Performs a barrier operation on a subset of processing
+\fI\%shmem_barrier\fP \- Performs a barrier operation on a subset of processing
 elements (PEs).
 .SH SYNOPSIS
 .sp
@@ -66,7 +66,7 @@ CALL SHMEM_BARRIER(PE_start, logPE_stride, PE_size, pSync)
 .UNINDENT
 .SH DESCRIPTION
 .sp
-The shmem_barrier routine does not return until the subset of PEs
+The \fI\%shmem_barrier\fP routine does not return until the subset of PEs
 specified by \fBPE_start\fP, \fBlogPE_stride\fP and \fBPE_size\fP, has entered
 this routine at the same point of the execution path.
 .sp
@@ -97,31 +97,31 @@ _SHMEM_BARRIER_SYNC_SIZE. In Fortran, pSync must be of type integer
 and size SHMEM_BARRIER_SYNC_SIZE. If you are using Fortran, it must
 be a default integer type. Every element of this array must be
 initialized to 0 before any of the PEs in the active set enter
-shmem_barrier the first time.
+\fI\%shmem_barrier\fP the first time.
 .UNINDENT
 .sp
 The values of arguments PE_start, logPE_stride, and PE_size must be
 equal on all PEs in the active set. The same work array must be passed
 in pSync to all PEs in the active set.
 .sp
-shmem_barrier ensures that all previously issued local stores and
+\fI\%shmem_barrier\fP ensures that all previously issued local stores and
 previously issued remote memory updates done by any of the PEs in the
-active set (by using SHMEM calls, for example \fIshmem_put\fP(3)) are
+active set (by using SHMEM calls, for example shmem_put(3)) are
 complete before returning.
 .sp
-The same pSync array may be reused on consecutive calls to shmem_barrier
+The same pSync array may be reused on consecutive calls to \fI\%shmem_barrier\fP
 if the same active PE set is used.
 .SH NOTES
 .sp
 The term symmetric is defined in \fIintro_shmem\fP(3).
 .sp
 If the pSync array is initialized at run time, be sure to use some type
-of synchronization, for example, a call to \fIshmem_barrier_all\fP(3),
-before calling shmem_barrier for the first time.
+of synchronization, for example, a call to shmem_barrier_all(3),
+before calling \fI\%shmem_barrier\fP for the first time.
 .sp
-If the active set does not change, shmem_barrier can be called
+If the active set does not change, \fI\%shmem_barrier\fP can be called
 repeatedly with the same pSync array. No additional synchronization
-beyond that implied by shmem_barrier itself is necessary in this case.
+beyond that implied by \fI\%shmem_barrier\fP itself is necessary in this case.
 .SH EXAMPLES
 .sp
 C/C++ example:
@@ -155,15 +155,7 @@ CALL SHMEM_BARRIER(PE_START, LOGPE_STRIDE, PE_SIZE, PSYNC)
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_barrier_all (3)
+\fIintro_shmem\fP(3), \fIshmem_barrier_all\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

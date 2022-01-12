@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_BARRIER_ALL" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_BARRIER_ALL" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-shmem_barrier_all \- Suspends the execution of the calling PE until all
+\fI\%shmem_barrier_all\fP \- Suspends the execution of the calling PE until all
 other PEs issue a call to this particular shmem_barrier_all() statement.
 .SH SYNOPSIS
 .sp
@@ -62,12 +62,12 @@ CALL SHMEM_BARRIER_ALL
 .UNINDENT
 .SH DESCRIPTION
 .sp
-The shmem_barrier_all routine does not return until all other PEs have
+The \fI\%shmem_barrier_all\fP routine does not return until all other PEs have
 entered this routine at the same point of the execution path.
 .sp
-Prior to synchronizing with other PEs, shmem_barrier_all ensures
+Prior to synchronizing with other PEs, \fI\%shmem_barrier_all\fP ensures
 completion of all previously issued local memory stores and remote
-memory updates issued via SHMEM functions such as \fIshmem_put32\fP(3).
+memory updates issued via SHMEM functions such as shmem_put32(3).
 .SH EXAMPLES
 .INDENT 0.0
 .INDENT 3.5
@@ -91,15 +91,7 @@ setup_data()
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-shmem_barrier (3), 
-.nf
-*
-.fi
-shmem_init (3)
+\fIshmem_barrier\fP(3), \fIshmem_init\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

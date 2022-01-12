@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TESTANY" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TESTANY" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -79,18 +79,14 @@ MPI_Testany(count, array_of_requests, index, flag, status, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcount\fP: List length (integer).
 .IP \(bu 2
 \fBarray_of_requests\fP: Array of requests (array of handles).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBindex\fP: Index of operation that completed, or MPI_UNDEFINED if none completed (integer).
@@ -154,7 +150,16 @@ MPI_ERRORS_RETURN exhibits this behavior, for example.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Comm_set_errhandler | MPI_File_set_errhandler | MPI_Test | MPI_Testall | MPI_Testsome | MPI_Wait | MPI_Waitall | MPI_Waitany | MPI_Waitsome | MPI_Win_set_errhandler
+MPI_Comm_set_errhandler
+MPI_File_set_errhandler
+MPI_Test
+MPI_Testall
+MPI_Testsome
+MPI_Wait
+MPI_Waitall
+MPI_Waitany
+MPI_Waitsome
+MPI_Win_set_errhandler
 .fi
 .sp
 .UNINDENT

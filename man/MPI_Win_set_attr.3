@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_SET_ATTR" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_WIN_SET_ATTR" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -76,31 +76,22 @@ MPI_Win_set_attr(win, win_keyval, attribute_val, ierror)
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETER
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBwin\fP: Window to which attribute will be attached (handle).
-.UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBwin\fP: Window to which attribute will be attached (handle).
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBwin_keyval\fP: Key value (integer).
 .IP \(bu 2
 \fBattribute_val\fP: Attribute value.
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
 .UNINDENT
 .SH DESCRIPTION
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fIATTRIBUTE_VAL\fP argument only for Fortran 90. FORTRAN 77 users may use

@@ -1,14 +1,18 @@
 .. _mpi_file_write_all:
 
+
 MPI_File_write_all
 ==================
+
 .. include_body
 
 :ref:`MPI_File_write_all` - Writes a file starting at the locations
 specified by individual file pointers (blocking, collective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_File_write_all(MPI_File fh, const void *buf,
    	int count, MPI_Datatype datatype, MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -33,6 +38,7 @@ Fortran Syntax
    	DATATYPE, STATUS, IERROR)
    	<type>	BUF(*)
    	INTEGER	FH, COUNT, DATATYPE, STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -49,23 +55,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``buf``: Initial address of buffer (choice). 
-
-* ``count``: Number of elements in buffer (integer). 
-
-* ``datatype``: Data type of each buffer element (handle). 
+----------------
+* ``fh``: File handle (handle).
+* ``buf``: Initial address of buffer (choice).
+* ``count``: Number of elements in buffer (integer).
+* ``datatype``: Data type of each buffer element (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -80,6 +81,7 @@ written in *status.* All other fields of *status* are undefined.
 
 It is erroneous to call this function if MPI_MODE_SEQUENTIAL mode was
 specified when the file was opened.
+
 
 ERRORS
 ------

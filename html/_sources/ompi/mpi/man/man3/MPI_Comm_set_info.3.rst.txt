@@ -1,13 +1,17 @@
 .. _mpi_comm_set_info:
 
+
 MPI_Comm_set_info
 =================
+
 .. include_body
 
 :ref:`MPI_Comm_set_info` - Set communicator info hints
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_set_info(MPI_Comm comm, MPI_Info info)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_COMM_SET_INFO(COMM, INFO, IERROR)
    	INTEGER	COMM, INFO, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -41,17 +47,15 @@ Fortran 2008 Syntax
    	TYPE(MPI_Info), INTENT(IN) :: info
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``comm``: Communicator on which to set info hints 
-
-* ``info``: Info object containing hints to be set on *comm* 
+----------------
+* ``comm``: Communicator on which to set info hints
+* ``info``: Info object containing hints to be set on *comm*
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -86,6 +90,7 @@ in which the send operations were performed by the sender, and receive
 operations are not required to be matched in the order in which they
 were performed by the receiver.
 
+
 ERRORS
 ------
 
@@ -100,4 +105,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: MPI_Comm_get_info, MPI_Info_create, MPI_Info_set, :ref:`MPI_Info_free` 
+.. seealso:: 
+   MPI_Comm_get_info, MPI_Info_create, MPI_Info_set, :ref:`MPI_Info_free`

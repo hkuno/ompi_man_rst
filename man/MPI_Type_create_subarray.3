@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_CREATE_SUBARRAY" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TYPE_CREATE_SUBARRAY" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -79,9 +79,7 @@ MPI_Type_create_subarray(ndims, array_of_sizes, array_of_subsizes,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBndims\fP: Number of array dimensions (positive integer).
@@ -96,9 +94,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBoldtype\fP: Array element data type (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBnewtype\fP: New data type (handle).
@@ -158,14 +154,10 @@ array_of_starts[i] > (array_of_sizes[i] \- array_of_subsizes[i]).
 .sp
 The \fIorder\fP argument specifies the storage order for the subarray as
 well as the full array. It must be set to one of the following:
-.INDENT 0.0
-.IP \(bu 2
-MPI_ORDER_C: The ordering used by C arrays, (that is, row\-major order)
-.IP \(bu 2
-MPI_ORDER_FORTRAN: The ordering used by Fortran arrays, (that is,
-.UNINDENT
 .sp
-column\-major order)
+{INDENT}{curline}
+.sp
+{INDENT}{curline}
 .sp
 A \fIndims\fP\-dimensional subarray (\fInewtype\fP) with no extra padding can be
 defined by the function Subarray() as follows:

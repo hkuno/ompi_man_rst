@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_MATCH_SIZE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TYPE_MATCH_SIZE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -74,18 +74,14 @@ MPI_Type_match_size(typeclass, size, datatype, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBtypeclass\fP: Generic type specifier (integer).
 .IP \(bu 2
 \fBsize\fP: Size, in bytes, of representation (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBtype\fP: Datatype with correct type and size (handle).
@@ -125,7 +121,11 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Sizeof    MPI_Type_get_extent
+.INDENT 0.0
+.TP
+.B MPI_Sizeof
+MPI_Type_get_extent
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

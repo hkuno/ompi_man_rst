@@ -1,13 +1,17 @@
 .. _mpi_test_cancelled:
 
+
 MPI_Test_cancelled
 ==================
+
 .. include_body
 
 :ref:`MPI_Test_cancelled` - Tests whether a request was canceled.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Test_cancelled(const MPI_Status *status, int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    	LOGICAL	FLAG
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -42,17 +48,15 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``status``: Status object (status). 
+INPUT PARAMETER
+---------------
+* ``status``: Status object (status).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``flag``: True if operation was cancelled (logical). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``flag``: True if operation was cancelled (logical).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -64,11 +68,13 @@ status (such as *count* or *tag*) are undefined. Otherwise, returns
 call :ref:`MPI_Test_cancelled` first, to check whether the operation was
 canceled, before checking on the other fields of the return status.
 
+
 NOTES
 -----
 
 Cancel can be an expensive operation that should be used only
 exceptionally.
+
 
 ERRORS
 ------

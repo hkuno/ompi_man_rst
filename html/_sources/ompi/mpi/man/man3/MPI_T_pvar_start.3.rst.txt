@@ -1,14 +1,18 @@
 .. _mpi_t_pvar_start:
 
+
 MPI_T_pvar_start
 ================
+
 .. include_body
 
 :ref:`MPI_T_pvar_start`, :ref:`MPI_T_pvar_stop` - Start/stop a performance
 variable
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -21,12 +25,11 @@ C Syntax
 
    int MPI_T_pvar_stop(MPI_T_pvar_session session, MPI_T_pvar_handle handle)
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``session``: Performance experiment session. 
-
-* ``handle``: Performance variable handle. 
+----------------
+* ``session``: Performance experiment session.
+* ``handle``: Performance variable handle.
 
 DESCRIPTION
 -----------
@@ -42,6 +45,7 @@ in *handle*. The special value MPI_T_PVAR_ALL_HANDLES can be passed in
 *session*.
 
 Continuous performance variables can neither be started nor stopped.
+
 
 ERRORS
 ------
@@ -61,4 +65,7 @@ MPI_T_pvar_start() and MPI_T_pvar_stop() will fail if:
    The variable cannot be started or stopped
 
 
-.. seealso::    :ref:`MPI_T_pvar_get_info` 
+.. seealso:: 
+   ::
+
+      MPI_T_pvar_get_info

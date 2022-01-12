@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ADD_ERROR_CODE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_ADD_ERROR_CODE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -73,16 +73,12 @@ MPI_Add_error_code(errorclass, errorcode, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBerrorclass\fP: MPI error class (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBerrorcode\fP: Error code returned by an MPI routine or an MPI error class (integer).
@@ -114,7 +110,11 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Add_error_class    MPI_Error_class
+.INDENT 0.0
+.TP
+.B MPI_Add_error_class
+MPI_Error_class
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

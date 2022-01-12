@@ -1,13 +1,16 @@
 .. _shmem_int_set:
 
+
 shmem_int_set
 =============
+
 .. include_body
 
-*shmem_double_set*\ (3), *shmem_float_set*\ (3), *shmem_int_set*\ (3),
-*shmem_long_set*\ (3), *shmem_longlong_set*\ (3) *shmem_int4_set*\ (3),
-*shmem_int8_set*\ (3), *shmem_real4_set*\ (3), *shmem_real8_set*\ (3), -
+:ref:`shmem_double_set`\ (3), :ref:`shmem_float_set`\ (3), :ref:`shmem_int_set`\ (3),
+:ref:`shmem_long_set`\ (3), :ref:`shmem_longlong_set`\ (3) shmem_int4_set\ (3),
+shmem_int8_set\ (3), shmem_real4_set\ (3), shmem_real8_set\ (3), -
 Atomically sets the value of a remote data object
+
 
 SYNOPSIS
 --------
@@ -43,6 +46,7 @@ Fortran:
    CALL SHMEM_REAL4_SET(target, value, pe)
    CALL SHMEM_REAL8_SET(target, value, pe)
 
+
 DESCRIPTION
 -----------
 
@@ -62,10 +66,12 @@ pe
    updated. If you are using Fortran, it must be a default integer
    value.
 
+
 RETURN VALUES
------- ------
+-------------
 
 NONE
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

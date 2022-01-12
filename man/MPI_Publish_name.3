@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_PUBLISH_NAME" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_PUBLISH_NAME" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -82,9 +82,7 @@ MPI_Publish_name(service_name, info, port_name, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBservice_name\fP: A service name (string).
@@ -93,9 +91,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBport_name\fP: A port name (string).
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -107,9 +103,7 @@ application may retrieve \fIport_name\fP by calling MPI_Lookup_name with
 \fIservice_name\fP as an argument. It is an error to publish the same
 \fIservice_name\fP twice, or to use a \fIport_name\fP argument that was not
 previously opened by the calling process via a call to MPI_Open_port\&.
-.sp
-INFO ARGUMENTS
-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INFO ARGUMENTS
 .sp
 The following keys for \fIinfo\fP are recognized:
 .INDENT 0.0
@@ -146,9 +140,7 @@ If no info key is provided, the function will first check to see if a
 global server has been specified and is available. If so, then the
 publish function will default to global scope first, followed by local.
 Otherwise, the data will default to publish with local scope.
-.sp
-NAME SCOPE
-\-\-\-\- \-\-\-\-\-
+.SH NAME SCOPE
 .sp
 Open MPI supports two name scopes: \fIglobal\fP and \fIlocal\fP\&. Local scope
 will place the specified service/port pair in a data store located on
@@ -209,7 +201,11 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Lookup_name    MPI_Open_port
+.INDENT 0.0
+.TP
+.B MPI_Lookup_name
+MPI_Open_port
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

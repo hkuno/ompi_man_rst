@@ -2,6 +2,7 @@
 
 MPI_Group_free
 ==============
+
 .. include_body
 
 :ref:`MPI_Group_free` - Frees a group.

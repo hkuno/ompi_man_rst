@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_DELETE_ATTR" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TYPE_DELETE_ATTR" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -75,21 +75,14 @@ MPI_Type_delete_attr(datatype, type_keyval, ierror)
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETER
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBtype\fP: Data type from which the attribute is deleted (handle).n
-.UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBtype\fP: Data type from which the attribute is deleted (handle).n
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBtype_keyval\fP: Key value (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).

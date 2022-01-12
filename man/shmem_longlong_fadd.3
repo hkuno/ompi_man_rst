@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONGLONG_FADD" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_LONGLONG_FADD" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,8 +33,8 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_int4_fadd\fP(3), \fIshmem_int8_fadd\fP(3), \fIshmem_int_fadd\fP(3),
-\fIshmem_long_fadd\fP(3), \fIshmem_longlong_fadd\fP(3) \- Performs an atomic
+shmem_int4_fadd(3), shmem_int8_fadd(3), shmem_int_fadd(3),
+shmem_long_fadd(3), \fI\%shmem_longlong_fadd\fP(3) \- Performs an atomic
 fetch\-and\-add operation on a remote data object
 .SH SYNOPSIS
 .sp
@@ -105,9 +105,7 @@ value.
 .SH NOTES
 .sp
 The term remotely accessible is defined in \fIintro_shmem\fP(3).
-.sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH RETURN VALUES
 .sp
 The contents that had been at the target address on the remote PE prior
 to the atomic addition operation.

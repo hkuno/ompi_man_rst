@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_IWRITE_AT_ALL" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_FILE_IWRITE_AT_ALL" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -82,14 +82,9 @@ MPI_File_iwrite_at_all(fh, offset, buf, count, datatype, request, ierror)
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETER
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBfh\fP: File handle (handle).
-.UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBfh\fP: File handle (handle).
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBoffset\fP: File offset (integer).
@@ -100,9 +95,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBdatatype\fP: Data type of each buffer element (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrequest\fP: Request object (handle).
@@ -125,9 +118,7 @@ number of bytes actually accessed.
 .sp
 It is erroneous to call this function if MPI_MODE_SEQUENTIAL mode was
 specified when the file was open.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fIOFFSET\fP
 argument only for Fortran 90. FORTRAN 77 users may use the non\-portable

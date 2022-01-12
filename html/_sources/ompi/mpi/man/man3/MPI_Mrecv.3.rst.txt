@@ -1,13 +1,17 @@
 .. _mpi_mrecv:
 
+
 MPI_Mrecv
 =========
+
 .. include_body
 
 :ref:`MPI_Mrecv` - Blocking receive for a matched message
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Mrecv(void *buf, int count, MPI_Datatype type,
    	MPI_Message *message, MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    	<type>	BUF(*)
    	INTEGER	COUNT, DATATYPE, MESSAGE
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,23 +53,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Number of elements to receive (nonnegative integer). 
-
-* ``datatype``: Datatype of each send buffer element (handle). 
-
-* ``message``: Message (handle). 
+----------------
+* ``count``: Number of elements to receive (nonnegative integer).
+* ``datatype``: Datatype of each send buffer element (handle).
+* ``message``: Message (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``buf``: Initial address of receive buffer (choice). 
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``buf``: Initial address of receive buffer (choice).
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -75,6 +76,7 @@ If :ref:`MPI_Mrecv` is called with MPI_MESSAGE_NULL as the message argument,
 the call returns immediately with the *status* object set to *source* =
 MPI_PROC_NULL, *tag* = MPI_ANY_TAG, and *count* = 0, as if a receive
 from MPI_PROC_NULL was issued.
+
 
 ERRORS
 ------
@@ -90,4 +92,12 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Mprobe`    :ref:`MPI_Improbe`    :ref:`MPI_Probe`    :ref:`MPI_Iprobe`    :ref:`MPI_Imrecv`    :ref:`MPI_Cancel` 
+.. seealso:: 
+   ::
+
+   MPI_Mprobe
+   MPI_Improbe
+   MPI_Probe
+   MPI_Iprobe
+   MPI_Imrecv
+      MPI_Cancel

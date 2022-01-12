@@ -1,14 +1,18 @@
 .. _mpi_type_match_size:
 
+
 MPI_Type_match_size
 ===================
+
 .. include_body
 
 :ref:`MPI_Type_match_size` - Returns an MPI datatype of a given type and
 size
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    int MPI_Type_match_size(int typeclass, int size,
    	MPI_Datatype *type)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -30,6 +35,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_TYPE_MATCH_SIZE(TYPECLASS, SIZE, TYPE, IERROR)
    	INTEGER	TYPECLASS, SIZE, TYPE, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,19 +49,16 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(OUT) :: datatype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``typeclass``: Generic type specifier (integer). 
-
-* ``size``: Size, in bytes, of representation (integer). 
+----------------
+* ``typeclass``: Generic type specifier (integer).
+* ``size``: Size, in bytes, of representation (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``type``: Datatype with correct type and size (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``type``: Datatype with correct type and size (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -75,6 +78,7 @@ suitable datatype. In C use the sizeof builtin instead of :ref:`MPI_Sizeof`.
 
 It is erroneous to specify a size not supported by the compiler.
 
+
 ERRORS
 ------
 
@@ -91,4 +95,8 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Sizeof`    :ref:`MPI_Type_get_extent` 
+.. seealso:: 
+   ::
+
+   MPI_Sizeof
+      MPI_Type_get_extent

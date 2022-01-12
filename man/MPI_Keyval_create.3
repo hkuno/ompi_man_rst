@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_KEYVAL_CREATE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_KEYVAL_CREATE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -59,9 +59,7 @@ MPI_KEYVAL_CREATE(COPY_FN, DELETE_FN, KEYVAL, EXTRA_STATE, IERROR)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcopy_fn\fP: Copy callback function for keyval.
@@ -70,9 +68,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBextra_state\fP: Extra state for callback functions.
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBkeyval\fP: Key value for future access (integer).
@@ -216,7 +212,8 @@ guarantee that an MPI program can continue past an error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Keyval_free | MPI_Comm_create_keyval
+MPI_Keyval_free
+MPI_Comm_create_keyval
 .fi
 .sp
 .UNINDENT

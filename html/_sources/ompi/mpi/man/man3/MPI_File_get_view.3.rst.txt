@@ -1,13 +1,17 @@
 .. _mpi_file_get_view:
 
+
 MPI_File_get_view
 =================
+
 .. include_body
 
 :ref:`MPI_File_get_view` - Returns the process's view of data in the file.
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -20,6 +24,7 @@ C Syntax
    int MPI_File_get_view(MPI_File fh, MPI_Offset *disp,
    	MPI_Datatype *etype, MPI_Datatype *filetype,
    	char *datarep)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -35,6 +40,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	CHARACTER*(*)	DATAREP
    	INTEGER(KIND=MPI_OFFSET_KIND)	DISP
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -49,23 +55,18 @@ Fortran 2008 Syntax
    	CHARACTER(LEN=*), INTENT(OUT) :: datarep
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``fh``: File handle (handle). 
+INPUT PARAMETER
+---------------
+* ``fh``: File handle (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``disp``: Displacement (integer). 
-
-* ``etype``: Elementary data type (handle). 
-
-* ``filetype``: File type (handle). See Restrictions, below. 
-
-* ``datarep``: Data representation (string). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``disp``: Displacement (integer).
+* ``etype``: Elementary data type (handle).
+* ``filetype``: File type (handle). See Restrictions, below.
+* ``datarep``: Data representation (string).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -77,8 +78,9 @@ are returned in *disp,* *etype,* and *filetype,* respectively.
 The :ref:`MPI_File_get_view` interface allows the user to pass a
 data-representation string via the *datarep* argument.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *DISP*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -90,6 +92,7 @@ syntax.
 
 where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------

@@ -1,13 +1,16 @@
 .. _shmem_broadcast32:
 
+
 shmem_broadcast32
 =================
+
 .. include_body
 
-*shmem_broadcast4*\ (3), *shmem_broadcast8*\ (3),
-*shmem_broadcast32*\ (3), *shmem_broadcast64*\ (3) - Copy a data object
+shmem_broadcast4\ (3), shmem_broadcast8\ (3),
+:ref:`shmem_broadcast32`\ (3), :ref:`shmem_broadcast64`\ (3) - Copy a data object
 from a designated PE to a target location on all other PEs of the active
 set.
+
 
 SYNOPSIS
 --------
@@ -49,6 +52,7 @@ Fortran:
    CALL SHMEM_BROADCAST64(target, source, nelems,
    & PE_root, PE_start, logPE_stride, PE_size, pSync)
 
+
 DESCRIPTION
 -----------
 
@@ -69,15 +73,15 @@ The arguments are as follows:
 target
    A symmetric data object with one of the following data types:
 
-   **shmem_broadcast8, shmem_broadcast64**: Any noncharacter type that
+   shmem_broadcast8, :ref:`shmem_broadcast64`: Any noncharacter type that
       has an element size of 64 bits. No Fortran derived types or C/C++
       structures are allowed.
 
-   **shmem_broadcast32**: Any noncharacter type that has an element size
+   :ref:`shmem_broadcast32`: Any noncharacter type that has an element size
       of 32 bits. No Fortran derived types or C/C++ structures are
       allowed.
 
-   **shmem_broadcast4**: Any noncharacter type that has an element size
+   shmem_broadcast4: Any noncharacter type that has an element size
       of 32 bits.
 
 source
@@ -85,7 +89,7 @@ source
    permissible for the target argument.
 
 nelems
-   The number of elements in source. For shmem_broadcast32 and
+   The number of elements in source. For :ref:`shmem_broadcast32` and
    shmem_broadcast4, this is the number of 32-bit halfwords. nelems must
    be of type integer. If you are using Fortran, it must be a default
    integer value.
@@ -135,6 +139,7 @@ local PE: If the current PE is not the root PE, the target data object
 is updated. The values in the pSync array are restored to the original
 values.
 
+
 NOTES
 -----
 
@@ -158,10 +163,11 @@ synchronization. However, in the special case of SHMEM routines being
 called with the same active set, you can allocate two pSync arrays and
 alternate between them on successive calls.
 
+
 EXAMPLES
 --------
 
-In the following examples, the call to shmem_broadcast64 copies source
+In the following examples, the call to :ref:`shmem_broadcast64` copies source
 on PE 4 to target on PEs 5, 6, and 7.
 
 C/C++ example:
@@ -190,4 +196,5 @@ Fortran example:
    & PSYNC)
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

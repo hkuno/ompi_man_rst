@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "OPENSHMEM" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "OPENSHMEM" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -63,9 +63,7 @@ by another PE. Other operations supported are collective broadcast and
 reduction, barrier synchronization, and atomic memory operations. An
 atomic memory operation is an atomic read\-and\-update operation, such as
 a fetch\-and\-increment, on a remote or local data object.
-.sp
-OPENSHMEM ROUTINES
-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
+.SH OPENSHMEM ROUTINES
 .sp
 This section lists the significant OpenSHMEM message\-passing routines.
 .sp
@@ -109,19 +107,19 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_double_p\fP(3)
+shmem_double_p(3)
 .TP
 \fB*\fP
-\fIshmem_float_p\fP(3)
+shmem_float_p(3)
 .TP
 \fB*\fP
-\fIshmem_int_p\fP(3)
+shmem_int_p(3)
 .TP
 \fB*\fP
-\fIshmem_long_p\fP(3)
+shmem_long_p(3)
 .TP
 \fB*\fP
-\fIshmem_short_p.\fP(3)
+shmem_short_p\&.*(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -137,13 +135,13 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_put32\fP(3)
+shmem_put32(3)
 .TP
 \fB*\fP
-\fIshmem_put64\fP(3)
+shmem_put64(3)
 .TP
 \fB*\fP
-\fIshmem_put128\fP(3)
+shmem_put128(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -151,19 +149,19 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_double_put\fP(3)
+shmem_double_put(3)
 .TP
 \fB*\fP
-\fIshmem_float_put\fP(3)
+shmem_float_put(3)
 .TP
 \fB*\fP
-\fIshmem_int_put\fP(3)
+shmem_int_put(3)
 .TP
 \fB*\fP
-\fIshmem_long_put\fP(3)
+shmem_long_put(3)
 .TP
 \fB*\fP
-\fIshmem_short_put.\fP(3)
+shmem_short_put\&.*(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -171,16 +169,16 @@ Fortran only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_complex_put\fP(3)
+shmem_complex_put(3)
 .TP
 \fB*\fP
-\fIshmem_integer_put\fP(3)
+shmem_integer_put(3)
 .TP
 \fB*\fP
-\fIshmem_logical_put\fP(3)
+shmem_logical_put(3)
 .TP
 \fB*\fP
-\fIshmem_real_put\fP(3)
+shmem_real_put(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -196,19 +194,19 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_double_g\fP(3)
+shmem_double_g(3)
 .TP
 \fB*\fP
-\fIshmem_float_g\fP(3)
+shmem_float_g(3)
 .TP
 \fB*\fP
-\fIshmem_int_g\fP(3)
+shmem_int_g(3)
 .TP
 \fB*\fP
-\fIshmem_long_g\fP(3)
+shmem_long_g(3)
 .TP
 \fB*\fP
-\fIshmem_short_g\fP(3)
+shmem_short_g(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -224,13 +222,13 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_get32\fP(3)
+shmem_get32(3)
 .TP
 \fB*\fP
-\fIshmem_get64\fP(3)
+shmem_get64(3)
 .TP
 \fB*\fP
-\fIshmem_get128\fP(3)
+shmem_get128(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -238,19 +236,19 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_double_get\fP(3)
+shmem_double_get(3)
 .TP
 \fB*\fP
-\fIshmem_float_get\fP(3)
+shmem_float_get(3)
 .TP
 \fB*\fP
-\fIshmem_int_get\fP(3)
+shmem_int_get(3)
 .TP
 \fB*\fP
-\fIshmem_long_get\fP(3)
+shmem_long_get(3)
 .TP
 \fB*\fP
-\fIshmem_short_get\fP(3)
+shmem_short_get(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -258,16 +256,16 @@ Fortran only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_complex_get\fP(3)
+shmem_complex_get(3)
 .TP
 \fB*\fP
-\fIshmem_integer_get\fP(3)
+shmem_integer_get(3)
 .TP
 \fB*\fP
-\fIshmem_logical_get\fP(3)
+shmem_logical_get(3)
 .TP
 \fB*\fP
-\fIshmem_real_get\fP(3)
+shmem_real_get(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -283,13 +281,13 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_iput32\fP(3)
+shmem_iput32(3)
 .TP
 \fB*\fP
-\fIshmem_iput64\fP(3)
+shmem_iput64(3)
 .TP
 \fB*\fP
-\fIshmem_iput128\fP(3)
+shmem_iput128(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -297,19 +295,19 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_double_iput\fP(3)
+shmem_double_iput(3)
 .TP
 \fB*\fP
-\fIshmem_float_iput\fP(3)
+shmem_float_iput(3)
 .TP
 \fB*\fP
-\fIshmem_int_iput\fP(3)
+shmem_int_iput(3)
 .TP
 \fB*\fP
-\fIshmem_long_iput\fP(3)
+shmem_long_iput(3)
 .TP
 \fB*\fP
-\fIshmem_short_iput\fP(3)
+shmem_short_iput(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -317,16 +315,16 @@ Fortran only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_complex_iput\fP(3)
+shmem_complex_iput(3)
 .TP
 \fB*\fP
-\fIshmem_integer_iput\fP(3)
+shmem_integer_iput(3)
 .TP
 \fB*\fP
-\fIshmem_logical_iput\fP(3)
+shmem_logical_iput(3)
 .TP
 \fB*\fP
-\fIshmem_real_iput\fP(3)
+shmem_real_iput(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -342,13 +340,13 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_iget32\fP(3)
+shmem_iget32(3)
 .TP
 \fB*\fP
-\fIshmem_iget64\fP(3)
+shmem_iget64(3)
 .TP
 \fB*\fP
-\fIshmem_iget128\fP(3)
+shmem_iget128(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -356,19 +354,19 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_double_iget\fP(3)
+shmem_double_iget(3)
 .TP
 \fB*\fP
-\fIshmem_float_iget\fP(3)
+shmem_float_iget(3)
 .TP
 \fB*\fP
-\fIshmem_int_iget\fP(3)
+shmem_int_iget(3)
 .TP
 \fB*\fP
-\fIshmem_long_iget\fP(3)
+shmem_long_iget(3)
 .TP
 \fB*\fP
-\fIshmem_short_iget\fP(3)
+shmem_short_iget(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -376,16 +374,16 @@ Fortran only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_complex_iget\fP(3)
+shmem_complex_iget(3)
 .TP
 \fB*\fP
-\fIshmem_integer_iget\fP(3)
+shmem_integer_iget(3)
 .TP
 \fB*\fP
-\fIshmem_logical_iget\fP(3)
+shmem_logical_iget(3)
 .TP
 \fB*\fP
-\fIshmem_real_iget\fP(3)
+shmem_real_iget(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -401,28 +399,28 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_int_wait\fP(3)
+shmem_int_wait(3)
 .TP
 \fB*\fP
-\fIshmem_int_wait_until\fP(3)
+shmem_int_wait_until(3)
 .TP
 \fB*\fP
-\fIshmem_long_wait\fP(3)
+shmem_long_wait(3)
 .TP
 \fB*\fP
-\fIshmem_long_wait_until\fP(3)
+shmem_long_wait_until(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_wait\fP(3)
+shmem_longlong_wait(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_wait_until\fP(3)
+shmem_longlong_wait_until(3)
 .TP
 \fB*\fP
-\fIshmem_short_wait\fP(3)
+shmem_short_wait(3)
 .TP
 \fB*\fP
-\fIshmem_short_wait_until\fP(3)
+shmem_short_wait_until(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -430,16 +428,16 @@ Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_int4_wait\fP(3)
+shmem_int4_wait(3)
 .TP
 \fB*\fP
-\fIshmem_int4_wait_until\fP(3)
+shmem_int4_wait_until(3)
 .TP
 \fB*\fP
-\fIshmem_int8_wait\fP(3)
+shmem_int8_wait(3)
 .TP
 \fB*\fP
-\fIshmem_int8_wait_until\fP(3)
+shmem_int8_wait_until(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -455,10 +453,10 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_barrier_all\fP(3)
+shmem_barrier_all(3)
 .TP
 \fB*\fP
-\fIshmem_barrier\fP(3)
+shmem_barrier(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -490,112 +488,112 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_int_and_to_all\fP(3)
+shmem_int_and_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_long_and_to_all\fP(3)
+shmem_long_and_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_and_to_all\fP(3)
+shmem_longlong_and_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_short_and_to_all\fP(3)
+shmem_short_and_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_double_max_to_all\fP(3)
+shmem_double_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_float_max_to_all\fP(3)
+shmem_float_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int_max_to_all\fP(3)
+shmem_int_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_long_max_to_all\fP(3)
+shmem_long_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_max_to_all\fP(3)
+shmem_longlong_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_short_max_to_all\fP(3)
+shmem_short_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_double_min_to_all\fP(3)
+shmem_double_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_float_min_to_all\fP(3)
+shmem_float_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int_min_to_all\fP(3)
+shmem_int_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_long_min_to_all\fP(3)
+shmem_long_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_min_to_all\fP(3)
+shmem_longlong_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_short_min_to_all\fP(3)
+shmem_short_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_double_sum_to_all\fP(3)
+shmem_double_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_float_sum_to_all\fP(3)
+shmem_float_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int_sum_to_all\fP(3)
+shmem_int_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_long_sum_to_all\fP(3)
+shmem_long_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_sum_to_all\fP(3)
+shmem_longlong_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_short_sum_to_all\fP(3)
+shmem_short_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_double_prod_to_all\fP(3)
+shmem_double_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_float_prod_to_all\fP(3)
+shmem_float_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int_prod_to_all\fP(3)
+shmem_int_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_long_prod_to_all\fP(3)
+shmem_long_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_prod_to_all\fP(3)
+shmem_longlong_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_short_prod_to_all\fP(3)
+shmem_short_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int_or_to_all\fP(3)
+shmem_int_or_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_long_or_to_all\fP(3)
+shmem_long_or_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_or_to_all\fP(3)
+shmem_longlong_or_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_short_or_to_all\fP(3)
+shmem_short_or_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int_xor_to_all\fP(3)
+shmem_int_xor_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_long_xor_to_all\fP(3)
+shmem_long_xor_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_xor_to_all\fP(3)
+shmem_longlong_xor_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_short_xor_to_all\fP(3)
+shmem_short_xor_to_all(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -603,70 +601,70 @@ Fortran only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_int4_and_to_all\fP(3)
+shmem_int4_and_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int8_and_to_all\fP(3)
+shmem_int8_and_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real4_max_to_all\fP(3)
+shmem_real4_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real8_max_to_all\fP(3)
+shmem_real8_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int4_max_to_all\fP(3)
+shmem_int4_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int8_max_to_all\fP(3)
+shmem_int8_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real4_min_to_all\fP(3)
+shmem_real4_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real8_min_to_all\fP(3)
+shmem_real8_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int4_min_to_all\fP(3)
+shmem_int4_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int8_min_to_all\fP(3)
+shmem_int8_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real4_sum_to_all\fP(3)
+shmem_real4_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real8_sum_to_all\fP(3)
+shmem_real8_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int4_sum_to_all\fP(3)
+shmem_int4_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int8_sum_to_all\fP(3)
+shmem_int8_sum_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real4_prod_to_all\fP(3)
+shmem_real4_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real8_prod_to_all\fP(3)
+shmem_real8_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int4_prod_to_all\fP(3)
+shmem_int4_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int8_prod_to_all\fP(3)
+shmem_int8_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int4_or_to_all\fP(3)
+shmem_int4_or_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int8_or_to_all\fP(3)
+shmem_int8_or_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int4_xor_to_all\fP(3)
+shmem_int4_xor_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_int8_xor_to_all\fP(3)
+shmem_int8_xor_to_all(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -682,10 +680,10 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_broadcast32\fP(3)
+shmem_broadcast32(3)
 .TP
 \fB*\fP
-\fIshmem_broadcast64\fP(3)
+shmem_broadcast64(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -701,10 +699,10 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_udcflush\fP(3)
+shmem_udcflush(3)
 .TP
 \fB*\fP
-\fIshmem_udcflush_line\fP(3)
+shmem_udcflush_line(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -720,10 +718,10 @@ C/C++ and Fortran
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_putmem\fP(3)
+shmem_putmem(3)
 .TP
 \fB*\fP
-\fIshmem_getmem\fP(3)
+shmem_getmem(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -731,10 +729,10 @@ Fortran only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_character_put\fP(3)
+shmem_character_put(3)
 .TP
 \fB*\fP
-\fIshmem_character_get\fP(3)
+shmem_character_get(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -750,16 +748,16 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_collect32\fP(3)
+shmem_collect32(3)
 .TP
 \fB*\fP
-\fIshmem_collect64\fP(3)
+shmem_collect64(3)
 .TP
 \fB*\fP
-\fIshmem_fcollect32\fP(3)
+shmem_fcollect32(3)
 .TP
 \fB*\fP
-\fIshmem_fcollect64\fP(3)
+shmem_fcollect64(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -775,46 +773,46 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_double_swap\fP(3)
+shmem_double_swap(3)
 .TP
 \fB*\fP
-\fIshmem_float_swap\fP(3)
+shmem_float_swap(3)
 .TP
 \fB*\fP
-\fIshmem_int_cswap\fP(3)
+shmem_int_cswap(3)
 .TP
 \fB*\fP
-\fIshmem_int_fadd\fP(3)
+shmem_int_fadd(3)
 .TP
 \fB*\fP
-\fIshmem_int_finc\fP(3)
+shmem_int_finc(3)
 .TP
 \fB*\fP
-\fIshmem_int_swap\fP(3)
+shmem_int_swap(3)
 .TP
 \fB*\fP
-\fIshmem_long_cswap\fP(3)
+shmem_long_cswap(3)
 .TP
 \fB*\fP
-\fIshmem_long_fadd\fP(3)
+shmem_long_fadd(3)
 .TP
 \fB*\fP
-\fIshmem_long_finc\fP(3)
+shmem_long_finc(3)
 .TP
 \fB*\fP
-\fIshmem_long_swap\fP(3)
+shmem_long_swap(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_cswap\fP(3)
+shmem_longlong_cswap(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_fadd\fP(3)
+shmem_longlong_fadd(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_finc\fP(3)
+shmem_longlong_finc(3)
 .TP
 \fB*\fP
-\fIshmem_longlong_swap\fP(3)
+shmem_longlong_swap(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -822,28 +820,28 @@ Fortran only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_int4_cswap\fP(3)
+shmem_int4_cswap(3)
 .TP
 \fB*\fP
-\fIshmem_int4_fadd\fP(3)
+shmem_int4_fadd(3)
 .TP
 \fB*\fP
-\fIshmem_int4_finc\fP(3)
+shmem_int4_finc(3)
 .TP
 \fB*\fP
-\fIshmem_int4_swap\fP(3)
+shmem_int4_swap(3)
 .TP
 \fB*\fP
-\fIshmem_int8_swap\fP(3)
+shmem_int8_swap(3)
 .TP
 \fB*\fP
-\fIshmem_real4_swap\fP(3)
+shmem_real4_swap(3)
 .TP
 \fB*\fP
-\fIshmem_real8_swap\fP(3)
+shmem_real8_swap(3)
 .TP
 \fB*\fP
-\fIshmem_int8_cswap\fP(3)
+shmem_int8_cswap(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -859,10 +857,10 @@ Fortran only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_int4_add\fP(3)
+shmem_int4_add(3)
 .TP
 \fB*\fP
-\fIshmem_int4_inc\fP(3)
+shmem_int4_inc(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -878,7 +876,7 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_ptr\fP(3)
+shmem_ptr(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -894,16 +892,16 @@ C/C++ only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_longdouble_max_to_all\fP(3)
+shmem_longdouble_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longdouble_min_to_all\fP(3)
+shmem_longdouble_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longdouble_prod_to_all\fP(3)
+shmem_longdouble_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_longdouble_sum_to_all\fP(3)
+shmem_longdouble_sum_to_all(3)
 .UNINDENT
 .TP
 \fB*\fP
@@ -911,16 +909,16 @@ Fortran only:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_real16_max_to_all\fP(3)
+shmem_real16_max_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real16_min_to_all\fP(3)
+shmem_real16_min_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real16_prod_to_all\fP(3)
+shmem_real16_prod_to_all(3)
 .TP
 \fB*\fP
-\fIshmem_real16_sum_to_all\fP(3)
+shmem_real16_sum_to_all(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -936,10 +934,10 @@ C/C++ and Fortran:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_pe_accessible\fP(3)
+shmem_pe_accessible(3)
 .TP
 \fB*\fP
-\fIshmem_addr_accessible\fP(3)
+shmem_addr_accessible(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -980,8 +978,8 @@ C and C++ data allocated by \fIshmalloc\fP(3C)
 .INDENT 0.0
 .TP
 .B Collective Routines
-Some SHMEM routines, for example, \fIshmem_broadcast\fP(3) and
-\fIshmem_float_sum_to_all\fP(3), are classified as collective routines
+Some SHMEM routines, for example, shmem_broadcast(3) and
+shmem_float_sum_to_all(3), are classified as collective routines
 because they distribute work across a set of PEs. They must be called
 concurrently by all PEs in the active set defined by the PE_start,
 logPE_stride, PE_size argument triplet. The following man pages
@@ -989,53 +987,51 @@ describe the OpenSHMEM collective routines:
 .INDENT 7.0
 .TP
 \fB*\fP
-\fIshmem_and\fP(3)
+shmem_and(3)
 .TP
 \fB*\fP
-\fIshmem_barrier\fP(3)
+shmem_barrier(3)
 .TP
 \fB*\fP
-\fIshmem_broadcast\fP(3)
+shmem_broadcast(3)
 .TP
 \fB*\fP
-\fIshmem_collect\fP(3)
+shmem_collect(3)
 .TP
 \fB*\fP
-\fIshmem_max\fP(3)
+shmem_max(3)
 .TP
 \fB*\fP
-\fIshmem_min\fP(3)
+shmem_min(3)
 .TP
 \fB*\fP
-\fIshmem_or\fP(3)
+shmem_or(3)
 .TP
 \fB*\fP
-\fIshmem_prod\fP(3)
+shmem_prod(3)
 .TP
 \fB*\fP
-\fIshmem_sum\fP(3)
+shmem_sum(3)
 .TP
 \fB*\fP
-\fIshmem_xor\fP(3)
+shmem_xor(3)
 .UNINDENT
 .UNINDENT
-.sp
-USING THE SYMMETRIC WORK ARRAY, PSYNC
-\-\-\-\-\- \-\-\- \-\-\-\-\-\-\-\-\- \-\-\-\- \-\-\-\-\-\- \-\-\-\-\-
+.SH USING THE SYMMETRIC WORK ARRAY, PSYNC
 .sp
 Multiple pSync arrays are often needed if a particular PE calls as
 OpenSHMEM collective routine twice without intervening barrier
 synchronization. Problems would occur if some PEs in the active set for
 call 2 arrive at call 2 before processing of call 1 is complete by all
-PEs in the call 1 active set. You can use \fIshmem_barrier\fP(3) or
-\fIshmem_barrier_all\fP(3) to perform a barrier synchronization between
+PEs in the call 1 active set. You can use shmem_barrier(3) or
+shmem_barrier_all(3) to perform a barrier synchronization between
 consecutive calls to OpenSHMEM collective routines.
 .sp
 There are two special cases:
 .INDENT 0.0
 .TP
 \fB*\fP
-The \fIshmem_barrier\fP(3) routine allows the same pSync array to be
+The shmem_barrier(3) routine allows the same pSync array to be
 used on consecutive calls as long as the active PE set does not
 change.
 .TP
@@ -1049,9 +1045,7 @@ all PEs by the time processing of a third call begins on any PE.
 Because the SHMEM routines restore pSync to its original contents,
 multiple calls that use the same pSync array do not require that pSync
 be reinitialized after the first call.
-.sp
-SHMEM ENVIRONMENT VARIABLES
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH SHMEM ENVIRONMENT VARIABLES
 .sp
 This section lists the significant SHMEM environment variables.
 .INDENT 0.0
@@ -1076,9 +1070,7 @@ initialize the SHMEM runtime.
 .sp
 Calling any other SHMEM routines beforehand has undefined behavior.
 Multiple calls to this routine is not allowed.
-.sp
-COMPILING AND RUNNING OPENSHMEM PROGRAMS
-\-\-\-\-\-\-\-\-\- \-\-\- \-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
+.SH COMPILING AND RUNNING OPENSHMEM PROGRAMS
 .sp
 The OpenSHMEM specification is silent regarding how OpenSHMEM programs
 are compiled, linked and run. This section shows some examples of how
@@ -1192,11 +1184,21 @@ main() {
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-The following man pages also contain information on OpenSHMEM routines.See the specific man pages for implementation information.*shmem_add(3), \fIshmem_and(3), *:ref:\(gashmem_barrier\(ga (3),\fPshmem_barrier_all (3), \fIshmem_broadcast(3), *shmem_cache(3),*shmem_collect(3), *shmem_cswap(3), *shmem_fadd(3),\fPshmem_fence (3), \fIshmem_finc(3), *shmem_get(3),*shmem_iget(3), *shmem_inc(3), *shmem_iput(3),*shmem_lock(3), *shmem_max(3), *shmem_min(3),\fPshmem_my_pe (3), \fIshmem_or(3), *shmem_prod(3),*shmem_put(3), *:ref:\(gashmem_quiet\(ga (3), *:ref:\(gashmem_short_g\(ga (3),\fPshmem_short_p (3), \fIshmem_sum(3), *:ref:\(gashmem_swap\(ga (3),\fPshmem_wait (3), \fIshmem_xor(3), *:ref:\(gashmem_pe_accessible\(ga (3),\fPshmem_addr_accessible (3), \fI:ref:\(gashmem_init\(ga (3), *:ref:\(gashmem_malloc\(ga (3C),\fPshmem_my_pe (3I), 
-.nf
-*
-.fi
-shmem_n_pes (3I)
+The following man pages also contain information on OpenSHMEM routines.
+See the specific man pages for implementation information.
+.sp
+shmem_add(3), shmem_and(3), shmem_barrier(3),
+shmem_barrier_all(3), shmem_broadcast(3), shmem_cache(3),
+shmem_collect(3), shmem_cswap(3), shmem_fadd(3),
+shmem_fence(3), shmem_finc(3), shmem_get(3),
+shmem_iget(3), shmem_inc(3), shmem_iput(3),
+shmem_lock(3), shmem_max(3), shmem_min(3),
+shmem_my_pe(3), shmem_or(3), shmem_prod(3),
+shmem_put(3), shmem_quiet(3), shmem_short_g(3),
+shmem_short_p(3), shmem_sum(3), shmem_swap(3),
+shmem_wait(3), shmem_xor(3), shmem_pe_accessible(3),
+shmem_addr_accessible(3), shmem_init(3), shmem_malloc(3C),
+\fIshmem_my_pe\fP(3I), \fIshmem_n_pes\fP(3I)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

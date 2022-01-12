@@ -1,12 +1,15 @@
 .. _shmem_int_add:
 
+
 shmem_int_add
 =============
+
 .. include_body
 
-*shmem_int_add*\ (3), *shmem_int4_add*\ (3), *shmem_int8_add*\ (3),
-*shmem_long_add*\ (3), *shmem_longlong_add*\ (3) - Performs an atomic
+:ref:`shmem_int_add`\ (3), shmem_int4_add\ (3), shmem_int8_add\ (3),
+:ref:`shmem_long_add`\ (3), :ref:`shmem_longlong_add`\ (3) - Performs an atomic
 add operation.
+
 
 SYNOPSIS
 --------
@@ -35,6 +38,7 @@ Fortran:
    CALL SHMEM_INT4_ADD(target, value, pe)
    CALL SHMEM_INT8_ADD(target, value, pe)
 
+
 DESCRIPTION
 -----------
 
@@ -62,10 +66,12 @@ pe
    updated. If you are using Fortran, it must be a default integer
    value.
 
+
 NOTES
 -----
 
 The term remotely accessible is defined in *intro_shmem*\ (3).
 
 
-.. seealso:: *intro_shmem\ (3), *shmem_cache\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_cache*\ (3)

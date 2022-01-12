@@ -1,14 +1,18 @@
 .. _mpi_start:
 
+
 MPI_Start
 =========
+
 .. include_body
 
 :ref:`MPI_Start` - Initiates a communication using a persistent request
 handle.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Start(MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_START(REQUEST, IERROR)
    	INTEGER	REQUEST, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -41,15 +47,14 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(INOUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``request``: Communication request (handle). 
+INPUT PARAMETER
+---------------
+* ``request``: Communication request (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -76,6 +81,7 @@ manner as a call to :ref:`MPI_Isend`; a call to :ref:`MPI_Start` with a request
 created by :ref:`MPI_Bsend_init` starts a communication in the same manner as a
 call to :ref:`MPI_Ibsend`; and so on.
 
+
 ERRORS
 ------
 
@@ -90,4 +96,10 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Bsend_init` | :ref:`MPI_Rsend_init` | :ref:`MPI_Send_init` | MPI_Sssend_init| :ref:`MPI_Recv_init` | :ref:`MPI_Startall` 
+.. seealso:: 
+   | :ref:`MPI_Bsend_init`
+   | :ref:`MPI_Rsend_init`
+   | :ref:`MPI_Send_init`
+   | MPI_Sssend_init
+   | :ref:`MPI_Recv_init`
+   | :ref:`MPI_Startall`

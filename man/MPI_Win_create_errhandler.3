@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_CREATE_ERRHANDLER" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_WIN_CREATE_ERRHANDLER" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -74,24 +74,18 @@ MPI_Win_create_errhandler(win_errhandler_fn, errhandler, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-DEPRECATED TYPE NAME NOTE
-\-\-\-\-\-\-\-\-\-\- \-\-\-\- \-\-\-\- \-\-\-\-
+.SH DEPRECATED TYPE NAME NOTE
 .sp
 MPI\-2.2 deprecated the MPI_Win_errhandler_fn and MPI::Win::Errhandler_fn
 types in favor of MPI_Win_errhandler_function and
 MPI::Win::Errhandler_function, respectively. Open MPI supports both
 names (indeed, the _fn names are typedefs to the _function names).
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBfunction\fP: User\-defined error\-handling procedure (function).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBerrhandler\fP: MPI error handler (handle).

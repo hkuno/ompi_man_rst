@@ -1,13 +1,17 @@
 .. _mpi_mprobe:
 
+
 MPI_Mprobe
 ==========
+
 .. include_body
 
 :ref:`MPI_Mprobe` - Blocking matched probe for a message.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Mprobe(int source, int tag, MPI_Comm comm,
    	MPI_Message *message, MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_MPROBE(SOURCE, TAG, COMM, MESSAGE, STATUS, IERROR)
    	INTEGER	SOURCE, TAG, COMM, MESSAGE
    	INTEGER	STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -45,23 +51,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``source``: Source rank or MPI_ANY_SOURCE (integer). 
-
-* ``tag``: Tag value or MPI_ANY_TAG (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``source``: Source rank or MPI_ANY_SOURCE (integer).
+* ``tag``: Tag value or MPI_ANY_TAG (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``message``: Message (handle). 
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``message``: Message (handle).
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -83,6 +84,7 @@ When :ref:`MPI_Mprobe` returns (from a non-MPI_PROC_NULL *source*), the matched
 message can then be received by passing the *message* handle to the
 :ref:`MPI_Mrecv` or :ref:`MPI_Imrecv` functions.
 
+
 ERRORS
 ------
 
@@ -97,4 +99,12 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Improbe`    :ref:`MPI_Probe`    :ref:`MPI_Iprobe`    :ref:`MPI_Mrecv`    :ref:`MPI_Imrecv`    :ref:`MPI_Cancel` 
+.. seealso:: 
+   ::
+
+   MPI_Improbe
+   MPI_Probe
+   MPI_Iprobe
+   MPI_Mrecv
+   MPI_Imrecv
+      MPI_Cancel

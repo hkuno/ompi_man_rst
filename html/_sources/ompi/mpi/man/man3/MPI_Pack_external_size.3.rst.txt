@@ -1,14 +1,18 @@
 .. _mpi_pack_external_size:
 
+
 MPI_Pack_external_size
 ======================
+
 .. include_body
 
 :ref:`MPI_Pack_external_size` - Calculates upper bound on space needed to
 write to a portable format
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Pack_external_size(char *datarep, int incount,
    	MPI_Datatype datatype, MPI_Aint *size)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -34,6 +39,7 @@ Fortran Syntax
    	INTEGER(KIND=MPI_ADDRESS_KIND) SIZE
    	CHARACTER*(*)	DATAREP
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -48,21 +54,17 @@ Fortran 2008 Syntax
    	INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(OUT) :: size
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``datarep``: Data representation (string). 
-
-* ``incount``: Number of input data items (integer). 
-
-* ``datatype``: Datatype of each input data item (handle). 
+----------------
+* ``datarep``: Data representation (string).
+* ``incount``: Number of input data items (integer).
+* ``datatype``: Datatype of each input data item (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``size``: Upper bound on size of packed message, in bytes (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``size``: Upper bound on size of packed message, in bytes (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -78,12 +80,14 @@ exact amount of space needed to pack the message may depend on context
 and alignment (e.g., the first message packed in a packing unit may take
 more space).
 
+
 NOTES
 -----
 
 The *datarep* argument specifies the data format. The only valid value
 in the current version of MPI is "external32". The argument is provided
 for future extensibility.
+
 
 ERRORS
 ------
@@ -101,4 +105,8 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Pack_external`    :ref:`MPI_Unpack_external` 
+.. seealso:: 
+   ::
+
+   MPI_Pack_external
+      MPI_Unpack_external

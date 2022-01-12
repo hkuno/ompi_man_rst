@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_PACK_EXTERNAL" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_PACK_EXTERNAL" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -86,9 +86,7 @@ MPI_Pack_external(datarep, inbuf, incount, datatype, outbuf, outsize,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBdatarep\fP: Data representation (string).
@@ -103,14 +101,9 @@ INPUT PARAMETERS
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETER
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBposition\fP: Current position in buffer, in bytes (integer).
-.UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBposition\fP: Current position in buffer, in bytes (integer).
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBoutbuf\fP: Output buffer start (choice).
@@ -230,7 +223,14 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Pack_external_size    MPI_Send    MPI_Unpack_external    sscanf(3C)
+MPI_Pack_external_size
+MPI_Send
+MPI_Unpack_external
+.INDENT 0.0
+.INDENT 3.5
+sscanf(3C)
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

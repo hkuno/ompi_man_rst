@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_STATUS_SET_CANCELLED" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_STATUS_SET_CANCELLED" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -76,21 +76,14 @@ MPI_Status_set_cancelled(status, flag, ierror)
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETER
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBstatus\fP: Status with which to associate cancel flag (status).
-.UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBstatus\fP: Status with which to associate cancel flag (status).
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBflag\fP: If true, indicates request was canceled (logical).
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).

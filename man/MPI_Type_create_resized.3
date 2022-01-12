@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_CREATE_RESIZED" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TYPE_CREATE_RESIZED" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -76,9 +76,7 @@ MPI_Type_create_resized(oldtype, lb, extent, newtype, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBoldtype\fP: Input data type (handle).
@@ -87,9 +85,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBextent\fP: New extent of data type (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBnewtype\fP: Output data type (handle).
@@ -106,9 +102,7 @@ of lower bound and upper bound markers are put in the positions
 indicated by the \fIlb\fP and \fIextent\fP arguments. This affects the behavior
 of the data type when used in communication operations, with \fIcount\fP >
 1, and when used in the construction of new derived data types.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fILB\fP and
 \fIEXTENT\fP arguments only for Fortran 90. FORTRAN 77 users may use the

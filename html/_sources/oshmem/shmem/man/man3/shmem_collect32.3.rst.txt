@@ -1,14 +1,16 @@
 .. _shmem_collect32:
 
+
 shmem_collect32
 ===============
+
 .. include_body
 
-*shmem_collect4*\ (3), *shmem_collect8*\ (3), *shmem_collect32*\ (3),
-*shmem_collect64*\ (3), *shmem_fcollect*\ (3), *shmem_fcollect4*\ (3),
-*shmem_fcollect8*\ (3), *shmem_fcollect32*\ (3), *shmem_fcollect64*\ (3)
-- Concatenates blocks of data from multiple processing elements (PEs) to
-an array in every PE
+shmem_collect4\ (3), shmem_collect8\ (3), :ref:`shmem_collect32`\ (3),
+:ref:`shmem_collect64`\ (3), shmem_fcollect\ (3), shmem_fcollect4\ (3),
+shmem_fcollect8\ (3), :ref:`shmem_fcollect32`\ (3), :ref:`shmem_fcollect64`\ (3)
+{INDENT}{curline}
+
 
 SYNOPSIS
 --------
@@ -59,6 +61,7 @@ Fortran:
    CALL SHMEM_FCOLLECT8(target, source, nelems, PE_start,
    & logPE_stride, PE_size, pSync)
 
+
 DESCRIPTION
 -----------
 
@@ -102,12 +105,12 @@ target
    the concatenation of the source arrays on all PEs. The data types are
    as follows:
 
-   [shmem_collect8, shmem_collect64, shmem_fcollect8, and
+   [shmem_collect8, :ref:`shmem_collect64`, shmem_fcollect8, and
       shmem_fcollect64] any data type with an element size of 64 bits.
       Fortran derived types, Fortran character type, and C/C++
       structures are not permitted.
 
-   [shmem_collect4, shmem_collect32, shmem_fcollect4, and
+   [shmem_collect4, :ref:`shmem_collect32`, shmem_fcollect4, and
       shmem_fcollect32] any data type with an element size of 32 bits.
       Fortran derived types, Fortran character type, and C/C++
       structures are not permitted.
@@ -153,6 +156,7 @@ Upon return from a collective routine, the following are true for the
 local PE: The target array is updated. The values in the pSync array are
 restored to the original values.
 
+
 NOTES
 -----
 
@@ -178,6 +182,7 @@ them on successive calls.
 The collective routines operate on active PE sets that have a
 non-power-of-two PE_size with some performance degradation. They operate
 with no performance degradation when nelems is a non-power-of-two value.
+
 
 EXAMPLES
 --------
@@ -206,4 +211,5 @@ Fortran:
    & LOGPE_STRIDE, PE_SIZE, PSYNC)
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

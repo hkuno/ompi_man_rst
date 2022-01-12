@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_SIZE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_COMM_SIZE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -73,16 +73,12 @@ MPI_Comm_size(comm, size, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBsize\fP: Number of processes in the group of comm (integer).
@@ -123,7 +119,13 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Comm_group    MPI_Comm_rank    MPI_Comm_compare
+MPI_Comm_group
+MPI_Comm_rank
+.INDENT 0.0
+.INDENT 3.5
+MPI_Comm_compare
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_SHORT_PUT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_SHORT_PUT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,13 +33,13 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_character_put\fP(3), \fIshmem_complex_put\fP(3),
-\fIshmem_double_put\fP(3), \fIshmem_float_put\fP(3), \fIshmem_int_put\fP(3),
-\fIshmem_integer_put\fP(3), \fIshmem_logical_put\fP(3),
-\fIshmem_long_put\fP(3), \fIshmem_longdouble_put\fP(3),
-\fIshmem_longlong_put\fP(3), \fIshmem_put4\fP(3), \fIshmem_put8\fP(3),
-\fIshmem_put32\fP(3), \fIshmem_put64\fP(3), \fIshmem_put128\fP(3),
-\fIshmem_putmem\fP(3), \fIshmem_real_put\fP(3), \fIshmem_short_put\fP(3) \-
+shmem_character_put(3), shmem_complex_put(3),
+shmem_double_put(3), shmem_float_put(3), shmem_int_put(3),
+shmem_integer_put(3), shmem_logical_put(3),
+shmem_long_put(3), shmem_longdouble_put(3),
+shmem_longlong_put(3), shmem_put4(3), shmem_put8(3),
+shmem_put32(3), shmem_put64(3), shmem_put128(3),
+shmem_putmem(3), shmem_real_put(3), \fI\%shmem_short_put\fP(3) \-
 Transfers data to a specified processing element (PE)
 .SH SYNOPSIS
 .sp
@@ -137,7 +137,7 @@ transfer and may return before the data is delivered to the remote PE.
 The delivery of data into the data object on the destination PE from
 different put calls may occur in any order. Because of this, two
 successive put operations may deliver data out of order unless a call to
-\fIshmem_fence\fP(3) is introduced between the two calls.
+shmem_fence(3) is introduced between the two calls.
 .sp
 The arguments are as follows:
 .INDENT 0.0
@@ -164,32 +164,32 @@ The target and source data objects must conform to certain typing
 constraints, which are as follows:
 .INDENT 0.0
 .TP
-\fBshmem_putmem\fP: Fortran: Any noncharacter type. C: Any data type. len is scaled in
+.B shmem_putmem: Fortran: Any noncharacter type. C: Any data type. len is scaled in
 bytes.
 .TP
-\fBshmem_put4, shmem_put32:\fP Any noncharacter type that has a storage size
+.B shmem_put4, shmem_put32:** Any noncharacter type that has a storage size
 equal to 32 bits.
 .TP
-\fBshmem_put8, shmem_put64:\fP Any noncharacter type that has a storage size
+.B shmem_put8, shmem_put64:** Any noncharacter type that has a storage size
 equal to 64 bits.
 .TP
-\fBshmem_put128:\fP Any noncharacter type that has a storage size equal to 128
+.B shmem_put128:** Any noncharacter type that has a storage size equal to 128
 bits.
 .UNINDENT
 .sp
-\fBshmem_short_put:\fP Elements of type short.
+\fI\%shmem_short_put\fP:** Elements of type short.
 .sp
-\fBshmem_int_put:\fP Elements of type int.
+shmem_int_put:** Elements of type int.
 .sp
-\fBshmem_long_put:\fP Elements of type long.
+shmem_long_put:** Elements of type long.
 .sp
-\fBshmem_longlong_put:\fP Elements of type long long.
+shmem_longlong_put:** Elements of type long long.
 .sp
-\fBshmem_float_put:\fP Elements of type float.
+shmem_float_put:** Elements of type float.
 .sp
-\fBshmem_double_put:\fP Elements of type double.
+shmem_double_put:** Elements of type double.
 .sp
-\fBshmem_longdouble_put:\fP Elements of type long double.
+shmem_longdouble_put:** Elements of type long double.
 .INDENT 0.0
 .TP
 \fBSHMEM_CHARACTER_PUT:\fP Elements of type character. len is the number of
@@ -245,19 +245,7 @@ main()
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_iput(3), 
-.nf
-*
-.fi
-shmem_quiet (3)
+\fIintro_shmem\fP(3), \fIshmem_iput\fP(3), \fIshmem_quiet\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

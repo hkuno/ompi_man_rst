@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_QUERY_THREAD" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_QUERY_THREAD" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -71,9 +71,7 @@ MPI_Query_thread(provided, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBprovided\fP: C/Fortran only: Level of thread support (integer).
@@ -126,7 +124,11 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Init    MPI_Init_thread
+.INDENT 0.0
+.TP
+.B MPI_Init
+MPI_Init_thread
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

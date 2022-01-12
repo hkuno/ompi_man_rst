@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_GET_POSITION_SHARED" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_FILE_GET_POSITION_SHARED" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -74,16 +74,12 @@ MPI_File_get_position_shared(fh, offset, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBfh\fP: File handle (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBoffset\fP: Offset of the shared file pointer (integer).
@@ -95,9 +91,7 @@ OUTPUT PARAMETERS
 \fI\%MPI_File_get_position_shared\fP returns, in \fIoffset,\fP the current position
 of the shared file pointer in \fIetype\fP units relative to the current
 displacement and file type.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fIOFFSET\fP
 argument only for Fortran 90. Sun FORTRAN 77 users may use the

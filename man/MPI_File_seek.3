@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_SEEK" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_FILE_SEEK" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -75,9 +75,7 @@ MPI_File_seek(fh, offset, whence, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBfh\fP: File handle (handle).
@@ -86,9 +84,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBwhence\fP: Update mode (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -120,9 +116,7 @@ erroneous to seek to a negative position in the file. The end of the
 file is defined to be the location of the next elementary data item
 immediately after the last accessed data item, even if that location is
 a hole.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fIOFFSET\fP
 argument only for Fortran 90. FORTRAN 77 users may use the non\-portable

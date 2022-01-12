@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMALLOC" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMALLOC" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -89,7 +89,7 @@ The shmalloc, shfree, and shrealloc functions are provided so that
 multiple PEs in an application can allocate symmetric, remotely
 accessible memory blocks. These memory blocks can then be used with
 (shmem) communication routines. Each of these functions call the
-\fIshmem_barrier_all\fP(3) function before returning; this ensures that
+shmem_barrier_all(3) function before returning; this ensures that
 all PEs participate in the memory allocation, and that the memory on
 other PEs can be used as soon as the local PE returns.
 .sp
@@ -104,9 +104,7 @@ environment variable. See the \fIintro_shmem\fP(3) man page for futher
 details. The shmalloc, shfree, and shrealloc functions differ from the
 private heap allocation functions in that all PEs in an application must
 call them (a barrier is used to ensure this).
-.sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH RETURN VALUES
 .sp
 The \fBshmalloc\fP function returns a pointer to the allocated space
 (which should be identical on all PEs); otherwise, it returns a null

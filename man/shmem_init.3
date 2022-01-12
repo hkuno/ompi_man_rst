@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INIT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_INIT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-shmem_init, start_pes \- Allocates a block of memory from the symmetric
+\fI\%shmem_init\fP, start_pes \- Allocates a block of memory from the symmetric
 heap.
 .SH SYNOPSIS
 .sp
@@ -84,7 +84,7 @@ example SHMEM programs, and instructions for compiling SHMEM programs,
 see the \fIintro_shmem\fP(3) man page.
 .SH EXAMPLES
 .sp
-This is a simple program that calls \fIshmem_integer_put\fP(3):
+This is a simple program that calls shmem_integer_put(3):
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -119,11 +119,8 @@ unexpected results may occur on some architectures.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem(3), *:ref:\(gashmem_barrier\(ga (3), *:ref:\(gashmem_barrier_all\(ga (3),*shmem_put(3), *my_pe\fP(3I), 
-.nf
-*
-.fi
-shmem_n_pes (3I)
+\fIintro_shmem\fP(3), shmem_barrier(3), shmem_barrier_all(3),
+\fIshmem_put\fP(3), \fImy_pe\fP(3I), \fIshmem_n_pes\fP(3I)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

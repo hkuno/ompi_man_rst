@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ISCAN" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_ISCAN" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -120,9 +120,7 @@ MPI_Scan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierror
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Send buffer (choice).
@@ -137,9 +135,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only)
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Receive buffer (choice).
@@ -273,18 +269,14 @@ MPI_Scan(a, answer, 1, sspair, myOp, comm);
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-USE OF IN\-PLACE OPTION
-\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH USE OF IN-PLACE OPTION
 .sp
 When the communicator is an intracommunicator, you can perform a
 scanning operation in place (the output buffer is used as the input
 buffer). Use the variable MPI_IN_PLACE as the value of the \fIsendbuf\fP
 argument. The input data is taken from the receive buffer and replaced
 by the output data.
-.sp
-NOTES ON COLLECTIVE OPERATIONS
-\-\-\-\-\- \-\- \-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH NOTES ON COLLECTIVE OPERATIONS
 .sp
 The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either
@@ -311,7 +303,13 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Exscan    MPI_Op_create    MPI_Reduce
+MPI_Exscan
+MPI_Op_create
+.INDENT 0.0
+.INDENT 3.5
+MPI_Reduce
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_GET_VIEW" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_FILE_GET_VIEW" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -79,16 +79,12 @@ MPI_File_get_view(fh, disp, etype, filetype, datarep, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBfh\fP: File handle (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBdisp\fP: Displacement (integer).
@@ -109,9 +105,7 @@ are returned in \fIdisp,\fP \fIetype,\fP and \fIfiletype,\fP respectively.
 .sp
 The \fI\%MPI_File_get_view\fP interface allows the user to pass a
 data\-representation string via the \fIdatarep\fP argument.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fIDISP\fP
 argument only for Fortran 90. FORTRAN 77 users may use the non\-portable

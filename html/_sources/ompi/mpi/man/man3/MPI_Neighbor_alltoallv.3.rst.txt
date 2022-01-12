@@ -1,15 +1,19 @@
 .. _mpi_neighbor_alltoallv:
 
+
 MPI_Neighbor_alltoallv
 ======================
+
 .. include_body
 
 :ref:`MPI_Neighbor_alltoallv`, :ref:`MPI_Ineighbor_alltoallv`,
 :ref:`MPI_Neighbor_alltoallv_init` - All processes send different amounts of
 data to, and receive different amounts of data from, all neighbors
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -34,6 +38,7 @@ C Syntax
    	void *recvbuf, const int recvcounts[],
    	const int rdispls[], MPI_Datatype recvtype, MPI_Comm comm,
    	MPI_Info info, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -66,6 +71,7 @@ Fortran Syntax
    	INTEGER	SENDCOUNTS(*), SDISPLS(*), SENDTYPE
    	INTEGER	RECVCOUNTS(*), RDISPLS(*), RECVTYPE
    	INTEGER	COMM, INFO, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -110,35 +116,24 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Starting address of send buffer. 
-
-* ``sendcounts``: Integer array, where entry i specifies the number of elements to send to neighbor i. 
-
-* ``sdispls``: Integer array, where entry i specifies the displacement (offset from *sendbuf*, in units of *sendtype*) from which to send data to neighbor i. 
-
-* ``sendtype``: Datatype of send buffer elements. 
-
-* ``recvcounts``: Integer array, where entry j specifies the number of elements to receive from neighbor j. 
-
-* ``rdispls``: Integer array, where entry j specifies the displacement (offset from *recvbuf*, in units of *recvtype*) to which data from neighbor j should be written. 
-
-* ``recvtype``: Datatype of receive buffer elements. 
-
-* ``comm``: Communicator over which data is to be exchanged. 
-
-* ``info``: Info (handle, persistent only). 
+----------------
+* ``sendbuf``: Starting address of send buffer.
+* ``sendcounts``: Integer array, where entry i specifies the number of elements to send to neighbor i.
+* ``sdispls``: Integer array, where entry i specifies the displacement (offset from *sendbuf*, in units of *sendtype*) from which to send data to neighbor i.
+* ``sendtype``: Datatype of send buffer elements.
+* ``recvcounts``: Integer array, where entry j specifies the number of elements to receive from neighbor j.
+* ``rdispls``: Integer array, where entry j specifies the displacement (offset from *recvbuf*, in units of *recvtype*) to which data from neighbor j should be written.
+* ``recvtype``: Datatype of receive buffer elements.
+* ``comm``: Communicator over which data is to be exchanged.
+* ``info``: Info (handle, persistent only).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Address of receive buffer. 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status. 
+-----------------
+* ``recvbuf``: Address of receive buffer.
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status.
 
 DESCRIPTION
 -----------
@@ -181,8 +176,9 @@ Note that process i may send a different amount of data to process j
 than it receives from process j. Also, a process may send entirely
 different amounts of data to different processes in the communicator.
 
+
 NEIGHBOR ORDERING
--------- --------
+-----------------
 
 For a distributed graph topology, created with :ref:`MPI_Dist_graph_create`,
 the sequence of neighbors in the send and receive buffers at each
@@ -209,6 +205,7 @@ communication with MPI_PROC_NULL in this direction. That is, the buffer
 is still part of the sequence of neighbors but it is neither
 communicated nor updated.
 
+
 NOTES
 -----
 
@@ -225,6 +222,7 @@ The offsets of *sdispls* and *rdispls* are measured in units of
 *sendtype* and *recvtype*, respectively. Compare this to
 :ref:`MPI_Neighbor_alltoallw`, where these offsets are measured in bytes.
 
+
 ERRORS
 ------
 
@@ -239,4 +237,11 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Neighbor_alltoall`    :ref:`MPI_Neighbor_alltoallw`    :ref:`MPI_Cart_create`    :ref:`MPI_Graph_create`    :ref:`MPI_Dist_graph_create` 
+.. seealso:: 
+   ::
+
+   MPI_Neighbor_alltoall
+   MPI_Neighbor_alltoallw
+   MPI_Cart_create
+   MPI_Graph_create
+      MPI_Dist_graph_create

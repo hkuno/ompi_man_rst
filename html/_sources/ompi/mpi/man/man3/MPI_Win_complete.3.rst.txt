@@ -1,14 +1,18 @@
 .. _mpi_win_complete:
 
+
 MPI_Win_complete
 ================
+
 .. include_body
 
 :ref:`MPI_Win_complete` - Completes an RMA access epoch on *win* started by
 a call to :ref:`MPI_Win_start`
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    MPI_Win_complete(MPI_Win win)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -28,6 +33,7 @@ Fortran Syntax
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_COMPLETE(WIN, IERROR)
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -40,15 +46,14 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETERS
------ ----------
 
-* ``win``: Window object (handle). 
+INPUT PARAMETERS
+----------------
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -58,6 +63,7 @@ completing an RMA access epoch on *win* started by a call to
 :ref:`MPI_Win_start`. :ref:`MPI_Win_complete` enforces the completion of preceding RMA
 calls at the origin and not at the target. A put or accumulate call may
 not have completed at the target when it has completed at the origin.
+
 
 ERRORS
 ------
@@ -73,4 +79,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_start` 
+.. seealso:: 
+   | :ref:`MPI_Win_start`

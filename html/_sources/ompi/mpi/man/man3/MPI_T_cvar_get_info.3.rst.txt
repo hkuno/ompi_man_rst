@@ -1,13 +1,17 @@
 .. _mpi_t_cvar_get_info:
 
+
 MPI_T_cvar_get_info
 ===================
+
 .. include_body
 
 :ref:`MPI_T_cvar_get_info` - Query information from a control variable
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,34 +24,25 @@ C Syntax
                            int *verbosity, MPI_Datatype *datatype, MPI_T_enum *enumtype,
                            const *desc, int *desc_len, int *bind, int *scope)
 
-INPUT PARAMETERS
------ ----------
 
-* ``cvar_index``: Index of the control variable to be queried. 
+INPUT PARAMETERS
+----------------
+* ``cvar_index``: Index of the control variable to be queried.
 
 INPUT/OUTPUT PARAMETERS
------/------ ----------
-
-* ``name_len``: Length of the string and/or buffer for name. 
-
-* ``desc_len``: Length of the string and/or buffer for desc. 
+-----/-----------------
+* ``name_len``: Length of the string and/or buffer for name.
+* ``desc_len``: Length of the string and/or buffer for desc.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``name``: Buffer to return the string containing the name of the control variable. 
-
-* ``verbosity``: Verbosity level of this variable. 
-
-* ``datatype``: MPI datatype of the information stored in the control variable. 
-
-* ``enumtype``: Optional descriptor for enumeration information. 
-
-* ``desc``: Buffer to return the string containing the description of the control variable. 
-
-* ``bind``: Type of MPI object to which this variable must be bound. 
-
-* ``scope``: Scope of when changes to this variable are possible. 
+-----------------
+* ``name``: Buffer to return the string containing the name of the control variable.
+* ``verbosity``: Verbosity level of this variable.
+* ``datatype``: MPI datatype of the information stored in the control variable.
+* ``enumtype``: Optional descriptor for enumeration information.
+* ``desc``: Buffer to return the string containing the description of the control variable.
+* ``bind``: Type of MPI object to which this variable must be bound.
+* ``scope``: Scope of when changes to this variable are possible.
 
 DESCRIPTION
 -----------
@@ -58,6 +53,7 @@ type, binding, and scope of the queried control variable in the
 arguments *verbosity*, *datatype*, *enumtype*, *bind*, and *scope*,
 respectively. Control variables in Open MPI are the same as MCA
 parameters.
+
 
 VERBOSITY
 ---------
@@ -96,6 +92,7 @@ MPI_T_VERBOSITY_MPIDEV_ALL
 
 For more information see MPI-3 � 14.3.1.
 
+
 DATATYPE
 --------
 
@@ -103,6 +100,7 @@ The datatype returned by :ref:`MPI_T_cvar_get_info` is restricted to one of the
 following datatypes: MPI_INT, MPI_UNSIGNED, MPI_UNSIGNED_LONG,
 MPI_UNSIGNED_LONG_LONG, MPI_COUNT, MPI_CHAR, and MPI_DOUBLE. For more
 information on datatypes in MPI_T see MPI-3 � 14.3.5.
+
 
 SCOPE
 -----
@@ -137,6 +135,7 @@ MPI_T_SCOPE_ALL_EQ
 
 For more information see MPI-3 � 14.3.6 Table 14.4.
 
+
 NOTES
 -----
 
@@ -152,6 +151,7 @@ ignored and the string is not returned.
 Open MPI does not currently support binding control variables to MPI
 objects.
 
+
 ERRORS
 ------
 
@@ -164,4 +164,7 @@ MPI_T_cvar_get_info() will fail if:
    The control variable index is invalid
 
 
-.. seealso::    ompi_info
+.. seealso:: 
+   ::
+
+      ompi_info

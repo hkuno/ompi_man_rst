@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_FENCE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_WIN_FENCE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -72,18 +72,14 @@ MPI_Win_fence(assert, win, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBassert\fP: Program assertion (integer).
 .IP \(bu 2
 \fBwin\fP: Window object (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -112,6 +108,7 @@ fence call is equivalent to calls to a subset of \fIpost, start, complete,
 wait\fP\&.
 .sp
 The \fIassert\fP argument is used to provide assertions on the context of
+.sp
 the call that may be used for various optimizations. A value of \fIassert\fP
 ^ 0 is always valid. The following assertion value is supported:
 .INDENT 0.0
@@ -154,7 +151,8 @@ guarantee that an MPI program can continue past an error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Win_create  MPI_Win_start  MPI_Win_post  MPI_Win_complete   MPI_Win_wait
+MPI_Win_create MPI_Win_start MPI_Win_post MPI_Win_complete
+MPI_Win_wait
 .fi
 .sp
 .UNINDENT

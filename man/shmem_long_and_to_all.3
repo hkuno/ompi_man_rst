@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONG_AND_TO_ALL" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_LONG_AND_TO_ALL" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,9 +33,9 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_int_and_to_all\fP(3), \fIshmem_int4_and_to_all\fP(3),
-\fIshmem_int8_and_to_all\fP(3), \fIshmem_long_and_to_all\fP(3),
-\fIshmem_longlong_and_to_all\fP(3), \fIshmem_short_and_to_all\fP(3) \-
+shmem_int_and_to_all(3), shmem_int4_and_to_all(3),
+shmem_int8_and_to_all(3), \fI\%shmem_long_and_to_all\fP(3),
+shmem_longlong_and_to_all(3), shmem_short_and_to_all(3) \-
 Performs a bitwise AND operation on symmetric arrays over the active set
 of PEs.
 .SH SYNOPSIS
@@ -117,9 +117,9 @@ version of the reduction routine being called. When calling from
 C/C++, refer to the SYNOPSIS section for data type information. When
 calling from Fortran, the target data types are as follows:
 .sp
-\fBshmem_int8_and_to_all\fP: Integer, with an element size of 8 bytes
+shmem_int8_and_to_all: Integer, with an element size of 8 bytes
 .sp
-\fBshmem_int4_and_to_all\fP: Integer, with an element size of 4 bytes
+shmem_int4_and_to_all: Integer, with an element size of 4 bytes
 .TP
 .B source
 A symmetric array, of length nreduce elements, that contains one

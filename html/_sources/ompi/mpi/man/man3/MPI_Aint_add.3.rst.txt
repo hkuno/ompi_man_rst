@@ -1,14 +1,18 @@
 .. _mpi_aint_add:
 
+
 MPI_Aint_add
 ============
+
 .. include_body
 
 :ref:`MPI_Aint_add`, :ref:`MPI_Aint_diff` - Portable functions for arithmetic
 on MPI_Aint values.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    MPI_Aint MPI_Aint_add(MPI_Aint base, MPI_Aint disp)
 
    MPI_Aint MPI_Aint_diff(MPI_Aint addr1, MPI_Aint addr2)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -35,6 +40,7 @@ Fortran Syntax
    INTEGER(KIND=MPI_ADDRESS_KIND) MPI_AINT_DIFF(ADDR1, ADDR2)
            INTEGER(KIND=MPI_ADDRESS_KIND) ADDR1, ADDR2
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -48,16 +54,13 @@ Fortran 2008 Syntax
    INTEGER(KIND=MPI_ADDRESS_KIND) MPI_AINT_DIFF(ADDR1, ADDR2)
            INTEGER(KIND=MPI_ADDRESS_KIND) ADDR1, ADDR2
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``base``: Base address (integer). 
-
-* ``disp``: Displacement (integer). 
-
-* ``addr1``: Minuend address (integer). 
-
-* ``addr2``: Subtrahend address (integer). 
+----------------
+* ``base``: Base address (integer).
+* ``disp``: Displacement (integer).
+* ``addr1``: Minuend address (integer).
+* ``addr2``: Subtrahend address (integer).
 
 DESCRIPTION
 -----------
@@ -88,4 +91,5 @@ originally produced the addresses had called (char \*) *addr1* - (char
 \*) *addr2* on the addresses initially passed to :ref:`MPI_Get_address`.
 
 
-.. seealso:: :ref:`MPI_Get_address` 
+.. seealso:: 
+   :ref:`MPI_Get_address`

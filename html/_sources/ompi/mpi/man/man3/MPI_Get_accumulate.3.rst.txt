@@ -2,6 +2,7 @@
 
 MPI_Get_accumulate
 ==================
+
 .. include_body
 
 :ref:`MPI_Get_accumulate`, :ref:`MPI_Rget_accumulate` - Combines the contents
@@ -203,4 +204,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Put` :ref:`MPI_Accumulate` :ref:`MPI_Fetch_and_op` :ref:`MPI_Reduce` 
+.. seealso:: :ref:`MPI_Put` :ref:`MPI_Accumulate` :ref:`MPI_Fetch_and_op` :ref:`MPI_Reduce`

@@ -2,6 +2,7 @@
 
 MPI_Bsend_init
 ==============
+
 .. include_body
 
 :ref:`MPI_Bsend_init` - Builds a handle for a buffered send.
@@ -87,4 +88,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Send_init` :ref:`MPI_Ssend_init` :ref:`MPI_Rsend_init` :ref:`MPI_Recv_init` :ref:`MPI_Start` :ref:`MPI_Startall` 
+.. seealso:: :ref:`MPI_Send_init` :ref:`MPI_Ssend_init` :ref:`MPI_Rsend_init` :ref:`MPI_Recv_init` :ref:`MPI_Start` :ref:`MPI_Startall`

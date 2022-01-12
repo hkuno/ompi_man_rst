@@ -1,13 +1,17 @@
 .. _mpi_psend_init:
 
+
 MPI_Psend_init
 ==============
+
 .. include_body
 
 :ref:`MPI_Psend_init` - Initializes a partitioned send.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Psend_init(const void *buf, int partitions, int count, MPI_Datatype datatype, int dest,
    	int tag, MPI_Comm comm, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_PSEND_INIT(BUF, PARTITIONS, COUNT, DATATYPE, DEST, TAG, COMM, REQUEST, IERROR)
    	<type>	BUF(*)
    	INTEGER	PARTITIONS, COUNT, DATATYPE, DEST, TAG, COMM, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -46,29 +52,21 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``buf``: Initial address of send buffer (choice). 
-
-* ``partitions``: Number of partitions (integer). 
-
-* ``count``: Number of elements to be sent per partition (integer). 
-
-* ``datatype``: Datatype of each element (handle). 
-
-* ``dest``: Rank of source (integer). 
-
-* ``tag``: Message tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``buf``: Initial address of send buffer (choice).
+* ``partitions``: Number of partitions (integer).
+* ``count``: Number of elements to be sent per partition (integer).
+* ``datatype``: Datatype of each element (handle).
+* ``dest``: Rank of source (integer).
+* ``tag``: Message tag (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``request``: Communication request (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``request``: Communication request (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 ERRORS
 ------
@@ -83,6 +81,7 @@ I/O function errors. The error handler may be changed with
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
+
 NOTE
 ----
 
@@ -93,4 +92,5 @@ communication request is initialized on both ends. This behavior will be
 corrected in future versions.
 
 
-.. seealso:: | :ref:`MPI_Precv_init` 
+.. seealso:: 
+   | :ref:`MPI_Precv_init`

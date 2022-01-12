@@ -2,6 +2,7 @@
 
 MPI_Barrier
 ===========
+
 .. include_body
 
 :ref:`MPI_Barrier`, :ref:`MPI_Ibarrier` - Synchronization between MPI processes in a
@@ -93,4 +94,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Bcast` 
+.. seealso:: :ref:`MPI_Bcast`

@@ -1,14 +1,18 @@
 .. _mpi_intercomm_create:
 
+
 MPI_Intercomm_create
 ====================
+
 .. include_body
 
 :ref:`MPI_Intercomm_create` - Creates an intercommunicator from two
 intracommunicators.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Intercomm_create(MPI_Comm local_comm, int local_leader,
    	MPI_Comm peer_comm, int remote_leader, int tag, MPI_Comm *newintercomm)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax
    		REMOTE_LEADER, TAG, NEWINTERCOMM, IERROR)
    	INTEGER	LOCAL_COMM, LOCAL_LEADER, PEER_COMM, REMOTE_LEADER
    	INTEGER	TAG, NEWINTERCOMM, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,25 +53,19 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(OUT) :: newintercomm
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``local_comm``: The communicator containing the process that initiates the inter-communication (handle). 
-
-* ``local_leader``: Rank of local group leader in local_comm (integer). 
-
-* ``peer_comm``: "Peer" communicator; significant only at the local_leader (handle). 
-
-* ``remote_leader``: Rank of remote group leader in peer_comm; significant only at the local_leader (integer). 
-
-* ``tag``: Message tag used to identify new intercommunicator (integer). 
+----------------
+* ``local_comm``: The communicator containing the process that initiates the inter-communication (handle).
+* ``local_leader``: Rank of local group leader in local_comm (integer).
+* ``peer_comm``: "Peer" communicator; significant only at the local_leader (handle).
+* ``remote_leader``: Rank of remote group leader in peer_comm; significant only at the local_leader (integer).
+* ``tag``: Message tag used to identify new intercommunicator (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newintercomm``: Created intercommunicator (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newintercomm``: Created intercommunicator (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -84,6 +84,7 @@ If multiple MPI_Intercomm_creates are being made, they should use
 different tags (more precisely, they should ensure that the local and
 remote leaders are using different tags for each MPI_intercomm_create).
 
+
 NOTES
 -----
 
@@ -99,6 +100,7 @@ disjoint. Note that the **reason** given for this in the standard is
 intercommunicators (like :ref:`MPI_Intercomm_merge` ) do not make sense if
 the groups are not disjoint.
 
+
 ERRORS
 ------
 
@@ -113,4 +115,8 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Intercomm_merge` | :ref:`MPI_Comm_free` | :ref:`MPI_Comm_remote_group` | :ref:`MPI_Comm_remote_size` 
+.. seealso:: 
+   | :ref:`MPI_Intercomm_merge`
+   | :ref:`MPI_Comm_free`
+   | :ref:`MPI_Comm_remote_group`
+   | :ref:`MPI_Comm_remote_size`

@@ -1,14 +1,18 @@
 .. _mpi_comm_test_inter:
 
+
 MPI_Comm_test_inter
 ===================
+
 .. include_body
 
 :ref:`MPI_Comm_test_inter` - Tests to see if a comm is an
 intercommunicator.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_test_inter(MPI_Comm comm, int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    	INTEGER	COMM, IERROR
    	LOGICAL	FLAG
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -43,17 +49,15 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``comm``: Communicator (handle). 
+INPUT PARAMETER
+---------------
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``flag (Logical.)``: 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``flag (Logical.)``:
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -91,6 +95,7 @@ an intercommunicator: :ref:`MPI_Comm_remote_size`, :ref:`MPI_Comm_remote_group`.
 The intercommunicator accessors (:ref:`MPI_Comm_test_inter`,
 :ref:`MPI_Comm_remote_size`, MPI_Comm_remote_group) are all local operations.
 
+
 ERRORS
 ------
 
@@ -105,4 +110,10 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Comm_remote_group`    :ref:`MPI_Comm_remote_size`    :ref:`MPI_Intercomm_create`    :ref:`MPI_Intercomm_merge` 
+.. seealso:: 
+   ::
+
+   MPI_Comm_remote_group
+   MPI_Comm_remote_size
+   MPI_Intercomm_create
+      MPI_Intercomm_merge

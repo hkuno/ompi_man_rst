@@ -2,6 +2,7 @@
 
 MPI_Get_count
 =============
+
 .. include_body
 
 :ref:`MPI_Get_count` - Gets the number of top-level elements received.
@@ -96,4 +97,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Get_elements` 
+.. seealso:: :ref:`MPI_Get_elements`

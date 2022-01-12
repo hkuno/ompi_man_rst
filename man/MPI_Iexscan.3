@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_IEXSCAN" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_IEXSCAN" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -120,9 +120,7 @@ MPI_Exscan_init(sendbuf, recvbuf, count, datatype, op, comm, info, request, ierr
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Send buffer (choice).
@@ -135,9 +133,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Receive buffer (choice).
@@ -160,9 +156,7 @@ send and receive buffers are as for MPI_Reduce\&.
 The value in \fIrecvbuf\fP on process 0 is undefined and unreliable as
 \fIrecvbuf\fP is not significant for process 0. The value of \fIrecvbuf\fP on
 process 1 is always the value in \fIsendbuf\fP on process 0.
-.sp
-USE OF IN\-PLACE OPTION
-\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH USE OF IN-PLACE OPTION
 .sp
 The \(gain place\(aq option for intracommunicators is specified by passing
 MPI_IN_PLACE in the \fIsendbuf\fP argument. In this case, the input data is
@@ -188,9 +182,7 @@ the unit element of the reduction operation. However, such a definition
 of an exclusive scan would not work with user\-defined \fIop\fP functions as
 there is no way for MPI to "know" the unit value for these custom
 operations.
-.sp
-NOTES ON COLLECTIVE OPERATIONS
-\-\-\-\-\- \-\- \-\-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH NOTES ON COLLECTIVE OPERATIONS
 .sp
 The reduction functions of type MPI_Op do not return an error value. As
 a result, if the functions detect an error, all they can do is either
@@ -217,7 +209,13 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Op_create    MPI_Reduce    MPI_Scan
+MPI_Op_create
+MPI_Reduce
+.INDENT 0.0
+.INDENT 3.5
+MPI_Scan
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

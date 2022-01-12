@@ -1,14 +1,18 @@
 .. _mpi_file_seek_shared:
 
+
 MPI_File_seek_shared
 ====================
+
 .. include_body
 
 :ref:`MPI_File_seek_shared` - Updates the global shared file pointer
 (collective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -21,6 +25,7 @@ C Syntax
    int MPI_File_seek_shared(MPI_File fh, MPI_Offset offset,
    	int whence)
 
+
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -32,6 +37,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    MPI_FILE_SEEK_SHARED(FH, OFFSET, WHENCE, IERROR)
    	INTEGER	FH, WHENCE, IERROR
    	INTEGER(KIND=MPI_OFFSET_KIND)	OFFSET
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -46,19 +52,16 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(IN) :: whence
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``offset``: File offset (integer). 
-
-* ``whence``: Update mode (integer). 
+----------------
+* ``fh``: File handle (handle).
+* ``offset``: File offset (integer).
+* ``whence``: Update mode (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -89,8 +92,9 @@ view is defined to be the position of the next elementary data item,
 relative to the current view, following the last whole elementary data
 item accessible.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *OFFSET*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -102,6 +106,7 @@ syntax
 
 where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------

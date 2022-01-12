@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "OPEN-MPI" "5" "Jan 05, 2022" "" "Open MPI"
+.TH "OPEN-MPI" "5" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -84,6 +84,650 @@ For more information on Open MPI error codes, see \fBmpi.h\fP in the
 \fBinclude\fP directory.
 .sp
 Standard error return classes for Open MPI:
+.TS
+center;
+|l|l|l|.
+_
+T{
+Error name
+T}	T{
+Error value
+T}	T{
+Description
+T}
+_
+T{
+MPI_SUCCESS
+T}	T{
+0
+T}	T{
+Successful return code.
+T}
+_
+T{
+MPI_ERR_BUFFER
+T}	T{
+1
+T}	T{
+Invalid buffer pointer.
+T}
+_
+T{
+MPI_ERR_COUNT
+T}	T{
+2
+T}	T{
+Invalid count argument.
+T}
+_
+T{
+MPI_ERR_TYPE
+T}	T{
+3
+T}	T{
+Invalid datatype
+T}
+_
+T{
+MPI_ERR_TAG
+T}	T{
+4
+T}	T{
+Invalid tag argument.
+T}
+_
+T{
+MPI_ERR_COMM
+T}	T{
+5
+T}	T{
+Invalid communicator.
+T}
+_
+T{
+MPI_ERR_RANK
+T}	T{
+6
+T}	T{
+Invalid rank.
+T}
+_
+T{
+MPI_ERR_REQUEST
+T}	T{
+7
+T}	T{
+Invalid MPI_Request
+T}
+_
+T{
+MPI_ERR_ROOT
+T}	T{
+8
+T}	T{
+Invalid root.
+T}
+_
+T{
+MPI_ERR_GROUP
+T}	T{
+9
+T}	T{
+Null group passed to
+T}
+_
+T{
+MPI_ERR_OP
+T}	T{
+10
+T}	T{
+Invalid operation.
+T}
+_
+T{
+MPI_ERR_TOPOLOGY
+T}	T{
+11
+T}	T{
+Invalid topology.
+T}
+_
+T{
+MPI_ERR_DIMS
+T}	T{
+12
+T}	T{
+Illegal dimension
+T}
+_
+T{
+MPI_ERR_ARG
+T}	T{
+13
+T}	T{
+Invalid argument.
+T}
+_
+T{
+MPI_ERR_UNKNOWN
+T}	T{
+14
+T}	T{
+Unknown error.
+T}
+_
+T{
+MPI_ERR_TRUNCATE
+T}	T{
+15
+T}	T{
+Message truncated on
+T}
+_
+T{
+MPI_ERR_OTHER
+T}	T{
+16
+T}	T{
+Other error; use
+Error_string.
+T}
+_
+T{
+MPI_ERR_INTERN
+T}	T{
+17
+T}	T{
+Internal error code.
+T}
+_
+T{
+MPI_ERR_IN_STATUS
+T}	T{
+18
+T}	T{
+Look in status for error
+T}
+_
+T{
+MPI_ERR_PENDING
+T}	T{
+19
+T}	T{
+Pending request.
+T}
+_
+T{
+MPI_ERR_ACCESS
+T}	T{
+20
+T}	T{
+Permission denied.
+T}
+_
+T{
+MPI_ERR_AMODE
+T}	T{
+21
+T}	T{
+Unsupported amode passed
+T}
+_
+T{
+MPI_ERR_ASSERT
+T}	T{
+22
+T}	T{
+Invalid assert.
+T}
+_
+T{
+MPI_ERR_BAD_FILE
+T}	T{
+23
+T}	T{
+Invalid file name (for
+T}
+_
+T{
+MPI_ERR_BASE
+T}	T{
+24
+T}	T{
+Invalid base.
+T}
+_
+T{
+MPI_ERR_CONVERSION
+T}	T{
+25
+T}	T{
+An error occurred in a
+T}
+_
+T{
+MPI_ERR_DISP
+T}	T{
+26
+T}	T{
+Invalid displacement.
+T}
+_
+T{
+MPI_ERR_DUP_DATAREP
+T}	T{
+27
+T}	T{
+Conversion functions
+MPI_REGISTER_DATAREP\&.
+T}
+_
+T{
+MPI_ERR_FILE_EXISTS
+T}	T{
+28
+T}	T{
+File exists.
+T}
+_
+T{
+MPI_ERR_FILE_IN_USE
+T}	T{
+29
+T}	T{
+File operation could not
+T}
+_
+T{
+MPI_ERR_FILE
+T}	T{
+30
+T}	T{
+Invalid file handle.
+T}
+_
+T{
+MPI_ERR_INFO_KEY
+T}	T{
+31
+T}	T{
+Illegal info key.
+T}
+_
+T{
+MPI_ERR_INFO_NOKEY
+T}	T{
+32
+T}	T{
+No such key.
+T}
+_
+T{
+MPI_ERR_INFO_VALUE
+T}	T{
+33
+T}	T{
+Illegal info value.
+T}
+_
+T{
+MPI_ERR_INFO
+T}	T{
+34
+T}	T{
+Invalid info object.
+T}
+_
+T{
+MPI_ERR_IO
+T}	T{
+35
+T}	T{
+I/O error.
+T}
+_
+T{
+MPI_ERR_KEYVAL
+T}	T{
+36
+T}	T{
+Illegal key value.
+T}
+_
+T{
+MPI_ERR_LOCKTYPE
+T}	T{
+37
+T}	T{
+Invalid locktype.
+T}
+_
+T{
+MPI_ERR_NAME
+T}	T{
+38
+T}	T{
+Name not found.
+T}
+_
+T{
+MPI_ERR_NO_MEM
+T}	T{
+39
+T}	T{
+Memory exhausted.
+T}
+_
+T{
+MPI_ERR_NOT_SAME
+T}	T{
+40
+T}	T{
+Collective argument not
+T}
+_
+T{
+MPI_ERR_NO_SPACE
+T}	T{
+41
+T}	T{
+Not enough space.
+T}
+_
+T{
+MPI_ERR_NO_SUCH_FILE
+T}	T{
+42
+T}	T{
+File (or directory) does
+T}
+_
+T{
+MPI_ERR_PORT
+T}	T{
+43
+T}	T{
+Invalid port.
+T}
+_
+T{
+MPI_ERR_PROC_ABORTED
+T}	T{
+74
+T}	T{
+Operation failed because
+T}
+_
+T{
+MPI_ERR_QUOTA
+T}	T{
+44
+T}	T{
+Quota exceeded.
+T}
+_
+T{
+MPI_ERR_READ_ONLY
+T}	T{
+45
+T}	T{
+Read\-only file system.
+T}
+_
+T{
+MPI_ERR_RMA_CONFLICT
+T}	T{
+46
+T}	T{
+Conflicting accesses to
+T}
+_
+T{
+MPI_ERR_RMA_SYNC
+T}	T{
+47
+T}	T{
+Erroneous RMA
+T}
+_
+T{
+MPI_ERR_SERVICE
+T}	T{
+48
+T}	T{
+Invalid
+T}
+_
+T{
+MPI_ERR_SIZE
+T}	T{
+49
+T}	T{
+Invalid size.
+T}
+_
+T{
+MPI_ERR_SPAWN
+T}	T{
+50
+T}	T{
+Error spawning.
+T}
+_
+T{
+MPI
+_ERR_UNSUPPORTED_DATAREP
+T}	T{
+51
+T}	T{
+Unsupported datarep
+passed to
+MPI_File_set_view\&.
+T}
+_
+T{
+MPI_E
+RR_UNSUPPORTED_OPERATION
+T}	T{
+52
+T}	T{
+Unsupported operation,
+such as seeking on a
+T}
+_
+T{
+MPI_ERR_WIN
+T}	T{
+53
+T}	T{
+Invalid window.
+T}
+_
+T{
+MPI_T_ERR_MEMORY
+T}	T{
+54
+T}	T{
+Out of memory.
+T}
+_
+T{
+M
+PI_T_ERR_NOT_INITIALIZED
+T}	T{
+55
+T}	T{
+Interface not
+initialized.
+T}
+_
+T{
+MPI_T_ERR_CANNOT_INIT
+T}	T{
+56
+T}	T{
+Interface not in the
+T}
+_
+T{
+MPI_T_ERR_INVALID_INDEX
+T}	T{
+57
+T}	T{
+The enumeration index is
+T}
+_
+T{
+MPI_T_ERR_INVALID_ITEM
+T}	T{
+58
+T}	T{
+The item index queried
+T}
+_
+T{
+MPI_T_ERR_INVALID_HANDLE
+T}	T{
+59
+T}	T{
+The handle is invalid.
+T}
+_
+T{
+MPI_T_ERR_OUT_OF_HANDLES
+T}	T{
+60
+T}	T{
+No more handles
+T}
+_
+T{
+M
+T}	T{
+61
+T}	T{
+No more sessions
+T}
+_
+T{
+PI_T_ERR_OUT_OF_SESSIONS
+T}	T{
+T}	T{
+available.
+T}
+_
+T{
+M
+PI_T_ERR_INVALID_SESSION
+T}	T{
+62
+T}	T{
+Session argument is not
+a valid session.
+T}
+_
+T{
+MP
+I_T_ERR_CVAR_SET_NOT_NOW
+T}	T{
+63
+T}	T{
+Variable cannot be set
+at this moment.
+T}
+_
+T{
+MPI_T_ERR_CVAR_SET_NEVER
+T}	T{
+64
+T}	T{
+Variable cannot be set
+T}
+_
+T{
+MPI
+_T_ERR_PVAR_NO_STARTSTOP
+T}	T{
+65
+T}	T{
+Variable cannot be
+started or stopped.
+T}
+_
+T{
+MPI_T_ERR_PVAR_NO_WRITE
+T}	T{
+66
+T}	T{
+Variable cannot be
+T}
+_
+T{
+MPI_T_ERR_PVAR_NO_ATOMIC
+T}	T{
+67
+T}	T{
+Variable cannot be read
+T}
+_
+T{
+MPI_ERR_RMA_RANGE
+T}	T{
+68
+T}	T{
+Target memory is not
+MPI_WIN_CREATE_DYNAMIC,
+T}
+_
+T{
+MPI_ERR_RMA_ATTACH
+T}	T{
+69
+T}	T{
+Memory cannot be
+T}
+_
+T{
+MPI_ERR_RMA_FLAVOR
+T}	T{
+70
+T}	T{
+Passed window has the
+T}
+_
+T{
+MPI_ERR_RMA_SHARED
+T}	T{
+71
+T}	T{
+Memory cannot be shared
+T}
+_
+T{
+MPI_T_ERR_INVALID
+T}	T{
+72
+T}	T{
+Invalid use of the
+T}
+_
+T{
+MPI_T_ERR_INVALID_NAME
+T}	T{
+73
+T}	T{
+The variable or category
+T}
+_
+T{
+MPI_ERR_LASTCODE
+T}	T{
+93
+T}	T{
+Last error code.
+T}
+_
+.TE
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0

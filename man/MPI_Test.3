@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TEST" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TEST" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -74,16 +74,12 @@ MPI_Test(request, flag, status, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBrequest\fP: Communication request (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBflag\fP: True if operation completed (logical).
@@ -149,7 +145,16 @@ MPI_ERRORS_RETURN exhibits this behavior, for example.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Comm_set_errhandler | MPI_File_set_errhandler | MPI_Testall | MPI_Testany | MPI_Testsome | MPI_Wait | MPI_Waitall | MPI_Waitany | MPI_Waitsome | MPI_Win_set_errhandler
+MPI_Comm_set_errhandler
+MPI_File_set_errhandler
+MPI_Testall
+MPI_Testany
+MPI_Testsome
+MPI_Wait
+MPI_Waitall
+MPI_Waitany
+MPI_Waitsome
+MPI_Win_set_errhandler
 .fi
 .sp
 .UNINDENT

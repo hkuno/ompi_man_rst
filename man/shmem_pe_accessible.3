@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_PE_ACCESSIBLE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_PE_ACCESSIBLE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-shmem_pe_accessible \- Determines whether a processing element (PE) is
+\fI\%shmem_pe_accessible\fP \- Determines whether a processing element (PE) is
 accessible via SHMEM data transfer operations.
 .SH SYNOPSIS
 .sp
@@ -65,12 +65,10 @@ LOG = SHMEM_PE_ACCESSIBLE(pe)
 .UNINDENT
 .SH DESCRIPTION
 .sp
-shmem_pe_accessible returns a value that indicates whether the calling
+\fI\%shmem_pe_accessible\fP returns a value that indicates whether the calling
 PE is able to perform OpenSHMEM communication operations with the remote
 PE.
-.sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH RETURN VALUES
 .INDENT 0.0
 .TP
 .B C/C++
@@ -85,15 +83,7 @@ for SHMEM functions; otherwise, it is .FALSE..
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_addr_accessible (3)
+\fIintro_shmem\fP(3), \fIshmem_addr_accessible\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

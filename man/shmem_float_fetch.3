@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_FLOAT_FETCH" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_FLOAT_FETCH" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,10 +33,10 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_int4_fetch\fP(3), \fIshmem_int8_fetch\fP(3),
-\fIshmem_int_fetch\fP(3), \fIshmem_long_fetch\fP(3),
-\fIshmem_longlong_fetch\fP(3) \fIshmem_double_fetch\fP(3)
-\fIshmem_float_fetch\fP(3) \- Atomically fetches the value of a remote data
+shmem_int4_fetch(3), shmem_int8_fetch(3),
+shmem_int_fetch(3), shmem_long_fetch(3),
+shmem_longlong_fetch(3) shmem_double_fetch(3)
+\fI\%shmem_float_fetch\fP(3) \- Atomically fetches the value of a remote data
 object
 .SH SYNOPSIS
 .sp
@@ -104,9 +104,7 @@ An integer that indicates the PE number from which \fItarget\fP is to be
 fetched. If you are using Fortran, it must be a default integer
 value.
 .UNINDENT
-.sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH RETURN VALUES
 .sp
 The contents at the \fItarget\fP address on the remote PE. The data type of
 the return value is the same as the the type of the remote data object.

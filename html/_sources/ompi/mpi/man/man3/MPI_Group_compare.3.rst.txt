@@ -2,6 +2,7 @@
 
 MPI_Group_compare
 =================
+
 .. include_body
 
 :ref:`MPI_Group_compare` - Compares two groups.

@@ -1,13 +1,17 @@
 .. _mpi_win_free:
 
+
 MPI_Win_free
 ============
+
 .. include_body
 
 :ref:`MPI_Win_free` - Frees the window object and returns a null handle.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_free(MPI_Win *win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_WIN_FREE(WIN, IERROR)
    	INTEGER WIN, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -40,15 +46,14 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(INOUT) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``win``: Window object (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -61,12 +66,14 @@ communications on window *win*, that is, the process has called
 :ref:`MPI_Win_fence`, or called :ref:`MPI_Win_unlock` to match a previous call to
 :ref:`MPI_Win_lock`. When the call returns, the window memory can be freed.
 
+
 NOTES
 -----
 
 If the window was created through :ref:`MPI_Win_allocate` or
 :ref:`MPI_Win_allocate_shared` then the memory buffer allocated in that
 call will be freed when calling :ref:`MPI_Win_free`.
+
 
 ERRORS
 ------
@@ -82,4 +89,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_create`  :ref:`MPI_Win_allocate`  :ref:`MPI_Win_allocate_shared` 
+.. seealso:: 
+   | :ref:`MPI_Win_create` :ref:`MPI_Win_allocate` :ref:`MPI_Win_allocate_shared`

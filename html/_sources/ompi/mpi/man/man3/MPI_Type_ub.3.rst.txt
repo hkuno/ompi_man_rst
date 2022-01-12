@@ -1,14 +1,18 @@
 .. _mpi_type_ub:
 
+
 MPI_Type_ub
 ===========
+
 .. include_body
 
 :ref:`MPI_Type_ub` - Returns the upper bound of a datatype -- use of this
 routine is deprecated.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Type_ub(MPI_Datatype datatype, MPI_Aint *displacement)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,17 +34,15 @@ Fortran Syntax
    MPI_TYPE_UB(DATATYPE, DISPLACEMENT, IERROR)
    	INTEGER	DATATYPE, DISPLACEMENT, IERROR
 
-INPUT PARAMETER
------ ---------
 
-* ``datatype``: Datatype (handle). 
+INPUT PARAMETER
+---------------
+* ``datatype``: Datatype (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``displacement``: Displacement of upper bound from origin, in bytes (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``displacement``: Displacement of upper bound from origin, in bytes (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -95,6 +98,7 @@ If type(i) requires alignment to a byte address that is a multiple of
 k(i), then e is the least nonnegative increment needed to round
 extent(Typemap) to the next multiple of max(i) k(i).
 
+
 ERRORS
 ------
 
@@ -109,4 +113,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Type_get_extent` 
+.. seealso:: 
+   | :ref:`MPI_Type_get_extent`

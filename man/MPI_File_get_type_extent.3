@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_GET_TYPE_EXTENT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_FILE_GET_TYPE_EXTENT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -76,18 +76,14 @@ MPI_File_get_type_extent(fh, datatype, extent, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBfh\fP: File handle (handle).
 .IP \(bu 2
 \fBdatatype\fP: Data type (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBextent\fP: Data type extent (integer).
@@ -101,9 +97,7 @@ OUTPUT PARAMETERS
 accessing the file associated with \fIfh\fP\&. If the current view uses a
 user\-defined data representation, \fI\%MPI_File_get_type_extent\fP uses the
 \fIdtype_file_extent_fn\fP callback to calculate the extent.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fIEXTENT\fP
 argument only for Fortran 90. FORTRAN 77 users may use the non\-portable

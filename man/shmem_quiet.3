@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_QUIET" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_QUIET" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-\fIshmem_quiet\fP(3) \- Waits for completion of all outstanding remote
+\fI\%shmem_quiet\fP(3) \- Waits for completion of all outstanding remote
 writes issued by a processing element (PE).
 .SH SYNOPSIS
 .sp
@@ -60,19 +60,19 @@ CALL SHMEM_QUIET
 .UNINDENT
 .SH DESCRIPTION
 .sp
-shmem_quiet ensures ordering of put (remote write) operations. All put
+\fI\%shmem_quiet\fP ensures ordering of put (remote write) operations. All put
 operations issued to any processing element (PE) prior to the call to
-shmem_quiet are guaranteed to be visible to all other PEs no later than
+\fI\%shmem_quiet\fP are guaranteed to be visible to all other PEs no later than
 any subsequent memory load or store, remote put or get, or
-synchronization operations that follow the call to shmem_quiet.
+synchronization operations that follow the call to \fI\%shmem_quiet\fP\&.
 .SH NOTES
 .nf
-shmem_quiet is most useful as a way of ensuring ordering of delivery
-of several put operations. For example, you might use shmem_quiet to
+\fI\%shmem_quiet\fP is most useful as a way of ensuring ordering of delivery
+of several put operations. For example, you might use \fI\%shmem_quiet\fP to
 await delivery of a block of data before issuing another put, which
 sets a completion flag on another PE.
-shmem_quiet is not usually needed if \fIshmem_barrier_all\fP(3) or
-\fIshmem_barrier\fP(3) are called. The barrier routines all wait for the
+\fI\%shmem_quiet\fP is not usually needed if shmem_barrier_all(3) or
+shmem_barrier(3) are called. The barrier routines all wait for the
 completion of outstanding remote writes (puts).
 .fi
 .sp
@@ -114,15 +114,8 @@ END
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem(3), *:ref:\(gashmem_barrier\(ga (3), *:ref:\(gashmem_barrier_all\(ga (3),\fPshmem_fence (3), 
-.nf
-*
-.fi
-shmem_put(3), 
-.nf
-*
-.fi
-shmem_wait (3)
+\fIintro_shmem\fP(3), shmem_barrier(3), shmem_barrier_all(3),
+\fIshmem_fence\fP(3), \fIshmem_put\fP(3), \fIshmem_wait\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

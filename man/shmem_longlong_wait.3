@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONGLONG_WAIT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_LONGLONG_WAIT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,13 +33,13 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_int_wait\fP(3), \fIshmem_int_wait\fP(3)_until,
-\fIshmem_int4_wait\fP(3), \fIshmem_int4_wait\fP(3)_until,
-\fIshmem_int8_wait\fP(3), \fIshmem_int8_wait\fP(3)_until,
-\fIshmem_long_wait\fP(3), \fIshmem_long_wait\fP(3)_until,
-\fIshmem_longlong_wait\fP(3), \fIshmem_longlong_wait\fP(3)_until,
-\fIshmem_short_wait\fP(3), \fIshmem_short_wait\fP(3)_until,
-\fIshmem_wait\fP(3), \fIshmem_wait\fP(3)_until \- Waits for a variable on the
+shmem_int_wait(3), shmem_int_wait(3)_until,
+shmem_int4_wait(3), shmem_int4_wait(3)_until,
+shmem_int8_wait(3), shmem_int8_wait(3)_until,
+shmem_long_wait(3), shmem_long_wait(3)_until,
+\fI\%shmem_longlong_wait\fP(3), \fI\%shmem_longlong_wait\fP(3)_until,
+shmem_short_wait(3), shmem_short_wait(3)_until,
+shmem_wait(3), shmem_wait(3)_until \- Waits for a variable on the
 local processing element (PE) to change
 .SH SYNOPSIS
 .sp
@@ -140,11 +140,11 @@ that implied in the SYNOPSIS section. If you are using Fortran, ivar
 must be a specific sized integer type according to the function being
 called, as follows:
 .sp
-\fBshmem_wait, shmem_wait_until:\fP default INTEGER
+shmem_wait, shmem_wait_until:** default INTEGER
 .sp
-\fBshmem_int4_wait, shmem_int4_wait_until:\fP INTEGER*4
+shmem_int4_wait, shmem_int4_wait_until:** INTEGER*4
 .sp
-\fBshmem_int8_wait, shmem_int8_wait_until:\fP INTEGER*8
+shmem_int8_wait, shmem_int8_wait_until:** INTEGER*8
 .TP
 .B cmp
 The compare operator that compares ivar with cmp_value. cmp must be
@@ -257,15 +257,7 @@ END
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_put(3)
+\fIintro_shmem\fP(3), \fIshmem_put\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

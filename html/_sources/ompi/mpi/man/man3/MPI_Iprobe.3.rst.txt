@@ -1,13 +1,17 @@
 .. _mpi_iprobe:
 
+
 MPI_Iprobe
 ==========
+
 .. include_body
 
 :ref:`MPI_Iprobe` - Nonblocking test for a message.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Iprobe(int source, int tag, MPI_Comm comm, int *flag,
    	MPI_Status *status)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_IPROBE(SOURCE, TAG, COMM, FLAG, STATUS, IERROR)
    	LOGICAL	FLAG
    	INTEGER	SOURCE, TAG, COMM, STATUS(MPI_STATUS_SIZE), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -45,23 +51,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``source``: Source rank or MPI_ANY_SOURCE (integer). 
-
-* ``tag``: Tag value or MPI_ANY_TAG (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``source``: Source rank or MPI_ANY_SOURCE (integer).
+* ``tag``: Tag value or MPI_ANY_TAG (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``flag``: Message-waiting flag (logical). 
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``flag``: Message-waiting flag (logical).
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -106,11 +107,13 @@ It is not necessary to receive a message immediately after it has been
 probed for, and the same message may be probed for several times before
 it is received.
 
+
 NOTE
 ----
 
 Users of libmpi-mt should remember that two threads may do an :ref:`MPI_Iprobe`
 that actually returns true for the same message for both threads.
+
 
 ERRORS
 ------
@@ -126,4 +129,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Probe` | :ref:`MPI_Cancel` 
+.. seealso:: 
+   | :ref:`MPI_Probe`
+   | :ref:`MPI_Cancel`

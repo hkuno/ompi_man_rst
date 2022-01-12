@@ -1,14 +1,18 @@
 .. _mpi_comm_spawn_multiple:
 
+
 MPI_Comm_spawn_multiple
 =======================
+
 .. include_body
 
 :ref:`MPI_Comm_spawn_multiple` - Spawns multiple binaries, or the same
 binary with multiple sets of arguments.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -21,6 +25,7 @@ C Syntax
    	char **array_of_argv[], const int array_of_maxprocs[], const MPI_Info
    	array_of_info[], int root, MPI_Comm comm, MPI_Comm *intercomm,
    	int array_of_errcodes[])
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -36,6 +41,7 @@ Fortran Syntax
    	INTEGER	COUNT, ARRAY_OF_INFO(*), ARRAY_OF_MAXPROCS(*), ROOT,
    		COMM, INTERCOMM, ARRAY_OF_ERRCODES(*), IERROR
    	CHARACTER*(*) ARRAY_OF_COMMANDS(*), ARRAY_OF_ARGV(COUNT, *)
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -56,31 +62,22 @@ Fortran 2008 Syntax
    	INTEGER :: array_of_errcodes(*)
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Number of commands (positive integer, significant to MPI only at *root* -- see NOTES). 
-
-* ``array_of_commands``: Programs to be executed (array of strings, significant only at *root*). 
-
-* ``array_of_argv``: Arguments for *commands* (array of array of strings, significant only at *root*). 
-
-* ``array_of_maxprocs``: Maximum number of processes to start for each command (array of integers, significant only at *root*). 
-
-* ``array_of_info``: Info objects telling the runtime system where and how to start processes (array of handles, significant only at *root*). 
-
-* ``root``: Rank of process in which previous arguments are examined (integer). 
-
-* ``comm``: Intracommunicator containing group of spawning processes (handle). 
+----------------
+* ``count``: Number of commands (positive integer, significant to MPI only at *root* -- see NOTES).
+* ``array_of_commands``: Programs to be executed (array of strings, significant only at *root*).
+* ``array_of_argv``: Arguments for *commands* (array of array of strings, significant only at *root*).
+* ``array_of_maxprocs``: Maximum number of processes to start for each command (array of integers, significant only at *root*).
+* ``array_of_info``: Info objects telling the runtime system where and how to start processes (array of handles, significant only at *root*).
+* ``root``: Rank of process in which previous arguments are examined (integer).
+* ``comm``: Intracommunicator containing group of spawning processes (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``intercomm``: Intercommunicator between original group and the newly spawned group (handle). 
-
-* ``array_of_errcodes``: One code per process (array of integers). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``intercomm``: Intercommunicator between original group and the newly spawned group (handle).
+* ``array_of_errcodes``: One code per process (array of integers).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -132,8 +129,9 @@ corresponds to the i contiguous slots in this array from element
 
 Error codes are treated as for :ref:`MPI_Comm_spawn`.
 
+
 INFO ARGUMENTS
----- ---------
+--------------
 
 The following keys for *info* are recognized in "#PACKAGE_NAME#". (The
 reserved values mentioned in Section 5.3.4 of the MPI-2 standard are not
@@ -231,6 +229,7 @@ returned.
 Note that in "#PACKAGE_NAME#", the first array location in
 *array_of_info* is applied to all the commands in *array_of_commands*.
 
+
 NOTES
 -----
 
@@ -269,6 +268,7 @@ completely equivalent. Also if you need to spawn multiple executables,
 you may get better performance by using :ref:`MPI_Comm_spawn_multiple` instead
 of calling :ref:`MPI_Comm_spawn` several times.
 
+
 ERRORS
 ------
 
@@ -283,4 +283,9 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Comm_spawn` (3)   :ref:`MPI_Comm_get_parent` (3)   mpirun(1)
+.. seealso:: 
+   ::
+
+   MPI_Comm_spawn(3)
+   MPI_Comm_get_parent(3)
+      mpirun(1)

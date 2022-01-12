@@ -1,17 +1,20 @@
 .. _shmem_short_iget:
 
+
 shmem_short_iget
 ================
+
 .. include_body
 
-*shmem_complex_iget*\ (3), *shmem_double_iget*\ (3),
-*shmem_float_iget*\ (3), *shmem_iget4*\ (3), *shmem_iget8*\ (3),
-*shmem_iget32*\ (3), *shmem_iget64*\ (3), *shmem_iget128*\ (3),
-*shmem_int_iget*\ (3), *shmem_integer_iget*\ (3),
-*shmem_logical_iget*\ (3), *shmem_long_iget*\ (3),
-*shmem_longdouble_iget*\ (3), *shmem_longlong_iget*\ (3),
-*shmem_real_iget*\ (3), *shmem_short_iget*\ (3) - Transfers strided data
+shmem_complex_iget\ (3), :ref:`shmem_double_iget`\ (3),
+:ref:`shmem_float_iget`\ (3), shmem_iget4\ (3), shmem_iget8\ (3),
+:ref:`shmem_iget32`\ (3), :ref:`shmem_iget64`\ (3), :ref:`shmem_iget128`\ (3),
+:ref:`shmem_int_iget`\ (3), shmem_integer_iget\ (3),
+shmem_logical_iget\ (3), :ref:`shmem_long_iget`\ (3),
+:ref:`shmem_longdouble_iget`\ (3), :ref:`shmem_longlong_iget`\ (3),
+shmem_real_iget\ (3), :ref:`shmem_short_iget`\ (3) - Transfers strided data
 from a specified processing element (PE)
+
 
 SYNOPSIS
 --------
@@ -85,6 +88,7 @@ Fortran:
 
    CALL SHMEM_REAL_IGET(target, source, tst, sst, len, pe)
 
+
 DESCRIPTION
 -----------
 
@@ -127,28 +131,28 @@ pe
 The target and source data objects must conform to typing constraints,
 which are as follows:
 
-**shmem_iget32, shmem_iget4**: Any noncharacter type that has a storage size
+:ref:`shmem_iget32`, shmem_iget4: Any noncharacter type that has a storage size
    equal to 32 bits.
 
-**shmem_iget64, shmem_iget8**: Any noncharacter type that has a storage size
+:ref:`shmem_iget64`, shmem_iget8: Any noncharacter type that has a storage size
    equal to 64 bits.
 
-**shmem_iget128**: Any noncharacter type that has a storage size equal to
+:ref:`shmem_iget128`: Any noncharacter type that has a storage size equal to
    128 bits.
 
-**shmem_short_iget**: Elements of type short.
+:ref:`shmem_short_iget`: Elements of type short.
 
-**shmem_int_iget**: Elements of type int.
+:ref:`shmem_int_iget`: Elements of type int.
 
-**shmem_long_iget**: Elements of type long.
+:ref:`shmem_long_iget`: Elements of type long.
 
-**shmem_longlong_iget**: Elements of type long long.
+:ref:`shmem_longlong_iget`: Elements of type long long.
 
-**shmem_float_iget**: Elements of type float.
+:ref:`shmem_float_iget`: Elements of type float.
 
-**shmem_double_iget**: Elements of type double.
+:ref:`shmem_double_iget`: Elements of type double.
 
-**shmem_longdouble_iget**: Elements of type long double.
+:ref:`shmem_longdouble_iget`: Elements of type long double.
 
 **SHMEM_COMPLEX_IGET**: Elements of type complex of default size.
 
@@ -160,7 +164,7 @@ which are as follows:
 
 **SHMEM_REAL_IGET**: Elements of type real.
 
-**shmem_longdouble_iget**: Elements of type long double.
+:ref:`shmem_longdouble_iget`: Elements of type long double.
 
 **SHMEM_COMPLEX_IGET**: Elements of type complex of default size.
 
@@ -176,10 +180,12 @@ If you are using Fortran, data types must be of default size. For
 example, a real variable must be declared as REAL, REAL*4, or
 REAL(KIND=4).
 
+
 NOTES
 -----
 
 See *intro_shmem*\ (3) for a definition of the term remotely accessible.
+
 
 EXAMPLES
 --------
@@ -204,4 +210,5 @@ program. Compile this example with the -lsma compiler option.
    END
 
 
-.. seealso:: *intro_shmem\ (3), *shmem_get\ (3), *:ref:`shmem_quiet` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_get*\ (3), *shmem_quiet*\ (3)

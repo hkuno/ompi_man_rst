@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_CREATE_F90_INTEGER" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TYPE_CREATE_F90_INTEGER" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -80,16 +80,12 @@ MPI_Type_create_f90_integer(r, newtype, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBr\fP: Precision, in decimal digits (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBnewtype\fP: New data type (handle).
@@ -170,7 +166,15 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Pack_external    MPI_Sizeof    MPI_Type_match_size    MPI_Unpack_external    SELECTED_INT_KIND
+MPI_Pack_external
+MPI_Sizeof
+MPI_Type_match_size
+MPI_Unpack_external
+.INDENT 0.0
+.INDENT 3.5
+SELECTED_INT_KIND
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

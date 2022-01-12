@@ -1,14 +1,18 @@
 .. _mpi_info_get_valuelen:
 
+
 MPI_Info_get_valuelen
 =====================
+
 .. include_body
 
 :ref:`MPI_Info_get_valuelen` - Retrieves the length of the key value
 associated with an info object.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Info_get_valuelen(MPI_Info info, const char *key,
    	int *valuelen, int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax
    	INTEGER		INFO, VALUELEN, IERROR
    	LOGICAL		FLAG
    	CHARACTER*(*)	KEY
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,21 +53,17 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``info``: Info object (handle). 
-
-* ``key``: Key (string). 
+----------------
+* ``info``: Info object (handle).
+* ``key``: Key (string).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``valuelen``: Length of value arg (integer). 
-
-* ``flag``: Returns true if key defined, false if not (boolean). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``valuelen``: Length of value arg (integer).
+* ``flag``: Returns true if key defined, false if not (boolean).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -73,6 +75,7 @@ associated value and *flag* is set to true. If *key* is not defined,
 returned in C does not include the end-of-string character.
 
 If *key* is larger than MPI_MAX_INFO_KEY, the call is erroneous.
+
 
 ERRORS
 ------
@@ -88,4 +91,7 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Info_get` | :ref:`MPI_Info_get_nkeys` | :ref:`MPI_Info_get_nthkey` 
+.. seealso:: 
+   | :ref:`MPI_Info_get`
+   | :ref:`MPI_Info_get_nkeys`
+   | :ref:`MPI_Info_get_nthkey`

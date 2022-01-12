@@ -1,7 +1,9 @@
 .. _mpi_neighbor_allgatherv:
 
+
 MPI_Neighbor_allgatherv
 =======================
+
 .. include_body
 
 :ref:`MPI_Neighbor_allgatherv`, :ref:`MPI_Ineighbor_allgatherv`,
@@ -9,8 +11,10 @@ MPI_Neighbor_allgatherv
 to all neighbors. Each process may contribute a different amount of
 data.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -32,6 +36,7 @@ C Syntax
    	MPI_Datatype sendtype, void *recvbuf, const int recvcounts[],
    	const int displs[], MPI_Datatype recvtype, MPI_Comm comm,
            MPI_Info info, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -58,6 +63,7 @@ Fortran Syntax
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT(*),
    	INTEGER	DISPLS(*), RECVTYPE, COMM,INFO,REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -98,33 +104,23 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Starting address of send buffer (choice). 
-
-* ``sendcount``: Number of elements in send buffer (integer). 
-
-* ``sendtype``: Datatype of send buffer elements (handle). 
-
-* ``recvcount``: Integer array (of length group size) containing the number of elements that are received from each neighbor. 
-
-* ``displs``: Integer array (of length group size). Entry i specifies the displacement (relative to recvbuf) at which to place the incoming data from neighbor i. 
-
-* ``recvtype``: Datatype of receive buffer elements (handle). 
-
-* ``comm``: Communicator (handle). 
-
-* ``info Info (handle, persistent only).``: 
+----------------
+* ``sendbuf``: Starting address of send buffer (choice).
+* ``sendcount``: Number of elements in send buffer (integer).
+* ``sendtype``: Datatype of send buffer elements (handle).
+* ``recvcount``: Integer array (of length group size) containing the number of elements that are received from each neighbor.
+* ``displs``: Integer array (of length group size). Entry i specifies the displacement (relative to recvbuf) at which to place the incoming data from neighbor i.
+* ``recvtype``: Datatype of receive buffer elements (handle).
+* ``comm``: Communicator (handle).
+* ``info Info (handle, persistent only).``:
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Address of receive buffer (choice). 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``recvbuf``: Address of receive buffer (choice).
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -140,8 +136,9 @@ The type signature associated with sendcount, sendtype, at process j
 must be equal to the type signature associated with the corresponding
 entry in *recvcounts* on neighboring processes.
 
+
 NEIGHBOR ORDERING
--------- --------
+-----------------
 
 For a distributed graph topology, created with :ref:`MPI_Dist_graph_create`,
 the sequence of neighbors in the send and receive buffers at each
@@ -168,11 +165,13 @@ communication with MPI_PROC_NULL in this direction. That is, the buffer
 is still part of the sequence of neighbors but it is neither
 communicated nor updated.
 
+
 NOTES
 -----
 
 The MPI_IN_PLACE option for *sendbuf* is not meaningful for this
 operation.
+
 
 ERRORS
 ------
@@ -188,4 +187,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Neighbor_allgather`  :ref:`MPI_Cart_create`  :ref:`MPI_Graph_create` :ref:`MPI_Dist_graph_create` 
+.. seealso:: 
+   :ref:`MPI_Neighbor_allgather` :ref:`MPI_Cart_create` :ref:`MPI_Graph_create`
+   :ref:`MPI_Dist_graph_create`

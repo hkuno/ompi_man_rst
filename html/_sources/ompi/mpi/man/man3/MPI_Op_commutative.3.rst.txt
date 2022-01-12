@@ -1,13 +1,17 @@
 .. _mpi_op_commutative:
 
+
 MPI_Op_commutative
 ==================
+
 .. include_body
 
 :ref:`MPI_Op_commutative` - Query of commutativity of reduction operation.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Op_commutative(MPI_Op op, int *commute)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    	LOGICAL	COMMUTE
    	INTEGER	OP, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -42,22 +48,21 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: commute
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``op``: Operation (handle). 
+INPUT PARAMETER
+---------------
+* ``op``: Operation (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``commute``: True if op is commutative, false otherwise (logical). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``commute``: True if op is commutative, false otherwise (logical).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 Reduction operations can be queried for their commutativity.
+
 
 ERRORS
 ------
@@ -73,4 +78,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: :ref:`MPI_Op_create` 
+.. seealso:: 
+   :ref:`MPI_Op_create`

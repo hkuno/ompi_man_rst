@@ -1,11 +1,14 @@
 .. _shmem_info_get_version:
 
+
 shmem_info_get_version
 ======================
+
 .. include_body
 
-shmem_info_get_version - Returns the major and minor version of the
+:ref:`shmem_info_get_version` - Returns the major and minor version of the
 library implementation.
+
 
 SYNOPSIS
 --------
@@ -27,6 +30,7 @@ Fortran:
    SHMEM_INFO_GET_VERSION(MAJOR, MINOR)
    INTEGER MAJOR, MINOR
 
+
 DESCRIPTION
 -----------
 
@@ -38,4 +42,5 @@ SHMEM_MINOR_VERSION, defined in its shmem.h. The valid major version
 value is 1, and the valid minor version value is 2.
 
 
-.. seealso:: *intro_shmem\ (3), *:ref:`shmem_my_pe` \ (3), *:ref:`shmem_init` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)

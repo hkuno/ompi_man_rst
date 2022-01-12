@@ -2,6 +2,7 @@
 
 MPI_Comm_create
 ===============
+
 .. include_body
 
 :ref:`MPI_Comm_create` - Creates a new communicator.
@@ -94,4 +95,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Comm_split` :ref:`MPI_Intercomm_create` :ref:`MPI_Comm_create_group` 
+.. seealso:: :ref:`MPI_Comm_split` :ref:`MPI_Intercomm_create` :ref:`MPI_Comm_create_group`

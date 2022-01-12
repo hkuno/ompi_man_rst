@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_CVAR_WRITE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_T_CVAR_WRITE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,9 +43,7 @@ int MPI_T_cvar_write(MPI_T_cvar_handle handle, const void *buf)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBhandle\fP: Handle of the control variable to be written.
@@ -81,7 +79,11 @@ Variable cannot be set until end of execution
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_T_cvar_handle_alloc    MPI_T_cvar_get_info
+.INDENT 0.0
+.TP
+.B MPI_T_cvar_handle_alloc
+MPI_T_cvar_get_info
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

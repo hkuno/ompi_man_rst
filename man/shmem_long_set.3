@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONG_SET" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_LONG_SET" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,9 +33,9 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_double_set\fP(3), \fIshmem_float_set\fP(3), \fIshmem_int_set\fP(3),
-\fIshmem_long_set\fP(3), \fIshmem_longlong_set\fP(3) \fIshmem_int4_set\fP(3),
-\fIshmem_int8_set\fP(3), \fIshmem_real4_set\fP(3), \fIshmem_real8_set\fP(3), \-
+shmem_double_set(3), shmem_float_set(3), shmem_int_set(3),
+\fI\%shmem_long_set\fP(3), shmem_longlong_set(3) shmem_int4_set(3),
+shmem_int8_set(3), shmem_real4_set(3), shmem_real8_set(3), \-
 Atomically sets the value of a remote data object
 .SH SYNOPSIS
 .sp
@@ -98,9 +98,7 @@ An integer that indicates the PE number upon which target is to be
 updated. If you are using Fortran, it must be a default integer
 value.
 .UNINDENT
-.sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH RETURN VALUES
 .sp
 NONE
 .sp

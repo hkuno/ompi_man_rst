@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_IGET64" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_IGET64" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,13 +33,13 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_complex_iget\fP(3), \fIshmem_double_iget\fP(3),
-\fIshmem_float_iget\fP(3), \fIshmem_iget4\fP(3), \fIshmem_iget8\fP(3),
-\fIshmem_iget32\fP(3), \fIshmem_iget64\fP(3), \fIshmem_iget128\fP(3),
-\fIshmem_int_iget\fP(3), \fIshmem_integer_iget\fP(3),
-\fIshmem_logical_iget\fP(3), \fIshmem_long_iget\fP(3),
-\fIshmem_longdouble_iget\fP(3), \fIshmem_longlong_iget\fP(3),
-\fIshmem_real_iget\fP(3), \fIshmem_short_iget\fP(3) \- Transfers strided data
+shmem_complex_iget(3), shmem_double_iget(3),
+shmem_float_iget(3), shmem_iget4(3), shmem_iget8(3),
+shmem_iget32(3), \fI\%shmem_iget64\fP(3), shmem_iget128(3),
+shmem_int_iget(3), shmem_integer_iget(3),
+shmem_logical_iget(3), shmem_long_iget(3),
+shmem_longdouble_iget(3), shmem_longlong_iget(3),
+shmem_real_iget(3), shmem_short_iget(3) \- Transfers strided data
 from a specified processing element (PE)
 .SH SYNOPSIS
 .sp
@@ -165,29 +165,29 @@ The target and source data objects must conform to typing constraints,
 which are as follows:
 .INDENT 0.0
 .TP
-\fBshmem_iget32, shmem_iget4\fP: Any noncharacter type that has a storage size
+.B shmem_iget32, shmem_iget4: Any noncharacter type that has a storage size
 equal to 32 bits.
 .TP
-\fBshmem_iget64, shmem_iget8\fP: Any noncharacter type that has a storage size
+.B \fI\%shmem_iget64\fP, shmem_iget8: Any noncharacter type that has a storage size
 equal to 64 bits.
 .TP
-\fBshmem_iget128\fP: Any noncharacter type that has a storage size equal to
+.B shmem_iget128: Any noncharacter type that has a storage size equal to
 128 bits.
 .UNINDENT
 .sp
-\fBshmem_short_iget\fP: Elements of type short.
+shmem_short_iget: Elements of type short.
 .sp
-\fBshmem_int_iget\fP: Elements of type int.
+shmem_int_iget: Elements of type int.
 .sp
-\fBshmem_long_iget\fP: Elements of type long.
+shmem_long_iget: Elements of type long.
 .sp
-\fBshmem_longlong_iget\fP: Elements of type long long.
+shmem_longlong_iget: Elements of type long long.
 .sp
-\fBshmem_float_iget\fP: Elements of type float.
+shmem_float_iget: Elements of type float.
 .sp
-\fBshmem_double_iget\fP: Elements of type double.
+shmem_double_iget: Elements of type double.
 .sp
-\fBshmem_longdouble_iget\fP: Elements of type long double.
+shmem_longdouble_iget: Elements of type long double.
 .sp
 \fBSHMEM_COMPLEX_IGET\fP: Elements of type complex of default size.
 .sp
@@ -199,7 +199,7 @@ equal to 64 bits.
 .sp
 \fBSHMEM_REAL_IGET\fP: Elements of type real.
 .sp
-\fBshmem_longdouble_iget\fP: Elements of type long double.
+shmem_longdouble_iget: Elements of type long double.
 .sp
 \fBSHMEM_COMPLEX_IGET\fP: Elements of type complex of default size.
 .sp
@@ -247,19 +247,7 @@ END
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_get(3), 
-.nf
-*
-.fi
-shmem_quiet (3)
+\fIintro_shmem\fP(3), \fIshmem_get\fP(3), \fIshmem_quiet\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

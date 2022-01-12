@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_WRITE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_FILE_WRITE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -82,14 +82,9 @@ MPI_File_write(fh, buf, count, datatype, status, ierror)
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETER
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBfh\fP: File handle (handle).
-.UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBfh\fP: File handle (handle).
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBbuf\fP: Initial address of buffer (choice).
@@ -98,9 +93,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBdatatype\fP: Data type of each buffer element (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBstatus\fP: Status object (status).

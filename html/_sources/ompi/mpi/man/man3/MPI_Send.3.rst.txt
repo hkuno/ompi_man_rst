@@ -1,13 +1,17 @@
 .. _mpi_send:
 
+
 MPI_Send
 ========
+
 .. include_body
 
 :ref:`MPI_Send` - Performs a standard-mode blocking send.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Send(const void *buf, int count, MPI_Datatype datatype, int dest,
    	int tag, MPI_Comm comm)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_SEND(BUF, COUNT, DATATYPE, DEST, TAG, COMM, IERROR)
    	<type>	BUF(*)
    	INTEGER	COUNT, DATATYPE, DEST, TAG, COMM, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -45,30 +51,25 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(IN) :: comm
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``buf``: Initial address of send buffer (choice). 
-
-* ``count``: Number of elements send (nonnegative integer). 
-
-* ``datatype``: Datatype of each send buffer element (handle). 
-
-* ``dest``: Rank of destination (integer). 
-
-* ``tag``: Message tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``buf``: Initial address of send buffer (choice).
+* ``count``: Number of elements send (nonnegative integer).
+* ``datatype``: Datatype of each send buffer element (handle).
+* ``dest``: Rank of destination (integer).
+* ``tag``: Message tag (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 :ref:`MPI_Send` performs a standard-mode, blocking send.
+
 
 NOTE
 ----
@@ -76,6 +77,7 @@ NOTE
 This routine will block until the message is sent to the destination.
 For an in-depth explanation of the semantics of the standard-mode send,
 refer to the MPI-1 Standard.
+
 
 ERRORS
 ------
@@ -91,4 +93,9 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Isend`    :ref:`MPI_Bsend`    :ref:`MPI_Recv` 
+.. seealso:: 
+   ::
+
+   MPI_Isend
+   MPI_Bsend
+      MPI_Recv

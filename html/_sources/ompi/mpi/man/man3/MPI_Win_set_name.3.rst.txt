@@ -1,13 +1,17 @@
 .. _mpi_win_set_name:
 
+
 MPI_Win_set_name
 ================
+
 .. include_body
 
 :ref:`MPI_Win_set_name` - Sets the name of a window.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_set_name(MPI_Win win, const char *win_name)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    	INTEGER WIN, IERROR
    	CHARACTER*(*) WIN_NAME
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -42,23 +48,22 @@ Fortran 2008 Syntax
    	CHARACTER(LEN=*), INTENT(IN) :: win_name
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``win``: Window whose identifier is to be set (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``win``: Window whose identifier is to be set (handle).
 
 INPUT PARAMETER
------ ---------
-
-* ``win_name``: The character string used as the name (string). 
+---------------
+* ``win_name``: The character string used as the name (string).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
+
 
 ERRORS
 ------

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INT_CSWAP" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_INT_CSWAP" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,9 +29,9 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-\fIshmem_int_cswap\fP(3), \fIshmem_int4_cswap\fP(3),
-\fIshmem_int8_cswap\fP(3), \fIshmem_long_cswap\fP(3),
-\fIshmem_longlong_cswap\fP(3) \- Performs an atomic conditional swap to a
+\fI\%shmem_int_cswap\fP(3), shmem_int4_cswap(3),
+shmem_int8_cswap(3), shmem_long_cswap(3),
+shmem_longlong_cswap(3) \- Performs an atomic conditional swap to a
 remote data object
 .SH SYNOPSIS
 .sp
@@ -130,9 +130,7 @@ value.
 .SH NOTES
 .sp
 The term remotely accessible is defined in \fIintro_shmem\fP(3).
-.sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH RETURN VALUES
 .sp
 The contents that had been in the target data object on the remote PE
 prior to the conditional swap.
@@ -163,19 +161,7 @@ main()
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_cache(3), 
-.nf
-*
-.fi
-shmem_swap (3)
+\fIintro_shmem\fP(3), \fIshmem_cache\fP(3), \fIshmem_swap\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

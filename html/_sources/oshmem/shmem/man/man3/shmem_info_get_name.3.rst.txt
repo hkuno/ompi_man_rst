@@ -1,11 +1,14 @@
 .. _shmem_info_get_name:
 
+
 shmem_info_get_name
 ===================
+
 .. include_body
 
-shmem_info_get_name - This routine returns the vendor defined character
+:ref:`shmem_info_get_name` - This routine returns the vendor defined character
 string.
+
 
 SYNOPSIS
 --------
@@ -27,6 +30,7 @@ Fortran:
    SHMEM_INFO_GET_NAME(NAME)
    CHARACTER *(*)NAME
 
+
 DESCRIPTION
 -----------
 
@@ -44,4 +48,5 @@ implementation, the major and minor version returned by these calls is
 consistent with the compile-time constants defined in its shmem.h.
 
 
-.. seealso:: *intro_shmem\ (3), *:ref:`shmem_my_pe` \ (3), *:ref:`shmem_init` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)

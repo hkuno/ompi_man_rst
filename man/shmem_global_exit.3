@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_GLOBAL_EXIT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_GLOBAL_EXIT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-shmem_global_exit \- A routine that allows any PE to force termination of
+\fI\%shmem_global_exit\fP \- A routine that allows any PE to force termination of
 an entire program.
 .SH SYNOPSIS
 .sp
@@ -61,35 +61,23 @@ CALL SHMEM_GLOBAL_EXIT(status)
 .UNINDENT
 .SH DESCRIPTION
 .sp
-shmem_global_exit() shmem_global_exit is a non\-collective routine that
+shmem_global_exit() \fI\%shmem_global_exit\fP is a non\-collective routine that
 allows any one PE to force termination of an Open\- SHMEM program for all
 PEs, passing an exit status to the execution environment. This routine
 terminates the entire program, not just the OpenSHMEM portion. When any
-PE calls shmem_global_exit, it results in the immediate notification to
-all PEs to terminate. shmem_global_exit flushes I/O and releases
+PE calls \fI\%shmem_global_exit\fP, it results in the immediate notification to
+all PEs to terminate. \fI\%shmem_global_exit\fP flushes I/O and releases
 resources in accordance with C/C++/Fortran language requirements for
-normal program termination. If more than one PE calls shmem_global_exit,
+normal program termination. If more than one PE calls \fI\%shmem_global_exit\fP,
 then the exit status returned to the environment shall be one of the
-values passed to shmem_global_exit as the status argument. There is no
-return to the caller of shmem_global_exit; control is returned from the
+values passed to \fI\%shmem_global_exit\fP as the status argument. There is no
+return to the caller of \fI\%shmem_global_exit\fP; control is returned from the
 OpenSHMEM program to the execution environment for all PEs.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_my_pe (3), 
-.nf
-*
-.fi
-shmem_init (3)
+\fIintro_shmem\fP(3), \fIshmem_my_pe\fP(3), \fIshmem_init\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

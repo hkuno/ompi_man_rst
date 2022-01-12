@@ -1,14 +1,18 @@
 .. _mpi_errhandler_create:
 
+
 MPI_Errhandler_create
 =====================
+
 .. include_body
 
 :ref:`MPI_Errhandler_create` - Creates an MPI-style error handler -- use of
 this routine is deprecated.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Errhandler_create(MPI_Handler_function *function,
    	MPI_Errhandler *errhandler)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,17 +36,15 @@ Fortran Syntax
    	EXTERNAL	FUNCTION
    	INTEGER	ERRHANDLER, IERROR
 
-INPUT PARAMETER
------ ---------
 
-* ``function``: User-defined error handling procedure. 
+INPUT PARAMETER
+---------------
+* ``function``: User-defined error handling procedure.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``errhandler``: MPI error handler (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``errhandler``: MPI error handler (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -68,6 +71,7 @@ and meaning is implementation-dependent. An implementation should
 clearly document these arguments. Addresses are used so that the handler
 may be written in Fortran.
 
+
 NOTE
 ----
 
@@ -77,6 +81,7 @@ action of MPI_Errhandler\_ free makes this impossible, since it is
 required to set the value of the argument to MPI_ERRHANDLER_NULL. In
 addition, the actual error handler must remain until all communicators
 that use it are freed.
+
 
 ERRORS
 ------
@@ -92,4 +97,8 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: || :ref:`MPI_Comm_create_errhandler` | :ref:`MPI_Comm_get_errhandler` | :ref:`MPI_Comm_set_errhandler` 
+.. seealso:: 
+   |
+   | :ref:`MPI_Comm_create_errhandler`
+   | :ref:`MPI_Comm_get_errhandler`
+   | :ref:`MPI_Comm_set_errhandler`

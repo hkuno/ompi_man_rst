@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_INFO_DUP" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_INFO_DUP" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -72,16 +72,12 @@ MPI_Info_dup(info, newinfo, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBinfo\fP: Info object (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBnewinfo\fP: Info object (handle).
@@ -108,7 +104,11 @@ guarantee that an MPI program can continue past an error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Info_create | MPI_Info_delete | MPI_Info_free | MPI_Info_get | MPI_Info_set
+MPI_Info_create
+MPI_Info_delete
+MPI_Info_free
+MPI_Info_get
+MPI_Info_set
 .fi
 .sp
 .UNINDENT

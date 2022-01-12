@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_GET_CONTENTS" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TYPE_GET_CONTENTS" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -84,9 +84,7 @@ MPI_Type_get_contents(datatype, max_integers, max_addresses, max_datatypes,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBdatatype\fP: Data type to access (handle).
@@ -97,9 +95,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBmax_datatypes\fP: Number of elements in \fIarray_of_datatypes (nonnegative integer).\fP
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBarray_of_integers\fP: Contains integer arguments used in constructing \fIdatatype (array of integers).\fP
@@ -156,9 +152,7 @@ were used. Thus, the location of values returned can be thought of as
 being returned by the C bindings. It can also be determined by examining
 the new MPI\-2 calls for data\-type constructors for the deprecated MPI\-1
 calls that involve addresses.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fIARRAY_OF_ADDRESSES argument only for Fortran 90. FORTRAN 77\fP users may

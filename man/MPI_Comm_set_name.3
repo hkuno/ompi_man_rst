@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_SET_NAME" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_COMM_SET_NAME" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -75,21 +75,14 @@ MPI_Comm_set_name(comm, comm_name, ierror)
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETER
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBcomm\fP: Communicator whose identifier is to be set (handle).
-.UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBcomm\fP: Communicator whose identifier is to be set (handle).
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm_name\fP: Character string to be used as the identifier for the communicator (string).
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).

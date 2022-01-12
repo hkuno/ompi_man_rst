@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_PTR" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_PTR" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-\fIshmem_ptr\fP(3) \- Returns a pointer to a data object on a specified
+\fI\%shmem_ptr\fP(3) \- Returns a pointer to a data object on a specified
 processing element (PE).
 .SH SYNOPSIS
 .sp
@@ -65,14 +65,14 @@ PTR = SHMEM_PTR(target, pe)
 .UNINDENT
 .SH DESCRIPTION
 .sp
-The shmem_ptr routine returns an address that can be used to directly
+The \fI\%shmem_ptr\fP routine returns an address that can be used to directly
 reference \fBtarget\fP on the remote PE \fBpe\fP\&. With this address we can
 perform ordinary loads and stores to the remote address.
 .sp
 When a sequence of loads (gets) and stores (puts) to a data object on a
 remote PE does not match the access pattern provided in a SHMEM data
-transfer routine like \fIshmem_put32\fP(3) or \fIshmem_real_iget\fP(3), the
-shmem_ptr function can provide an efficient means to accomplish the
+transfer routine like shmem_put32(3) or shmem_real_iget(3), the
+\fI\%shmem_ptr\fP function can provide an efficient means to accomplish the
 communication.
 .sp
 The arguments are as follows:
@@ -88,7 +88,7 @@ value.
 .UNINDENT
 .SH EXAMPLES
 .sp
-This Fortran program calls shmem_ptr and then PE 0 writes to the BIGD
+This Fortran program calls \fI\%shmem_ptr\fP and then PE 0 writes to the BIGD
 array on PE 1:
 .INDENT 0.0
 .INDENT 3.5
@@ -157,32 +157,18 @@ main()
 .UNINDENT
 .SH NOTES
 .sp
-The shmem_ptr function is available only on systems where ordinary
+The \fI\%shmem_ptr\fP function is available only on systems where ordinary
 memory loads and stores are used to implement SHMEM put and get
 operations.
+.SH RETURN VALUES
 .sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
-.sp
-shmem_ptr returns a pointer to the data object on the specified remote
+\fI\%shmem_ptr\fP returns a pointer to the data object on the specified remote
 PE. If target is not remotely accessible, a NULL pointer is returned.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_put(3), 
-.nf
-*
-.fi
-shmem_get(3)
+\fIintro_shmem\fP(3), \fIshmem_put\fP(3), \fIshmem_get\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

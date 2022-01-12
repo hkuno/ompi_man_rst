@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONG_PUT_NBI" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_LONG_PUT_NBI" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,13 +33,13 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_putmem_nbi\fP(3), \fIshmem_char_put_nbi\fP(3),
-\fIshmem_short_put_nbi\fP(3), \fIshmem_int_put_nbi\fP(3),
-\fIshmem_long_put_nbi\fP(3), \fIshmem_longlong_put_nbi\fP(3),
-\fIshmem_float_put_nbi\fP(3), \fIshmem_double_put_nbi\fP(3),
-\fIshmem_longdouble_put_nbi\fP(3), \fIshmem_put8_nbi\fP(3),
-\fIshmem_put16_nbi\fP(3), \fIshmem_put32_nbi\fP(3), \fIshmem_put64_nbi\fP(3),
-\fIshmem_put128_nbi\fP(3), \- The nonblocking put routines provide a method
+shmem_putmem_nbi(3), shmem_char_put_nbi(3),
+shmem_short_put_nbi(3), shmem_int_put_nbi(3),
+\fI\%shmem_long_put_nbi\fP(3), shmem_longlong_put_nbi(3),
+shmem_float_put_nbi(3), shmem_double_put_nbi(3),
+shmem_longdouble_put_nbi(3), shmem_put8_nbi(3),
+shmem_put16_nbi(3), shmem_put32_nbi(3), shmem_put64_nbi(3),
+shmem_put128_nbi(3), \- The nonblocking put routines provide a method
 for copying data from a contiguous local data object to a data object on
 a specified PE.
 .SH SYNOPSIS
@@ -138,7 +138,7 @@ CALL SHMEM_PUT128_NBI(dest, source, nelems, pe)
 .SH DESCRIPTION
 .sp
 The routines return after posting the operation. The operation is
-considered complete after a subsequent call to shmem_quiet. At the
+considered complete after a subsequent call to shmem_quiet\&. At the
 completion of shmem_quiet, the data has been copied into the dest array
 on the destination PE. The delivery of data words into the data object
 on the destination PE may occur in any order. Furthermore, two
@@ -207,15 +207,7 @@ main()
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_quiet (3)
+\fIintro_shmem\fP(3), \fIshmem_quiet\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

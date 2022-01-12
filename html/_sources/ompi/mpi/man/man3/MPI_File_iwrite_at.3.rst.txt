@@ -1,14 +1,18 @@
 .. _mpi_file_iwrite_at:
 
+
 MPI_File_iwrite_at
 ==================
+
 .. include_body
 
 :ref:`MPI_File_iwrite_at` - Writes a file at an explicitly specified offset
 (nonblocking, noncollective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_File_iwrite_at(MPI_File fh, MPI_Offset offset,
    	const void *buf, int count, MPI_Datatype datatype, MPI_Request *request)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -33,6 +38,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	<type>	BUF(*)
    	INTEGER	FH, COUNT, DATATYPE, REQUEST, IERROR
    	INTEGER(KIND=MPI_OFFSET_KIND)	OFFSET
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -50,28 +56,22 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``fh``: File handle (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``fh``: File handle (handle).
 
 INPUT PARAMETERS
------ ----------
-
-* ``offset``: File offset (integer). 
-
-* ``buf``: Initial address of buffer (choice). 
-
-* ``count``: Number of elements in buffer (integer). 
-
-* ``datatype``: Data type of each buffer element (handle). 
+----------------
+* ``offset``: File offset (integer).
+* ``buf``: Initial address of buffer (choice).
+* ``count``: Number of elements in buffer (integer).
+* ``datatype``: Data type of each buffer element (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``request``: Request object (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``request``: Request object (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -90,8 +90,9 @@ which will return a status with the number of bytes actually accessed.
 It is erroneous to call this function if MPI_MODE_SEQUENTIAL mode was
 specified when the file was open.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *OFFSET*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -103,6 +104,7 @@ syntax
 
 where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------

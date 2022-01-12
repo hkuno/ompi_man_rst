@@ -1,13 +1,17 @@
 .. _mpi_type_contiguous:
 
+
 MPI_Type_contiguous
 ===================
+
 .. include_body
 
 :ref:`MPI_Type_contiguous` - Creates a contiguous datatype.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    int MPI_Type_contiguous(int count, MPI_Datatype oldtype,
    	MPI_Datatype *newtype)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_TYPE_CONTIGUOUS(COUNT, OLDTYPE, NEWTYPE, IERROR)
    	INTEGER	COUNT, OLDTYPE, NEWTYPE, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,19 +49,16 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(OUT) :: newtype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Replication count (nonnegative integer). 
-
-* ``oldtype``: Old datatype (handle). 
+----------------
+* ``count``: Replication count (nonnegative integer).
+* ``oldtype``: Old datatype (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newtype``: New datatype (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newtype``: New datatype (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -97,6 +100,7 @@ defined by:
 
 For more information about derived datatypes, see Section 3.12 of the
 MPI-1 Standard.
+
 
 ERRORS
 ------

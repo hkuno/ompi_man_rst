@@ -1,13 +1,17 @@
 .. _mpi_pcontrol:
 
+
 MPI_Pcontrol
 ============
+
 .. include_body
 
 :ref:`MPI_Pcontrol` - Controls profiling.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Pcontrol(const int level, ... )
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_PCONTROL(LEVEL)
    	INTEGER	LEVEL
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -39,10 +45,10 @@ Fortran 2008 Syntax
    MPI_Pcontrol(level)
    	INTEGER, INTENT(IN) :: level
 
-INPUT PARAMETER
------ ---------
 
-* ``level``: Profiling level. 
+INPUT PARAMETER
+---------------
+* ``level``: Profiling level.
 
 DESCRIPTION
 -----------
@@ -84,6 +90,7 @@ The provision of :ref:`MPI_Pcontrol` as a no-op in the standard MPI library
 allows users to modify their source code to obtain more detailed
 profiling information, but still be able to link exactly the same code
 against the standard MPI library.
+
 
 NOTES
 -----

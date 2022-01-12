@@ -1,14 +1,18 @@
 .. _mpi_info_get_string:
 
+
 MPI_Info_get_string
 ===================
+
 .. include_body
 
 :ref:`MPI_Info_get_string` - Retrieves the value associated with a key in
 an info object.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Info_get_string(MPI_Info info, const char *key, int *buflen, char *value, int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    	INTEGER	INFO, BUFLEN, IERROR
    	CHARACTER*(*) KEY, VALUE
    	LOGICAL FLAG
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -47,23 +53,18 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``info``: Info object (handle). 
-
-* ``key``: Key (string). 
+----------------
+* ``info``: Info object (handle).
+* ``key``: Key (string).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``buflen On entry, length of value arg. On return, set to required size to``: hold value string (integer). 
-
-* ``value``: Value (string). 
-
-* ``flag``: Returns true if key defined, false if not (boolean). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``buflen On entry, length of value arg. On return, set to required size to``: hold value string (integer).
+* ``value``: Value (string).
+* ``flag``: Returns true if key defined, false if not (boolean).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -84,6 +85,7 @@ value is greater than 0.
 
 If *key* is larger than MPI_MAX_INFO_KEY, the call is erroneous.
 
+
 ERRORS
 ------
 
@@ -98,4 +100,11 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Info_create` | :ref:`MPI_Info_delete` | :ref:`MPI_Info_dup` | :ref:`MPI_Info_free` | :ref:`MPI_Info_get_nkeys` | :ref:`MPI_Info_get_nthkey` | :ref:`MPI_Info_set` 
+.. seealso:: 
+   | :ref:`MPI_Info_create`
+   | :ref:`MPI_Info_delete`
+   | :ref:`MPI_Info_dup`
+   | :ref:`MPI_Info_free`
+   | :ref:`MPI_Info_get_nkeys`
+   | :ref:`MPI_Info_get_nthkey`
+   | :ref:`MPI_Info_set`

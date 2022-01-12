@@ -2,6 +2,7 @@
 
 MPI_Cart_coords
 ===============
+
 .. include_body
 
 :ref:`MPI_Cart_coords` - Determines process coords in Cartesian topology

@@ -1,13 +1,17 @@
 .. _mpi_win_fence:
 
+
 MPI_Win_fence
 =============
+
 .. include_body
 
 :ref:`MPI_Win_fence` - Synchronizes RMA calls on a window.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_fence(int assert, MPI_Win win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_FENCE(ASSERT, WIN, IERROR)
    	INTEGER ASSERT, WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -41,17 +47,15 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``assert``: Program assertion (integer). 
-
-* ``win``: Window object (handle). 
+----------------
+* ``assert``: Program assertion (integer).
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -78,6 +82,7 @@ fence call is equivalent to calls to a subset of *post, start, complete,
 wait*.
 
 The *assert* argument is used to provide assertions on the context of
+
 the call that may be used for various optimizations. A value of *assert*
 ^ 0 is always valid. The following assertion value is supported:
 
@@ -99,11 +104,13 @@ MPI_MODE_NOSUCCEED
    must be provided by all or no members of the group of the window. It
    may enable faster fence call by avoiding unnecessary synchronization.
 
+
 NOTE
 ----
 
 Calls to :ref:`MPI_Win_fence` should both precede and follow calls to put, get
 or accumulate that are synchronized with fence calls.
+
 
 ERRORS
 ------
@@ -119,4 +126,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_create`  :ref:`MPI_Win_start`  :ref:`MPI_Win_post`  :ref:`MPI_Win_complete`   :ref:`MPI_Win_wait` 
+.. seealso:: 
+   | :ref:`MPI_Win_create` :ref:`MPI_Win_start` :ref:`MPI_Win_post` :ref:`MPI_Win_complete`
+     :ref:`MPI_Win_wait`

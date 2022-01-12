@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_ADDR_ACCESSIBLE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_ADDR_ACCESSIBLE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,7 +29,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-shmem_addr_accessible \- Indicates if an address is accessible via
+\fI\%shmem_addr_accessible\fP \- Indicates if an address is accessible via
 OpenSHMEM operations from the specified remote PE.
 .SH SYNOPSIS
 .sp
@@ -65,15 +65,13 @@ LOG = SHMEM_ADDR_ACCESSIBLE(addr, pe)
 .UNINDENT
 .SH DESCRIPTION
 .sp
-shmem_addr_accessible is a query function that indicates whether a local
+\fI\%shmem_addr_accessible\fP is a query function that indicates whether a local
 address is accessible via SHMEM operations from the specified remote PE.
 .sp
 This function verifies that the remote PE is accessible via SHMEM data
 transfer functions from the local PE, and that the specified address is
 in a symmetric data segment with respect to the remote PE.
-.sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH RETURN VALUES
 .sp
 C: The return value is 1 if addr is a symmetric data object and
 accessible via SHMEM operations from the specified remote PE; otherwise,
@@ -86,15 +84,7 @@ otherwise, it is .FALSE..
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_pe_accessible (3)
+\fIintro_shmem\fP(3), \fIshmem_pe_accessible\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INT_SWAP" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_INT_SWAP" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,10 +33,10 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_double_swap\fP(3), \fIshmem_float_swap\fP(3),
-\fIshmem_int_swap\fP(3), \fIshmem_long_swap\fP(3), \fIshmem_swap\fP(3),
-\fIshmem_int4_swap\fP(3), \fIshmem_int8_swap\fP(3), \fIshmem_real4_swap\fP(3),
-\fIshmem_real8_swap\fP(3), \fIshmem_longlong_swap\fP(3) \- Performs an atomic
+shmem_double_swap(3), shmem_float_swap(3),
+\fI\%shmem_int_swap\fP(3), shmem_long_swap(3), shmem_swap(3),
+shmem_int4_swap(3), shmem_int8_swap(3), shmem_real4_swap(3),
+shmem_real8_swap(3), shmem_longlong_swap(3) \- Performs an atomic
 swap to a remote data object
 .SH SYNOPSIS
 .sp
@@ -130,9 +130,7 @@ value.
 .SH NOTES
 .sp
 The term remotely accessible is defined in \fIintro_shmem\fP(3).
-.sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH RETURN VALUES
 .sp
 The contents that had been at the target address on the remote PE prior
 to the swap is returned.

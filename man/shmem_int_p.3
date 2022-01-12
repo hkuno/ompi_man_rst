@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INT_P" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_INT_P" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,9 +33,9 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_char_p\fP(3), \fIshmem_float_p\fP(3), \fIshmem_int_p\fP(3),
-\fIshmem_long_p\fP(3), \fIshmem_short_p\fP(3), \fIshmem_longlong_p\fP(3),
-\fIshmem_longdouble_p\fP(3) \- These routines provide a low latency
+shmem_char_p(3), shmem_float_p(3), \fI\%shmem_int_p\fP(3),
+shmem_long_p(3), shmem_short_p(3), shmem_longlong_p(3),
+shmem_longdouble_p(3) \- These routines provide a low latency
 mechanism to write basic types (char, short, int, float, double, long,
 long long, long double) to symmetric data objects on remote PEs.
 .SH SYNOPSIS
@@ -87,22 +87,14 @@ The value to be transferred to addr on the remote PE.
 The number of the remote PE.
 .UNINDENT
 .sp
-As with \fIshmem_put\fP(3), these functions start the remote transfer and
+As with shmem_put(3), these functions start the remote transfer and
 may return before the data is delivered to the remote PE. Use
-\fIshmem_quiet\fP(3) to force completion of all remote PUT transfers.
+shmem_quiet(3) to force completion of all remote PUT transfers.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_put(3)
+\fIintro_shmem\fP(3), \fIshmem_put\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

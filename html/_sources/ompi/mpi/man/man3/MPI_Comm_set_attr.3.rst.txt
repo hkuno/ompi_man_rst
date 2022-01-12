@@ -1,13 +1,17 @@
 .. _mpi_comm_set_attr:
 
+
 MPI_Comm_set_attr
 =================
+
 .. include_body
 
 :ref:`MPI_Comm_set_attr` - Stores attribute value associated with a key.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_set_attr(MPI_Comm comm, int comm_keyval, void *attribute_val)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    MPI_COMM_SET_ATTR(COMM, COMM_KEYVAL, ATTRIBUTE_VAL, IERROR)
    	INTEGER	COMM, COMM_KEYVAL, IERROR
    	INTEGER(KIND=MPI_ADDRESS_KIND) ATTRIBUTE_VAL
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,22 +49,19 @@ Fortran 2008 Syntax
    	INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(IN) :: attribute_val
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``comm``: Communicator from which attribute will be attached (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``comm``: Communicator from which attribute will be attached (handle).
 
 INPUT PARAMETERS
------ ----------
-
-* ``comm_keyval``: Key value (integer). 
-
-* ``attribute_val``: Attribute value. 
+----------------
+* ``comm_keyval``: Key value (integer).
+* ``attribute_val``: Attribute value.
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -76,8 +79,9 @@ This function replaces :ref:`MPI_Attr_put`, the use of which is deprecated. The
 C binding is identical. The Fortran binding differs in that
 *attribute_val* is an address-sized integer.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the
 *ATTRIBUTE_VAL* argument only for Fortran 90. Sun FORTRAN 77 users may
@@ -89,6 +93,7 @@ use the non-portable syntax
 
 where MPI_ADDRESS_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 NOTES
 -----
@@ -103,6 +108,7 @@ in an integer.
 
 If an attribute is already present, the delete function (specified when
 the corresponding keyval was created) will be called.
+
 
 ERRORS
 ------

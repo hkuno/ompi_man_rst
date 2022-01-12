@@ -1,17 +1,20 @@
 .. _shmem_wait:
 
+
 shmem_wait
 ==========
+
 .. include_body
 
-*shmem_int_wait*\ (3), *shmem_int_wait*\ (3)_until,
-*shmem_int4_wait*\ (3), *shmem_int4_wait*\ (3)_until,
-*shmem_int8_wait*\ (3), *shmem_int8_wait*\ (3)_until,
-*shmem_long_wait*\ (3), *shmem_long_wait*\ (3)_until,
-*shmem_longlong_wait*\ (3), *shmem_longlong_wait*\ (3)_until,
-*shmem_short_wait*\ (3), *shmem_short_wait*\ (3)_until,
-*shmem_wait*\ (3), *shmem_wait*\ (3)_until - Waits for a variable on the
+:ref:`shmem_int_wait`\ (3), :ref:`shmem_int_wait`\ (3)_until,
+shmem_int4_wait\ (3), shmem_int4_wait\ (3)_until,
+shmem_int8_wait\ (3), shmem_int8_wait\ (3)_until,
+:ref:`shmem_long_wait`\ (3), :ref:`shmem_long_wait`\ (3)_until,
+:ref:`shmem_longlong_wait`\ (3), :ref:`shmem_longlong_wait`\ (3)_until,
+:ref:`shmem_short_wait`\ (3), :ref:`shmem_short_wait`\ (3)_until,
+:ref:`shmem_wait`\ (3), :ref:`shmem_wait`\ (3)_until - Waits for a variable on the
 local processing element (PE) to change
+
 
 SYNOPSIS
 --------
@@ -64,15 +67,16 @@ Fortran:
 
    CALL SHMEM_WAIT_UNTIL(ivar, cmp, cmp_value)
 
+
 DESCRIPTION
 -----------
 
-shmem_wait and shmem_wait_until wait for **ivar** to be changed by a
+:ref:`shmem_wait` and :ref:`shmem_wait_until` wait for **ivar** to be changed by a
 remote write or atomic swap issued by a different processor. These
 routines can be used for point-to- point directed synchronization. A
-call to shmem_wait does not return until some other processor writes a
+call to :ref:`shmem_wait` does not return until some other processor writes a
 value, not equal to cmp_value, into **ivar** on the waiting processor. A
-call to shmem_wait_until does not return until some other processor
+call to :ref:`shmem_wait_until` does not return until some other processor
 changes **ivar** to satisfy the condition implied by cmp and cmp_value.
 This mechanism is useful when a processor needs to tell another
 processor that it has completed some action.
@@ -104,11 +108,11 @@ ivar
    must be a specific sized integer type according to the function being
    called, as follows:
 
-   **shmem_wait, shmem_wait_until:** default INTEGER
+   :ref:`shmem_wait`, :ref:`shmem_wait_until`:** default INTEGER
 
-   **shmem_int4_wait, shmem_int4_wait_until:** INTEGER*4
+   shmem_int4_wait, shmem_int4_wait_until:** INTEGER*4
 
-   **shmem_int8_wait, shmem_int8_wait_until:** INTEGER*8
+   shmem_int8_wait, shmem_int8_wait_until:** INTEGER*8
 
 cmp
    The compare operator that compares ivar with cmp_value. cmp must be
@@ -139,11 +143,12 @@ cmp_value
    cmp_value must be of type integer. If you are using C/C++, the type
    of cmp_value should match thatimplied in the SYNOPSIS section. If you
    are using Fortran, cmp_value must be an integer of the same size and
-   kind as ivar. The shmem_wait routines return when ivar is no longer
-   equal to cmp_value. The shmem_wait_until routines return when the
+   kind as ivar. The :ref:`shmem_wait` routines return when ivar is no longer
+   equal to cmp_value. The :ref:`shmem_wait_until` routines return when the
    compare condition is true. The compare condition is defined by the
    ivar argument compared with the cmp_value using the comparison
    operator, cmp.
+
 
 EXAMPLES
 --------
@@ -194,4 +199,5 @@ subroutine:
    END
 
 
-.. seealso:: *intro_shmem\ (3), *shmem_put\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_put*\ (3)

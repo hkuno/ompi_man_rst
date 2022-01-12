@@ -1,14 +1,18 @@
 .. _mpi_dims_create:
 
+
 MPI_Dims_create
 ===============
+
 .. include_body
 
 :ref:`MPI_Dims_create` - Creates a division of processors in a Cartesian
 grid.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Dims_create(int nnodes, int ndims, int dims[])
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_DIMS_CREATE(NNODES, NDIMS, DIMS, IERROR)
    	INTEGER	NNODES, NDIMS, DIMS(*), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,22 +48,19 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(INOUT) :: dims(ndims)
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``nnodes``: Number of nodes in a grid (integer). 
-
-* ``ndims``: Number of Cartesian dimensions (integer). 
+----------------
+* ``nnodes``: Number of nodes in a grid (integer).
+* ``ndims``: Number of Cartesian dimensions (integer).
 
 IN/OUT PARAMETER
---/--- ---------
-
-* ``dims``: Integer array of size ndims specifying the number of nodes in each dimension. 
+--/-------------
+* ``dims``: Integer array of size ndims specifying the number of nodes in each dimension.
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -99,6 +102,7 @@ order. Array dims is suitable for use as input to routine
    (0,3,0)	MPI_Dims_create(6, 3, dims)	(2,3,1)
    (0,3,0)	MPI_Dims_create(7, 3, dims)	erroneous call
    ------------------------------------------------------
+
 
 ERRORS
 ------

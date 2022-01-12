@@ -1,14 +1,18 @@
 .. _mpi_win_test:
 
+
 MPI_Win_test
 ============
+
 .. include_body
 
 :ref:`MPI_Win_test` - Attempts to complete an RMA exposure epoch; a
 nonblocking version of :ref:`MPI_Win_wait`
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_test(MPI_Win win, int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_TEST( WIN, FLAG, IERROR)
    	INTEGER  WIN, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,17 +48,15 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETERS
------ ----------
 
-* ``win``: Window object (handle) 
+INPUT PARAMETERS
+----------------
+* ``win``: Window object (handle)
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``IERROR``: Fortran only: Error status (integer). 
-
-* ``flag``: The returning state of the test for epoch closure. 
+-----------------
+* ``IERROR``: Fortran only: Error status (integer).
+* ``flag``: The returning state of the test for epoch closure.
 
 DESCRIPTION
 -----------
@@ -68,6 +72,7 @@ Invoke :ref:`MPI_Win_test` only where :ref:`MPI_Win_wait` can be invoked. Once t
 call has returned *flag = true*, it must not be invoked anew, until the
 window is posted anew.
 
+
 ERRORS
 ------
 
@@ -82,4 +87,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Win_post`  :ref:`MPI_Win_wait` 
+.. seealso:: 
+   | :ref:`MPI_Win_post` :ref:`MPI_Win_wait`

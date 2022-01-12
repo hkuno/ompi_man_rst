@@ -1,14 +1,18 @@
 .. _mpi_address:
 
+
 MPI_Address
 ===========
+
 .. include_body
 
 :ref:`MPI_Address` - Gets the address of a location in memory -- use of
 this routine is deprecated.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Address(void *location, MPI_Aint *address)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,17 +35,15 @@ Fortran Syntax
    	<type>	LOCATION (*)
    	INTEGER	ADDRESS, IERROR
 
-INPUT PARAMETER
------ ---------
 
-* ``location``: Location in caller memory (choice). 
+INPUT PARAMETER
+---------------
+* ``location``: Location in caller memory (choice).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``address``: Address of location (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``address``: Address of location (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -65,6 +68,7 @@ Example: Using :ref:`MPI_Address` for an array.
 | ! The value of DIFF is 909*sizeofreal; the values of I1 and I2 are
 | ! implementation dependent.
 
+
 NOTES
 -----
 
@@ -82,6 +86,7 @@ Furthermore, referencing may not have a unique definition on machines
 with a segmented address space. The use of :ref:`MPI_Address` to "reference" C
 variables guarantees portability to such machines as well.
 
+
 ERRORS
 ------
 
@@ -96,4 +101,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Get_address` 
+.. seealso:: 
+   | :ref:`MPI_Get_address`

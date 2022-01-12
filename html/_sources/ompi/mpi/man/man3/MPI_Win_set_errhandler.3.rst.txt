@@ -1,13 +1,17 @@
 .. _mpi_win_set_errhandler:
 
+
 MPI_Win_set_errhandler
 ======================
+
 .. include_body
 
 :ref:`MPI_Win_set_errhandler` - Attaches a new error handler to a window.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_set_errhandler(MPI_Win win, MPI_Errhandler errhandler)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_SET_ERRHANDLER(WIN, ERRHANDLER, IERROR)
    	INTEGER WIN, ERRHANDLER, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -41,20 +47,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Errhandler), INTENT(IN) :: errhandler
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``win``: Window (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``win``: Window (handle).
 
 INPUT PARAMETER
------ ---------
-
-* ``errhandler``: New error handler for window (handle). 
+---------------
+* ``errhandler``: New error handler for window (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -62,6 +66,7 @@ DESCRIPTION
 :ref:`MPI_Win_set_errhandler` attaches a new error handler to a window. The
 error handler must be either a predefined error handler or an error
 handler created by a call to :ref:`MPI_Win_create_errhandler`.
+
 
 ERRORS
 ------

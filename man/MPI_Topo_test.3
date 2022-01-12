@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TOPO_TEST" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TOPO_TEST" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -75,16 +75,12 @@ MPI_Topo_test(comm, status, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm\fP: Communicator (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBtop_type\fP: Topology type of communicator comm (choice).
@@ -126,7 +122,8 @@ guarantee that an MPI program can continue past an error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Graph_create | MPI_Cart_create
+MPI_Graph_create
+MPI_Cart_create
 .fi
 .sp
 .UNINDENT

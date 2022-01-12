@@ -1,13 +1,17 @@
 .. _mpi_init_thread:
 
+
 MPI_Init_thread
 ===============
+
 .. include_body
 
 :ref:`MPI_Init_thread` - Initializes the MPI execution environment
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    int MPI_Init_thread(int *argc, char ***argv,
    	int required, int *provided)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_INIT_THREAD(REQUIRED, PROVIDED, IERROR)
    	INTEGER	REQUIRED, PROVIDED, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,21 +48,17 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: provided
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``argc``: C only: Pointer to the number of arguments. 
-
-* ``argv``: C only: Argument vector. 
-
-* ``required``: Desired level of thread support (integer). 
+----------------
+* ``argc``: C only: Pointer to the number of arguments.
+* ``argv``: C only: Argument vector.
+* ``required``: Desired level of thread support (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``provided``: Available level of thread support (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``provided``: Available level of thread support (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -106,6 +108,7 @@ modifies, interprets, nor distributes them:
    		MPI_Finalize();
    	}
 
+
 NOTES
 -----
 
@@ -120,6 +123,7 @@ The MPI Standard does not say what a program can do before an
 implementation, it should do as little as possible. In particular, avoid
 anything that changes the external state of the program, such as opening
 files, reading standard input, or writing to standard output.
+
 
 MPI_THREAD_MULTIPLE Support
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -141,6 +145,7 @@ Note that there is a small performance penalty for using
 MPI_THREAD_MULTIPLE support; latencies for short messages will be higher
 as compared to when using MPI_THREAD_SINGLE, for example.
 
+
 ERRORS
 ------
 
@@ -155,4 +160,10 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Init`    :ref:`MPI_Initialized`    :ref:`MPI_Finalize`    :ref:`MPI_Finalized` 
+.. seealso:: 
+   ::
+
+   MPI_Init
+   MPI_Initialized
+   MPI_Finalize
+      MPI_Finalized

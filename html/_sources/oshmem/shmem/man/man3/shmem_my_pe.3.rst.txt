@@ -1,11 +1,14 @@
 .. _shmem_my_pe:
 
+
 shmem_my_pe
 ===========
+
 .. include_body
 
-shmem_my_pe, my_pe, \_my_pe - Returns the virtual PE number of the
+:ref:`shmem_my_pe`, my_pe, \_my_pe - Returns the virtual PE number of the
 calling PE.
+
 
 SYNOPSIS
 --------
@@ -28,6 +31,7 @@ Fortran:
    I = SHMEM_MY_PE ()
    I = MY_PE ()
 
+
 DESCRIPTION
 -----------
 
@@ -37,4 +41,5 @@ between 0 and npes - 1, where npes is the total number of PEs executing
 the current program.
 
 
-.. seealso:: *intro_shmem\ (3), *:ref:`shmem_n_pes` \ (3), *:ref:`shmem_init` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_n_pes*\ (3), *shmem_init*\ (3)

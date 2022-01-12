@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_SET_CACHE_LINE_INV" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_SET_CACHE_LINE_INV" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,9 +33,9 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_clear_cache_inv\fP(3), \fIshmem_set_cache_inv\fP(3),
-\fIshmem_set_cache_line_inv\fP(3), \fIshmem_udcflush\fP(3),
-\fIshmem_udcflush_line\fP(3) \- Controls data cache utilities
+shmem_clear_cache_inv(3), shmem_set_cache_inv(3),
+\fI\%shmem_set_cache_line_inv\fP(3), shmem_udcflush(3),
+shmem_udcflush_line(3) \- Controls data cache utilities
 .SH SYNOPSIS
 .sp
 C or C++:
@@ -87,24 +87,24 @@ can be of any noncharacter type. If you are using Fortran, it can be
 of any kind.
 .UNINDENT
 .sp
-\fBshmem_clear_cache_inv\fP disables automatic cache coherency mode
-previously enabled by shmem_set_cache_inv or shmem_set_cache_line_inv.
+shmem_clear_cache_inv disables automatic cache coherency mode
+previously enabled by shmem_set_cache_inv or \fI\%shmem_set_cache_line_inv\fP\&.
 .sp
-\fBshmem_clear_cache_line_inv\fP disables automatic cache coherency mode
+shmem_clear_cache_line_inv disables automatic cache coherency mode
 for the cache line associated with the address of \fBtarget\fP only.
 .sp
-\fBshmem_set_cache_inv\fP enables the OpenSHMEM API to automatically
+shmem_set_cache_inv enables the OpenSHMEM API to automatically
 decide the best strategy for cache coherency.
 .sp
-\fBshmem_set_cache_line_inv\fP enables automatic cache coherency mode for
+\fI\%shmem_set_cache_line_inv\fP enables automatic cache coherency mode for
 the cache line associated with the address of \fBtarget\fP only.
 .sp
-\fBshmem_clear_cache_inv\fP disables automatic cache coherency mode
-previously enabled by shmem_set_cache_inv or shmem_set_cache_line_inv.
+shmem_clear_cache_inv disables automatic cache coherency mode
+previously enabled by shmem_set_cache_inv or \fI\%shmem_set_cache_line_inv\fP\&.
 .sp
-\fBshmem_udcflush\fP makes the entire user data cache coherent.
+shmem_udcflush makes the entire user data cache coherent.
 .sp
-\fBshmem_udcflush_line\fP makes coherent the cache line that corresponds
+shmem_udcflush_line makes coherent the cache line that corresponds
 with the address specified by target.
 .SH NOTES
 .sp
@@ -114,19 +114,7 @@ with legacy architectures.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_put(3), 
-.nf
-*
-.fi
-shmem_swap (3)
+\fIintro_shmem\fP(3), \fIshmem_put\fP(3), \fIshmem_swap\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

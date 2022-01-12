@@ -1,12 +1,15 @@
 .. _shmem_int_finc:
 
+
 shmem_int_finc
 ==============
+
 .. include_body
 
-*shmem_int4_finc*\ (3), *shmem_int8_finc*\ (3), *shmem_int_finc*\ (3),
-*shmem_long_finc*\ (3), *shmem_longlong_finc*\ (3) - Performs an atomic
+shmem_int4_finc\ (3), shmem_int8_finc\ (3), :ref:`shmem_int_finc`\ (3),
+:ref:`shmem_long_finc`\ (3), :ref:`shmem_longlong_finc`\ (3) - Performs an atomic
 fetch-and-increment operation on a remote data object
+
 
 SYNOPSIS
 --------
@@ -39,6 +42,7 @@ Fortran:
 
    ires8 = SHMEM_INT8_FINC(target8, pe)
 
+
 DESCRIPTION
 -----------
 
@@ -60,16 +64,19 @@ pe
    updated. If you are using Fortran, it must be a default integer
    value.
 
+
 NOTES
 -----
 
 The term remotely accessible is defined in *intro_shmem*\ (3).
 
+
 RETURN VALUES
------- ------
+-------------
 
 The contents that had been at the target address on the remote PE prior
 to the increment.
 
 
-.. seealso:: *intro_shmem*\ (3)
+.. seealso:: 
+   *intro_shmem*\ (3)

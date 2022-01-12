@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_DOUBLE_GET_NBI" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_DOUBLE_GET_NBI" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,13 +33,13 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_getmem_nbi\fP(3), \fIshmem_char_get_nbi\fP(3),
-\fIshmem_short_get_nbi\fP(3), \fIshmem_int_get_nbi\fP(3),
-\fIshmem_long_get_nbi\fP(3), \fIshmem_longlong_get_nbi\fP(3),
-\fIshmem_float_get_nbi\fP(3), \fIshmem_double_get_nbi\fP(3),
-\fIshmem_longdouble_get_nbi\fP(3), \fIshmem_get8_nbi\fP(3),
-\fIshmem_get16_nbi\fP(3), \fIshmem_get32_nbi\fP(3), \fIshmem_get64_nbi\fP(3),
-\fIshmem_get128_nbi\fP(3), \- The nonblocking get routines provide a method
+shmem_getmem_nbi(3), shmem_char_get_nbi(3),
+shmem_short_get_nbi(3), shmem_int_get_nbi(3),
+shmem_long_get_nbi(3), shmem_longlong_get_nbi(3),
+shmem_float_get_nbi(3), \fI\%shmem_double_get_nbi\fP(3),
+shmem_longdouble_get_nbi(3), shmem_get8_nbi(3),
+shmem_get16_nbi(3), shmem_get32_nbi(3), shmem_get64_nbi(3),
+shmem_get128_nbi(3), \- The nonblocking get routines provide a method
 for copying data from a contiguous remote data object on the specified
 PE to the local data object.
 .SH SYNOPSIS
@@ -140,7 +140,7 @@ CALL SHMEM_GET128_NBI(dest, source, nelems, pe)
 The get routines provide a method for copying a contiguous symmetric
 data object from a different PE to a contiguous data object on the local
 PE. The routines return after posting the operation. The operation is
-considered complete after a subsequent call to shmem_quiet. At the
+considered complete after a subsequent call to shmem_quiet\&. At the
 completion of shmem_quiet, the data has been delivered to the dest array
 on the local PE.
 .sp
@@ -204,15 +204,7 @@ END
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-
-.nf
-*
-.fi
-intro_shmem(3), 
-.nf
-*
-.fi
-shmem_quiet (3)
+\fIintro_shmem\fP(3), \fIshmem_quiet\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,15 +1,19 @@
 .. _mpi_allgatherv:
 
+
 MPI_Allgatherv
 ==============
+
 .. include_body
 
 :ref:`MPI_Allgatherv`, :ref:`MPI_Iallgatherv`, :ref:`MPI_Allgatherv_init` - Gathers data
 from all processes and delivers it to all. Each process may contribute a
 different amount of data.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -31,6 +35,7 @@ C Syntax
    	MPI_Datatype sendtype, void *recvbuf, const int recvcounts[],
    	const int displs[], MPI_Datatype recvtype, MPI_Comm comm,
            MPI_Info info, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -57,6 +62,7 @@ Fortran Syntax
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT(*),
    	INTEGER	DISPLS(*), RECVTYPE, COMM, INFO, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -97,33 +103,23 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Starting address of send buffer (choice). 
-
-* ``sendcount``: Number of elements in send buffer (integer). 
-
-* ``sendtype``: Datatype of send buffer elements (handle). 
-
-* ``recvcount``: Integer array (of length group size) containing the number of elements that are received from each process. 
-
-* ``displs``: Integer array (of length group size). Entry i specifies the displacement (relative to recvbuf) at which to place the incoming data from process i. 
-
-* ``recvtype``: Datatype of receive buffer elements (handle). 
-
-* ``comm``: Communicator (handle). 
-
-* ``info``: Info (handle, persistent only). 
+----------------
+* ``sendbuf``: Starting address of send buffer (choice).
+* ``sendcount``: Number of elements in send buffer (integer).
+* ``sendtype``: Datatype of send buffer elements (handle).
+* ``recvcount``: Integer array (of length group size) containing the number of elements that are received from each process.
+* ``displs``: Integer array (of length group size). Entry i specifies the displacement (relative to recvbuf) at which to place the incoming data from process i.
+* ``recvtype``: Datatype of receive buffer elements (handle).
+* ``comm``: Communicator (handle).
+* ``info``: Info (handle, persistent only).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Address of receive buffer (choice). 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``recvbuf``: Address of receive buffer (choice).
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -148,8 +144,9 @@ The outcome is as if all processes executed calls to
 for root = 0 , ..., n-1. The rules for correct usage of :ref:`MPI_Allgatherv`
 are easily found from the corresponding rules for :ref:`MPI_Gatherv`.
 
+
 USE OF IN-PLACE OPTION
---- -- -------- ------
+----------------------
 
 When the communicator is an intracommunicator, you can perform an
 all-gather operation in-place (the output buffer is used as the input
@@ -174,8 +171,9 @@ Because the in-place option converts the receive buffer into a
 send-and-receive buffer, a Fortran binding that includes INTENT must
 mark these as INOUT, not OUT.
 
+
 WHEN COMMUNICATOR IS AN INTER-COMMUNICATOR
----- ------------ -- -- ------------------
+------------------------------------------
 
 When the communicator is an inter-communicator, the gather operation
 occurs in two phases. The data is gathered from all the members of the
@@ -185,6 +183,7 @@ group, concatenated, and received by all the members of the first. The
 send buffer arguments in the one group must be consistent with the
 receive buffer arguments in the other group, and vice versa. The
 operation must exhibit symmetric, full-duplex behavior.
+
 
 ERRORS
 ------
@@ -200,4 +199,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Gatherv` | :ref:`MPI_Allgather` 
+.. seealso:: 
+   | :ref:`MPI_Gatherv`
+   | :ref:`MPI_Allgather`

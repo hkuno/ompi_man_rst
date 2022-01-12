@@ -1,13 +1,17 @@
 .. _mpi_file_open:
 
+
 MPI_File_open
 =============
+
 .. include_body
 
 :ref:`MPI_File_open` - Opens a file (collective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -21,6 +25,7 @@ C Syntax
    	int amode, MPI_Info info,
    	MPI_File *fh)
 
+
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
@@ -32,6 +37,7 @@ Fortran Syntax
    MPI_FILE_OPEN(COMM, FILENAME, AMODE, INFO, FH, IERROR)
    	CHARACTER*(*)	FILENAME
    	INTEGER	COMM, AMODE, INFO, FH, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -48,23 +54,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_File), INTENT(OUT) :: fh
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``comm``: Communicator (handle). 
-
-* ``filename``: Name of file to open (string). 
-
-* ``amode``: File access mode (integer). 
-
-* ``info``: Info object (handle). 
+----------------
+* ``comm``: Communicator (handle).
+* ``filename``: Name of file to open (string).
+* ``amode``: File access mode (integer).
+* ``info``: Info object (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``fh``: New file handle (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``fh``: New file handle (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -136,6 +137,7 @@ The :ref:`MPI_File_open` interface allows the user to pass information via the
 *info* argument. It can be set to MPI_INFO_NULL. See the HINTS section
 for a list of hints that can be set.
 
+
 HINTS
 -----
 
@@ -143,30 +145,19 @@ The following hints can be used as values for the *info* argument.
 
 SETTABLE HINTS:
 
-- MPI_INFO_NULL
+{INDENT}{curline}
 
-- shared_file_timeout: Amount of time (in seconds) to wait for access to
-the shared file pointer before exiting with MPI_ERR_TIMEDOUT.
+{INDENT}{curline}
 
-- rwlock_timeout: Amount of time (in seconds) to wait for obtaining a
-read or write lock on a contiguous chunk of a UNIX file before exiting
-with MPI_ERR_TIMEDOUT.
+{INDENT}{curline}
 
-- noncoll_read_bufsize: Maximum size of the buffer used by MPI I/O to
-satisfy multiple noncontiguous read requests in the noncollective
-data-access routines. (See NOTE, below.)
+{INDENT}{curline}
 
-- noncoll_write_bufsize: Maximum size of the buffer used by MPI I/O to
-satisfy multiple noncontiguous write requests in the noncollective
-data-access routines. (See NOTE, below.)
+{INDENT}{curline}
 
-- coll_read_bufsize: Maximum size of the buffer used by MPI I/O to
-satisfy multiple noncontiguous read requests in the collective
-data-access routines. (See NOTE, below.)
+{INDENT}{curline}
 
-- coll_write_bufsize: Maximum size of the buffer used by MPI I/O to
-satisfy multiple noncontiguous write requests in the collective
-data-access routines. (See NOTE, below.)
+{INDENT}{curline}
 
 NOTE: A buffer size smaller than the distance (in bytes) in a UNIX file
 between the first byte and the last byte of the access request causes
@@ -179,16 +170,14 @@ calls made. If this is not desirable behavior, you should reduce this
 buffer size to equal the size of the contiguous chunks within the
 aggregate request.
 
-- mpiio_concurrency: (boolean) controls whether nonblocking I/O routines
-can bind an extra thread to an LWP.
+{INDENT}{curline}
 
-- mpiio_coll_contiguous: (boolean) controls whether subsequent
-collective data accesses will request collectively contiguous regions of
-the file.
+{INDENT}{curline}
 
 NON-SETTABLE HINTS:
 
-- filename: Access this hint to get the name of the file.
+{INDENT}{curline}
+
 
 ERRORS
 ------

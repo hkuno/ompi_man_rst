@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_GET_BYTE_OFFSET" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_FILE_GET_BYTE_OFFSET" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -76,18 +76,14 @@ MPI_File_get_byte_offset(fh, offset, disp, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBfh\fP: File handle (handle).
 .IP \(bu 2
 \fBoffset\fP: Offset (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBdisp\fP: Absolute byte position of offset (integer).
@@ -100,9 +96,7 @@ OUTPUT PARAMETERS
 view to its corresponding displacement value, or absolute byte position,
 from the beginning of the file. The absolute byte position of \fIoffset\fP
 relative to the current view of \fIfh\fP is returned in \fIdisp\fP\&.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fIOFFSET\fP and
 \fIDISP\fP arguments only for Fortran 90. Sun FORTRAN 77 users may use the

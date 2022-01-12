@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_DIST_GRAPH_CREATE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_DIST_GRAPH_CREATE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -83,9 +83,7 @@ MPI_Dist_Graph_create(comm_old, n, sources, degrees, destinations, weights,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm_old\fP: Input communicator without topology (handle).
@@ -104,9 +102,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBreorder\fP: Ranking may be reordered (true) or not (false) (logical).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcomm_dist_graph\fP: Communicator with distributed graph topology added (handle).
@@ -182,7 +178,8 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Dist_graph_create_adjacent  MPI_Dist_graph_neighbors MPI_Dist_graph_neighbors_count
+MPI_Dist_graph_create_adjacent MPI_Dist_graph_neighbors
+MPI_Dist_graph_neighbors_count
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

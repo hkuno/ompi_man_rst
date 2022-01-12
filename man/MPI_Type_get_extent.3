@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_GET_EXTENT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TYPE_GET_EXTENT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -84,16 +84,12 @@ MPI_Type_get_extent_x(datatype, lb, extent, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBdatatype\fP: Data type (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBlb\fP: Lower bound of data type (integer).
@@ -113,9 +109,7 @@ MPI_UNDEFINED.
 .sp
 Use of \fI\%MPI_Type_get_extent\fP is strongly recommended over the old MPI\-1
 functions MPI_Type_extent and MPI_Type_lb\&.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fILB\fP and
 \fIEXTENT\fP arguments only for Fortran 90. FORTRAN 77 users may use the

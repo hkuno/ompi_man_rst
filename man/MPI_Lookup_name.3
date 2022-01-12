@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_LOOKUP_NAME" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_LOOKUP_NAME" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -83,18 +83,14 @@ MPI_Lookup_name(service_name, info, port_name, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBservice_name\fP: A service name (string).
 .IP \(bu 2
 \fBinfo\fP: Options to the name service functions (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBport_name\fP: a port name (string).
@@ -107,9 +103,7 @@ This function retrieves a \fIport_name\fP published under \fIservice_name\fP by
 a previous invocation of MPI_Publish_name\&. The application must supply a
 \fIport_name\fP buffer large enough to hold the largest possible port name
 (i.e., MPI_MAX_PORT_NAME bytes).
-.sp
-INFO ARGUMENTS
-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INFO ARGUMENTS
 .sp
 The following keys for \fIinfo\fP are recognized:
 .INDENT 0.0
@@ -148,9 +142,7 @@ If no info key is provided, the search will first check to see if a
 global server has been specified and is available. If so, then the
 search will default to global scope first, followed by local. Otherwise,
 the search will default to local.
-.sp
-NAME SCOPE
-\-\-\-\- \-\-\-\-\-
+.SH NAME SCOPE
 .sp
 Open MPI supports two name scopes: \fIglobal\fP and \fIlocal\fP\&. Local scope
 values are placed in a data store located on the mpirun of the calling
@@ -178,7 +170,11 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Publish_name    MPI_Open_port
+.INDENT 0.0
+.TP
+.B MPI_Publish_name
+MPI_Open_port
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

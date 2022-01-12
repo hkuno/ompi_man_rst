@@ -1,14 +1,18 @@
 .. _mpi_keyval_create:
 
+
 MPI_Keyval_create
 =================
+
 .. include_body
 
 :ref:`MPI_Keyval_create` - Generates a new attribute key -- use of this
 routine is deprecated.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -19,6 +23,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Keyval_create(MPI_Copy_function *copy_fn,
    	MPI_Delete_function *delete_fn, int *keyval, void *extra_state)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,21 +36,17 @@ Fortran Syntax
    	EXTERNAL	COPY_FN, DELETE_FN
    	INTEGER	KEYVAL, EXTRA_STATE, IERROR
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``copy_fn``: Copy callback function for keyval. 
-
-* ``delete_fn``: Delete callback function for keyval. 
-
-* ``extra_state``: Extra state for callback functions. 
+----------------
+* ``copy_fn``: Copy callback function for keyval.
+* ``delete_fn``: Delete callback function for keyval.
+* ``extra_state``: Extra state for callback functions.
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``keyval``: Key value for future access (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``keyval``: Key value for future access (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -92,6 +93,7 @@ or Fortran; MPI_NULL_COPY_FN is a function that does nothing other than
 return flag = 0, and MPI_SUCCESS. MPI_DUP_FN is a simple-minded copy
 function that sets flag = 1, returns the value of attribute_val_in in
 attribute_val_out, and returns MPI_SUCCESS.
+
 
 NOTES
 -----
@@ -150,6 +152,7 @@ The special key value MPI_KEYVAL_INVALID is never returned by
 :ref:`MPI_Keyval_create`. Therefore, it can be used for static initialization
 of key values.
 
+
 ERRORS
 ------
 
@@ -164,4 +167,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Keyval_free` | :ref:`MPI_Comm_create_keyval` 
+.. seealso:: 
+   | :ref:`MPI_Keyval_free`
+   | :ref:`MPI_Comm_create_keyval`

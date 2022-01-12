@@ -1,14 +1,18 @@
 .. _mpi_file_sync:
 
+
 MPI_File_sync
 =============
+
 .. include_body
 
 :ref:`MPI_File_sync` - Makes semantics consistent for data-access
 operations (collective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -19,6 +23,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_File_sync(MPI_File fh)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    MPI_FILE_SYNC(FH, IERROR)
    	INTEGER	FH, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -42,15 +48,14 @@ Fortran 2008 Syntax
    	TYPE(MPI_File), INTENT(IN) :: fh
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``fh``: File handle (handle). 
+INPUT PARAMETER
+---------------
+* ``fh``: File handle (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -64,6 +69,7 @@ become visible to subsequent reads of *fh* by the calling process.
 ensuring that all nonblocking requests on *fh* have been completed
 before calling :ref:`MPI_File_sync`. Otherwise, the call to :ref:`MPI_File_sync` is
 erroneous.
+
 
 ERRORS
 ------

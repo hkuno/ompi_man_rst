@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_INDEXED" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TYPE_INDEXED" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -102,9 +102,7 @@ MPI_Type_create_hindexed(count, array_of_blocklengths,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcount\fP: Number of blocks \-\- also number of entries in array_of_displacements and array_of_blocklengths (nonnegative integer).
@@ -115,9 +113,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBoldtype\fP: Old datatype (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBnewtype\fP: New datatype (handle).

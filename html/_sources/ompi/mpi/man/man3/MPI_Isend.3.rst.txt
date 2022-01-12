@@ -1,13 +1,17 @@
 .. _mpi_isend:
 
+
 MPI_Isend
 =========
+
 .. include_body
 
 :ref:`MPI_Isend` - Starts a standard-mode, nonblocking send.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Isend(const void *buf, int count, MPI_Datatype datatype, int dest,
    	int tag, MPI_Comm comm, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_ISEND(BUF, COUNT, DATATYPE, DEST, TAG, COMM, REQUEST, IERROR)
    	<type>	BUF(*)
    	INTEGER	COUNT, DATATYPE, DEST, TAG, COMM, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -46,27 +52,20 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``buf``: Initial address of send buffer (choice). 
-
-* ``count``: Number of elements in send buffer (integer). 
-
-* ``datatype``: Datatype of each send buffer element (handle). 
-
-* ``dest``: Rank of destination (integer). 
-
-* ``tag``: Message tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``buf``: Initial address of send buffer (choice).
+* ``count``: Number of elements in send buffer (integer).
+* ``datatype``: Datatype of each send buffer element (handle).
+* ``dest``: Rank of destination (integer).
+* ``tag``: Message tag (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``request``: Communication request (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``request``: Communication request (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -85,6 +84,7 @@ A send request can be determined being completed by calling the
 :ref:`MPI_Wait`, :ref:`MPI_Waitany`, :ref:`MPI_Test`, or :ref:`MPI_Testany` with request returned by
 this function.
 
+
 ERRORS
 ------
 
@@ -99,4 +99,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Send`  :ref:`MPI_Wait`  :ref:`MPI_Waitany`  :ref:`MPI_Test`  :ref:`MPI_Testany` 
+.. seealso:: 
+   | :ref:`MPI_Send` :ref:`MPI_Wait` :ref:`MPI_Waitany` :ref:`MPI_Test` :ref:`MPI_Testany`

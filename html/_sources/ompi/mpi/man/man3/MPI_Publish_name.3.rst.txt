@@ -1,15 +1,19 @@
 .. _mpi_publish_name:
 
+
 MPI_Publish_name
 ================
+
 .. include_body
 
 ::
 
    MPI_Publish_name - Publishes a service name associated with a port
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Publish_name(const char *service_name, MPI_Info info,
    	const char *port_name)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -33,6 +38,7 @@ Fortran Syntax
    	CHARACTER*(*)	SERVICE_NAME, PORT_NAME
    	INTEGER		INFO, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -45,19 +51,16 @@ Fortran 2008 Syntax
    	CHARACTER(LEN=*), INTENT(IN) :: service_name, port_name
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``service_name``: A service name (string). 
-
-* ``info``: Options to the name service functions (handle). 
-
-* ``port_name``: A port name (string). 
+----------------
+* ``service_name``: A service name (string).
+* ``info``: Options to the name service functions (handle).
+* ``port_name``: A port name (string).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -68,8 +71,9 @@ application may retrieve *port_name* by calling :ref:`MPI_Lookup_name` with
 *service_name* twice, or to use a *port_name* argument that was not
 previously opened by the calling process via a call to :ref:`MPI_Open_port`.
 
+
 INFO ARGUMENTS
----- ---------
+--------------
 
 The following keys for *info* are recognized:
 
@@ -101,8 +105,9 @@ global server has been specified and is available. If so, then the
 publish function will default to global scope first, followed by local.
 Otherwise, the data will default to publish with local scope.
 
+
 NAME SCOPE
----- -----
+----------
 
 Open MPI supports two name scopes: *global* and *local*. Local scope
 will place the specified service/port pair in a data store located on
@@ -147,6 +152,7 @@ could access the data, provided that mpirun was given knowledge of how
 to contact the central server and the process could establish
 communication with it.
 
+
 ERRORS
 ------
 
@@ -163,4 +169,8 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso::    :ref:`MPI_Lookup_name`    :ref:`MPI_Open_port` 
+.. seealso:: 
+   ::
+
+   MPI_Lookup_name
+      MPI_Open_port

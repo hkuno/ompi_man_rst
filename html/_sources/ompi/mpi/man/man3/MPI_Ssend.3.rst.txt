@@ -1,13 +1,17 @@
 .. _mpi_ssend:
 
+
 MPI_Ssend
 =========
+
 .. include_body
 
 :ref:`MPI_Ssend` - Standard synchronous send.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Ssend(const void *buf, int count, MPI_Datatype datatype, int dest,
    	int tag, MPI_Comm comm)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_SSEND(BUF, COUNT, DATATYPE, DEST, TAG, COMM, IERROR)
    	<type>	BUF(*)
    	INTEGER	COUNT, DATATYPE, DEST, TAG, COMM, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -45,31 +51,26 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(IN) :: comm
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``buf``: Initial address of send buffer (choice). 
-
-* ``count``: Number of elements in send buffer (nonnegative integer). 
-
-* ``datatype``: Datatype of each send buffer element (handle). 
-
-* ``dest``: Rank of destination (integer). 
-
-* ``tag``: Message tag (integer). 
-
-* ``comm``: Communicator (handle). 
+----------------
+* ``buf``: Initial address of send buffer (choice).
+* ``count``: Number of elements in send buffer (nonnegative integer).
+* ``datatype``: Datatype of each send buffer element (handle).
+* ``dest``: Rank of destination (integer).
+* ``tag``: Message tag (integer).
+* ``comm``: Communicator (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 :ref:`MPI_Ssend` performs a synchronous-mode, blocking send. See the MPI-1
 Standard for more detailed information about such sends.
+
 
 ERRORS
 ------

@@ -2,6 +2,7 @@
 
 MPI_Get
 =======
+
 .. include_body
 
 :ref:`MPI_Get`, :ref:`MPI_Rget` - Copies data from the target memory to the
@@ -145,4 +146,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Put` 
+.. seealso:: :ref:`MPI_Put`

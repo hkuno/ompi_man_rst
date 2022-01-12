@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_ALLTOALLS64" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_ALLTOALLS64" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,8 +33,8 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_alltoall32\fP(3), \fIshmem_alltoall64\fP(3),
-\fIshmem_alltoalls32\fP(3), \fIshmem_alltoalls64\fP(3) \- collective routine
+shmem_alltoall32(3), shmem_alltoall64(3),
+shmem_alltoalls32(3), \fI\%shmem_alltoalls64\fP(3) \- collective routine
 where each PE exchanges a fixed amount of data with all other PEs in the
 Active set
 .SH SYNOPSIS
@@ -127,11 +127,11 @@ A symmetric data object with one of the following data types:
 .INDENT 3.5
 .INDENT 0.0
 .TP
-\fBshmem_alltoall32\fP: Any noncharacter type that
+.B shmem_alltoall32: Any noncharacter type that
 has an element size of 32 bits. No Fortran derived types or C/C++
 structures are allowed.
 .TP
-\fBshmem_alltoall64\fP: Any noncharacter type that has an element size
+.B shmem_alltoall64: Any noncharacter type that has an element size
 of 64 bits. No Fortran derived types or C/C++ structures are
 allowed.
 .UNINDENT

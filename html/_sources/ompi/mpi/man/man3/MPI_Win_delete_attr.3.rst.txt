@@ -1,13 +1,17 @@
 .. _mpi_win_delete_attr:
 
+
 MPI_Win_delete_attr
 ===================
+
 .. include_body
 
 :ref:`MPI_Win_delete_attr` - Deletes an attribute from a window.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_delete_attr(MPI_Win win, int win_keyval)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_DELETE_ATTR(WIN, WIN_KEYVAL, IERROR)
    	INTEGER WIN, WIN_KEYVAL, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -41,20 +47,18 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(IN) :: win_keyval
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT/OUTPUT PARAMETER
------/------ ---------
 
-* ``win``: Window from which the attribute is deleted (handle). 
+INPUT/OUTPUT PARAMETER
+-----/----------------
+* ``win``: Window from which the attribute is deleted (handle).
 
 INPUT PARAMETER
------ ---------
-
-* ``win_keyval``: Key value (integer). 
+---------------
+* ``win_keyval``: Key value (integer).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 NOTES
 -----
@@ -64,6 +68,7 @@ delete_fn callback invokes other MPI functions. In Open MPI, it is not
 valid for delete_fn callbacks (or any of their children) to add or
 delete attributes on the same object on which the delete_fn callback is
 being invoked.
+
 
 ERRORS
 ------

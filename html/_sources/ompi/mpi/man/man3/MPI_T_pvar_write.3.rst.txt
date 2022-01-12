@@ -1,13 +1,17 @@
 .. _mpi_t_pvar_write:
 
+
 MPI_T_pvar_write
 ================
+
 .. include_body
 
 :ref:`MPI_T_pvar_write` - Write the value of a control variable
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,14 +22,12 @@ C Syntax
    #include <mpi.h>
    int MPI_T_pvar_write(MPI_T_pvar_session session, MPI_T_pvar_handle handle, const void *buf)
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``session``: Performance experiment session. 
-
-* ``handle``: Performance variable handle. 
-
-* ``buf``: Initial address of storage location for variable value. 
+----------------
+* ``session``: Performance experiment session.
+* ``handle``: Performance variable handle.
+* ``buf``: Initial address of storage location for variable value.
 
 DESCRIPTION
 -----------
@@ -35,6 +37,7 @@ identified by the handle specified in *handle* in the session specified
 in *session*. The value to be written is specified in *buf*. The caller
 must ensure that the buffer specified in *buf* is large enough to hold
 the entire value of the performance variable.
+
 
 ERRORS
 ------
@@ -54,4 +57,9 @@ MPI_T_pvar_write() will fail if:
    Variable cannot be written
 
 
-.. seealso::    :ref:`MPI_T_pvar_handle_alloc`    :ref:`MPI_T_pvar_get_info`    :ref:`MPI_T_pvar_session_create` 
+.. seealso:: 
+   ::
+
+   MPI_T_pvar_handle_alloc
+   MPI_T_pvar_get_info
+      MPI_T_pvar_session_create

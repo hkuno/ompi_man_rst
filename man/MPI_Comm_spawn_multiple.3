@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_SPAWN_MULTIPLE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_COMM_SPAWN_MULTIPLE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -87,9 +87,7 @@ MPI_Comm_spawn_multiple(count, array_of_commands, array_of_argv,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcount\fP: Number of commands (positive integer, significant to MPI only at \fIroot\fP \-\- see NOTES).
@@ -106,9 +104,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBcomm\fP: Intracommunicator containing group of spawning processes (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBintercomm\fP: Intercommunicator between original group and the newly spawned group (handle).
@@ -177,9 +173,7 @@ corresponds to the i contiguous slots in this array from element
 .UNINDENT
 .sp
 Error codes are treated as for MPI_Comm_spawn\&.
-.sp
-INFO ARGUMENTS
-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INFO ARGUMENTS
 .sp
 The following keys for \fIinfo\fP are recognized in "#PACKAGE_NAME#". (The
 reserved values mentioned in Section 5.3.4 of the MPI\-2 standard are not
@@ -333,7 +327,13 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Comm_spawn (3)   MPI_Comm_get_parent (3)   mpirun(1)
+MPI_Comm_spawn(3)
+MPI_Comm_get_parent(3)
+.INDENT 0.0
+.INDENT 3.5
+mpirun(1)
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

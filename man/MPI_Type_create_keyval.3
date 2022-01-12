@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_CREATE_KEYVAL" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_TYPE_CREATE_KEYVAL" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -81,9 +81,7 @@ MPI_Type_create_keyval(type_copy_attr_fn, type_delete_attr_fn, type_keyval,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBtype_copy_attr_fn\fP: Copy callback function for \fItype_keyval\fP (function).
@@ -92,9 +90,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBextra_state\fP: Extra state for callback functions.
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBtype_keyval\fP: Key value for future access (integer).
@@ -174,9 +170,7 @@ SUBROUTINE TYPE_DELETE_ATTR_FN(TYPE, TYPE_KEYVAL, ATTRIBUTE_VAL, EXTRA_STATE,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fIEXTRA_STATE\fP argument only for Fortran 90. FORTRAN 77 users may use the

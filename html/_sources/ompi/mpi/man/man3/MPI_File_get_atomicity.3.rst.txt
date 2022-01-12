@@ -1,14 +1,18 @@
 .. _mpi_file_get_atomicity:
 
+
 MPI_File_get_atomicity
 ======================
+
 .. include_body
 
 :ref:`MPI_File_get_atomicity` - Returns current consistency semantics for
 data-access operations.
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -19,6 +23,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_File_get_atomicity(MPI_File fh, int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax
    	INTEGER	FH, IERROR
    	LOGICAL	FLAG
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -44,17 +50,15 @@ Fortran 2008 Syntax
    	LOGICAL, INTENT(OUT) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``fh``: File handle (handle). 
+INPUT PARAMETER
+---------------
+* ``fh``: File handle (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``flag``: true if atomic mode is enabled, false if nonatomic mode is enabled (boolean). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``flag``: true if atomic mode is enabled, false if nonatomic mode is enabled (boolean).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -63,6 +67,7 @@ DESCRIPTION
 data access operations on the set of file handles created by one
 collective :ref:`MPI_File_open`. If *flag* is *true,* atomic mode is currently
 enabled; if *flag* is *false,* nonatomic mode is currently enabled.
+
 
 ERRORS
 ------

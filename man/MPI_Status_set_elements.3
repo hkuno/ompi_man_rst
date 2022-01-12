@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_STATUS_SET_ELEMENTS" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_STATUS_SET_ELEMENTS" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -86,23 +86,16 @@ MPI_Status_set_elements_x(status, datatype, count, ierror)
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETER
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBstatus\fP: Status to associate with \fIcount (status).\fP
-.UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBstatus\fP: Status to associate with \fIcount (status).\fP
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBdatatype\fP: Data type associated with \fIcount (handle).\fP
 .IP \(bu 2
 \fBcount\fP: Number of elements to associate with \fIstatus (integer).\fP
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -140,9 +133,7 @@ I/O function errors. The error handler may be changed with
 MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN
 may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the \fICOUNT
 argument of :ref:\(gaMPI_Status_set_elements_x\(ga only for Fortran 90. FORTRAN 77

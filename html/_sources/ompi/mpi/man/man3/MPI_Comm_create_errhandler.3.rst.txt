@@ -2,6 +2,7 @@
 
 MPI_Comm_create_errhandler
 ==========================
+
 .. include_body
 
 :ref:`MPI_Comm_create_errhandler` - Creates an error handler that can be

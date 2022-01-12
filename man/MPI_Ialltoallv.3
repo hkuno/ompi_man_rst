@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_IALLTOALLV" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_IALLTOALLV" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -145,9 +145,7 @@ MPI_Alltoallv_init(sendbuf, sendcounts, sdispls, sendtype, recvbuf, recvcounts,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer.
@@ -168,9 +166,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only)
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer.
@@ -234,9 +230,7 @@ use the rank of the root process in the first group as the value of
 .sp
 When the communicator is an intra\-communicator, these groups are the
 same, and the operation occurs in a single phase.
-.sp
-USE OF IN\-PLACE OPTION
-\-\-\- \-\- \-\-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH USE OF IN-PLACE OPTION
 .sp
 When the communicator is an intracommunicator, you can perform an
 all\-to\-all operation in\-place (the output buffer is used as the input
@@ -270,7 +264,11 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Alltoall    MPI_Alltoallw
+.INDENT 0.0
+.TP
+.B MPI_Alltoall
+MPI_Alltoallw
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

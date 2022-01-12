@@ -1,13 +1,17 @@
 .. _mpi_pack:
 
+
 MPI_Pack
 ========
+
 .. include_body
 
 :ref:`MPI_Pack` - Packs data of a given datatype into contiguous memory.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Pack(const void *inbuf, int incount, MPI_Datatype datatype,
    	void *outbuf, int outsize, int *position, MPI_Comm comm)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -31,6 +36,7 @@ Fortran Syntax
    		COMM, IERROR)
    	<type>	INBUF(*), OUTBUF(*)
    	INTEGER	INCOUNT, DATATYPE, OUTSIZE, POSITION, COMM, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -48,30 +54,23 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(IN) :: comm
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``inbuf``: Input buffer start (choice). 
-
-* ``incount``: Number of input data items (integer). 
-
-* ``datatype``: Datatype of each input data item (handle). 
-
-* ``outsize``: Output buffer size, in bytes (integer). 
-
-* ``comm``: Communicator for packed message (handle). 
+----------------
+* ``inbuf``: Input buffer start (choice).
+* ``incount``: Number of input data items (integer).
+* ``datatype``: Datatype of each input data item (handle).
+* ``outsize``: Output buffer size, in bytes (integer).
+* ``comm``: Communicator for packed message (handle).
 
 INPUT/OUTPUT PARAMETER
------/------ ---------
-
-* ``position``: Current position in buffer, in bytes (integer). 
+-----/----------------
+* ``position``: Current position in buffer, in bytes (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``outbuf``: Output buffer start (choice). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``outbuf``: Output buffer start (choice).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -115,6 +114,7 @@ subsequently used for sending the packed message.
 
        }
 
+
 ERRORS
 ------
 
@@ -129,4 +129,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Unpack` | :ref:`MPI_Pack_size` 
+.. seealso:: 
+   | :ref:`MPI_Unpack`
+   | :ref:`MPI_Pack_size`

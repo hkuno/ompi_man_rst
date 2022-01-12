@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_CALL_ERRHANDLER" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_WIN_CALL_ERRHANDLER" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -73,18 +73,14 @@ MPI_Win_call_errhandler(win, errorcode, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBwin\fP: Window with error handler (handle).
 .IP \(bu 2
 \fBerrorcode\fP: MPI error code (integer).
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -111,7 +107,11 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Win_create_errhandler    MPI_Win_set_errhandler
+.INDENT 0.0
+.TP
+.B MPI_Win_create_errhandler
+MPI_Win_set_errhandler
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

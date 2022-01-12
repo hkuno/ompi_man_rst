@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_NEIGHBOR_ALLTOALLV_INIT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_NEIGHBOR_ALLTOALLV_INIT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -145,9 +145,7 @@ MPI_Neighbor_alltoallv_init(sendbuf, sendcounts, sdispls, sendtype, recvbuf,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBsendbuf\fP: Starting address of send buffer.
@@ -168,9 +166,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBinfo\fP: Info (handle, persistent only).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrecvbuf\fP: Address of receive buffer.
@@ -224,9 +220,7 @@ amount of data to send (in bytes) as the receiver expects to receive.
 Note that process i may send a different amount of data to process j
 than it receives from process j. Also, a process may send entirely
 different amounts of data to different processes in the communicator.
-.sp
-NEIGHBOR ORDERING
-\-\-\-\-\-\-\-\- \-\-\-\-\-\-\-\-
+.SH NEIGHBOR ORDERING
 .sp
 For a distributed graph topology, created with MPI_Dist_graph_create,
 the sequence of neighbors in the send and receive buffers at each
@@ -281,7 +275,15 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Neighbor_alltoall    MPI_Neighbor_alltoallw    MPI_Cart_create    MPI_Graph_create    MPI_Dist_graph_create
+MPI_Neighbor_alltoall
+MPI_Neighbor_alltoallw
+MPI_Cart_create
+MPI_Graph_create
+.INDENT 0.0
+.INDENT 3.5
+MPI_Dist_graph_create
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

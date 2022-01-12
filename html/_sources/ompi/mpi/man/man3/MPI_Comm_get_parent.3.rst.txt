@@ -1,14 +1,18 @@
 .. _mpi_comm_get_parent:
 
+
 MPI_Comm_get_parent
 ===================
+
 .. include_body
 
 :ref:`MPI_Comm_get_parent` - Returns the parent intercommunicator of
 current spawned process.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_get_parent(MPI_Comm *parent)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_COMM_GET_PARENT(PARENT, IERROR)
    	INTEGER	PARENT, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -41,12 +47,11 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(OUT) :: parent
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 OUTPUT PARAMETERS
------- ----------
-
-* ``parent``: The parent communicator (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``parent``: The parent communicator (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -63,6 +68,7 @@ MPI_COMM_NULL.
 After the parent communicator is freed or disconnected,
 :ref:`MPI_Comm_get_parent` returns MPI_COMM_NULL.
 
+
 NOTES
 -----
 
@@ -72,6 +78,7 @@ intercommunicator. Freeing the handle with :ref:`MPI_Comm_disconnect` or
 :ref:`MPI_Comm_free` will cause other references to the intercommunicator to
 become invalid (dangling). Note that calling :ref:`MPI_Comm_free` on the parent
 communicator is not useful.
+
 
 ERRORS
 ------
@@ -87,4 +94,8 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Comm_spawn`    :ref:`MPI_Comm_spawn_multiple` 
+.. seealso:: 
+   ::
+
+   MPI_Comm_spawn
+      MPI_Comm_spawn_multiple

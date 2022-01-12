@@ -1,13 +1,17 @@
 .. _mpi_sizeof:
 
+
 MPI_Sizeof
 ==========
+
 .. include_body
 
 :ref:`MPI_Sizeof` - Returns the size, in bytes, of the given type
 
+
 SYNTAX
 ------
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -21,6 +25,7 @@ Fortran Syntax
    <type>	X
    INTEGER	SIZE, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -33,17 +38,15 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: size
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``X``: A Fortran variable of numeric intrinsic type (choice). 
+INPUT PARAMETER
+---------------
+* ``X``: A Fortran variable of numeric intrinsic type (choice).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``SIZE``: Size of machine representation of that type (integer). 
-
-* ``IERROR``: Error status (integer). 
+-----------------
+* ``SIZE``: Size of machine representation of that type (integer).
+* ``IERROR``: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -54,10 +57,12 @@ binding only. This routine is similar to the sizeof builtin in C.
 However, if given an array argument, it returns the size of the base
 element, not the size of the whole array.
 
+
 NOTES
 -----
 
 This function is not available in C because it is not necessary.
+
 
 ERRORS
 ------

@@ -2,6 +2,7 @@
 
 MPI_T
 =====
+
 .. include_body
 
 Open MPI's MPI_T interface - General information
@@ -123,4 +124,4 @@ Open MPI's MPI_T categories are organized hierarchically:
       framework in the ``opal`` layer.
 
 
-.. seealso:: MPI_T_init:ref:`MPI_T_finalize` 
+.. seealso:: MPI_T_init:ref:`MPI_T_finalize`

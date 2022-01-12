@@ -1,14 +1,18 @@
 .. _mpi_win_get_errhandler:
 
+
 MPI_Win_get_errhandler
 ======================
+
 .. include_body
 
 :ref:`MPI_Win_get_errhandler` - Retrieves the error handler currently
 associated with a window.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_get_errhandler(MPI_Win win, MPI_Errhandler *errhandler)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_WIN_GET_ERRHANDLER(WIN, ERRHANDLER, IERROR)
    	INTEGER WIN, ERRHANDLER, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -42,23 +48,22 @@ Fortran 2008 Syntax
    	TYPE(MPI_Errhandler), INTENT(OUT) :: errhandler
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``win``: Window (handle). 
+INPUT PARAMETER
+---------------
+* ``win``: Window (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``errhandler``: Error handler currently associated with window (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``errhandler``: Error handler currently associated with window (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
 
 :ref:`MPI_Win_get_errhandler` retrieves the error handler currently associated
 with a window.
+
 
 ERRORS
 ------

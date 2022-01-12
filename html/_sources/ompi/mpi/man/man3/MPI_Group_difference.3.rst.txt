@@ -2,6 +2,7 @@
 
 MPI_Group_difference
 ====================
+
 .. include_body
 
 :ref:`MPI_Group_difference` - Makes a group from the difference of two
@@ -90,4 +91,4 @@ Note that MPI does not guarantee that an MPI program can continue past
 an error.
 
 
-.. seealso:: :ref:`MPI_Group_free` 
+.. seealso:: :ref:`MPI_Group_free`

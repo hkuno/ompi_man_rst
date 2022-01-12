@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_CVAR_GET_INFO" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_T_CVAR_GET_INFO" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -45,25 +45,17 @@ int MPI_T_cvar_get_info(int cvar_index, char *name, int *name_len,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBcvar_index\fP: Index of the control variable to be queried.
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETERS
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBname_len\fP: Length of the string and/or buffer for name.
-.IP \(bu 2
-\fBdesc_len\fP: Length of the string and/or buffer for desc.
-.UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBname_len\fP: Length of the string and/or buffer for name.
+* \fBdesc_len\fP: Length of the string and/or buffer for desc.
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBname\fP: Buffer to return the string containing the name of the control variable.
@@ -192,7 +184,16 @@ The control variable index is invalid
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
 ompi_info
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,14 +1,18 @@
 .. _mpi_parrived:
 
+
 MPI_Parrived
 ============
+
 .. include_body
 
 :ref:`MPI_Parrived` - Tests for completion of a specified receive-side
 partition.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Parrived(MPI_Request *request, int partition, int *flag)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    MPI_PARRIVED(REQUEST, PARTITION, FLAG IERROR)
    	INTEGER	REQUEST, PARTITION, FLAG(*), IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -43,19 +49,16 @@ Fortran 2008 Syntax
            INTEGER, INTENT(out) :: flag
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``request``: Communication request (handle). 
-
-* ``partition``: The number of the partition to test for completion (integer). 
+----------------
+* ``request``: Communication request (handle).
+* ``partition``: The number of the partition to test for completion (integer).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``flag``: True if partition is completed. 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``flag``: True if partition is completed.
+* ``IERROR``: Fortran only: Error status (integer).
 
 ERRORS
 ------
@@ -71,4 +74,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | MPI_Pready_list, MPI_Pready_range, :ref:`MPI_Parrived` 
+.. seealso:: 
+   | MPI_Pready_list, MPI_Pready_range, :ref:`MPI_Parrived`

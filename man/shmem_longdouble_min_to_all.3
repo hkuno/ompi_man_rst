@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONGDOUBLE_MIN_TO_ALL" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_LONGDOUBLE_MIN_TO_ALL" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,12 +33,12 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_double_min_to_all\fP(3), \fIshmem_float_min_to_all\fP(3),
-\fIshmem_int_min_to_all\fP(3), \fIshmem_int4_min_to_all\fP(3),
-\fIshmem_int8_min_to_all\fP(3), \fIshmem_long_min_to_all\fP(3),
-\fIshmem_longdouble_min_to_all\fP(3), \fIshmem_longlong_min_to_all\fP(3),
-\fIshmem_real4_min_to_all\fP(3), \fIshmem_real8_min_to_all\fP(3),
-\fIshmem_real16_min_to_all\fP(3), \fIshmem_short_min_to_all\fP(3) \- Performs
+shmem_double_min_to_all(3), shmem_float_min_to_all(3),
+shmem_int_min_to_all(3), shmem_int4_min_to_all(3),
+shmem_int8_min_to_all(3), shmem_long_min_to_all(3),
+\fI\%shmem_longdouble_min_to_all\fP(3), shmem_longlong_min_to_all(3),
+shmem_real4_min_to_all(3), shmem_real8_min_to_all(3),
+shmem_real16_min_to_all(3), shmem_short_min_to_all(3) \- Performs
 a minimum function reduction across a set of processing elements (PEs)
 .SH SYNOPSIS
 .sp
@@ -142,15 +142,15 @@ version of the reduction routine being called. When calling from
 C/C++, refer to the SYNOPSIS section for data type information. When
 calling from Fortran, the target data types are as follows:
 .sp
-\fBshmem_int4_min_to_all\fP: Integer, with an element size of 4 bytes
+shmem_int4_min_to_all: Integer, with an element size of 4 bytes
 .sp
-\fBshmem_int8_min_to_all\fP: Integer, with an element size of 8 bytes
+shmem_int8_min_to_all: Integer, with an element size of 8 bytes
 .sp
-\fBshmem_real4_min_to_all\fP: Real, with an element size of 4 bytes
+shmem_real4_min_to_all: Real, with an element size of 4 bytes
 .sp
-\fBshmem_real8_min_to_all\fP: Real, with an element size of 8 bytes
+shmem_real8_min_to_all: Real, with an element size of 8 bytes
 .sp
-\fBshmem_real16_min_to_all\fP: Real, with an element size of 16 bytes
+shmem_real16_min_to_all: Real, with an element size of 16 bytes
 .INDENT 7.0
 .TP
 \fBsource A symmetric array\fP: of length nreduce elements, that contains one

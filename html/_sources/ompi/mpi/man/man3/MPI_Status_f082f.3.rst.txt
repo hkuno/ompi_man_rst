@@ -2,6 +2,7 @@
 
 MPI_Status_f082f
 ================
+
 .. include_body
 
 :ref:`MPI_Status_f082f`, :ref:`MPI_Status_c2f08` - Translates a Fortran 2008 status
@@ -97,4 +98,4 @@ The Fortran subroutines for these MPI routines are only available in the
 ``TYPE(MPI_Status); they are (intentionally) not available in``\ mpif.h`.
 
 
-.. seealso:: :ref:`MPI_Status_c2f` :ref:`MPI_Status_f2c` :ref:`MPI_Status_f082c` :ref:`MPI_Status_c2f08` 
+.. seealso:: :ref:`MPI_Status_c2f` :ref:`MPI_Status_f2c` :ref:`MPI_Status_f082c` :ref:`MPI_Status_c2f08`

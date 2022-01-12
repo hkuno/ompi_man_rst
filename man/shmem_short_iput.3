@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_SHORT_IPUT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_SHORT_IPUT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,13 +29,13 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-\fIshmem_complex_iput\fP(3), \fIshmem_double_iput\fP(3),
-\fIshmem_float_iput\fP(3), \fIshmem_int_iput\fP(3),
-\fIshmem_integer_iput\fP(3), \fIshmem_iput4\fP(3), \fIshmem_iput8\fP(3),
-\fIshmem_iput32\fP(3), \fIshmem_iput64\fP(3), \fIshmem_iput128\fP(3),
-\fIshmem_logical_iput\fP(3), \fIshmem_long_iput\fP(3),
-\fIshmem_longdouble_iput\fP(3), \fIshmem_longlong_iput\fP(3),
-\fIshmem_real_iput\fP(3), \fIshmem_short_iput\fP(3) \- Transfer strided data
+shmem_complex_iput(3), shmem_double_iput(3),
+shmem_float_iput(3), shmem_int_iput(3),
+shmem_integer_iput(3), shmem_iput4(3), shmem_iput8(3),
+shmem_iput32(3), shmem_iput64(3), shmem_iput128(3),
+shmem_logical_iput(3), shmem_long_iput(3),
+shmem_longdouble_iput(3), shmem_longlong_iput(3),
+shmem_real_iput(3), \fI\%shmem_short_iput\fP(3) \- Transfer strided data
 to a specified processing element (PE).
 .SH SYNOPSIS
 .sp
@@ -165,28 +165,28 @@ The target and source data objects must conform to typing constraints,
 which are as follows:
 .INDENT 0.0
 .TP
-\fBshmem_iput32, shmem_iput4\fP: Any noncharacter type that has a storage size equal
+.B shmem_iput32, shmem_iput4: Any noncharacter type that has a storage size equal
 to 32 bits.
 .TP
-\fBshmem_iput64, shmem_iput8\fP: Any noncharacter type that has a storage size equal
+.B shmem_iput64, shmem_iput8: Any noncharacter type that has a storage size equal
 to 64 bits.
 .UNINDENT
 .sp
-\fBshmem_iput128\fP: Any noncharacter type that has a storage size equal to 128 bits.
+shmem_iput128: Any noncharacter type that has a storage size equal to 128 bits.
 .sp
-\fBshmem_short_iput\fP: Elements of type short.
+\fI\%shmem_short_iput\fP: Elements of type short.
 .sp
-\fBshmem_int_iput\fP: Elements of type int.
+shmem_int_iput: Elements of type int.
 .sp
-\fBshmem_long_iput\fP: Elements of type long.
+shmem_long_iput: Elements of type long.
 .sp
-\fBshmem_longlong_iput\fP: Elements of type long long.
+shmem_longlong_iput: Elements of type long long.
 .sp
-\fBshmem_float_iput\fP: Elements of type float.
+shmem_float_iput: Elements of type float.
 .sp
-\fBshmem_double_iput\fP: Elements of type double.
+shmem_double_iput: Elements of type double.
 .sp
-\fBshmem_longdouble_iput\fP: Elements of type long double.
+shmem_longdouble_iput: Elements of type long double.
 .sp
 \fBSHMEM_COMPLEX_IPUT\fP: Elements of type complex of default size.
 .sp
@@ -247,7 +247,8 @@ main()
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem(3), *shmem_iget(3), *shmem_put(3),\fPshmem_quiet (3)
+\fIintro_shmem\fP(3), shmem_iget(3), shmem_put(3),
+\fIshmem_quiet\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

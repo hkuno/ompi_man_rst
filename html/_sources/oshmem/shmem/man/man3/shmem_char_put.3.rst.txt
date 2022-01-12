@@ -1,17 +1,20 @@
 .. _shmem_char_put:
 
+
 shmem_char_put
 ==============
+
 .. include_body
 
-*shmem_character_put*\ (3), *shmem_complex_put*\ (3),
-*shmem_double_put*\ (3), *shmem_float_put*\ (3), *shmem_int_put*\ (3),
-*shmem_integer_put*\ (3), *shmem_logical_put*\ (3),
-*shmem_long_put*\ (3), *shmem_longdouble_put*\ (3),
-*shmem_longlong_put*\ (3), *shmem_put4*\ (3), *shmem_put8*\ (3),
-*shmem_put32*\ (3), *shmem_put64*\ (3), *shmem_put128*\ (3),
-*shmem_putmem*\ (3), *shmem_real_put*\ (3), *shmem_short_put*\ (3) -
+shmem_character_put\ (3), shmem_complex_put\ (3),
+:ref:`shmem_double_put`\ (3), :ref:`shmem_float_put`\ (3), :ref:`shmem_int_put`\ (3),
+shmem_integer_put\ (3), shmem_logical_put\ (3),
+:ref:`shmem_long_put`\ (3), :ref:`shmem_longdouble_put`\ (3),
+:ref:`shmem_longlong_put`\ (3), shmem_put4\ (3), shmem_put8\ (3),
+:ref:`shmem_put32`\ (3), :ref:`shmem_put64`\ (3), :ref:`shmem_put128`\ (3),
+:ref:`shmem_putmem`\ (3), shmem_real_put\ (3), :ref:`shmem_short_put`\ (3) -
 Transfers data to a specified processing element (PE)
+
 
 SYNOPSIS
 --------
@@ -91,6 +94,7 @@ Fortran:
 
    CALL SHMEM_REAL_PUT(target, source, len, pe)
 
+
 DESCRIPTION
 -----------
 
@@ -102,7 +106,7 @@ transfer and may return before the data is delivered to the remote PE.
 The delivery of data into the data object on the destination PE from
 different put calls may occur in any order. Because of this, two
 successive put operations may deliver data out of order unless a call to
-*shmem_fence*\ (3) is introduced between the two calls.
+:ref:`shmem_fence`\ (3) is introduced between the two calls.
 
 The arguments are as follows:
 
@@ -126,31 +130,31 @@ pe
 The target and source data objects must conform to certain typing
 constraints, which are as follows:
 
-**shmem_putmem**: Fortran: Any noncharacter type. C: Any data type. len is scaled in
+:ref:`shmem_putmem`: Fortran: Any noncharacter type. C: Any data type. len is scaled in
    bytes.
 
-**shmem_put4, shmem_put32:** Any noncharacter type that has a storage size
+shmem_put4, :ref:`shmem_put32`:** Any noncharacter type that has a storage size
    equal to 32 bits.
 
-**shmem_put8, shmem_put64:** Any noncharacter type that has a storage size
+shmem_put8, :ref:`shmem_put64`:** Any noncharacter type that has a storage size
    equal to 64 bits.
 
-**shmem_put128:** Any noncharacter type that has a storage size equal to 128
+:ref:`shmem_put128`:** Any noncharacter type that has a storage size equal to 128
    bits.
 
-**shmem_short_put:** Elements of type short.
+:ref:`shmem_short_put`:** Elements of type short.
 
-**shmem_int_put:** Elements of type int.
+:ref:`shmem_int_put`:** Elements of type int.
 
-**shmem_long_put:** Elements of type long.
+:ref:`shmem_long_put`:** Elements of type long.
 
-**shmem_longlong_put:** Elements of type long long.
+:ref:`shmem_longlong_put`:** Elements of type long long.
 
-**shmem_float_put:** Elements of type float.
+:ref:`shmem_float_put`:** Elements of type float.
 
-**shmem_double_put:** Elements of type double.
+:ref:`shmem_double_put`:** Elements of type double.
 
-**shmem_longdouble_put:** Elements of type long double.
+:ref:`shmem_longdouble_put`:** Elements of type long double.
 
 **SHMEM_CHARACTER_PUT:** Elements of type character. len is the number of
    characters to transfer. The actual character lengths of the source
@@ -168,6 +172,7 @@ constraints, which are as follows:
    If you are using Fortran, data types must be of default size. For
    example, a real variable must be declared as REAL, REAL*4, or
    REAL(KIND=4).
+
 
 EXAMPLES
 --------
@@ -197,4 +202,5 @@ The following shmem_put example is for C/C++ programs:
    }
 
 
-.. seealso:: *intro_shmem\ (3), *shmem_iput\ (3), *:ref:`shmem_quiet` \ (3)
+.. seealso:: 
+   *intro_shmem*\ (3), *shmem_iput*\ (3), *shmem_quiet*\ (3)

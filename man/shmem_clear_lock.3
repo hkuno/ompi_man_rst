@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_CLEAR_LOCK" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_CLEAR_LOCK" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,7 +33,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_set_lock\fP(3), \fIshmem_clear_lock\fP(3), \fIshmem_test_lock\fP(3) \-
+shmem_set_lock(3), \fI\%shmem_clear_lock\fP(3), shmem_test_lock(3) \-
 Releases, locks, and tests a mutual exclusion memory lock.
 .SH SYNOPSIS
 .sp
@@ -81,7 +81,7 @@ for the lock to be freed by any other PE currently holding the lock.
 Waiting PEs are assured of getting the lock in a first\-come,
 first\-served manner.
 .sp
-The shmem_clear_lock routine releases a lock previously set by
+The \fI\%shmem_clear_lock\fP routine releases a lock previously set by
 shmem_set_lock after ensuring that all local and remote stores initiated
 in the critical region are complete.
 .sp
@@ -102,9 +102,7 @@ If you are using Fortran, it must be of default kind.
 .SH NOTES
 .sp
 The term symmetric data object is defined on \fIintro_shmem\fP(3).
-.sp
-RETURN VALUES
-\-\-\-\-\-\- \-\-\-\-\-\-
+.SH RETURN VALUES
 .sp
 The shmem_test_lock function returns 0 if the lock was originally
 cleared and this call was able to set the lock. A value of 1 is returned

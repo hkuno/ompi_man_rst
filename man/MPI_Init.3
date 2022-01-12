@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_INIT" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_INIT" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -70,18 +70,14 @@ MPI_Init(ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBargc\fP: C only: Pointer to the number of arguments.
 .IP \(bu 2
 \fBargv\fP: C only: Argument vector.
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -139,7 +135,14 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Init_thread    MPI_Initialized    MPI_Finalize    MPI_Finalized
+MPI_Init_thread
+MPI_Initialized
+MPI_Finalize
+.INDENT 0.0
+.INDENT 3.5
+MPI_Finalized
+.UNINDENT
+.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

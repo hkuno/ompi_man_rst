@@ -1,14 +1,18 @@
 .. _mpi_win_sync:
 
+
 MPI_Win_sync
 ============
+
 .. include_body
 
 :ref:`MPI_Win_sync`, - Synchronize the private and public copies of the
 window
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Win_sync (MPI_Win win)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_WIN_SYNC(WIN, IERROR)
    	INTEGER WIN, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -41,15 +47,14 @@ Fortran 2008 Syntax
    	TYPE(MPI_Win), INTENT(IN) :: win
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETERS
------ ----------
 
-* ``win``: Window object (handle). 
+INPUT PARAMETERS
+----------------
+* ``win``: Window object (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -59,6 +64,7 @@ DESCRIPTION
 :ref:`MPI_Win_sync` has the effect of ending and reopening an access and
 exposure epoch on the window (note that it does not actually end an
 epoch or complete any pending MPI RMA operations).
+
 
 ERRORS
 ------

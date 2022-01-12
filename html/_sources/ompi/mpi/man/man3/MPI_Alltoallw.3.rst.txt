@@ -1,15 +1,19 @@
 .. _mpi_alltoallw:
 
+
 MPI_Alltoallw
 =============
+
 .. include_body
 
 :ref:`MPI_Alltoallw`, :ref:`MPI_Ialltoallw`, :ref:`MPI_Alltoallw_init` - All processes
 send data of different types to, and receive data of different types
 from, all processes
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -34,6 +38,7 @@ C Syntax
    	void *recvbuf, const int recvcounts[], const int rdispls[],
    	const MPI_Datatype recvtypes[], MPI_Comm comm, MPI_Info info,
    	MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -66,6 +71,7 @@ Fortran Syntax
    	INTEGER	SENDCOUNTS(*), SDISPLS(*), SENDTYPES(*)
    	INTEGER	RECVCOUNTS(*), RDISPLS(*), RECVTYPES(*)
    	INTEGER	COMM, INFO, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -113,35 +119,24 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Starting address of send buffer. 
-
-* ``sendcounts``: Integer array, where entry i specifies the number of elements to send to rank i. 
-
-* ``sdispls``: Integer array, where entry i specifies the displacement (in bytes, offset from *sendbuf) from which to send data to rank i.* 
-
-* ``sendtypes``: Datatype array, where entry i specifies the datatype to use when sending data to rank i. 
-
-* ``recvcounts``: Integer array, where entry j specifies the number of elements to receive from rank j. 
-
-* ``rdispls``: Integer array, where entry j specifies the displacement (in bytes, offset from *recvbuf) to which data from rank j should* be written. 
-
-* ``recvtypes``: Datatype array, where entry j specifies the datatype to use when receiving data from rank j. 
-
-* ``comm``: Communicator over which data is to be exchanged. 
-
-* ``info``: Info (handle, persistent only) 
+----------------
+* ``sendbuf``: Starting address of send buffer.
+* ``sendcounts``: Integer array, where entry i specifies the number of elements to send to rank i.
+* ``sdispls``: Integer array, where entry i specifies the displacement (in bytes, offset from *sendbuf) from which to send data to rank i.*
+* ``sendtypes``: Datatype array, where entry i specifies the datatype to use when sending data to rank i.
+* ``recvcounts``: Integer array, where entry j specifies the number of elements to receive from rank j.
+* ``rdispls``: Integer array, where entry j specifies the displacement (in bytes, offset from *recvbuf) to which data from rank j should* be written.
+* ``recvtypes``: Datatype array, where entry j specifies the datatype to use when receiving data from rank j.
+* ``comm``: Communicator over which data is to be exchanged.
+* ``info``: Info (handle, persistent only)
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Address of receive buffer. 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status. 
+-----------------
+* ``recvbuf``: Address of receive buffer.
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status.
 
 DESCRIPTION
 -----------
@@ -195,8 +190,9 @@ use the rank of the root process in the first group as the value of
 When the communicator is an intra-communicator, these groups are the
 same, and the operation occurs in a single phase.
 
+
 USE OF IN-PLACE OPTION
---- -- -------- ------
+----------------------
 
 When the communicator is an intracommunicator, you can perform an
 all-to-all operation in-place (the output buffer is used as the input
@@ -204,6 +200,7 @@ buffer). Use the variable MPI_IN_PLACE as the value of *sendbuf*. In
 this case, *sendcounts*, *sdispls*, and *sendtypes* are ignored. The
 input data of each process is assumed to be in the area where that
 process would receive its own contribution to the receive buffer.
+
 
 NOTES
 -----
@@ -217,6 +214,7 @@ particular, must describe the same communicator on all processes.
 The offsets of *sdispls* and *rdispls* are measured in bytes. Compare
 this to :ref:`MPI_Alltoallv`, where these offsets are measured in units of
 *sendtype* and *recvtype*, respectively.
+
 
 ERRORS
 ------
@@ -232,4 +230,8 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Alltoall`    :ref:`MPI_Alltoallv` 
+.. seealso:: 
+   ::
+
+   MPI_Alltoall
+      MPI_Alltoallv

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ACCUMULATE" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_ACCUMULATE" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -110,9 +110,7 @@ MPI_Raccumulate(origin_addr, origin_count, origin_datatype, target_rank,
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBorigin_addr\fP: Initial address of buffer (choice).
@@ -133,9 +131,7 @@ INPUT PARAMETERS
 .IP \(bu 2
 \fBwin\fP: Window object (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBMPI_Raccumulate\fP:  RMA request
@@ -176,9 +172,7 @@ request handle (the argument \fIrequest\fP) that can be used to wait or test
 for completion. The completion of an MPI_Raccumulate operation
 indicates that the \fIorigin_addr\fP buffer is free to be updated. It does
 not indicate that the operation has completed at the target window.
-.sp
-FORTRAN 77 NOTES
-\-\-\-\-\-\-\- \-\- \-\-\-\-\-
+.SH FORTRAN 77 NOTES
 .sp
 The MPI standard prescribes portable Fortran syntax for the
 \fITARGET_DISP\fP argument only for Fortran 90. FORTRAN 77 users may use the
@@ -221,7 +215,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Put  MPI_Get_accumulate  MPI_Reduce
+MPI_Put MPI_Get_accumulate MPI_Reduce
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,13 +1,17 @@
 .. _mpi_comm_free:
 
+
 MPI_Comm_free
 =============
+
 .. include_body
 
 :ref:`MPI_Comm_free` - Mark a communicator object for deallocation.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_free(MPI_Comm *comm)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -29,6 +34,7 @@ Fortran Syntax
    MPI_COMM_FREE(COMM, IERROR)
    	INTEGER	COMM, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -40,15 +46,14 @@ Fortran 2008 Syntax
    	TYPE(MPI_Comm), INTENT(INOUT) :: comm
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``comm``: Communicator to be destroyed (handle). 
+INPUT PARAMETER
+---------------
+* ``comm``: Communicator to be destroyed (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -61,6 +66,7 @@ intracommunicators and intercommunicators. Upon actual deallocation, the
 delete callback functions for all cached attributes (see Section 5.7 in
 the MPI-1 Standard, "Caching") are called in arbitrary order.
 
+
 NOTES
 -----
 
@@ -69,6 +75,7 @@ delete_fn callback invokes other MPI functions. In Open MPI, it is not
 valid for delete_fn callbacks (or any of their children) to add or
 delete attributes on the same object on which the delete_fn callback is
 being invoked.
+
 
 ERRORS
 ------
@@ -84,4 +91,7 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Comm_delete_attr` 
+.. seealso:: 
+   ::
+
+      MPI_Comm_delete_attr

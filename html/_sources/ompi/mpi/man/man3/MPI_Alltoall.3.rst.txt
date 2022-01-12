@@ -1,14 +1,18 @@
 .. _mpi_alltoall:
 
+
 MPI_Alltoall
 ============
+
 .. include_body
 
 :ref:`MPI_Alltoall`, :ref:`MPI_Ialltoall`, :ref:`MPI_Alltoall_init` - All processes send
 data to all processes
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -28,6 +32,7 @@ C Syntax
    int MPI_Alltoall_init(const void *sendbuf, int sendcount,
    	MPI_Datatype sendtype, void *recvbuf, int recvcount,
    	MPI_Datatype recvtype, MPI_Comm comm, MPI_Info info, MPI_Request *request)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -57,6 +62,7 @@ Fortran Syntax
    	<type>	SENDBUF(*), RECVBUF(*)
    	INTEGER	SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE
    	INTEGER	COMM, INFO, REQUEST, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -98,31 +104,22 @@ Fortran 2008 Syntax
    	TYPE(MPI_Request), INTENT(OUT) :: request
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``sendbuf``: Starting address of send buffer (choice). 
-
-* ``sendcount``: Number of elements to send to each process (integer). 
-
-* ``sendtype``: Datatype of send buffer elements (handle). 
-
-* ``recvcount``: Number of elements to receive from each process (integer). 
-
-* ``recvtype``: Datatype of receive buffer elements (handle). 
-
-* ``comm``: Communicator over which data is to be exchanged (handle). 
-
-* ``info``: Info (handle, persistent only) 
+----------------
+* ``sendbuf``: Starting address of send buffer (choice).
+* ``sendcount``: Number of elements to send to each process (integer).
+* ``sendtype``: Datatype of send buffer elements (handle).
+* ``recvcount``: Number of elements to receive from each process (integer).
+* ``recvtype``: Datatype of receive buffer elements (handle).
+* ``comm``: Communicator over which data is to be exchanged (handle).
+* ``info``: Info (handle, persistent only)
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``recvbuf``: Starting address of receive buffer (choice). 
-
-* ``request``: Request (handle, non-blocking only). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``recvbuf``: Starting address of receive buffer (choice).
+* ``request``: Request (handle, non-blocking only).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -170,8 +167,9 @@ use the rank of the root process in the first group as the value of
 When the communicator is an intra-communicator, these groups are the
 same, and the operation occurs in a single phase.
 
+
 USE OF IN-PLACE OPTION
---- -- -------- ------
+----------------------
 
 When the communicator is an intracommunicator, you can perform an
 all-to-all operation in-place (the output buffer is used as the input
@@ -179,6 +177,7 @@ buffer). Use the variable MPI_IN_PLACE as the value of *sendbuf*. In
 this case, *sendcount* and *sendtype* are ignored. The input data of
 each process is assumed to be in the area where that process would
 receive its own contribution to the receive buffer.
+
 
 NOTES
 -----
@@ -191,6 +190,7 @@ There are two MPI library functions that are more general than
 buffers that need not be contiguous; different processes may send and
 receive different amounts of data. :ref:`MPI_Alltoallw` expands :ref:`MPI_Alltoallv`'s
 functionality to allow the exchange of data with different datatypes.
+
 
 ERRORS
 ------
@@ -206,4 +206,8 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso::    :ref:`MPI_Alltoallv`    :ref:`MPI_Alltoallw` 
+.. seealso:: 
+   ::
+
+   MPI_Alltoallv
+      MPI_Alltoallw

@@ -1,13 +1,17 @@
 .. _mpi_type_create_darray:
 
+
 MPI_Type_create_darray
 ======================
+
 .. include_body
 
 :ref:`MPI_Type_create_darray` - Creates a distributed array datatype;
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -20,6 +24,7 @@ C Syntax
    	const int array_of_gsizes[], const int array_of_distribs[],
    	const int array_of_dargs[], const int array_of_psizes[],
    	int order, MPI_Datatype oldtype, MPI_Datatype *newtype)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -36,6 +41,7 @@ Fortran Syntax
    	INTEGER	SIZE, RANK, NDIMS, ARRAY_OF_GSIZES(*), ARRAY_OF_DISTRIBS(*),
    		ARRAY_OF_DARGS(*), ARRAY_OF_PSIZES(*), ORDER, OLDTYPE,
    		NEWTYPE, IERROR
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -54,33 +60,23 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(OUT) :: newtype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``size``: Size of process group (positive integer). 
-
-* ``rank``: Rank in process group (nonnegative integer). 
-
-* ``ndims``: Number of array dimensions as well as process grid dimensions (positive integer). 
-
-* ``array_of_gsizes``: Number of elements of type *oldtype* in each dimension of global array (array of positive integers). 
-
-* ``array_of_distribs``: Distribution of array in each dimension (array of state). 
-
-* ``array_of_dargs``: Distribution argument in each dimension (array of positive integers). 
-
-* ``array_of_psizes``: Size of process grid in each dimension (array of positive integers). 
-
-* ``order``: Array storage order flag (state). 
-
-* ``oldtype``: Old data type (handle). 
+----------------
+* ``size``: Size of process group (positive integer).
+* ``rank``: Rank in process group (nonnegative integer).
+* ``ndims``: Number of array dimensions as well as process grid dimensions (positive integer).
+* ``array_of_gsizes``: Number of elements of type *oldtype* in each dimension of global array (array of positive integers).
+* ``array_of_distribs``: Distribution of array in each dimension (array of state).
+* ``array_of_dargs``: Distribution argument in each dimension (array of positive integers).
+* ``array_of_psizes``: Size of process grid in each dimension (array of positive integers).
+* ``order``: Array storage order flag (state).
+* ``oldtype``: Old data type (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newtype``: New data type (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newtype``: New data type (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -152,6 +148,7 @@ Finally, MPI_DISTRIBUTE_CYCLIC with *array_of_dargs[i]* equal to
 MPI_DISTRIBUTE_DFLT_DARG is equivalent to MPI_DISTRIBUTE_CYCLIC with
 *array_of_dargs[i]* set to 1.
 
+
 NOTES
 -----
 
@@ -161,6 +158,7 @@ used in virtual Cartesian process topologies in MPI-1. To create such
 virtual process topologies, or to find the coordinates of a process in
 the process grid, etc., users may use the corresponding functions
 provided in MPI-1.
+
 
 ERRORS
 ------

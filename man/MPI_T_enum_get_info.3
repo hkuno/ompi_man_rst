@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_ENUM_GET_INFO" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_T_ENUM_GET_INFO" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,23 +43,16 @@ int MPI_T_enum_get_info(MPI_T_enum enumtype, int *num, char *name, int *name_len
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBenumtype\fP: Enumerator to be queried.
 .UNINDENT
 .sp
 INPUT/OUTPUT PARAMETERS
-\-\-\-\-\-/\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
-.INDENT 0.0
-.IP \(bu 2
-\fBname_len\fP: Length of the string and/or buffer for name.
-.UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+\-\-\-\-\-/\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+* \fBname_len\fP: Length of the string and/or buffer for name.
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBnum\fP: number of discrete values represented by this enumeration.

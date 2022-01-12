@@ -1,13 +1,17 @@
 .. _mpi_wtick:
 
+
 MPI_Wtick
 =========
+
 .. include_body
 
 :ref:`MPI_Wtick` - Returns the resolution of :ref:`MPI_Wtime`.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -17,6 +21,7 @@ C Syntax
 
    #include <mpi.h>
    double MPI_Wtick()
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -28,6 +33,7 @@ Fortran Syntax
    ! or the older form: INCLUDE 'mpif.h'
    DOUBLE PRECISION MPI_WTICK()
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -37,10 +43,12 @@ Fortran 2008 Syntax
    USE mpi_f08
    DOUBLE PRECISION MPI_WTICK()
 
+
 RETURN VALUE
------- -----
+------------
 
 Time in seconds of resolution of :ref:`MPI_Wtime`.
+
 
 DESCRIPTION
 -----------
@@ -51,6 +59,7 @@ successive clock ticks. For example, if the clock is implemented by the
 hardware as a counter that is incremented every millisecond, the value
 returned by :ref:`MPI_Wtick` should be 10^-3.
 
+
 NOTE
 ----
 
@@ -58,4 +67,5 @@ This function does not return an error value. Consequently, the result
 of calling it before :ref:`MPI_Init` or after :ref:`MPI_Finalize` is undefined.
 
 
-.. seealso:: :ref:`MPI_Wtime` 
+.. seealso:: 
+   :ref:`MPI_Wtime`

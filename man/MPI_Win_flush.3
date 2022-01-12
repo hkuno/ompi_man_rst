@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_FLUSH" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_WIN_FLUSH" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -82,18 +82,14 @@ MPI_Win_flush_all(win, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETERS
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBrank\fP: Rank of window (nonnegative integer).
 .IP \(bu 2
 \fBwin\fP: Window object (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETER
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBIERROR\fP: Fortran only: Error status (integer).
@@ -124,7 +120,7 @@ error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Win_flush_local  MPI_Win_lock  MPI_Win_lock_all
+MPI_Win_flush_local MPI_Win_lock MPI_Win_lock_all
 .fi
 .sp
 .UNINDENT

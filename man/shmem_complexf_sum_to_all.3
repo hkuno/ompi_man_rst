@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_COMPLEXF_SUM_TO_ALL" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "SHMEM_COMPLEXF_SUM_TO_ALL" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,14 +33,14 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .UNINDENT
 .UNINDENT
 .sp
-\fIshmem_comp4_sum_to_all\fP(3), \fIshmem_comp8_sum_to_all\fP(3),
-\fIshmem_complexd_sum_to_all\fP(3), \fIshmem_complexf_sum_to_all\fP(3),
-\fIshmem_double_sum_to_all\fP(3), \fIshmem_float_sum_to_all\fP(3),
-\fIshmem_int_sum_to_all\fP(3), \fIshmem_int4_sum_to_all\fP(3),
-\fIshmem_int8_sum_to_all\fP(3), \fIshmem_long_sum_to_all\fP(3),
-\fIshmem_longdouble_sum_to_all\fP(3), \fIshmem_longlong_sum_to_all\fP(3),
-\fIshmem_real4_sum_to_all\fP(3), \fIshmem_real8_sum_to_all\fP(3),
-\fIshmem_real16_sum_to_all\fP(3), \fIshmem_short_sum_to_all\fP(3) \- Performs
+shmem_comp4_sum_to_all(3), shmem_comp8_sum_to_all(3),
+shmem_complexd_sum_to_all(3), \fI\%shmem_complexf_sum_to_all\fP(3),
+shmem_double_sum_to_all(3), shmem_float_sum_to_all(3),
+shmem_int_sum_to_all(3), shmem_int4_sum_to_all(3),
+shmem_int8_sum_to_all(3), shmem_long_sum_to_all(3),
+shmem_longdouble_sum_to_all(3), shmem_longlong_sum_to_all(3),
+shmem_real4_sum_to_all(3), shmem_real8_sum_to_all(3),
+shmem_real16_sum_to_all(3), shmem_short_sum_to_all(3) \- Performs
 a sum reduction across a set of processing elements (PEs)
 .SH SYNOPSIS
 .sp
@@ -182,27 +182,27 @@ When calling from Fortran, the target data types are as follows:
 .fi
 .sp
 .sp
-\fBshmem_comp4_sum_to_all:\fP COMPLEX(KIND=4).
+shmem_comp4_sum_to_all:** COMPLEX(KIND=4).
 .INDENT 7.0
 .TP
-\fBshmem_comp8_sum_to_all:\fP Complex. If you are using Fortran, it must be
+.B shmem_comp8_sum_to_all:** Complex. If you are using Fortran, it must be
 a default complex value.
 .UNINDENT
 .sp
-\fBshmem_int4_sum_to_all:\fP INTEGER(KIND=4).
+shmem_int4_sum_to_all:** INTEGER(KIND=4).
 .INDENT 7.0
 .TP
-\fBshmem_int8_sum_to_all:\fP Integer. If you are using Fortran, it must be a
+.B shmem_int8_sum_to_all:** Integer. If you are using Fortran, it must be a
 default integer value.
 .UNINDENT
 .sp
-\fBshmem_real4_sum_to_all:\fP REAL(KIND=4).
+shmem_real4_sum_to_all:** REAL(KIND=4).
 .INDENT 7.0
 .TP
-\fBshmem_real8_sum_to_all:\fP Real. If you are using Fortran, it must be a
+.B shmem_real8_sum_to_all:** Real. If you are using Fortran, it must be a
 default real value.
 .TP
-\fBshmem_real16_sum_to_all:\fP Real. If you are using Fortran, it must be a
+.B shmem_real16_sum_to_all:** Real. If you are using Fortran, it must be a
 default real value.
 .UNINDENT
 .TP

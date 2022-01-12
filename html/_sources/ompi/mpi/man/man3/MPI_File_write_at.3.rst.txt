@@ -1,14 +1,18 @@
 .. _mpi_file_write_at:
 
+
 MPI_File_write_at
 =================
+
 .. include_body
 
 :ref:`MPI_File_write_at` - Writes a file at an explicitly specified offset
 (blocking, noncollective).
 
+
 SYNTAX
 ------
+
 
 
 C Syntax
@@ -20,6 +24,7 @@ C Syntax
    #include <mpi.h>
    int MPI_File_write_at(MPI_File fh, MPI_Offset offset, const void *buf,
    	int count, MPI_Datatype datatype, MPI_Status *status)
+
 
 Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -34,6 +39,7 @@ Fortran Syntax (see FORTRAN 77 NOTES)
    	<type>	BUF(*)
    	INTEGER	FH, COUNT, DATATYPE, STATUS(MPI_STATUS_SIZE), IERROR
    	INTEGER(KIND=MPI_OFFSET_KIND)	OFFSET
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -51,25 +57,19 @@ Fortran 2008 Syntax
    	TYPE(MPI_Status) :: status
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``fh``: File handle (handle). 
-
-* ``offset``: File offset (integer). 
-
-* ``buf``: Initial address of buffer (choice). 
-
-* ``count``: Number of elements in buffer (integer). 
-
-* ``datatype``: Data type of each buffer element (handle). 
+----------------
+* ``fh``: File handle (handle).
+* ``offset``: File offset (integer).
+* ``buf``: Initial address of buffer (choice).
+* ``count``: Number of elements in buffer (integer).
+* ``datatype``: Data type of each buffer element (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``status``: Status object (status). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``status``: Status object (status).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -86,8 +86,9 @@ specified by the current view. :ref:`MPI_File_write_at` stores the number of
 It is erroneous to call this function if MPI_MODE_SEQUENTIAL mode was
 specified when the file was opened.
 
+
 FORTRAN 77 NOTES
-------- -- -----
+----------------
 
 The MPI standard prescribes portable Fortran syntax for the *OFFSET*
 argument only for Fortran 90. FORTRAN 77 users may use the non-portable
@@ -99,6 +100,7 @@ syntax
 
 where MPI_OFFSET_KIND is a constant defined in mpif.h and gives the
 length of the declared integer in bytes.
+
 
 ERRORS
 ------
@@ -114,4 +116,8 @@ MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_File_iwrite_at` | :ref:`MPI_File_write_at_all` | :ref:`MPI_File_write_at_all_begin` | :ref:`MPI_File_write_at_all_end` 
+.. seealso:: 
+   | :ref:`MPI_File_iwrite_at`
+   | :ref:`MPI_File_write_at_all`
+   | :ref:`MPI_File_write_at_all_begin`
+   | :ref:`MPI_File_write_at_all_end`

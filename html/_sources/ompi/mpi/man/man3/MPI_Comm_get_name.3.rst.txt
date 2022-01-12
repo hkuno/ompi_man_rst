@@ -1,14 +1,18 @@
 .. _mpi_comm_get_name:
 
+
 MPI_Comm_get_name
 =================
+
 .. include_body
 
 :ref:`MPI_Comm_get_name` - Returns the name that was most recently
 associated with a communicator.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
 
    #include <mpi.h>
    int MPI_Comm_get_name(MPI_Comm comm, char *comm_name, int *resultlen)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -30,6 +35,7 @@ Fortran Syntax
    MPI_COMM_GET_NAME(COMM, COMM_NAME, RESULTLEN, IERROR)
    	INTEGER	COMM, RESULTLEN, IERROR
    	CHARACTER*(*) COMM_NAME
+
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
@@ -44,19 +50,16 @@ Fortran 2008 Syntax
    	INTEGER, INTENT(OUT) :: resultlen
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
-INPUT PARAMETER
------ ---------
 
-* ``comm``: Communicator the name of which is to be returned (handle). 
+INPUT PARAMETER
+---------------
+* ``comm``: Communicator the name of which is to be returned (handle).
 
 OUTPUT PARAMETER
------- ---------
-
-* ``comm_name``: Name previously stored on the communicator, or an empty string if no such name exists (string). 
-
-* ``resultlen``: Length of returned name (integer). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+----------------
+* ``comm_name``: Name previously stored on the communicator, or an empty string if no such name exists (string).
+* ``resultlen``: Length of returned name (integer).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -78,6 +81,7 @@ system may have chosen to give a default name to a communicator does not
 prevent the user from setting a name on the same communicator; doing
 this removes the old name and assigns the new one.
 
+
 NOTES
 -----
 
@@ -92,6 +96,7 @@ names with communicators. However debugging and profiling MPI
 applications may be made easier if names are associated with
 communicators, since the debugger or profiler should then be able to
 present information in a less cryptic manner.
+
 
 ERRORS
 ------

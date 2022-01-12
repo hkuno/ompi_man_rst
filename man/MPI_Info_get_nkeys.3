@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_INFO_GET_NKEYS" "3" "Jan 05, 2022" "" "Open MPI"
+.TH "MPI_INFO_GET_NKEYS" "3" "Jan 11, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -73,16 +73,12 @@ MPI_Info_get_nkeys(info, nkeys, ierror)
 .fi
 .UNINDENT
 .UNINDENT
-.sp
-INPUT PARAMETER
-\-\-\-\-\- \-\-\-\-\-\-\-\-\-
+.SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
 \fBinfo\fP: Info object (handle).
 .UNINDENT
-.sp
-OUTPUT PARAMETERS
-\-\-\-\-\-\- \-\-\-\-\-\-\-\-\-\-
+.SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
 \fBnkeys\fP: Number of defined keys (integer).
@@ -109,7 +105,9 @@ guarantee that an MPI program can continue past an error.
 .INDENT 0.0
 .INDENT 3.5
 .nf
-MPI_Info_get | MPI_Info_get_nthkey | MPI_Info_get_valuelen
+MPI_Info_get
+MPI_Info_get_nthkey
+MPI_Info_get_valuelen
 .fi
 .sp
 .UNINDENT

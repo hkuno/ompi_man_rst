@@ -1,13 +1,17 @@
 .. _mpi_type_vector:
 
+
 MPI_Type_vector
 ===============
+
 .. include_body
 
 :ref:`MPI_Type_vector` - Creates a vector (strided) datatype.
 
+
 SYNTAX
 ------
+
 
 C Syntax
 ^^^^^^^^
@@ -18,6 +22,7 @@ C Syntax
    #include <mpi.h>
    int MPI_Type_vector(int count, int blocklength, int stride,
    	MPI_Datatype oldtype, MPI_Datatype *newtype)
+
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
@@ -32,6 +37,7 @@ Fortran Syntax
    	INTEGER	COUNT, BLOCKLENGTH, STRIDE, OLDTYPE
    	INTEGER	NEWTYPE, IERROR
 
+
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
@@ -45,23 +51,18 @@ Fortran 2008 Syntax
    	TYPE(MPI_Datatype), INTENT(OUT) :: newtype
    	INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
+
 INPUT PARAMETERS
------ ----------
-
-* ``count``: Number of blocks (nonnegative integer). 
-
-* ``blocklength``: Number of elements in each block (nonnegative integer). 
-
-* ``stride``: Number of elements between start of each block (integer). 
-
-* ``oldtype``: Old datatype (handle). 
+----------------
+* ``count``: Number of blocks (nonnegative integer).
+* ``blocklength``: Number of elements in each block (nonnegative integer).
+* ``stride``: Number of elements between start of each block (integer).
+* ``oldtype``: Old datatype (handle).
 
 OUTPUT PARAMETERS
------- ----------
-
-* ``newtype``: New datatype (handle). 
-
-* ``IERROR``: Fortran only: Error status (integer). 
+-----------------
+* ``newtype``: New datatype (handle).
+* ``IERROR``: Fortran only: Error status (integer).
 
 DESCRIPTION
 -----------
@@ -125,6 +126,7 @@ A call to MPI_Type_contiguous(count, oldtype, newtype) is equivalent to
 a call to MPI_Type_vector(count, 1, 1, oldtype, newtype), or to a call
 to MPI_Type_vector(1, count, n, oldtype, newtype), n arbitrary.
 
+
 ERRORS
 ------
 
@@ -139,4 +141,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: | :ref:`MPI_Type_create_hvector` | :ref:`MPI_Type_hvector` 
+.. seealso:: 
+   | :ref:`MPI_Type_create_hvector`
+   | :ref:`MPI_Type_hvector`
