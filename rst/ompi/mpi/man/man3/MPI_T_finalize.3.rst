@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_finalize(void)
 
 
@@ -53,7 +53,7 @@ MPI_T_finalize() will fail if:
    The MPI Tools interface not initialized
 
 
-.. seealso:: 
+.. seealso::
    ::
 
       MPI_T_init_thread

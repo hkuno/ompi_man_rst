@@ -17,23 +17,22 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void *shmem_malloc(size_t size);
-   void *shmalloc(size_t size);
+   void *shmem_malloc(size_t size)
+   void *shmalloc(size_t size)
 
-   void shmem_free(void *ptr);
-   void shfree(void *ptr);
+   void shmem_free(void *ptr)
+   void shfree(void *ptr)
 
-   void *shmem_realloc(void *ptr, size_t size);
-   void *shrealloc(void *ptr, size_t size);
+   void *shmem_realloc(void *ptr, size_t size)
+   void *shrealloc(void *ptr, size_t size)
 
-   void *shmem_align(size_t alignment, size_t size);
-   void *shmemalign(size_t alignment, size_t size);
+   void *shmem_align(size_t alignment, size_t size)
+   void *shmemalign(size_t alignment, size_t size)
 
-   extern long malloc_error;
+   extern long malloc_error
 
 
 DESCRIPTION
@@ -103,5 +102,5 @@ space (which may have moved); otherwise, it returns a null pointer (with
 malloc_error set).
 
 
-.. seealso:: 
-   *intro_shmem*\ (3), *shmem_my_pe*\ (3I), *shmem_init*\ (3)
+.. seealso::
+   *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)

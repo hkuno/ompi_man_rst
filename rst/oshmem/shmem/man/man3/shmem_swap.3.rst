@@ -19,28 +19,26 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
    double shmem_double_swap(double *target, double value,
-     int pe);
+     int pe)
 
-   float shmem_float_swap(float *target, float value, int pe);
+   float shmem_float_swap(float *target, float value, int pe)
 
-   int shmem_int_swap(int *target, int value, int pe);
+   int shmem_int_swap(int *target, int value, int pe)
 
-   long shmem_long_swap(long *target, long value, int pe);
+   long shmem_long_swap(long *target, long value, int pe)
 
    long long shmem_longlong_swap(long long *target,
-     long long value, int pe);
+     long long value, int pe)
 
-   long shmem_swap(long *target, long value, int pe);
+   long shmem_swap(long *target, long value, int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -109,5 +107,5 @@ The contents that had been at the target address on the remote PE prior
 to the swap is returned.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

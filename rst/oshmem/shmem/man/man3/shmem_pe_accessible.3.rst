@@ -16,16 +16,14 @@ SYNOPSIS
 C:
 
 .. code-block:: c
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   int shmem_pe_accessible(int pe);
+   int shmem_pe_accessible(int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -55,5 +53,5 @@ Fortran
    for SHMEM functions; otherwise, it is .FALSE..
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_addr_accessible*\ (3)

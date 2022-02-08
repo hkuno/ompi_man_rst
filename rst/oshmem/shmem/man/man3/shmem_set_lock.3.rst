@@ -16,20 +16,18 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void shmem_clear_lock(volatile long *lock);
+   void shmem_clear_lock(volatile long *lock)
 
-   void shmem_set_lock(volatile long *lock);
+   void shmem_set_lock(volatile long *lock)
 
-   int shmem_test_lock(volatile long *lock);
+   int shmem_test_lock(volatile long *lock)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -83,5 +81,5 @@ if the lock had been set and the call returned without waiting to set
 the lock.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

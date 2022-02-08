@@ -19,9 +19,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Type_get_true_extent(MPI_Datatype datatype,
    	MPI_Aint *true_lb, MPI_Aint *true_extent)
    int MPI_Type_get_true_extent_x(MPI_Datatype datatype,
@@ -32,7 +32,6 @@ Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -48,7 +47,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Type_get_true_extent(datatype, true_lb, true_extent, ierror)

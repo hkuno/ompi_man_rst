@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Alloc_mem(MPI_Aint size, MPI_Info info, void *baseptr)
 
 
@@ -27,7 +27,6 @@ Fortran Syntax (see FORTRAN NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -40,7 +39,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Alloc_mem(size, info, baseptr, ierror)
@@ -97,7 +95,6 @@ the BASEPTR argument. Cray pointers are described further in the Fortran
 User's Guide and are supported by many Fortran compilers. For example,
 
 .. code-block:: fortran
-   :linenos:
 
               INCLUDE "mpif.h"
               REAL*4 A(100,100)
@@ -126,5 +123,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    :ref:`MPI_Free_mem`

@@ -18,7 +18,6 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
    #include <mpi-ext.h>
@@ -73,5 +72,5 @@ Examples
    }
 
 
-.. seealso:: 
+.. seealso::
    ::

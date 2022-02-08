@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Op_create(MPI_User_function *function, int commute,
    	MPI_Op *op)
 
@@ -28,7 +28,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -42,7 +41,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Op_create(user_fn, commute, op, ierror)
@@ -82,7 +80,6 @@ four arguments: invec, inoutvec, len, and datatype.
 The ANSI-C prototype for the function is the following:
 
 .. code-block:: c
-   :linenos:
 
      typedef void MPI_User_function(void *invec, void *inoutvec,
                                     int *len,
@@ -91,7 +88,6 @@ The ANSI-C prototype for the function is the following:
 The Fortran declaration of the user-defined function appears below.
 
 .. code-block:: fortran
-   :linenos:
 
      FUNCTION USER_FUNCTION( INVEC(*), INOUTVEC(*), LEN, TYPE)
      <type> INVEC(LEN), INOUTVEC(LEN)
@@ -148,7 +144,6 @@ that are shared by the user code and the library code.
 Compute the product of an array of complex numbers, in C.
 
 .. code-block:: c
-   :linenos:
 
        typedef struct {
            double real,imag;
@@ -230,7 +225,7 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    ::
 
    MPI_Reduce

@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    MPI_Win_create(void *base, MPI_Aint size, int disp_unit,
    	MPI_Info info, MPI_Comm comm, MPI_Win *win)
 
@@ -29,7 +29,6 @@ Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -43,7 +42,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Win_create(base, size, disp_unit, info, comm, win, ierror)
@@ -169,5 +167,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    :ref:`MPI_Alloc_mem` :ref:`MPI_Free_mem` :ref:`MPI_Win_allocate` :ref:`MPI_Win_allocate_shared`

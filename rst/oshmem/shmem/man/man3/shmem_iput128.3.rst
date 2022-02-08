@@ -1,8 +1,7 @@
 .. _shmem_iput128:
-
+ 
 shmem_iput128
 =============
-
     .. include_body
 
 .. include:: ../man3/shmem_short_iput.3.rst

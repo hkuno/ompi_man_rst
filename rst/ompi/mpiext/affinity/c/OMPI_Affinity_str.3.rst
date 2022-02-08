@@ -18,7 +18,6 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
    #include <mpi-ext.h>
@@ -187,7 +186,7 @@ Output of mpirun -np 2 -bind-to-socket a.out:
               exists: [. . . .]
 
 
-.. seealso:: 
+.. seealso::
    ::
 
       mpirun(1)

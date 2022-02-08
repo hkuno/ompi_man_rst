@@ -16,19 +16,18 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void *shmalloc(size_t size);
+   void *shmalloc(size_t size)
 
-   void shfree(void *ptr);
+   void shfree(void *ptr)
 
-   void *shrealloc(void *ptr, size_t size);
+   void *shrealloc(void *ptr, size_t size)
 
-   void *shmemalign(size_t alignment, size_t size);
+   void *shmemalign(size_t alignment, size_t size)
 
-   extern long malloc_error;
+   extern long malloc_error
 
 
 DESCRIPTION
@@ -98,5 +97,5 @@ space (which may have moved); otherwise, it returns a null pointer (with
 malloc_error set).
 
 
-.. seealso:: 
-   *intro_shmem*\ (3), *my_pe*\ (3I), *start_pes*\ (3)
+.. seealso::
+   *intro_shmem*\ (3), *my_pe*\ (3), *start_pes*\ (3)

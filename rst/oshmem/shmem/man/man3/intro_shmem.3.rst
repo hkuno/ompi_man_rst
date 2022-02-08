@@ -774,10 +774,10 @@ The following kinds of data objects are symmetric:
       defined in a DSO.
 
    **\***
-      Fortran arrays allocated with *shpalloc*\ (3F)
+      Fortran arrays allocated with *shpalloc*\ (3)
 
    **\***
-      C and C++ data allocated by *shmalloc*\ (3C)
+      C and C++ data allocated by *shmalloc*\ (3)
 
 ..
 
@@ -891,7 +891,6 @@ Program using a wrapper script (**oshrun** in this case):
    C/C++:
 
 .. code-block:: c++
-   :linenos:
 
    oshcc c_program.c
 
@@ -899,7 +898,6 @@ Program using a wrapper script (**oshrun** in this case):
    FORTRAN:
 
 .. code-block:: fortran
-   :linenos:
 
    oshfort fortran_program.f
 
@@ -959,7 +957,7 @@ to sum simultaneously the numbers in the VALUES variable across all PEs:
    }
 
 
-.. seealso:: 
+.. seealso::
    The following man pages also contain information on OpenSHMEM routines.
    See the specific man pages for implementation information.
 
@@ -973,5 +971,5 @@ to sum simultaneously the numbers in the VALUES variable across all PEs:
    shmem_put\ (3), :ref:`shmem_quiet`\ (3), :ref:`shmem_short_g`\ (3),
    :ref:`shmem_short_p`\ (3), shmem_sum\ (3), :ref:`shmem_swap`\ (3),
    :ref:`shmem_wait`\ (3), shmem_xor\ (3), :ref:`shmem_pe_accessible`\ (3),
-   :ref:`shmem_addr_accessible`\ (3), :ref:`shmem_init`\ (3), :ref:`shmem_malloc`\ (3C),
-   *shmem_my_pe*\ (3I), *shmem_n_pes*\ (3I)
+   :ref:`shmem_addr_accessible`\ (3), :ref:`shmem_init`\ (3), :ref:`shmem_malloc`\ (3),
+   *shmem_my_pe*\ (3), *shmem_n_pes*\ (3)

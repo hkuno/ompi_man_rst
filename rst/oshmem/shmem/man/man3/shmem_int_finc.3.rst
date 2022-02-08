@@ -17,20 +17,18 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   int shmem_int_finc(int *target, int pe);
+   int shmem_int_finc(int *target, int pe)
 
-   long shmem_long_finc(long *target, int pe);
+   long shmem_long_finc(long *target, int pe)
 
-   long long shmem_longlong_finc(long long *target, int pe);
+   long long shmem_longlong_finc(long long *target, int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -78,5 +76,5 @@ The contents that had been at the target address on the remote PE prior
 to the increment.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

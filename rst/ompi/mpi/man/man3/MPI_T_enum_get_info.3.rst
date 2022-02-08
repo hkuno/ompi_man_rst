@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_enum_get_info(MPI_T_enum enumtype, int *num, char *name, int *name_len)
 
 

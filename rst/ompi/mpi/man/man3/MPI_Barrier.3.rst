@@ -17,6 +17,7 @@ C Syntax
 .. code:: c
 
    #include <mpi.h>
+
    int MPI_Barrier(MPI_Comm)
    int MPI_Ibarrier(MPI_Comm comm, MPI_Request *request)
    int MPI_barrier_init(MPI_Comm comm, MPI_Info info, MPI_Request *request)

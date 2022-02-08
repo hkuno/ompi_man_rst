@@ -16,16 +16,15 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
-   int shmem_my_pe (void);
-   int my_pe (void);
+
+   int shmem_my_pe (void)
+   int my_pe (void)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    include 'mpp/shmem.fh'
    I = SHMEM_MY_PE ()
@@ -41,5 +40,5 @@ between 0 and npes - 1, where npes is the total number of PEs executing
 the current program.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_n_pes*\ (3), *shmem_init*\ (3)

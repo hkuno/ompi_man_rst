@@ -19,26 +19,25 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
 
-   char shmem_char_g(const char *addr, int pe);
+   char shmem_char_g(const char *addr, int pe)
 
-   short shmem_short_g(const short *addr, int pe);
+   short shmem_short_g(const short *addr, int pe)
 
-   int shmem_int_g(const int *addr, int pe);
+   int shmem_int_g(const int *addr, int pe)
 
-   long shmem_long_g(const long *addr, int pe);
+   long shmem_long_g(const long *addr, int pe)
 
-   long shmem_longlong_g(const long long *addr, int pe);
+   long shmem_longlong_g(const long long *addr, int pe)
 
-   float shmem_float_g(const float *addr, int pe);
+   float shmem_float_g(const float *addr, int pe)
 
-   double shmem_double_g(const double *addr, int pe);
+   double shmem_double_g(const double *addr, int pe)
 
-   long shmem_longdouble_g(const long double *addr, int pe);
+   long shmem_longdouble_g(const long double *addr, int pe)
 
 
 DESCRIPTION
@@ -57,5 +56,5 @@ pe
    The number of the remote PE.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_get*\ (3)

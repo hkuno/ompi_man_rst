@@ -19,26 +19,25 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
 
-   void shmem_char_p(char *addr, char value, int pe);
+   void shmem_char_p(char *addr, char value, int pe)
 
-   void shmem_short_p(short *addr, short value, int pe);
+   void shmem_short_p(short *addr, short value, int pe)
 
-   void shmem_int_p(int *addr, int value, int pe);
+   void shmem_int_p(int *addr, int value, int pe)
 
-   void shmem_long_p(long *addr, long value, int pe);
+   void shmem_long_p(long *addr, long value, int pe)
 
-   void shmem_longlong_p(long long *addr, long long value, int pe);
+   void shmem_longlong_p(long long *addr, long long value, int pe)
 
-   void shmem_float_p(float *addr, float value, int pe);
+   void shmem_float_p(float *addr, float value, int pe)
 
-   void shmem_double_p(double *addr, double value, int pe);
+   void shmem_double_p(double *addr, double value, int pe)
 
-   void shmem_longdouble_p(long double *addr, long double value, int pe);
+   void shmem_longdouble_p(long double *addr, long double value, int pe)
 
 
 DESCRIPTION
@@ -64,5 +63,5 @@ may return before the data is delivered to the remote PE. Use
 :ref:`shmem_quiet`\ (3) to force completion of all remote PUT transfers.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_put*\ (3)

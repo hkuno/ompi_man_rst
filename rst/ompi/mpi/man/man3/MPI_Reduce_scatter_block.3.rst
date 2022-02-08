@@ -19,9 +19,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Reduce_scatter_block(const void *sendbuf, void *recvbuf, int recvcount,
    	MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
 
@@ -37,7 +37,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -62,7 +61,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Ireduce_scatter_block(sendbuf, recvbuf, recvcount, datatype, op, comm,
@@ -179,5 +177,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    :ref:`MPI_Reduce_scatter`

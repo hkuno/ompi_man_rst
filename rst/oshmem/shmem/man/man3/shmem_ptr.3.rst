@@ -16,16 +16,14 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void *shmem_ptr(const void *target, int pe);
+   void *shmem_ptr(const void *target, int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -94,9 +92,9 @@ array on PE 1:
 This is the equivalent program written in C:
 
 .. code-block:: c
-   :linenos:
 
    #include <mpp/shmem.h>
+
    main()
    {
      static int bigd[100];
@@ -135,5 +133,5 @@ RETURN VALUES
 PE. If target is not remotely accessible, a NULL pointer is returned.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_put*\ (3), *shmem_get*\ (3)

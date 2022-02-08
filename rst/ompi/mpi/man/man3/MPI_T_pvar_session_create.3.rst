@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_pvar_session_create(MPI_T_pvar_session *session)
 
    int MPI_T_pvar_session_free(MPI_T_pvar_session *session)

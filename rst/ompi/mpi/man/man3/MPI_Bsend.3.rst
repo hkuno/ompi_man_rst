@@ -16,6 +16,7 @@ C Syntax
 .. code:: c
 
    #include <mpi.h>
+
    int MPI_Bsend(const void *buf, int count, MPI_Datatype datatype,
       int dest, int tag, MPI_Comm comm)
 

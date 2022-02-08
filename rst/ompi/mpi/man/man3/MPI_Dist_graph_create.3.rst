@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Dist_graph_create(MPI_Comm comm_old, int n, const int sources[],
    	const int degrees[], const int destinations[], const int weights[],
            MPI_Info info, int reorder, MPI_Comm *comm_dist_graph)
@@ -30,7 +30,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -45,7 +44,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Dist_Graph_create(comm_old, n, sources, degrees, destinations, weights,
@@ -149,6 +147,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    :ref:`MPI_Dist_graph_create_adjacent` :ref:`MPI_Dist_graph_neighbors`
    :ref:`MPI_Dist_graph_neighbors_count`

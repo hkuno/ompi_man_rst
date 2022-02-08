@@ -1,8 +1,7 @@
 .. _shmem_double_iput:
-
+ 
 shmem_double_iput
 =================
-
     .. include_body
 
 .. include:: ../man3/shmem_short_iput.3.rst
