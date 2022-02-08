@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_category_get_info(int cat_index, char *name, int *name_len,
    char *desc, int *desc_len, int *num_cvars, int *num_pvars,
    int *num_categories)

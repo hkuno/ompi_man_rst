@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Win_create_keyval(MPI_Win_copy_attr_function *win_copy_attr_fn,
    	MPI_Win_delete_attr_function *win_delete_attr_fn,
    	int *win_keyval, void *extra_state)
@@ -29,7 +29,6 @@ Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -44,7 +43,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Win_create_keyval(win_copy_attr_fn, win_delete_attr_fn, win_keyval,
@@ -84,7 +82,6 @@ is a function that serves only to return MPI_SUCCESS.
 The C callback functions are:
 
 .. code-block:: c
-   :linenos:
 
    typedef int MPI_Win_copy_attr_function(MPI_Win oldwin, int win_keyval,
                 void *extra_state, void *attribute_val_in,
@@ -100,7 +97,6 @@ and
 The Fortran callback functions are:
 
 .. code-block:: fortran
-   :linenos:
 
    SUBROUTINE WIN_COPY_ATTR_FN(OLDWIN, WIN_KEYVAL, EXTRA_STATE,
    	ATTRIBUTE_VAL_IN, ATTRIBUTE_VAL_OUT, FLAG, IERROR)

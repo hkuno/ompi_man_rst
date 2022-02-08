@@ -19,9 +19,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Neighbor_alltoallw(const void *sendbuf, const int sendcounts[],
    	const MPI_Aint sdispls[], const MPI_Datatype sendtypes[],
    	void *recvbuf, const int recvcounts[], const MPI_Aint rdispls[],
@@ -42,7 +42,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -78,7 +77,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Neighbor_alltoallw(sendbuf, sendcounts, sdispls, sendtypes, recvbuf,
@@ -224,7 +222,7 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    ::
 
    MPI_Neighbor_alltoall

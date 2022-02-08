@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Unpack_external(const char datarep[], const void *inbuf,
    	MPI_Aint insize, MPI_Aint *position,
    	void *outbuf, int outcount,
@@ -30,7 +30,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -47,7 +46,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Unpack_external(datarep, inbuf, insize, position, outbuf, outcount,
@@ -169,7 +167,7 @@ guarantee that an MPI program can continue past an error.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso:: 
+.. seealso::
    ::
 
    MPI_Pack_external

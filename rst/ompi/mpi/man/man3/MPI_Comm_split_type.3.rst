@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Comm_split_type(MPI_Comm comm, int split_type, int key,
    	MPI_Info info, MPI_Comm *newcomm)
 
@@ -29,7 +29,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -41,7 +40,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Comm_split_type(comm, split_type, key, info, newcomm, ierror)
@@ -157,7 +155,7 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    | :ref:`MPI_Comm_create`
    | :ref:`MPI_Intercomm_create`
    | :ref:`MPI_Comm_dup`

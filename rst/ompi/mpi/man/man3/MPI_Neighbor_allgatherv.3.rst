@@ -20,9 +20,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Neighbor_allgatherv(const void *sendbuf, int sendcount,
    	MPI_Datatype sendtype, void *recvbuf, const int recvcounts[],
    	const int displs[], MPI_Datatype recvtype, MPI_Comm comm)
@@ -42,7 +42,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -69,7 +68,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Neighbor_allgatherv(sendbuf, sendcount, sendtype, recvbuf, recvcounts,
@@ -187,6 +185,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    :ref:`MPI_Neighbor_allgather` :ref:`MPI_Cart_create` :ref:`MPI_Graph_create`
    :ref:`MPI_Dist_graph_create`

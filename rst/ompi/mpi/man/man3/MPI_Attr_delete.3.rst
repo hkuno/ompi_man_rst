@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Attr_delete(MPI_Comm comm, int keyval)
 
 
@@ -28,7 +28,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE 'mpif.h'
    MPI_ATTR_DELETE(COMM, KEYVAL, IERROR)
@@ -87,5 +86,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    | :ref:`MPI_Comm_delete_attr`

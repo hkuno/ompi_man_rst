@@ -16,16 +16,14 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void shmem_quiet(void);
+   void shmem_quiet(void)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    CALL SHMEM_QUIET
 
@@ -83,6 +81,6 @@ EXAMPLES
    END
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), :ref:`shmem_barrier`\ (3), :ref:`shmem_barrier_all`\ (3),
    *shmem_fence*\ (3), *shmem_put*\ (3), *shmem_wait*\ (3)

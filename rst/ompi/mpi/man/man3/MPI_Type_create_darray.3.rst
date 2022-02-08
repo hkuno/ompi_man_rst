@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Type_create_darray(int size, int rank, int ndims,
    	const int array_of_gsizes[], const int array_of_distribs[],
    	const int array_of_dargs[], const int array_of_psizes[],
@@ -30,7 +30,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -47,7 +46,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Type_create_darray(size, rank, ndims, array_of_gsizes,

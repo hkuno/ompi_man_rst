@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Waitall(int count, MPI_Request array_of_requests[],
    	MPI_Status *array_of_statuses)
 
@@ -28,7 +28,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -41,7 +40,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Waitall(count, array_of_requests, array_of_statuses, ierror)
@@ -122,7 +120,7 @@ the value MPI_ERR_IN_STATUS will be returned in the C and Fortran
 bindings.
 
 
-.. seealso:: 
+.. seealso::
    | :ref:`MPI_Comm_set_errhandler`
    | :ref:`MPI_File_set_errhandler`
    | :ref:`MPI_Test`

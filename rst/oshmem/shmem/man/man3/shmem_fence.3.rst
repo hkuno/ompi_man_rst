@@ -16,16 +16,14 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void shmem_fence(void);
+   void shmem_fence(void)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -55,5 +53,5 @@ The :ref:`shmem_quiet` function should be called if ordering of puts is desired
 when multiple remote PEs are involved.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

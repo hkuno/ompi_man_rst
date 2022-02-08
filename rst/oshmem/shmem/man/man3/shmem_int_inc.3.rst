@@ -17,20 +17,18 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   int shmem_int_inc(int *target, int pe);
+   int shmem_int_inc(int *target, int pe)
 
-   long shmem_long_inc(long *target, int pe);
+   long shmem_long_inc(long *target, int pe)
 
-   long long shmem_longlong_inc(long long *target, int pe);
+   long long shmem_longlong_inc(long long *target, int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -76,5 +74,5 @@ RETURN VALUES
 None.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

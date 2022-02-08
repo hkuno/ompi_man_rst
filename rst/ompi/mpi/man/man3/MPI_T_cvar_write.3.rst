@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_cvar_write(MPI_T_cvar_handle handle, const void *buf)
 
 
@@ -57,7 +57,7 @@ MPI_T_cvar_write() will fail if:
    Variable cannot be set until end of execution
 
 
-.. seealso:: 
+.. seealso::
    ::
 
    MPI_T_cvar_handle_alloc

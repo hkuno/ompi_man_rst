@@ -16,15 +16,14 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
-   void shmem_info_get_version(int *major, int *minor);
+
+   void shmem_info_get_version(int *major, int *minor)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    include 'mpp/shmem.fh'
    SHMEM_INFO_GET_VERSION(MAJOR, MINOR)
@@ -42,5 +41,5 @@ SHMEM_MINOR_VERSION, defined in its shmem.h. The valid major version
 value is 1, and the valid minor version value is 2.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)

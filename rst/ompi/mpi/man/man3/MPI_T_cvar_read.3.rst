@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_cvar_read(MPI_T_cvar_handle handle, const void *buf)
 
 
@@ -50,7 +50,7 @@ MPI_T_cvar_read() will fail if:
    The handle is invalid
 
 
-.. seealso:: 
+.. seealso::
    ::
 
    MPI_T_cvar_handle_alloc

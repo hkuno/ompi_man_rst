@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_pvar_handle_alloc(int session, int pvar_index, void *obj_handle,
                                MPI_T_pvar_handle *handle, int *count)
 
@@ -76,7 +76,7 @@ MPI_T_pvar_handle_free() will fail if:
    associated with the session argument
 
 
-.. seealso:: 
+.. seealso::
    ::
 
    MPI_T_pvar_get_info

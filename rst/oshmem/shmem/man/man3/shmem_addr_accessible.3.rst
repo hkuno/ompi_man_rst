@@ -16,16 +16,14 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   int shmem_addr_accessible(const void *addr, int pe);
+   int shmem_addr_accessible(const void *addr, int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -58,5 +56,5 @@ and accessible via SHMEM operations from the specified remote PE;
 otherwise, it is .FALSE..
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_pe_accessible*\ (3)

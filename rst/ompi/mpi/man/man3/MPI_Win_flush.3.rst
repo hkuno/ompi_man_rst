@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Win_flush (int rank, MPI_Win win)
 
    int MPI_Win_flush_all (MPI_Win win)
@@ -30,7 +30,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -45,7 +44,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Win_flush(rank, win, ierror)
@@ -94,5 +92,5 @@ that MPI does not guarantee that an MPI program can continue past an
 error.
 
 
-.. seealso:: 
+.. seealso::
    | :ref:`MPI_Win_flush_local` :ref:`MPI_Win_lock` :ref:`MPI_Win_lock_all`

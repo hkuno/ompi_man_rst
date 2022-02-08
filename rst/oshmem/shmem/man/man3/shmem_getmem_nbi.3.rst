@@ -23,56 +23,54 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
    void shmem_getmem_nbi(void *dest, const void *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_char_get(char *dest, const char *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_short_get(short *dest, const short *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_int_get(int *dest, const int *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_long_get(long *dest, const long *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_longlong_get(long long *dest, const long long *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_float_get(float *dest, const float *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_double_get(double *dest, const double *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_longdouble_get(long double *dest, const long double *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_get8(void *dest, const void *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_get16(void *dest, const void *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_get32(void *dest, const void *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_get64(void *dest, const void *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
    void shmem_get128(void *dest, const void *source,
-     size_t nelems, int pe);
+     size_t nelems, int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -149,7 +147,6 @@ EXAMPLES
 Consider this simple example for Fortran.
 
 .. code-block:: fortran
-   :linenos:
 
    PROGRAM REDUCTION
      REAL VALUES, SUM
@@ -170,5 +167,5 @@ Consider this simple example for Fortran.
    END
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_quiet*\ (3)

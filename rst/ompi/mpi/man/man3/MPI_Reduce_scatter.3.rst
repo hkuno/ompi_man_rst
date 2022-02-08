@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Reduce_scatter(const void *sendbuf, void *recvbuf, const int recvcounts[],
    	MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
 
@@ -36,7 +36,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -60,7 +59,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Reduce_scatter(sendbuf, recvbuf, recvcounts, datatype, op, comm,

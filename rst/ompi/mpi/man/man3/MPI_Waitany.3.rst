@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Waitany(int count, MPI_Request array_of_requests[],
    	int *index, MPI_Status *status)
 
@@ -28,7 +28,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -41,7 +40,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Waitany(count, array_of_requests, index, status, ierror)
@@ -132,7 +130,7 @@ the back-end error handler returns it. The pre-defined MPI error handler
 MPI_ERRORS_RETURN exhibits this behavior, for example.
 
 
-.. seealso:: 
+.. seealso::
    | :ref:`MPI_Comm_set_errhandler`
    | :ref:`MPI_File_set_errhandler`
    | :ref:`MPI_Test`

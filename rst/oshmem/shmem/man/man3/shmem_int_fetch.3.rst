@@ -19,24 +19,22 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   int shmem_int_fetch(int *target, int pe);
+   int shmem_int_fetch(int *target, int pe)
 
-   long shmem_long_fetch(long *target, int pe);
+   long shmem_long_fetch(long *target, int pe)
 
-   long long shmem_longlong_fetch(long long *target, int pe);
+   long long shmem_longlong_fetch(long long *target, int pe)
 
-   double shmem_double_fetch(long long *target, int pe);
+   double shmem_double_fetch(long long *target, int pe)
 
-   float  shmem_float_fetch(float *target, int pe);
+   float  shmem_float_fetch(float *target, int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -80,5 +78,5 @@ The contents at the *target* address on the remote PE. The data type of
 the return value is the same as the the type of the remote data object.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

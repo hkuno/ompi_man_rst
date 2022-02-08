@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    MPI_Aint MPI_Aint_add(MPI_Aint base, MPI_Aint disp)
 
    MPI_Aint MPI_Aint_diff(MPI_Aint addr1, MPI_Aint addr2)
@@ -30,7 +30,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -45,7 +44,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    INTEGER(KIND=MPI_ADDRESS_KIND) MPI_AINT_ADD(BASE, DISP)
@@ -91,5 +89,5 @@ originally produced the addresses had called (char \*) *addr1* - (char
 \*) *addr2* on the addresses initially passed to :ref:`MPI_Get_address`.
 
 
-.. seealso:: 
+.. seealso::
    :ref:`MPI_Get_address`

@@ -18,22 +18,20 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
    void shmem_broadcast32(void *target, const void *source,
      size_t nelems, int PE_root, int PE_start, int logPE_stride,
-     int PE_size, long *pSync);
+     int PE_size, long *pSync)
 
    void shmem_broadcast64(void *target, const void *source,
      size_t nelems, int PE_root, int PE_start, int logPE_stride,
-     int PE_size, long *pSync);
+     int PE_size, long *pSync)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -173,7 +171,6 @@ on PE 4 to target on PEs 5, 6, and 7.
 C/C++ example:
 
 .. code-block:: c++
-   :linenos:
 
    for (i=0; i < _SHMEM_BCAST_SYNC_SIZE; i++) {
      pSync[i] = _SHMEM_SYNC_VALUE;
@@ -184,7 +181,6 @@ C/C++ example:
 Fortran example:
 
 .. code-block:: fortran
-   :linenos:
 
    INTEGER PSYNC(SHMEM_BCAST_SYNC_SIZE)
    INTEGER TARGET, SOURCE, NELEMS, PE_ROOT, PE_START,
@@ -196,5 +192,5 @@ Fortran example:
    & PSYNC)
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

@@ -92,5 +92,5 @@ ERRORS
   (false) if a value for the field has not been set.
 
 
-.. seealso:: 
+.. seealso::
    :ref:`MPI_Info_get`

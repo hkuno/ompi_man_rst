@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Comm_spawn(const char *command, char *argv[], int maxprocs,
    	MPI_Info info, int root, MPI_Comm comm,
    	MPI_Comm *intercomm, int array_of_errcodes[])
@@ -29,7 +29,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -45,7 +44,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Comm_spawn(command, argv, maxprocs, info, root, comm, intercomm,
@@ -285,7 +283,7 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    ::
 
    MPI_Comm_spawn_multiple(3)

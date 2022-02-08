@@ -33,7 +33,7 @@ and **mpif77.openmpi**), **mpicxx.openmpi**, **mpiCC.openmpi**,
 **ortecc**, and **ortec++**,
 
 
-.. seealso:: 
+.. seealso::
    The following may exist depending on your particular Open MPI
    installation: **mpicc**\ (1), **mpiCC**\ (1), **mpic++**\ (1),
    **mpifort**\ (1), **mpifort.openmpi**\ (1), **mpicxx.openmpi**\ (1),

@@ -18,24 +18,22 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void shmem_double_set(double *target, double value, int pe);
+   void shmem_double_set(double *target, double value, int pe)
 
-   void shmem_float_set(float *target, float value, int pe);
+   void shmem_float_set(float *target, float value, int pe)
 
-   void shmem_int_set(int *target, int value, int pe);
+   void shmem_int_set(int *target, int value, int pe)
 
-   void shmem_long_set(long *target, long value, int pe);
+   void shmem_long_set(long *target, long value, int pe)
 
-   void shmem_longlong_set(long long *target, long long value, int pe);
+   void shmem_longlong_set(long long *target, long long value, int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -73,5 +71,5 @@ RETURN VALUES
 NONE
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

@@ -18,30 +18,28 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
    void shmem_collect32(void *target, const void *source,
      size_t nelems, int PE_start, int logPE_stride, int PE_size,
-     long *pSync);
+     long *pSync)
 
    void shmem_collect64(void *target, const void *source,
      size_t nelems, int PE_start, int logPE_stride, int PE_size,
-     long *pSync);
+     long *pSync)
 
    void shmem_fcollect32(void *target, const void *source,
      size_t nelems, int PE_start, int logPE_stride, int PE_size,
-     long *pSync);
+     long *pSync)
 
    void shmem_fcollect64(void *target, const void *source,
      size_t nelems, int PE_start, int logPE_stride, int PE_size,
-     long *pSync);
+     long *pSync)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -190,7 +188,6 @@ EXAMPLES
 C/C++:
 
 .. code-block:: c++
-   :linenos:
 
    for (i=0; i < _SHMEM_COLLECT_SYNC_SIZE; i++) {
      pSync[i] = _SHMEM_SYNC_VALUE;
@@ -202,7 +199,6 @@ C/C++:
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INTEGER PSYNC(SHMEM_COLLECT_SYNC_SIZE)
    DATA PSYNC /SHMEM_COLLECT_SYNC_SIZE*SHMEM_SYNC_VALUE/
@@ -211,5 +207,5 @@ Fortran:
    & LOGPE_STRIDE, PE_SIZE, PSYNC)
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

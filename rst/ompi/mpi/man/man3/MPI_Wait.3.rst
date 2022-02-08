@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Wait(MPI_Request *request, MPI_Status *status)
 
 
@@ -27,7 +27,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -39,7 +38,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Wait(request, status, ierror)
@@ -133,7 +131,7 @@ error handler returns it. The pre-defined MPI error handler
 MPI_ERRORS_RETURN exhibits this behavior, for example.
 
 
-.. seealso:: 
+.. seealso::
    | :ref:`MPI_Comm_set_errhandler`
    | :ref:`MPI_File_set_errhandler`
    | :ref:`MPI_Test`

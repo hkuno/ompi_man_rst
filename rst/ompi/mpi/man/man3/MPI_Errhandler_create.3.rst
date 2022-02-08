@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Errhandler_create(MPI_Handler_function *function,
    	MPI_Errhandler *errhandler)
 
@@ -29,7 +29,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE 'mpif.h'
    MPI_ERRHANDLER_CREATE(FUNCTION, ERRHANDLER, IERROR)
@@ -97,7 +96,7 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    |
    | :ref:`MPI_Comm_create_errhandler`
    | :ref:`MPI_Comm_get_errhandler`

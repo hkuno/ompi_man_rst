@@ -16,15 +16,13 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
-   void shmem_init(void);
-   void start_pes(int npes);
+   void shmem_init(void)
+   void start_pes(int npes)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    CALL SHMEM_INIT()
    CALL START_PES(npes)
@@ -88,6 +86,6 @@ If the start_pes call is not the first statement in a program,
 unexpected results may occur on some architectures.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), :ref:`shmem_barrier`\ (3), :ref:`shmem_barrier_all`\ (3),
-   *shmem_put*\ (3), *my_pe*\ (3I), *shmem_n_pes*\ (3I)
+   *shmem_put*\ (3), *my_pe*\ (3), *shmem_n_pes*\ (3)

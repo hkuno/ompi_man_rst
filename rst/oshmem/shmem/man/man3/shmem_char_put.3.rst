@@ -22,47 +22,45 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
    void shmem_double_put(double *target, const double *source,
-     size_t len, int pe);
+     size_t len, int pe)
 
    void shmem_float_put(float *target, const float *source,
-     size_t len, int pe);
+     size_t len, int pe)
 
    void shmem_int_put(int *target, const int *source, size_t len,
-     int pe);
+     int pe)
 
    void shmem_long_put(long *target, const long *source,
-     size_t len, int pe);
+     size_t len, int pe)
 
    void shmem_longdouble_put(long double *target,
-     const long double *source, size_t len, int pe);
+     const long double *source, size_t len, int pe)
 
    void shmem_longlong_put(long long *target,
-     const long long *source, size_t len, int pe);
+     const long long *source, size_t len, int pe)
 
    void shmem_put32(void *target, const void *source, size_t len,
-     int pe);
+     int pe)
 
    void shmem_put64(void *target, const void *source, size_t len,
-     int pe);
+     int pe)
 
    void shmem_put128(void *target, const void *source, size_t len,
-     int pe);
+     int pe)
 
    void shmem_putmem(void *target, const void *source, size_t len,
-     int pe);
+     int pe)
 
    void shmem_short_put(short *target, const short *source,
-     size_t len, int pe);
+     size_t len, int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -180,7 +178,6 @@ EXAMPLES
 The following shmem_put example is for C/C++ programs:
 
 .. code-block:: c++
-   :linenos:
 
    #include <stdio.h>
    #include <mpp/shmem.h>
@@ -202,5 +199,5 @@ The following shmem_put example is for C/C++ programs:
    }
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_iput*\ (3), *shmem_quiet*\ (3)

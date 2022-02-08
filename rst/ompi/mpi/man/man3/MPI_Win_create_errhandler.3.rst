@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Win_create_errhandler(MPI_Win_errhandler_function *function,
    	MPI_Errhandler *errhandler)
 
@@ -28,7 +28,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -41,7 +40,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Win_create_errhandler(win_errhandler_fn, errhandler, ierror)
@@ -84,7 +82,6 @@ be returned.
 In Fortran, the user routine should be of the form:
 
 .. code-block:: fortran
-   :linenos:
 
    SUBROUTINE WIN_ERRHANDLER_FUNCTION(WIN, ERROR_CODE, ...)
        INTEGER WIN, ERROR_CODE

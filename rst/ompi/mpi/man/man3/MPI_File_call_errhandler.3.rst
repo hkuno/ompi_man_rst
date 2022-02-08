@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_File_call_errhandler(MPI_File fh, int errorcode)
 
 
@@ -28,7 +28,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -40,7 +39,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_File_call_errhandler(fh, errorcode, ierror)
@@ -79,7 +77,7 @@ of the function and Fortran routines in the last argument.
 See the MPI man page for a full list of MPI error codes.
 
 
-.. seealso:: 
+.. seealso::
    ::
 
    MPI_File_create_errhandler

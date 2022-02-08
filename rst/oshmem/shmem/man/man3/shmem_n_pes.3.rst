@@ -16,16 +16,15 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
-   int _num_pes (void);
-   int shmem_n_pes (void);
+
+   int _num_pes (void)
+   int shmem_n_pes (void)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    include 'mpp/shmem.fh'
    I = NUM_PES ()
@@ -39,5 +38,5 @@ num_pes() or shmem_n_pes() return the total number of PEs running in an
 application.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)

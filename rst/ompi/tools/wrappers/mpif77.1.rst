@@ -30,5 +30,5 @@ With *mpifort*, you can compile any Fortran program that uses the
 See mpifort(1) for more details.
 
 
-.. seealso:: 
+.. seealso::
    mpifort(1)

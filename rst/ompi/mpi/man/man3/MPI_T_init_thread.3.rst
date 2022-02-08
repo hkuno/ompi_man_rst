@@ -16,6 +16,7 @@ C Syntax
 .. code:: c
 
    #include <mpi.h>
+
    int MPI_T_init_thread(int required, int *provided)
 
 INPUT PARAMETERS

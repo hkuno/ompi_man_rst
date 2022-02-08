@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_pvar_reset(MPI_T_pvar_session session, MPI_T_pvar_handle handle)
 
 
@@ -55,7 +55,7 @@ MPI_T_pvar_reset() will fail if:
    Variable cannot be reset
 
 
-.. seealso:: 
+.. seealso::
    ::
 
    MPI_T_pvar_handle_alloc
