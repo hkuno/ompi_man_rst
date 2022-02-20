@@ -229,7 +229,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Alltoall
-      MPI_Alltoallv
+   :ref:`MPI_Alltoall` :ref:`MPI_Alltoallv`

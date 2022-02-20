@@ -92,4 +92,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Comm_set_attr`
+   :ref:`MPI_Comm_set_attr`

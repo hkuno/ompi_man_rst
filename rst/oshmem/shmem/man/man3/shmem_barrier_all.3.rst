@@ -58,4 +58,4 @@ EXAMPLES
 
 
 .. seealso::
-   *shmem_barrier*\ (3), *shmem_init*\ (3)
+   *shmem_barrier*\ (3) *shmem_init*\ (3)

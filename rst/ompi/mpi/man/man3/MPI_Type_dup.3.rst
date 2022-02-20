@@ -95,4 +95,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Type_create_keyval`
+   :ref:`MPI_Type_create_keyval`

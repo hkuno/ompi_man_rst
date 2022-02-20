@@ -284,8 +284,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Comm_spawn_multiple(3)
-   MPI_Comm_get_parent(3)
-      mpirun(1)
+   :ref:`MPI_Comm_spawn_multiple` :ref:`MPI_Comm_get_parent` mpirun(1)

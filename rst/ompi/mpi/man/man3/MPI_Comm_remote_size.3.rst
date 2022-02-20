@@ -81,9 +81,5 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Comm_test_inter
-   MPI_Comm_remote_group
-   MPI_Intercomm_create
-      MPI_Intercomm_merge
+   :ref:`MPI_Comm_test_inter` :ref:`MPI_Comm_remote_group` :ref:`MPI_Intercomm_create`
+   :ref:`MPI_Intercomm_merge`

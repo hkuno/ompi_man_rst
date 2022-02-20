@@ -138,3 +138,6 @@ errors. The error handler may be changed with
 MPI_ERRORS_RETURN may be used to cause error values to be returned.
 Note that MPI does not guarantee that an MPI program can continue past
 an error. See the MPI man page for a full list of MPI error codes.
+
+
+.. seealso::

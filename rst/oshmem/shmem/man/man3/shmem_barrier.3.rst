@@ -117,4 +117,4 @@ Fortran example:
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_barrier_all*\ (3)
+   *intro_shmem*\ (3) *shmem_barrier_all*\ (3)

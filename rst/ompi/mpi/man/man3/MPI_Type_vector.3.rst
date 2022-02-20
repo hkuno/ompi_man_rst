@@ -140,5 +140,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Type_create_hvector`
-   | :ref:`MPI_Type_hvector`
+   :ref:`MPI_Type_create_hvector` :ref:`MPI_Type_hvector`

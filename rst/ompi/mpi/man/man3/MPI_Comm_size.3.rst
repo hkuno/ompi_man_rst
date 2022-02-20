@@ -96,8 +96,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Comm_group
-   MPI_Comm_rank
-      MPI_Comm_compare
+   :ref:`MPI_Comm_group` :ref:`MPI_Comm_rank` :ref:`MPI_Comm_compare`

@@ -94,4 +94,4 @@ error.
 
 
 .. seealso::
-   | :ref:`MPI_Win_flush` :ref:`MPI_Win_lock` :ref:`MPI_Win_lock_all`
+   :ref:`MPI_Win_flush` :ref:`MPI_Win_lock` :ref:`MPI_Win_lock_all`

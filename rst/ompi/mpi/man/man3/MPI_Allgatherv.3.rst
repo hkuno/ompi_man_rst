@@ -198,5 +198,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Gatherv`
-   | :ref:`MPI_Allgather`
+   :ref:`MPI_Gatherv` :ref:`MPI_Allgather`

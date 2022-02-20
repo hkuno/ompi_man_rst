@@ -961,15 +961,14 @@ to sum simultaneously the numbers in the VALUES variable across all PEs:
    The following man pages also contain information on OpenSHMEM routines.
    See the specific man pages for implementation information.
 
-   shmem_add\ (3), shmem_and\ (3), :ref:`shmem_barrier`\ (3),
-   :ref:`shmem_barrier_all`\ (3), shmem_broadcast\ (3), shmem_cache\ (3),
-   shmem_collect\ (3), shmem_cswap\ (3), shmem_fadd\ (3),
-   :ref:`shmem_fence`\ (3), shmem_finc\ (3), shmem_get\ (3),
-   shmem_iget\ (3), shmem_inc\ (3), shmem_iput\ (3),
-   shmem_lock\ (3), shmem_max\ (3), shmem_min\ (3),
-   :ref:`shmem_my_pe`\ (3), shmem_or\ (3), shmem_prod\ (3),
-   shmem_put\ (3), :ref:`shmem_quiet`\ (3), :ref:`shmem_short_g`\ (3),
-   :ref:`shmem_short_p`\ (3), shmem_sum\ (3), :ref:`shmem_swap`\ (3),
-   :ref:`shmem_wait`\ (3), shmem_xor\ (3), :ref:`shmem_pe_accessible`\ (3),
-   :ref:`shmem_addr_accessible`\ (3), :ref:`shmem_init`\ (3), :ref:`shmem_malloc`\ (3),
-   *shmem_my_pe*\ (3), *shmem_n_pes*\ (3)
+   shmem_add\ (3) shmem_and\ (3) :ref:`shmem_barrier`\ (3)
+   :ref:`shmem_barrier_all`\ (3) shmem_broadcast\ (3) shmem_cache\ (3)
+   shmem_collect\ (3) shmem_cswap\ (3) shmem_fadd\ (3)
+   :ref:`shmem_fence`\ (3) shmem_finc\ (3) shmem_get\ (3) shmem_iget\ (3)
+   shmem_inc\ (3) shmem_iput\ (3) shmem_lock\ (3) shmem_max\ (3)
+   shmem_min\ (3) :ref:`shmem_my_pe`\ (3) shmem_or\ (3) shmem_prod\ (3)
+   shmem_put\ (3) :ref:`shmem_quiet`\ (3) :ref:`shmem_short_g`\ (3)
+   :ref:`shmem_short_p`\ (3) shmem_sum\ (3) :ref:`shmem_swap`\ (3)
+   :ref:`shmem_wait`\ (3) shmem_xor\ (3) :ref:`shmem_pe_accessible`\ (3)
+   :ref:`shmem_addr_accessible`\ (3) :ref:`shmem_init`\ (3) :ref:`shmem_malloc`\ (3)
+   *shmem_my_pe*\ (3) *shmem_n_pes*\ (3)

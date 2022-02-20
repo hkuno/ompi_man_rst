@@ -105,8 +105,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   socket(3SOCKET)
-   MPI_Comm_create
-      MPI_Comm_group
+   socket(3SOCKET) :ref:`MPI_Comm_create` :ref:`MPI_Comm_group`

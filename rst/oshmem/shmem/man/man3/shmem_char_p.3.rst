@@ -64,4 +64,4 @@ may return before the data is delivered to the remote PE. Use
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_put*\ (3)
+   *intro_shmem*\ (3) *shmem_put*\ (3)

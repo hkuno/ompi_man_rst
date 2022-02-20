@@ -86,4 +86,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Win_post` :ref:`MPI_Win_wait`
+   :ref:`MPI_Win_post` :ref:`MPI_Win_wait`

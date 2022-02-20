@@ -104,7 +104,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   MPI_Pack_external
-      MPI_Unpack_external
+   :ref:`MPI_Pack_external` :ref:`MPI_Unpack_external`

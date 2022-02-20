@@ -106,4 +106,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Type_indexed`
+   :ref:`MPI_Type_indexed`

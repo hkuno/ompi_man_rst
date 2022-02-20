@@ -84,9 +84,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Add_error_class
-   MPI_Add_error_code
-   MPI_Error_class
-      MPI_Error_string
+   :ref:`MPI_Add_error_class` :ref:`MPI_Add_error_code` :ref:`MPI_Error_class` :ref:`MPI_Error_string`

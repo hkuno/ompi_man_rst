@@ -168,9 +168,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   MPI_Pack_external
-   MPI_Pack_external_size
-   MPI_Recv
-      sscanf(3C)
+   :ref:`MPI_Pack_external` :ref:`MPI_Pack_external_size` :ref:`MPI_Recv` sscanf(3C)

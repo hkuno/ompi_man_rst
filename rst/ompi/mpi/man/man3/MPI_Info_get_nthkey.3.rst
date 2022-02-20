@@ -83,6 +83,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Info_get`
-   | :ref:`MPI_Info_get_nkeys`
-   | :ref:`MPI_Info_get_valuelen`
+   :ref:`MPI_Info_get` :ref:`MPI_Info_get_nkeys` :ref:`MPI_Info_get_valuelen`

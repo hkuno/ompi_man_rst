@@ -211,5 +211,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Allgatherv`
-   | :ref:`MPI_Gather`
+   :ref:`MPI_Allgatherv` :ref:`MPI_Gather`

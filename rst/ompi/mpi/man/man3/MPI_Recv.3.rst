@@ -156,8 +156,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Irecv
-   MPI_Probe
-
+   :ref:`MPI_Irecv` :ref:`MPI_Probe`

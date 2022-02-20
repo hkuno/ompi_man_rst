@@ -102,11 +102,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Mprobe
-   MPI_Probe
-   MPI_Iprobe
-   MPI_Mrecv
-   MPI_Imrecv
-      MPI_Cancel
+   :ref:`MPI_Mprobe` :ref:`MPI_Probe` :ref:`MPI_Iprobe` :ref:`MPI_Mrecv` :ref:`MPI_Imrecv` :ref:`MPI_Cancel`

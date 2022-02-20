@@ -134,7 +134,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Comm_create`
-   | :ref:`MPI_Intercomm_create`
-   | :ref:`MPI_Comm_dup`
-   | :ref:`MPI_Comm_free`
+   :ref:`MPI_Comm_create` :ref:`MPI_Intercomm_create` :ref:`MPI_Comm_dup` :ref:`MPI_Comm_free`

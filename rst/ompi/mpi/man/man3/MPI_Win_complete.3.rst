@@ -78,4 +78,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Win_start`
+   :ref:`MPI_Win_start`

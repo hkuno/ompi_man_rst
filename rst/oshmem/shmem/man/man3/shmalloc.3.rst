@@ -35,7 +35,7 @@ DESCRIPTION
 
 The **shmalloc** function returns a pointer to a block of at least size
 bytes suitably aligned for any use. This space is allocated from the
-symmetric heap (in contrast to *malloc*\ (3C), which allocates from the
+symmetric heap (in contrast to *malloc*\ (3), which allocates from the
 private heap).
 
 The **shmemalign** function allocates a block in the symmetric heap that
@@ -98,4 +98,4 @@ malloc_error set).
 
 
 .. seealso::
-   *intro_shmem*\ (3), *my_pe*\ (3), *start_pes*\ (3)
+   *intro_shmem*\ (3) *my_pe*\ (3) *start_pes*\ (3)

@@ -216,4 +216,4 @@ no synchronization is done between calls.
 
 
 .. seealso::
-   *f90*\ (1), *intro_shmem*\ (3)
+   *f90*\ (1) *intro_shmem*\ (3)

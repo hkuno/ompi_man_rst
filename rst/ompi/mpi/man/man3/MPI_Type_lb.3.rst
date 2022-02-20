@@ -108,4 +108,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Type_get_extent`
+   :ref:`MPI_Type_get_extent`

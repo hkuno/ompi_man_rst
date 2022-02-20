@@ -183,8 +183,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   MPI_Op_create
-   MPI_Reduce
-      MPI_Scan
+   :ref:`MPI_Op_create` :ref:`MPI_Reduce` :ref:`MPI_Scan`

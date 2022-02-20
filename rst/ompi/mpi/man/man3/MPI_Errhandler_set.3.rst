@@ -69,6 +69,5 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Comm_create_errhandler`
-   | :ref:`MPI_Comm_get_errhandler`
-   | :ref:`MPI_Comm_set_errhandler`
+   :ref:`MPI_Comm_create_errhandler` :ref:`MPI_Comm_get_errhandler`
+   :ref:`MPI_Comm_set_errhandler`

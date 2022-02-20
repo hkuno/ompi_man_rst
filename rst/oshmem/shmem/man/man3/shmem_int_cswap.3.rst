@@ -132,4 +132,4 @@ swap will successfully write its PE number to race_winner on PE 0.
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_cache*\ (3), *shmem_swap*\ (3)
+   *intro_shmem*\ (3) *shmem_cache*\ (3) *shmem_swap*\ (3)

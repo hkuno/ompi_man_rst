@@ -91,4 +91,4 @@ corrected in future versions.
 
 
 .. seealso::
-   | :ref:`MPI_Psend_init`
+   :ref:`MPI_Psend_init`

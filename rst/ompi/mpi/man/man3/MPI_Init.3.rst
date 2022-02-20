@@ -106,9 +106,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   MPI_Init_thread
-   MPI_Initialized
-   MPI_Finalize
-      MPI_Finalized
+   :ref:`MPI_Init_thread` :ref:`MPI_Initialized` :ref:`MPI_Finalize` :ref:`MPI_Finalized`

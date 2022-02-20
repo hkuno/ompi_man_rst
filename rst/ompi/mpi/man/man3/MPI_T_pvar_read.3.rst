@@ -55,8 +55,4 @@ MPI_T_pvar_read() will fail if:
 
 
 .. seealso::
-   ::
-
-   MPI_T_pvar_handle_alloc
-   MPI_T_pvar_get_info
-      MPI_T_pvar_session_create
+   :ref:`MPI_T_pvar_handle_alloc` :ref:`MPI_T_pvar_get_info` :ref:`MPI_T_pvar_session_create`

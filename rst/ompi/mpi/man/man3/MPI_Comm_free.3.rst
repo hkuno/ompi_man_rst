@@ -90,6 +90,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-      MPI_Comm_delete_attr
+   :ref:`MPI_Comm_delete_attr`

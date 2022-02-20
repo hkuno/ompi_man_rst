@@ -73,4 +73,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | MPI_Pready, MPI_Pready_range, :ref:`MPI_Parrived`
+   :ref:`MPI_Pready` :ref:`MPI_Pready_range` :ref:`MPI_Parrived`

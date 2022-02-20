@@ -135,7 +135,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   MPI_Publish_name
-      MPI_Open_port
+   :ref:`MPI_Publish_name` :ref:`MPI_Open_port`

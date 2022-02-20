@@ -94,7 +94,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   MPI_Sizeof
-      MPI_Type_get_extent
+   :ref:`MPI_Sizeof` :ref:`MPI_Type_get_extent`

@@ -91,5 +91,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Pack`
-   | :ref:`MPI_Unpack`
+   :ref:`MPI_Pack` :ref:`MPI_Unpack`

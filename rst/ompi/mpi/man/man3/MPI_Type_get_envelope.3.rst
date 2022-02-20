@@ -90,20 +90,14 @@ associated calls:
    MPI_COMBINER_DUP                MPI_Type_dup
    MPI_COMBINER_CONTIGUOUS         MPI_Type_contiguous
    MPI_COMBINER_VECTOR             MPI_Type_vector
-   MPI_COMBINER_HVECTOR_INTEGER    MPI_Type_hvector from Fortran
-   MPI_COMBINER_HVECTOR            MPI_Type_hvector from C
-                                     and MPI_Type_create for
-                                     all languages
+   MPI_COMBINER_HVECTOR            MPI_Type_hvector
+                                     and MPI_Type_create_hvector
    MPI_COMBINER_INDEXED            MPI_Type_indexed
-   MPI_COMBINER_HINDEXED_INTEGER   MPI_Type_hindexed from Fortran
-   MPI_COMBINER_HINDEXED           MPI_Type_hindexed from C
+   MPI_COMBINER_HINDEXED           MPI_Type_hindexed
                                      and MPI_Type_create_hindexed
-                                     for all languages
    MPI_COMBINER_INDEXED_BLOCK      MPI_Type_create_indexed_block
-   MPI_COMBINER_STRUCT_INTEGER     MPI_Type_struct from Fortran
-   MPI_COMBINER_STRUCT             MPI_Type_struct from C
+   MPI_COMBINER_STRUCT             MPI_Type_struct
                                      and MPI_Type_create_struct
-                                     for all languages
    MPI_COMBINER_SUBARRAY           MPI_Type_create_subarray
    MPI_COMBINER_DARRAY             MPI_Type_create_darray
    MPI_COMBINER_F90_REAL           MPI_Type_create_f90_real
@@ -133,4 +127,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Type_get_contents`
+   :ref:`MPI_Type_get_contents`

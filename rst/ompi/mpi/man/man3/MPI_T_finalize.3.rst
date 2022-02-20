@@ -54,6 +54,4 @@ MPI_T_finalize() will fail if:
 
 
 .. seealso::
-   ::
-
-      MPI_T_init_thread
+   :ref:`MPI_T_init_thread`

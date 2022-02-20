@@ -51,7 +51,4 @@ MPI_T_cvar_read() will fail if:
 
 
 .. seealso::
-   ::
-
-   MPI_T_cvar_handle_alloc
-      MPI_T_cvar_get_info
+   :ref:`MPI_T_cvar_handle_alloc` :ref:`MPI_T_cvar_get_info`

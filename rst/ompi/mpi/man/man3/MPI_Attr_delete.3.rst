@@ -87,4 +87,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Comm_delete_attr`
+   :ref:`MPI_Comm_delete_attr`

@@ -151,4 +151,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Type_get_envelope`
+   :ref:`MPI_Type_get_envelope`

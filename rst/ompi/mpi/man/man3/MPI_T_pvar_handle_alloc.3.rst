@@ -77,7 +77,4 @@ MPI_T_pvar_handle_free() will fail if:
 
 
 .. seealso::
-   ::
-
-   MPI_T_pvar_get_info
-      MPI_T_pvar_get_num
+   :ref:`MPI_T_pvar_get_info` :ref:`MPI_T_pvar_get_num`

@@ -165,6 +165,4 @@ MPI_T_cvar_get_info() will fail if:
 
 
 .. seealso::
-   ::
-
-      ompi_info
+   ompi_info
