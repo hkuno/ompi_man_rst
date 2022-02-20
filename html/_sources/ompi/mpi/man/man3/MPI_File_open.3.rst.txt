@@ -92,32 +92,23 @@ changed via the :ref:`MPI_File_set_view` routine.
 The following access modes are supported (specified in amode, in a
 bit-vector OR in one of the following integer constants):
 
- o
-   MPI_MODE_APPEND
+ o    MPI_MODE_APPEND
 
- o
-   MPI_MODE_CREATE -- Create the file if it does not exist.
+ o    MPI_MODE_CREATE -- Create the file if it does not exist.
 
- o
-   MPI_MODE_DELETE_ON_CLOSE
+ o    MPI_MODE_DELETE_ON_CLOSE
 
- o
-   MPI_MODE_EXCL -- Error creating a file that already exists.
+ o    MPI_MODE_EXCL -- Error creating a file that already exists.
 
- o
-   MPI_MODE_RDONLY -- Read only.
+ o    MPI_MODE_RDONLY -- Read only.
 
- o
-   MPI_MODE_RDWR -- Reading and writing.
+ o    MPI_MODE_RDWR -- Reading and writing.
 
- o
-   MPI_MODE_SEQUENTIAL
+ o    MPI_MODE_SEQUENTIAL
 
- o
-   MPI_MODE_WRONLY -- Write only.
+ o    MPI_MODE_WRONLY -- Write only.
 
- o
-   MPI_MODE_UNIQUE_OPEN
+ o    MPI_MODE_UNIQUE_OPEN
 
 The modes MPI_MODE_RDONLY, MPI_MODE_RDWR, MPI_MODE_WRONLY, and
 MPI_MODE_CREATE have identical semantics to their POSIX counterparts. It

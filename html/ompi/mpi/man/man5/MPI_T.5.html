@@ -887,23 +887,37 @@ which frameworks and components are selected).</p>
 <p>The following example sets the pml and btl MCA params before invoking
 <a class="reference internal" href="../man3/MPI_Init.3.html#mpi-init"><span class="std std-ref">MPI_Init</span></a> in order to force a specific selection of PML and BTL
 components:</p>
-<p>c int provided, index, count; MPI_T_cvar_handle pml_handle, btl_handle;
-char pml_value[64], btl_value[64];</p>
-<p>MPI_T_init_thread(MPI_THREAD_SINGLE, &amp;provided);</p>
-<p>MPI_T_cvar_get_index(“pml”, &amp;index); MPI_T_cvar_handle_alloc(index,
-NULL, &amp;pml_handle, &amp;count); MPI_T_cvar_write(pml_handle, “ob1”);</p>
-<p>MPI_T_cvar_get_index(“btl”, &amp;index); MPI_T_cvar_handle_alloc(index,
-NULL, &amp;btl_handle, &amp;count); MPI_T_cvar_write(btl_handle,
-“tcp,vader,self”);</p>
-<p>MPI_T_cvar_read(pml_handle, pml_value); MPI_T_cvar_read(btl_handle,
-btl_value); printf(“Set value of cvars: PML: %s, BTL: %sn”, pml_value,
-btl_value);</p>
-<p>MPI_T_cvar_handle_free(&amp;pml_handle);
-MPI_T_cvar_handle_free(&amp;btl_handle);</p>
-<p>MPI_Init(NULL, NULL);</p>
-<p>// …</p>
-<p>MPI_Finalize();</p>
-<p>MPI_T_finalize();</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">provided</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">count</span><span class="p">;</span>
+<span class="n">MPI_T_cvar_handle</span> <span class="n">pml_handle</span><span class="p">,</span> <span class="n">btl_handle</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">pml_value</span><span class="p">[</span><span class="mi">64</span><span class="p">],</span> <span class="n">btl_value</span><span class="p">[</span><span class="mi">64</span><span class="p">];</span>
+
+<span class="n">MPI_T_init_thread</span><span class="p">(</span><span class="n">MPI_THREAD_SINGLE</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">provided</span><span class="p">);</span>
+
+<span class="n">MPI_T_cvar_get_index</span><span class="p">(</span><span class="s">&quot;pml&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">index</span><span class="p">);</span>
+<span class="n">MPI_T_cvar_handle_alloc</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pml_handle</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">count</span><span class="p">);</span>
+<span class="n">MPI_T_cvar_write</span><span class="p">(</span><span class="n">pml_handle</span><span class="p">,</span> <span class="s">&quot;ob1&quot;</span><span class="p">);</span>
+
+<span class="n">MPI_T_cvar_get_index</span><span class="p">(</span><span class="s">&quot;btl&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">index</span><span class="p">);</span>
+<span class="n">MPI_T_cvar_handle_alloc</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">btl_handle</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">count</span><span class="p">);</span>
+<span class="n">MPI_T_cvar_write</span><span class="p">(</span><span class="n">btl_handle</span><span class="p">,</span> <span class="s">&quot;tcp,vader,self&quot;</span><span class="p">);</span>
+
+<span class="n">MPI_T_cvar_read</span><span class="p">(</span><span class="n">pml_handle</span><span class="p">,</span> <span class="n">pml_value</span><span class="p">);</span>
+<span class="n">MPI_T_cvar_read</span><span class="p">(</span><span class="n">btl_handle</span><span class="p">,</span> <span class="n">btl_value</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Set value of cvars: PML: %s, BTL: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span>
+       <span class="n">pml_value</span><span class="p">,</span> <span class="n">btl_value</span><span class="p">);</span>
+
+<span class="n">MPI_T_cvar_handle_free</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pml_handle</span><span class="p">);</span>
+<span class="n">MPI_T_cvar_handle_free</span><span class="p">(</span><span class="o">&amp;</span><span class="n">btl_handle</span><span class="p">);</span>
+
+<span class="n">MPI_Init</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+
+<span class="c1">// ...</span>
+
+<span class="n">MPI_Finalize</span><span class="p">();</span>
+
+<span class="n">MPI_T_finalize</span><span class="p">();</span>
+</pre></div>
+</div>
 <p>Note that once MPI is initialized, most Open MPI cvars become read-only.</p>
 <p>For example, after MPI is initialized, it is no longer possible to set
 the PML and BTL selection mechanisms. This is because many of these MCA

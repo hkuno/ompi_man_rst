@@ -32,21 +32,49 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fI\%MPI_Free_mem\fP \- Frees memory that has been allocated using MPI_Alloc_mem\&.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Free_mem(void *base)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_FREE_MEM(BASE, IERROR) BASE(*) INTEGER IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_FREE_MEM(BASE, IERROR)
+    <type> BASE(*)
+    INTEGER IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
-MPI_Free_mem(base, ierror) TYPE(*), DIMENSION(..), INTENT(IN),
-ASYNCHRONOUS :: base INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Free_mem(base, ierror)
+    TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: base
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2

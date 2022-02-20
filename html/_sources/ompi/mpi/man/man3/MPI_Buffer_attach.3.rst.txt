@@ -13,25 +13,35 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Buffer_attach(void \*buf, int size)
+   #include <mpi.h>
+
+   int MPI_Buffer_attach(void *buf, int size)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_BUFFER_ATTACH(BUF, SIZE, IERROR) BUF(*) INTEGER SIZE, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_BUFFER_ATTACH(BUF, SIZE, IERROR)
+       <type>  BUF(*)
+       INTEGER SIZE, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Buffer_attach(buffer, size, ierror) TYPE(*), DIMENSION(..),
-ASYNCHRONOUS :: buffer INTEGER, INTENT(IN) :: size INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Buffer_attach(buffer, size, ierror)
+       TYPE(*), DIMENSION(..), ASYNCHRONOUS :: buffer
+       INTEGER, INTENT(IN) :: size
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

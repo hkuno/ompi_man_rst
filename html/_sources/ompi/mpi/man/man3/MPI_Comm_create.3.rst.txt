@@ -13,26 +13,35 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Comm_create(MPI_Comm comm, MPI_Group group, MPI_Comm \*newcomm)
+   #include <mpi.h>
+
+   int MPI_Comm_create(MPI_Comm comm, MPI_Group group, MPI_Comm *newcomm)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_COMM_CREATE(COMM, GROUP, NEWCOMM, IERROR) INTEGER COMM, GROUP,
-NEWCOMM, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_COMM_CREATE(COMM, GROUP, NEWCOMM, IERROR)
+       INTEGER COMM, GROUP, NEWCOMM, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Comm_create(comm, group, newcomm, ierror) TYPE(MPI_Comm), INTENT(IN)
-:: comm TYPE(MPI_Group), INTENT(IN) :: group TYPE(MPI_Comm), INTENT(OUT)
-:: newcomm INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Comm_create(comm, group, newcomm, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       TYPE(MPI_Group), INTENT(IN) :: group
+       TYPE(MPI_Comm), INTENT(OUT) :: newcomm
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
 ---------------

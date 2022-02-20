@@ -33,11 +33,19 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 INTEGER\-style status, or vice versa.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
-int MPI_Status_f2c(const MPI_Fint *f_status, MPI_Status *c_status) int
-MPI_Status_c2f(const MPI_Status *c_status, MPI_Fint *f_status)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Status_f2c(const MPI_Fint *f_status, MPI_Status *c_status)
+int MPI_Status_c2f(const MPI_Status *c_status, MPI_Fint *f_status)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

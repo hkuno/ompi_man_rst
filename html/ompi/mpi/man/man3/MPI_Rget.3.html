@@ -866,46 +866,65 @@
 <h2><span class="section-number">302.1. </span>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="c-syntax">
 <h3><span class="section-number">302.1.1. </span>C Syntax<a class="headerlink" href="#c-syntax" title="Permalink to this headline">¶</a></h3>
-<p>c #include &lt;mpi.h&gt;</p>
-<p>MPI_Get(void *origin_addr, int origin_count, MPI_Datatype
-origin_datatype, int target_rank, MPI_Aint target_disp, int
-target_count, MPI_Datatype target_datatype, MPI_Win win)</p>
-<p>MPI_Rget(void *origin_addr, int origin_count, MPI_Datatype
-origin_datatype, int target_rank, MPI_Aint target_disp, int
-target_count, MPI_Datatype target_datatype, MPI_Win win, MPI_Request
-*request)</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+
+<span class="n">MPI_Get</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">origin_addr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">origin_count</span><span class="p">,</span> <span class="n">MPI_Datatype</span>
+    <span class="n">origin_datatype</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target_rank</span><span class="p">,</span> <span class="n">MPI_Aint</span> <span class="n">target_disp</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="n">target_count</span><span class="p">,</span> <span class="n">MPI_Datatype</span> <span class="n">target_datatype</span><span class="p">,</span> <span class="n">MPI_Win</span> <span class="n">win</span><span class="p">)</span>
+
+<span class="n">MPI_Rget</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">origin_addr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">origin_count</span><span class="p">,</span> <span class="n">MPI_Datatype</span>
+     <span class="n">origin_datatype</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target_rank</span><span class="p">,</span> <span class="n">MPI_Aint</span> <span class="n">target_disp</span><span class="p">,</span>
+     <span class="kt">int</span> <span class="n">target_count</span><span class="p">,</span> <span class="n">MPI_Datatype</span> <span class="n">target_datatype</span><span class="p">,</span> <span class="n">MPI_Win</span> <span class="n">win</span><span class="p">,</span>
+         <span class="n">MPI_Request</span> <span class="o">*</span><span class="n">request</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="fortran-syntax-see-fortran-77-notes">
 <h3><span class="section-number">302.1.2. </span>Fortran Syntax (See Fortran 77 Notes)<a class="headerlink" href="#fortran-syntax-see-fortran-77-notes" title="Permalink to this headline">¶</a></h3>
-<p>fortran USE MPI ! or the older form: INCLUDE ‘mpif.h’</p>
-<p>MPI_GET(ORIGIN_ADDR, ORIGIN_COUNT, ORIGIN_DATATYPE, TARGET_RANK,
-TARGET_DISP, TARGET_COUNT, TARGET_DATATYPE, WIN, IERROR) ORIGIN_ADDR(*)
-INTEGER(KIND=MPI_ADDRESS_KIND) TARGET_DISP INTEGER ORIGIN_COUNT,
-ORIGIN_DATATYPE, TARGET_RANK, TARGET_COUNT, TARGET_DATATYPE, WIN, IERROR</p>
-<p>MPI_RGET(ORIGIN_ADDR, ORIGIN_COUNT, ORIGIN_DATATYPE, TARGET_RANK,
-TARGET_DISP, TARGET_COUNT, TARGET_DATATYPE, WIN, REQUEST, IERROR)
-ORIGIN_ADDR(*) INTEGER(KIND=MPI_ADDRESS_KIND) TARGET_DISP INTEGER
-ORIGIN_COUNT, ORIGIN_DATATYPE, TARGET_RANK, TARGET_COUNT,
-TARGET_DATATYPE, WIN, REQUEST, IERROR</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">USE </span><span class="n">MPI</span>
+<span class="c">! or the older form: INCLUDE &#39;mpif.h&#39;</span>
+
+<span class="n">MPI_GET</span><span class="p">(</span><span class="n">ORIGIN_ADDR</span><span class="p">,</span> <span class="n">ORIGIN_COUNT</span><span class="p">,</span> <span class="n">ORIGIN_DATATYPE</span><span class="p">,</span> <span class="n">TARGET_RANK</span><span class="p">,</span>
+    <span class="n">TARGET_DISP</span><span class="p">,</span> <span class="n">TARGET_COUNT</span><span class="p">,</span> <span class="n">TARGET_DATATYPE</span><span class="p">,</span> <span class="n">WIN</span><span class="p">,</span> <span class="n">IERROR</span><span class="p">)</span>
+    <span class="o">&lt;</span><span class="k">type</span><span class="o">&gt;</span> <span class="n">ORIGIN_ADDR</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+    <span class="kt">INTEGER</span><span class="p">(</span><span class="nb">KIND</span><span class="o">=</span><span class="n">MPI_ADDRESS_KIND</span><span class="p">)</span> <span class="n">TARGET_DISP</span>
+    <span class="kt">INTEGER </span><span class="n">ORIGIN_COUNT</span><span class="p">,</span> <span class="n">ORIGIN_DATATYPE</span><span class="p">,</span> <span class="n">TARGET_RANK</span><span class="p">,</span>
+    <span class="n">TARGET_COUNT</span><span class="p">,</span> <span class="n">TARGET_DATATYPE</span><span class="p">,</span> <span class="n">WIN</span><span class="p">,</span> <span class="n">IERROR</span>
+
+<span class="n">MPI_RGET</span><span class="p">(</span><span class="n">ORIGIN_ADDR</span><span class="p">,</span> <span class="n">ORIGIN_COUNT</span><span class="p">,</span> <span class="n">ORIGIN_DATATYPE</span><span class="p">,</span> <span class="n">TARGET_RANK</span><span class="p">,</span>
+     <span class="n">TARGET_DISP</span><span class="p">,</span> <span class="n">TARGET_COUNT</span><span class="p">,</span> <span class="n">TARGET_DATATYPE</span><span class="p">,</span> <span class="n">WIN</span><span class="p">,</span> <span class="n">REQUEST</span><span class="p">,</span> <span class="n">IERROR</span><span class="p">)</span>
+     <span class="o">&lt;</span><span class="k">type</span><span class="o">&gt;</span> <span class="n">ORIGIN_ADDR</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+     <span class="kt">INTEGER</span><span class="p">(</span><span class="nb">KIND</span><span class="o">=</span><span class="n">MPI_ADDRESS_KIND</span><span class="p">)</span> <span class="n">TARGET_DISP</span>
+     <span class="kt">INTEGER </span><span class="n">ORIGIN_COUNT</span><span class="p">,</span> <span class="n">ORIGIN_DATATYPE</span><span class="p">,</span> <span class="n">TARGET_RANK</span><span class="p">,</span>
+     <span class="n">TARGET_COUNT</span><span class="p">,</span> <span class="n">TARGET_DATATYPE</span><span class="p">,</span> <span class="n">WIN</span><span class="p">,</span> <span class="n">REQUEST</span><span class="p">,</span> <span class="n">IERROR</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="fortran-2008-syntax">
 <h3><span class="section-number">302.1.3. </span>Fortran 2008 Syntax<a class="headerlink" href="#fortran-2008-syntax" title="Permalink to this headline">¶</a></h3>
-<p>fortran USE mpi_f08</p>
-<p>MPI_Get(origin_addr, origin_count, origin_datatype, target_rank,
-target_disp, target_count, target_datatype, win, ierror) TYPE(*),
-DIMENSION(..), ASYNCHRONOUS :: origin_addr INTEGER, INTENT(IN) ::
-origin_count, target_rank, target_count TYPE(MPI_Datatype), INTENT(IN)
-:: origin_datatype, target_datatype INTEGER(KIND=MPI_ADDRESS_KIND),
-INTENT(IN) :: target_disp TYPE(MPI_Win), INTENT(IN) :: win INTEGER,
-OPTIONAL, INTENT(OUT) :: ierror</p>
-<p>MPI_Rget(origin_addr, origin_count, origin_datatype, target_rank,
-target_disp, target_count, target_datatype, win, request, ierror)
-TYPE(*), DIMENSION(..), ASYNCHRONOUS :: origin_addr INTEGER, INTENT(IN)
-:: origin_count, target_rank, target_count TYPE(MPI_Datatype),
-INTENT(IN) :: origin_datatype, target_datatype
-INTEGER(KIND=MPI_ADDRESS_KIND), INTENT(IN) :: target_disp TYPE(MPI_Win),
-INTENT(IN) :: win TYPE(MPI_Request), INTENT(OUT) :: request INTEGER,
-OPTIONAL, INTENT(OUT) :: ierror</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">USE </span><span class="n">mpi_f08</span>
+
+<span class="n">MPI_Get</span><span class="p">(</span><span class="n">origin_addr</span><span class="p">,</span> <span class="n">origin_count</span><span class="p">,</span> <span class="n">origin_datatype</span><span class="p">,</span> <span class="n">target_rank</span><span class="p">,</span>
+        <span class="n">target_disp</span><span class="p">,</span> <span class="n">target_count</span><span class="p">,</span> <span class="n">target_datatype</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="n">ierror</span><span class="p">)</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">DIMENSION</span><span class="p">(..),</span> <span class="k">ASYNCHRONOUS</span> <span class="kd">::</span> <span class="n">origin_addr</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">origin_count</span><span class="p">,</span> <span class="n">target_rank</span><span class="p">,</span> <span class="n">target_count</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Datatype</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">origin_datatype</span><span class="p">,</span> <span class="n">target_datatype</span>
+    <span class="kt">INTEGER</span><span class="p">(</span><span class="nb">KIND</span><span class="o">=</span><span class="n">MPI_ADDRESS_KIND</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">target_disp</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Win</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">win</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">OPTIONAL</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ierror</span>
+
+<span class="n">MPI_Rget</span><span class="p">(</span><span class="n">origin_addr</span><span class="p">,</span> <span class="n">origin_count</span><span class="p">,</span> <span class="n">origin_datatype</span><span class="p">,</span> <span class="n">target_rank</span><span class="p">,</span>
+    <span class="n">target_disp</span><span class="p">,</span> <span class="n">target_count</span><span class="p">,</span> <span class="n">target_datatype</span><span class="p">,</span> <span class="n">win</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span>
+        <span class="n">ierror</span><span class="p">)</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="k">DIMENSION</span><span class="p">(..),</span> <span class="k">ASYNCHRONOUS</span> <span class="kd">::</span> <span class="n">origin_addr</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">origin_count</span><span class="p">,</span> <span class="n">target_rank</span><span class="p">,</span> <span class="n">target_count</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Datatype</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">origin_datatype</span><span class="p">,</span> <span class="n">target_datatype</span>
+    <span class="kt">INTEGER</span><span class="p">(</span><span class="nb">KIND</span><span class="o">=</span><span class="n">MPI_ADDRESS_KIND</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">target_disp</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Win</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">win</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Request</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">request</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">OPTIONAL</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ierror</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="input-parameters">

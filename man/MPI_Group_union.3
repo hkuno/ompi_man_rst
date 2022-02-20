@@ -93,20 +93,11 @@ MPI_Group_union(group1, group2, newgroup, ierror)
 The set\-like operations are defined as follows:
 .INDENT 0.0
 .INDENT 3.5
-.INDENT 0.0
-.TP
-.B o
-union \-\- All elements of the first group (group1), followed by all
-elements of second group (group2) not in first.
-.TP
-.B o
-intersect \-\- all elements of the first group that are also in the
-second group, ordered as in first group.
-.TP
-.B o
-difference \-\- all elements of the first group that are not in the
-second group, ordered as in the first group.
-.UNINDENT
+o    union \-\- All elements of the first group (group1), followed by all elements of second group (group2) not in first.
+.sp
+o    intersect \-\- all elements of the first group that are also in the second group, ordered as in first group.
+.sp
+o    difference \-\- all elements of the first group that are not in the second group, ordered as in the first group.
 .UNINDENT
 .UNINDENT
 .sp

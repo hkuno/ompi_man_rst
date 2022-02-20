@@ -863,28 +863,42 @@ into a Fortran INTEGER-style status, or vice versa.</p>
 <h2><span class="section-number">333.1. </span>SYNTAX<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="c-syntax">
 <h3><span class="section-number">333.1.1. </span>C Syntax<a class="headerlink" href="#c-syntax" title="Permalink to this headline">¶</a></h3>
-<p>c #include &lt;mpi.h&gt;</p>
-<p>int MPI_Status_f082f(const MPI_F08_status *f08_status, MPI_Fint
-*f_status) int MPI_Status_f2f08(const MPI_Fint *f_status,
-MPI_F08_status *f08_status)</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">MPI_Status_f082f</span><span class="p">(</span><span class="k">const</span> <span class="n">MPI_F08_status</span> <span class="o">*</span><span class="n">f08_status</span><span class="p">,</span> <span class="n">MPI_Fint</span> <span class="o">*</span><span class="n">f_status</span><span class="p">)</span>
+<span class="kt">int</span> <span class="n">MPI_Status_f2f08</span><span class="p">(</span><span class="k">const</span> <span class="n">MPI_Fint</span> <span class="o">*</span><span class="n">f_status</span><span class="p">,</span> <span class="n">MPI_F08_status</span> <span class="o">*</span><span class="n">f08_status</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="fortran-mpi-module-syntax">
 <h3><span class="section-number">333.1.2. </span>Fortran mpi Module Syntax<a class="headerlink" href="#fortran-mpi-module-syntax" title="Permalink to this headline">¶</a></h3>
-<p>fortran USE MPI</p>
-<p>MPI_STATUS_F082F(F08_STATUS, F_STATUS, IERROR) TYPE(MPI_Status) ::
-F08_STATUS INTEGER :: STATUS(MPI_STATUS_SIZE), IERROR</p>
-<p>MPI_STATUS_F2F08(F_STATUS, F08_STATUS, IERROR) INTEGER ::
-F_STATUS(MPI_STATUS_SIZE), IERROR TYPE(MPI_Status) :: F08_STATUS</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">USE </span><span class="n">MPI</span>
+
+<span class="n">MPI_STATUS_F082F</span><span class="p">(</span><span class="n">F08_STATUS</span><span class="p">,</span> <span class="n">F_STATUS</span><span class="p">,</span> <span class="n">IERROR</span><span class="p">)</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Status</span><span class="p">)</span> <span class="kd">::</span> <span class="n">F08_STATUS</span>
+    <span class="kt">INTEGER</span> <span class="kd">::</span> <span class="n">STATUS</span><span class="p">(</span><span class="n">MPI_STATUS_SIZE</span><span class="p">),</span> <span class="n">IERROR</span>
+
+<span class="n">MPI_STATUS_F2F08</span><span class="p">(</span><span class="n">F_STATUS</span><span class="p">,</span> <span class="n">F08_STATUS</span><span class="p">,</span> <span class="n">IERROR</span><span class="p">)</span>
+    <span class="kt">INTEGER</span> <span class="kd">::</span> <span class="n">F_STATUS</span><span class="p">(</span><span class="n">MPI_STATUS_SIZE</span><span class="p">),</span> <span class="n">IERROR</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Status</span><span class="p">)</span> <span class="kd">::</span> <span class="n">F08_STATUS</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="fortran-mpi-f08-module-syntax">
 <h3><span class="section-number">333.1.3. </span>Fortran mpi_f08 Module Syntax<a class="headerlink" href="#fortran-mpi-f08-module-syntax" title="Permalink to this headline">¶</a></h3>
-<p>fortran USE mpi_f08</p>
-<p>MPI_Status_f082f(f08_status, f_status, ierror) TYPE(MPI_Status),
-INTENT(IN) :: f08_status INTEGER, INTENT(OUT) ::
-f_status(MPI_STATUS_SIZE) INTEGER, OPTIONAL, INTENT(OUT) :: ierror</p>
-<p>MPI_Status_f2f08(f_status, f08_status, ierror) INTEGER, INTENT(IN) ::
-f_status(MPI_STATUS_SIZE) TYPE(MPI_Status), INTENT(OUT) :: f08_status
-INTEGER, OPTIONAL, INTENT(OUT) :: ierror</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">USE </span><span class="n">mpi_f08</span>
+
+<span class="n">MPI_Status_f082f</span><span class="p">(</span><span class="n">f08_status</span><span class="p">,</span> <span class="n">f_status</span><span class="p">,</span> <span class="n">ierror</span><span class="p">)</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Status</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f08_status</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f_status</span><span class="p">(</span><span class="n">MPI_STATUS_SIZE</span><span class="p">)</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">OPTIONAL</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ierror</span>
+
+<span class="n">MPI_Status_f2f08</span><span class="p">(</span><span class="n">f_status</span><span class="p">,</span> <span class="n">f08_status</span><span class="p">,</span> <span class="n">ierror</span><span class="p">)</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f_status</span><span class="p">(</span><span class="n">MPI_STATUS_SIZE</span><span class="p">)</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Status</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f08_status</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">OPTIONAL</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ierror</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="parameters">

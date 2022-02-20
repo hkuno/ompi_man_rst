@@ -33,23 +33,50 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 location.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Cart_rank(MPI_Comm comm, int coords[], int *rank)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_CART_RANK(COMM, COORDS, RANK, IERROR) INTEGER COMM, COORDS(*), RANK,
-IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_CART_RANK(COMM, COORDS, RANK, IERROR)
+    INTEGER COMM, COORDS(*), RANK, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
-MPI_Cart_rank(comm, coords, rank, ierror) TYPE(MPI_Comm), INTENT(IN) ::
-comm INTEGER, INTENT(IN) :: coords(*) INTEGER, INTENT(OUT) :: rank
-INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Cart_rank(comm, coords, rank, ierror)
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    INTEGER, INTENT(IN) :: coords(*)
+    INTEGER, INTENT(OUT) :: rank
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

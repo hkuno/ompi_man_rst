@@ -6,7 +6,7 @@ shmem_n_pes
 
 .. include_body
 
-num_pes, \_num_pes, :ref:`shmem_n_pes` - Returns the number of processing
+:ref:`num_pes`, \_num_pes  :ref:`shmem_n_pes` - Returns the number of processing
 elements (PEs) used to run the application.
 
 

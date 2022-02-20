@@ -13,23 +13,32 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Finalize()
+   #include <mpi.h>
+
+   int MPI_Finalize()
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_FINALIZE(IERROR) INTEGER IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_FINALIZE(IERROR)
+       INTEGER IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Finalize(ierror) INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Finalize(ierror)
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Output Parameter
 ----------------

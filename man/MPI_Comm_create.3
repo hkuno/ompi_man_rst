@@ -32,23 +32,50 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fI\%MPI_Comm_create\fP \- Creates a new communicator.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Comm_create(MPI_Comm comm, MPI_Group group, MPI_Comm *newcomm)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_COMM_CREATE(COMM, GROUP, NEWCOMM, IERROR) INTEGER COMM, GROUP,
-NEWCOMM, IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_COMM_CREATE(COMM, GROUP, NEWCOMM, IERROR)
+    INTEGER COMM, GROUP, NEWCOMM, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
-MPI_Comm_create(comm, group, newcomm, ierror) TYPE(MPI_Comm), INTENT(IN)
-:: comm TYPE(MPI_Group), INTENT(IN) :: group TYPE(MPI_Comm), INTENT(OUT)
-:: newcomm INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Comm_create(comm, group, newcomm, ierror)
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    TYPE(MPI_Group), INTENT(IN) :: group
+    TYPE(MPI_Comm), INTENT(OUT) :: newcomm
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2

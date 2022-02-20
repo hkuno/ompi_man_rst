@@ -14,26 +14,34 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Comm_call_errhandler(MPI_Comm comm, int errorcode)
+   #include <mpi.h>
+
+   int MPI_Comm_call_errhandler(MPI_Comm comm, int errorcode)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_COMM_CALL_ERRHANDLER(COMM, ERRORCODE, IERROR) INTEGER COMM,
-ERRORCODE, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_COMM_CALL_ERRHANDLER(COMM, ERRORCODE, IERROR)
+       INTEGER COMM, ERRORCODE, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Comm_call_errhandler(comm, errorcode, ierror) TYPE(MPI_Comm),
-INTENT(IN) :: comm INTEGER, INTENT(IN) :: errorcode INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Comm_call_errhandler(comm, errorcode, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, INTENT(IN) :: errorcode
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
 ---------------

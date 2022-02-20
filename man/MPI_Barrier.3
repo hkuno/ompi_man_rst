@@ -33,25 +33,61 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 group
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h> int MPI_Barrier(MPI_Comm) int MPI_Ibarrier(MPI_Comm
-comm, MPI_Request *request) int MPI_barrier_init(MPI_Comm comm,
-MPI_Info info, MPI_Request *request)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Barrier(MPI_Comm)
+int MPI_Ibarrier(MPI_Comm comm, MPI_Request *request)
+int MPI_barrier_init(MPI_Comm comm, MPI_Info info, MPI_Request *request)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq MPI_BARRIER(COMM,
-IERROR) INTEGER COMM, IERROR MPI_IBARRIER(COMM, REQUEST, IERROR) INTEGER
-COMM, REQUEST, IERROR MPI_BARRIER_INIT(COMM, INFO, REQUEST, IERROR)
-INTEGER COMM, INFO, REQUEST, IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+MPI_BARRIER(COMM, IERROR)
+    INTEGER COMM, IERROR
+MPI_IBARRIER(COMM, REQUEST, IERROR)
+    INTEGER COMM, REQUEST, IERROR
+MPI_BARRIER_INIT(COMM, INFO, REQUEST, IERROR)
+    INTEGER COMM, INFO, REQUEST, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08 MPI_Barrier(comm, ierror) TYPE(MPI_Comm), INTENT(IN)
-:: comm INTEGER, OPTIONAL, INTENT(OUT) :: ierror MPI_Ibarrier(comm,
-request, ierror) TYPE(MPI_Comm), INTENT(IN) :: comm TYPE(MPI_Request),
-INTENT (OUT) :: request INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-MPI_Barrier_init(comm, info, request, ierror) TYPE(MPI_Comm), INTENT(IN)
-:: comm TYPE(MPI_Info), INTENT(IN) :: info TYPE(MPI_Request), INTENT
-(OUT) :: request INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+MPI_Barrier(comm, ierror)
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+MPI_Ibarrier(comm, request, ierror)
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    TYPE(MPI_Request), INTENT (OUT) :: request
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+MPI_Barrier_init(comm, info, request, ierror)
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    TYPE(MPI_Info), INTENT(IN) :: info
+    TYPE(MPI_Request), INTENT (OUT) :: request
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2

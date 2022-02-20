@@ -14,28 +14,36 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Group_from_session_pset(MPI_Session session, const char
-\*pset_name, MPI_Group \*newgroup)
+   #include <mpi.h>
+
+   int MPI_Group_from_session_pset(MPI_Session session, const char *pset_name, MPI_Group *newgroup)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_GROUP_FROM_SESSION_PSET(SESSION, PSET_NAME, NEWGROUP, IERROR)
-INTEGER SESSION, NEWGROUP, IERROR CHARACTER*(*) PSET_NAME
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_GROUP_FROM_SESSION_PSET(SESSION, PSET_NAME, NEWGROUP, IERROR)
+       INTEGER SESSION,  NEWGROUP, IERROR
+       CHARACTER*(*) PSET_NAME
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Group_from_session_pset(session, pset_name, newgroup, ierror)
-TYPE(MPI_Session), INTENT(IN) :: session CHARACTER(LEN=*), INTENT(IN) ::
-pset_name TYPE(MPI_Group), INTENT(OUT) :: newgroup INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Group_from_session_pset(session, pset_name, newgroup, ierror)
+       TYPE(MPI_Session), INTENT(IN) :: session
+       CHARACTER(LEN=*), INTENT(IN) :: pset_name
+       TYPE(MPI_Group), INTENT(OUT) :: newgroup
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

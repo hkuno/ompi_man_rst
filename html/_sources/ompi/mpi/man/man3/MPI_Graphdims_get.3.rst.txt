@@ -14,26 +14,34 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Graphdims_get(MPI_Comm comm, int \*nnodes, int \*nedges)
+   #include <mpi.h>
+
+   int MPI_Graphdims_get(MPI_Comm comm, int *nnodes, int *nedges)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_GRAPHDIMS_GET(COMM, NNODES, NEDGES, IERROR) INTEGER COMM, NNODES,
-NEDGES, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_GRAPHDIMS_GET(COMM, NNODES, NEDGES, IERROR)
+       INTEGER COMM, NNODES, NEDGES, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Graphdims_get(comm, nnodes, nedges, ierror) TYPE(MPI_Comm),
-INTENT(IN) :: comm INTEGER, INTENT(OUT) :: nnodes, nedges INTEGER,
-OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Graphdims_get(comm, nnodes, nedges, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, INTENT(OUT) :: nnodes, nedges
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
 ---------------

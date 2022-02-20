@@ -37,12 +37,19 @@ MPI_Status_f082c, \fI\%MPI_Status_c2f08\fP \- Translates a C status into a
 Fortran 2008 status, or vice versa.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
-int MPI_Status_f082c(const MPI_F08_status *f08_status, MPI_Status
-*c_status) int MPI_Status_c2f08(const MPI_Status *c_status,
-MPI_F08_status *f08_status)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Status_f082c(const MPI_F08_status *f08_status, MPI_Status *c_status)
+int MPI_Status_c2f08(const MPI_Status *c_status, MPI_F08_status *f08_status)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

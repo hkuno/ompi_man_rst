@@ -33,22 +33,51 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 etc.)
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Buffer_detach(void *buf, int *size)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_BUFFER_DETACH(BUF, SIZE, IERROR) BUF(*) INTEGER SIZE, IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_BUFFER_DETACH(BUF, SIZE, IERROR)
+    <type>  BUF(*)
+    INTEGER SIZE, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
-MPI_Buffer_detach(buffer_addr, size, ierror) USE, INTRINSIC ::
-ISO_C_BINDING, ONLY TYPE(C_PTR), INTENT(OUT) :: buffer_addr INTEGER,
-INTENT(OUT) :: size INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Buffer_detach(buffer_addr, size, ierror)
+    USE, INTRINSIC :: ISO_C_BINDING, ONLY
+    TYPE(C_PTR), INTENT(OUT) :: buffer_addr
+    INTEGER, INTENT(OUT) :: size
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

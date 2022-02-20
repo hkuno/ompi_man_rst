@@ -33,24 +33,51 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 lower\-dimensional Cartesian subgrids.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
-int MPI_Cart_sub(MPI_Comm comm, const int remain_dims[], MPI_Comm
-*comm_new)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Cart_sub(MPI_Comm comm, const int remain_dims[], MPI_Comm *comm_new)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_CART_SUB(COMM, REMAIN_DIMS, COMM_NEW, IERROR) INTEGER COMM,
-COMM_NEW, IERROR LOGICAL REMAIN_DIMS(*)
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_CART_SUB(COMM, REMAIN_DIMS, COMM_NEW, IERROR)
+    INTEGER COMM, COMM_NEW, IERROR
+    LOGICAL REMAIN_DIMS(*)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
-MPI_Cart_sub(comm, remain_dims, newcomm, ierror) TYPE(MPI_Comm),
-INTENT(IN) :: comm LOGICAL, INTENT(IN) :: remain_dims(*) TYPE(MPI_Comm),
-INTENT(OUT) :: newcomm INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Cart_sub(comm, remain_dims, newcomm, ierror)
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    LOGICAL, INTENT(IN) :: remain_dims(*)
+    TYPE(MPI_Comm), INTENT(OUT) :: newcomm
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

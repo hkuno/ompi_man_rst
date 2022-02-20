@@ -913,16 +913,9 @@
 <p><a class="reference internal" href="#mpi-file-seek-shared"><span class="std std-ref">MPI_File_seek_shared</span></a> updates the shared file pointer according to
 <em>whence,</em> which could have the following possible values:</p>
 <blockquote>
-<div><dl class="simple">
-<dt>o</dt><dd><p>MPI_SEEK_SET - The pointer is set to <em>offset.</em></p>
-</dd>
-<dt>o</dt><dd><p>MPI_SEEK_CUR - The pointer is set to the current pointer position
-plus <em>offset.</em></p>
-</dd>
-<dt>o</dt><dd><p>MPI_SEEK_END - The pointer is set to the end of the file plus
-<em>offset.</em></p>
-</dd>
-</dl>
+<div><p>o    MPI_SEEK_SET - The pointer is set to <em>offset.</em></p>
+<p>o    MPI_SEEK_CUR - The pointer is set to the current pointer position plus <em>offset.</em></p>
+<p>o    MPI_SEEK_END - The pointer is set to the end of the file plus <em>offset.</em></p>
 </div></blockquote>
 <p><a class="reference internal" href="#mpi-file-seek-shared"><span class="std std-ref">MPI_File_seek_shared</span></a> is collective; all the processes in the
 communicator group associated with the file handle <em>fh</em> must call

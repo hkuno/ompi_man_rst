@@ -32,22 +32,50 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fI\%MPI_Buffer_attach\fP \- Attaches a user\-defined buffer for sending.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Buffer_attach(void *buf, int size)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_BUFFER_ATTACH(BUF, SIZE, IERROR) BUF(*) INTEGER SIZE, IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_BUFFER_ATTACH(BUF, SIZE, IERROR)
+    <type>  BUF(*)
+    INTEGER SIZE, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
-MPI_Buffer_attach(buffer, size, ierror) TYPE(*), DIMENSION(..),
-ASYNCHRONOUS :: buffer INTEGER, INTENT(IN) :: size INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Buffer_attach(buffer, size, ierror)
+    TYPE(*), DIMENSION(..), ASYNCHRONOUS :: buffer
+    INTEGER, INTENT(IN) :: size
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

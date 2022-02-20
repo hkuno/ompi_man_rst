@@ -67,16 +67,11 @@ DESCRIPTION
 :ref:`MPI_File_seek_shared` updates the shared file pointer according to
 *whence,* which could have the following possible values:
 
- o
-   MPI_SEEK_SET - The pointer is set to *offset.*
+ o    MPI_SEEK_SET - The pointer is set to *offset.*
 
- o
-   MPI_SEEK_CUR - The pointer is set to the current pointer position
-   plus *offset.*
+ o    MPI_SEEK_CUR - The pointer is set to the current pointer position plus *offset.*
 
- o
-   MPI_SEEK_END - The pointer is set to the end of the file plus
-   *offset.*
+ o    MPI_SEEK_END - The pointer is set to the end of the file plus *offset.*
 
 :ref:`MPI_File_seek_shared` is collective; all the processes in the
 communicator group associated with the file handle *fh* must call

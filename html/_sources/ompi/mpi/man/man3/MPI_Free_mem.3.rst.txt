@@ -13,24 +13,34 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Free_mem(void \*base)
+   #include <mpi.h>
+
+   int MPI_Free_mem(void *base)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_FREE_MEM(BASE, IERROR) BASE(*) INTEGER IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_FREE_MEM(BASE, IERROR)
+       <type> BASE(*)
+       INTEGER IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Free_mem(base, ierror) TYPE(*), DIMENSION(..), INTENT(IN),
-ASYNCHRONOUS :: base INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Free_mem(base, ierror)
+       TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: base
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
 ---------------

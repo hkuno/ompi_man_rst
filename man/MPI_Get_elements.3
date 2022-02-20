@@ -33,36 +33,65 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 elements in a data type.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Get_elements(const MPI_Status *status, MPI_Datatype datatype,
-int *count)
-.sp
+    int *count)
+
 int MPI_Get_elements_x(const MPI_Status *status, MPI_Datatype datatype,
-MPI_Count *count)
+    MPI_Count *count)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_GET_ELEMENTS(STATUS, DATATYPE, COUNT, IERROR) INTEGER
-STATUS(MPI_STATUS_SIZE), DATATYPE, COUNT, IERROR
-.sp
-MPI_GET_ELEMENTS_X(STATUS, DATATYPE, COUNT, IERROR) INTEGER
-STATUS(MPI_STATUS_SIZE), DATATYPE INTEGER(KIND=MPI_COUNT_KIND) COUNT
-INTEGER IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_GET_ELEMENTS(STATUS, DATATYPE, COUNT, IERROR)
+    INTEGER STATUS(MPI_STATUS_SIZE), DATATYPE, COUNT, IERROR
+
+MPI_GET_ELEMENTS_X(STATUS, DATATYPE, COUNT, IERROR)
+    INTEGER STATUS(MPI_STATUS_SIZE), DATATYPE
+        INTEGER(KIND=MPI_COUNT_KIND) COUNT
+        INTEGER IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
-MPI_Get_elements(status, datatype, count, ierror) TYPE(MPI_Status),
-INTENT(IN) :: status TYPE(MPI_Datatype), INTENT(IN) :: datatype INTEGER,
-INTENT(OUT) :: count INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-.sp
-MPI_Get_elements_x(status, datatype, count, ierror) TYPE(MPI_Status),
-INTENT(IN) :: status TYPE(MPI_Datatype), INTENT(IN) :: datatype
-INTEGER(KIND = MPI_COUNT_KIND), INTENT(OUT) :: count INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Get_elements(status, datatype, count, ierror)
+    TYPE(MPI_Status), INTENT(IN) :: status
+    TYPE(MPI_Datatype), INTENT(IN) :: datatype
+    INTEGER, INTENT(OUT) :: count
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
+MPI_Get_elements_x(status, datatype, count, ierror)
+    TYPE(MPI_Status), INTENT(IN) :: status
+    TYPE(MPI_Datatype), INTENT(IN) :: datatype
+    INTEGER(KIND = MPI_COUNT_KIND), INTENT(OUT) :: count
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

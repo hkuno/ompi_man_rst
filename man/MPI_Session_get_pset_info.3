@@ -33,25 +33,51 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 of a specific process set
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
-int MPI_Session_get_pset_info(MPI_Session session, const char
-*pset_name, MPI_Info *info)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Session_get_pset_info(MPI_Session session, const char *pset_name, MPI_Info *info)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_SESSION_GET_PSET_INFO(SESSION, PSET_NAME, INFO, IERROR) INTEGER
-SESSION, INFO, IERROR CHARACTER*(*) PSET_NAME
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_SESSION_GET_PSET_INFO(SESSION, PSET_NAME, INFO, IERROR)
+    INTEGER SESSION, INFO, IERROR
+    CHARACTER*(*) PSET_NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Session_get_pset_info(session, pset_name, info, ierror)
-TYPE(MPI_Session), INTENT(IN) :: session CHARACTER(LEN=*), INTENT(IN) ::
-pset_name TYPE(MPI_Info), INTENT(OUT) :: info INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+    TYPE(MPI_Session), INTENT(IN) :: session
+    CHARACTER(LEN=*), INTENT(IN) :: pset_name
+    TYPE(MPI_Info), INTENT(OUT) :: info
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

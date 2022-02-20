@@ -37,62 +37,99 @@ MPI_Gather, MPI_Igather, \fI\%MPI_Gather_init\fP \- Gathers values from a group
 of processes.
 .SH SYNOPSIS
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
-int MPI_Gather(const void *sendbuf, int sendcount, MPI_Datatype
-sendtype, void *recvbuf, int recvcount, MPI_Datatype recvtype, int
-root, MPI_Comm comm)
-.sp
-int MPI_Igather(const void *sendbuf, int sendcount, MPI_Datatype
-sendtype, void *recvbuf, int recvcount, MPI_Datatype recvtype, int
-root, MPI_Comm comm, MPI_Request *request)
-.sp
-int MPI_Gather_init(const void *sendbuf, int sendcount, MPI_Datatype
-sendtype, void *recvbuf, int recvcount, MPI_Datatype recvtype, int
-root, MPI_Comm comm, MPI_Info info, MPI_Request *request)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Gather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+    void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
+    MPI_Comm comm)
+
+int MPI_Igather(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+    void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
+    MPI_Comm comm, MPI_Request *request)
+
+int MPI_Gather_init(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
+    void *recvbuf, int recvcount, MPI_Datatype recvtype, int root,
+    MPI_Comm comm, MPI_Info info, MPI_Request *request)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_GATHER(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF, RECVCOUNT, RECVTYPE,
-ROOT, COMM, IERROR) SENDBUF(*), RECVBUF(*) INTEGER SENDCOUNT, SENDTYPE,
-RECVCOUNT, RECVTYPE, ROOT INTEGER COMM, IERROR
-.sp
-MPI_IGATHER(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF, RECVCOUNT, RECVTYPE,
-ROOT, COMM, REQUEST, IERROR) SENDBUF(*), RECVBUF(*) INTEGER SENDCOUNT,
-SENDTYPE, RECVCOUNT, RECVTYPE, ROOT INTEGER COMM, REQUEST, IERROR
-.sp
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_GATHER(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF, RECVCOUNT,
+        RECVTYPE, ROOT, COMM, IERROR)
+    <type>  SENDBUF(*), RECVBUF(*)
+    INTEGER SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE, ROOT
+    INTEGER COMM, IERROR
+
+MPI_IGATHER(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF, RECVCOUNT,
+        RECVTYPE, ROOT, COMM, REQUEST, IERROR)
+    <type>  SENDBUF(*), RECVBUF(*)
+    INTEGER SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE, ROOT
+    INTEGER COMM, REQUEST, IERROR
+
 MPI_GATHER_INIT(SENDBUF, SENDCOUNT, SENDTYPE, RECVBUF, RECVCOUNT,
-RECVTYPE, ROOT, COMM, INFO, REQUEST, IERROR) SENDBUF(*), RECVBUF(*)
-INTEGER SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE, ROOT INTEGER COMM,
-INFO, REQUEST, IERROR
+        RECVTYPE, ROOT, COMM, INFO, REQUEST, IERROR)
+    <type>  SENDBUF(*), RECVBUF(*)
+    INTEGER SENDCOUNT, SENDTYPE, RECVCOUNT, RECVTYPE, ROOT
+    INTEGER COMM, INFO, REQUEST, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Gather(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype,
-root, comm, ierror) TYPE(*), DIMENSION(..), INTENT(IN) :: sendbuf
-TYPE(*), DIMENSION(..) :: recvbuf INTEGER, INTENT(IN) :: sendcount,
-recvcount, root TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, OPTIONAL, INTENT(OUT) ::
-ierror
-.sp
+        root, comm, ierror)
+    TYPE(*), DIMENSION(..), INTENT(IN) :: sendbuf
+    TYPE(*), DIMENSION(..) :: recvbuf
+    INTEGER, INTENT(IN) :: sendcount, recvcount, root
+    TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
 MPI_Igather(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype,
-root, comm, request, ierror) TYPE(*), DIMENSION(..), INTENT(IN),
-ASYNCHRONOUS :: sendbuf TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
-INTEGER, INTENT(IN) :: sendcount, recvcount, root TYPE(MPI_Datatype),
-INTENT(IN) :: sendtype, recvtype TYPE(MPI_Comm), INTENT(IN) :: comm
-TYPE(MPI_Request), INTENT(OUT) :: request INTEGER, OPTIONAL, INTENT(OUT)
-:: ierror
-.sp
-MPI_Gather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount,
-recvtype, root, comm, info, request, ierror) TYPE(*), DIMENSION(..),
-INTENT(IN), ASYNCHRONOUS :: sendbuf TYPE(*), DIMENSION(..), ASYNCHRONOUS
-:: recvbuf INTEGER, INTENT(IN) :: sendcount, recvcount, root
-TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype TYPE(MPI_Comm),
-INTENT(IN) :: comm TYPE(MPI_Info), INTENT(IN) :: info TYPE(MPI_Request),
-INTENT(OUT) :: request INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+        root, comm, request, ierror)
+    TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+    TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+    INTEGER, INTENT(IN) :: sendcount, recvcount, root
+    TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    TYPE(MPI_Request), INTENT(OUT) :: request
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
+MPI_Gather_init(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype,
+        root, comm, info, request, ierror)
+    TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: sendbuf
+    TYPE(*), DIMENSION(..), ASYNCHRONOUS :: recvbuf
+    INTEGER, INTENT(IN) :: sendcount, recvcount, root
+    TYPE(MPI_Datatype), INTENT(IN) :: sendtype, recvtype
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    TYPE(MPI_Info), INTENT(IN) :: info
+    TYPE(MPI_Request), INTENT(OUT) :: request
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

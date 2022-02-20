@@ -32,26 +32,53 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fI\%MPI_Session_get_nth_pset\fP \- Query runtime for name of the nth process set
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
-int MPI_Session_get_nth_pset(MPI_Session session, MPI_Info info, int n,
-int *pset_len, char *pset_name)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Session_get_nth_pset(MPI_Session session, MPI_Info info, int n, int *pset_len, char *pset_name)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
 MPI_SESSION_GET_NTH_PSET(SESSION, INFO, N, PSET_LEN, PSET_NAME, IERROR)
-INTEGER SESSION, INFO, N, PSET_LEN, IERROR CHARACTER*(*) PSET_NAME
+    INTEGER SESSION, INFO, N, PSET_LEN, IERROR
+    CHARACTER*(*) PSET_NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Session_get_nth_pset(session, info, n, pset_len, pset_name, ierror)
-TYPE(MPI_Session), INTENT(IN) :: session TYPE(MPI_Info), INTENT(IN) ::
-info INTEGER, INTENT(IN) :: n INTEGER, INTENT(INOUT) :: pset_len
-CHARACTER(LEN=*), INTENT(OUT) :: pset_name INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+    TYPE(MPI_Session), INTENT(IN) :: session
+    TYPE(MPI_Info), INTENT(IN) :: info
+    INTEGER, INTENT(IN) :: n
+    INTEGER, INTENT(INOUT) :: pset_len
+    CHARACTER(LEN=*), INTENT(OUT) :: pset_name
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

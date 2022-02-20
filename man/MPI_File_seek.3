@@ -96,19 +96,11 @@ MPI_File_seek(fh, offset, whence, ierror)
 which could have the following possible values:
 .INDENT 0.0
 .INDENT 3.5
-.INDENT 0.0
-.TP
-.B o
-MPI_SEEK_SET \- The pointer is set to \fIoffset.\fP
-.TP
-.B o
-MPI_SEEK_CUR \- The pointer is set to the current pointer position
-plus \fIoffset.\fP
-.TP
-.B o
-MPI_SEEK_END \- The pointer is set to the end of the file plus
-\fIoffset.\fP
-.UNINDENT
+o    MPI_SEEK_SET \- The pointer is set to \fIoffset.\fP
+.sp
+o    MPI_SEEK_CUR \- The pointer is set to the current pointer position plus \fIoffset.\fP
+.sp
+o    MPI_SEEK_END \- The pointer is set to the end of the file plus \fIoffset.\fP
 .UNINDENT
 .UNINDENT
 .sp

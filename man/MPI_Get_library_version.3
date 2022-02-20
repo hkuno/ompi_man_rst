@@ -33,24 +33,50 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 version
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Get_library_version(char *version, int *resultlen)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_GET_LIBRARY_VERSION(VERSION, RESULTLEN, IERROR) CHARACTER*(*) NAME
-INTEGER RESULTLEN, IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_GET_LIBRARY_VERSION(VERSION, RESULTLEN, IERROR)
+    CHARACTER*(*)   NAME
+    INTEGER RESULTLEN, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Get_library_version(version, resulten, ierror)
-CHARACTER(LEN=MPI_MAX_LIBRARY_VERSION_STRING), INTENT(OUT) :: version
-INTEGER, INTENT(OUT) :: resultlen INTEGER, OPTIONAL, INTENT(OUT) ::
-ierror
+    CHARACTER(LEN=MPI_MAX_LIBRARY_VERSION_STRING), INTENT(OUT) :: version
+    INTEGER, INTENT(OUT) :: resultlen
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

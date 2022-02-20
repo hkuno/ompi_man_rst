@@ -33,25 +33,51 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 handle and process set.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
-int MPI_Group_from_session_pset(MPI_Session session, const char
-*pset_name, MPI_Group *newgroup)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Group_from_session_pset(MPI_Session session, const char *pset_name, MPI_Group *newgroup)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
 MPI_GROUP_FROM_SESSION_PSET(SESSION, PSET_NAME, NEWGROUP, IERROR)
-INTEGER SESSION, NEWGROUP, IERROR CHARACTER*(*) PSET_NAME
+    INTEGER SESSION,  NEWGROUP, IERROR
+    CHARACTER*(*) PSET_NAME
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Group_from_session_pset(session, pset_name, newgroup, ierror)
-TYPE(MPI_Session), INTENT(IN) :: session CHARACTER(LEN=*), INTENT(IN) ::
-pset_name TYPE(MPI_Group), INTENT(OUT) :: newgroup INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+    TYPE(MPI_Session), INTENT(IN) :: session
+    CHARACTER(LEN=*), INTENT(IN) :: pset_name
+    TYPE(MPI_Group), INTENT(OUT) :: newgroup
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

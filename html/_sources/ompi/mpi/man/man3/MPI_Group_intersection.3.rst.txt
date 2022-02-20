@@ -14,27 +14,35 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Group_intersection(MPI_Group group1, MPI_Group group2, MPI_Group
-\*newgroup)
+   #include <mpi.h>
+
+   int MPI_Group_intersection(MPI_Group group1, MPI_Group group2,
+       MPI_Group *newgroup)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_GROUP_INTERSECTION(GROUP1, GROUP2, NEWGROUP, IERROR) INTEGER GROUP1,
-GROUP2, NEWGROUP, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_GROUP_INTERSECTION(GROUP1, GROUP2, NEWGROUP, IERROR)
+       INTEGER GROUP1, GROUP2, NEWGROUP, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Group_intersection(group1, group2, newgroup, ierror)
-TYPE(MPI_Group), INTENT(IN) :: group1, group2 TYPE(MPI_Group),
-INTENT(OUT) :: newgroup INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Group_intersection(group1, group2, newgroup, ierror)
+       TYPE(MPI_Group), INTENT(IN) :: group1, group2
+       TYPE(MPI_Group), INTENT(OUT) :: newgroup
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

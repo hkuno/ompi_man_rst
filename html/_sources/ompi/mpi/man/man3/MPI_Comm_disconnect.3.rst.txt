@@ -14,24 +14,33 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Comm_disconnect(MPI_Comm \*comm)
+   #include <mpi.h>
+
+   int MPI_Comm_disconnect(MPI_Comm *comm)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_COMM_DISCONNECT(COMM, IERROR) INTEGER COMM, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_COMM_DISCONNECT(COMM, IERROR)
+       INTEGER COMM, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Comm_disconnect(comm, ierror) TYPE(MPI_Comm), INTENT(INOUT) :: comm
-INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Comm_disconnect(comm, ierror)
+       TYPE(MPI_Comm), INTENT(INOUT) :: comm
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input/Output Parameter
 ^^^^^^^^^^^^^^^^^^^^^^

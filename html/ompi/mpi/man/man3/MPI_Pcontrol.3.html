@@ -905,18 +905,10 @@ to the function, and their datatypes.</p>
 profiling libraries, we request the following meanings for certain
 values of level:</p>
 <blockquote>
-<div><dl class="simple">
-<dt>o</dt><dd><p>level==0 Profiling is disabled.</p>
-</dd>
-<dt>o</dt><dd><p>level==1 Profiling is enabled at a normal default level of detail.</p>
-</dd>
-<dt>o</dt><dd><p>level==2 Profile buffers are flushed. (This may be a no-op in some
-profilers).</p>
-</dd>
-<dt>o</dt><dd><p>All other values of level have profile library-defined effects and
-additional arguments.</p>
-</dd>
-</dl>
+<div><p>o    level==0 Profiling is disabled.</p>
+<p>o    level==1 Profiling is enabled at a normal default level of detail.</p>
+<p>o    level==2 Profile buffers are flushed. (This may be a no-op in some profilers).</p>
+<p>o    All other values of level have profile library-defined effects and additional arguments.</p>
 </div></blockquote>
 <p>We also request that the default state after <a class="reference internal" href="MPI_Init.3.html#mpi-init"><span class="std std-ref">MPI_Init</span></a> has been called is
 for profiling to be enabled at the normal default level (i.e., as if

@@ -936,26 +936,15 @@ changed via the <a class="reference internal" href="MPI_File_set_view.3.html#mpi
 <p>The following access modes are supported (specified in amode, in a
 bit-vector OR in one of the following integer constants):</p>
 <blockquote>
-<div><dl class="simple">
-<dt>o</dt><dd><p>MPI_MODE_APPEND</p>
-</dd>
-<dt>o</dt><dd><p>MPI_MODE_CREATE – Create the file if it does not exist.</p>
-</dd>
-<dt>o</dt><dd><p>MPI_MODE_DELETE_ON_CLOSE</p>
-</dd>
-<dt>o</dt><dd><p>MPI_MODE_EXCL – Error creating a file that already exists.</p>
-</dd>
-<dt>o</dt><dd><p>MPI_MODE_RDONLY – Read only.</p>
-</dd>
-<dt>o</dt><dd><p>MPI_MODE_RDWR – Reading and writing.</p>
-</dd>
-<dt>o</dt><dd><p>MPI_MODE_SEQUENTIAL</p>
-</dd>
-<dt>o</dt><dd><p>MPI_MODE_WRONLY – Write only.</p>
-</dd>
-<dt>o</dt><dd><p>MPI_MODE_UNIQUE_OPEN</p>
-</dd>
-</dl>
+<div><p>o    MPI_MODE_APPEND</p>
+<p>o    MPI_MODE_CREATE – Create the file if it does not exist.</p>
+<p>o    MPI_MODE_DELETE_ON_CLOSE</p>
+<p>o    MPI_MODE_EXCL – Error creating a file that already exists.</p>
+<p>o    MPI_MODE_RDONLY – Read only.</p>
+<p>o    MPI_MODE_RDWR – Reading and writing.</p>
+<p>o    MPI_MODE_SEQUENTIAL</p>
+<p>o    MPI_MODE_WRONLY – Write only.</p>
+<p>o    MPI_MODE_UNIQUE_OPEN</p>
 </div></blockquote>
 <p>The modes MPI_MODE_RDONLY, MPI_MODE_RDWR, MPI_MODE_WRONLY, and
 MPI_MODE_CREATE have identical semantics to their POSIX counterparts. It

@@ -13,24 +13,34 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Finalized(int \*flag)
+   #include <mpi.h>
+
+   int MPI_Finalized(int *flag)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_FINALIZED(FLAG, IERROR) LOGICAL FLAG INTEGER IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_FINALIZED(FLAG, IERROR)
+       LOGICAL FLAG
+       INTEGER IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Finalized(flag, ierror) LOGICAL, INTENT(OUT) :: flag INTEGER,
-OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Finalized(flag, ierror)
+       LOGICAL, INTENT(OUT) :: flag
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Output Parameter
 ----------------

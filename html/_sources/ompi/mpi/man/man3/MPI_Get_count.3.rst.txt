@@ -13,27 +13,36 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Get_count(const MPI_Status \*status, MPI_Datatype datatype, int
-\*count)
+   #include <mpi.h>
+
+   int MPI_Get_count(const MPI_Status *status, MPI_Datatype datatype,
+       int *count)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_GET_COUNT(STATUS, DATATYPE, COUNT, IERROR) INTEGER
-STATUS(MPI_STATUS_SIZE), DATATYPE, COUNT, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_GET_COUNT(STATUS, DATATYPE, COUNT, IERROR)
+       INTEGER STATUS(MPI_STATUS_SIZE), DATATYPE, COUNT, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Get_count(status, datatype, count, ierror) TYPE(MPI_Status),
-INTENT(IN) :: status TYPE(MPI_Datatype), INTENT(IN) :: datatype INTEGER,
-INTENT(OUT) :: count INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Get_count(status, datatype, count, ierror)
+       TYPE(MPI_Status), INTENT(IN) :: status
+       TYPE(MPI_Datatype), INTENT(IN) :: datatype
+       INTEGER, INTENT(OUT) :: count
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

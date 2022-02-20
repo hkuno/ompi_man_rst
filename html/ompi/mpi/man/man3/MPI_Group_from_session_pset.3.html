@@ -865,23 +865,34 @@ handle and process set.</p>
 <h2><span class="section-number">188.1. </span>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="c-syntax">
 <h3><span class="section-number">188.1.1. </span>C Syntax<a class="headerlink" href="#c-syntax" title="Permalink to this headline">¶</a></h3>
-<p>c #include &lt;mpi.h&gt;</p>
-<p>int MPI_Group_from_session_pset(MPI_Session session, const char
-*pset_name, MPI_Group *newgroup)</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">MPI_Group_from_session_pset</span><span class="p">(</span><span class="n">MPI_Session</span> <span class="n">session</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">pset_name</span><span class="p">,</span> <span class="n">MPI_Group</span> <span class="o">*</span><span class="n">newgroup</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="fortran-syntax">
 <h3><span class="section-number">188.1.2. </span>Fortran Syntax<a class="headerlink" href="#fortran-syntax" title="Permalink to this headline">¶</a></h3>
-<p>fortran USE MPI ! or the older form: INCLUDE ‘mpif.h’</p>
-<p>MPI_GROUP_FROM_SESSION_PSET(SESSION, PSET_NAME, NEWGROUP, IERROR)
-INTEGER SESSION, NEWGROUP, IERROR CHARACTER*(*) PSET_NAME</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">USE </span><span class="n">MPI</span>
+<span class="c">! or the older form: INCLUDE &#39;mpif.h&#39;</span>
+
+<span class="n">MPI_GROUP_FROM_SESSION_PSET</span><span class="p">(</span><span class="n">SESSION</span><span class="p">,</span> <span class="n">PSET_NAME</span><span class="p">,</span> <span class="n">NEWGROUP</span><span class="p">,</span> <span class="n">IERROR</span><span class="p">)</span>
+    <span class="kt">INTEGER </span><span class="n">SESSION</span><span class="p">,</span>  <span class="n">NEWGROUP</span><span class="p">,</span> <span class="n">IERROR</span>
+    <span class="kt">CHARACTER</span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">PSET_NAME</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="fortran-2008-syntax">
 <h3><span class="section-number">188.1.3. </span>Fortran 2008 Syntax<a class="headerlink" href="#fortran-2008-syntax" title="Permalink to this headline">¶</a></h3>
-<p>fortran USE mpi_f08</p>
-<p>MPI_Group_from_session_pset(session, pset_name, newgroup, ierror)
-TYPE(MPI_Session), INTENT(IN) :: session CHARACTER(LEN=*), INTENT(IN) ::
-pset_name TYPE(MPI_Group), INTENT(OUT) :: newgroup INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">USE </span><span class="n">mpi_f08</span>
+
+<span class="n">MPI_Group_from_session_pset</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">pset_name</span><span class="p">,</span> <span class="n">newgroup</span><span class="p">,</span> <span class="n">ierror</span><span class="p">)</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Session</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">session</span>
+    <span class="kt">CHARACTER</span><span class="p">(</span><span class="nb">LEN</span><span class="o">=*</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pset_name</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Group</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">newgroup</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">OPTIONAL</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ierror</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="input-parameters">

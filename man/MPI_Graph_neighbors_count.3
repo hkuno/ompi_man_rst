@@ -33,23 +33,51 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 associated with a graph topology.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
-int MPI_Graph_neighbors_count(MPI_Comm comm, int rank, int *nneighbors)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Graph_neighbors_count(MPI_Comm comm, int rank,
+    int *nneighbors)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_GRAPH_NEIGHBORS_COUNT(COMM, RANK, NNEIGHBORS, IERROR) INTEGER COMM,
-RANK, NNEIGHBORS, IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_GRAPH_NEIGHBORS_COUNT(COMM, RANK, NNEIGHBORS, IERROR)
+    INTEGER COMM, RANK, NNEIGHBORS, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Graph_neighbors_count(comm, rank, nneighbors, ierror)
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: rank INTEGER,
-INTENT(OUT) :: nneighbors INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    INTEGER, INTENT(IN) :: rank
+    INTEGER, INTENT(OUT) :: nneighbors
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

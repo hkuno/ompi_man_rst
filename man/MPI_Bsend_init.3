@@ -32,26 +32,55 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fI\%MPI_Bsend_init\fP \- Builds a handle for a buffered send.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Bsend_init(const void *buf, int count, MPI_Datatype datatype,
-int dest, int tag, MPI_Comm comm, MPI_Request *request)
+    int dest, int tag, MPI_Comm comm, MPI_Request *request)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
 MPI_BSEND_INIT(BUF, COUNT, DATATYPE, DEST, TAG, COMM, REQUEST, IERROR)
-BUF(*) INTEGER COUNT, DATATYPE, DEST, TAG, INTEGER COMM, REQUEST, IERROR
+    <type>  BUF(*)
+    INTEGER COUNT, DATATYPE, DEST, TAG,
+    INTEGER COMM, REQUEST, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Bsend_init(buf, count, datatype, dest, tag, comm, request, ierror)
-TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: buf INTEGER,
-INTENT(IN) :: count, dest, tag TYPE(MPI_Datatype), INTENT(IN) ::
-datatype TYPE(MPI_Comm), INTENT(IN) :: comm TYPE(MPI_Request),
-INTENT(OUT) :: request INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+    TYPE(*), DIMENSION(..), INTENT(IN), ASYNCHRONOUS :: buf
+    INTEGER, INTENT(IN) :: count, dest, tag
+    TYPE(MPI_Datatype), INTENT(IN) :: datatype
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    TYPE(MPI_Request), INTENT(OUT) :: request
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

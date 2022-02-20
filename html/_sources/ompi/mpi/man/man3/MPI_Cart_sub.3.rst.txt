@@ -14,27 +14,36 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Cart_sub(MPI_Comm comm, const int remain_dims[], MPI_Comm
-\*comm_new)
+   #include <mpi.h>
+
+   int MPI_Cart_sub(MPI_Comm comm, const int remain_dims[], MPI_Comm *comm_new)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_CART_SUB(COMM, REMAIN_DIMS, COMM_NEW, IERROR) INTEGER COMM,
-COMM_NEW, IERROR LOGICAL REMAIN_DIMS(*)
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_CART_SUB(COMM, REMAIN_DIMS, COMM_NEW, IERROR)
+       INTEGER COMM, COMM_NEW, IERROR
+       LOGICAL REMAIN_DIMS(*)
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Cart_sub(comm, remain_dims, newcomm, ierror) TYPE(MPI_Comm),
-INTENT(IN) :: comm LOGICAL, INTENT(IN) :: remain_dims(*) TYPE(MPI_Comm),
-INTENT(OUT) :: newcomm INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Cart_sub(comm, remain_dims, newcomm, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       LOGICAL, INTENT(IN) :: remain_dims(*)
+       TYPE(MPI_Comm), INTENT(OUT) :: newcomm
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

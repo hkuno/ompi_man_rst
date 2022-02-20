@@ -13,28 +13,35 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Session_init(MPI_Info info, MPI_Errhandler errhandler,
-MPI_Session \*session)
+   #include <mpi.h>
+
+   int MPI_Session_init(MPI_Info info, MPI_Errhandler errhandler, MPI_Session *session)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_SESSION_INIT(INFO, ERRHANDLER, SESSION, IERROR) INTEGER INFO,
-ERRHANDLER, SESSION, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_SESSION_INIT(INFO, ERRHANDLER, SESSION, IERROR)
+       INTEGER INFO, ERRHANDLER, SESSION, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Session_init(info, errhandler, session, ierror) TYPE(MPI_Info),
-INTENT(IN) :: info TYPE(MPI_Errhandler), INTENT(IN) :: errhandler
-TYPE(MPI_Session), INTENT(OUT) :: session INTEGER, OPTIONAL, INTENT(OUT)
-:: ierror
+   USE mpi_f08
+
+   MPI_Session_init(info, errhandler, session, ierror)
+       TYPE(MPI_Info), INTENT(IN) :: info
+       TYPE(MPI_Errhandler), INTENT(IN) :: errhandler
+       TYPE(MPI_Session), INTENT(OUT) :: session
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

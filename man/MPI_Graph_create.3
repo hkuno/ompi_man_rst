@@ -33,27 +33,56 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 information has been attached.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Graph_create(MPI_Comm comm_old, int nnodes, const int index[],
-const int edges[], int reorder, MPI_Comm *comm_graph)
+    const int edges[], int reorder, MPI_Comm *comm_graph)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_GRAPH_CREATE(COMM_OLD, NNODES, INDEX, EDGES, REORDER, COMM_GRAPH,
-IERROR) INTEGER COMM_OLD, NNODES, INDEX(*), EDGES(*) INTEGER COMM_GRAPH,
-IERROR LOGICAL REORDER
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_GRAPH_CREATE(COMM_OLD, NNODES, INDEX, EDGES, REORDER,
+        COMM_GRAPH, IERROR)
+    INTEGER COMM_OLD, NNODES, INDEX(*), EDGES(*)
+    INTEGER COMM_GRAPH, IERROR
+    LOGICAL   REORDER
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Graph_create(comm_old, nnodes, index, edges, reorder, comm_graph,
-ierror) TYPE(MPI_Comm), INTENT(IN) :: comm_old INTEGER, INTENT(IN) ::
-nnodes, index(nnodes), edges(*) LOGICAL, INTENT(IN) :: reorder
-TYPE(MPI_Comm), INTENT(OUT) :: comm_graph INTEGER, OPTIONAL, INTENT(OUT)
-:: ierror
+        ierror)
+    TYPE(MPI_Comm), INTENT(IN) :: comm_old
+    INTEGER, INTENT(IN) :: nnodes, index(nnodes), edges(*)
+    LOGICAL, INTENT(IN) :: reorder
+    TYPE(MPI_Comm), INTENT(OUT) :: comm_graph
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

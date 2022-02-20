@@ -33,23 +33,49 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 handler assigned to a communicator
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Comm_call_errhandler(MPI_Comm comm, int errorcode)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_COMM_CALL_ERRHANDLER(COMM, ERRORCODE, IERROR) INTEGER COMM,
-ERRORCODE, IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_COMM_CALL_ERRHANDLER(COMM, ERRORCODE, IERROR)
+    INTEGER COMM, ERRORCODE, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
-MPI_Comm_call_errhandler(comm, errorcode, ierror) TYPE(MPI_Comm),
-INTENT(IN) :: comm INTEGER, INTENT(IN) :: errorcode INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Comm_call_errhandler(comm, errorcode, ierror)
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    INTEGER, INTENT(IN) :: errorcode
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2

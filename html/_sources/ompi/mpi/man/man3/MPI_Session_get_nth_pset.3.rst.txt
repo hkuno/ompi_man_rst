@@ -13,29 +13,38 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Session_get_nth_pset(MPI_Session session, MPI_Info info, int n,
-int \*pset_len, char \*pset_name)
+   #include <mpi.h>
+
+   int MPI_Session_get_nth_pset(MPI_Session session, MPI_Info info, int n, int *pset_len, char *pset_name)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_SESSION_GET_NTH_PSET(SESSION, INFO, N, PSET_LEN, PSET_NAME, IERROR)
-INTEGER SESSION, INFO, N, PSET_LEN, IERROR CHARACTER*(*) PSET_NAME
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_SESSION_GET_NTH_PSET(SESSION, INFO, N, PSET_LEN, PSET_NAME, IERROR)
+       INTEGER SESSION, INFO, N, PSET_LEN, IERROR
+       CHARACTER*(*) PSET_NAME
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Session_get_nth_pset(session, info, n, pset_len, pset_name, ierror)
-TYPE(MPI_Session), INTENT(IN) :: session TYPE(MPI_Info), INTENT(IN) ::
-info INTEGER, INTENT(IN) :: n INTEGER, INTENT(INOUT) :: pset_len
-CHARACTER(LEN=*), INTENT(OUT) :: pset_name INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Session_get_nth_pset(session, info, n, pset_len, pset_name, ierror)
+       TYPE(MPI_Session), INTENT(IN) :: session
+       TYPE(MPI_Info), INTENT(IN) :: info
+       INTEGER, INTENT(IN) :: n
+       INTEGER, INTENT(INOUT) :: pset_len
+       CHARACTER(LEN=*), INTENT(OUT) :: pset_name
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

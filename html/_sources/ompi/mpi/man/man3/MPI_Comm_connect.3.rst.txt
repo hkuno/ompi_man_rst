@@ -13,29 +13,39 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Comm_connect(const char \*port_name, MPI_Info info, int root,
-MPI_Comm comm, MPI_Comm \*newcomm)
+   #include <mpi.h>
+
+   int MPI_Comm_connect(const char *port_name, MPI_Info info, int root,
+       MPI_Comm comm, MPI_Comm *newcomm)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_COMM_CONNECT(PORT_NAME, INFO, ROOT, COMM, NEWCOMM, IERROR)
-CHARACTER*(*) PORT_NAME INTEGER INFO, ROOT, COMM, NEWCOMM, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_COMM_CONNECT(PORT_NAME, INFO, ROOT, COMM, NEWCOMM, IERROR)
+       CHARACTER*(*)   PORT_NAME
+       INTEGER     INFO, ROOT, COMM, NEWCOMM, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Comm_connect(port_name, info, root, comm, newcomm, ierror)
-CHARACTER(LEN=*), INTENT(IN) :: port_name TYPE(MPI_Info), INTENT(IN) ::
-info INTEGER, INTENT(IN) :: root TYPE(MPI_Comm), INTENT(IN) :: comm
-TYPE(MPI_Comm), INTENT(OUT) :: newcomm INTEGER, OPTIONAL, INTENT(OUT) ::
-ierror
+   USE mpi_f08
+
+   MPI_Comm_connect(port_name, info, root, comm, newcomm, ierror)
+       CHARACTER(LEN=*), INTENT(IN) :: port_name
+       TYPE(MPI_Info), INTENT(IN) :: info
+       INTEGER, INTENT(IN) :: root
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       TYPE(MPI_Comm), INTENT(OUT) :: newcomm
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

@@ -33,23 +33,49 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 a communicator.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Graphdims_get(MPI_Comm comm, int *nnodes, int *nedges)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_GRAPHDIMS_GET(COMM, NNODES, NEDGES, IERROR) INTEGER COMM, NNODES,
-NEDGES, IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_GRAPHDIMS_GET(COMM, NNODES, NEDGES, IERROR)
+    INTEGER COMM, NNODES, NEDGES, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
-MPI_Graphdims_get(comm, nnodes, nedges, ierror) TYPE(MPI_Comm),
-INTENT(IN) :: comm INTEGER, INTENT(OUT) :: nnodes, nedges INTEGER,
-OPTIONAL, INTENT(OUT) :: ierror
+.nf
+.ft C
+USE mpi_f08
+
+MPI_Graphdims_get(comm, nnodes, nedges, ierror)
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    INTEGER, INTENT(OUT) :: nnodes, nedges
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2

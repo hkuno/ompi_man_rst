@@ -32,25 +32,51 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fI\%MPI_Graph_map\fP \- Maps process to graph topology information.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
-int MPI_Graph_map(MPI_Comm comm, int nnodes, const int index[], const
-int edges[], int *newrank)
+.nf
+.ft C
+#include <mpi.h>
+
+int MPI_Graph_map(MPI_Comm comm, int nnodes, const int index[],
+    const int edges[], int *newrank)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_GRAPH_MAP(COMM, NNODES, INDEX, EDGES, NEWRANK, IERROR) INTEGER COMM,
-NNODES, INDEX(*), EDGES(*), NEWRANK, IERROR
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_GRAPH_MAP(COMM, NNODES, INDEX, EDGES, NEWRANK, IERROR)
+    INTEGER COMM, NNODES, INDEX(*), EDGES(*), NEWRANK, IERROR
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Graph_map(comm, nnodes, index, edges, newrank, ierror)
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: nnodes,
-index(nnodes), edges(*) INTEGER, INTENT(OUT) :: newrank INTEGER,
-OPTIONAL, INTENT(OUT) :: ierror
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    INTEGER, INTENT(IN) :: nnodes, index(nnodes), edges(*)
+    INTEGER, INTENT(OUT) :: newrank
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

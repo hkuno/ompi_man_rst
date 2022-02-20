@@ -863,9 +863,12 @@ INTEGER-style status, or vice versa.</p>
 <h2><span class="section-number">330.1. </span>SYNTAX<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="c-syntax">
 <h3><span class="section-number">330.1.1. </span>C Syntax<a class="headerlink" href="#c-syntax" title="Permalink to this headline">¶</a></h3>
-<p>c #include &lt;mpi.h&gt;</p>
-<p>int MPI_Status_f2c(const MPI_Fint *f_status, MPI_Status *c_status) int
-MPI_Status_c2f(const MPI_Status *c_status, MPI_Fint *f_status)</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">MPI_Status_f2c</span><span class="p">(</span><span class="k">const</span> <span class="n">MPI_Fint</span> <span class="o">*</span><span class="n">f_status</span><span class="p">,</span> <span class="n">MPI_Status</span> <span class="o">*</span><span class="n">c_status</span><span class="p">)</span>
+<span class="kt">int</span> <span class="n">MPI_Status_c2f</span><span class="p">(</span><span class="k">const</span> <span class="n">MPI_Status</span> <span class="o">*</span><span class="n">c_status</span><span class="p">,</span> <span class="n">MPI_Fint</span> <span class="o">*</span><span class="n">f_status</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="parameters">

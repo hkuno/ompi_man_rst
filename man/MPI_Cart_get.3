@@ -33,25 +33,53 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 a communicator.
 .SH SYNTAX
 .SS C Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-c #include <mpi.h>
-.sp
+.nf
+.ft C
+#include <mpi.h>
+
 int MPI_Cart_get(MPI_Comm comm, int maxdims, int dims[], int periods[],
-int coords[])
+    int coords[])
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
-.sp
-MPI_CART_GET(COMM, MAXDIMS, DIMS, PERIODS, COORDS, IERROR) INTEGER COMM,
-MAXDIMS, DIMS(*), COORDS(*), IERROR LOGICAL PERIODS(*)
+.nf
+.ft C
+USE MPI
+! or the older form: INCLUDE \(aqmpif.h\(aq
+
+MPI_CART_GET(COMM, MAXDIMS, DIMS, PERIODS, COORDS, IERROR)
+    INTEGER COMM, MAXDIMS, DIMS(*), COORDS(*), IERROR
+    LOGICAL PERIODS(*)
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SS Fortran 2008 Syntax
+.INDENT 0.0
+.INDENT 3.5
 .sp
-fortran USE mpi_f08
-.sp
+.nf
+.ft C
+USE mpi_f08
+
 MPI_Cart_get(comm, maxdims, dims, periods, coords, ierror)
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: maxdims
-INTEGER, INTENT(OUT) :: dims(maxdims), coords(maxdims) LOGICAL,
-INTENT(OUT) :: periods(maxdims) INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+    TYPE(MPI_Comm), INTENT(IN) :: comm
+    INTEGER, INTENT(IN) :: maxdims
+    INTEGER, INTENT(OUT) :: dims(maxdims), coords(maxdims)
+    LOGICAL, INTENT(OUT) :: periods(maxdims)
+    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2

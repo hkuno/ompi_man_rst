@@ -864,21 +864,34 @@ associated with a graph topology.</p>
 <h2><span class="section-number">178.1. </span>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="c-syntax">
 <h3><span class="section-number">178.1.1. </span>C Syntax<a class="headerlink" href="#c-syntax" title="Permalink to this headline">¶</a></h3>
-<p>c #include &lt;mpi.h&gt;</p>
-<p>int MPI_Graph_neighbors_count(MPI_Comm comm, int rank, int *nneighbors)</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;mpi.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="n">MPI_Graph_neighbors_count</span><span class="p">(</span><span class="n">MPI_Comm</span> <span class="n">comm</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rank</span><span class="p">,</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">nneighbors</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="fortran-syntax">
 <h3><span class="section-number">178.1.2. </span>Fortran Syntax<a class="headerlink" href="#fortran-syntax" title="Permalink to this headline">¶</a></h3>
-<p>fortran USE MPI ! or the older form: INCLUDE ‘mpif.h’</p>
-<p>MPI_GRAPH_NEIGHBORS_COUNT(COMM, RANK, NNEIGHBORS, IERROR) INTEGER COMM,
-RANK, NNEIGHBORS, IERROR</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">USE </span><span class="n">MPI</span>
+<span class="c">! or the older form: INCLUDE &#39;mpif.h&#39;</span>
+
+<span class="n">MPI_GRAPH_NEIGHBORS_COUNT</span><span class="p">(</span><span class="n">COMM</span><span class="p">,</span> <span class="n">RANK</span><span class="p">,</span> <span class="n">NNEIGHBORS</span><span class="p">,</span> <span class="n">IERROR</span><span class="p">)</span>
+    <span class="kt">INTEGER </span><span class="n">COMM</span><span class="p">,</span> <span class="n">RANK</span><span class="p">,</span> <span class="n">NNEIGHBORS</span><span class="p">,</span> <span class="n">IERROR</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="fortran-2008-syntax">
 <h3><span class="section-number">178.1.3. </span>Fortran 2008 Syntax<a class="headerlink" href="#fortran-2008-syntax" title="Permalink to this headline">¶</a></h3>
-<p>fortran USE mpi_f08</p>
-<p>MPI_Graph_neighbors_count(comm, rank, nneighbors, ierror)
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: rank INTEGER,
-INTENT(OUT) :: nneighbors INTEGER, OPTIONAL, INTENT(OUT) :: ierror</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">USE </span><span class="n">mpi_f08</span>
+
+<span class="n">MPI_Graph_neighbors_count</span><span class="p">(</span><span class="n">comm</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">nneighbors</span><span class="p">,</span> <span class="n">ierror</span><span class="p">)</span>
+    <span class="k">TYPE</span><span class="p">(</span><span class="n">MPI_Comm</span><span class="p">),</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">comm</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">IN</span><span class="p">)</span> <span class="kd">::</span> <span class="n">rank</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">nneighbors</span>
+    <span class="kt">INTEGER</span><span class="p">,</span> <span class="k">OPTIONAL</span><span class="p">,</span> <span class="k">INTENT</span><span class="p">(</span><span class="n">OUT</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ierror</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="input-parameters">
