@@ -1,4 +1,5 @@
 .. _open-mpi:
+.. _mpi:
 
 Open-MPI
 ========
