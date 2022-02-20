@@ -14,26 +14,35 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Cart_rank(MPI_Comm comm, int coords[], int \*rank)
+   #include <mpi.h>
+
+   int MPI_Cart_rank(MPI_Comm comm, int coords[], int *rank)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_CART_RANK(COMM, COORDS, RANK, IERROR) INTEGER COMM, COORDS(*), RANK,
-IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_CART_RANK(COMM, COORDS, RANK, IERROR)
+       INTEGER COMM, COORDS(*), RANK, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Cart_rank(comm, coords, rank, ierror) TYPE(MPI_Comm), INTENT(IN) ::
-comm INTEGER, INTENT(IN) :: coords(*) INTEGER, INTENT(OUT) :: rank
-INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Cart_rank(comm, coords, rank, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, INTENT(IN) :: coords(*)
+       INTEGER, INTENT(OUT) :: rank
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

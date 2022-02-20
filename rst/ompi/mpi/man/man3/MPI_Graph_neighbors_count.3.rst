@@ -14,26 +14,36 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Graph_neighbors_count(MPI_Comm comm, int rank, int \*nneighbors)
+   #include <mpi.h>
+
+   int MPI_Graph_neighbors_count(MPI_Comm comm, int rank,
+       int *nneighbors)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_GRAPH_NEIGHBORS_COUNT(COMM, RANK, NNEIGHBORS, IERROR) INTEGER COMM,
-RANK, NNEIGHBORS, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_GRAPH_NEIGHBORS_COUNT(COMM, RANK, NNEIGHBORS, IERROR)
+       INTEGER COMM, RANK, NNEIGHBORS, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Graph_neighbors_count(comm, rank, nneighbors, ierror)
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: rank INTEGER,
-INTENT(OUT) :: nneighbors INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Graph_neighbors_count(comm, rank, nneighbors, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, INTENT(IN) :: rank
+       INTEGER, INTENT(OUT) :: nneighbors
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

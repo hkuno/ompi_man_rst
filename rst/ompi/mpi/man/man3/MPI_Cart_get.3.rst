@@ -14,28 +14,38 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Cart_get(MPI_Comm comm, int maxdims, int dims[], int periods[],
-int coords[])
+   #include <mpi.h>
+
+   int MPI_Cart_get(MPI_Comm comm, int maxdims, int dims[], int periods[],
+       int coords[])
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_CART_GET(COMM, MAXDIMS, DIMS, PERIODS, COORDS, IERROR) INTEGER COMM,
-MAXDIMS, DIMS(*), COORDS(*), IERROR LOGICAL PERIODS(*)
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_CART_GET(COMM, MAXDIMS, DIMS, PERIODS, COORDS, IERROR)
+       INTEGER COMM, MAXDIMS, DIMS(*), COORDS(*), IERROR
+       LOGICAL PERIODS(*)
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Cart_get(comm, maxdims, dims, periods, coords, ierror)
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: maxdims
-INTEGER, INTENT(OUT) :: dims(maxdims), coords(maxdims) LOGICAL,
-INTENT(OUT) :: periods(maxdims) INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Cart_get(comm, maxdims, dims, periods, coords, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, INTENT(IN) :: maxdims
+       INTEGER, INTENT(OUT) :: dims(maxdims), coords(maxdims)
+       LOGICAL, INTENT(OUT) :: periods(maxdims)
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

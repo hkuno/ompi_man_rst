@@ -45,32 +45,37 @@ The following example sets the pml and btl MCA params before invoking
 :ref:`MPI_Init` in order to force a specific selection of PML and BTL
 components:
 
-c int provided, index, count; MPI_T_cvar_handle pml_handle, btl_handle;
-char pml_value[64], btl_value[64];
+.. code:: c
 
-MPI_T_init_thread(MPI_THREAD_SINGLE, &provided);
+   int provided, index, count;
+   MPI_T_cvar_handle pml_handle, btl_handle;
+   char pml_value[64], btl_value[64];
 
-MPI_T_cvar_get_index("pml", &index); MPI_T_cvar_handle_alloc(index,
-NULL, &pml_handle, &count); MPI_T_cvar_write(pml_handle, "ob1");
+   MPI_T_init_thread(MPI_THREAD_SINGLE, &provided);
 
-MPI_T_cvar_get_index("btl", &index); MPI_T_cvar_handle_alloc(index,
-NULL, &btl_handle, &count); MPI_T_cvar_write(btl_handle,
-"tcp,vader,self");
+   MPI_T_cvar_get_index("pml", &index);
+   MPI_T_cvar_handle_alloc(index, NULL, &pml_handle, &count);
+   MPI_T_cvar_write(pml_handle, "ob1");
 
-MPI_T_cvar_read(pml_handle, pml_value); MPI_T_cvar_read(btl_handle,
-btl_value); printf("Set value of cvars: PML: %s, BTL: %s\n", pml_value,
-btl_value);
+   MPI_T_cvar_get_index("btl", &index);
+   MPI_T_cvar_handle_alloc(index, NULL, &btl_handle, &count);
+   MPI_T_cvar_write(btl_handle, "tcp,vader,self");
 
-MPI_T_cvar_handle_free(&pml_handle);
-MPI_T_cvar_handle_free(&btl_handle);
+   MPI_T_cvar_read(pml_handle, pml_value);
+   MPI_T_cvar_read(btl_handle, btl_value);
+   printf("Set value of cvars: PML: %s, BTL: %s\n",
+          pml_value, btl_value);
 
-MPI_Init(NULL, NULL);
+   MPI_T_cvar_handle_free(&pml_handle);
+   MPI_T_cvar_handle_free(&btl_handle);
 
-// ...
+   MPI_Init(NULL, NULL);
 
-MPI_Finalize();
+   // ...
 
-MPI_T_finalize();
+   MPI_Finalize();
+
+   MPI_T_finalize();
 
 Note that once MPI is initialized, most Open MPI cvars become read-only.
 

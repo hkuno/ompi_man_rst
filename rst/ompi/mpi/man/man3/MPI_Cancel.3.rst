@@ -13,24 +13,33 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Cancel(MPI_Request \*request)
+   #include <mpi.h>
+
+   int MPI_Cancel(MPI_Request *request)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_CANCEL(REQUEST, IERROR) INTEGER REQUEST, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_CANCEL(REQUEST, IERROR)
+       INTEGER REQUEST, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Cancel(request, ierror) TYPE(MPI_Request), INTENT(IN) :: request
-INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Cancel(request, ierror)
+       TYPE(MPI_Request), INTENT(IN) :: request
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
 ---------------

@@ -14,28 +14,36 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Session_get_pset_info(MPI_Session session, const char
-\*pset_name, MPI_Info \*info)
+   #include <mpi.h>
+
+   int MPI_Session_get_pset_info(MPI_Session session, const char *pset_name, MPI_Info *info)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_SESSION_GET_PSET_INFO(SESSION, PSET_NAME, INFO, IERROR) INTEGER
-SESSION, INFO, IERROR CHARACTER*(*) PSET_NAME
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_SESSION_GET_PSET_INFO(SESSION, PSET_NAME, INFO, IERROR)
+       INTEGER SESSION, INFO, IERROR
+       CHARACTER*(*) PSET_NAME
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Session_get_pset_info(session, pset_name, info, ierror)
-TYPE(MPI_Session), INTENT(IN) :: session CHARACTER(LEN=*), INTENT(IN) ::
-pset_name TYPE(MPI_Info), INTENT(OUT) :: info INTEGER, OPTIONAL,
-INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Session_get_pset_info(session, pset_name, info, ierror)
+       TYPE(MPI_Session), INTENT(IN) :: session
+       CHARACTER(LEN=*), INTENT(IN) :: pset_name
+       TYPE(MPI_Info), INTENT(OUT) :: info
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

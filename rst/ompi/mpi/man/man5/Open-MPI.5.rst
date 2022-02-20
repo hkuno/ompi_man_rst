@@ -256,4 +256,3 @@ Standard error return classes for Open MPI:
 +-------------------------------+--------------+---------------------------------------+
 
 .. seealso:: :ref:`MPI_T`
-:ref:`MPI_T`

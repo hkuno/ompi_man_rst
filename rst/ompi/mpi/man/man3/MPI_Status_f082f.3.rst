@@ -14,35 +14,44 @@ SYNTAX
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Status_f082f(const MPI_F08_status \*f08_status, MPI_Fint
-\*f_status) int MPI_Status_f2f08(const MPI_Fint \*f_status,
-MPI_F08_status \*f08_status)
+   #include <mpi.h>
+
+   int MPI_Status_f082f(const MPI_F08_status *f08_status, MPI_Fint *f_status)
+   int MPI_Status_f2f08(const MPI_Fint *f_status, MPI_F08_status *f08_status)
 
 Fortran mpi Module Syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-fortran USE MPI
+.. code:: fortran
 
-MPI_STATUS_F082F(F08_STATUS, F_STATUS, IERROR) TYPE(MPI_Status) ::
-F08_STATUS INTEGER :: STATUS(MPI_STATUS_SIZE), IERROR
+   USE MPI
 
-MPI_STATUS_F2F08(F_STATUS, F08_STATUS, IERROR) INTEGER ::
-F_STATUS(MPI_STATUS_SIZE), IERROR TYPE(MPI_Status) :: F08_STATUS
+   MPI_STATUS_F082F(F08_STATUS, F_STATUS, IERROR)
+       TYPE(MPI_Status) :: F08_STATUS
+       INTEGER :: STATUS(MPI_STATUS_SIZE), IERROR
+
+   MPI_STATUS_F2F08(F_STATUS, F08_STATUS, IERROR)
+       INTEGER :: F_STATUS(MPI_STATUS_SIZE), IERROR
+       TYPE(MPI_Status) :: F08_STATUS
 
 Fortran mpi_f08 Module Syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Status_f082f(f08_status, f_status, ierror) TYPE(MPI_Status),
-INTENT(IN) :: f08_status INTEGER, INTENT(OUT) ::
-f_status(MPI_STATUS_SIZE) INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
 
-MPI_Status_f2f08(f_status, f08_status, ierror) INTEGER, INTENT(IN) ::
-f_status(MPI_STATUS_SIZE) TYPE(MPI_Status), INTENT(OUT) :: f08_status
-INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   MPI_Status_f082f(f08_status, f_status, ierror)
+       TYPE(MPI_Status), INTENT(IN) :: f08_status
+       INTEGER, INTENT(OUT) :: f_status(MPI_STATUS_SIZE)
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+
+   MPI_Status_f2f08(f_status, f08_status, ierror)
+       INTEGER, INTENT(IN) :: f_status(MPI_STATUS_SIZE)
+       TYPE(MPI_Status), INTENT(OUT) :: f08_status
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 PARAMETERS
 ----------

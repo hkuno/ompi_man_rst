@@ -18,7 +18,7 @@ SYNOPSIS
 DESCRIPTION
 -----------
 
-**oshmem_info provides detailed information about the Open MPI/SHMEM
+**oshmem_info** provides detailed information about the Open MPI/SHMEM
 installation. It can be useful for at least three common scenarios:
 
 1. Checking local configuration and seeing how Open MPI/SHMEM was
@@ -34,7 +34,7 @@ MCA parameters they support.
 OPTIONS
 -------
 
-**oshmem_info accepts the following options:
+**oshmem_info** accepts the following options:
 
 *-a|--all*
    Show all configuration options and MCA parameters

@@ -14,24 +14,34 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Cartdim_get(MPI_Comm comm, int \*ndims)
+   #include <mpi.h>
+
+   int MPI_Cartdim_get(MPI_Comm comm, int *ndims)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_CARTDIM_GET(COMM, NDIMS, IERROR) INTEGER COMM, NDIMS, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_CARTDIM_GET(COMM, NDIMS, IERROR)
+       INTEGER COMM, NDIMS, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Cartdim_get(comm, ndims, ierror) TYPE(MPI_Comm), INTENT(IN) :: comm
-INTEGER, INTENT(OUT) :: ndims INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Cartdim_get(comm, ndims, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, INTENT(OUT) :: ndims
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
 ---------------

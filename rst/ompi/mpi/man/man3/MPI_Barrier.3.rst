@@ -14,28 +14,46 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h> int MPI_Barrier(MPI_Comm) int MPI_Ibarrier(MPI_Comm
-comm, MPI_Request \*request) int MPI_barrier_init(MPI_Comm comm,
-MPI_Info info, MPI_Request \*request)
+.. code:: C
+
+   #include <mpi.h>
+
+   int MPI_Barrier(MPI_Comm)
+   int MPI_Ibarrier(MPI_Comm comm, MPI_Request *request)
+   int MPI_barrier_init(MPI_Comm comm, MPI_Info info, MPI_Request *request)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h' MPI_BARRIER(COMM,
-IERROR) INTEGER COMM, IERROR MPI_IBARRIER(COMM, REQUEST, IERROR) INTEGER
-COMM, REQUEST, IERROR MPI_BARRIER_INIT(COMM, INFO, REQUEST, IERROR)
-INTEGER COMM, INFO, REQUEST, IERROR
+.. code:: Fortran
+
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+   MPI_BARRIER(COMM, IERROR)
+       INTEGER COMM, IERROR
+   MPI_IBARRIER(COMM, REQUEST, IERROR)
+       INTEGER COMM, REQUEST, IERROR
+   MPI_BARRIER_INIT(COMM, INFO, REQUEST, IERROR)
+       INTEGER COMM, INFO, REQUEST, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08 MPI_Barrier(comm, ierror) TYPE(MPI_Comm), INTENT(IN)
-:: comm INTEGER, OPTIONAL, INTENT(OUT) :: ierror MPI_Ibarrier(comm,
-request, ierror) TYPE(MPI_Comm), INTENT(IN) :: comm TYPE(MPI_Request),
-INTENT (OUT) :: request INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-MPI_Barrier_init(comm, info, request, ierror) TYPE(MPI_Comm), INTENT(IN)
-:: comm TYPE(MPI_Info), INTENT(IN) :: info TYPE(MPI_Request), INTENT
-(OUT) :: request INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+.. code:: Fortran
+
+   USE mpi_f08
+   MPI_Barrier(comm, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   MPI_Ibarrier(comm, request, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       TYPE(MPI_Request), INTENT (OUT) :: request
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   MPI_Barrier_init(comm, info, request, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       TYPE(MPI_Info), INTENT(IN) :: info
+       TYPE(MPI_Request), INTENT (OUT) :: request
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
 ---------------
