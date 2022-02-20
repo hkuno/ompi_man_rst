@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_EXSCAN" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_EXSCAN" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ reduction)
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Exscan(const void *sendbuf, void *recvbuf, int count,
      MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
 
@@ -205,13 +206,7 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Op_create
-MPI_Reduce
-.INDENT 0.0
-.INDENT 3.5
-MPI_Scan
-.UNINDENT
-.UNINDENT
+MPI_Op_create MPI_Reduce MPI_Scan
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

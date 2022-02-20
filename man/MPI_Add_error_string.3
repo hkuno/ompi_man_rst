@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ADD_ERROR_STRING" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_ADD_ERROR_STRING" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -46,6 +46,7 @@ MPI_Add_error_string \- Associates a string with an error code or class
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Add_error_string(int errorcode, const char *string)
 .ft P
 .fi
@@ -116,14 +117,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Add_error_class
-MPI_Add_error_code
-MPI_Error_class
-.INDENT 0.0
-.INDENT 3.5
-MPI_Error_string
-.UNINDENT
-.UNINDENT
+MPI_Add_error_class MPI_Add_error_code MPI_Error_class MPI_Error_string
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

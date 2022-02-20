@@ -19,9 +19,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_File_write_at(MPI_File fh, MPI_Offset offset, const void *buf,
    	int count, MPI_Datatype datatype, MPI_Status *status)
 
@@ -30,7 +30,6 @@ Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -45,7 +44,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_File_write_at(fh, offset, buf, count, datatype, status, ierror)
@@ -116,8 +114,6 @@ MPI_ERRORS_ARE_FATAL may be used to make I/O errors fatal. Note that MPI
 does not guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
-   | :ref:`MPI_File_iwrite_at`
-   | :ref:`MPI_File_write_at_all`
-   | :ref:`MPI_File_write_at_all_begin`
-   | :ref:`MPI_File_write_at_all_end`
+.. seealso::
+   :ref:`MPI_File_iwrite_at` :ref:`MPI_File_write_at_all` :ref:`MPI_File_write_at_all_begin`
+   :ref:`MPI_File_write_at_all_end`

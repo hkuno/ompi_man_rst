@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_UNPACK_EXTERNAL" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_UNPACK_EXTERNAL" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -38,6 +38,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Unpack_external(const char datarep[], const void *inbuf,
      MPI_Aint insize, MPI_Aint *position,
      void *outbuf, int outcount,
@@ -195,14 +196,7 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Pack_external
-MPI_Pack_external_size
-MPI_Recv
-.INDENT 0.0
-.INDENT 3.5
-sscanf(3C)
-.UNINDENT
-.UNINDENT
+MPI_Pack_external MPI_Pack_external_size MPI_Recv sscanf(3C)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

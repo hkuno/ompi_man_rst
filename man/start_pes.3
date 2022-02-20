@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "START_PES" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "START_PES" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,8 +43,8 @@ C or C++:
 .sp
 .nf
 .ft C
-void shmem_init(void);
-void start_pes(int npes);
+void shmem_init(void)
+void start_pes(int npes)
 .ft P
 .fi
 .UNINDENT
@@ -123,8 +123,8 @@ unexpected results may occur on some architectures.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), shmem_barrier(3), shmem_barrier_all(3),
-\fIshmem_put\fP(3), \fImy_pe\fP(3I), \fIshmem_n_pes\fP(3I)
+\fIintro_shmem\fP(3) shmem_barrier(3) shmem_barrier_all(3)
+\fIshmem_put\fP(3) \fImy_pe\fP(3) \fIshmem_n_pes\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

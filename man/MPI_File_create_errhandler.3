@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_CREATE_ERRHANDLER" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_FILE_CREATE_ERRHANDLER" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ can be attached to a file.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_File_create_errhandler(MPI_File_errhandler_function *function,
      MPI_Errhandler *errhandler)
 .ft P
@@ -121,8 +122,8 @@ In the Fortran language, the user routine should be of the form:
 .sp
 .nf
 .ft C
-    SUBROUTINE FILE_ERRHANDLER_FUNCTION(FILE, ERROR_CODE, ...)
-        INTEGER FILE, ERROR_CODE
+SUBROUTINE FILE_ERRHANDLER_FUNCTION(FILE, ERROR_CODE, ...)
+    INTEGER FILE, ERROR_CODE
 .ft P
 .fi
 .UNINDENT

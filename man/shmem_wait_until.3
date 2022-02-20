@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_WAIT_UNTIL" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_WAIT_UNTIL" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -51,27 +51,27 @@ C or C++:
 .ft C
 #include <mpp/shmem.h>
 
-void shmem_int_wait(volatile int *var, int value);
+void shmem_int_wait(volatile int *var, int value)
 
-void shmem_int_wait_until(volatile int *var, int cond, int value);
+void shmem_int_wait_until(volatile int *var, int cond, int value)
 
-void shmem_long_wait(volatile long *var, long value);
+void shmem_long_wait(volatile long *var, long value)
 
-void shmem_long_wait_until(volatile long *var, int cond, long value);
+void shmem_long_wait_until(volatile long *var, int cond, long value)
 
-void shmem_longlong_wait(volatile long long *var, long long value);
+void shmem_longlong_wait(volatile long long *var, long long value)
 
 void shmem_longlong_wait_until(volatile long long *var, int cond,
-  long long value);
+  long long value)
 
-void shmem_short_wait(volatile short *var, short value);
+void shmem_short_wait(volatile short *var, short value)
 
 void shmem_short_wait_until(volatile short *var, int cond,
-  short value);
+  short value)
 
-void shmem_wait(volatile long *ivar, long cmp_value);
+void shmem_wait(volatile long *ivar, long cmp_value)
 
-void shmem_wait_until(volatile long *ivar, int cmp, long value);
+void shmem_wait_until(volatile long *ivar, int cmp, long value)
 .ft P
 .fi
 .UNINDENT
@@ -257,7 +257,7 @@ END
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_put\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_put\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

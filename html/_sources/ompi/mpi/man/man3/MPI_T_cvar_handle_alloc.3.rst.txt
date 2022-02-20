@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_cvar_handle_alloc(int cvar_index, void *obj_handle,
                                MPI_T_cvar_handle *handle, int *count)
 
@@ -73,7 +73,5 @@ MPI_T_cvar_handle_free() will fail if:
    The handle is invalid
 
 
-.. seealso:: 
-   ::
-
-      MPI_T_cvar_get_info
+.. seealso::
+   :ref:`MPI_T_cvar_get_info`

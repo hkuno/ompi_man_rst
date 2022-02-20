@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_CVAR_HANDLE_ALLOC" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_T_CVAR_HANDLE_ALLOC" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ contol variable handles
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_T_cvar_handle_alloc(int cvar_index, void *obj_handle,
                             MPI_T_cvar_handle *handle, int *count)
 
@@ -92,16 +93,7 @@ The handle is invalid
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
 MPI_T_cvar_get_info
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ATTR_PUT" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_ATTR_PUT" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ of this routine is deprecated.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Attr_put(MPI_Comm comm, int keyval, void *attribute_val)
 .ft P
 .fi
@@ -113,10 +114,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
 MPI_Comm_set_attr
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_File_open(MPI_Comm comm, const char *filename,
    	int amode, MPI_Info info,
    	MPI_File *fh)
@@ -30,7 +30,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -43,7 +42,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_File_open(comm, filename, amode, info, fh, ierror)

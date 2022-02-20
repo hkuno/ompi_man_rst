@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_pvar_start(MPI_T_pvar_session session, MPI_T_pvar_handle handle)
 
    int MPI_T_pvar_stop(MPI_T_pvar_session session, MPI_T_pvar_handle handle)
@@ -65,7 +65,5 @@ MPI_T_pvar_start() and MPI_T_pvar_stop() will fail if:
    The variable cannot be started or stopped
 
 
-.. seealso:: 
-   ::
-
-      MPI_T_pvar_get_info
+.. seealso::
+   :ref:`MPI_T_pvar_get_info`

@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Status_set_cancelled(MPI_Status *status, int flag)
 
 
@@ -28,7 +28,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -41,7 +40,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Status_set_cancelled(status, flag, ierror)

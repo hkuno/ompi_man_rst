@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_CREATE_DYNAMIC" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_WIN_CREATE_DYNAMIC" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ object for RMA operations.
 .nf
 .ft C
 #include <mpi.h>
+
 MPI_Win_create_dynamic(MPI_Info info, MPI_Comm comm, MPI_Win *win)
 .ft P
 .fi
@@ -149,10 +150,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
 MPI_Win_attach MPI_Win_detach MPI_Get_address
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

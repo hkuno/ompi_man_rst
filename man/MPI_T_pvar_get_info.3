@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_PVAR_GET_INFO" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_T_PVAR_GET_INFO" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -38,6 +38,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_T_pvar_get_info(int pvar_index, char *name, int *name_len,
                         int *verbosity, int *var_class, MPI_Datatype *datatype, MPI_T_enum *enumtype,
                         char *desc, int *desc_len, int *bind, int *readonly, int *continuous,
@@ -232,16 +233,7 @@ The performance variable index is invalid
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
 MPI_T_cvar_get_info
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

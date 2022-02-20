@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_DIST_GRAPH_NEIGHBORS_COUNT" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_DIST_GRAPH_NEIGHBORS_COUNT" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -40,6 +40,7 @@ flag indicating whether the distributed graph is weighted.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Dist_graph_neighbors_count(MPI_Comm comm, int *indegree,
      int *outdegree, int *weighted)
 .ft P

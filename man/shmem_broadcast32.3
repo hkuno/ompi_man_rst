@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_BROADCAST32" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_BROADCAST32" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -45,11 +45,11 @@ C or C++:
 
 void shmem_broadcast32(void *target, const void *source,
   size_t nelems, int PE_root, int PE_start, int logPE_stride,
-  int PE_size, long *pSync);
+  int PE_size, long *pSync)
 
 void shmem_broadcast64(void *target, const void *source,
   size_t nelems, int PE_root, int PE_start, int logPE_stride,
-  int PE_size, long *pSync);
+  int PE_size, long *pSync)
 .ft P
 .fi
 .UNINDENT

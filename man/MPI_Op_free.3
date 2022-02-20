@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_OP_FREE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_OP_FREE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -38,6 +38,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Op_free(MPI_Op *op)
 .ft P
 .fi
@@ -99,14 +100,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Op_create
-MPI_Reduce
-MPI_Allreduce
-MPI_Reduce_scatter
-MPI_Scan
-.fi
-.sp
+MPI_Op_create MPI_Reduce MPI_Allreduce MPI_Reduce_scatter MPI_Scan
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

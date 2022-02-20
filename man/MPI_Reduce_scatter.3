@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_REDUCE_SCATTER" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_REDUCE_SCATTER" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ Combines values and scatters the results.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Reduce_scatter(const void *sendbuf, void *recvbuf, const int recvcounts[],
      MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
 

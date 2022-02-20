@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_WRITE_AT" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_FILE_WRITE_AT" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_File_write_at(MPI_File fh, MPI_Offset offset, const void *buf,
      int count, MPI_Datatype datatype, MPI_Status *status)
 .ft P
@@ -147,13 +148,8 @@ does not guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_File_iwrite_at
-MPI_File_write_at_all
-MPI_File_write_at_all_begin
+MPI_File_iwrite_at MPI_File_write_at_all MPI_File_write_at_all_begin
 MPI_File_write_at_all_end
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

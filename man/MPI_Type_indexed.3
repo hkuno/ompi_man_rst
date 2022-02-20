@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_INDEXED" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_TYPE_INDEXED" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ datatype.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Type_indexed(int count, const int array_of_blocklengths[],
      const int array_of_displacements[], MPI_Datatype oldtype,
      MPI_Datatype *newtype)
@@ -221,10 +222,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
 MPI_Type_hindexed
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

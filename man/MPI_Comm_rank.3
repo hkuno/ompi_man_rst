@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_RANK" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_COMM_RANK" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ communicator.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Comm_rank(MPI_Comm comm, int *rank)
 .ft P
 .fi
@@ -112,13 +113,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Comm_group
-MPI_Comm_size
-.INDENT 0.0
-.INDENT 3.5
-MPI_Comm_compare
-.UNINDENT
-.UNINDENT
+MPI_Comm_group MPI_Comm_size MPI_Comm_compare
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

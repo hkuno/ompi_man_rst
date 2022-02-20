@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Scatterv(const void *sendbuf, const int sendcounts[], const int displs[],
    	MPI_Datatype sendtype, void *recvbuf, int recvcount,
    	MPI_Datatype recvtype, int root, MPI_Comm comm)
@@ -38,7 +38,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -65,7 +64,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Scatterv(sendbuf, sendcounts, displs, sendtype, recvbuf, recvcount,
@@ -163,7 +161,6 @@ receiving side we receive 100 - *i* elements into the *i*\ th column of
 a 100 x 150 C array at process *i*.
 
 .. code-block:: c
-   :linenos:
 
        MPI_Comm comm;
            int gsize,recvarray[100][150],*rptr;
@@ -267,10 +264,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
-   ::
-
-   MPI_Gather
-   MPI_Gatherv
-   MPI_Scatter
-
+.. seealso::
+   :ref:`MPI_Gather` :ref:`MPI_Gatherv` :ref:`MPI_Scatter`

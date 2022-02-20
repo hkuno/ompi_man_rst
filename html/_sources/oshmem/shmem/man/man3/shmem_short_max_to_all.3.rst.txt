@@ -21,42 +21,40 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
    void shmem_double_max_to_all(double *target, const double *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     double *pWrk, long *pSync);
+     double *pWrk, long *pSync)
 
    void shmem_float_max_to_all(float *target, const float *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     float *pWrk, long *pSync);
+     float *pWrk, long *pSync)
 
    void shmem_int_max_to_all(int *target, const int *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     int *pWrk, long *pSync);
+     int *pWrk, long *pSync)
 
    void shmem_long_max_to_all(long *target, const long *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     long *pWrk, long *pSync);
+     long *pWrk, long *pSync)
 
    void shmem_longdouble_max_to_all(long double *target,
      const long double *source, int nreduce, int PE_start,
-     int logPE_stride, int PE_size, long double *pWrk, long *pSync);
+     int logPE_stride, int PE_size, long double *pWrk, long *pSync)
 
    void shmem_longlong_max_to_all(long long *target,
      const long long *source, int nreduce,  int PE_start,
-     int logPE_stride, int PE_size, long long *pWrk, long *pSync);
+     int logPE_stride, int PE_size, long long *pWrk, long *pSync)
 
     void shmem_short_max_to_all(short *target, const short *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     short *pWrk, long *pSync);
+     short *pWrk, long *pSync)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -232,7 +230,6 @@ PEs.
 **Example 2:** Consider the following C/C++ call:
 
 .. code-block:: c++
-   :linenos:
 
    shmem_int_max_to_all( target, source, 3, 0, 0, 8, pwrk, psync );
 
@@ -252,5 +249,5 @@ Note that two sets of pWrk and pSync arrays are used alternately because
 no synchronization is done between calls.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

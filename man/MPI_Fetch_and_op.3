@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FETCH_AND_OP" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_FETCH_AND_OP" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ that of a target buffer and returns the target buffer value.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Fetch_and_op(const void *origin_addr, void *result_addr,
      MPI_Datatype datatype, int target_rank, MPI_Aint target_disp,
      MPI_Op op, MPI_Win win)
@@ -168,11 +169,7 @@ error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Get_accumulate
-MPI_Reduce
-.fi
-.sp
+MPI_Get_accumulate MPI_Reduce
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

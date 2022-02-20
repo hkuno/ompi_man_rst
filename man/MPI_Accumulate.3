@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ACCUMULATE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_ACCUMULATE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ origin buffer with that of a target buffer.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Accumulate(const void *origin_addr, int origin_count,
      MPI_Datatype origin_datatype, int target_rank,
      MPI_Aint target_disp, int target_count,

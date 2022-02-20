@@ -16,16 +16,14 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void shmem_barrier_all(void);
+   void shmem_barrier_all(void)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    include 'mpp/shmem.h'
 
@@ -59,5 +57,5 @@ EXAMPLES
    }
 
 
-.. seealso:: 
-   *shmem_barrier*\ (3), *shmem_init*\ (3)
+.. seealso::
+   *shmem_barrier*\ (3) *shmem_init*\ (3)

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INT_CSWAP" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_INT_CSWAP" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,13 +43,13 @@ C or C++:
 .ft C
 #include <mpp/shmem.h>
 
-int shmem_int_cswap(int *target, int cond, int value, int pe);
+int shmem_int_cswap(int *target, int cond, int value, int pe)
 
 long shmem_long_cswap(long *target, long cond, long value,
-  int pe);
+  int pe)
 
 long long shmem_longlong_cswap(longlong *target,
-  longlong cond, longlong value, int pe);
+  longlong cond, longlong value, int pe)
 .ft P
 .fi
 .UNINDENT
@@ -161,7 +161,7 @@ main()
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_cache\fP(3), \fIshmem_swap\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_cache\fP(3) \fIshmem_swap\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_STATUS_SET_ELEMENTS_X" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_STATUS_SET_ELEMENTS_X" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,6 +43,7 @@ opaque part of \fIstatus\fP to allow MPI_Get_elements to return \fIcount\fP\&.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Status_set_elements(MPI_Status *status, MPI_Datatype datatype, int count)
 int MPI_Status_set_elements_x(MPI_Status *status, MPI_Datatype datatype, MPI_Count count)
 .ft P

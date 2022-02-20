@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_IREAD_AT_ALL" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_FILE_IREAD_AT_ALL" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ offset (nonblocking, collective).
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_File_iread_at_all(MPI_File fh, MPI_Offset offset,
      void *buf, int count, MPI_Datatype datatype,
      MPI_Request *request)

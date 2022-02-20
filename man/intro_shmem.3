@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "INTRO_SHMEM" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "INTRO_SHMEM" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -964,10 +964,10 @@ Non\-stack C and C++ variables. These data objects must not be
 defined in a DSO.
 .TP
 \fB*\fP
-Fortran arrays allocated with \fIshpalloc\fP(3F)
+Fortran arrays allocated with \fIshpalloc\fP(3)
 .TP
 \fB*\fP
-C and C++ data allocated by \fIshmalloc\fP(3C)
+C and C++ data allocated by \fIshmalloc\fP(3)
 .UNINDENT
 .UNINDENT
 .UNINDENT
@@ -1183,18 +1183,17 @@ main() {
 The following man pages also contain information on OpenSHMEM routines.
 See the specific man pages for implementation information.
 .sp
-shmem_add(3), shmem_and(3), shmem_barrier(3),
-shmem_barrier_all(3), shmem_broadcast(3), shmem_cache(3),
-shmem_collect(3), shmem_cswap(3), shmem_fadd(3),
-shmem_fence(3), shmem_finc(3), shmem_get(3),
-shmem_iget(3), shmem_inc(3), shmem_iput(3),
-shmem_lock(3), shmem_max(3), shmem_min(3),
-shmem_my_pe(3), shmem_or(3), shmem_prod(3),
-shmem_put(3), shmem_quiet(3), shmem_short_g(3),
-shmem_short_p(3), shmem_sum(3), shmem_swap(3),
-shmem_wait(3), shmem_xor(3), shmem_pe_accessible(3),
-shmem_addr_accessible(3), shmem_init(3), shmem_malloc(3C),
-\fIshmem_my_pe\fP(3I), \fIshmem_n_pes\fP(3I)
+shmem_add(3) shmem_and(3) shmem_barrier(3)
+shmem_barrier_all(3) shmem_broadcast(3) shmem_cache(3)
+shmem_collect(3) shmem_cswap(3) shmem_fadd(3)
+shmem_fence(3) shmem_finc(3) shmem_get(3) shmem_iget(3)
+shmem_inc(3) shmem_iput(3) shmem_lock(3) shmem_max(3)
+shmem_min(3) shmem_my_pe(3) shmem_or(3) shmem_prod(3)
+shmem_put(3) shmem_quiet(3) shmem_short_g(3)
+shmem_short_p(3) shmem_sum(3) shmem_swap(3)
+shmem_wait(3) shmem_xor(3) shmem_pe_accessible(3)
+shmem_addr_accessible(3) shmem_init(3) shmem_malloc(3)
+\fIshmem_my_pe\fP(3) \fIshmem_n_pes\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_IALLREDUCE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_IALLREDUCE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,6 +43,7 @@ from all processes and distributes the result back to all processes.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Allreduce(const void *sendbuf, void *recvbuf, int count,
                   MPI_Datatype datatype, MPI_Op op, MPI_Comm comm)
 

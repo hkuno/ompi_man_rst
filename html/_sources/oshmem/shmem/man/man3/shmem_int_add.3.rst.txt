@@ -17,19 +17,17 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void shmem_int_add(int *target, int value, int pe);
-   void shmem_long_add(long *target, long value, int pe);
+   void shmem_int_add(int *target, int value, int pe)
+   void shmem_long_add(long *target, long value, int pe)
    void shmem_longlong_add(long long *target, long long value,
-     int pe);
+     int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    include 'mpp/shmem.h'
 
@@ -73,5 +71,5 @@ NOTES
 The term remotely accessible is defined in *intro_shmem*\ (3).
 
 
-.. seealso:: 
-   *intro_shmem*\ (3), *shmem_cache*\ (3)
+.. seealso::
+   *intro_shmem*\ (3) *shmem_cache*\ (3)

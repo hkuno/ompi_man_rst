@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_RPUT" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_RPUT" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,6 +43,7 @@ target.
 .nf
 .ft C
 #include <mpi.h>
+
 MPI_Put(const void *origin_addr, int origin_count, MPI_Datatype
      origin_datatype, int target_rank, MPI_Aint target_disp,
      int target_count, MPI_Datatype target_datatype, MPI_Win win)
@@ -230,12 +231,8 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Get MPI_Rget
-MPI_Accumulate MPI_Win_flush MPI_Win_flush_all MPI_Win_unlock
-MPI_Win_unlock_all
-.fi
-.sp
+MPI_Get MPI_Rget MPI_Accumulate MPI_Win_flush MPI_Win_flush_all
+MPI_Win_unlock MPI_Win_unlock_all
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -23,53 +23,51 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
    void shmem_complexd_sum_to_all(double complex *target,
      const double complex *source, int nreduce, int PE_start,
      int logPE_stride, int PE_size, double complex *pWrk,
-     long *pSync);
+     long *pSync)
 
    void shmem_complexf_sum_to_all(float complex *target,
      const float complex *source, int nreduce, int PE_start,
      int logPE_stride, int PE_size, float complex *pWrk,
-     long *pSync);
+     long *pSync)
 
    void shmem_double_sum_to_all(double *target,
      const double *source, int nreduce, int PE_start, int logPE_stride,
-     int PE_size, double *pWrk, long *pSync);
+     int PE_size, double *pWrk, long *pSync)
 
    void shmem_float_sum_to_all(float *target, const float *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     float *pWrk, long *pSync);
+     float *pWrk, long *pSync)
 
    void shmem_int_sum_to_all(int *target, const int *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     int *pWrk, long *pSync);
+     int *pWrk, long *pSync)
 
    void shmem_long_sum_to_all(long *target, const long *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     long *pWrk, long *pSync);
+     long *pWrk, long *pSync)
 
    void shmem_longdouble_sum_to_all(long double *target,
      const long double *source, int nreduce, int PE_start, int
-     logPE_stride, int PE_size, long double *pWrk, long *pSync);
+     logPE_stride, int PE_size, long double *pWrk, long *pSync)
 
    void shmem_longlong_sum_to_all(long long *target,
      const long long *source, int nreduce, int PE_start,
      int logPE_stride, int PE_size, long long *pWrk,
-     long *pSync);
+     long *pSync)
 
    void shmem_short_sum_to_all(short *target, const short *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     short *pWrk, long *pSync);
+     short *pWrk, long *pSync)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -271,7 +269,6 @@ array and finds the sum of the real variable FOO across all even PEs.
 **Example 2:** Consider the following C/C++ call:
 
 .. code-block:: c++
-   :linenos:
 
    shmem_int_sum_to_all( target, source, 3, 0, 0, 8, pwrk, psync );
 
@@ -291,5 +288,5 @@ the combination of the following calls:
    synchronization is done between calls.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

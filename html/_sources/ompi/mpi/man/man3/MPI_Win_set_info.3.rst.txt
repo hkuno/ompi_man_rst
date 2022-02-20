@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Win_set_info(MPI_Win win, MPI_Info info)
 
 
@@ -27,7 +27,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -39,7 +38,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Win_set_info(win, info, ierror)
@@ -81,5 +79,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
-   MPI_Win_get_info, MPI_Info_create, MPI_Info_set, :ref:`MPI_Info_free`
+.. seealso::
+   :ref:`MPI_Win_get_info` :ref:`MPI_Info_create` :ref:`MPI_Info_set` :ref:`MPI_Info_free`

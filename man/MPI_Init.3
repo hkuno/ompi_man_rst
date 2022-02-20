@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_INIT" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_INIT" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -38,6 +38,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Init(int *argc, char ***argv)
 .ft P
 .fi
@@ -135,14 +136,7 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Init_thread
-MPI_Initialized
-MPI_Finalize
-.INDENT 0.0
-.INDENT 3.5
-MPI_Finalized
-.UNINDENT
-.UNINDENT
+MPI_Init_thread MPI_Initialized MPI_Finalize MPI_Finalized
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

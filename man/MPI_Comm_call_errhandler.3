@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_CALL_ERRHANDLER" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_COMM_CALL_ERRHANDLER" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,77 +29,50 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-\fI\%MPI_Comm_call_errhandler\fP \- Passes the supplied error code to the
-error handler assigned to a communicator
+\fI\%MPI_Comm_call_errhandler\fP \- Passes the supplied error code to the error
+handler assigned to a communicator
 .SH SYNTAX
 .SS C Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-#include <mpi.h>
-
+c #include <mpi.h>
+.sp
 int MPI_Comm_call_errhandler(MPI_Comm comm, int errorcode)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
 .SS Fortran Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE MPI
-! or the older form: INCLUDE \(aqmpif.h\(aq
-
-MPI_COMM_CALL_ERRHANDLER(COMM, ERRORCODE, IERROR)
-    INTEGER COMM, ERRORCODE, IERROR
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
+.sp
+MPI_COMM_CALL_ERRHANDLER(COMM, ERRORCODE, IERROR) INTEGER COMM,
+ERRORCODE, IERROR
 .SS Fortran 2008 Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE mpi_f08
-
-MPI_Comm_call_errhandler(comm, errorcode, ierror)
-    TYPE(MPI_Comm), INTENT(IN) :: comm
-    INTEGER, INTENT(IN) :: errorcode
-    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE mpi_f08
+.sp
+MPI_Comm_call_errhandler(comm, errorcode, ierror) TYPE(MPI_Comm),
+INTENT(IN) :: comm INTEGER, INTENT(IN) :: errorcode INTEGER, OPTIONAL,
+INTENT(OUT) :: ierror
 .SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
-\fBcomm\fP : communicator with error handler (handle).
+comm : communicator with error handler (handle).
 .IP \(bu 2
-\fBerrorcode\fP : error code (integer).
+errorcode : error code (integer).
 .UNINDENT
 .SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBIERROR\fP : Fortran only: Error status (integer).
+IERROR : Fortran only: Error status (integer).
 .UNINDENT
 .SH DESCRIPTION
 .sp
-This function invokes the error handler assigned to the
-\fBcomm\fPunicator \fBcomm\fP with the supplied error code \fBerrorcode\fP\&.
-If the error handler was successfully called, the process is not
-aborted, and the error handler returns, this function returns
-MPI_SUCCESS.\(ga\(ga
+This function invokes the error handler assigned to the communicator
+comm with the supplied error code errorcode. If the error handler was
+successfully called, the process is not aborted, and the error handler
+returns, this function returns MPI_SUCCESS.
 .SH NOTES
 .sp
 Users should note that the default error handler is
 MPI_ERRORS_ARE_FATAL. Thus, calling this function will abort the
-processes in \fBcomm\fP if the default error handler has not been changed.
+processes in comm if the default error handler has not been changed.
 .SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
@@ -109,7 +82,7 @@ man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Comm_create_errhandler MPI_Comm_set_errhandler
+MPI_Comm_create_errhandler
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

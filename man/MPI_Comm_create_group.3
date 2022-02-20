@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_CREATE_GROUP" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_COMM_CREATE_GROUP" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -32,109 +32,80 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fI\%MPI_Comm_create_group\fP \- Creates a new communicator.
 .SH SYNTAX
 .SS C Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-#include <mpi.h>
-
-int MPI_Comm_create_group(MPI_Comm comm, MPI_Group group, int tag, MPI_Comm *newcomm)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+c #include <mpi.h>
+.sp
+int MPI_Comm_create_group(MPI_Comm comm, MPI_Group group, int tag,
+MPI_Comm *newcomm)
 .SS Fortran Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE MPI
-! or the older form: INCLUDE \(aqmpif.h\(aq
-
-MPI_COMM_CREATE_GROUP(COMM, GROUP, TAG, NEWCOMM, IERROR)
-    INTEGER COMM, GROUP, TAG, NEWCOMM, IERROR
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
+.sp
+MPI_COMM_CREATE_GROUP(COMM, GROUP, TAG, NEWCOMM, IERROR) INTEGER COMM,
+GROUP, TAG, NEWCOMM, IERROR
 .SS Fortran 2008 Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE mpi_f08
-
-MPI_Comm_create_group(comm, group, tag, newcomm, ierror)
-    TYPE(MPI_Comm), INTENT(IN) :: comm
-    TYPE(MPI_Group), INTENT(IN) :: group
-    INTEGER, INTENT(IN) :: tag
-    TYPE(MPI_Comm), INTENT(OUT) :: newcomm
-    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE mpi_f08
+.sp
+MPI_Comm_create_group(comm, group, tag, newcomm, ierror) TYPE(MPI_Comm),
+INTENT(IN) :: comm TYPE(MPI_Group), INTENT(IN) :: group INTEGER,
+INTENT(IN) :: tag TYPE(MPI_Comm), INTENT(OUT) :: newcomm INTEGER,
+OPTIONAL, INTENT(OUT) :: ierror
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBcomm\fP : Communicator (handle).
+comm : Communicator (handle).
 .IP \(bu 2
-\fBgroup\fP : Group, which is a subset of the group of comm (handle).
+group : Group, which is a subset of the group of comm (handle).
 .IP \(bu 2
-\fBtag\fP : Tag (integer).
+tag : Tag (integer).
 .UNINDENT
 .SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBnewcomm\fP : New communicator (handle).
+newcomm : New communicator (handle).
 .IP \(bu 2
-\fBIERROR\fP : Fortran only: Error status (integer).
+IERROR : Fortran only: Error status (integer).
 .UNINDENT
 .SH DESCRIPTION
 .sp
 \fI\%MPI_Comm_create_group\fP is similar to MPI_Comm_create; however,
-MPI_Comm_create must be called by all processes in the \fBgroup\fP of
-\fBcomm\fP, whereas \fI\%MPI_Comm_create_group\fP must be called by all
-processes in \fBgroup\fP, which is a subgroup of the \fBgroup\fP of
-\fBcomm\fP\&. In addition, \fI\%MPI_Comm_create_group\fP requires that \fBcomm\fP
-is an intracommunicator. \fI\%MPI_Comm_create_group\fP returns a new
-intracommunicator, \fBnewcomm\fP, for which the \fBgroup\fP argument defines
-the communication \fBgroup\fP\&. No cached information propagates from
-\fBcomm\fP to \fBnewcomm\fP\&. Each process must provide a \fBgroup\fP argument
-that is a sub\fBgroup\fP of the \fBgroup\fP associated with \fBcomm\fP; this
-could be MPI_GROUP_EMPTY. If a non\-empty \fBgroup\fP is specified,
-then all processes in that \fBgroup\fP must call the function, and each of
-these processes must provide the same arguments, including a \fBgroup\fP
-that contains the same members with the same ordering. Otherwise the
-call is erroneous. If the calling process is a member of the \fBgroup\fP
-given as the \fBgroup\fP argument, then \fBnewcomm\fP is a communicator with
-\fBgroup\fP as its associated \fBgroup\fP\&. If the calling process is not a
-member of \fBgroup\fP, e.g., \fBgroup\fP is MPI_GROUP_EMPTY, then the
-call is a local operation and MPI_COMM_NULL is returned as
-\fBnewcomm\fP\&.
+MPI_Comm_create must be called by all processes in the group of comm,
+whereas \fI\%MPI_Comm_create_group\fP must be called by all processes in group,
+which is a subgroup of the group of comm. In addition,
+\fI\%MPI_Comm_create_group\fP requires that comm is an intracommunicator.
+\fI\%MPI_Comm_create_group\fP returns a new intracommunicator, newcomm, for
+which the group argument defines the communication group. No cached
+information propagates from comm to newcomm. Each process must provide a
+group argument that is a subgroup of the group associated with comm;
+this could be MPI_GROUP_EMPTY. If a non\-empty group is specified, then
+all processes in that group must call the function, and each of these
+processes must provide the same arguments, including a group that
+contains the same members with the same ordering. Otherwise the call is
+erroneous. If the calling process is a member of the group given as the
+group argument, then newcomm is a communicator with group as its
+associated group. If the calling process is not a member of group, e.g.,
+group is MPI_GROUP_EMPTY, then the call is a local operation and
+MPI_COMM_NULL is returned as newcomm.
 .SH NOTES
 .sp
-\fI\%MPI_Comm_create_group\fP provides a means of making a subset of
-processes for the purpose of separate MIMD computation, with separate
-communication space. \fBnewcomm\fP, which is created by
-\fI\%MPI_Comm_create_group\fP, can be used in subsequent calls to
-\fI\%MPI_Comm_create_group\fP (or other communicator constructors) to
-further subdivide a computation into parallel sub\-computations. A more
-general service is provided by MPI_Comm_split\&.
+\fI\%MPI_Comm_create_group\fP provides a means of making a subset of processes
+for the purpose of separate MIMD computation, with separate
+communication space. newcomm, which is created by \fI\%MPI_Comm_create_group\fP,
+can be used in subsequent calls to \fI\%MPI_Comm_create_group\fP (or other
+communicator constructors) to further subdivide a computation into
+parallel sub\-computations. A more general service is provided by
+MPI_Comm_split\&.
 .SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the
 error value is returned, the current MPI error handler is called. By
 default, this error handler aborts the MPI job, except for I/O function
-errors. The error handler may be changed with
-MPI_Comm_set_errhandler; the predefined error handler
-MPI_ERRORS_RETURN may be used to cause error values to be returned.
-Note that MPI does not guarantee that an MPI program can continue past
-an error.
+errors. The error handler may be changed with MPI_Comm_set_errhandler;
+the predefined error handler MPI_ERRORS_RETURN may be used to cause
+error values to be returned. Note that MPI does not guarantee that an
+MPI program can continue past an error.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0

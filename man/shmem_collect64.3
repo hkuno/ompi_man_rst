@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_COLLECT64" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_COLLECT64" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -49,19 +49,19 @@ C or C++:
 
 void shmem_collect32(void *target, const void *source,
   size_t nelems, int PE_start, int logPE_stride, int PE_size,
-  long *pSync);
+  long *pSync)
 
 void shmem_collect64(void *target, const void *source,
   size_t nelems, int PE_start, int logPE_stride, int PE_size,
-  long *pSync);
+  long *pSync)
 
 void shmem_fcollect32(void *target, const void *source,
   size_t nelems, int PE_start, int logPE_stride, int PE_size,
-  long *pSync);
+  long *pSync)
 
 void shmem_fcollect64(void *target, const void *source,
   size_t nelems, int PE_start, int logPE_stride, int PE_size,
-  long *pSync);
+  long *pSync)
 .ft P
 .fi
 .UNINDENT

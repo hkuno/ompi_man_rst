@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_GROUP_RANGE_EXCL" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_GROUP_RANGE_EXCL" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ processes from an existing group.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Group_range_excl(MPI_Group group, int n, int ranges[][3],
      MPI_Group *newgroup)
 .ft P
@@ -117,11 +118,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Group_excl
-MPI_Group_free
-.fi
-.sp
+MPI_Group_excl MPI_Group_free
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

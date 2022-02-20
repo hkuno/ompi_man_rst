@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ADD_ERROR_CODE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_ADD_ERROR_CODE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Add_error_code(int errorclass, int *errorcode)
 .ft P
 .fi
@@ -110,11 +111,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.INDENT 0.0
-.TP
-.B MPI_Add_error_class
-MPI_Error_class
-.UNINDENT
+MPI_Add_error_class MPI_Error_class
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

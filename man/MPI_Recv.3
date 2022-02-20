@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_RECV" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_RECV" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -38,6 +38,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Recv(void *buf, int count, MPI_Datatype datatype,
      int source, int tag, MPI_Comm comm, MPI_Status *status)
 .ft P
@@ -184,8 +185,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Irecv
-MPI_Probe
+MPI_Irecv MPI_Probe
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

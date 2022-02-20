@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "_MY_PE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "_MY_PE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -44,8 +44,9 @@ C or C++:
 .nf
 .ft C
 #include <mpp/shmem.h>
-int shmem_my_pe (void);
-int my_pe (void);
+
+int shmem_my_pe (void)
+int my_pe (void)
 .ft P
 .fi
 .UNINDENT
@@ -74,7 +75,7 @@ the current program.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_n_pes\fP(3), \fIshmem_init\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_n_pes\fP(3) \fIshmem_init\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

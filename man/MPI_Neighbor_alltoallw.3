@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_NEIGHBOR_ALLTOALLW" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_NEIGHBOR_ALLTOALLW" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -40,6 +40,7 @@ types to, and receive data of different types from, all processes
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Neighbor_alltoallw(const void *sendbuf, const int sendcounts[],
      const MPI_Aint sdispls[], const MPI_Datatype sendtypes[],
      void *recvbuf, const int recvcounts[], const MPI_Aint rdispls[],
@@ -261,15 +262,8 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Neighbor_alltoall
-MPI_Neighbor_alltoallv
-MPI_Cart_create
-MPI_Graph_create
-.INDENT 0.0
-.INDENT 3.5
-MPI_Dist_graph_create
-.UNINDENT
-.UNINDENT
+MPI_Neighbor_alltoall MPI_Neighbor_alltoallv MPI_Cart_create
+MPI_Graph_create MPI_Dist_graph_create
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

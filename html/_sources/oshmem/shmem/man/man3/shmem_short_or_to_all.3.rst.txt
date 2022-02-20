@@ -19,30 +19,28 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
    void shmem_int_or_to_all(int *target, const int *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     int *pWrk, long *pSync);
+     int *pWrk, long *pSync)
 
    void shmem_long_or_to_all(long *target, const long *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     long *pWrk, long *pSync);
+     long *pWrk, long *pSync)
 
    void shmem_longlong_or_to_all(long long *target,
      const long long *source, int nreduce, int PE_start, int logPE_stride,
-     int PE_size, long long *pWrk, long *pSync);
+     int PE_size, long long *pWrk, long *pSync)
 
    void shmem_short_or_to_all(short *target, const short *source,
      int nreduce, int PE_start, int logPE_stride, int PE_size,
-     short *pWrk, long *pSync);
+     short *pWrk, long *pSync)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -197,7 +195,6 @@ even PEs.
 **Example 2:** Consider the following C/C++ call:
 
 .. code-block:: c++
-   :linenos:
 
    shmem_int_or_to_all( target, source, 3, 0, 0, 8, pwrk, psync );
 
@@ -217,5 +214,5 @@ Note that two sets of pWrk and pSync arrays are used alternately because
 no synchronization is done between calls.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

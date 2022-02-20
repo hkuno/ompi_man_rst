@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Request_free(MPI_Request *request)
 
 
@@ -27,7 +27,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -39,7 +38,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Request_free(request, ierror)
@@ -131,21 +129,8 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
-   | :ref:`MPI_Isend`
-   | :ref:`MPI_Irecv`
-   | :ref:`MPI_Issend`
-   | :ref:`MPI_Ibsend`
-   | :ref:`MPI_Irsend`
-   | :ref:`MPI_Recv_init`
-   | :ref:`MPI_Send_init`
-   | :ref:`MPI_Ssend_init`
-   | :ref:`MPI_Rsend_init`
-   | :ref:`MPI_Test`
-   | :ref:`MPI_Wait`
-   | :ref:`MPI_Waitall`
-   | :ref:`MPI_Waitany`
-   | :ref:`MPI_Waitsome`
-   | :ref:`MPI_Testall`
-   | :ref:`MPI_Testany`
-   | :ref:`MPI_Testsome`
+.. seealso::
+   :ref:`MPI_Isend` :ref:`MPI_Irecv` :ref:`MPI_Issend` :ref:`MPI_Ibsend` :ref:`MPI_Irsend` :ref:`MPI_Recv_init`
+   :ref:`MPI_Send_init` :ref:`MPI_Ssend_init` :ref:`MPI_Rsend_init` :ref:`MPI_Test` :ref:`MPI_Wait`
+   :ref:`MPI_Waitall` :ref:`MPI_Waitany` :ref:`MPI_Waitsome` :ref:`MPI_Testall` :ref:`MPI_Testany`
+   :ref:`MPI_Testsome`

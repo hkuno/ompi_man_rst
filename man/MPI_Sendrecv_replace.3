@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_SENDRECV_REPLACE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_SENDRECV_REPLACE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ buffer.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Sendrecv_replace(void *buf, int count, MPI_Datatype datatype,
      int dest, int sendtag, int source, int recvtag, MPI_Comm comm,
      MPI_Status *status)

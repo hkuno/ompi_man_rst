@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_GRAPH_NEIGHBORS_COUNT" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_GRAPH_NEIGHBORS_COUNT" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,75 +29,46 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-\fI\%MPI_Graph_neighbors_count\fP \- Returns the number of neighbors of a
-node associated with a graph topology.
+\fI\%MPI_Graph_neighbors_count\fP \- Returns the number of neighbors of a node
+associated with a graph topology.
 .SH SYNTAX
 .SS C Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-#include <mpi.h>
-
-int MPI_Graph_neighbors_count(MPI_Comm comm, int rank,
-    int *nneighbors)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+c #include <mpi.h>
+.sp
+int MPI_Graph_neighbors_count(MPI_Comm comm, int rank, int *nneighbors)
 .SS Fortran Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE MPI
-! or the older form: INCLUDE \(aqmpif.h\(aq
-
-MPI_GRAPH_NEIGHBORS_COUNT(COMM, RANK, NNEIGHBORS, IERROR)
-    INTEGER COMM, RANK, NNEIGHBORS, IERROR
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
+.sp
+MPI_GRAPH_NEIGHBORS_COUNT(COMM, RANK, NNEIGHBORS, IERROR) INTEGER COMM,
+RANK, NNEIGHBORS, IERROR
 .SS Fortran 2008 Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE mpi_f08
-
+fortran USE mpi_f08
+.sp
 MPI_Graph_neighbors_count(comm, rank, nneighbors, ierror)
-    TYPE(MPI_Comm), INTENT(IN) :: comm
-    INTEGER, INTENT(IN) :: rank
-    INTEGER, INTENT(OUT) :: nneighbors
-    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: rank INTEGER,
+INTENT(OUT) :: nneighbors INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBcomm\fP : Communicator with graph topology (handle).
+comm : Communicator with graph topology (handle).
 .IP \(bu 2
-\fBrank\fP : Rank of process in group of comm (integer).
+rank : Rank of process in group of comm (integer).
 .UNINDENT
 .SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBnneighbors\fP : Number of neighbors of specified process (integer).
+nneighbors : Number of neighbors of specified process (integer).
 .IP \(bu 2
-\fBIERROR\fP : Fortran only: Error status (integer).
+IERROR : Fortran only: Error status (integer).
 .UNINDENT
 .SH DESCRIPTION
 .sp
-\fI\%MPI_Graph_neighbors_count\fP and MPI_Graph_neighbors provide
-adjacency information for a general, graph topology.
-\fI\%MPI_Graph_neighbors_count\fP returns the number of neighbors for the
-process signified by \fBrank\fP\&.
+\fI\%MPI_Graph_neighbors_count\fP and MPI_Graph_neighbors provide adjacency
+information for a general, graph topology. \fI\%MPI_Graph_neighbors_count\fP
+returns the number of neighbors for the process signified by rank.
 .SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
@@ -106,10 +77,9 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-MPI_Comm_set_errhandler; the predefined error handler
-MPI_ERRORS_RETURN may be used to cause error values to be returned.
-Note that MPI does not guarantee that an MPI program can continue past
-an error.
+MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN
+may be used to cause error values to be returned. Note that MPI does not
+guarantee that an MPI program can continue past an error.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0

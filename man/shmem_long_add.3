@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_LONG_ADD" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_LONG_ADD" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -46,10 +46,10 @@ C or C++:
 .ft C
 #include <mpp/shmem.h>
 
-void shmem_int_add(int *target, int value, int pe);
-void shmem_long_add(long *target, long value, int pe);
+void shmem_int_add(int *target, int value, int pe)
+void shmem_long_add(long *target, long value, int pe)
 void shmem_longlong_add(long long *target, long long value,
-  int pe);
+  int pe)
 .ft P
 .fi
 .UNINDENT
@@ -105,7 +105,7 @@ The term remotely accessible is defined in \fIintro_shmem\fP(3).
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_cache\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_cache\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

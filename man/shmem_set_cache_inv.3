@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_SET_CACHE_INV" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_SET_CACHE_INV" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -46,12 +46,12 @@ C or C++:
 .ft C
 #include <mpp/shmem.h>
 
-void shmem_clear_cache_inv(void);
-void shmem_clear_cache_line_inv(void *target);
-void shmem_set_cache_inv(void);
-void shmem_set_cache_line_inv(void *target);
-void shmem_udcflush(void);
-void shmem_udcflush_line(void *target);
+void shmem_clear_cache_inv(void)
+void shmem_clear_cache_line_inv(void *target)
+void shmem_set_cache_inv(void)
+void shmem_set_cache_line_inv(void *target)
+void shmem_udcflush(void)
+void shmem_udcflush_line(void *target)
 .ft P
 .fi
 .UNINDENT
@@ -114,7 +114,7 @@ with legacy architectures.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_put\fP(3), \fIshmem_swap\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_put\fP(3) \fIshmem_swap\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T" "5" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_T" "5" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -32,25 +32,24 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 Open MPI\(aqs MPI_T interface \- General information
 .SH DESCRIPTION
 .sp
-There are a few Open MPI\-specific notes worth mentioning about its
-\fBMPI_T\fP interface implementation.
+There are a few Open MPI\-specific notes worth mentioning about its MPI_T
+interface implementation.
 .SS MPI_T Control Variables
 .sp
-Open MPI\(aqs implementation of the \fBMPI_T\fP Control Variable ("cvar")
-APIs is an interface to Open MPI\(aqs underlying Modular Component
-Architecture (MCA) parameters/variables. Simply put: using the \fBMPI_T\fP
-cvar interface is another mechanism to get/set Open MPI MCA parameters.
+Open MPI\(aqs implementation of the MPI_T Control Variable ("cvar") APIs is
+an interface to Open MPI\(aqs underlying Modular Component Architecture
+(MCA) parameters/variables. Simply put: using the MPI_T cvar interface
+is another mechanism to get/set Open MPI MCA parameters.
 .sp
 In order of precedence (highest to lowest), Open MPI provides the
 following mechanisms to set MCA parameters:
 .INDENT 0.0
 .IP 1. 3
-The \fBMPI_T\fP interface has the highest precedence. Specifically:
-values set via the \fBMPI_T\fP interface will override all other
-settings.
+The MPI_T interface has the highest precedence. Specifically: values
+set via the MPI_T interface will override all other settings.
 .IP 2. 3
-The \fBmpirun(1)\fP / \fBmpiexec(1)\fP command line (e.g., via the
-\fB\-\-mca\fP parameter).
+The mpirun(1) / mpiexec(1) command line (e.g., via the \-\-mca
+parameter).
 .IP 3. 3
 Environment variables.
 .IP 4. 3
@@ -60,52 +59,41 @@ MCA\-variable setting mechanisms.
 .UNINDENT
 .SS MPI initialization
 .sp
-An application may use the \fBMPI_T\fP interface before MPI is initialized
-to set MCA parameters. Setting MPI\-level MCA parameters before MPI is
+An application may use the MPI_T interface before MPI is initialized to
+set MCA parameters. Setting MPI\-level MCA parameters before MPI is
 initialized may affect \fIhow\fP MPI is initialized (e.g., by influencing
 which frameworks and components are selected).
 .sp
-The following example sets the \fBpml\fP and \fBbtl\fP MCA params before
-invoking MPI_Init in order to force a specific selection of PML
-and BTL components:
-.INDENT 0.0
-.INDENT 3.5
+The following example sets the pml and btl MCA params before invoking
+MPI_Init in order to force a specific selection of PML and BTL
+components:
 .sp
-.nf
-.ft C
-int provided, index, count;
-MPI_T_cvar_handle pml_handle, btl_handle;
+c int provided, index, count; MPI_T_cvar_handle pml_handle, btl_handle;
 char pml_value[64], btl_value[64];
-
+.sp
 MPI_T_init_thread(MPI_THREAD_SINGLE, &provided);
-
-MPI_T_cvar_get_index("pml", &index);
-MPI_T_cvar_handle_alloc(index, NULL, &pml_handle, &count);
-MPI_T_cvar_write(pml_handle, "ob1");
-
-MPI_T_cvar_get_index("btl", &index);
-MPI_T_cvar_handle_alloc(index, NULL, &btl_handle, &count);
-MPI_T_cvar_write(btl_handle, "tcp,vader,self");
-
-MPI_T_cvar_read(pml_handle, pml_value);
-MPI_T_cvar_read(btl_handle, btl_value);
-printf("Set value of cvars: PML: %s, BTL: %s\en",
-       pml_value, btl_value);
-
+.sp
+MPI_T_cvar_get_index("pml", &index); MPI_T_cvar_handle_alloc(index,
+NULL, &pml_handle, &count); MPI_T_cvar_write(pml_handle, "ob1");
+.sp
+MPI_T_cvar_get_index("btl", &index); MPI_T_cvar_handle_alloc(index,
+NULL, &btl_handle, &count); MPI_T_cvar_write(btl_handle,
+"tcp,vader,self");
+.sp
+MPI_T_cvar_read(pml_handle, pml_value); MPI_T_cvar_read(btl_handle,
+btl_value); printf("Set value of cvars: PML: %s, BTL: %sn", pml_value,
+btl_value);
+.sp
 MPI_T_cvar_handle_free(&pml_handle);
 MPI_T_cvar_handle_free(&btl_handle);
-
+.sp
 MPI_Init(NULL, NULL);
-
+.sp
 // ...
-
+.sp
 MPI_Finalize();
-
+.sp
 MPI_T_finalize();
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
 .sp
 Note that once MPI is initialized, most Open MPI cvars become read\-only.
 .sp
@@ -121,10 +109,10 @@ Open MPI\(aqs MPI_T categories are organized hierarchically:
 Layer (or "project"). There are two layers in Open MPI:
 .INDENT 3.0
 .IP \(bu 2
-\fBompi\fP: This layer contains cvars, pvars, and sub categories
-related to MPI characteristics.
+ompi: This layer contains cvars, pvars, and sub categories related
+to MPI characteristics.
 .IP \(bu 2
-\fBopal\fP: This layer generally contains cvars, pvars, and sub
+opal: This layer generally contains cvars, pvars, and sub
 categories of lower\-layer constructions, such as operating system
 issues, networking issues, etc.
 .UNINDENT
@@ -136,11 +124,10 @@ In most cases, the next level in the hierarchy is the Open MPI MCA
 framework.
 .INDENT 3.0
 .IP \(bu 2
-For example, you can find the \fBbtl\fP framework under the
-\fBopal\fP layer (because it has to do with the underlying
-networking).
+For example, you can find the btl framework under the opal
+layer (because it has to do with the underlying networking).
 .IP \(bu 2
-Additionally, the \fBpml\fP framework is under the \fBompi\fP layer
+Additionally, the pml framework is under the ompi layer
 (because it has to do with MPI semantics of point\-to\-point
 messaging).
 .UNINDENT
@@ -149,8 +136,8 @@ There are a few non\-MCA\-framework entities under the layer,
 however.
 .INDENT 3.0
 .IP \(bu 2
-For example, there is an \fBmpi\fP section under both the
-\fBopal\fP and \fBompi\fP layers for general/core MPI constructs.
+For example, there is an mpi section under both the opal and
+ompi layers for general/core MPI constructs.
 .UNINDENT
 .UNINDENT
 .IP 3. 3
@@ -160,15 +147,15 @@ Component.
 If relevant, the third level in the hierarchy is the MCA
 component.
 .IP \(bu 2
-For example, the \fBtcp\fP component can be found under the \fBopal\fP
-framework in the \fBopal\fP layer.
+For example, the tcp component can be found under the opal
+framework in the opal layer.
 .UNINDENT
 .UNINDENT
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_T_init:ref:\fIMPI_T_finalize\fP
+MPI_T_init
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

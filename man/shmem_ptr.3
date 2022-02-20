@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_PTR" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_PTR" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -41,7 +41,7 @@ C or C++:
 .ft C
 #include <mpp/shmem.h>
 
-void *shmem_ptr(const void *target, int pe);
+void *shmem_ptr(const void *target, int pe)
 .ft P
 .fi
 .UNINDENT
@@ -130,6 +130,7 @@ This is the equivalent program written in C:
 .nf
 .ft C
 #include <mpp/shmem.h>
+
 main()
 {
   static int bigd[100];
@@ -168,7 +169,7 @@ PE. If target is not remotely accessible, a NULL pointer is returned.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_put\fP(3), \fIshmem_get\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_put\fP(3) \fIshmem_get\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

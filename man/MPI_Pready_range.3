@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_PREADY_RANGE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_PREADY_RANGE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ partitions are ready to be transferred.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Pready_range(int partition_low, int partition_high, MPI_Request *request)
 .ft P
 .fi
@@ -102,10 +103,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Pready, MPI_Pready_list, MPI_Parrived
-.fi
-.sp
+MPI_Pready MPI_Pready_list MPI_Parrived
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

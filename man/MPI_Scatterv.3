@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_SCATTERV" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_SCATTERV" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ in parts to all tasks in a group.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Scatterv(const void *sendbuf, const int sendcounts[], const int displs[],
      MPI_Datatype sendtype, void *recvbuf, int recvcount,
      MPI_Datatype recvtype, int root, MPI_Comm comm)
@@ -207,36 +208,36 @@ a 100 x 150 C array at process \fIi\fP\&.
 .sp
 .nf
 .ft C
-    MPI_Comm comm;
-        int gsize,recvarray[100][150],*rptr;
-        int root, *sendbuf, myrank, bufsize, *stride;
-        MPI_Datatype rtype;
-        int i, *displs, *scounts, offset;
-        ...
-        MPI_Comm_size( comm, &gsize);
-        MPI_Comm_rank( comm, &myrank );
+MPI_Comm comm;
+    int gsize,recvarray[100][150],*rptr;
+    int root, *sendbuf, myrank, bufsize, *stride;
+    MPI_Datatype rtype;
+    int i, *displs, *scounts, offset;
+    ...
+    MPI_Comm_size( comm, &gsize);
+    MPI_Comm_rank( comm, &myrank );
 
-        stride = (int *)malloc(gsize*sizeof(int));
-        ...
-        /* stride[i] for i = 0 to gsize\-1 is set somehow
-         * sendbuf comes from elsewhere
-         */
-        ...
-        displs = (int *)malloc(gsize*sizeof(int));
-        scounts = (int *)malloc(gsize*sizeof(int));
-        offset = 0;
-        for (i=0; i<gsize; ++i) {
-            displs[i] = offset;
-            offset += stride[i];
-            scounts[i] = 100 \- i;
-        }
-        /* Create datatype for the column we are receiving
-         */
-        MPI_Type_vector( 100\-myrank, 1, 150, MPI_INT, &rtype);
-        MPI_Type_commit( &rtype );
-        rptr = &recvarray[0][myrank];
-        MPI_Scatterv(sendbuf, scounts, displs, MPI_INT,
-                     rptr, 1, rtype, root, comm);
+    stride = (int *)malloc(gsize*sizeof(int));
+    ...
+    /* stride[i] for i = 0 to gsize\-1 is set somehow
+     * sendbuf comes from elsewhere
+     */
+    ...
+    displs = (int *)malloc(gsize*sizeof(int));
+    scounts = (int *)malloc(gsize*sizeof(int));
+    offset = 0;
+    for (i=0; i<gsize; ++i) {
+        displs[i] = offset;
+        offset += stride[i];
+        scounts[i] = 100 \- i;
+    }
+    /* Create datatype for the column we are receiving
+     */
+    MPI_Type_vector( 100\-myrank, 1, 150, MPI_INT, &rtype);
+    MPI_Type_commit( &rtype );
+    rptr = &recvarray[0][myrank];
+    MPI_Scatterv(sendbuf, scounts, displs, MPI_INT,
+                 rptr, 1, rtype, root, comm);
 .ft P
 .fi
 .UNINDENT
@@ -312,9 +313,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Gather
-MPI_Gatherv
-MPI_Scatter
+MPI_Gather MPI_Gatherv MPI_Scatter
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

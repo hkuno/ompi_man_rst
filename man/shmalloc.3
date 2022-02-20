@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMALLOC" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMALLOC" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -41,15 +41,15 @@ C or C++:
 .ft C
 #include <mpp/shmem.h>
 
-void *shmalloc(size_t size);
+void *shmalloc(size_t size)
 
-void shfree(void *ptr);
+void shfree(void *ptr)
 
-void *shrealloc(void *ptr, size_t size);
+void *shrealloc(void *ptr, size_t size)
 
-void *shmemalign(size_t alignment, size_t size);
+void *shmemalign(size_t alignment, size_t size)
 
-extern long malloc_error;
+extern long malloc_error
 .ft P
 .fi
 .UNINDENT
@@ -58,7 +58,7 @@ extern long malloc_error;
 .sp
 The \fBshmalloc\fP function returns a pointer to a block of at least size
 bytes suitably aligned for any use. This space is allocated from the
-symmetric heap (in contrast to \fImalloc\fP(3C), which allocates from the
+symmetric heap (in contrast to \fImalloc\fP(3), which allocates from the
 private heap).
 .sp
 The \fBshmemalign\fP function allocates a block in the symmetric heap that
@@ -116,7 +116,7 @@ malloc_error set).
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fImy_pe\fP(3I), \fIstart_pes\fP(3)
+\fIintro_shmem\fP(3) \fImy_pe\fP(3) \fIstart_pes\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

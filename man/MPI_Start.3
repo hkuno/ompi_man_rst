@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_START" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_START" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ handle.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Start(MPI_Request *request)
 .ft P
 .fi
@@ -120,15 +121,8 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Bsend_init
-MPI_Rsend_init
-MPI_Send_init
-MPI_Sssend_init
-MPI_Recv_init
-MPI_Startall
-.fi
-.sp
+MPI_Bsend_init MPI_Rsend_init MPI_Send_init MPI_Sssend_init
+MPI_Recv_init MPI_Startall
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

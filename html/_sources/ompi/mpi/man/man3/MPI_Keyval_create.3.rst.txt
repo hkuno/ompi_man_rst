@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Keyval_create(MPI_Copy_function *copy_fn,
    	MPI_Delete_function *delete_fn, int *keyval, void *extra_state)
 
@@ -29,7 +29,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE 'mpif.h'
    MPI_KEYVAL_CREATE(COPY_FN, DELETE_FN, KEYVAL, EXTRA_STATE, IERROR)
@@ -72,7 +71,6 @@ defined as follows:
 A Fortran declaration for such a function is as follows:
 
 .. code-block:: fortran
-   :linenos:
 
      SUBROUTINE COPY_FUNCTION(OLDCOMM, KEYVAL, EXTRA_STATE, ATTRIBUTE_VAL_IN,
                  ATTRIBUTE_VAL_OUT, FLAG, IERR)
@@ -134,7 +132,6 @@ is defined as follows:
 A Fortran declaration for such a function is as follows:
 
 .. code-block:: fortran
-   :linenos:
 
      SUBROUTINE DELETE_FUNCTION(COMM, KEYVAL,ATTRIBUTE_VAL, EXTRA_STATE, IERR)
          INTEGER COMM, KEYVAL, ATTRIBUTE_VAL, EXTRA_STATE, IERR
@@ -167,6 +164,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
-   | :ref:`MPI_Keyval_free`
-   | :ref:`MPI_Comm_create_keyval`
+.. seealso::
+   :ref:`MPI_Keyval_free` :ref:`MPI_Comm_create_keyval`

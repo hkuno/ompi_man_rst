@@ -19,9 +19,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_File_get_type_extent(MPI_File fh, MPI_Datatype
    	datatype, MPI_Aint *extent)
 
@@ -30,7 +30,6 @@ Fortran Syntax (see FORTRAN 77 NOTES)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -43,7 +42,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_File_get_type_extent(fh, datatype, extent, ierror)

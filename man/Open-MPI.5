@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "OPEN-MPI" "5" "Jan 11, 2022" "" "Open MPI"
+.TH "OPEN-MPI" "5" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -125,7 +125,7 @@ MPI_ERR_TYPE
 T}	T{
 3
 T}	T{
-Invalid datatype
+Invalid datatype argument.
 T}
 _
 T{
@@ -157,7 +157,7 @@ MPI_ERR_REQUEST
 T}	T{
 7
 T}	T{
-Invalid MPI_Request
+Invalid MPI_Request handle.
 T}
 _
 T{
@@ -173,7 +173,7 @@ MPI_ERR_GROUP
 T}	T{
 9
 T}	T{
-Null group passed to
+Null group passed to function.
 T}
 _
 T{
@@ -197,7 +197,7 @@ MPI_ERR_DIMS
 T}	T{
 12
 T}	T{
-Illegal dimension
+Illegal dimension argument.
 T}
 _
 T{
@@ -221,7 +221,7 @@ MPI_ERR_TRUNCATE
 T}	T{
 15
 T}	T{
-Message truncated on
+Message truncated on receive.
 T}
 _
 T{
@@ -229,8 +229,7 @@ MPI_ERR_OTHER
 T}	T{
 16
 T}	T{
-Other error; use
-Error_string.
+Other error; use Error_string.
 T}
 _
 T{
@@ -246,7 +245,7 @@ MPI_ERR_IN_STATUS
 T}	T{
 18
 T}	T{
-Look in status for error
+Look in status for error value.
 T}
 _
 T{
@@ -270,7 +269,7 @@ MPI_ERR_AMODE
 T}	T{
 21
 T}	T{
-Unsupported amode passed
+Unsupported amode passed to open.
 T}
 _
 T{
@@ -286,7 +285,8 @@ MPI_ERR_BAD_FILE
 T}	T{
 23
 T}	T{
-Invalid file name (for
+Invalid file name (for example, path
+name too long).
 T}
 _
 T{
@@ -302,7 +302,8 @@ MPI_ERR_CONVERSION
 T}	T{
 25
 T}	T{
-An error occurred in a
+An error occurred in a user\-supplied
+data\-conversion function.
 T}
 _
 T{
@@ -318,8 +319,11 @@ MPI_ERR_DUP_DATAREP
 T}	T{
 27
 T}	T{
-Conversion functions
-MPI_REGISTER_DATAREP\&.
+Conversion functions could not be
+registered because a data
+representation identifier that was
+already defined was passed to
+MPI_REGISTER_DATAREP.
 T}
 _
 T{
@@ -335,7 +339,9 @@ MPI_ERR_FILE_IN_USE
 T}	T{
 29
 T}	T{
-File operation could not
+File operation could not be
+completed, as the file is currently
+open by some process.
 T}
 _
 T{
@@ -423,7 +429,10 @@ MPI_ERR_NOT_SAME
 T}	T{
 40
 T}	T{
-Collective argument not
+Collective argument not identical on
+all processes, or collective routines
+called in a different order by
+different processes.
 T}
 _
 T{
@@ -439,7 +448,7 @@ MPI_ERR_NO_SUCH_FILE
 T}	T{
 42
 T}	T{
-File (or directory) does
+File (or directory) does not exist.
 T}
 _
 T{
@@ -455,7 +464,8 @@ MPI_ERR_PROC_ABORTED
 T}	T{
 74
 T}	T{
-Operation failed because
+Operation failed because a remote
+peer has aborted.
 T}
 _
 T{
@@ -479,7 +489,7 @@ MPI_ERR_RMA_CONFLICT
 T}	T{
 46
 T}	T{
-Conflicting accesses to
+Conflicting accesses to window.
 T}
 _
 T{
@@ -487,7 +497,7 @@ MPI_ERR_RMA_SYNC
 T}	T{
 47
 T}	T{
-Erroneous RMA
+Erroneous RMA synchronization.
 T}
 _
 T{
@@ -495,7 +505,7 @@ MPI_ERR_SERVICE
 T}	T{
 48
 T}	T{
-Invalid
+Invalid publish/unpublish.
 T}
 _
 T{
@@ -515,24 +525,22 @@ Error spawning.
 T}
 _
 T{
-MPI
-_ERR_UNSUPPORTED_DATAREP
+MPI_ERR_UNSUPPORTED_DATAREP
 T}	T{
 51
 T}	T{
-Unsupported datarep
-passed to
-MPI_File_set_view\&.
+Unsupported datarep passed to
+MPI_File_set_view.
 T}
 _
 T{
-MPI_E
-RR_UNSUPPORTED_OPERATION
+MPI_ERR_UNSUPPORTED_OPERATION
 T}	T{
 52
 T}	T{
-Unsupported operation,
-such as seeking on a
+Unsupported operation, such as
+seeking on a file that supports only
+sequential access.
 T}
 _
 T{
@@ -552,13 +560,11 @@ Out of memory.
 T}
 _
 T{
-M
-PI_T_ERR_NOT_INITIALIZED
+MPI_T_ERR_NOT_INITIALIZED
 T}	T{
 55
 T}	T{
-Interface not
-initialized.
+Interface not initialized.
 T}
 _
 T{
@@ -566,7 +572,8 @@ MPI_T_ERR_CANNOT_INIT
 T}	T{
 56
 T}	T{
-Interface not in the
+Interface not in the state to be
+initialized.
 T}
 _
 T{
@@ -574,7 +581,7 @@ MPI_T_ERR_INVALID_INDEX
 T}	T{
 57
 T}	T{
-The enumeration index is
+The enumeration index is invalid.
 T}
 _
 T{
@@ -582,7 +589,8 @@ MPI_T_ERR_INVALID_ITEM
 T}	T{
 58
 T}	T{
-The item index queried
+The item index queried is out of
+range.
 T}
 _
 T{
@@ -598,42 +606,32 @@ MPI_T_ERR_OUT_OF_HANDLES
 T}	T{
 60
 T}	T{
-No more handles
+No more handles available.
 T}
 _
 T{
-M
+MPI_T_ERR_OUT_OF_SESSIONS
 T}	T{
 61
 T}	T{
-No more sessions
+No more sessions available.
 T}
 _
 T{
-PI_T_ERR_OUT_OF_SESSIONS
-T}	T{
-T}	T{
-available.
-T}
-_
-T{
-M
-PI_T_ERR_INVALID_SESSION
+MPI_T_ERR_INVALID_SESSION
 T}	T{
 62
 T}	T{
-Session argument is not
-a valid session.
+Session argument is not a valid
+session.
 T}
 _
 T{
-MP
-I_T_ERR_CVAR_SET_NOT_NOW
+MPI_T_ERR_CVAR_SET_NOT_NOW
 T}	T{
 63
 T}	T{
-Variable cannot be set
-at this moment.
+Variable cannot be set at this moment.
 T}
 _
 T{
@@ -641,17 +639,16 @@ MPI_T_ERR_CVAR_SET_NEVER
 T}	T{
 64
 T}	T{
-Variable cannot be set
+Variable cannot be set until end of
+execution.
 T}
 _
 T{
-MPI
-_T_ERR_PVAR_NO_STARTSTOP
+MPI_T_ERR_PVAR_NO_STARTSTOP
 T}	T{
 65
 T}	T{
-Variable cannot be
-started or stopped.
+Variable cannot be started or stopped.
 T}
 _
 T{
@@ -659,7 +656,7 @@ MPI_T_ERR_PVAR_NO_WRITE
 T}	T{
 66
 T}	T{
-Variable cannot be
+Variable cannot be written or reset.
 T}
 _
 T{
@@ -667,7 +664,8 @@ MPI_T_ERR_PVAR_NO_ATOMIC
 T}	T{
 67
 T}	T{
-Variable cannot be read
+Variable cannot be read and written
+atomically.
 T}
 _
 T{
@@ -675,8 +673,10 @@ MPI_ERR_RMA_RANGE
 T}	T{
 68
 T}	T{
-Target memory is not
-MPI_WIN_CREATE_DYNAMIC,
+Target memory is not part of the
+window (in the case of a window
+created with MPI_WIN_CREATE_DYNAMIC,
+target memory is not attached).
 T}
 _
 T{
@@ -684,7 +684,8 @@ MPI_ERR_RMA_ATTACH
 T}	T{
 69
 T}	T{
-Memory cannot be
+Memory cannot be attached (e.g.,
+because of resource exhaustion).
 T}
 _
 T{
@@ -692,7 +693,8 @@ MPI_ERR_RMA_FLAVOR
 T}	T{
 70
 T}	T{
-Passed window has the
+Passed window has the wrong flavor
+for the called function.
 T}
 _
 T{
@@ -700,7 +702,10 @@ MPI_ERR_RMA_SHARED
 T}	T{
 71
 T}	T{
-Memory cannot be shared
+Memory cannot be shared (e.g., some
+process in the group of the specified
+communicator cannot expose shared
+memory).
 T}
 _
 T{
@@ -708,7 +713,8 @@ MPI_T_ERR_INVALID
 T}	T{
 72
 T}	T{
-Invalid use of the
+Invalid use of the interface or bad
+parameter values(s).
 T}
 _
 T{
@@ -716,7 +722,8 @@ MPI_T_ERR_INVALID_NAME
 T}	T{
 73
 T}	T{
-The variable or category
+The variable or category name is
+invalid.
 T}
 _
 T{

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_ATTACH" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_WIN_ATTACH" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ detaches a memory region to / from a window object for RMA operations.
 .nf
 .ft C
 #include <mpi.h>
+
 MPI_Win_attach(MPI_Win win, void *base, MPI_Aint size)
 
 MPI_Win_detach(MPI_Win win, void *base)

@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Group_union(MPI_Group group1, MPI_Group group2,
    	MPI_Group *newgroup)
 
@@ -28,7 +28,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -40,7 +39,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Group_union(group1, group2, newgroup, ierror)
@@ -98,5 +96,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
-   | :ref:`MPI_Group_free`
+.. seealso::
+   :ref:`MPI_Group_free`

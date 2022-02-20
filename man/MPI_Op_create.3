@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_OP_CREATE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_OP_CREATE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -38,6 +38,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Op_create(MPI_User_function *function, int commute,
      MPI_Op *op)
 .ft P
@@ -112,9 +113,9 @@ The ANSI\-C prototype for the function is the following:
 .sp
 .nf
 .ft C
-  typedef void MPI_User_function(void *invec, void *inoutvec,
-                                 int *len,
-                                 MPI_Datatype *datatype);
+typedef void MPI_User_function(void *invec, void *inoutvec,
+                               int *len,
+                               MPI_Datatype *datatype);
 .ft P
 .fi
 .UNINDENT
@@ -126,9 +127,9 @@ The Fortran declaration of the user\-defined function appears below.
 .sp
 .nf
 .ft C
-  FUNCTION USER_FUNCTION( INVEC(*), INOUTVEC(*), LEN, TYPE)
-  <type> INVEC(LEN), INOUTVEC(LEN)
-   INTEGER LEN, TYPE
+FUNCTION USER_FUNCTION( INVEC(*), INOUTVEC(*), LEN, TYPE)
+<type> INVEC(LEN), INOUTVEC(LEN)
+ INTEGER LEN, TYPE
 .ft P
 .fi
 .UNINDENT
@@ -185,51 +186,51 @@ Compute the product of an array of complex numbers, in C.
 .sp
 .nf
 .ft C
-    typedef struct {
-        double real,imag;
-    } Complex;
+typedef struct {
+    double real,imag;
+} Complex;
 
-    /* the user\-defined function
-     */
-    void myProd( Complex *in, Complex *inout, int *len,
-                 MPI_Datatype *dptr )
-    {
-        int i;
-        Complex c;
+/* the user\-defined function
+ */
+void myProd( Complex *in, Complex *inout, int *len,
+             MPI_Datatype *dptr )
+{
+    int i;
+    Complex c;
 
-    for (i=0; i< *len; ++i) {
-            c.real = inout\->real*in\->real \-
-                       inout\->imag*in\->imag;
-            c.imag = inout\->real*in\->imag +
-                       inout\->imag*in\->real;
-            *inout = c;
-            in++; inout++;
-        }
+for (i=0; i< *len; ++i) {
+        c.real = inout\->real*in\->real \-
+                   inout\->imag*in\->imag;
+        c.imag = inout\->real*in\->imag +
+                   inout\->imag*in\->real;
+        *inout = c;
+        in++; inout++;
     }
+}
 
-    /* and, to call it...
+/* and, to call it...
+ */
+\&...
+
+/* each process has an array of 100 Complexes
      */
-    ...
+    Complex a[100], answer[100];
+    MPI_Op myOp;
+    MPI_Datatype ctype;
 
-    /* each process has an array of 100 Complexes
-         */
-        Complex a[100], answer[100];
-        MPI_Op myOp;
-        MPI_Datatype ctype;
+/* explain to MPI how type Complex is defined
+     */
+   MPI_Type_contiguous( 2, MPI_DOUBLE, &ctype );
+    MPI_Type_commit( &ctype );
+    /* create the complex\-product user\-op
+     */
+    MPI_Op_create( myProd, True, &myOp );
 
-    /* explain to MPI how type Complex is defined
-         */
-       MPI_Type_contiguous( 2, MPI_DOUBLE, &ctype );
-        MPI_Type_commit( &ctype );
-        /* create the complex\-product user\-op
-         */
-        MPI_Op_create( myProd, True, &myOp );
+    MPI_Reduce( a, answer, 100, ctype, myOp, root, comm );
 
-        MPI_Reduce( a, answer, 100, ctype, myOp, root, comm );
-
-        /* At this point, the answer, which consists of 100 Complexes,
-         * resides on process root
-         */
+    /* At this point, the answer, which consists of 100 Complexes,
+     * resides on process root
+     */
 .ft P
 .fi
 .UNINDENT
@@ -265,15 +266,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Reduce
-MPI_Reduce_scatter
-MPI_Allreduce
-MPI_Scan
-.INDENT 0.0
-.INDENT 3.5
-MPI_Op_free
-.UNINDENT
-.UNINDENT
+MPI_Reduce MPI_Reduce_scatter MPI_Allreduce MPI_Scan MPI_Op_free
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

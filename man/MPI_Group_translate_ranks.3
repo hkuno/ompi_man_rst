@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_GROUP_TRANSLATE_RANKS" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_GROUP_TRANSLATE_RANKS" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ group to those in another group.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Group_translate_ranks(MPI_Group group1, int n,
      const int ranks1[], MPI_Group group2, int ranks2[])
 .ft P

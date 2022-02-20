@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_CVAR_READ" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_T_CVAR_READ" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -38,6 +38,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_T_cvar_read(MPI_T_cvar_handle handle, const void *buf)
 .ft P
 .fi
@@ -72,11 +73,7 @@ The handle is invalid
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.INDENT 0.0
-.TP
-.B MPI_T_cvar_handle_alloc
-MPI_T_cvar_get_info
-.UNINDENT
+MPI_T_cvar_handle_alloc MPI_T_cvar_get_info
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

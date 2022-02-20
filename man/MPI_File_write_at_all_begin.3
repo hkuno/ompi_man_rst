@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_FILE_WRITE_AT_ALL_BEGIN" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_FILE_WRITE_AT_ALL_BEGIN" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ offsets; beginning part of a split collective routine (nonblocking).
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_File_write_at_all_begin(MPI_File fh, MPI_Offset offset,
      const void *buf, int count, MPI_Datatype datatype)
 .ft P

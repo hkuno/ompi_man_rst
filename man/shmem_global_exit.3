@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_GLOBAL_EXIT" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_GLOBAL_EXIT" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -40,7 +40,8 @@ C or C++:
 .nf
 .ft C
 #include <mpp/shmem.h>
-void shmem_global_exit(int status);
+
+void shmem_global_exit(int status)
 .ft P
 .fi
 .UNINDENT
@@ -77,7 +78,7 @@ OpenSHMEM program to the execution environment for all PEs.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_my_pe\fP(3), \fIshmem_init\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_my_pe\fP(3) \fIshmem_init\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

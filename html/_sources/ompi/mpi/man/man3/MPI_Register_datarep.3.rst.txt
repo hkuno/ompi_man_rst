@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Register_datarep(const char *datarep,
    	MPI_Datarep_conversion_function *read_conversion_fn,
    	MPI_Datarep_conversion_function *write_conversion_fn,
@@ -32,7 +32,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -49,7 +48,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Register_datarep(datarep, read_conversion_fn, write_conversion_fn,

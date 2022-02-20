@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_FLUSH_ALL" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_WIN_FLUSH_ALL" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,6 +43,7 @@ operations at both the origin and the target
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Win_flush (int rank, MPI_Win win)
 
 int MPI_Win_flush_all (MPI_Win win)
@@ -123,10 +124,7 @@ error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
 MPI_Win_flush_local MPI_Win_lock MPI_Win_lock_all
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

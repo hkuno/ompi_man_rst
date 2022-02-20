@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INT_FADD" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_INT_FADD" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -42,12 +42,12 @@ C or C++:
 .ft C
 #include <mpp/shmem.h>
 
-int shmem_int_fadd(int *target, int value, int pe);
+int shmem_int_fadd(int *target, int value, int pe)
 
-long shmem_long_fadd(long *target, long value, int pe);
+long shmem_long_fadd(long *target, long value, int pe)
 
 long long shmem_longlong_fadd(long long *target, longlong value,
-  int pe);
+  int pe)
 .ft P
 .fi
 .UNINDENT

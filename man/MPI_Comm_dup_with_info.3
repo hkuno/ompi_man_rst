@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_COMM_DUP_WITH_INFO" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_COMM_DUP_WITH_INFO" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,72 +33,45 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 provided info.
 .SH SYNTAX
 .SS C Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-#include <mpi.h>
-
-int MPI_Comm_dup_with_info(MPI_Comm comm, MPI_Info info, MPI_Comm *newcomm)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+c #include <mpi.h>
+.sp
+int MPI_Comm_dup_with_info(MPI_Comm comm, MPI_Info info, MPI_Comm
+*newcomm)
 .SS Fortran Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE MPI
-! or the older form: INCLUDE \(aqmpif.h\(aq
-
-MPI_COMM_DUP_WITH_INFO(COMM, INFO, NEWCOMM, IERROR)
-    INTEGER COMM, INFO, NEWCOMM, IERROR
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
+.sp
+MPI_COMM_DUP_WITH_INFO(COMM, INFO, NEWCOMM, IERROR) INTEGER COMM, INFO,
+NEWCOMM, IERROR
 .SS Fortran 2008 Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE mpi_f08
-
-MPI_Comm_dup_with_info(comm, info, newcomm, ierror)
-    TYPE(MPI_Comm), INTENT(IN) :: comm
-    TYPE(MPI_Info), INTENT(IN) :: info
-    TYPE(MPI_Comm), INTENT(OUT) :: newcomm
-    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE mpi_f08
+.sp
+MPI_Comm_dup_with_info(comm, info, newcomm, ierror) TYPE(MPI_Comm),
+INTENT(IN) :: comm TYPE(MPI_Info), INTENT(IN) :: info TYPE(MPI_Comm),
+INTENT(OUT) :: newcomm INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 .SH INPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
-\fBcomm\fP : Communicator (handle).
+comm : Communicator (handle).
 .IP \(bu 2
-\fBinfo\fP : Info argument (handle).
+info : Info argument (handle).
 .UNINDENT
 .SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBnewcomm\fP : Copy of comm (handle).
+newcomm : Copy of comm (handle).
 .IP \(bu 2
-\fBIERROR\fP : Fortran only: Error status (integer).
+IERROR : Fortran only: Error status (integer).
 .UNINDENT
 .SH DESCRIPTION
 .sp
-\fI\%MPI_Comm_dup_with_info\fP acts exactly like MPI_Comm_dup except
-that the \fBinfo\fP hints associated with the communicator \fBcomm\fP are
-not duplicated in \fBnewcomm\fP\&. The hints provided by the argument
-\fBinfo\fP are associated with the output communicator \fBnewcomm\fP
-instead. See MPI_Comm_set_info for the list of recognized
-\fBinfo\fP keys.
+\fI\%MPI_Comm_dup_with_info\fP acts exactly like MPI_Comm_dup except that the
+info hints associated with the communicator comm are not duplicated in
+newcomm. The hints provided by the argument info are associated with the
+output communicator newcomm instead. See MPI_Comm_set_info for the
+list of recognized info keys.
 .SH NOTES
 .sp
 This operation is used to provide a parallel library call with a
@@ -106,32 +79,30 @@ duplicate communication space that has the same properties as the
 original communicator. This includes any attributes (see below) and
 topologies (see Chapter 6, "Process Topologies," in the MPI\-1 Standard).
 This call is valid even if there are pending point\-to\-point
-communications involving the communicator \fBcomm\fP\&. A typical call might
-involve an \fI\%MPI_Comm_dup_with_info\fP at the beginning of the parallel
-call, and an MPI_Comm_free of that duplicated communicator at the
-end of the call. Other models of communicator management are also
-possible. This call applies to both intra\- and intercommunicators. Note
-that it is not defined by the MPI standard what happens if the attribute
-copy callback invokes other MPI functions. In Open MPI, it is not valid
-for attribute copy callbacks (or any of their children) to add or delete
-attributes on the same object on which the attribute copy callback is
-being invoked.
+communications involving the communicator comm. A typical call might
+involve an \fI\%MPI_Comm_dup_with_info\fP at the beginning of the parallel call,
+and an MPI_Comm_free of that duplicated communicator at the end of the
+call. Other models of communicator management are also possible. This
+call applies to both intra\- and intercommunicators. Note that it is not
+defined by the MPI standard what happens if the attribute copy callback
+invokes other MPI functions. In Open MPI, it is not valid for attribute
+copy callbacks (or any of their children) to add or delete attributes on
+the same object on which the attribute copy callback is being invoked.
 .SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the
 error value is returned, the current MPI error handler is called. By
 default, this error handler aborts the MPI job, except for I/O function
-errors. The error handler may be changed with
-MPI_Comm_set_errhandler; the predefined error handler
-MPI_ERRORS_RETURN may be used to cause error values to be returned.
-Note that MPI does not guarantee that an MPI program can continue past
-an error.
+errors. The error handler may be changed with MPI_Comm_set_errhandler;
+the predefined error handler MPI_ERRORS_RETURN may be used to cause
+error values to be returned. Note that MPI does not guarantee that an
+MPI program can continue past an error.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Comm_dup MPI_Comm_idup MPI_Comm_set_info
+MPI_Comm_dup
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

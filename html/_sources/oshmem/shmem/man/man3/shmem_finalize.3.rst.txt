@@ -17,15 +17,14 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
-   void shmem_finalize(void);
+
+   void shmem_finalize(void)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    include 'mpp/shmem.fh'
    CALL SHMEM_FINALIZE
@@ -48,5 +47,5 @@ the call to :ref:`shmem_finalize` returns, but they will no longer have access
 to any resources that have been released.
 
 
-.. seealso:: 
-   *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)
+.. seealso::
+   *intro_shmem*\ (3) *shmem_my_pe*\ (3) *shmem_init*\ (3)

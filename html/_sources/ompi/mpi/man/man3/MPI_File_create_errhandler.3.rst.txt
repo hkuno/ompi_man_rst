@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_File_create_errhandler(MPI_File_errhandler_function *function,
    	MPI_Errhandler *errhandler)
 
@@ -29,7 +29,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -42,7 +41,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_File_create_errhandler(file_errhandler_fn, errhandler, ierror)
@@ -89,7 +87,6 @@ error code to be returned by the MPI routine that raised the error.
 In the Fortran language, the user routine should be of the form:
 
 .. code-block:: fortran
-   :linenos:
 
        SUBROUTINE FILE_ERRHANDLER_FUNCTION(FILE, ERROR_CODE, ...)
            INTEGER FILE, ERROR_CODE

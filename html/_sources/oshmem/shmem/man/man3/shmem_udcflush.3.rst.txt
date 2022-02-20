@@ -17,21 +17,19 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   void shmem_clear_cache_inv(void);
-   void shmem_clear_cache_line_inv(void *target);
-   void shmem_set_cache_inv(void);
-   void shmem_set_cache_line_inv(void *target);
-   void shmem_udcflush(void);
-   void shmem_udcflush_line(void *target);
+   void shmem_clear_cache_inv(void)
+   void shmem_clear_cache_line_inv(void *target)
+   void shmem_set_cache_inv(void)
+   void shmem_set_cache_line_inv(void *target)
+   void shmem_udcflush(void)
+   void shmem_udcflush_line(void *target)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -82,5 +80,5 @@ These routines have been retained for improved backward compatability
 with legacy architectures.
 
 
-.. seealso:: 
-   *intro_shmem*\ (3), *shmem_put*\ (3), *shmem_swap*\ (3)
+.. seealso::
+   *intro_shmem*\ (3) *shmem_put*\ (3) *shmem_swap*\ (3)

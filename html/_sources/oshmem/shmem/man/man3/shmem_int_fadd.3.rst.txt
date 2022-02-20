@@ -17,21 +17,19 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
 
-   int shmem_int_fadd(int *target, int value, int pe);
+   int shmem_int_fadd(int *target, int value, int pe)
 
-   long shmem_long_fadd(long *target, long value, int pe);
+   long shmem_long_fadd(long *target, long value, int pe)
 
    long long shmem_longlong_fadd(long long *target, longlong value,
-     int pe);
+     int pe)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    INCLUDE "mpp/shmem.fh"
 
@@ -84,5 +82,5 @@ The contents that had been at the target address on the remote PE prior
 to the atomic addition operation.
 
 
-.. seealso:: 
+.. seealso::
    *intro_shmem*\ (3)

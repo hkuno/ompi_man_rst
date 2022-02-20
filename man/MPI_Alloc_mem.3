@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ALLOC_MEM" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_ALLOC_MEM" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -38,6 +38,7 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Alloc_mem(MPI_Aint size, MPI_Info info, void *baseptr)
 .ft P
 .fi
@@ -127,17 +128,17 @@ User\(aqs Guide and are supported by many Fortran compilers. For example,
 .sp
 .nf
 .ft C
-           INCLUDE "mpif.h"
-           REAL*4 A(100,100)
-           POINTER (BASEPTR, A)
-           INTEGER*MPI_ADDRESS_KIND SIZE
+INCLUDE "mpif.h"
+REAL*4 A(100,100)
+POINTER (BASEPTR, A)
+INTEGER*MPI_ADDRESS_KIND SIZE
 
-           SIZE = 4 * 100 * 100
-           CALL MPI_ALLOC_MEM(SIZE,MPI_INFO_NULL,BASEPTR,IERR)
+SIZE = 4 * 100 * 100
+CALL MPI_ALLOC_MEM(SIZE,MPI_INFO_NULL,BASEPTR,IERR)
 
-           ! use A
+! use A
 
-           CALL MPI_FREE_MEM(A, IERR)
+CALL MPI_FREE_MEM(A, IERR)
 .ft P
 .fi
 .UNINDENT

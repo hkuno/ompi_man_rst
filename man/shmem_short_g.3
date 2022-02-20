@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_SHORT_G" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_SHORT_G" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -49,21 +49,21 @@ C or C++:
 #include <mpp/shmem.h>
 
 
-char shmem_char_g(const char *addr, int pe);
+char shmem_char_g(const char *addr, int pe)
 
-short shmem_short_g(const short *addr, int pe);
+short shmem_short_g(const short *addr, int pe)
 
-int shmem_int_g(const int *addr, int pe);
+int shmem_int_g(const int *addr, int pe)
 
-long shmem_long_g(const long *addr, int pe);
+long shmem_long_g(const long *addr, int pe)
 
-long shmem_longlong_g(const long long *addr, int pe);
+long shmem_longlong_g(const long long *addr, int pe)
 
-float shmem_float_g(const float *addr, int pe);
+float shmem_float_g(const float *addr, int pe)
 
-double shmem_double_g(const double *addr, int pe);
+double shmem_double_g(const double *addr, int pe)
 
-long shmem_longdouble_g(const long double *addr, int pe);
+long shmem_longdouble_g(const long double *addr, int pe)
 .ft P
 .fi
 .UNINDENT
@@ -87,7 +87,7 @@ The number of the remote PE.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_get\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_get\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

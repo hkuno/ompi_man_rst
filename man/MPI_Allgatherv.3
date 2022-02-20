@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ALLGATHERV" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_ALLGATHERV" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -40,6 +40,7 @@ different amount of data.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Allgatherv(const void *sendbuf, int sendcount,
      MPI_Datatype sendtype, void *recvbuf, const int recvcounts[],
      const int displs[], MPI_Datatype recvtype, MPI_Comm comm)
@@ -238,11 +239,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Gatherv
-MPI_Allgather
-.fi
-.sp
+MPI_Gatherv MPI_Allgather
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

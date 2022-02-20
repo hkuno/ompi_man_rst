@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_cvar_get_info(int cvar_index, char *name, int *name_len,
                            int *verbosity, MPI_Datatype *datatype, MPI_T_enum *enumtype,
                            const *desc, int *desc_len, int *bind, int *scope)
@@ -164,7 +164,5 @@ MPI_T_cvar_get_info() will fail if:
    The control variable index is invalid
 
 
-.. seealso:: 
-   ::
-
-      ompi_info
+.. seealso::
+   ompi_info

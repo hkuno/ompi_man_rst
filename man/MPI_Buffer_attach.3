@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_BUFFER_ATTACH" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_BUFFER_ATTACH" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -32,61 +32,33 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fI\%MPI_Buffer_attach\fP \- Attaches a user\-defined buffer for sending.
 .SH SYNTAX
 .SS C Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-#include <mpi.h>
-
+c #include <mpi.h>
+.sp
 int MPI_Buffer_attach(void *buf, int size)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
 .SS Fortran Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE MPI
-! or the older form: INCLUDE \(aqmpif.h\(aq
-
-MPI_BUFFER_ATTACH(BUF, SIZE, IERROR)
-    <type>  BUF(*)
-    INTEGER SIZE, IERROR
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
+.sp
+MPI_BUFFER_ATTACH(BUF, SIZE, IERROR) BUF(*) INTEGER SIZE, IERROR
 .SS Fortran 2008 Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE mpi_f08
-
-MPI_Buffer_attach(buffer, size, ierror)
-    TYPE(*), DIMENSION(..), ASYNCHRONOUS :: buffer
-    INTEGER, INTENT(IN) :: size
-    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE mpi_f08
+.sp
+MPI_Buffer_attach(buffer, size, ierror) TYPE(*), DIMENSION(..),
+ASYNCHRONOUS :: buffer INTEGER, INTENT(IN) :: size INTEGER, OPTIONAL,
+INTENT(OUT) :: ierror
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBbuf\fP : Initial buffer address (choice).
+buf : Initial buffer address (choice).
 .IP \(bu 2
-\fBsize\fP : Buffer size, in bytes (integer).
+size : Buffer size, in bytes (integer).
 .UNINDENT
 .SH OUTPUT PARAMETER
 .INDENT 0.0
 .IP \(bu 2
-\fBIERROR\fP : Fortran only: Error status (integer).
+IERROR : Fortran only: Error status (integer).
 .UNINDENT
 .SH DESCRIPTION
 .sp
@@ -96,41 +68,23 @@ mode. Only one buffer can be attached to a process at a time.
 .SH NOTES
 .sp
 The size given should be the sum of the sizes of all outstanding Bsends
-that you intend to have, plus MPI_BSEND_OVERHEAD bytes for each
-Bsend that you do. For the purposes of calculating size, you should use
+that you intend to have, plus MPI_BSEND_OVERHEAD bytes for each Bsend
+that you do. For the purposes of calculating size, you should use
 MPI_Pack_size\&. In other words, in the code
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-MPI_Buffer_attach( buf, size );
-MPI_Bsend( ..., count=20, datatype=type1, ... );
-//...
-MPI_Bsend( ..., count=40, datatype=type2, ... );
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+c MPI_Buffer_attach( buf, size ); MPI_Bsend( ..., count=20,
+datatype=type1, ... ); //... MPI_Bsend( ..., count=40, datatype=type2,
+\&... );
 .sp
-the value of size in the \fBMPI_Buffer_attach\fP call should be greater
-than the value computed by
-.INDENT 0.0
-.INDENT 3.5
+the value of size in the \fI\%MPI_Buffer_attach\fP call should be greater than
+the value computed by
 .sp
-.nf
-.ft C
-MPI_Pack_size( 20, type1, comm, &s1 );
-MPI_Pack_size( 40, type2, comm, &s2 );
-size = s1 + s2 + 2 * MPI_BSEND_OVERHEAD;
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+c MPI_Pack_size( 20, type1, comm, &s1 ); MPI_Pack_size( 40, type2, comm,
+&s2 ); size = s1 + s2 + 2 * MPI_BSEND_OVERHEAD;
 .sp
-\fBMPI_BSEND_OVERHEAD\fP gives the maximum amount of buffer space that may
-be used by the Bsend routines. This value is in mpi.h for C and mpif.h
-for Fortran.
+MPI_BSEND_OVERHEAD gives the maximum amount of buffer space that may be
+used by the Bsend routines. This value is in mpi.h for C and mpif.h for
+Fortran.
 .SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
@@ -139,10 +93,9 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-MPI_Comm_set_errhandler; the predefined error handler
-MPI_ERRORS_RETURN may be used to cause error values to be returned.
-Note that MPI does not guarantee that an MPI program can continue past
-an error.
+MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN
+may be used to cause error values to be returned. Note that MPI does not
+guarantee that an MPI program can continue past an error.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0

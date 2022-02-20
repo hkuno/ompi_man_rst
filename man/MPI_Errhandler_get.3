@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_ERRHANDLER_GET" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_ERRHANDLER_GET" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ use of this routine is deprecated.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Errhandler_get(MPI_Comm comm, MPI_Errhandler *errhandler)
 .ft P
 .fi
@@ -96,12 +97,8 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Comm_create_errhandler
-MPI_Comm_get_errhandler
+MPI_Comm_create_errhandler MPI_Comm_get_errhandler
 MPI_Comm_set_errhandler
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

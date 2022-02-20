@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_T_PVAR_READRESET" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_T_PVAR_READRESET" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ performance variable
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_T_pvar_readreset(MPI_T_pvar_session session, MPI_T_pvar_handle handle, const void *buf)
 .ft P
 .fi
@@ -86,15 +87,8 @@ Variable cannot be reset
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_T_pvar_handle_alloc
-MPI_T_pvar_get_info
-MPI_T_pvar_session_create
-MPI_T_pvar_read
-.INDENT 0.0
-.INDENT 3.5
-MPI_T_pvar_reset
-.UNINDENT
-.UNINDENT
+MPI_T_pvar_handle_alloc MPI_T_pvar_get_info MPI_T_pvar_session_create
+MPI_T_pvar_read MPI_T_pvar_reset
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

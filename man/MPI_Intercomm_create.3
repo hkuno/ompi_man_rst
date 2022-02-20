@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_INTERCOMM_CREATE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_INTERCOMM_CREATE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ intracommunicators.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Intercomm_create(MPI_Comm local_comm, int local_leader,
      MPI_Comm peer_comm, int remote_leader, int tag, MPI_Comm *newintercomm)
 .ft P
@@ -141,13 +142,8 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Intercomm_merge
-MPI_Comm_free
-MPI_Comm_remote_group
+MPI_Intercomm_merge MPI_Comm_free MPI_Comm_remote_group
 MPI_Comm_remote_size
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_DIST_GRAPH_CREATE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_DIST_GRAPH_CREATE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ information has been attached.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Dist_graph_create(MPI_Comm comm_old, int n, const int sources[],
      const int degrees[], const int destinations[], const int weights[],
         MPI_Info info, int reorder, MPI_Comm *comm_dist_graph)

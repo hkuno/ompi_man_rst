@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_CART_MAP" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_CART_MAP" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -32,79 +32,50 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 \fI\%MPI_Cart_map\fP \- Maps process to Cartesian topology information.
 .SH SYNTAX
 .SS C Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-#include <mpi.h>
-
-int MPI_Cart_map(MPI_Comm comm, int ndims, const int dims[],
-    const int periods[], int *newrank)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+c #include <mpi.h>
+.sp
+int MPI_Cart_map(MPI_Comm comm, int ndims, const int dims[], const int
+periods[], int *newrank)
 .SS Fortran Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE MPI
-! or the older form: INCLUDE \(aqmpif.h\(aq
-
-MPI_CART_MAP(COMM, NDIMS, DIMS, PERIODS, NEWRANK, IERROR)
-    INTEGER COMM, NDIMS, DIMS(*), NEWRANK, IERROR
-    LOGICAL PERIODS(*)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
+.sp
+MPI_CART_MAP(COMM, NDIMS, DIMS, PERIODS, NEWRANK, IERROR) INTEGER COMM,
+NDIMS, DIMS(*), NEWRANK, IERROR LOGICAL PERIODS(*)
 .SS Fortran 2008 Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE mpi_f08
-
+fortran USE mpi_f08
+.sp
 MPI_Cart_map(comm, ndims, dims, periods, newrank, ierror)
-    TYPE(MPI_Comm), INTENT(IN) :: comm
-    INTEGER, INTENT(IN) :: ndims, dims(ndims)
-    LOGICAL, INTENT(IN) :: periods(ndims)
-    INTEGER, INTENT(OUT) :: newrank
-    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: ndims,
+dims(ndims) LOGICAL, INTENT(IN) :: periods(ndims) INTEGER, INTENT(OUT)
+:: newrank INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBcomm\fP : Input communicator (handle).
+comm : Input communicator (handle).
 .IP \(bu 2
-\fBndims\fP : Number of dimensions of Cartesian structure (integer).
+ndims : Number of dimensions of Cartesian structure (integer).
 .IP \(bu 2
-\fBdims\fP : Integer array of size ndims specifying the number of
-processes in each coordinate direction.
+dims : Integer array of size ndims specifying the number of processes
+in each coordinate direction.
 .IP \(bu 2
-\fBperiods\fP : Logical array of size ndims specifying the periodicity
+periods : Logical array of size ndims specifying the periodicity
 specification in each coordinate direction.
 .UNINDENT
 .SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBnewrank\fP : Reordered rank of the calling process;
-MPI_UNDEFINED if calling process does not belong to grid
-(integer).
+newrank : Reordered rank of the calling process; MPI_UNDEFINED if
+calling process does not belong to grid (integer).
 .IP \(bu 2
-\fBIERROR\fP : Fortran only: Error status (integer).
+IERROR : Fortran only: Error status (integer).
 .UNINDENT
 .SH DESCRIPTION
 .sp
-\fI\%MPI_Cart_map\fP and MPI_Graph_map can be used to implement all
-other topology functions. In general they will not be called by the user
+\fI\%MPI_Cart_map\fP and MPI_Graph_map can be used to implement all other
+topology functions. In general they will not be called by the user
 directly, unless he or she is creating additional virtual topology
 capability other than that provided by MPI. \fI\%MPI_Cart_map\fP computes an
 "optimal" placement for the calling process on the physical machine. A
@@ -116,11 +87,10 @@ Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the
 error value is returned, the current MPI error handler is called. By
 default, this error handler aborts the MPI job, except for I/O function
-errors. The error handler may be changed with
-MPI_Comm_set_errhandler; the predefined error handler
-MPI_ERRORS_RETURN may be used to cause error values to be returned.
-Note that MPI does not guarantee that an MPI program can continue past
-an error.
+errors. The error handler may be changed with MPI_Comm_set_errhandler;
+the predefined error handler MPI_ERRORS_RETURN may be used to cause
+error values to be returned. Note that MPI does not guarantee that an
+MPI program can continue past an error.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0

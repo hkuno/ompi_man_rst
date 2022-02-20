@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_FLOAT_FETCH" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_FLOAT_FETCH" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -48,15 +48,15 @@ C or C++:
 .ft C
 #include <mpp/shmem.h>
 
-int shmem_int_fetch(int *target, int pe);
+int shmem_int_fetch(int *target, int pe)
 
-long shmem_long_fetch(long *target, int pe);
+long shmem_long_fetch(long *target, int pe)
 
-long long shmem_longlong_fetch(long long *target, int pe);
+long long shmem_longlong_fetch(long long *target, int pe)
 
-double shmem_double_fetch(long long *target, int pe);
+double shmem_double_fetch(long long *target, int pe)
 
-float  shmem_float_fetch(float *target, int pe);
+float  shmem_float_fetch(float *target, int pe)
 .ft P
 .fi
 .UNINDENT

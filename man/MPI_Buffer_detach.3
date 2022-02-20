@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_BUFFER_DETACH" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_BUFFER_DETACH" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -29,63 +29,34 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
 .sp
-\fI\%MPI_Buffer_detach\fP \- Removes an existing buffer (for use in in
-MPI_Bsend, etc.)
+\fI\%MPI_Buffer_detach\fP \- Removes an existing buffer (for use in in MPI_Bsend,
+etc.)
 .SH SYNTAX
 .SS C Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-#include <mpi.h>
-
+c #include <mpi.h>
+.sp
 int MPI_Buffer_detach(void *buf, int *size)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
 .SS Fortran Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE MPI
-! or the older form: INCLUDE \(aqmpif.h\(aq
-
-MPI_BUFFER_DETACH(BUF, SIZE, IERROR)
-    <type>  BUF(*)
-    INTEGER SIZE, IERROR
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
+.sp
+MPI_BUFFER_DETACH(BUF, SIZE, IERROR) BUF(*) INTEGER SIZE, IERROR
 .SS Fortran 2008 Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE mpi_f08
-
-MPI_Buffer_detach(buffer_addr, size, ierror)
-    USE, INTRINSIC :: ISO_C_BINDING, ONLY
-    TYPE(C_PTR), INTENT(OUT) :: buffer_addr
-    INTEGER, INTENT(OUT) :: size
-    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE mpi_f08
+.sp
+MPI_Buffer_detach(buffer_addr, size, ierror) USE, INTRINSIC ::
+ISO_C_BINDING, ONLY TYPE(C_PTR), INTENT(OUT) :: buffer_addr INTEGER,
+INTENT(OUT) :: size INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 .SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBbuf\fP : Initial buffer address (choice).
+buf : Initial buffer address (choice).
 .IP \(bu 2
-\fBsize\fP : Buffer size, in bytes (integer).
+size : Buffer size, in bytes (integer).
 .IP \(bu 2
-\fBIERROR\fP : Fortran only: Error status (integer).
+IERROR : Fortran only: Error status (integer).
 .UNINDENT
 .SH DESCRIPTION
 .sp
@@ -95,49 +66,21 @@ until all messages currently in the buffer have been transmitted. Upon
 return of this function, the user may reuse or deallocate the space
 taken by the buffer.
 .sp
-Example: Calls to attach and detach buffers.
-.INDENT 0.0
-.INDENT 3.5
+Example: Calls to attach and detach buffers. c #define BUFFSIZE 10000
 .sp
-.nf
-.ft C
-#define BUFFSIZE 10000
-
-int size
-char *buff;
-MPI_Buffer_attach( malloc(BUFFSIZE), BUFFSIZE);
-/* a buffer of 10000 bytes can now be used by MPI_Bsend */
-MPI_Buffer_detach( &buff, &size);
-/* Buffer size reduced to zero */
-MPI_Buffer_attach( buff, size);
-/* Buffer of 10000 bytes available again */
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+int size char \fIbuff; MPI_Buffer_attach( malloc(BUFFSIZE), BUFFSIZE); /\fP
+a buffer of 10000 bytes can now be used by MPI_Bsend \fI/
+MPI_Buffer_detach( &buff, &size); /\fP Buffer size reduced to zero \fI/
+MPI_Buffer_attach( buff, size); /\fP Buffer of 10000 bytes available again
+*/
 .SH NOTES
 .sp
-The reason that \fI\%MPI_Buffer_detach\fP returns the address and size of
-the buffer being detached is to allow nested libraries to replace and
-restore the buffer. For example, consider
-.INDENT 0.0
-.INDENT 3.5
-.sp
-.nf
-.ft C
-int size, mysize, idummy;
-void *ptr, *myptr, *dummy;
-MPI_Buffer_detach( &ptr, &size );
-MPI_Buffer_attach( myptr, mysize );
-/*
-\&... library code ...
-*/
-MPI_Buffer_detach( &dummy, &idummy );
-MPI_Buffer_attach( ptr, size );
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+The reason that \fI\%MPI_Buffer_detach\fP returns the address and size of the
+buffer being detached is to allow nested libraries to replace and
+restore the buffer. For example, consider c int size, mysize, idummy;
+void *ptr, *myptr, \fIdummy; MPI_Buffer_detach( &ptr, &size );
+MPI_Buffer_attach( myptr, mysize ); /\fP ... library code ... */
+MPI_Buffer_detach( &dummy, &idummy ); MPI_Buffer_attach( ptr, size );
 .sp
 This is much like the action of the UNIX signal routine and has the same
 strengths (it\(aqs simple) and weak‐nesses (it only works for nested
@@ -151,11 +94,11 @@ size field is set.
 For C: Even though the buf argument is declared as void, it is really
 the address of a void pointer. See Rationale, below, for more details.
 .sp
-Even though the C functions \fBMPI_Buffer_attach\fP and
-\fBMPI_Buffer_detach\fP both have a first argument of type void*, these
-arguments are used differently: A pointer to the buffer is passed to
-MPI_Buffer_attach; the address of the pointer is passed to
-MPI_Buffer_detach, so that this call can return the pointer value.
+Even though the C functions MPI_Buffer_attach and \fI\%MPI_Buffer_detach\fP both
+have a first argument of type void*, these arguments are used
+differently: A pointer to the buffer is passed to MPI_Buffer_attach; the
+address of the pointer is passed to \fI\%MPI_Buffer_detach\fP, so that this call
+can return the pointer value.
 .SH ERRORS
 .sp
 Almost all MPI routines return an error value; C routines as the value
@@ -164,15 +107,14 @@ of the function and Fortran routines in the last argument.
 Before the error value is returned, the current MPI error handler is
 called. By default, this error handler aborts the MPI job, except for
 I/O function errors. The error handler may be changed with
-MPI_Comm_set_errhandler; the predefined error handler
-MPI_ERRORS_RETURN may be used to cause error values to be returned.
-Note that MPI does not guarantee that an MPI program can continue past
-an error.
+MPI_Comm_set_errhandler; the predefined error handler MPI_ERRORS_RETURN
+may be used to cause error values to be returned. Note that MPI does not
+guarantee that an MPI program can continue past an error.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Buffer_attach MPI_Bsend
+MPI_Buffer_attach
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

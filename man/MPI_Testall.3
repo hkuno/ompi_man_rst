@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TESTALL" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_TESTALL" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ communications in a list.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Testall(int count, MPI_Request array_of_requests[],
      int *flag, MPI_Status array_of_statuses[])
 .ft P
@@ -146,19 +147,9 @@ bindings.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
-MPI_Comm_set_errhandler
-MPI_File_set_errhandler
-MPI_Test
-MPI_Testany
-MPI_Testsome
-MPI_Wait
-MPI_Waitall
-MPI_Waitany
-MPI_Waitsome
+MPI_Comm_set_errhandler MPI_File_set_errhandler MPI_Test MPI_Testany
+MPI_Testsome MPI_Wait MPI_Waitall MPI_Waitany MPI_Waitsome
 MPI_Win_set_errhandler
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

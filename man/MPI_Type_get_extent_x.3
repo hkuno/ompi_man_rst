@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_GET_EXTENT_X" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_TYPE_GET_EXTENT_X" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,6 +43,7 @@ bound and extent of a data type.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Type_get_extent(MPI_Datatype datatype, MPI_Aint *lb,
      MPI_Aint *extent)
 int MPI_Type_get_extent_x(MPI_Datatype datatype, MPI_Count *lb,

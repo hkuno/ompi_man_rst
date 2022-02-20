@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_UNPUBLISH_NAME" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_UNPUBLISH_NAME" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -46,6 +46,7 @@ MPI_Unpublish_name \- Unpublishes a service name
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Unpublish_name(const char *service_name, MPI_Info info,
      const char *port_name)
 .ft P
@@ -164,13 +165,7 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Publish_name
-MPI_Lookup_name
-.INDENT 0.0
-.INDENT 3.5
-MPI_Open_port
-.UNINDENT
-.UNINDENT
+MPI_Publish_name MPI_Lookup_name MPI_Open_port
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

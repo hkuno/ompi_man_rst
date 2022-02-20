@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_STATUS_F082C" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_STATUS_F082C" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,45 +33,37 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 Fortran 2008 status, or vice versa.
 .SH SYNTAX
 .SS C Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-#include <mpi.h>
-
-int MPI_Status_f082c(const MPI_F08_status *f08_status, MPI_Status *c_status)
-int MPI_Status_c2f08(const MPI_Status *c_status, MPI_F08_status *f08_status)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+c #include <mpi.h>
+.sp
+int MPI_Status_f082c(const MPI_F08_status *f08_status, MPI_Status
+*c_status) int MPI_Status_c2f08(const MPI_Status *c_status,
+MPI_F08_status *f08_status)
 .SH PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBf08_status\fP: \fBmpi_f08\fP\-style MPI status object
+f08_status: mpi_f08\-style MPI status object
 .IP \(bu 2
-\fBc_status\fP: C\-style MPI status object
+c_status: C\-style MPI status object
 .UNINDENT
 .SH DESCRIPTION
 .sp
 These two procedures are provided in C to convert from a Fortran 2008
 status (which is a derived type made of integers) to a C status (which
 is a structure), and vice versa. The conversion occurs on all the
-information in \fBstatus\fP, including that which is hidden. That is, no
+information in status, including that which is hidden. That is, no
 status information is lost in the conversion.
 .sp
-When using MPI_Status_f082c(), if \fBf08_status\fP is a valid Fortran
-status, but not the Fortran value of MPI_F08_STATUS_IGNORE or
-MPI_F08_STATUSES_IGNORE, then MPI_Status_f082c() returns in
-\fBc_status\fP a valid C status with the same content. If \fBf08_status\fP
-is the Fortran value of MPI_STATUS_IGNORE or
-MPI_STATUSES_IGNORE, or if \fBf08_status\fP is not a valid Fortran
-status, then the call is erroneous.
+When using MPI_Status_f082c(), if f08_status is a valid Fortran status,
+but not the Fortran value of MPI_F08_STATUS_IGNORE or
+MPI_F08_STATUSES_IGNORE, then MPI_Status_f082c() returns in c_status a
+valid C status with the same content. If f08_status is the Fortran value
+of MPI_STATUS_IGNORE or MPI_STATUSES_IGNORE, or if f08_status is not a
+valid Fortran status, then the call is erroneous.
 .sp
-When using MPI_Status_c2f08(), the opposite conversion is applied.
-If \fBc_status\fP is MPI_STATUS_IGNORE or MPI_STATUSES_IGNORE, or
-if \fBc_status\fP is not a valid C status, then the call is erroneous.
+When using MPI_Status_c2f08(), the opposite conversion is applied. If
+c_status is MPI_STATUS_IGNORE or MPI_STATUSES_IGNORE, or if c_status is
+not a valid C status, then the call is erroneous.
 .sp
 The input status has the same source, tag and error code values as the
 output status, and returns the same answers when queried for count,
@@ -87,7 +79,7 @@ of the Fortran MPI interfaces.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Status_c2f MPI_Status_f2c MPI_Status_f082f MPI_Status_f2f08
+MPI_Status_c2f MPI_Status_f2f08
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

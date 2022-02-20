@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Sendrecv(const void *sendbuf, int sendcount, MPI_Datatype sendtype,
    	int dest, int sendtag, void *recvbuf, int recvcount,
    	MPI_Datatype recvtype, int source, int recvtag,
@@ -30,7 +30,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -47,7 +46,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Sendrecv(sendbuf, sendcount, sendtype, dest, sendtag, recvbuf,
@@ -127,5 +125,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
+.. seealso::
    :ref:`MPI_Sendrecv_replace`

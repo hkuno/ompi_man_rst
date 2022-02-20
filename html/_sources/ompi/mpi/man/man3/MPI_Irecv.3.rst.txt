@@ -17,9 +17,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Irecv(void *buf, int count, MPI_Datatype datatype,
            int source, int tag, MPI_Comm comm, MPI_Request *request)
 
@@ -28,7 +28,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -42,7 +41,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Irecv(buf, count, datatype, source, tag, comm, request, ierror)
@@ -100,5 +98,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
-   | :ref:`MPI_Recv` :ref:`MPI_Probe` :ref:`MPI_Test` :ref:`MPI_Testany` :ref:`MPI_Wait` :ref:`MPI_Waitany`
+.. seealso::
+   :ref:`MPI_Recv` :ref:`MPI_Probe` :ref:`MPI_Test` :ref:`MPI_Testany` :ref:`MPI_Wait` :ref:`MPI_Waitany`

@@ -19,9 +19,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_File_iread(MPI_File fh, void  *buf, int  count,
    	MPI_Datatype  datatype, MPI_Request  *request)
 
@@ -30,7 +30,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -43,7 +42,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_File_iread(fh, buf, count, datatype, request, ierror)

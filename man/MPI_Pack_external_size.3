@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_PACK_EXTERNAL_SIZE" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_PACK_EXTERNAL_SIZE" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ write to a portable format
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Pack_external_size(char *datarep, int incount,
      MPI_Datatype datatype, MPI_Aint *size)
 .ft P
@@ -129,11 +130,7 @@ See the MPI man page for a full list of MPI error codes.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.INDENT 0.0
-.TP
-.B MPI_Pack_external
-MPI_Unpack_external
-.UNINDENT
+MPI_Pack_external MPI_Unpack_external
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

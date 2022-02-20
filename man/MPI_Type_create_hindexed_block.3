@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_TYPE_CREATE_HINDEXED_BLOCK" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_TYPE_CREATE_HINDEXED_BLOCK" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,6 +43,7 @@ Creates an indexed data type with the same block length for all blocks.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Type_create_indexed_block(int count, int blocklength, const int array_of_displacements[], MPI_Datatype oldtype, MPI_Datatype *newtype)
 
 int MPI_Type_create_hindexed_block(int count, int blocklength, const MPI_Aint array_of_displacements[], MPI_Datatype oldtype, MPI_Datatype *newtype)
@@ -139,10 +140,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
 MPI_Type_indexed
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

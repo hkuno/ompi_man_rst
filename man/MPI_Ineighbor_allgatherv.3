@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_INEIGHBOR_ALLGATHERV" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_INEIGHBOR_ALLGATHERV" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -45,6 +45,7 @@ data.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Neighbor_allgatherv(const void *sendbuf, int sendcount,
      MPI_Datatype sendtype, void *recvbuf, const int recvcounts[],
      const int displs[], MPI_Datatype recvtype, MPI_Comm comm)

@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Reduce(const void *sendbuf, void *recvbuf, int count,
                   MPI_Datatype datatype, MPI_Op op, int root,
                   MPI_Comm comm)
@@ -39,7 +39,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -63,7 +62,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Reduce(sendbuf, recvbuf, count, datatype, op, root, comm, ierror)
@@ -235,7 +233,6 @@ enumerate below the allowed combinations of op and datatype arguments.
 First, define groups of MPI basic datatypes in the following way:
 
 .. code-block:: c
-   :linenos:
 
    	C integer:            MPI_INT, MPI_LONG, MPI_SHORT,
    	                      MPI_UNSIGNED_SHORT, MPI_UNSIGNED,
@@ -326,7 +323,6 @@ value.
 The operation that defines MPI_MAXLOC is
 
 .. code-block:: c
-   :linenos:
 
             ( u )    (  v )      ( w )
             (   )  o (    )   =  (   )
@@ -467,7 +463,6 @@ containing the largest value.
 **Example 4:** Same example, in Fortran.
 
 .. code-block:: fortran
-   :linenos:
 
        ...
        ! each process has an array of 30 double: ain(30)
@@ -566,9 +561,5 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
-   | :ref:`MPI_Allreduce`
-   | :ref:`MPI_Reduce_scatter`
-   | :ref:`MPI_Scan`
-   | :ref:`MPI_Op_create`
-   | :ref:`MPI_Op_free`
+.. seealso::
+   :ref:`MPI_Allreduce` :ref:`MPI_Reduce_scatter` :ref:`MPI_Scan` :ref:`MPI_Op_create` :ref:`MPI_Op_free`

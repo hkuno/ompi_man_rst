@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_INFO_GET_VERSION" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_INFO_GET_VERSION" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -40,7 +40,8 @@ C or C++:
 .nf
 .ft C
 #include <mpp/shmem.h>
-void shmem_info_get_version(int *major, int *minor);
+
+void shmem_info_get_version(int *major, int *minor)
 .ft P
 .fi
 .UNINDENT
@@ -71,7 +72,7 @@ value is 1, and the valid minor version value is 2.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_my_pe\fP(3), \fIshmem_init\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_my_pe\fP(3) \fIshmem_init\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

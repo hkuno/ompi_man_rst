@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_FLUSH_LOCAL_ALL" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_WIN_FLUSH_LOCAL_ALL" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -43,6 +43,7 @@ outstanding RMA operations at both the origin
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Win_flush_local (int rank, MPI_Win win)
 
 int MPI_Win_flush_local_all (MPI_Win win)
@@ -124,10 +125,7 @@ error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
 MPI_Win_flush MPI_Win_lock MPI_Win_lock_all
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_WIN_LOCK_ALL" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_WIN_LOCK_ALL" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ processes in the window
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Win_lock_all(int assert, MPI_Win win)
 .ft P
 .fi
@@ -135,10 +136,7 @@ guarantee that an MPI program can continue past an error.
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-.nf
 MPI_Win_unlock_all MPI_Win_lock
-.fi
-.sp
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

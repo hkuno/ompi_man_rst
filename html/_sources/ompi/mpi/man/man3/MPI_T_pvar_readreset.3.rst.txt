@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_T_pvar_readreset(MPI_T_pvar_session session, MPI_T_pvar_handle handle, const void *buf)
 
 
@@ -63,11 +63,6 @@ MPI_T_pvar_readreset() will fail if:
    Variable cannot be reset
 
 
-.. seealso:: 
-   ::
-
-   MPI_T_pvar_handle_alloc
-   MPI_T_pvar_get_info
-   MPI_T_pvar_session_create
-   MPI_T_pvar_read
-      MPI_T_pvar_reset
+.. seealso::
+   :ref:`MPI_T_pvar_handle_alloc` :ref:`MPI_T_pvar_get_info` :ref:`MPI_T_pvar_session_create`
+   :ref:`MPI_T_pvar_read` :ref:`MPI_T_pvar_reset`

@@ -18,9 +18,9 @@ C Syntax
 ^^^^^^^^
 
 .. code-block:: c
-   :linenos:
 
    #include <mpi.h>
+
    int MPI_Intercomm_create(MPI_Comm local_comm, int local_leader,
    	MPI_Comm peer_comm, int remote_leader, int tag, MPI_Comm *newintercomm)
 
@@ -29,7 +29,6 @@ Fortran Syntax
 ^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE MPI
    ! or the older form: INCLUDE 'mpif.h'
@@ -43,7 +42,6 @@ Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: fortran
-   :linenos:
 
    USE mpi_f08
    MPI_Intercomm_create(local_comm, local_leader, peer_comm, remote_leader,
@@ -115,8 +113,6 @@ may be used to cause error values to be returned. Note that MPI does not
 guarantee that an MPI program can continue past an error.
 
 
-.. seealso:: 
-   | :ref:`MPI_Intercomm_merge`
-   | :ref:`MPI_Comm_free`
-   | :ref:`MPI_Comm_remote_group`
-   | :ref:`MPI_Comm_remote_size`
+.. seealso::
+   :ref:`MPI_Intercomm_merge` :ref:`MPI_Comm_free` :ref:`MPI_Comm_remote_group`
+   :ref:`MPI_Comm_remote_size`

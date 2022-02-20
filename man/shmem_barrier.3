@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "SHMEM_BARRIER" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "SHMEM_BARRIER" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -42,7 +42,7 @@ C or C++:
 #include <mpp/shmem.h>
 
 void shmem_barrier(int PE_start, int logPE_stride, int PE_size,
-  long *pSync);
+  long *pSync)
 .ft P
 .fi
 .UNINDENT
@@ -155,7 +155,7 @@ CALL SHMEM_BARRIER(PE_START, LOGPE_STRIDE, PE_SIZE, PSYNC)
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-\fIintro_shmem\fP(3), \fIshmem_barrier_all\fP(3)
+\fIintro_shmem\fP(3) \fIshmem_barrier_all\fP(3)
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

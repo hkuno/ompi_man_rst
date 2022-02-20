@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_DIST_GRAPH_NEIGHBORS" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_DIST_GRAPH_NEIGHBORS" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -39,6 +39,7 @@ process in a distributed graph topology.
 .nf
 .ft C
 #include <mpi.h>
+
 int MPI_Dist_graph_neighbors(MPI_Comm comm, int maxindegree, int sources[], int sourceweights[],
                              int maxoutdegree, int destinations[], int destweights[])
 .ft P

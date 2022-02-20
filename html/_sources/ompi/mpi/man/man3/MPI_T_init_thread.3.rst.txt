@@ -16,6 +16,7 @@ C Syntax
 .. code:: c
 
    #include <mpi.h>
+
    int MPI_T_init_thread(int required, int *provided)
 
 INPUT PARAMETERS
@@ -73,4 +74,4 @@ MPI_T_init_thread() will fail if:
    initialized
 
 
-.. seealso:: :ref:`MPI_T` :ref:`MPI_Init_thread` :ref:`MPI_T_finalize`
+.. seealso:: :ref:`MPI_T`

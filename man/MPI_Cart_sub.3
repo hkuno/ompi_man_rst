@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "MPI_CART_SUB" "3" "Jan 11, 2022" "" "Open MPI"
+.TH "MPI_CART_SUB" "3" "Feb 20, 2022" "" "Open MPI"
 .
 .nr rst2man-indent-level 0
 .
@@ -33,79 +33,52 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 lower\-dimensional Cartesian subgrids.
 .SH SYNTAX
 .SS C Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-#include <mpi.h>
-
-int MPI_Cart_sub(MPI_Comm comm, const int remain_dims[], MPI_Comm *comm_new)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+c #include <mpi.h>
+.sp
+int MPI_Cart_sub(MPI_Comm comm, const int remain_dims[], MPI_Comm
+*comm_new)
 .SS Fortran Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE MPI
-! or the older form: INCLUDE \(aqmpif.h\(aq
-
-MPI_CART_SUB(COMM, REMAIN_DIMS, COMM_NEW, IERROR)
-    INTEGER COMM, COMM_NEW, IERROR
-    LOGICAL REMAIN_DIMS(*)
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE MPI ! or the older form: INCLUDE \(aqmpif.h\(aq
+.sp
+MPI_CART_SUB(COMM, REMAIN_DIMS, COMM_NEW, IERROR) INTEGER COMM,
+COMM_NEW, IERROR LOGICAL REMAIN_DIMS(*)
 .SS Fortran 2008 Syntax
-.INDENT 0.0
-.INDENT 3.5
 .sp
-.nf
-.ft C
-USE mpi_f08
-
-MPI_Cart_sub(comm, remain_dims, newcomm, ierror)
-    TYPE(MPI_Comm), INTENT(IN) :: comm
-    LOGICAL, INTENT(IN) :: remain_dims(*)
-    TYPE(MPI_Comm), INTENT(OUT) :: newcomm
-    INTEGER, OPTIONAL, INTENT(OUT) :: ierror
-.ft P
-.fi
-.UNINDENT
-.UNINDENT
+fortran USE mpi_f08
+.sp
+MPI_Cart_sub(comm, remain_dims, newcomm, ierror) TYPE(MPI_Comm),
+INTENT(IN) :: comm LOGICAL, INTENT(IN) :: remain_dims(*) TYPE(MPI_Comm),
+INTENT(OUT) :: newcomm INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 .SH INPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBcomm\fP : Communicator with Cartesian structure (handle).
+comm : Communicator with Cartesian structure (handle).
 .IP \(bu 2
-\fBremain_dims\fP : The ith entry of \fBremain_dims\fP specifies whether
-the ith dimension is kept in the subgrid (true) or is dropped (false)
+remain_dims : The ith entry of remain_dims specifies whether the ith
+dimension is kept in the subgrid (true) or is dropped (false)
 (logical vector).
 .UNINDENT
 .SH OUTPUT PARAMETERS
 .INDENT 0.0
 .IP \(bu 2
-\fBcomm_new\fP : Communicator containing the subgrid that includes the
+comm_new : Communicator containing the subgrid that includes the
 calling process (handle).
 .IP \(bu 2
-\fBIERROR\fP : Fortran only: Error status (integer).
+IERROR : Fortran only: Error status (integer).
 .UNINDENT
 .SH DESCRIPTION
 .sp
 If a Cartesian topology has been created with MPI_Cart_create, the
-function \fI\%MPI_Cart_sub\fP can be used to partition the communicator
-group into subgroups that form lower\-dimensional Cartesian subgrids, and
-to build for each subgroup a communicator with the associated subgrid
+function \fI\%MPI_Cart_sub\fP can be used to partition the communicator group
+into subgroups that form lower\-dimensional Cartesian subgrids, and to
+build for each subgroup a communicator with the associated subgrid
 Cartesian topology. (This function is closely related to
 MPI_Comm_split\&.)
 .sp
-Example: Assume that MPI_Cart_create( ..., comm)\(ga\(ga has defined a (2 x
-3 x 4) grid. Let \fBremain_dims\fP = (true, false, true). Then a call to
+Example: Assume that MPI_Cart_create( ..., comm) has defined a (2 x 3 x
+4) grid. Let remain_dims = (true, false, true). Then a call to
 .INDENT 0.0
 .INDENT 3.5
 .sp
@@ -118,8 +91,8 @@ MPI_Cart_sub(comm, remain_dims, comm_new)
 .UNINDENT
 .sp
 will create three communicators, each with eight processes in a 2 x 4
-Cartesian topology. If \fBremain_dims = (false, false, true)\fP then the
-call to MPI_Cart_sub(comm, remain_dims, comm_new)\(ga\(ga will create six
+Cartesian topology. If remain_dims = (false, false, true) then the call
+to MPI_Cart_sub(comm, remain_dims, comm_new) will create six
 nonoverlapping communicators, each with four processes, in a
 one\-dimensional Cartesian topology.
 .SH ERRORS
@@ -128,16 +101,15 @@ Almost all MPI routines return an error value; C routines as the value
 of the function and Fortran routines in the last argument. Before the
 error value is returned, the current MPI error handler is called. By
 default, this error handler aborts the MPI job, except for I/O function
-errors. The error handler may be changed with
-MPI_Comm_set_errhandler; the predefined error handler
-MPI_ERRORS_RETURN may be used to cause error values to be returned.
-Note that MPI does not guarantee that an MPI program can continue past
-an error.
+errors. The error handler may be changed with MPI_Comm_set_errhandler;
+the predefined error handler MPI_ERRORS_RETURN may be used to cause
+error values to be returned. Note that MPI does not guarantee that an
+MPI program can continue past an error.
 .sp
 \fBSEE ALSO:\fP
 .INDENT 0.0
 .INDENT 3.5
-MPI_Cart_create MPI_Comm_split
+MPI_Cart_create
 .UNINDENT
 .UNINDENT
 .SH COPYRIGHT

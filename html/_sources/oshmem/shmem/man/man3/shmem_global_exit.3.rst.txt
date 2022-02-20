@@ -16,15 +16,14 @@ SYNOPSIS
 C or C++:
 
 .. code-block:: c++
-   :linenos:
 
    #include <mpp/shmem.h>
-   void shmem_global_exit(int status);
+
+   void shmem_global_exit(int status)
 
 Fortran:
 
 .. code-block:: fortran
-   :linenos:
 
    include 'mpp/shmem.fh'
    INTEGER STATUS
@@ -48,5 +47,5 @@ return to the caller of :ref:`shmem_global_exit`; control is returned from the
 OpenSHMEM program to the execution environment for all PEs.
 
 
-.. seealso:: 
-   *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)
+.. seealso::
+   *intro_shmem*\ (3) *shmem_my_pe*\ (3) *shmem_init*\ (3)
