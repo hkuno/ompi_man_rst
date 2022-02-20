@@ -210,6 +210,4 @@ MPI_T_pvar_get_info() will fail if:
 
 
 .. seealso::
-   ::
-
-      MPI_T_cvar_get_info
+   :ref:`MPI_T_cvar_get_info`

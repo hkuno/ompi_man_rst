@@ -81,4 +81,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   MPI_Win_set_info, :ref:`MPI_Win_free`
+   :ref:`MPI_Win_set_info` :ref:`MPI_Win_free`

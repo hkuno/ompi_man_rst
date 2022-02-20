@@ -79,5 +79,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Keyval_create`
-   | :ref:`MPI_Comm_free_keyval`
+   :ref:`MPI_Keyval_create` :ref:`MPI_Comm_free_keyval`

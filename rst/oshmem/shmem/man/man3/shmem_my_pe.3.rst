@@ -41,4 +41,4 @@ the current program.
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_n_pes*\ (3), *shmem_init*\ (3)
+   *intro_shmem*\ (3) *shmem_n_pes*\ (3) *shmem_init*\ (3)

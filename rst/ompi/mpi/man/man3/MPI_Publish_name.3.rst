@@ -168,7 +168,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   MPI_Lookup_name
-      MPI_Open_port
+   :ref:`MPI_Lookup_name` :ref:`MPI_Open_port`

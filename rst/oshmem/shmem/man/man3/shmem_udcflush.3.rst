@@ -81,4 +81,4 @@ with legacy architectures.
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_put*\ (3), *shmem_swap*\ (3)
+   *intro_shmem*\ (3) *shmem_put*\ (3) *shmem_swap*\ (3)

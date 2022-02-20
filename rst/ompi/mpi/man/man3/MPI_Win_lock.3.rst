@@ -109,4 +109,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Win_unlock` :ref:`MPI_Win_lock_all`
+   :ref:`MPI_Win_unlock` :ref:`MPI_Win_lock_all`

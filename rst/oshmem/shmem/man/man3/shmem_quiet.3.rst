@@ -82,5 +82,5 @@ EXAMPLES
 
 
 .. seealso::
-   *intro_shmem*\ (3), :ref:`shmem_barrier`\ (3), :ref:`shmem_barrier_all`\ (3),
-   *shmem_fence*\ (3), *shmem_put*\ (3), *shmem_wait*\ (3)
+   *intro_shmem*\ (3) :ref:`shmem_barrier`\ (3) :ref:`shmem_barrier_all`\ (3)
+   *shmem_fence*\ (3) *shmem_put*\ (3) *shmem_wait*\ (3)

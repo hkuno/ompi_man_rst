@@ -101,4 +101,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Get_address`
+   :ref:`MPI_Get_address`

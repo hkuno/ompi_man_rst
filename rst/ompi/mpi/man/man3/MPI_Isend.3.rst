@@ -98,4 +98,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Send` :ref:`MPI_Wait` :ref:`MPI_Waitany` :ref:`MPI_Test` :ref:`MPI_Testany`
+   :ref:`MPI_Send` :ref:`MPI_Wait` :ref:`MPI_Waitany` :ref:`MPI_Test` :ref:`MPI_Testany`

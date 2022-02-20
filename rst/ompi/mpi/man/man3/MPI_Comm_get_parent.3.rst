@@ -93,7 +93,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Comm_spawn
-      MPI_Comm_spawn_multiple
+   :ref:`MPI_Comm_spawn` :ref:`MPI_Comm_spawn_multiple`

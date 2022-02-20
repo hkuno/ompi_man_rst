@@ -210,4 +210,4 @@ program. Compile this example with the -lsma compiler option.
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_get*\ (3), *shmem_quiet*\ (3)
+   *intro_shmem*\ (3) *shmem_get*\ (3) *shmem_quiet*\ (3)

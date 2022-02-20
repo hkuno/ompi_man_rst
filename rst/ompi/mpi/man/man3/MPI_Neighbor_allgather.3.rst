@@ -177,6 +177,5 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Neighbor_allgatherv` :ref:`MPI_Cart_create` MPI_Garph_create
-     :ref:`MPI_Dist_graph_create`
-   | :ref:`MPI_Gather`
+   :ref:`MPI_Neighbor_allgatherv` :ref:`MPI_Cart_create` MPI_Garph_create
+   :ref:`MPI_Dist_graph_create` :ref:`MPI_Gather`

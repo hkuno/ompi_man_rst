@@ -128,5 +128,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Unpack`
-   | :ref:`MPI_Pack_size`
+   :ref:`MPI_Unpack` :ref:`MPI_Pack_size`

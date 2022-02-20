@@ -57,4 +57,4 @@ pe
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_get*\ (3)
+   *intro_shmem*\ (3) *shmem_get*\ (3)

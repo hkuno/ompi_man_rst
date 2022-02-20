@@ -193,6 +193,5 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Get` :ref:`MPI_Rget`
-   | :ref:`MPI_Accumulate` :ref:`MPI_Win_flush` :ref:`MPI_Win_flush_all` :ref:`MPI_Win_unlock`
-     :ref:`MPI_Win_unlock_all`
+   :ref:`MPI_Get` :ref:`MPI_Rget` :ref:`MPI_Accumulate` :ref:`MPI_Win_flush` :ref:`MPI_Win_flush_all`
+   :ref:`MPI_Win_unlock` :ref:`MPI_Win_unlock_all`

@@ -84,7 +84,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   MPI_Win_create_errhandler
-      MPI_Win_set_errhandler
+   :ref:`MPI_Win_create_errhandler` :ref:`MPI_Win_set_errhandler`

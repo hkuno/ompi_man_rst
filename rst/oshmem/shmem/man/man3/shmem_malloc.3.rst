@@ -40,7 +40,7 @@ DESCRIPTION
 
 The :ref:`shmem_malloc` function returns a pointer to a block of at least
 size bytes suitably aligned for any use. This space is allocated from
-the symmetric heap (in contrast to *malloc*\ (3C), which allocates from
+the symmetric heap (in contrast to *malloc*\ (3), which allocates from
 the private heap).
 
 The :ref:`shmem_align` function allocates a block in the symmetric heap
@@ -103,4 +103,4 @@ malloc_error set).
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)
+   *intro_shmem*\ (3) *shmem_my_pe*\ (3) *shmem_init*\ (3)

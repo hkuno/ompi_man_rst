@@ -128,5 +128,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Probe`
-   | :ref:`MPI_Cancel`
+   :ref:`MPI_Probe` :ref:`MPI_Cancel`

@@ -92,8 +92,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Isend
-   MPI_Bsend
-      MPI_Recv
+   :ref:`MPI_Isend` :ref:`MPI_Bsend` :ref:`MPI_Recv`

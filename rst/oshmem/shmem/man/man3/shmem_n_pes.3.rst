@@ -39,4 +39,4 @@ application.
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)
+   *intro_shmem*\ (3) *shmem_my_pe*\ (3) *shmem_init*\ (3)

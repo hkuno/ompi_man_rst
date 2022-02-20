@@ -252,8 +252,4 @@ See the MPI man page for a full list of MPI error codes.
 
 
 .. seealso::
-   ::
-
-   MPI_Exscan
-   MPI_Op_create
-      MPI_Reduce
+   :ref:`MPI_Exscan` :ref:`MPI_Op_create` :ref:`MPI_Reduce`

@@ -187,6 +187,4 @@ Output of mpirun -np 2 -bind-to-socket a.out:
 
 
 .. seealso::
-   ::
-
-      mpirun(1)
+   mpirun(1)

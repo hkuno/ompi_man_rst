@@ -562,8 +562,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Allreduce`
-   | :ref:`MPI_Reduce_scatter`
-   | :ref:`MPI_Scan`
-   | :ref:`MPI_Op_create`
-   | :ref:`MPI_Op_free`
+   :ref:`MPI_Allreduce` :ref:`MPI_Reduce_scatter` :ref:`MPI_Scan` :ref:`MPI_Op_create` :ref:`MPI_Op_free`

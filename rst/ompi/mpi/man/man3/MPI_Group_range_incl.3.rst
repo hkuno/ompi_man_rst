@@ -116,5 +116,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Group_incl`
-   | :ref:`MPI_Group_free`
+   :ref:`MPI_Group_incl` :ref:`MPI_Group_free`

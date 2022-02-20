@@ -42,4 +42,4 @@ value is 1, and the valid minor version value is 2.
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_my_pe*\ (3), *shmem_init*\ (3)
+   *intro_shmem*\ (3) *shmem_my_pe*\ (3) *shmem_init*\ (3)

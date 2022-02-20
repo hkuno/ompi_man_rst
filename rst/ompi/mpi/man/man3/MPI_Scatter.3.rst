@@ -220,8 +220,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Scatterv
-   MPI_Gather
-      MPI_Gatherv
+   :ref:`MPI_Scatterv` :ref:`MPI_Gather` :ref:`MPI_Gatherv`

@@ -144,13 +144,6 @@ Fortran bindings.
 
 
 .. seealso::
-   | :ref:`MPI_Comm_set_errhandler`
-   | :ref:`MPI_File_set_errhandler`
-   | :ref:`MPI_Test`
-   | :ref:`MPI_Testall`
-   | :ref:`MPI_Testany`
-   | :ref:`MPI_Wait`
-   | :ref:`MPI_Waitall`
-   | :ref:`MPI_Waitany`
-   | :ref:`MPI_Waitsome`
-   | :ref:`MPI_Win_set_errhandler`
+   :ref:`MPI_Comm_set_errhandler` :ref:`MPI_File_set_errhandler` :ref:`MPI_Test` :ref:`MPI_Testall`
+   :ref:`MPI_Testany` :ref:`MPI_Wait` :ref:`MPI_Waitall` :ref:`MPI_Waitany` :ref:`MPI_Waitsome`
+   :ref:`MPI_Win_set_errhandler`

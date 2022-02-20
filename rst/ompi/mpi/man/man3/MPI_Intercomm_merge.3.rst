@@ -88,5 +88,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Intercomm_create`
-   | :ref:`MPI_Comm_free`
+   :ref:`MPI_Intercomm_create` :ref:`MPI_Comm_free`

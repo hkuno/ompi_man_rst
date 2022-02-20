@@ -70,7 +70,3 @@ Examples
 
        return 0;
    }
-
-
-.. seealso::
-   ::

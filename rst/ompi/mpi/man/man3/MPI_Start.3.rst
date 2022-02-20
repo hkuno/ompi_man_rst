@@ -95,9 +95,5 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Bsend_init`
-   | :ref:`MPI_Rsend_init`
-   | :ref:`MPI_Send_init`
-   | MPI_Sssend_init
-   | :ref:`MPI_Recv_init`
-   | :ref:`MPI_Startall`
+   :ref:`MPI_Bsend_init` :ref:`MPI_Rsend_init` :ref:`MPI_Send_init` MPI_Sssend_init
+   :ref:`MPI_Recv_init` :ref:`MPI_Startall`

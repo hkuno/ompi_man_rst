@@ -77,8 +77,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Info_create`
-   | :ref:`MPI_Info_delete`
-   | :ref:`MPI_Info_free`
-   | :ref:`MPI_Info_get`
-   | :ref:`MPI_Info_set`
+   :ref:`MPI_Info_create` :ref:`MPI_Info_delete` :ref:`MPI_Info_free` :ref:`MPI_Info_get` :ref:`MPI_Info_set`

@@ -171,4 +171,4 @@ Consider this simple example for C.
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_quiet*\ (3)
+   *intro_shmem*\ (3) *shmem_quiet*\ (3)

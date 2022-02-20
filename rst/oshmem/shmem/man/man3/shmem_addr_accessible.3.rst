@@ -57,4 +57,4 @@ otherwise, it is .FALSE..
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_pe_accessible*\ (3)
+   *intro_shmem*\ (3) *shmem_pe_accessible*\ (3)

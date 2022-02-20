@@ -87,5 +87,5 @@ unexpected results may occur on some architectures.
 
 
 .. seealso::
-   *intro_shmem*\ (3), :ref:`shmem_barrier`\ (3), :ref:`shmem_barrier_all`\ (3),
-   *shmem_put*\ (3), *my_pe*\ (3), *shmem_n_pes*\ (3)
+   *intro_shmem*\ (3) :ref:`shmem_barrier`\ (3) :ref:`shmem_barrier_all`\ (3)
+   *shmem_put*\ (3) *my_pe*\ (3) *shmem_n_pes*\ (3)

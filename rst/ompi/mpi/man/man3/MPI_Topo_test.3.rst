@@ -89,5 +89,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Graph_create`
-   | :ref:`MPI_Cart_create`
+   :ref:`MPI_Graph_create` :ref:`MPI_Cart_create`

@@ -88,4 +88,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Win_create` :ref:`MPI_Win_allocate` :ref:`MPI_Win_allocate_shared`
+   :ref:`MPI_Win_create` :ref:`MPI_Win_allocate` :ref:`MPI_Win_allocate_shared`

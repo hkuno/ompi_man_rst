@@ -74,9 +74,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Init
-   MPI_Init_thread
-   MPI_Finalize
-      MPI_Finalized
+   :ref:`MPI_Init` :ref:`MPI_Init_thread` :ref:`MPI_Finalize` :ref:`MPI_Finalized`

@@ -213,5 +213,4 @@ programs.
 
 
 .. seealso::
-   *intro_shmem*\ (3), shmem_iget\ (3), shmem_put\ (3),
-   *shmem_quiet*\ (3)
+   *intro_shmem*\ (3) *shmem_iget*\ (3) *shmem_put*\ (3) *shmem_quiet*\ (3)

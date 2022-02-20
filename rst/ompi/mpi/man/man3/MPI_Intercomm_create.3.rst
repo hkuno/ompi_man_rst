@@ -114,7 +114,5 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Intercomm_merge`
-   | :ref:`MPI_Comm_free`
-   | :ref:`MPI_Comm_remote_group`
-   | :ref:`MPI_Comm_remote_size`
+   :ref:`MPI_Intercomm_merge` :ref:`MPI_Comm_free` :ref:`MPI_Comm_remote_group`
+   :ref:`MPI_Comm_remote_size`

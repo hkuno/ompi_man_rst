@@ -96,4 +96,4 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   | :ref:`MPI_Ssend`
+   :ref:`MPI_Ssend`

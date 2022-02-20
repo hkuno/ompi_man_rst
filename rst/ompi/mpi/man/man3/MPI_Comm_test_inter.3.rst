@@ -109,9 +109,5 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Comm_remote_group
-   MPI_Comm_remote_size
-   MPI_Intercomm_create
-      MPI_Intercomm_merge
+   :ref:`MPI_Comm_remote_group` :ref:`MPI_Comm_remote_size` :ref:`MPI_Intercomm_create`
+   :ref:`MPI_Intercomm_merge`

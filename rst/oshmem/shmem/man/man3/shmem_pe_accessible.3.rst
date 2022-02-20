@@ -54,4 +54,4 @@ Fortran
 
 
 .. seealso::
-   *intro_shmem*\ (3), *shmem_addr_accessible*\ (3)
+   *intro_shmem*\ (3) *shmem_addr_accessible*\ (3)

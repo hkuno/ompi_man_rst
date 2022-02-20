@@ -66,6 +66,4 @@ MPI_T_pvar_start() and MPI_T_pvar_stop() will fail if:
 
 
 .. seealso::
-   ::
-
-      MPI_T_pvar_get_info
+   :ref:`MPI_T_pvar_get_info`

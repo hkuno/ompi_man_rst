@@ -223,10 +223,5 @@ guarantee that an MPI program can continue past an error.
 
 
 .. seealso::
-   ::
-
-   MPI_Neighbor_alltoall
-   MPI_Neighbor_alltoallv
-   MPI_Cart_create
-   MPI_Graph_create
-      MPI_Dist_graph_create
+   :ref:`MPI_Neighbor_alltoall` :ref:`MPI_Neighbor_alltoallv` :ref:`MPI_Cart_create`
+   :ref:`MPI_Graph_create` :ref:`MPI_Dist_graph_create`
