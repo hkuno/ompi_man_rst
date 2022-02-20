@@ -6,7 +6,7 @@ OMPI_Affinity_str
 
 .. include_body
 
-**OMPI_Affinity_str - Obtain prettyprint strings of processor affinity
+**OMPI_Affinity_str** - Obtain prettyprint strings of processor affinity
 information for this process
 
 
@@ -186,5 +186,4 @@ Output of mpirun -np 2 -bind-to-socket a.out:
               exists: [. . . .]
 
 
-.. seealso::
-   mpirun(1)
+.. seealso:: mpirun(1)

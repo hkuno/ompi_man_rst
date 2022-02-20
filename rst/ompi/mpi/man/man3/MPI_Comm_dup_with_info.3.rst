@@ -14,27 +14,35 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Comm_dup_with_info(MPI_Comm comm, MPI_Info info, MPI_Comm
-\*newcomm)
+   #include <mpi.h>
+
+   int MPI_Comm_dup_with_info(MPI_Comm comm, MPI_Info info, MPI_Comm *newcomm)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_COMM_DUP_WITH_INFO(COMM, INFO, NEWCOMM, IERROR) INTEGER COMM, INFO,
-NEWCOMM, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_COMM_DUP_WITH_INFO(COMM, INFO, NEWCOMM, IERROR)
+       INTEGER COMM, INFO, NEWCOMM, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Comm_dup_with_info(comm, info, newcomm, ierror) TYPE(MPI_Comm),
-INTENT(IN) :: comm TYPE(MPI_Info), INTENT(IN) :: info TYPE(MPI_Comm),
-INTENT(OUT) :: newcomm INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Comm_dup_with_info(comm, info, newcomm, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       TYPE(MPI_Info), INTENT(IN) :: info
+       TYPE(MPI_Comm), INTENT(OUT) :: newcomm
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameter
 ---------------

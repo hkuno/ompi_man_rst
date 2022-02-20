@@ -14,28 +14,37 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Graph_get(MPI_Comm comm, int maxindex, int maxedges, int
-index[], int edges[])
+   #include <mpi.h>
+
+   int MPI_Graph_get(MPI_Comm comm, int maxindex, int maxedges,
+       int index[], int edges[])
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_GRAPH_GET(COMM, MAXINDEX, MAXEDGES, INDEX, EDGES, IERROR) INTEGER
-COMM, MAXINDEX, MAXEDGES, INDEX(*) INTEGER EDGES(*), IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_GRAPH_GET(COMM, MAXINDEX, MAXEDGES, INDEX, EDGES, IERROR)
+       INTEGER COMM, MAXINDEX, MAXEDGES, INDEX(*)
+       INTEGER EDGES(*), IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Graph_get(comm, maxindex, maxedges, index, edges, ierror)
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: maxindex,
-maxedges INTEGER, INTENT(OUT) :: index(maxindex), edges(maxedges)
-INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Graph_get(comm, maxindex, maxedges, index, edges, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, INTENT(IN) :: maxindex, maxedges
+       INTEGER, INTENT(OUT) :: index(maxindex), edges(maxedges)
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

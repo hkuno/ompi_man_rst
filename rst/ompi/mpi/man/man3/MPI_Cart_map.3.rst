@@ -13,28 +13,38 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Cart_map(MPI_Comm comm, int ndims, const int dims[], const int
-periods[], int \*newrank)
+   #include <mpi.h>
+
+   int MPI_Cart_map(MPI_Comm comm, int ndims, const int dims[],
+       const int periods[], int *newrank)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_CART_MAP(COMM, NDIMS, DIMS, PERIODS, NEWRANK, IERROR) INTEGER COMM,
-NDIMS, DIMS(*), NEWRANK, IERROR LOGICAL PERIODS(*)
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_CART_MAP(COMM, NDIMS, DIMS, PERIODS, NEWRANK, IERROR)
+       INTEGER COMM, NDIMS, DIMS(*), NEWRANK, IERROR
+       LOGICAL PERIODS(*)
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Cart_map(comm, ndims, dims, periods, newrank, ierror)
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: ndims,
-dims(ndims) LOGICAL, INTENT(IN) :: periods(ndims) INTEGER, INTENT(OUT)
-:: newrank INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Cart_map(comm, ndims, dims, periods, newrank, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, INTENT(IN) :: ndims, dims(ndims)
+       LOGICAL, INTENT(IN) :: periods(ndims)
+       INTEGER, INTENT(OUT) :: newrank
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

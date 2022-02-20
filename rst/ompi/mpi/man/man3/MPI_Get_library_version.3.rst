@@ -14,27 +14,35 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Get_library_version(char \*version, int \*resultlen)
+   #include <mpi.h>
+
+   int MPI_Get_library_version(char *version, int *resultlen)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_GET_LIBRARY_VERSION(VERSION, RESULTLEN, IERROR) CHARACTER*(*) NAME
-INTEGER RESULTLEN, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_GET_LIBRARY_VERSION(VERSION, RESULTLEN, IERROR)
+       CHARACTER*(*)   NAME
+       INTEGER RESULTLEN, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Get_library_version(version, resulten, ierror)
-CHARACTER(LEN=MPI_MAX_LIBRARY_VERSION_STRING), INTENT(OUT) :: version
-INTEGER, INTENT(OUT) :: resultlen INTEGER, OPTIONAL, INTENT(OUT) ::
-ierror
+   USE mpi_f08
+
+   MPI_Get_library_version(version, resulten, ierror)
+       CHARACTER(LEN=MPI_MAX_LIBRARY_VERSION_STRING), INTENT(OUT) :: version
+       INTEGER, INTENT(OUT) :: resultlen
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Output Parameters
 -----------------

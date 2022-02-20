@@ -68,7 +68,7 @@ sum of the *base* and *disp* arguments, where *base* represents a base
 address returned by a call to :ref:`MPI_Get_address` and *disp* represents
 a signed integer displacement. The resulting address is valid only at
 the process that generated *base*, and it must correspond to a location
-in the same object referenced by *base*, as described in MPI-3.1 �
+in the same object referenced by *base*, as described in MPI-3.1 §
 4.1.12. The addition is performed in a manner that results in the
 correct MPI_Aint representation of the output address, as if the process
 that originally produced *base* had called:

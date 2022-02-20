@@ -13,28 +13,36 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Graph_map(MPI_Comm comm, int nnodes, const int index[], const
-int edges[], int \*newrank)
+   #include <mpi.h>
+
+   int MPI_Graph_map(MPI_Comm comm, int nnodes, const int index[],
+       const int edges[], int *newrank)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_GRAPH_MAP(COMM, NNODES, INDEX, EDGES, NEWRANK, IERROR) INTEGER COMM,
-NNODES, INDEX(*), EDGES(*), NEWRANK, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_GRAPH_MAP(COMM, NNODES, INDEX, EDGES, NEWRANK, IERROR)
+       INTEGER COMM, NNODES, INDEX(*), EDGES(*), NEWRANK, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Graph_map(comm, nnodes, index, edges, newrank, ierror)
-TYPE(MPI_Comm), INTENT(IN) :: comm INTEGER, INTENT(IN) :: nnodes,
-index(nnodes), edges(*) INTEGER, INTENT(OUT) :: newrank INTEGER,
-OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Graph_map(comm, nnodes, index, edges, newrank, ierror)
+       TYPE(MPI_Comm), INTENT(IN) :: comm
+       INTEGER, INTENT(IN) :: nnodes, index(nnodes), edges(*)
+       INTEGER, INTENT(OUT) :: newrank
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

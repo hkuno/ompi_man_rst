@@ -62,17 +62,11 @@ DESCRIPTION
 
 The set-like operations are defined as follows:
 
- o
-   union -- All elements of the first group (group1), followed by all
-   elements of second group (group2) not in first.
+ o    union -- All elements of the first group (group1), followed by all elements of second group (group2) not in first.
 
- o
-   intersect -- all elements of the first group that are also in the
-   second group, ordered as in first group.
+ o    intersect -- all elements of the first group that are also in the second group, ordered as in first group.
 
- o
-   difference -- all elements of the first group that are not in the
-   second group, ordered as in the first group.
+ o    difference -- all elements of the first group that are not in the second group, ordered as in the first group.
 
 Note that for these operations the order of processes in the output
 group is determined primarily by order in the first group (if possible)

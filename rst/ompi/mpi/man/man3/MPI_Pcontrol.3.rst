@@ -64,19 +64,13 @@ However to provide some level of portability of user codes to different
 profiling libraries, we request the following meanings for certain
 values of level:
 
- o
-   level==0 Profiling is disabled.
+ o    level==0 Profiling is disabled.
 
- o
-   level==1 Profiling is enabled at a normal default level of detail.
+ o    level==1 Profiling is enabled at a normal default level of detail.
 
- o
-   level==2 Profile buffers are flushed. (This may be a no-op in some
-   profilers).
+ o    level==2 Profile buffers are flushed. (This may be a no-op in some profilers).
 
- o
-   All other values of level have profile library-defined effects and
-   additional arguments.
+ o    All other values of level have profile library-defined effects and additional arguments.
 
 We also request that the default state after :ref:`MPI_Init` has been called is
 for profiling to be enabled at the normal default level (i.e., as if

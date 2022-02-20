@@ -14,27 +14,36 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Group_incl(MPI_Group group, int n, const int ranks[], MPI_Group
-\*newgroup)
+   #include <mpi.h>
+
+   int MPI_Group_incl(MPI_Group group, int n, const int ranks[],
+       MPI_Group *newgroup)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: fortran
 
-MPI_GROUP_INCL(GROUP, N, RANKS, NEWGROUP, IERROR) INTEGER GROUP, N,
-RANKS(*), NEWGROUP, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_GROUP_INCL(GROUP, N, RANKS, NEWGROUP, IERROR)
+       INTEGER GROUP, N, RANKS(*), NEWGROUP, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: fortran
 
-MPI_Group_incl(group, n, ranks, newgroup, ierror) TYPE(MPI_Group),
-INTENT(IN) :: group INTEGER, INTENT(IN) :: n, ranks(n) TYPE(MPI_Group),
-INTENT(OUT) :: newgroup INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Group_incl(group, n, ranks, newgroup, ierror)
+       TYPE(MPI_Group), INTENT(IN) :: group
+       INTEGER, INTENT(IN) :: n, ranks(n)
+       TYPE(MPI_Group), INTENT(OUT) :: newgroup
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Input Parameters
 ----------------

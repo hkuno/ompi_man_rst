@@ -14,25 +14,36 @@ Syntax
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: C
 
-int MPI_Buffer_detach(void \*buf, int \*size)
+   #include <mpi.h>
+
+   int MPI_Buffer_detach(void *buf, int *size)
 
 Fortran Syntax
 ^^^^^^^^^^^^^^
 
-fortran USE MPI ! or the older form: INCLUDE 'mpif.h'
+.. code:: Fortran
 
-MPI_BUFFER_DETACH(BUF, SIZE, IERROR) BUF(*) INTEGER SIZE, IERROR
+   USE MPI
+   ! or the older form: INCLUDE 'mpif.h'
+
+   MPI_BUFFER_DETACH(BUF, SIZE, IERROR)
+       <type>  BUF(*)
+       INTEGER SIZE, IERROR
 
 Fortran 2008 Syntax
 ^^^^^^^^^^^^^^^^^^^
 
-fortran USE mpi_f08
+.. code:: Fortran
 
-MPI_Buffer_detach(buffer_addr, size, ierror) USE, INTRINSIC ::
-ISO_C_BINDING, ONLY TYPE(C_PTR), INTENT(OUT) :: buffer_addr INTEGER,
-INTENT(OUT) :: size INTEGER, OPTIONAL, INTENT(OUT) :: ierror
+   USE mpi_f08
+
+   MPI_Buffer_detach(buffer_addr, size, ierror)
+       USE, INTRINSIC :: ISO_C_BINDING, ONLY
+       TYPE(C_PTR), INTENT(OUT) :: buffer_addr
+       INTEGER, INTENT(OUT) :: size
+       INTEGER, OPTIONAL, INTENT(OUT) :: ierror
 
 Output Parameters
 -----------------

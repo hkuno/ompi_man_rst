@@ -1,4 +1,4 @@
-.. __num_pes:
+.. _num_pes:
  
 _num_pes
 ========

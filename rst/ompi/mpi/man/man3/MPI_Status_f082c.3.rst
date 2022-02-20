@@ -14,11 +14,12 @@ SYNTAX
 C Syntax
 ^^^^^^^^
 
-c #include <mpi.h>
+.. code:: c
 
-int MPI_Status_f082c(const MPI_F08_status \*f08_status, MPI_Status
-\*c_status) int MPI_Status_c2f08(const MPI_Status \*c_status,
-MPI_F08_status \*f08_status)
+   #include <mpi.h>
+
+   int MPI_Status_f082c(const MPI_F08_status *f08_status, MPI_Status *c_status)
+   int MPI_Status_c2f08(const MPI_Status *c_status, MPI_F08_status *f08_status)
 
 PARAMETERS
 ----------
